@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.8.3)  2 AUG 2021 22:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.8.3)  3 AUG 2021 22:10
 entering extended mode
 **"e:/bruno/Meus Estudos/Meus_Estudos/Programação/Latex in 24 Hours - Datta Dilip/latex_in_24hours.tex"
 (e:/bruno/Meus Estudos/Meus_Estudos/Programação/Latex in 24 Hours - Datta Dilip/latex_in_24hours.tex
@@ -200,14 +200,9 @@ File: babel.def 2021/07/22 3.63 Babel common definitions
 *
 (E:\MikTex\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (E:\MikTex\tex/latex/babel-english\english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
+) (E:\MikTex\tex/latex/babel-portuges\portuguese.ldf
+Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
+Package babel Info: Making " an active character on input line 143.
 ))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 68.
  (E:\MikTex\tex/latex/lm\t1lmr.fd
@@ -296,94 +291,143 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 72.
-LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <12> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 72.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 72.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 72.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 72.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 72.
- (E:\MikTex\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [1
+ [1
 
 
 
 {C:/Users/bruno/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2
 
-] [3] [4
-
-
 ] (latex_in_24hours.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 3.
-)
+ [3])
 \tf@toc=\write4
 \openout4 = `latex_in_24hours.toc'.
 
- [5] [6
-
-] (latex_in_24hours.lof)
-\tf@lof=\write5
-\openout5 = `latex_in_24hours.lof'.
-
- [7] [8
-
-] (latex_in_24hours.lot)
-\tf@lot=\write6
-\openout6 = `latex_in_24hours.lot'.
-
- [9] [10
-
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 106.
-
-Underfull \vbox (badness 2229) has occurred while \output is active []
-
- [1
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 108.
- (E:\MikTex\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2]
+ [4]
  1.
-[3
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 81.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 81.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 81.
+[1
+
+
+] [2
 
 ]
-Overfull \hbox (3.06978pt too wide) in paragraph at lines 169--170
-[]\T1/lmr/m/n/10.95 In hac habitasse platea dic-tumst. Nul-lam turpis erat, port-ti-tor ut pretium
- []
+ 2.
+[3] [4
 
-[4]
-Overfull \hbox (3.06978pt too wide) in paragraph at lines 174--175
-[]\T1/lmr/m/n/10.95 In hac habitasse platea dic-tumst. Nul-lam turpis erat, port-ti-tor ut pretium
- []
+]
+ 3.
+[5] [6
 
-[5] [6] (latex_in_24hours.aux)
+]
+ 4.
+[7] [8
+
+]
+ 5.
+[9] [10
+
+]
+ 6.
+[11] [12
+
+]
+ 7.
+[13] [14
+
+]
+ 8.
+[15] [16
+
+]
+ 9.
+[17] [18
+
+]
+ 10.
+[19] [20
+
+]
+ 11.
+[21] [22
+
+]
+ 12.
+[23] [24
+
+]
+ 13.
+[25] [26
+
+]
+ 14.
+[27] [28
+
+]
+ 15.
+[29] [30
+
+]
+ 16.
+[31] [32
+
+]
+ 17.
+[33] [34
+
+]
+ 18.
+[35] [36
+
+]
+ 19.
+[37] [38
+
+]
+ 20.
+[39] [40
+
+]
+ 21.
+[41] [42
+
+]
+ 22.
+[43] [44
+
+]
+ 23.
+[45] [46
+
+]
+ 24.
+[47] (latex_in_24hours.aux)
 Package rerunfilecheck Info: File `latex_in_24hours.out' has not changed.
-(rerunfilecheck)             Checksum: 4C64F2A06E2853CEE722C5ED7C009F8D;2378.
+(rerunfilecheck)             Checksum: 8C789305AFA81FEEF848B8B481C52DD1;3285.
  ) 
 Here is how much of TeX's memory you used:
- 9306 strings out of 478870
- 139121 string characters out of 2865322
- 452139 words of memory out of 3000000
- 27016 multiletter control sequences out of 15000+600000
- 507386 words of font info for 89 fonts, out of 8000000 for 9000
+ 9274 strings out of 478870
+ 137823 string characters out of 2865322
+ 450653 words of memory out of 3000000
+ 26967 multiletter control sequences out of 15000+600000
+ 491666 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,66p,857b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
-{E:/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{E:/MikTex/fonts/enc/dvips/lm/lm-ts1.enc}<E:/MikTex/fonts/type1/public/lm/lmbx10.pfb><E:/MikTex/fonts/type1/public/lm/lmbx12.pfb><E:/MikTex/fonts/type1/public/lm/lmcsc10.pfb><E:/MikTex/fonts/type1/public/lm/lmr10.pfb><E:/MikTex/fonts/type1/public/lm/lmr12.pfb><E:/MikTex/fonts/type1/public/lm/lmr17.pfb><E:/MikTex/fonts/type1/public/lm/lmr6.pfb><E:/MikTex/fonts/type1/public/lm/lmr7.pfb><E:/MikTex/fonts/type1/public/lm/lmr8.pfb><E:/MikTex/fonts/type1/public/lm/lmr9.pfb><E:/MikTex/fonts/type1/public/lm/lmri10.pfb><E:/MikTex/fonts/type1/public/lm/lmro10.pfb><E:/MikTex/fonts/type1/public/lm/lmtt10.pfb><E:/MikTex/fonts/type1/public/lm/lmtt9.pfb>
-Output written on latex_in_24hours.pdf (16 pages, 380223 bytes).
+ 60i,8n,66p,317b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+{E:/MikTex/fonts/enc/dvips/lm/lm-ec.enc}{E:/MikTex/fonts/enc/dvips/lm/lm-mathit.enc}{E:/MikTex/fonts/enc/dvips/lm/lm-rm.enc}{E:/MikTex/fonts/enc/dvips/lm/lm-mathsy.enc}<E:/MikTex/fonts/type1/public/lm/lmbx10.pfb><E:/MikTex/fonts/type1/public/lm/lmbx12.pfb><E:/MikTex/fonts/type1/public/lm/lmbx8.pfb><E:/MikTex/fonts/type1/public/lm/lmcsc10.pfb><E:/MikTex/fonts/type1/public/lm/lmmi10.pfb><E:/MikTex/fonts/type1/public/lm/lmr10.pfb><E:/MikTex/fonts/type1/public/lm/lmr12.pfb><E:/MikTex/fonts/type1/public/lm/lmr17.pfb><E:/MikTex/fonts/type1/public/lm/lmr8.pfb><E:/MikTex/fonts/type1/public/lm/lmro10.pfb><E:/MikTex/fonts/type1/public/lm/lmro8.pfb><E:/MikTex/fonts/type1/public/lm/lmsy10.pfb>
+Output written on latex_in_24hours.pdf (51 pages, 323202 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 447 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 
