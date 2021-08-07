@@ -84,8 +84,11 @@
 
 \mainmatter
 
-% capitulo 01
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CHAPTER                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Way of the Program}
+
 \begin{chapquote}{página 1}
 	``The single most important skill for a computer scientistis \textbf{problem solving}. That is the 
 	ability to formulate problems, think creatively about solutions, and express a solution clearly and 
@@ -124,9 +127,89 @@ o interpretador analisa o código inteiro antes de começar o processamento.
 # Divisao
 11 / 1
 
+# Exponenciacao
+6 ** 2
+
 \end{lstlisting}
 
+\section{Linguagens Formais e Naturais}
+
+As \textbf{linguagens naturais} são as linguagens que as pessoas usam para se comunicar no dia a dia. São criadas e se modificam organicamente com o passar do tempo.
+
+Por outro lado, as \textbf{linguagens formais} são criadas por pessoas e possuem uma aplicação específica. As linguagens de computação são linguagens formais desenvolvidas para expressar computações.
+
+As linguagens formais possuem regras estritas que chamamos de \textbf{regras de sintaxe}.
+
+\subsection{Regras de Sintaxe}
+
+As regras de sintaxe possuem dois sentidos gerais:
+\begin{itemize}
+	\item tokens $\rightarrow$ são os elementos da linguagem
+	\item estrutura $\rightarrow$ é a regra de combinação dos tokens
+\end{itemize}
+
+Quando o interpretador lê um código, ele faz um processo chamado \textbf{parsing} que é justamente entender a estrutura de combinação entre os diferentes tokens presentes no script. No caso do Python a identação faz um papel importante na estrutura.
+
+\section{Debugging}
+
+Os erros em um programa são chamados de \textbf{bugs} e o processo de resolução desses erros é chamado de \textbf{debugging}.
+
+\section{Glossário}
+\begin{itemize}
+	\item problem solving $\rightarrow$ processo de formular um problema, achar uma solução e expressá-la
+	\item high-level language $\rightarrow$ lingaugem desenhada para ser fácil para um humano ler e escrever
+	\item low-level language $\rightarrow$ lingaugem desenhada para ser fácil para um computador ler. AKA "machine language" ou "assembly language"
+	\item portability $\rightarrow$ capacidade de um programa rodar em mais de um tipo de computador
+	\item interpreter $\rightarrow$ um programa que lê outro programa e o executa
+	\item prompt $\rightarrow$ caracteres no prompt que indicam que ele está pronto para receber input direto do usuário
+	\item program $\rightarrow$ um conjunto de instruções que especifica uma computation
+	\item print statement $\rightarrow$ uma instrução que diz para o interpretador mostrar caracteres na tela
+	\item operator $\rightarrow$ um caracter especial que representa uma computação simples (+, -, *, /, ** ) 
+	\item value $\rightarrow$ uma das unidades básica de dados
+	\item type $\rightarrow$ a categoria em que um valor pertence
+	\item interger $\rightarrow$ numero inteiros
+	\item floating-point $\rightarrow$ números fracionados
+	\item string $\rightarrow$ sequencia de caracteres
+	\item natural language $\rightarrow$ linguagem humana
+	\item formal language $\rightarrow$ linguagem com objetivo e regras específicos
+	\item token $\rightarrow$ um dos elementos básicos de uma linguagem formal, análogo à palavra na linguagem natural
+	\item syntax $\rightarrow$ as regras de estrutura de um programa
+	\item parse $\rightarrow$ processo de examinar um programa e analisar sua estrutura
+	\item bug $\rightarrow$ um erro no programa
+	\item debugg $\rightarrow$ o processo de resolver um erro
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CHAPTER                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Varibles, Expressions and Statements}
+
+\begin{chapquote}{página 11}
+	``One of the most powerful features of a programming language is the ability to manipulate \textbf{variables}. A variable is a name that refers to a value''
+\end{chapquote}
+
+\section{Statements de atribuição}
+\begin{lstlisting}[language=Python, caption=Atribuições para diferentes classes]
+message = 'acesse www.economiamainstream.com.br'
+
+n = 12
+
+pi = 3.1415
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CHAPTER                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Functions}
 \chapter{Case Study: Interface Design}
 \chapter{conditionals and Recursion}
