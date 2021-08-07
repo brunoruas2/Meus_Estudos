@@ -43,6 +43,9 @@
 \lstset{style=mystyle}
 
 
+% inserting images
+\usepackage{graphicx}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
 % Source: http://tex.stackexchange.com/a/53380 %
@@ -96,9 +99,10 @@
 \end{chapquote}
 
 \section{O que é um Programa?}
-Um \textbf{programa} é uma sequencia de instruções que especifica como fazer um determinado computation. Um \textbf{computation}
-\footnote{\href{https://en.wikipedia.org/wiki/Computation}{https://en.wikipedia.org/wiki/Computation}} é qualquer tipo de cálculo que inclua 
-passos artiméticos (computação matemática) e não artiméticos (computação simbólica) e que segue uma determinada ordem. \par
+Um \textbf{programa} é uma sequencia de instruções que especifica como fazer um determinado computation. Um \textbf{computation}\footnote{\href{https://en.wikipedia.org/wiki/Computation}{https://en.wikipedia.org/wiki/Computation}} é qualquer tipo de cálculo que inclua 
+passos artiméticos (computação matemática) e não artiméticos (computação simbólica) e que segue uma determinada ordem.
+
+
 Algumas características comuns em qualquer linguagem de programação:
 \begin{itemize}
 	\item input $\rightarrow$ dados de teclado, arquivo, rede, etc.
@@ -109,7 +113,7 @@ Algumas características comuns em qualquer linguagem de programação:
 \end{itemize}
 
 \section{Executando o Python}
-O \textbf{interpretador} do Python é um programa que lê e executa códigos escritos em Python. Tem duas maneiras de se executar códigos em Python
+O \textbf{interpretador} do Python é um programa que lê e executa códigos escritos em Python. Existem duas maneiras\footnote{Essa parte eu to adiantando da página 13} de se executar códigos em Python
 a primeira é no modo \textbf{interativo} onde podemos enviar as ordens direto pro interpretador e a segunda em em modo \textbf{script} onde
 o interpretador analisa o código inteiro antes de começar o processamento.
 
@@ -197,20 +201,87 @@ n = 12
 pi = 3.1415
 \end{lstlisting}
 
+\section{Nome de Variáveis}
+Os nomes das variáveis podem ser o que você quiser. Contudo, existem algumas regras a serem seguidas: 1) Não podem começar com número; 2) Não pode conter caracteres ilegais (@ , \# ,  etc) e 3) Não podem ser uma \textbf{keyword}.
 
+\subsection{Keywords do Python 3}
+Essas são as palavras que o interpretador já possui significado e que não podem ser atribuídas como nome para nenhuma variável.
 
+\includegraphics[scale=1]{images/keywords_python.png}
 
+\section{Expressões e Statements}
+Uma \textbf{expressão} é uma combinação de valores, variáveis e operadores. Um \textbf{statement} é uma unidade de código que possui algum efeito.
 
+\section{Ordem de Operações}
+Python segue a convenção matemática \textbf{PEMDAS}:
+\begin{itemize}
+	\item \textbf{P}arênteses
+	\item \textbf{E}xponenciação
+	\item \textbf{M}ultiplicação
+	\item \textbf{D}ivisão
+	\item \textbf{A}dição
+	\item \textbf{S}ubtração
+\end{itemize}
 
+\section{Operadores de String}
+Quando se trata de strings, Python resignifica os operadores matemáticos para operações "similares" ao contexto original dos números.
+\begin{lstlisting}[language=Python, caption=Atribuições para diferentes classes]
 
+# operador de soma
+'economia' + ' ' + 'mainstream'
+>>> 'economia mainstream'
 
+# operador de multiplicacao
+'economia' * 3
+>>> 'economiaeconomiaeconomia'
 
+\end{lstlisting}
+
+\section{Comentários}
+Para comentar alguma parte do seu código use o caracter \#. É recomendado que se use comentários apenas para partes não óbvias do código. Se esforce para que o código seja o mais alto-explicativo possível (o nome das varáveis pode ajudar bastante)
+
+\section{Debugging}
+Existem 3 tipos de erros que podem acontecer em um programa: 1) Erros de Sintaxe, 2) Erros de Runtime e 3) Erros Semântico.
+
+\begin{itemize}
+	\item Erro de Sintaxe $ \rightarrow $ Relacionados à estrutura da linguagem formal e as regras dessa estrutura e dos tokens. Esse tipo de erro não permite a execução do código.
+	\item Erro de Runtime $ \rightarrow $ Um erro que não acontece quando o programa inicia mas, em algum momento durante a execução, aparecem posteriormente (geralmente relacionados às exceções não previstas).
+	\item Erro de Semântica $ \rightarrow $ O código roda sem erros aparentes, mas o resultado (output) é diferente do esperado. Esse tipo de erro é mais difícil de identificar e de se solucionar. 
+\end{itemize}
+
+\section{Glossário}
+\begin{itemize}
+	\item variable $ \rightarrow $ um nome referente a um valor
+	\item assignment $ \rightarrow $ um statement que atribui uma variável a um valor
+	\item state diagram $ \rightarrow $ representação gráfica de assignment
+	\item keyword $ \rightarrow $ palavras (tokens) reservados pela lingagem para ações previamente definidas
+	\item operand $ \rightarrow $ um valor que será usado em uma operação
+	\item expression $ \rightarrow $ combinação de variáveis, operadores e valores que representa um único resultado
+	\item evaluate $ \rightarrow $ processo de simplificação de uma expressão usando os operadores na ordem correta até chegar em um único resultado
+	\item statement $ \rightarrow $ uma parte do código que representa um comando ou uma ação
+	\item execute $ \rightarrow $ computar um statement para produzir o resultado por ele ordenado
+	\item interactive mode $ \rightarrow $ maneira de interagir com o interpretador do Python escrevendo o input diretamente no prompt
+	\item script mode $ \rightarrow $ maneira de interagir com o interpretador do Python através da leitura de um script.py
+	\item order of operations $ \rightarrow $ regras de resolução das expressões de acordo com os tokens contidos nos comandos
+	\item concatenate $ \rightarrow $ juntar dois ou mais strings
+	\item comment $ \rightarrow $ lançamento no script de comentários para facilitar a leitura humana do código. O interpretador não usará essas partes no processamento
+	\item syntax error $ \rightarrow $ um erro que torna o processo de parse impossível e, por isso, impede a execução do programa
+	\item execption $ \rightarrow $ erro de runtime. Geralmente acontece por uma exceção não prevista no código
+	\item semantics $ \rightarrow $ o sentido de um programa
+	\item semantic error $ \rightarrow $ um erro onde o programa é executado mas não produz os outputs esperados
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Functions}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CHAPTER                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Case Study: Interface Design}
 \chapter{conditionals and Recursion}
 \chapter{Fruitful Funtions}
