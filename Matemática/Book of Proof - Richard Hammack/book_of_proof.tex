@@ -11,6 +11,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[portuguese]{babel}
+\usepackage{amsfonts}
+\usepackage[usenames,dvipsnames]{xcolor}
+
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
@@ -133,6 +136,27 @@ A partir dessas duas relações já podemos definir um tipo especial de set. Vam
 \begin{center}
 	$|\emptyset| = 0$
 \end{center}
+
+Às vezes, não raramente, usamos sets que a escrita como uma lista de elementos não é tão intuitiva para uso. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
+
+\begin{center}
+	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \}$
+\end{center}
+
+Eu colori cada significado da expressão acima com a cor correspondente para facilitar o entendimento. A leitura da expressão acima é: "O conjunto '$E$' é igual ao \textcolor{red}{conjunto dos elementos da forma} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{tal que} \textcolor{Brown}{$n$} \textcolor{Orange}{é um elemento de} $\mathbb{Z}$".
+\\
+\\
+Podemos resumir essa notação de formação de conjuntos como "$Conjunto = \{ Expressão : Regra \}$". É bem comum vermos notações onde os dois pontos são trocados por uma barra: "$Conjunto = \{ Expressão \ | \ Regra \}$".
+\\
+\\
+Existem alguns conjuntos que são famosos e a essa altura você já deve ter visto algumas vezes.
+\begin{itemize}
+	\item[] $\emptyset = \{ \}$
+	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$, perceba que $0 \notin \mathbb{N}$
+	\item[] $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ...  \}$
+	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$
+	\item[] \includegraphics[scale=0.11]{images/real_line.png}
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
