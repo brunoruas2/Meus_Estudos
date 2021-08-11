@@ -5,6 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,11pt]{book}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -14,6 +15,11 @@
 \usepackage{amsfonts}
 \usepackage[usenames,dvipsnames]{xcolor}
 
+% para usar definições
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
@@ -125,13 +131,13 @@ Um \textbf{conjunto} (set) é uma lista de \textbf{elementos}. Normalmente denot
 Dois sets $A$ e $B$ são \textbf{iguais} se possuírem exatamente os mesmos elementos. Não importando a ordem desses elementos dentro de cada set.
 \\
 \\
-Vamos definir um token para sinalizar se um determinado elemento $x$ pertence ou não a um determinado set qualquer $A$. Para tal relação usaremos o símbolo "$\in$" se $x$ for um elemento de $A$ ou, caso contrário, usaremos "$\notin$" se $x$ não for um elemento de $A$.
+Vamos definir um símbolo para sinalizar se um determinado elemento $x$ pertence ou não a um determinado set qualquer $A$. Para tal relação usaremos o símbolo $"\in"$ se $x$ for um elemento de $A$ ou, caso contrário, usaremos $"\notin"$ se $x$ não for um elemento de $A$.
 \\
 \\
-É provável que, em algum momento, seja necessário contar a quantidade de elementos em um dado set qualquer $A$. Chamaremos essa relação de \textbf{cardinalidade} ou \textbf{tamanho} do set $A$. O token usado será duas barras em volta do set do seguinte modo: "$|A|$".
+É provável que, em algum momento, seja necessário contar a quantidade de elementos em um dado set qualquer $A$. Chamaremos essa relação de \textbf{cardinalidade} ou \textbf{tamanho} do set $A$. O símbolo usado será duas barras em volta do set do seguinte modo: "$|A|$".
 \\
 \\
-A partir dessas duas relações já podemos definir um tipo especial de set. Vamos definir como \textbf{conjunto vazio} ou \textbf{empty set} um conjunto que possua o cardinal igual a zero. Usaremos o token "$\emptyset$" para definir a relação abaixo:
+A partir dessas duas relações já podemos definir um tipo especial de set. Vamos definir como \textbf{conjunto vazio} ou \textbf{empty set} um conjunto que possua o cardinal igual a zero. Usaremos o símbolo $"\emptyset"$ para definir a relação abaixo:
 
 \begin{center}
 	$|\emptyset| = 0$
@@ -158,7 +164,29 @@ Existem alguns conjuntos que são famosos e a essa altura você já deve ter vis
 	\item[] \includegraphics[scale=0.11]{images/real_line.png}
 \end{itemize}
 
+Como o conjunto dos número reais pode ser descrito como pontos em uma reta infinita. Se tivermos dois pontos quaisquer $a$ e $b$, de modo que, $a,b \in \mathbb{R}$ e $a < b$. Temos infinitos elementos entre esses dois pontos. Desse modo, teremos que usar um novo símbolo para se referir aos conjuntos que são melhor descritos em termos de \textbf{intervalos} entre pontos.
+\begin{center}
+	\includegraphics[scale=0.7]{images/intervals.png}
+\end{center}
 
+\section{Produto Cartesiano}
+\begin{definition}[Par Ordenado]
+Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos ($x$ e $y$). Onde esses dois elementos estão entre parênteses e separados por uma vírgula.
+\end{definition}
+
+Atente para o fato que $(x,y) \neq (y,x)$. 
+\\
+\\
+Agora que temos a definição de par ordenado. Podemos escrever conjuntos usando esse novo símbolo.
+
+\begin{definition}[Produto Cartesiano]
+O \textbf{produto cartesiano} de dois sets $A$ e $B$ é um outro set cujo símbolo é $``A \times B"$ e é definido como:
+\begin{center}
+$A \times B = \{ (a,b) : a \in A, b \in B \}$
+\end{center}
+\end{definition}
+
+Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| . |B|$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
