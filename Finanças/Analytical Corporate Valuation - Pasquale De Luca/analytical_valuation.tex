@@ -5,15 +5,57 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[a4paper,11pt]{book}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[portuguese]{babel}
+\usepackage{amsfonts}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{mathtools}
+\usepackage{amssymb} % alguns simbolos matematicos
+\usepackage{ mathrsfs } % letras cursivas
+
+% para usar definições
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
+
+% coding examples in latex file
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 'dedication' environment: To add a dedication paragraph at the start of book %
@@ -47,16 +89,17 @@
   {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
 \makeatother
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % First page of book which contains 'stuff' like: %
 %  - Book title, subtitle                         %
 %  - Book author name                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Book's title and subtitle
-\title{\Huge \textbf{Sample Book Title}  \footnote{This is a footnote.} \\ \huge Sample book subtitle \footnote{This is yet another footnote.}}
+\title{\Huge \textbf{Analytical Corporate Valuation} \\ 
+\huge Fundamental Analysis, Asset Pricing and Company Valuation}
 % Author
-\author{\textsc{First-name Last-name}\thanks{\url{www.example.com}}}
+\author{\textsc{Pasquale De Luca}}
 
 
 \begin{document}
@@ -64,10 +107,6 @@
 \frontmatter
 \maketitle
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Auto-generated table of contents, list of figures and list of tables %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
 %\listoffigures
 %\listoftables
@@ -75,20 +114,25 @@
 \mainmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 PREFACE                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{Preface}
-
-\begin{chapquote}{página 1}
-	``The single most important skill for a computer scientistis \textbf{problem solving}. That is the 
-	ability to formulate problems, think creatively about solutions, and express a solution clearly and 
-	accurately''
-\end{chapquote}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Introductory Chapter}
+\part{Análise Fundamentalista da Companhia}
+
+\chapter{Análise do modelo de negócio da companhia}
+\chapter{Análise de lucratividade da companhia}
+\chapter{Análise da lucratividade do produto}
+
+\part{Risco e Retorno no Mercado de Capital}
+
+\chapter{Abordagem da função de utilidade}
+\chapter{Abordagem da Média-Variância}
+\chapter{Capital Asset Pricing Model - CAPM}
+
+\part{Valuation da Companhia}
+
+\chapter{Estrutura e custo de capital}
+\chapter{Avaliação do patrimônio}
+\chapter{Avaliação do empreendimento}
+\chapter{Avaliação da dívida}
 
 \end{document}
