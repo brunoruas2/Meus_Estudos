@@ -14,6 +14,9 @@
 \usepackage[portuguese]{babel}
 \usepackage{amsfonts}
 \usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{mathtools}
+\usepackage{amssymb} % alguns simbolos matematicos
+\usepackage{ mathrsfs } % letras cursivas
 
 % para usar definições
 \usepackage{amsthm}
@@ -131,31 +134,31 @@ Um \textbf{conjunto} (set) é uma lista de \textbf{elementos}. Normalmente denot
 Dois sets $A$ e $B$ são \textbf{iguais} se possuírem exatamente os mesmos elementos. Não importando a ordem desses elementos dentro de cada set.
 \\
 \\
-Vamos definir um símbolo para sinalizar se um determinado elemento $x$ pertence ou não a um determinado set qualquer $A$. Para tal relação usaremos o símbolo $"\in"$ se $x$ for um elemento de $A$ ou, caso contrário, usaremos $"\notin"$ se $x$ não for um elemento de $A$.
+Vamos definir um símbolo para sinalizar se um determinado elemento $(x)$ pertence ou não a um determinado set qualquer $(A)$. Para tal relação usaremos o símbolo $``\in"$ se $x$ for um elemento de $A$ ou, caso contrário, usaremos $``\notin"$ se $x$ não for um elemento de $A$.
 \\
 \\
-É provável que, em algum momento, seja necessário contar a quantidade de elementos em um dado set qualquer $A$. Chamaremos essa relação de \textbf{cardinalidade} ou \textbf{tamanho} do set $A$. O símbolo usado será duas barras em volta do set do seguinte modo: "$|A|$".
+É provável que, em algum momento, seja necessário contar a quantidade de elementos em um dado set qualquer $A$. Chamaremos essa relação de \textbf{cardinalidade} ou \textbf{tamanho} do set $A$. O símbolo usado será duas barras em volta do set do seguinte modo: $``|A|"$.
 \\
 \\
-A partir dessas duas relações já podemos definir um tipo especial de set. Vamos definir como \textbf{conjunto vazio} ou \textbf{empty set} um conjunto que possua o cardinal igual a zero. Usaremos o símbolo $"\emptyset"$ para definir a relação abaixo:
+A partir dessas duas relações já podemos definir um tipo especial de set. Vamos definir como \textbf{conjunto vazio} ou \textbf{empty set} um conjunto que possua o cardinal igual a zero. Usaremos o símbolo $``\emptyset"$ para definir a relação abaixo:
 
 \begin{center}
 	$|\emptyset| = 0$
 \end{center}
 
-Às vezes, não raramente, usamos sets que a escrita como uma lista de elementos não é tão intuitiva para uso. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
+Em várias situações não vale a pena construir sets apenas com uma lista de alguns dos seus elementos. Imagine um set de todos os números pares, por exemplo, ou um set de todos os números que começam com $3$ e terminam com $4$ ou qualquer outra regra mais específica. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
 
 \begin{center}
 	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \}$
 \end{center}
 
-Eu colori cada significado da expressão acima com a cor correspondente para facilitar o entendimento. A leitura da expressão acima é: "O conjunto '$E$' é igual ao \textcolor{red}{conjunto dos elementos da forma} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{tal que} \textcolor{Brown}{$n$} \textcolor{Orange}{é um elemento de} $\mathbb{Z}$".
+A matemática é uma linguagem que consegue dizer muita coisa com poucos símbolos. Ao longo desse curso, você será capaz de ler esses símbolos e compreender corretamente o que o autor quis dizer por meio deles. Para facilitar essa primeira leitura, eu colori cada símbolo da expressão acima com a cor correspondente da passagem a seguir. Perceba como um pequeno símbolo pode significar bastante coisa. A leitura da expressão acima é: "O conjunto $E$ é igual ao \textcolor{red}{conjunto dos elementos da forma} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{tal que} \textcolor{Brown}{$n$} \textcolor{Orange}{é um elemento do conjunto} $\mathbb{Z}$".
 \\
 \\
 Podemos resumir essa notação de formação de conjuntos como "$Conjunto = \{ Expressão : Regra \}$". É bem comum vermos notações onde os dois pontos são trocados por uma barra: "$Conjunto = \{ Expressão \ | \ Regra \}$".
 \\
 \\
-Existem alguns conjuntos que são famosos e a essa altura você já deve ter visto algumas vezes.
+Existem alguns conjuntos que são famosos ao ponto de terem nomes e símbolos próprios.
 \begin{itemize}
 	\item[] $\emptyset = \{ \}$
 	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$, perceba que $0 \notin \mathbb{N}$
@@ -164,20 +167,20 @@ Existem alguns conjuntos que são famosos e a essa altura você já deve ter vis
 	\item[] \includegraphics[scale=0.11]{images/real_line.png}
 \end{itemize}
 
-Como o conjunto dos número reais pode ser descrito como pontos em uma reta infinita. Se tivermos dois pontos quaisquer $a$ e $b$, de modo que, $a,b \in \mathbb{R}$ e $a < b$. Temos infinitos elementos entre esses dois pontos. Desse modo, teremos que usar um novo símbolo para se referir aos conjuntos que são melhor descritos em termos de \textbf{intervalos} entre pontos.
+Como o conjunto dos número reais pode ser descrito como pontos em uma reta numérica infinita. Se tivermos dois pontos quaisquer $a$ e $b$, de modo que $a$ e $b \in \mathbb{R}$ e $a < b$. Temos infinitos elementos entre esses dois pontos. Por causa dessa propriedade, teremos que usar um novo símbolo para se referir aos conjuntos que são melhor descritos em termos de \textbf{intervalos} entre pontos. Abaixo coloquei uma coluna com uma representação gráfica e, ao lado, uma coluna com a respectiva definição por set builder notation.
 \begin{center}
 	\includegraphics[scale=0.7]{images/intervals.png}
 \end{center}
 
 \section{Produto Cartesiano}
 \begin{definition}[Par Ordenado]
-Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos ($x$ e $y$). Onde esses dois elementos estão entre parênteses e separados por uma vírgula.
+Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos (nesse caso, um $x$ e um $y$). Onde esses dois elementos estão entre parênteses e separados por uma vírgula.
 \end{definition}
 
-Atente para o fato que $(x,y) \neq (y,x)$. 
+\textbf{Atenção}: Atente para o fato que $(x,y) \neq (y,x)$. 
 \\
 \\
-Agora que temos a definição de par ordenado. Podemos escrever conjuntos usando esse novo símbolo.
+Agora que temos a definição de par ordenado. Podemos escrever conjuntos usando esse novo conceito.
 
 \begin{definition}[Produto Cartesiano]
 O \textbf{produto cartesiano} de dois sets $A$ e $B$ é um outro set cujo símbolo é $``A \times B"$ e é definido como:
@@ -186,7 +189,84 @@ $A \times B = \{ (a,b) : a \in A, b \in B \}$
 \end{center}
 \end{definition}
 
-Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| . |B|$
+Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| . |B|$ (ou seja, o cardinal do produto cartesiano de dois sets é igual à multiplicação dos cardinais dos dois conjuntos).
+\\
+\\
+Podemos construir um produto cartesiano onde os conjuntos $A$ e $B$ são iguais. Por exemplo: $\mathbb{R} \times \mathbb{R} = \{ (x,y) : x,y \in \mathbb{R} \}$.
+\\
+\\
+Para simplificar essa expressão onde temos um produto cartesiano de sets iguais, vamos criar um novo conceito que chamaremos de \textbf{potência cartesiana (Cartersian power)}. Desse modo, podemos definir o exemplo de $``\mathbb{R} \times \mathbb{R}"$ como simplesmente $``\mathbb{R}^2"$. Mais genericamente, dizemos que, para qualquer set $A$ e um $n$ positivo, o cartesian power $A^n$ será definir como:
+
+\begin{center}
+	$A^n = \underbrace{A \times A \times ... \times A}_\text{n \ vezes} = \{ (x_1,x_2, ... , x_n) : x_1,x_2, ... , x_n \in A \}$
+\end{center}
+
+\section{Subconjuntos}
+Nós já aprendemos a relacionar elementos e conjuntos mas agora vamos definir um método de relacionar conjuntos entre si. A primeira relação que vamos explorar é a que expressa a situação onde todos os elementos de um conjunto também são elementos de outro conjunto.
+
+\begin{definition}[Subconjunto]
+Suponha que existam dois sets $A$ e $B$. Se todos os elementos de $A$ também forem elementos de $B$, dizemos que $A$ é um \textbf{subconjunto (subset)} de $B$. O símbolo usado para expressar essa relação é $``\subseteq"$, ou seja, $A \subseteq B$. Caso exista um elemento de $A$ que não seja um elemento de $B$, então escrevemos que $A \nsubseteq B$.
+\end{definition}
+
+\textbf{Atenção 1}: Uma consequência direta dessa definição de subconjunto é o fato que $\emptyset \subseteq B$ para qualquer conjunto $``B"$. A demonstração dessa afirmação é simples: Suponha que exista algum conjunto $Z$ onde $\emptyset \nsubseteq Z$. Isso significaria que existe algum $x \in \emptyset$ que não é um elemento de $Z$, ou seja, $x \notin Z$. Mas, por definição, $x \notin \emptyset$, desse modo, $\emptyset \subseteq Z$.
+\\
+\\
+\textbf{Atenção 2}: É trivial o fato que dado um conjunto qualquer $A$, todos os elementos de $A$ pertencem a ele mesmo. Isso implica que $A \subseteq A$.
+\\
+\\
+\textbf{Atenção 3}: Como vimos antes: $\emptyset \subseteq B$, para qualquer set B. Acontece que também é verdadeiro o fato que $\emptyset \subseteq \emptyset$. Uma vez que, se $\emptyset \nsubseteq \emptyset$ existiria algum $x$ de modo que $x \in \emptyset$ e $x \notin \emptyset$. O que é uma clara contradição.
+
+\section{Conjunto de Partes}
+\begin{definition}[Conjunto de Partes]
+Dado um set qualquer $B$, o seu \textbf{conjunto de partes} ou \textbf{power set} será outro set escrito como $\mathscr{P}(B)$ e definido como:
+\begin{center}
+	$\mathscr{P}(B) = \{ X : X \subseteq B \}$
+\end{center}
+\end{definition}
+
+\textbf{Dica}: Tem bastante informação interessante no livro. Como esse aqui é só um resumo, não vou entrar muito além da definição. Mas recomendo a leitura do material original.
+
+\section{União, Intersecção e Diferença}
+Já vimos como podemos relacionar conjuntos por \textbf{produto cartesiano} para gerar outros conjuntos. Agora vamos expandir ainda mais nosso ferramental de operações entre conjuntos.
+
+\begin{definition}[União]
+Dados dois conjuntos $F$ e $G$. A \textbf{união} entre eles será um novo set denotado por $``F \cup G"$ e definido como:
+\begin{center}
+	$F \cup G = \{ x : x \in F \ ou \ x \in G \}$
+\end{center}
+\end{definition}
+
+\begin{definition}[Intersecção]
+Dados dois conjuntos $F$ e $G$. A \textbf{intersecção} entre eles será um novo set denotado por $``F \cap G"$ e definido como:
+\begin{center}
+	$F \cap G = \{ x : x \in F \ e \ x \in G \}$
+\end{center}
+\end{definition}
+
+\begin{definition}[Diferença]
+Dados dois conjuntos $F$ e $G$. A \textbf{diferença} entre eles será um novo set denotado por $``F - G"$ e definido como:
+\begin{center}
+	$F - G = \{ x : x \in F \ e \ x \notin G \}$
+\end{center}
+\end{definition}
+
+\textbf{Dica}: Esses conceitos são muito importantes. Mas pro curso não ficar muito grande, vou me manter só nos conceitos também. Vá ler o material original caso tenha dificuldade.
+
+\section{Complemento}
+Quando lidamos com conjuntos é comum supor que há um conjunto maior que contém todos os outros. A esse set geral chamamos de \textbf{conjunto universo} ou \textbf{conjunto universal}.
+
+\begin{definition}[Complemento]
+Dado um conjunto qualquer $H$ e o seu conjunto universo $U$. O \textbf{complemento} de $H$ é um novo set denotado por $``\overline{H}"$ e definido por:
+\begin{center}
+	$\overline{H} = U - H$
+\end{center}
+\end{definition}
+
+\section{Diagramas de Venn}
+
+Essa sessão eu pulei integralmente. Diagramas de Venn são ótimos pra se ter uma intuição sobre todos os conceitos que vimos até agora. Mas não são usados para provas matemáticas. Ainda vale a leitura do capítulo.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
