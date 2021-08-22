@@ -97,9 +97,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Book's title and subtitle
 \title{\Huge \textbf{Book of Proof} \\ 
-\huge Third Edition}
+\Large Third Edition \\
+\huge by Richard Hammack}
+
 % Author
-\author{\textsc{Richard Hammack}}
+\author{\textsc{Resumo por Bruno de M. Ruas}}
 
 
 \begin{document}
@@ -127,14 +129,17 @@
 \end{chapquote}
 
 
+\section*{Aviso ao Leitor}
+Bem-vindo ao início de uma jornada consideravelmente longa. Esse texto é um resumo (mais conciso e menos didático) do livro do professor Hammack. O objetivo desse presente manual é servir como material de revisão e auxílio aos que quiserem seguir o caminho proposto no \textbf{Projeto Matemática} do site \href{https://economiamainstream.com.br/artigo/matematica/}{\textbf{Economia Mainstream}}. A leitura do material original é fortemente indicada e encorajada por parte dos que elaboraram o presente manual os exercícios contidos no livro, por outro lado, são obrigatórios, você deve tentar resolver o máximo possível. Quaisquer dúvidas podem ser enviadas nos comentários do projeto no site citado logo acima.
+
 \section{Introdução}
-Um \textbf{conjunto} (set) é uma lista de \textbf{elementos}. Normalmente denotados por uma letra maiúscula. Por exemplo:
+Um \textbf{conjunto} (set)\footnote{Eu vou intercalar bastante o uso dos termos em português e inglês.} é uma lista de \textbf{elementos}. Normalmente denotados por uma letra maiúscula. Por exemplo:
 
 \begin{center}
 	$ A = \{1 , 2 , 3 , 4 , ... \} $
 \end{center}
 
-Dois sets $A$ e $B$ são \textbf{iguais} se possuírem exatamente os mesmos elementos. Não importando a ordem desses elementos dentro de cada set.
+\textbf{Regra}: Dois sets $A$ e $B$ são \textbf{iguais} se possuírem exatamente os mesmos elementos. Não importando a ordem desses elementos dentro de cada set.
 \\
 \\
 Vamos definir um símbolo para sinalizar se um determinado elemento $(x)$ pertence ou não a um determinado set qualquer $(A)$. Para tal relação usaremos o símbolo $``\in"$ se $x$ for um elemento de $A$ ou, caso contrário, usaremos $``\notin"$ se $x$ não for um elemento de $A$.
@@ -143,13 +148,13 @@ Vamos definir um símbolo para sinalizar se um determinado elemento $(x)$ perten
 É provável que, em algum momento, seja necessário contar a quantidade de elementos em um dado set qualquer $A$. Chamaremos essa relação de \textbf{cardinalidade} ou \textbf{tamanho} do set $A$. O símbolo usado será duas barras em volta do set do seguinte modo: $``|A|"$.
 \\
 \\
-A partir dessas duas relações já podemos definir um tipo especial de set. Vamos definir como \textbf{conjunto vazio} ou \textbf{empty set} um conjunto que possua o cardinal igual a zero. Usaremos o símbolo $``\emptyset"$ para definir a relação abaixo:
+A partir dessas duas relações já podemos definir um tipo especial de set. Vamos definir como \textbf{conjunto vazio} ou \textbf{empty set} um conjunto que possua o cardinal igual a zero. Usaremos o símbolo $`` \ \emptyset \ "$ para definir a relação a seguir:
 
 \begin{center}
 	$|\emptyset| = 0$
 \end{center}
 
-Em várias situações não vale a pena construir sets apenas com uma lista de alguns dos seus elementos. Imagine um set de todos os números pares, por exemplo, ou um set de todos os números que começam com $3$ e terminam com $4$ ou qualquer outra regra mais específica. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
+Em várias situações não vale a pena construir sets apenas com uma lista-exemplo de alguns dos seus elementos. Imagine um set de todos os números pares, por exemplo, ou um set de todos os números que começam com $3$ e terminam com $4$ ou qualquer outra regra mais específica. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
 
 \begin{center}
 	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \}$
@@ -158,26 +163,26 @@ Em várias situações não vale a pena construir sets apenas com uma lista de a
 A matemática é uma linguagem que consegue dizer muita coisa com poucos símbolos. Ao longo desse curso, você será capaz de ler esses símbolos e compreender corretamente o que o autor quis dizer por meio deles. Para facilitar essa primeira leitura, eu colori cada símbolo da expressão acima com a cor correspondente da passagem a seguir. Perceba como um pequeno símbolo pode significar bastante coisa. A leitura da expressão acima é: "O conjunto $E$ é igual ao \textcolor{red}{conjunto dos elementos da forma} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{tal que} \textcolor{Brown}{$n$} \textcolor{Orange}{é um elemento do conjunto} $\mathbb{Z}$".
 \\
 \\
-Podemos resumir essa notação de formação de conjuntos como "$Conjunto = \{ Expressão : Regra \}$". É bem comum vermos notações onde os dois pontos são trocados por uma barra: "$Conjunto = \{ Expressão \ | \ Regra \}$".
+Podemos resumir essa notação de formação de conjuntos como "$Conjunto = \{ Expressão : Regra \}$". É bem comum vermos notações onde os dois pontos são trocados por uma barra: "$Conjunto = \{ Expressão \ | \ Regra \}$". Nesse livro o autor preferiu a notação com dois pontos.
 \\
 \\
 Existem alguns conjuntos que são famosos ao ponto de terem nomes e símbolos próprios.
 \begin{itemize}
-	\item[] $\emptyset = \{ \}$
-	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$, perceba que $0 \notin \mathbb{N}$
-	\item[] $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ...  \}$
-	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$
-	\item[] \includegraphics[scale=0.11]{images/real_line.png}
+	\item[] $\emptyset = \{ \}$. Conjunto Vazio
+	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$, perceba que $0 \notin \mathbb{N}$. Conjunto dos Naturais
+	\item[] $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ...  \}$. Conjunto dos Inteiros
+	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$. Conjunto dos Racionais
+	\item[] \includegraphics[scale=0.11]{images/real_line.png}. A Reta Real
 \end{itemize}
 
-Como o conjunto dos número reais pode ser descrito como pontos em uma reta numérica infinita. Se tivermos dois pontos quaisquer $a$ e $b$, de modo que $a$ e $b \in \mathbb{R}$ e $a < b$. Temos infinitos elementos entre esses dois pontos. Por causa dessa propriedade, teremos que usar um novo símbolo para se referir aos conjuntos que são melhor descritos em termos de \textbf{intervalos} entre pontos. Abaixo coloquei uma coluna com uma representação gráfica e, ao lado, uma coluna com a respectiva definição por set builder notation.
+Como o conjunto dos número reais pode ser descrito como pontos em uma reta numérica infinita. Se tivermos dois pontos quaisquer $a$ e $b$, de modo que $a , b \in \mathbb{R}$ e $a < b$. Temos infinitos elementos entre esses dois pontos. Por causa dessa propriedade, teremos que usar um novo símbolo para se referir aos conjuntos que são melhor descritos em termos de \textbf{intervalos} entre pontos. Abaixo coloquei uma coluna com uma representação gráfica e, ao lado, uma coluna com a respectiva definição por set builder notation.
 \begin{center}
 	\includegraphics[scale=0.7]{images/intervals.png}
 \end{center}
 
 \section{Produto Cartesiano}
 \begin{definition}[Par Ordenado]
-Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos (nesse caso, um $x$ e um $y$). Onde esses dois elementos estão entre parênteses e separados por uma vírgula.
+Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos (nesse caso, um $x$ e um $y$). Onde esses dois elementos ficam entre parênteses e separados por uma vírgula.
 \end{definition}
 
 \textbf{Atenção}: Atente para o fato que $(x,y) \neq (y,x)$. 
@@ -192,7 +197,7 @@ $A \times B = \{ (a,b) : a \in A, b \in B \}$
 \end{center}
 \end{definition}
 
-Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| . |B|$ (ou seja, o cardinal do produto cartesiano de dois sets é igual à multiplicação dos cardinais dos dois conjuntos).
+Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| \ . \ |B|$ Ou seja, o cardinal do produto cartesiano de dois sets é igual à multiplicação dos cardinais dos dois conjuntos.
 \\
 \\
 Podemos construir um produto cartesiano onde os conjuntos $A$ e $B$ são iguais. Por exemplo: $\mathbb{R} \times \mathbb{R} = \{ (x,y) : x,y \in \mathbb{R} \}$.
@@ -208,13 +213,13 @@ Para simplificar essa expressão onde temos um produto cartesiano de sets iguais
 Nós já aprendemos a relacionar elementos e conjuntos mas agora vamos definir um método de relacionar conjuntos entre si. A primeira relação que vamos explorar é a que expressa a situação onde todos os elementos de um conjunto também são elementos de outro conjunto.
 
 \begin{definition}[Subconjunto]
-Suponha que existam dois sets $A$ e $B$. Se todos os elementos de $A$ também forem elementos de $B$, dizemos que $A$ é um \textbf{subconjunto (subset)} de $B$. O símbolo usado para expressar essa relação é $``\subseteq"$, ou seja, $A \subseteq B$. Caso exista um elemento de $A$ que não seja um elemento de $B$, então escrevemos que $A \nsubseteq B$.
+Suponha que existam dois sets $A$ e $B$. Se todos os elementos de $A$ também forem elementos de $B$, dizemos que $A$ é um \textbf{subconjunto (subset)} de $B$. O símbolo usado para expressar essa relação é $``\subseteq"$, ou seja, $A \subseteq B$ quer dizer que $A$ é subconjunto de $B$. Caso exista um elemento de $A$ que não seja um elemento de $B$, então escrevemos que $A \nsubseteq B$.
 \end{definition}
 
 \textbf{Atenção 1}: Uma consequência direta dessa definição de subconjunto é o fato que $\emptyset \subseteq B$ para qualquer conjunto $``B"$. A demonstração dessa afirmação é simples: Suponha que exista algum conjunto $Z$ onde $\emptyset \nsubseteq Z$. Isso significaria que existe algum $x \in \emptyset$ que não é um elemento de $Z$, ou seja, $x \notin Z$. Mas, por definição, $x \notin \emptyset$, desse modo, $\emptyset \subseteq Z$.
 \\
 \\
-\textbf{Atenção 2}: É trivial o fato que dado um conjunto qualquer $A$, todos os elementos de $A$ pertencem a ele mesmo. Isso implica que $A \subseteq A$.
+\textbf{Atenção 2}: É trivial o fato que dado um conjunto qualquer $A$, todos os elementos de $A$ pertencem a ele mesmo. Isso implica que $A \subseteq A$. Portanto, todo conjunto é subconjunto de si mesmo.
 \\
 \\
 \textbf{Atenção 3}: Como vimos antes: $\emptyset \subseteq B$, para qualquer set B. Acontece que também é verdadeiro o fato que $\emptyset \subseteq \emptyset$. Uma vez que, se $\emptyset \nsubseteq \emptyset$ existiria algum $x$ de modo que $x \in \emptyset$ e $x \notin \emptyset$. O que é uma clara contradição.
@@ -269,7 +274,49 @@ Dado um conjunto qualquer $H$ e o seu conjunto universo $U$. O \textbf{complemen
 
 Essa sessão eu pulei integralmente. Diagramas de Venn são ótimos pra se ter uma intuição sobre todos os conceitos que vimos até agora. Mas não são usados para provas matemáticas. Ainda vale a leitura do capítulo.
 
+\section{Conjuntos Indexados}
+As vezes é necessário trabalhar com uma quantidade consideravelmente grande de conjuntos. Para esses casos, usamos uma técnica de simplificação que é adicionar um índice numérico subscrito à alguma letra maiúscula. Desse modo, ao invés de trabalharmos com sets $A$, $B$ e $C$, podemos trabalhar com os sets $A_1$, $A_2$ e $A_3$.
+\\
+\\
+Podemos relacionar esses subscritos à um outro set. O nome dado a esse set é \textbf{conjunto índice (index set)}. Nos exemplos acima, podemos dizer que todos os subscritos pertencem ao conjunto $\{ 1 , 2 , 3 \}$.
+\\
+\\
+Agora podemos adicionar essa técnica às relações de união e intersecção entre esses conjuntos indexados para um numero arbitrariamente grande. Além disso, vamos usar uma notação similar a do somatório para definir essas relações.
 
+\begin{definition}[União de Sets Indexados]
+Dados os conjuntos $A_1$, $A_2$, $A_3$, $\dots$, $A_n$ e o index set $I = \{ 1 , 2 , \dots , n \}$, temos que
+\begin{center}
+	$\bigcup_{i \in I}\limits = \{ x : x \in A_i \ para \ algum \ A_i, \ onde \  i \in I \}$
+\end{center}
+\end{definition}
+
+\begin{definition}[Intersecção de Sets Indexados]
+Dados os conjuntos $A_1$, $A_2$, $A_3$, $\dots$, $A_n$ e o index set $I = \{ 1 , 2 , \dots , n \}$, temos que
+\begin{center}
+	$\bigcap_{i \in I}\limits = \{ x : x \in A_i \ para \ todo \ A_i, \ onde \  i \in I \}$
+\end{center}
+\end{definition}
+
+O livro tem dois exemplos bem interessantes da aplicação dos conceitos que acabamos de definir. A essa altura você deve conseguir entender os dois.
+
+\section{Conjuntos que são Sistemas Numéricos}
+
+A maioria dos conjuntos que trabalhamos são conjuntos que possuem estruturas e propriedades especiais. No caso dos conjuntos numéricos tomamos como certo que os seus elementos podem ser somados, multiplicados e possuem relações que obedecem as regras que passamos todo o ensino infantil, fundamental e médio aprendendo e aplicando. Como esse livro é introdutório, todas essas características clássicas dos sistemas numéricos serão tomadas como verdade. Mas saiba que as relações que achamos ser naturais possuem comprovações bastante complexas que você pode procurar por conta própria.
+\\
+\\
+Aqui o autor elenca algumas propriedades que tomaremos como verdades sem que sejam devidamente definidas e demonstradas:
+\begin{itemize}
+	\item Propriedade Comutativa/Associativa/Distributiva da Adição/Subtração/Multiplicação/Divisão
+	\item Ordenação Natural dos elementos numéricos de $\mathbb{R}$
+	\item Os conjuntos de $\mathbb{Z}$ obedecem ao \href{https://pt.wikipedia.org/wiki/Princ%C3%ADpio_da_boa_ordena%C3%A7%C3%A3o}{Princípio da Boa Ordenação}.
+\end{itemize}
+
+
+
+
+
+
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
