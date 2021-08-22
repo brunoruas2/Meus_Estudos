@@ -69,11 +69,14 @@
 %  - Book title, subtitle                         %
 %  - Book author name                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Book's title and subtitle
-\title{\Huge \textbf{Think Python}  \\ \huge How to think like a computer scientist }
+\title{\Huge \textbf{Think Python} \\ 
+\Large How to think like a computer scientist \\
+\large Second Edition \\
+\huge by Allen B. Downey}
+
 % Author
-\author{\textsc{Allen B. Downey}}
+\author{\textsc{Resumo por Bruno de M. Ruas}}
 
 
 \begin{document}
@@ -90,7 +93,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{The Way of the Program}
+\chapter{O Caminho do Programa}
 
 \begin{chapquote}{página 1}
 	``The single most important skill for a computer scientistis \textbf{problem solving}. That is the 
@@ -188,7 +191,7 @@ Os erros em um programa são chamados de \textbf{bugs} e o processo de resoluç�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Varibles, Expressions and Statements}
+\chapter{Variáveis, Expressões e Statements}
 
 \begin{chapquote}{página 11}
 	``One of the most powerful features of a programming language is the ability to manipulate \textbf{variables}. A variable is a name that refers to a value''
@@ -196,10 +199,13 @@ Os erros em um programa são chamados de \textbf{bugs} e o processo de resoluç�
 
 \section{Statements de atribuição}
 \begin{lstlisting}[language=Python, caption=Atribuições para diferentes classes]
+# string
 message = 'acesse www.economiamainstream.com.br'
 
+# interger
 n = 12
 
+# floating point
 pi = 3.1415
 \end{lstlisting}
 
@@ -207,7 +213,7 @@ pi = 3.1415
 Os nomes das variáveis podem ser o que você quiser. Contudo, existem algumas regras a serem seguidas: 1) Não podem começar com número; 2) Não pode conter caracteres ilegais (@ , \# ,  etc) e 3) Não podem ser uma \textbf{keyword}.
 
 \subsection{Keywords do Python 3}
-Essas são as palavras que o interpretador já possui significado e que não podem ser atribuídas como nome para nenhuma variável.
+Essas são as palavras que o interpretador já reservou como tendo significado e que não podem ser atribuídas como nome para nenhuma variável.
 
 \includegraphics[scale=1]{images/keywords_python.png}
 
@@ -226,14 +232,14 @@ Python segue a convenção matemática \textbf{PEMDAS}:
 \end{itemize}
 
 \section{Operadores de String}
-Quando se trata de strings, Python resignifica os operadores matemáticos para operações "similares" ao contexto original dos números.
+Quando se trata de strings, Python resignifica os operadores matemáticos para operações $``$ similares $"$ ao contexto original dos números.
 \begin{lstlisting}[language=Python, caption=Operadores com strings]
 
-# operador de soma
+# operador de soma em strings
 'economia' + ' ' + 'mainstream'
 >>> 'economia mainstream'
 
-# operador de multiplicacao
+# operador de multiplicacao em strings
 'economia' * 3
 >>> 'economiaeconomiaeconomia'
 
@@ -277,11 +283,39 @@ Existem 3 tipos de erros que podem acontecer em um programa: 1) Erros de Sintaxe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Functions}
+\chapter{Funções}
 
 \begin{chapquote}{página 21}
 	``A \textbf{function} is a named sequence of statements that performs a computation. [...] You specify the name and the sequence of statements. Later, you `call' the function by name.''
 \end{chapquote}
+
+\section{Chamadas de Funções}
+Uma função possui um \textbf{nome} e, normalmente, recebe \textbf{argumentos}. O resultado obtido após a chamada de uma função com os devidos argumentos é o seu \textbf{valor de retorno}. O Python já possui internamento várias funções que são muito úteis para os desenvolvedores. 
+
+\section{Funções Matemáticas}
+Um \textbf{module} é um conjunto de funções e variáveis. Essas funções ficam disponíveis ao interpretador por meio de um \textbf{statement de importação}. O Python possui nativamente um module de operações matemáticas. Para acessar as funções e 
+
+\begin{lstlisting}[language=Python, caption=Carregando o module math]
+
+import math
+
+
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
