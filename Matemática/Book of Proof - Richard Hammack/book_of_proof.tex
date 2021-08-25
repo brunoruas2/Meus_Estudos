@@ -20,12 +20,13 @@
 
 % para usar definições
 \usepackage{amsthm}
-
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheorem{definition}{Definição}[section]
+\newtheorem{fact}{Fato}[section]
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
+
 
 % coding examples in latex file
 \usepackage{listings}
@@ -308,14 +309,19 @@ Aqui o autor elenca algumas propriedades que tomaremos como verdades sem que sej
 \begin{itemize}
 	\item Propriedade Comutativa/Associativa/Distributiva da Adição/Subtração/Multiplicação/Divisão
 	\item Ordenação Natural dos elementos numéricos de $\mathbb{R}$
-	\item Os conjuntos de $\mathbb{Z}$ obedecem ao \href{https://pt.wikipedia.org/wiki/Princ%C3%ADpio_da_boa_ordena%C3%A7%C3%A3o}{Princípio da Boa Ordenação}.
+	\item Os subconjuntos de $\mathbb{N}$ obedecem ao \href{https://pt.wikipedia.org/wiki/Princ%C3%ADpio_da_boa_ordena%C3%A7%C3%A3o}{Princípio da Boa Ordenação}.
 \end{itemize}
 
+\textbf{Comentário}: Agora a gente vai adentrar um pouco nas propriedades que podemos derivar desses pressupostos acima. Pode parecer que é um papo chato, mas a sua missão é se certificar que você é capaz de compreender toda a explicação. Vença a preguiça.
+\\
+\\
+Uma conclusão que podemos tirar do princípio da boa ordenação é que dado um conjunto não nulo qualquer $A \subseteq \mathbb{N}$ sempre vai haver um $x_0 \in A$ que seja o seu \textbf{menor elemento}. De modo parecido, para qualquer $b \in \mathbb{Z}$, qualquer conjunto não nulo $A \subseteq \{ b, b+1, b+2, b+3, \dots \}$ também possui um \textbf{menor elemento}.
 
+\begin{fact}[Division Algorithm]
+Dados dois inteiros $a$ e $b$, onde $b > 0$. Existem outros dois inteiros únicos $q$ e $r$ para qual $a = qb + r$ e $0 \leq r < b$.
+\end{fact}
 
-
-
-
+Agora nós vamos demonstrar como esse fato 1.9.1 é um resultado do princípio da boa ordenança.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
