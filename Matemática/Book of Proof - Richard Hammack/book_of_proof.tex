@@ -16,13 +16,14 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{mathtools}
 \usepackage{amssymb} % alguns simbolos matematicos
-\usepackage{ mathrsfs } % letras cursivas
+\usepackage{mathrsfs} % letras cursivas
 
 % para usar definições
 \usepackage{amsthm}
 \theoremstyle{definition}
 \newtheorem{definition}{Definição}[section]
 \newtheorem{fact}{Fato}[section]
+\newtheorem{demonstration}{Demonstração}[section]
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
@@ -170,7 +171,7 @@ Podemos resumir essa notação de formação de conjuntos como "$Conjunto = \{ E
 Existem alguns conjuntos que são famosos ao ponto de terem nomes e símbolos próprios.
 \begin{itemize}
 	\item[] $\emptyset = \{ \}$. Conjunto Vazio
-	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$, perceba que $0 \notin \mathbb{N}$. Conjunto dos Naturais
+	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$\footnote{perceba que, para o autor do livro, $0 \notin \mathbb{N}$. Usaremos $\mathbb{N}^0$ para expressar os naturais com o elemento 0.}. Conjunto dos Naturais
 	\item[] $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ...  \}$. Conjunto dos Inteiros
 	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$. Conjunto dos Racionais
 	\item[] \includegraphics[scale=0.11]{images/real_line.png}. A Reta Real
@@ -321,8 +322,40 @@ Uma conclusão que podemos tirar do princípio da boa ordenação é que dado um
 Dados dois inteiros $a$ e $b$, onde $b > 0$. Existem outros dois inteiros únicos $q$ e $r$ para qual $a = qb + r$ e $0 \leq r < b$.
 \end{fact}
 
-Agora nós vamos demonstrar como esse fato 1.9.1 é um resultado do princípio da boa ordenança.
- 
+Agora o autor demonstra a existência de $r$ e $q$ com suas propriedades. Talvez depois eu estenda a prova para a unicidade desses valores\footnote{Passa lá no Economia Mainstream e me dá uma cobrada nos comentários}.
+
+\begin{demonstration}[Division Algorithm]
+Dados $a,b \in \mathbb{Z}$ e $b > 0$, é possível criar um set do tipo:
+\begin{center}
+	$ A = \{ a - xb : x \in \mathbb{Z}, 0 \leq a - xb \} \subseteq \mathbb{N}^0 $
+\end{center}
+Desse modo, $A \subseteq \mathbb{N}$. Por causa disso, podemos aplicar o princípio da boa ordenação em $A$ e dizer que existe algum elemento $r$ que seja o menor elemento de $A$.
+\\
+\\
+Como $r \in A$ ele pode ser escrito da forma $r = a - qb$ onde $x = q \in \mathbb{Z}$. Desse fato podemos tirar duas informações úteis: 1) $a = r + qb$ e 2) Como $r \in \mathbb{N}^0$, então $r \geq 0$.
+\\
+\\
+Agora só nos resta provar que $r < b$ mas para isso, vamos usar o pensamento contrário: O que aconteceria se $r \geq b$?
+\\
+\\
+Ora, se $r \geq b$, então a subtração $r - b$ será um número positivo, portanto será também um elemento de $\mathbb{N}^0$. Podemos reescrever essa subtração como $r - b = (a - qb) - b = a - (q + 1)b$. 
+\\
+\\
+Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição, portanto, sabemos que $r < b$. E com isso finalizamos a demonstração da existência de $r$ e $q$ $\blacksquare$
+\end{demonstration}
+
+\section{O Paradoxo de Russell}
+Até agora trabalhos a distinção entre "elementos" e "conjuntos". Mas, na verdade, qualquer número (ou seja, elemento de sets numéricos) pode, sim, ser interpretado como um conjunto.\footnote{Existe um mundo de teoria sobre conjuntos, nós não temos tempo pra entrar muito fundo nessa questão. Então vá atrás de livros sobre teoria dos conjuntos e seja feliz.}. Até mesmos as operações matemáticas podem ser definidas usando-se teoria dos conjuntos. O Autor vai até mais longe "Qualquer entidade matemática é um conjunto, mesmo que não escolhamos pensar desse modo".
+\\
+\\
+Essa parte do paradoxo de Russell não serve pro resto do livro mas é bem legal de saber. O que Bertrand Russell propôs foi o seguinte conjunto:
+\begin{center}
+	$ A = \{ X : X \  é \ um \ set \ e \ X \notin X \}$\footnote{Ou seja, A é formado por todos os conjuntos que não possuem a si mesmo como elemento.}
+\end{center}
+E perguntou: "O conjunto $A$ é um elemento de si mesmo?".
+\\
+\\
+\textbf{Dica}: Vai ler o livro nessa parte. O professor explica bem melhor sobre o paradoxo.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
