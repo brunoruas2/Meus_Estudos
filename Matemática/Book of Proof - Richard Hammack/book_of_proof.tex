@@ -159,19 +159,19 @@ A partir dessas duas relações já podemos definir um tipo especial de set. Vam
 Em várias situações não vale a pena construir sets apenas com uma lista-exemplo de alguns dos seus elementos. Imagine um set de todos os números pares, por exemplo, ou um set de todos os números que começam com $3$ e terminam com $4$ ou qualquer outra regra mais específica. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
 
 \begin{center}
-	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \}$
+	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \} $
 \end{center}
 
 A matemática é uma linguagem que consegue dizer muita coisa com poucos símbolos. Ao longo desse curso, você será capaz de ler esses símbolos e compreender corretamente o que o autor quis dizer por meio deles. Para facilitar essa primeira leitura, eu colori cada símbolo da expressão acima com a cor correspondente da passagem a seguir. Perceba como um pequeno símbolo pode significar bastante coisa. A leitura da expressão acima é: "O conjunto $E$ é igual ao \textcolor{red}{conjunto dos elementos da forma} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{tal que} \textcolor{Brown}{$n$} \textcolor{Orange}{é um elemento do conjunto} $\mathbb{Z}$".
 \\
 \\
-Podemos resumir essa notação de formação de conjuntos como "$Conjunto = \{ Expressão : Regra \}$". É bem comum vermos notações onde os dois pontos são trocados por uma barra: "$Conjunto = \{ Expressão \ | \ Regra \}$". Nesse livro o autor preferiu a notação com dois pontos.
+Podemos resumir essa notação de formação de conjuntos como "Conjunto = {Expressão : Regra}". É bem comum vermos notações onde os dois pontos são trocados por uma barra: "Conjunto = {Expressão | Regra}". Nesse livro o autor preferiu a notação com dois pontos.
 \\
 \\
 Existem alguns conjuntos que são famosos ao ponto de terem nomes e símbolos próprios.
 \begin{itemize}
 	\item[] $\emptyset = \{ \}$. Conjunto Vazio
-	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$\footnote{perceba que, para o autor do livro, $0 \notin \mathbb{N}$. Usaremos $\mathbb{N}^0$ para expressar os naturais com o elemento 0.}. Conjunto dos Naturais
+	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$\footnote{perceba que, para o autor do livro, $0 \notin \mathbb{N}$. Usaremos $\mathbb{N}^0$ para expressar os naturais com o elemento 0.}\footnote{\href{https://www.youtube.com/watch?v=j9WmXliT0lM}{Aqui um video bacana sobre o assunto.}}. Conjunto dos Naturais
 	\item[] $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ...  \}$. Conjunto dos Inteiros
 	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$. Conjunto dos Racionais
 	\item[] \includegraphics[scale=0.11]{images/real_line.png}. A Reta Real
@@ -208,7 +208,7 @@ Podemos construir um produto cartesiano onde os conjuntos $A$ e $B$ são iguais.
 Para simplificar essa expressão onde temos um produto cartesiano de sets iguais, vamos criar um novo conceito que chamaremos de \textbf{potência cartesiana (Cartersian power)}. Desse modo, podemos definir o exemplo de $``\mathbb{R} \times \mathbb{R}"$ como simplesmente $``\mathbb{R}^2"$. Mais genericamente, dizemos que, para qualquer set $A$ e um $n$ positivo, o cartesian power $A^n$ será definir como:
 
 \begin{center}
-	$A^n = \underbrace{A \times A \times ... \times A}_\text{n \ vezes} = \{ (x_1,x_2, ... , x_n) : x_1,x_2, ... , x_n \in A \}$
+	$ A^n = \underbrace{A \times A \times ... \times A}_\text{n \ vezes} = \{ (x_1,x_2, ... , x_n) : x_1,x_2, ... , x_n \in A \} $
 \end{center}
 
 \section{Subconjuntos}
@@ -350,7 +350,7 @@ Até agora trabalhos a distinção entre "elementos" e "conjuntos". Mas, na verd
 \\
 Essa parte do paradoxo de Russell não serve pro resto do livro mas é bem legal de saber. O que Bertrand Russell propôs foi o seguinte conjunto:
 \begin{center}
-	$ A = \{ X : X \  é \ um \ set \ e \ X \notin X \}$\footnote{Ou seja, A é formado por todos os conjuntos que não possuem a si mesmo como elemento.}
+	$ A = \{ X : X $ é um set e $X \notin X \}$\footnote{Ou seja, A é formado por todos os conjuntos que não possuem a si mesmo como elemento.}
 \end{center}
 E perguntou: "O conjunto $A$ é um elemento de si mesmo?".
 \\
