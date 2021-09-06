@@ -121,9 +121,10 @@
 \part{Fundamentos}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conjuntos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Conjuntos}
 
 
 \begin{chapquote}{página 3}
@@ -141,7 +142,7 @@ Um \textbf{conjunto} (set)\footnote{Eu vou intercalar bastante o uso dos termos 
 	$ A = \{1 , 2 , 3 , 4 , ... \} $
 \end{center}
 
-\textbf{Regra}: Dois sets $A$ e $B$ são \textbf{iguais} se possuírem exatamente os mesmos elementos. Não importando a ordem desses elementos dentro de cada set.
+\textbf{Regra}: Dois sets $A$ e $B$ são \textbf{iguais} se possuírem exatamente os mesmos elementos. Não importando a ordem desses elementos dentro de cada set. Ou seja, $ \{ 1,2,3 \} = \{3,1,2\}$.
 \\
 \\
 Vamos definir um símbolo para sinalizar se um determinado elemento $(x)$ pertence ou não a um determinado set qualquer $(A)$. Para tal relação usaremos o símbolo $``\in"$ se $x$ for um elemento de $A$ ou, caso contrário, usaremos $``\notin"$ se $x$ não for um elemento de $A$.
@@ -159,7 +160,7 @@ A partir dessas duas relações já podemos definir um tipo especial de set. Vam
 Em várias situações não vale a pena construir sets apenas com uma lista-exemplo de alguns dos seus elementos. Imagine um set de todos os números pares, por exemplo, ou um set de todos os números que começam com $3$ e terminam com $4$ ou qualquer outra regra mais específica. Para essas situações usamos a \textbf{notação de formação de conjuntos (set builder notation)}. Como no exemplo abaixo:
 
 \begin{center}
-	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \} $
+	$ E = $ \textcolor{red}{$\{$} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{$:$} \textcolor{Brown}{$n$} \textcolor{Orange}{$\in$} $\mathbb{Z} \} $ \footnote{Aprender a ler a notação de formação de conjuntos é, basicamente, aprender a ler Matemática. Se esforce para entender sempre que usarmos essa técnica na hora de definir conjuntos. Para ajudar, eu vou colocar no rodapé a leitura em alguns casos.}
 \end{center}
 
 A matemática é uma linguagem que consegue dizer muita coisa com poucos símbolos. Ao longo desse curso, você será capaz de ler esses símbolos e compreender corretamente o que o autor quis dizer por meio deles. Para facilitar essa primeira leitura, eu colori cada símbolo da expressão acima com a cor correspondente da passagem a seguir. Perceba como um pequeno símbolo pode significar bastante coisa. A leitura da expressão acima é: "O conjunto $E$ é igual ao \textcolor{red}{conjunto dos elementos da forma} \textcolor{blue}{$2n$} \textcolor{OliveGreen}{tal que} \textcolor{Brown}{$n$} \textcolor{Orange}{é um elemento do conjunto} $\mathbb{Z}$".
@@ -171,9 +172,9 @@ Podemos resumir essa notação de formação de conjuntos como "Conjunto = {Expr
 Existem alguns conjuntos que são famosos ao ponto de terem nomes e símbolos próprios.
 \begin{itemize}
 	\item[] $\emptyset = \{ \}$. Conjunto Vazio
-	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$\footnote{perceba que, para o autor do livro, $0 \notin \mathbb{N}$. Usaremos $\mathbb{N}^0$ para expressar os naturais com o elemento 0.}\footnote{\href{https://www.youtube.com/watch?v=j9WmXliT0lM}{Aqui um video bacana sobre o assunto.}}. Conjunto dos Naturais
+	\item[] $\mathbb{N} = \{ 1, 2, 3, 4, ... \}$\footnote{Perceba que, para o autor do livro, $0 \notin \mathbb{N}$. Usaremos $\mathbb{N}^0$ para expressar os naturais com o elemento 0.\href{https://www.youtube.com/watch?v=j9WmXliT0lM}{ Link para um video bacana sobre o assunto.}}. Conjunto dos Naturais
 	\item[] $\mathbb{Z} = \{ ..., -2, -1, 0, 1, 2, ...  \}$. Conjunto dos Inteiros
-	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$. Conjunto dos Racionais
+	\item[] $\mathbb{Q} = \{ x : x = m/n, \ onde \ m,n \in \mathbb{Z} \  e \  n \neq 0 \}$. Conjunto dos Racionais\footnote{Lê-se: O set dos Racionais é igual ao conjunto dos elementos $x$ tal que $x$ é formado pela divisão de $m$ por $n$, de modo que $m$ e $n$ são número inteiros e $n$ não é zero.}
 	\item[] \includegraphics[scale=0.11]{images/real_line.png}. A Reta Real
 \end{itemize}
 
@@ -187,7 +188,7 @@ Como o conjunto dos número reais pode ser descrito como pontos em uma reta num�
 Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos (nesse caso, um $x$ e um $y$). Onde esses dois elementos ficam entre parênteses e separados por uma vírgula.
 \end{definition}
 
-\textbf{Atenção}: Atente para o fato que $(x,y) \neq (y,x)$. 
+\textbf{Regra}: Diferente dos conjuntos, a ordem dos elementos dos pares ordenados importa. Ou seja, $(x,y) \neq (y,x)$. 
 \\
 \\
 Agora que temos a definição de par ordenado. Podemos escrever conjuntos usando esse novo conceito.
@@ -195,20 +196,23 @@ Agora que temos a definição de par ordenado. Podemos escrever conjuntos usando
 \begin{definition}[Produto Cartesiano]
 O \textbf{produto cartesiano} de dois sets $A$ e $B$ é um outro set cujo símbolo é $``A \times B"$ e é definido como:
 \begin{center}
-$A \times B = \{ (a,b) : a \in A, b \in B \}$
+$A \times B = \{ (a,b) : a \in A, b \in B \}$\footnote{Lê-se: O produto cartesiano dos conjuntos $A$ e $B$ é formado pelos pares ordenados $(a,b)$ de modo que as primeiras coordenadas são elementos de $A$ e as segundas são elementos de $B$.}
 \end{center}
 \end{definition}
 
-Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| \ . \ |B|$ Ou seja, o cardinal do produto cartesiano de dois sets é igual à multiplicação dos cardinais dos dois conjuntos.
+Perceba que, se $A$ e $B$ são finitos, então $| A \times B | = |A| \ . \ |B|$. Isso é, o cardinal do produto cartesiano de dois sets é igual à multiplicação dos cardinais dos dois conjuntos.\footnote{Ao longo da etapa de Fundamentos do Projeto Matemática, faremos várias afirmações sem a devida demonstração mas, a medida que você entrar no curso de Análise, não faremos afirmações sem as devidas provas.}
 \\
 \\
 Podemos construir um produto cartesiano onde os conjuntos $A$ e $B$ são iguais. Por exemplo: $\mathbb{R} \times \mathbb{R} = \{ (x,y) : x,y \in \mathbb{R} \}$.
 \\
 \\
+Podemos expandir o par ordenado para infinitos elementos. Para isso vamos criar um novo conceito mais geral que abarcará o conceito de par ordenado. Chamaremos de \textbf{n-upla} a coordenada de $n$ elementos do modo $(x_1, x_2, \dots, x_n)$. Nesse conceito mais geral, um par ordenado nada mais é que uma n-upla cujo $n = 2$.
+\\
+\\
 Para simplificar essa expressão onde temos um produto cartesiano de sets iguais, vamos criar um novo conceito que chamaremos de \textbf{potência cartesiana (Cartersian power)}. Desse modo, podemos definir o exemplo de $``\mathbb{R} \times \mathbb{R}"$ como simplesmente $``\mathbb{R}^2"$. Mais genericamente, dizemos que, para qualquer set $A$ e um $n$ positivo, o cartesian power $A^n$ será definir como:
 
 \begin{center}
-	$ A^n = \underbrace{A \times A \times ... \times A}_\text{n \ vezes} = \{ (x_1,x_2, ... , x_n) : x_1,x_2, ... , x_n \in A \} $
+	$ A^n = \underbrace{A \times A \times ... \times A}_\text{n \ vezes} = \{ (x_1,x_2, ... , x_n) : x_1,x_2, ... , x_n \in A \} $ \footnote{Lê-se: A potência cartesiana $A^n$ é igual ao conjunto das n-uplas cujas $n$ coordenadas são elementos do conjunto $A$.}
 \end{center}
 
 \section{Subconjuntos}
@@ -283,7 +287,7 @@ As vezes é necessário trabalhar com uma quantidade consideravelmente grande de
 Podemos relacionar esses subscritos à um outro set. O nome dado a esse set é \textbf{conjunto índice (index set)}. Nos exemplos acima, podemos dizer que todos os subscritos pertencem ao conjunto $\{ 1 , 2 , 3 \}$.
 \\
 \\
-Agora podemos adicionar essa técnica às relações de união e intersecção entre esses conjuntos indexados para um numero arbitrariamente grande. Além disso, vamos usar uma notação similar a do somatório para definir essas relações.
+Agora podemos adicionar essa técnica às relações de união e intersecção entre esses conjuntos indexados para um numero arbitrariamente grande. Além disso, vamos usar uma notação similar a do somatório\footnote{\href{https://pt.khanacademy.org/math/algebra2/sequences-and-series/alg2-sigma-notation/v/sigma-notation-sum}{Link para uma aula sobre a notação Sigma.}} para definir essas relações.
 
 \begin{definition}[União de Sets Indexados]
 Dados os conjuntos $A_1$, $A_2$, $A_3$, $\dots$, $A_n$ e o index set $I = \{ 1 , 2 , \dots , n \}$, temos que
@@ -324,12 +328,12 @@ Dados dois inteiros $a$ e $b$, onde $b > 0$. Existem outros dois inteiros único
 
 Agora o autor demonstra a existência de $r$ e $q$ com suas propriedades. Talvez depois eu estenda a prova para a unicidade desses valores\footnote{Passa lá no Economia Mainstream e me dá uma cobrada nos comentários}.
 
-\begin{demonstration}[Division Algorithm]
+\begin{demonstration}[Division Algorithm - Existência de $r$ e $q$]
 Dados $a,b \in \mathbb{Z}$ e $b > 0$, é possível criar um set do tipo:
 \begin{center}
 	$ A = \{ a - xb : x \in \mathbb{Z}, 0 \leq a - xb \} \subseteq \mathbb{N}^0 $
 \end{center}
-Desse modo, $A \subseteq \mathbb{N}$. Por causa disso, podemos aplicar o princípio da boa ordenação em $A$ e dizer que existe algum elemento $r$ que seja o menor elemento de $A$.
+Desse modo, $A \subseteq \mathbb{N}^0$. Por causa disso, podemos aplicar o princípio da boa ordenação em $A$ e dizer que existe algum elemento $r$ que seja o menor elemento de $A$.
 \\
 \\
 Como $r \in A$ ele pode ser escrito da forma $r = a - qb$ onde $x = q \in \mathbb{Z}$. Desse fato podemos tirar duas informações úteis: 1) $a = r + qb$ e 2) Como $r \in \mathbb{N}^0$, então $r \geq 0$.
@@ -341,10 +345,11 @@ Agora só nos resta provar que $r < b$ mas para isso, vamos usar o pensamento co
 Ora, se $r \geq b$, então a subtração $r - b$ será um número positivo, portanto será também um elemento de $\mathbb{N}^0$. Podemos reescrever essa subtração como $r - b = (a - qb) - b = a - (q + 1)b$. 
 \\
 \\
-Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição, portanto, sabemos que $r < b$. E com isso finalizamos a demonstração da existência de $r$ e $q$ $\blacksquare$
+Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição\footnote{O nome dessa técnica é: prova por contradição. Falaremos dela mais pra frente no curso.}, portanto, só podemos aceitar o oposto, ou seja, sabemos que $r < b$. Com isso finalizamos a demonstração da existência de $r$ e $q$ com as propriedades anteriormente citadas $\blacksquare$\footnote{Esse quadrado preto é usado para pontuar o final de uma demonstração.}
 \end{demonstration}
 
 \section{O Paradoxo de Russell}
+
 Até agora trabalhos a distinção entre "elementos" e "conjuntos". Mas, na verdade, qualquer número (ou seja, elemento de sets numéricos) pode, sim, ser interpretado como um conjunto.\footnote{Existe um mundo de teoria sobre conjuntos, nós não temos tempo pra entrar muito fundo nessa questão. Então vá atrás de livros sobre teoria dos conjuntos e seja feliz.}. Até mesmos as operações matemáticas podem ser definidas usando-se teoria dos conjuntos. O Autor vai até mais longe "Qualquer entidade matemática é um conjunto, mesmo que não escolhamos pensar desse modo".
 \\
 \\
@@ -355,17 +360,28 @@ Essa parte do paradoxo de Russell não serve pro resto do livro mas é bem legal
 E perguntou: "O conjunto $A$ é um elemento de si mesmo?".
 \\
 \\
+Acredite, apenas esse enunciado foi uma baita dor de cabeça para os matemáticos na época. Esse assunto não é necessário para a compreensão do resto desse material. Se você quiser entender um pouco mais, confira esse \href{https://www.youtube.com/watch?v=AQTTYAM8BF0}{link} ou esse outro \href{https://www.youtube.com/watch?v=0Bs0lJRxOaI}{link}.
+\\
+\\
 \textbf{Dica}: Vai ler o livro nessa parte. O professor explica bem melhor sobre o paradoxo.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Lógica}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Contagem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 CHAPTER                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \part{Como Provar Afirmações Condicionais}
 
