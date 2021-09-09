@@ -388,11 +388,11 @@ Quando uma proposição possuir variáveis, podemos escreve-la de uma maneira si
 Uma \textbf{sentença aberta} é uma proposição cuja validade depende da sua variável. Ou seja, dependendo do valor que você der para a variável, a proposição pode ser verdadeira ou falsa.
 \\
 \\
-O livro do professor Hammack é justamente sobre o método de como se provar que uma proposição é verdade ou falsa. Para provar uma proposição você deve começar com proposições que sejam claramente verdadeiras e usar a lógica para deduzir outras proposições mais complexas que as anteriores até que, por fim, se chegue na proposição que se quer provar.
+Esse livro do professor Hammack é justamente sobre o método de como se provar que uma proposição é verdade ou falsa. Para provar uma proposição você deve começar com proposições que sejam claramente verdadeiras e usar a lógica para deduzir outras proposições mais complexas que as anteriores até que, por fim, se chegue na proposição que se quer provar.
 
 \section{Operadores: e, ou, não}
 
-Até agora dizemos que você pode usar proposições junto à lógica para se chegar a outras proposições. Então vamos aprender como trabalhar com mais de uma proposição por meio dos \textbf{operadores lógicos}.
+Até agora foi dito que você pode usar proposições junto à lógica para se chegar a outras proposições. Então vamos aprender como trabalhar com mais de uma proposição por meio dos \textbf{operadores lógicos}.
 \\
 \\
 O primeiro operador que vamos aprender é o "$e$". Dadas as proposições $P$ e $Q$. Podemos criar uma nova proposição através desse operador. Quando escrevemos $R: P \ e \ Q$, estamos criando uma nova proposição $R$ que é composta de das duas proposições $P$ e $Q$. O símbolo usado para esse conectivo é o "$\land$". Aqui em baixo vamos colocar a tabela verdade\footnote{"V" significa Verdadeiro e "F" significa Falso.} desse operador\footnote{Se você não sabe o que são tabelas-verdades então dá uma lida nesse \href{https://www.youtube.com/watch?v=hWEZsyF3ZZc}{link}.}
@@ -421,7 +421,7 @@ Outro operador lógico clássico é o "ou". O símbolo dele é o "$\lor$". Eu se
 \end{tabular}
 \end{center}
 
-\textbf{Atenção}: O significado da palavra "ou" \ na linguagem do dia a dia é diferente do significado empregado no contexto da lógica. Quando usamos o conectivo "ou" \ na lógica, fica implícita a possibilidade de ambas as proposições serem verdadeiras ao mesmo tempo. Para as situações onde queremos que apenas uma proposição seja aceita mas não ambas, usamos um "ou exclusivo"\footnote{O símbolo desse é o "$\oplus$".} \ dos seguintes modos: 
+\textbf{Atenção}: O significado da palavra "ou" \ na linguagem do dia a dia é diferente do significado empregado no contexto da lógica. Quando usamos o conectivo "ou" \ na lógica, fica implícita a possibilidade de ambas as proposições sejam verdadeiras ao mesmo tempo. Para as situações onde queremos que apenas uma proposição seja aceita mas não ambas, usamos um "ou exclusivo"\footnote{O símbolo desse é o "$\oplus$".} \ dos seguintes modos: 
 
 \begin{itemize}
 \item ou $P$ ou $Q$
@@ -441,6 +441,21 @@ O último operador que veremos é a \textbf{negação}. Ela inverte a condição
 \end{center}
 
 \section{Proposições Condicionais}
+
+Podemos ainda combinar proposições de outra maneira. Sejam as proposições $P$ e $Q$. Podemos dizer que "Se $P$ for verdade, então $Q$ também será verdadeiro". O símbolo usado para esse conectivo se...então é o "$\implies$". Uma proposição desse tipo é chamada de \textbf{proposição condicional}. Leia a página 43 do livro caso você esteja com dúvida sobre as últimas duas linhas da tabela-verdade.\footnote{O autor dá a dica de você pensar nas proposições compostas como promessas feita por alguém. Isso ajuda muito a entender como as tabelas-verdade são construídas.}
+
+\begin{center}
+\begin{tabular}{ c c || c }
+ P & Q & $P \implies Q$ \\ 
+ \hline
+ V & V & V \\  
+ V & F & F \\  
+ F & V & V \\  
+ F & F & V
+\end{tabular}
+\end{center}
+
+
 \section{Proposições Bicondicionais}
 \section{Tabelas-Verdade para Proposições}
 \section{Equivalência Lógica}
