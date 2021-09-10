@@ -429,11 +429,11 @@ Outro operador lógico clássico é o "ou". O símbolo dele é o "$\lor$". Eu se
 \item Exatamente um de $P$ ou $Q$
 \end{itemize}
 
-O último operador que veremos é a \textbf{negação}. Ela inverte a condição da proposição onde é aplicada. Seu símbolo é o " \~{} "\footnote{Existem outras representações desse operador: $\lnot$ , $\veebar$ , $\dot\lor$}, ou seja, se uma proposição é verdadeira, ao aplicarmos a negação à ela, tornamos essa proposição falsa. A tabela-verdade desse operador é bem simples.
+O último operador que veremos é a \textbf{negação}. Ela inverte a condição da proposição onde é aplicada. Seu símbolo é o "$\sim$"\footnote{Existem outras representações desse operador: $\lnot$ , $\veebar$ , $\dot\lor$}, ou seja, se uma proposição é verdadeira, ao aplicarmos a negação à ela, tornamos essa proposição falsa. A tabela-verdade desse operador é bem simples.
 
 \begin{center}
 \begin{tabular}{ c || c }
- P & \~{}$P$ \\ 
+ P & $\sim P$ \\ 
  \hline
  V & F \\  
  F & V
@@ -455,9 +455,66 @@ Podemos ainda combinar proposições de outra maneira. Sejam as proposições $P
 \end{tabular}
 \end{center}
 
-
 \section{Proposições Bicondicionais}
+
+Existem situações onde duas proposições são mutuamente condicionais, ou seja, $P \implies Q$ e $Q \implies P$. Nesses casos usamos o conectivo "se e somente se" cujo símbolo é "$\iff$". 
+\\
+\\
+Na prática, a proposição bicondicional $P \iff Q$ nada mais é do que a proposição composta $(P \implies Q) \land (Q \implies P)$. A tabela-verdade segue abaixo.
+
+\begin{center}
+\begin{tabular}{ c c || c }
+ P & Q & $P \iff Q$ \\ 
+ \hline
+ V & V & V \\  
+ V & F & F \\  
+ F & V & F \\  
+ F & F & V
+\end{tabular}
+\end{center}
+
 \section{Tabelas-Verdade para Proposições}
+
+Agora que você sabe as tabelas-verdade de $\land$,$\lor$,$\sim$,$\implies$ e $\iff$, você deve internalizá-las de modo a serem muito naturais ao avaliar a validade de uma proposição cuja construção utilize esses operadores.
+\\
+\\
+Vamos trabalhar uma proposição composta que expressa a seguinte situação: Dados duas proposições $P$ e $Q$, somente uma delas é verdadeira mas não ambas. Não existe um operador que nos permita construir uma proposição apenas com um único símbolo. Para podermos construir tal proposição temos que combinar nossos operadores do seguinte modo:
+
+\begin{center}
+	$(P \lor Q) \ \land \ \sim (P \land Q)$
+\end{center}
+
+Essa proposição pode assustar numa primeira olhada, contudo, ela expressa exatamente nossa intenção anteriormente explicitada. Para melhor compreensão vamos simplifica-la pela construção de novas proposições. Podemos resumi-la como: "$P$ ou $Q$ são verdadeiras, mas não é o caso onde $P$ e $Q$ são verdadeiras.
+\\
+\\
+A tabela-verdade dessa proposição é a seguinte:
+
+\begin{center}
+\begin{tabular}{c c || c c || c || c}
+ P & Q & $(P \lor Q)$ & $(P \land Q)$ & $\sim (P \land Q)$ & $(P \lor Q) \ \land \ \sim (P \land Q)$\\
+ \hline
+ V & V & V & V & F & F \\  
+ V & F & V & F & V & V \\  
+ F & V & V & F & V & V \\  
+ F & F & F & F & V & F
+\end{tabular}
+\end{center}
+
+Calma. É bem mais tranquilo do que parece. Vamos analisar essa tabela por partes. Nas primeiras duas colunas temos as proposições iniciais $P$ e $Q$. Nas linhas estão as situações onde testamos o que acontece quando elas são verdadeiras ou falsas. Na segunda parte temos as proposições compostas por $\lor$ e $\land$ (que você já conhece a tabela-verdade). Na parte 3 temos apenas a negação da coluna $(P \land Q)$. Se criarmos mais duas proposições do tipo $Z : (P \lor Q)$ e $W : \  \sim(P \land Q)$. Podemos reduzir a última coluna como a tabela-verdade abaixo:
+
+\begin{center}
+\begin{tabular}{ c c || c }
+ Z & W & $Z \land W$ \\ 
+ \hline
+ V & F & F \\  
+ V & V & V \\  
+ V & V & V \\  
+ F & V & F
+\end{tabular}
+\end{center}
+
+Que é exatamente igual à última coluna da tabela-verdade anterior. Portanto, nossa proposição é verdadeira exatamente quando $P$ ou $Q$ são verdadeiros mas não quando ambos são verdadeiros. Parabéns por ter entendido até aqui!
+
 \section{Equivalência Lógica}
 \section{Quantificadores}
 \section{Um pouco mais de Proposições Condicionais}
