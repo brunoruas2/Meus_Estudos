@@ -360,7 +360,7 @@ Essa parte do paradoxo de Russell não serve pro resto do livro mas é bem legal
 E perguntou: "O conjunto $A$ é um elemento de si mesmo?".
 \\
 \\
-Acredite, apenas esse enunciado foi uma baita dor de cabeça para os matemáticos na época. Esse assunto não é necessário para a compreensão do resto desse material. Se você quiser entender um pouco mais, confira esse \href{https://www.youtube.com/watch?v=AQTTYAM8BF0}{link} ou esse outro \href{https://www.youtube.com/watch?v=0Bs0lJRxOaI}{link}.
+Acredite, apenas esse enunciado foi uma baita dor de cabeça para os matemáticos na época. Esse assunto não é necessário para a compreensão do resto desse material. Se você quiser entender um pouco mais, confira esse \href{https://www.youtube.com/watch?v=AQTTYAM8BF0}{link} ou esse \href{https://www.youtube.com/watch?v=0Bs0lJRxOaI}{link}, ou ainda esse último \href{https://www.youtube.com/watch?v=HeQX2HjkcNo}{link}.
 \\
 \\
 \textbf{Dica}: Vai ler o livro nessa parte. O professor explica bem melhor sobre o paradoxo.
@@ -376,7 +376,10 @@ Acredite, apenas esse enunciado foi uma baita dor de cabeça para os matemático
 
 \section{Proposições}
 
-O estudo da lógica começa com as proposições. Uma \textbf{proposição} é uma sentença ou expressão matemática que seja definitivamente verdadeira ou falsa. Em cima dessas proposições é que aplicamos a lógica para produção de novas proposições. Qualquer resultado ou teorema provado é, na verdade, uma proposição\footnote{Isso inclui o teorema de Pitágoras, por exemplo.}.
+O estudo da lógica começa com as proposições. Uma \textbf{proposição} é uma sentença ou expressão matemática que seja definitivamente verdadeira ou falsa. Em cima dessas proposições é que aplicamos a lógica para produção de novas proposições. Qualquer resultado ou teorema provado é, na verdade, uma proposição\footnote{Isso inclui o teorema de Pitágoras, por exemplo.}. 
+\\
+\\
+\textbf{Aviso}: Ao longo desse capítulo a palavra "proposição" \ vai ser repetida muitas vezes. Essa repetição é proposital. Eu quero que você internalize a importância desse conceito para a análise matemática.
 \\
 \\
 Podemos usar letras para nomear proposições. Por exemplo, a proposição "Se um número $x$ é múltiplo de 6, então $x$ é par" \  pode ser resumida em uma letra. Nesse caso diremos que "$P$" \ é a proposição acima. Dessa feita, sempre que dissermos $P$ é falso ou $P$ é verdadeiro, estamos nos referindo a proposição completa.
@@ -388,14 +391,14 @@ Quando uma proposição possuir variáveis, podemos escreve-la de uma maneira si
 Uma \textbf{sentença aberta} é uma proposição cuja validade depende da sua variável. Ou seja, dependendo do valor que você der para a variável, a proposição pode ser verdadeira ou falsa.
 \\
 \\
-Esse livro do professor Hammack é justamente sobre o método de como se provar que uma proposição é verdade ou falsa. Para provar uma proposição você deve começar com proposições que sejam claramente verdadeiras e usar a lógica para deduzir outras proposições mais complexas que as anteriores até que, por fim, se chegue na proposição que se quer provar.
+Esse livro do professor Hammack é justamente sobre o método de como se provar que uma proposição é verdade ou falsa. Existem estratégias de raciocínio que podem ser usadas para demonstrar proposições e, consequentemente, teoremas complexos. Nosso objetivo nesse curso é lhe ensinar essas técnicas.
 
 \section{Operadores: e, ou, não}
 
 Até agora foi dito que você pode usar proposições junto à lógica para se chegar a outras proposições. Então vamos aprender como trabalhar com mais de uma proposição por meio dos \textbf{operadores lógicos}.
 \\
 \\
-O primeiro operador que vamos aprender é o "$e$". Dadas as proposições $P$ e $Q$. Podemos criar uma nova proposição através desse operador. Quando escrevemos $R: P \ e \ Q$, estamos criando uma nova proposição $R$ que é composta de das duas proposições $P$ e $Q$. O símbolo usado para esse conectivo é o "$\land$". Aqui em baixo vamos colocar a tabela verdade\footnote{"V" significa Verdadeiro e "F" significa Falso.} desse operador\footnote{Se você não sabe o que são tabelas-verdades então dá uma lida nesse \href{https://www.youtube.com/watch?v=hWEZsyF3ZZc}{link}.}
+O primeiro operador que vamos aprender é o "$e$". Dadas as proposições $P$ e $Q$. Podemos criar uma nova proposição através desse operador. Quando escrevemos $R: P \ e \ Q$, estamos criando uma nova proposição $R$ que é composta de das duas proposições $P$ e $Q$. O símbolo usado para esse conectivo é o "$\land$". Aqui em baixo vamos colocar a tabela verdade\footnote{Se você não sabe o que são tabelas-verdades então dá uma lida nesse \href{https://www.youtube.com/watch?v=hWEZsyF3ZZc}{link}.} desse operador\footnote{"V" \ significa Verdadeiro e "F" \  significa Falso.}.
 
 \begin{center}
 \begin{tabular}{ c c || c }
@@ -455,12 +458,11 @@ Podemos ainda combinar proposições de outra maneira. Sejam as proposições $P
 \end{tabular}
 \end{center}
 
+\textbf{Dica}: Nessa parte do livro o professor coloca bastante esforço em explicar esse conceito. Se você não conseguir entender essa tabela-verdade acima, recomendo dar uma lida seção que começa na página 42.
+
 \section{Proposições Bicondicionais}
 
-Existem situações onde duas proposições são mutuamente condicionais, ou seja, $P \implies Q$ e $Q \implies P$. Nesses casos usamos o conectivo "se e somente se" cujo símbolo é "$\iff$". 
-\\
-\\
-Na prática, a proposição bicondicional $P \iff Q$ nada mais é do que a proposição composta $(P \implies Q) \land (Q \implies P)$. A tabela-verdade segue abaixo.
+Existem situações onde duas proposições são mutuamente condicionais, ou seja, $P \implies Q$ e $Q \implies P$. Nesses casos usamos o conectivo "se e somente se" cujo símbolo é "$\iff$".  A tabela-verdade segue abaixo.
 
 \begin{center}
 \begin{tabular}{ c c || c }
@@ -473,18 +475,21 @@ Na prática, a proposição bicondicional $P \iff Q$ nada mais é do que a propo
 \end{tabular}
 \end{center}
 
+\textbf{Desafio}: Na prática, a proposição bicondicional $P \iff Q$ nada mais é do que a proposição composta $(P \implies Q) \land (Q \implies P)$. Leia a seção 2.5 e volte aqui. Seu desafio é provar essa equivalência.\footnote{Posta uma foto da tabela-verdade composta e me marca no  \href{https://twitter.com/bruno_ruas2}{twitter}.}.
+
+
 \section{Tabelas-Verdade para Proposições}
 
 Agora que você sabe as tabelas-verdade de $\land$,$\lor$,$\sim$,$\implies$ e $\iff$, você deve internalizá-las de modo a serem muito naturais ao avaliar a validade de uma proposição cuja construção utilize esses operadores.
 \\
 \\
-Vamos trabalhar uma proposição composta que expressa a seguinte situação: Dados duas proposições $P$ e $Q$, somente uma delas é verdadeira mas não ambas. Não existe um operador que nos permita construir uma proposição apenas com um único símbolo. Para podermos construir tal proposição temos que combinar nossos operadores do seguinte modo:
+Vamos trabalhar uma proposição composta que expressa a seguinte situação: Dadas duas proposições $P$ e $Q$, somente uma delas é verdadeira mas não ambas. Não existe um operador que nos permita construir uma proposição apenas com um único símbolo. Para podermos construir tal proposição temos que combinar nossos operadores do seguinte modo:
 
 \begin{center}
 	$(P \lor Q) \ \land \ \sim (P \land Q)$
 \end{center}
 
-Essa proposição pode assustar numa primeira olhada, contudo, ela expressa exatamente nossa intenção anteriormente explicitada. Para melhor compreensão vamos simplifica-la pela construção de novas proposições. Podemos resumi-la como: "$P$ ou $Q$ são verdadeiras, mas não é o caso onde $P$ e $Q$ são verdadeiras.
+Essa proposição pode assustar numa primeira olhada, contudo, ela expressa exatamente nossa intenção anteriormente explicitada. Podemos resumi-la como: "$P$ ou $Q$ são verdadeiras, mas não é o caso onde $P$ e $Q$ são verdadeiras.
 \\
 \\
 A tabela-verdade dessa proposição é a seguinte:
@@ -503,19 +508,33 @@ A tabela-verdade dessa proposição é a seguinte:
 Calma. É bem mais tranquilo do que parece. Vamos analisar essa tabela por partes. Nas primeiras duas colunas temos as proposições iniciais $P$ e $Q$. Nas linhas estão as situações onde testamos o que acontece quando elas são verdadeiras ou falsas. Na segunda parte temos as proposições compostas por $\lor$ e $\land$ (que você já conhece a tabela-verdade). Na parte 3 temos apenas a negação da coluna $(P \land Q)$. Se criarmos mais duas proposições do tipo $Z : (P \lor Q)$ e $W : \  \sim(P \land Q)$. Podemos reduzir a última coluna como a tabela-verdade abaixo:
 
 \begin{center}
-\begin{tabular}{ c c || c }
- Z & W & $Z \land W$ \\ 
+\begin{tabular}{ c c || c c || c }
+ P & Q & Z & W & $Z \land W$ \\ 
  \hline
- V & F & F \\  
- V & V & V \\  
- V & V & V \\  
- F & V & F
+ V & V & V & F & F \\  
+ V & F & V & V & V \\  
+ F & V & V & V & V \\  
+ F & F & F & V & F
 \end{tabular}
 \end{center}
 
 Que é exatamente igual à última coluna da tabela-verdade anterior. Portanto, nossa proposição é verdadeira exatamente quando $P$ ou $Q$ são verdadeiros mas não quando ambos são verdadeiros. Parabéns por ter entendido até aqui!
+\\
+\\
+\textbf{Comentário}: Eu peguei esse exemplo direto do livro. Contudo, eu pensei um pouco e uma equivalência a essa proposição composta (bem mais simples) seria $\sim(P \iff Q)$\footnote{Você consegue ver isso?}.
 
 \section{Equivalência Lógica}
+
+Nesse meu comentário acima já vemos um exemplo de equivalência lógica. Quando temos tabelas-verdade iguais para proposições diferentes. Podemos dizer que elas são \textbf{logicamente equivalentes}.
+\\
+\\
+Esse conceito é importante porque podemos trabalhar o mesmo problema de diferentes abordagens e acabarmos chegando no mesmo resultado. Cada abordagem pode ter facilidades que queiramos explorar e que vão acabar nos permitindo desenrolar o pensamento necessário para uma demonstração.
+\\
+\\
+Muitos teoremas matemáticos usam a forma $P \implies Q$. Mas, não raramente, precisamos usar a equivalência lógica e trabalhar com a proposição $\sim (Q) \implies \sim (P)$. Para ver essa equivalência, basta construir as tabelas-verdade das duas proposições.
+
+
+
 \section{Quantificadores}
 \section{Um pouco mais de Proposições Condicionais}
 \section{Traduzindo Português para Lógica Simbólica}
