@@ -528,12 +528,58 @@ Que é exatamente igual à última coluna da tabela-verdade anterior. Portanto, 
 Nesse meu comentário acima já vemos um exemplo de equivalência lógica. Quando temos tabelas-verdade iguais para proposições diferentes. Podemos dizer que elas são \textbf{logicamente equivalentes}.
 \\
 \\
-Esse conceito é importante porque podemos trabalhar o mesmo problema de diferentes abordagens e acabarmos chegando no mesmo resultado. Cada abordagem pode ter facilidades que queiramos explorar e que vão acabar nos permitindo desenrolar o pensamento necessário para uma demonstração.
+Esse conceito é importante porque podemos trabalhar o mesmo problema de diferentes abordagens e acabarmos chegando no mesmo resultado. Cada abordagem pode ter facilidades que queiramos explorar e que vão nos permitindo desenrolar o pensamento necessário para uma demonstração mais complexa.
 \\
 \\
-Muitos teoremas matemáticos usam a forma $P \implies Q$. Mas, não raramente, precisamos usar a equivalência lógica e trabalhar com a proposição $\sim (Q) \implies \sim (P)$. Para ver essa equivalência, basta construir as tabelas-verdade das duas proposições.
+Muitos teoremas matemáticos usam a forma $P \implies Q$. Mas, não raramente, precisamos usar a equivalência lógica e trabalhar com a proposição $\sim (Q) \implies \sim (P)$. Para ver essa equivalência, basta construir as tabelas-verdade das duas proposições.\footnote{Fica como dever de casa pra você.}
+\\
+\\
+Existem equivalências que são tão importantes que possuem um nome particular. As duas abaixo são chamadas de Lei de DeMorgan.
 
+\begin{center}
+$\sim(P \land Q) = (\sim P) \lor (\sim Q)$ \\
+$\sim(P \lor Q) = (\sim P) \land (\sim Q)$
+\end{center}
 
+A tabela-verdade da primeira parte é:
+\begin{center}
+\begin{tabular}{ c c || c c c || c c }
+P & Q & $\sim P$ & $\sim Q$ & $P \land Q$ & $\sim (P \land Q)$ & $(\sim P) \lor (\sim Q)$ \\
+\hline
+V & V & F & F & V & F & F \\
+V & F & F & V & F & V & V \\
+F & V & V & F & F & V & V \\
+F & F & V & V & F & V & V
+\end{tabular}
+\end{center}
+
+A tabela-verdade da segunda parte é:
+\begin{center}
+\begin{tabular}{ c c || c c c || c c }
+P & Q & $\sim P$ & $\sim Q$ & $P \lor Q$ & $\sim (P \lor Q)$ & $(\sim P) \land (\sim Q)$ \\
+\hline
+V & V & F & F & V & F & F \\
+V & F & F & V & V & F & F \\
+F & V & V & F & V & F & F \\
+F & F & V & V & F & V & V
+\end{tabular}
+\end{center}
+
+Nessa parte o professor elenca várias equivalências que podem ser verificadas por suas respectivas tabelas-verdade.
+
+\begin{itemize}
+\item $ P \implies Q = (\sim Q) \implies (\sim P) $ - Lei Contrapositiva
+\item $ \sim (P \land Q) = \  \sim P \ \lor \  \sim Q $ - Lei de DeMorgan 1
+\item $ \sim (P \lor Q) = \  \sim P \ \land \ \sim Q $ - Lei de DeMorgan 2
+\item $ P \land Q = Q \land P $ - Lei Comutativa 1
+\item $ P \lor Q = Q \lor P $ - Lei Comutativa 2
+\item $ P \land (Q \lor R) = (P \land Q) \lor (P \land R)$ - Lei Distributiva 1
+\item $ P \lor (Q \land R) = (P \lor Q) \land (P \lor R) $ - Lei Distributiva 2
+\item $ P \land (Q \land R) = (P \land Q) \land R $ - Lei Associativa 1
+\item $ P \lor (Q \lor R) = (P \lor Q) \lor R $ - Lei Associativa 2
+\end{itemize}
+
+\textbf{Comentário}: Como são muitas equivalências, se eu colocar todas as tabelas-verdade aqui vai ficar uma poluição muito grande. Então cabe a você demonstrar todas essas equivalências por conta própria. Não confie só porque está escrito ai. Demonstre com seu próprio esforço todas elas.
 
 \section{Quantificadores}
 \section{Um pouco mais de Proposições Condicionais}
