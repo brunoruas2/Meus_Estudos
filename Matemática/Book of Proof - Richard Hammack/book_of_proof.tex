@@ -582,6 +582,40 @@ Nessa parte o professor elenca várias equivalências que podem ser verificadas 
 \textbf{Comentário}: Como são muitas equivalências, se eu colocar todas as tabelas-verdade aqui vai ficar uma poluição muito grande. Então cabe a você demonstrar todas essas equivalências por conta própria. Não confie só porque está escrito ai. Demonstre com seu próprio esforço todas elas.
 
 \section{Quantificadores}
+
+Até agora nós já vimos um punhado de símbolos que nos permitem construir proposições consideravelmente complexas, bem como, achar as equivalências entre diferentes proposições. Mas ainda temos um problema para superar: o que fazer quando temos que lidar com infinitos elementos?
+\\
+\\
+O professor usa o seguinte exemplo: Imagine um conjunto infinito de números inteiros $X = \{ x_1,x_2,x_3, \dots \}$. Com os símbolos apresentados até agora, como faríamos para representar as seguintes proposições?
+
+\begin{itemize}
+\item $Z_1:$ "Todos os elementos de $X$ são ímpares"
+\item $Z_2:$ "Pelo menos um elemento de $X$ é ímpar"
+\end{itemize}
+
+Primeiro vamos definir a proposição $P :$ "O número $x$ é ímpar". Para a primeira proposição ($Z_1$), teríamos algo parecido com 
+
+$$P(x_1) \land P(x_2) \land P(x_3) \land \dots$$
+
+E para a segunda proposição ($Z_2$), algo como
+
+$$P(x_1) \lor P(x_2) \lor P(x_3) \lor \dots$$
+
+Ou seja, acabaríamos com proposições de tamanho infinito.
+\\
+\\
+Para superar essa dificuldade, vamos introduzir novos símbolos "$\forall$" \ e "$\exists$". O símbolo $\forall$ significa "para todos" \ e o símbolo $\exists$ significa "existe algum". Desse modo podemos reescrever as proposições anteriores como:
+
+\begin{itemize}
+\item $Z_1: \forall \ x \in X, P(x)$
+\item $Z_2: \exists \ x \in X, P(x)$
+\end{itemize}
+
+Nós chamamos esses novos símbolos de \textbf{quantificadores}.\footnote{Não sei você, mas pra mim esse daria um bom nome de banda.} Esse nome é porque eles se referem a alguma propriedade da quantidade de algo. $\forall$ é chamado de \textbf{quantificador universal} e $\exists$ é chamado de \textbf{quantificador existencial}. Proposições que contenham esses símbolos são chamadas de \textbf{proposições quantificadas}.
+\\
+\\
+\textbf{Dica}: Leia o exemplo 2.5 do livro. O professor Hammack dá 4 exemplos em inglês e "traduz" \ esses exemplos para os símbolos que já aprendemos até agora.
+
 \section{Um pouco mais de Proposições Condicionais}
 \section{Traduzindo Português para Lógica Simbólica}
 \section{Negando Proposições}
