@@ -345,7 +345,7 @@ Agora só nos resta provar que $r < b$ mas para isso, vamos usar o pensamento co
 Ora, se $r \geq b$, então a subtração $r - b$ será um número positivo, portanto será também um elemento de $\mathbb{N}^0$. Podemos reescrever essa subtração como $r - b = (a - qb) - b = a - (q + 1)b$. 
 \\
 \\
-Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição\footnote{O nome dessa técnica é: prova por contradição. Falaremos dela mais pra frente no curso.}, portanto, só podemos aceitar o oposto, ou seja, sabemos que $r < b$. Com isso finalizamos a demonstração da existência de $r$ e $q$ com as propriedades anteriormente citadas $\blacksquare$\footnote{Esse quadrado preto é usado para pontuar o final de uma demonstração.}
+Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição\footnote{O nome dessa técnica é prova por contradição. Falaremos dela mais pra frente no curso.}, portanto, só podemos aceitar o oposto, ou seja, sabemos que $r < b$. Com isso finalizamos a demonstração da existência de $r$ e $q$ com as propriedades anteriormente citadas $\blacksquare$\footnote{Esse quadrado preto é usado para pontuar o final de uma demonstração.}
 \end{demonstration}
 
 \section{O Paradoxo de Russell}
@@ -569,8 +569,8 @@ Nessa parte o professor elenca várias equivalências que podem ser verificadas 
 
 \begin{itemize}
 \item $ P \implies Q = (\sim Q) \implies (\sim P) $ - Lei Contrapositiva
-\item $ \sim (P \land Q) = \  \sim P \ \lor \  \sim Q $ - Lei de DeMorgan 1
-\item $ \sim (P \lor Q) = \  \sim P \ \land \ \sim Q $ - Lei de DeMorgan 2
+\item $ \sim (P \land Q) = \  (\sim P) \ \lor \ (\sim Q) $ - Lei de DeMorgan 1
+\item $ \sim (P \lor Q) = \  (\sim P) \ \land \ (\sim Q) $ - Lei de DeMorgan 2
 \item $ P \land Q = Q \land P $ - Lei Comutativa 1
 \item $ P \lor Q = Q \lor P $ - Lei Comutativa 2
 \item $ P \land (Q \lor R) = (P \land Q) \lor (P \land R)$ - Lei Distributiva 1
@@ -617,7 +617,80 @@ Nós chamamos esses novos símbolos de \textbf{quantificadores}.\footnote{Não s
 \textbf{Dica}: Leia o exemplo 2.5 do livro. O professor Hammack dá 4 exemplos em inglês e "traduz" \ esses exemplos para os símbolos que já aprendemos até agora.
 
 \section{Um pouco mais de Proposições Condicionais}
+
+Na seção 2.1 nós vimos que uma \textbf{sentença aberta} é uma proposição cuja validade depende do valor da variável. Contudo, uma característica que os quantificadores possuem é transformar sentenças abertas em proposições.
+\\
+\\
+Dada a sentença aberta "$x$ é par $\implies$ $x$ é múltiplo de 6". A validade dessa afirmação depende totalmente do valor dado para a variável $x$. Agora, quando adicionamos um quantificador "$\forall \ x \in \mathbb{Z}, x$ é par $\implies x$ é múltiplo de 6", ela se torna uma proposição, ou seja, podemos definir se ela é verdadeira ou falsa (nesse caso, falsa).
+\\
+\\
+De maneira geral, dadas duas proposições $Q(x)$ e $P(x)$, a expressão $\forall \ x \in \mathbb{Z}, P(x) \implies Q(x)$ é verdadeira ou falsa. Logo, ela é uma proposição e não uma sentença aberta.
+\\
+\\
+Agora chegamos no ponto importante sobre esse assunto: sempre que você ver duas proposições a respeito de uma variável que seja elemento de algum conjunto (previamente definido), uma expressão da forma $P(x) \implies Q(x)$ deve ser interpretada como sendo uma proposição do tipo $\forall \ x \in Conjunto, P(x) \implies Q(x)$. Ou seja, se uma proposição condicional não estiver quantificada explicitamente, então existe um quantificador implícito atrelado a ela. O motivo desse quantificador não aparecer é que cansa ter que ficar escrevendo toda hora "$\forall \ x \in Conjunto$".
+\\
+\\
+Agora nós vamos definir de maneira mais geral (mas consistente com o que foi dito na seção 2.1) as proposições condicionais.
+
+\begin{definition}[Proposição Condicional]
+Se $P$ e $Q$ são proposições ou sentenças abertas, então "Se $P$, então $Q$" \  será uma proposição.\\
+Essa proposição será verdadeira se for impossível que $P$ seja verdadeira enquanto $Q$ seja falsa. E será falsa se existir alguma situação onde $P$ é verdadeira e $Q$ é falsa.
+\end{definition}
+
 \section{Traduzindo Português para Lógica Simbólica}
+
+Quando estamos lendo provas de teoremas, sempre devemos estar atentos para a estrutura lógica e o significado das sentenças. Não é raro ter que converter as expressões feitas de palavras para expressões feitas dos símbolos que estudamos até agora. Essa seção é uma prática para você exercitar essa competência.
+\\
+\\
+\textbf{Comentário}: A partir desse ponto pode ser que você veja alguns conceitos que não foram previamente explicados no material. Não se assuste por causa disso. Foque apenas na lógica e no que você aprendeu até aqui.
+\\
+\\
+\textbf{Exemplo 1}: O teorema do valor médio do Cálculo Infinitesimal.
+\\
+\hrule
+\vspace{5pt}
+Se $f$ é contínua no intervalo $[a,b]$ e diferenciável em $(a,b)$, então existe um número $c \in (a,b)$ onde $f'(c) = \dfrac{f(b) - f(a)}{b - a}$.
+\vspace{5pt}
+\hrule
+\vspace{5pt}
+A tradução para a forma simbólica dessa afirmação é:
+$$ \left( (f \ cont. \ em \  [a,b]) \land (f \ dif. \ em \  (a,b)) \right) \implies \left(\exists \ c \in (a,b), f'(c) = \dfrac{f(b) - f(a)}{b - a} \right) $$
+
+Eu sei, ficou meio poluído. Pra melhorar um pouco vamos definir novas proposições e limpar um pouco essa sujeira toda. $P : $"$f$ é contínua no intervalo $[a,b]$", $Q : $"$f$ é diferenciável em $(a,b)$".
+
+$$ \left( P \land Q \right) \implies \left(\exists \ c \in (a,b), f'(c) = \dfrac{f(b) - f(a)}{b - a} \right) $$
+\\
+\\
+\textbf{Exemplo 2}: A conjectura de Goldbach.
+\\
+\hrule
+\vspace{5pt}
+Todo número inteiro par maior que $2$ é a soma de dois primos.
+\vspace{5pt}
+\hrule
+\vspace{5pt}
+A tradução para a forma simbólica dessa afirmação é:
+$$ \left( n \in X \right) \implies \left( \exists \ p,q \in P, n = p + q \right) $$
+Ou então, podemos usar essa outra forma equivalente:
+$$ \forall \ n \in X, \exists \ p,q \in P, n = p + q $$
+\\
+Sendo $P = \{x : x \ é \ primo \}$ e $X = \{ 4,6,8,10.\dots \}$. 
+\\
+\\
+Esse exemplo acima nos mostra uma relação interessante entre as proposições do tipo $(n \in X) \implies Q(n)$ e as do tipo $\forall \ n \in X, Q(x)$. Toda proposição universalmente quantificada\footnote{Ou seja, com o uso do $\forall$.} pode ser expressa como uma proposição condicional.
+
+
+\begin{fact}[Equivalência de proposições]
+Suponha que $X$ é um conjunto e $Q(x)$ é uma proposição a respeito de cada $x \in X$. As proposições abaixo são equivalentes:
+$$ \forall \ x \in X, Q(x) $$
+$$ (x \in X) \implies Q(x) $$
+\end{fact}
+
+Essas equivalências são importantes porque podemos trocar a maneira como um teorema se apresenta na hora de tentar provar ou desprovar uma proposição.
+\\
+\\
+\textbf{Aviso}: Na hora que você ler um teorema, evite ir direto para as palavras "ou", "se", "e" \ como se elas sempre significassem os seus respectivos valores lógicos. O contexto é quem diz o real significado das palavras. Sempre analise o enunciado inteiro antes de transcrever para a linguagem simbólica da lógica.
+
 \section{Negando Proposições}
 \section{Inferência Lógica}
 \section{Nota Importante}
