@@ -692,6 +692,25 @@ Essas equivalências são importantes porque podemos trocar a maneira como um te
 \textbf{Aviso}: Na hora que você ler um teorema, evite ir direto para as palavras "ou", "se", "e" \ como se elas sempre significassem os seus respectivos valores lógicos. O contexto é quem diz o real significado das palavras. Sempre analise o enunciado inteiro antes de transcrever para a linguagem simbólica da lógica.
 
 \section{Negando Proposições}
+
+Não é raro que ao tentar demonstrar uma proposição complexa $R$, por exemplo, seja mais fácil trabalhar com a negação dessa proposição $\sim R$. Mas na frente do curso você verá que essa é uma das técnicas usadas para provar teoremas.
+\\
+\\
+Também não é incomum termos que lidar com negações de proposições quantificadas. Considere a proposição $\sim(\forall \ x \in \mathbb{N}, P(x))$. Podemos ler como "Não é o caso que $P(x)$ é verdade para todos os $x$ números naturais". Ou seja, a negativa dessa proposição envolve outro quantificador (o de existência). De modo que podemos reescrever essa negação como $\exists \ x \in \mathbb{N},\sim P(x)$.
+\\
+\\
+Chegamos em um ponto importante aqui. Os quantificadores são usados para negar um ao outro. Observe as seguintes equivalências:
+
+$$ \sim (\forall \ x \in X, P(x)) = \exists \ x \in X, \sim P(x) $$
+$$ \sim (\exists \ x \in X, P(x)) = \forall \ x \in X, \sim P(x) $$
+
+\textbf{Comentário}: Se você leu com atenção até aqui, você deve ser capaz de compreender essas equivalências. Se elas não fazem sentido na sua cabeça, me manda uma dm no \href{https://twitter.com/bruno_ruas2}{twitter} explicando qual a sua dúvida. Eu posso melhorar o texto com o seu feedback.
+\\
+\\
+Quando se está escrevendo demonstrações, as vezes é necessário negar proposições condicionais $P \implies Q$. Se você aprendeu a tabela-verdade desse tipo de operador, você sabe que a única maneira de ele ser falso é quando temos $P$ verdadeiro e $Q$ falso. Em termo da lógica dizemos que $\sim (P \implies Q) = P \land \sim Q$. 
+\\
+\\
+\textbf{Dica}: Tente fazer o exercício 5 da seção 2.10. Tem a solução dele no final do livro. Se mesmo assim você não conseguir entender, comenta sua dúvida na postagem dessa aula no \href{https://economiamainstream.com.br/artigo/matematica/}{Economia Mainstream}.
 \section{Inferência Lógica}
 \section{Nota Importante}
 
@@ -699,8 +718,6 @@ Essas equivalências são importantes porque podemos trocar a maneira como um te
 %                 CHAPTER                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Contagem}
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
