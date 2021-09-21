@@ -184,7 +184,7 @@ Como o conjunto dos número reais pode ser descrito como pontos em uma reta num�
 
 \section{Produto Cartesiano}
 \begin{definition}[Par Ordenado]
-Um \textbf{par ordenado} é um lista na forma $(x, y)$ que contém dois elementos (nesse caso, um $x$ e um $y$). Onde esses dois elementos ficam entre parênteses e separados por uma vírgula.
+Um \textbf{par ordenado} é uma lista\footnote{Nós definiremos uma lista no cap. 03} na forma $(x, y)$ que contém dois elementos (nesse caso, um $x$ e um $y$). Onde esses dois elementos ficam entre parênteses e separados por uma vírgula.
 \end{definition}
 
 \textbf{Regra}: Diferente dos conjuntos, a ordem dos elementos dos pares ordenados importa. Ou seja, $(x,y) \neq (y,x)$. 
@@ -737,7 +737,27 @@ Lógica é a linguagem-comum que toda a Matemática utiliza, então temos que te
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Contagem}
 
+\begin{chapquote}{página 65}
+	``Counting can become quite subtle, and in this chapter we explore some of its more sophisticated aspects. Our goal is still to answer the question 'How many?' but we introduce mathematical techniques that bypass the actual process of counting individual objects''
+\end{chapquote}
+
 \section{Listas}
+
+Uma \textbf{lista} é uma sequência ordenada de objetos. Esses objetos são mantidos entre um par de parênteses e separados por vírgulas. Os objetos dentro de uma lista são chamados de \textbf{entradas}\footnote{Do original, \textbf{entries}}. Como uma lista é uma sequência ordenada, a ordem dos seus elementos é suficiente para distinguir listas que contenham os mesmo objetos.
+
+$$ (a,b,c) \neq (c,b,a) $$
+
+Como já vimos conjuntos no capítulo 01, podemos usá-los para comparação. No caso dos conjuntos a ordem dos elementos não importa na comparação entre conjuntos. Ou seja, $\{a,b,c\} = \{c,b,a\}$. Já vimos acima que essa propriedade não é mantida nas listas. 
+\\
+\\
+Diferentemente dos conjuntos, uma lista pode ter entradas repetidas se nenhum problema. Exemplo, a lista $(a,a,a,a,b)$ é perfeitamente aceitável e possui um \textbf{comprimento} de 5.
+\\
+\\
+\textbf{Regra}: Duas listas são \textbf{iguais} se possuírem exatamente as mesmas entradas nas mesmas posições. Ou seja, também possuem o mesmo comprimento.
+\\
+\\
+Só existe uma lista cujo comprimento é igual a zero. Denominamos essa lista de \textbf{lista vazia}. Denotada por $()$. 
+
 \section{O Princípio da Multiplicação}
 \section{Os Princípios da Adição e Subtração}
 \section{Fatoriais e Permutações}
