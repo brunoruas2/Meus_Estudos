@@ -20,7 +20,21 @@
 
 % para usar definições
 \usepackage{amsthm}
+
 \theoremstyle{definition}
+
+\newtheoremstyle{break}% name
+  {}%         Space above, empty = `usual value'
+  {}%         Space below
+  {}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+
 \newtheorem{definition}{Definição}[section]
 \newtheorem{fact}{Fato}[section]
 \newtheorem{demonstration}{Demonstração}[section]
@@ -346,6 +360,7 @@ Ora, se $r \geq b$, então a subtração $r - b$ será um número positivo, port
 \\
 Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição\footnote{O nome dessa técnica é prova por contradição. Falaremos dela mais pra frente no curso.}, portanto, só podemos aceitar o oposto, ou seja, sabemos que $r < b$. Com isso finalizamos a demonstração da existência de $r$ e $q$ com as propriedades anteriormente citadas $\blacksquare$\footnote{Esse quadrado preto é usado para pontuar o final de uma demonstração.}
 \end{demonstration}
+
 
 \section{O Paradoxo de Russell}
 
@@ -737,28 +752,59 @@ Lógica é a linguagem-comum que toda a Matemática utiliza, então temos que te
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Contagem}
 
+
 \begin{chapquote}{página 65}
 	``Counting can become quite subtle, and in this chapter we explore some of its more sophisticated aspects. Our goal is still to answer the question 'How many?' but we introduce mathematical techniques that bypass the actual process of counting individual objects''
 \end{chapquote}
 
 \section{Listas}
 
-Uma \textbf{lista} é uma sequência ordenada de objetos. Esses objetos são mantidos entre um par de parênteses e separados por vírgulas. Os objetos dentro de uma lista são chamados de \textbf{entradas}\footnote{Do original, \textbf{entries}}. Como uma lista é uma sequência ordenada, a ordem dos seus elementos é suficiente para distinguir listas que contenham os mesmo objetos.
+Uma \textbf{lista} é uma sequência ordenada de objetos. Esses objetos são mantidos entre um par de parênteses e separados por vírgulas. Os objetos dentro de uma lista são chamados de \textbf{entradas}\footnote{Do original, \textbf{entries}}. Já que uma lista é uma sequência ordenada, é evidente que a ordem dos seus elementos é suficiente para distinguir listas que contenham os mesmo objetos.
 
 $$ (a,b,c) \neq (c,b,a) $$
 
-Como já vimos conjuntos no capítulo 01, podemos usá-los para comparação. No caso dos conjuntos a ordem dos elementos não importa na comparação entre conjuntos. Ou seja, $\{a,b,c\} = \{c,b,a\}$. Já vimos acima que essa propriedade não é mantida nas listas. 
+\textbf{Comentário}: Também é comum escrever uma lista sem os parênteses e as vírgulas. Esse formato de escrita se chama \textbf{string}. Nesse caso $(a,b,c)$ é a mesma coisa de $abc$. Essa outra maneira só é usada quando não há risco de confusão entre as entradas da lista. Fica ligado e mantém essas duas formas de escrita como padrão.
 \\
 \\
-Diferentemente dos conjuntos, uma lista pode ter entradas repetidas se nenhum problema. Exemplo, a lista $(a,a,a,a,b)$ é perfeitamente aceitável e possui um \textbf{comprimento} de 5.
+Como já vimos conjuntos no capítulo 01, podemos usá-los para comparação. No caso dos conjuntos a ordem dos elementos não importa na comparação. Ou seja, $\{a,b,c\} = \{c,b,a\}$. Já vimos acima que essa propriedade não é mantida nas listas. 
+\\
+\\
+Diferentemente dos conjuntos, uma lista pode ter entradas repetidas sem nenhum problema. A lista $(a,a,a,a,b)$, por exemplo, é perfeitamente aceitável.
+\\
+\\
+Tal qual a cardinalidade dos conjuntos, nós contamos quantas entradas existem em uma lista. Chamamos essa medida de \textbf{comprimento}. A lista $(a,a,a,a,b)$ possui um comprimento de 5.
 \\
 \\
 \textbf{Regra}: Duas listas são \textbf{iguais} se possuírem exatamente as mesmas entradas nas mesmas posições. Ou seja, também possuem o mesmo comprimento.
 \\
 \\
-Só existe uma lista cujo comprimento é igual a zero. Denominamos essa lista de \textbf{lista vazia}. Denotada por $()$. 
+Só existe uma lista cujo comprimento é igual a zero. Denominamos essa lista de \textbf{lista vazia}. Denotada por $()$.\footnote{Sim, lembra muito o conceito de conjunto vazio.}
 
 \section{O Princípio da Multiplicação}
+
+Existem muitos problemas práticos que envolvem a contagem do número possível de listas que satisfaz uma determinada condição ou propriedade.
+\\
+\\
+\textbf{Dica}: Nas páginas 67 e 68 do livro, o professor coloca dois exemplos que tornarão esse conceito abaixo bem mais entendível. Se você não entender como esse fato é evidente, dá uma olhada no livro e volta aqui.
+
+\begin{fact}[Princípio da Multiplicação]
+Suponha que em uma lista de comprimento $n$ exista $a_1$ escolhas possíveis para a primeira entrada, $a_2$ escolhas possíveis para a segunda entrada, $a_3$ escolhas possíveis para a terceira entrada e etc. Então, o total de listas diferentes que podem ser geradas por essas entradas será igual ao produto entre $a_1 \times a_2 \times a_3 \times \dots \times a_n$. 
+\end{fact}
+
+Embora no livro não seja dada uma demonstração desse princípio. Eu acho que podemos tentar provar que essa afirmação é verdadeira. Não se preocupe se você não conseguir entender essa demonstração agora. Volte quando estiver mais adiantado no curso e tente novamente.
+
+\begin{demonstration}[Princípio da Multiplicação\footnote{\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{link de onde eu tirei a inspiração da prova}}]
+
+Primeiro vamos reescrever o princípio de outra forma equivalente\footnote{Você pode construir a tabela-verdade dessas duas formas e verificar se elas possuem equivalência.} 
+\\
+\\
+$P(n) : $ "Se numa lista de comprimento $n$ existirem, para cada entrada $(a_k)$, $k \in \{1, \dots, n \}$ escolhas possíveis. Então, haverá 
+
+\end{demonstration}
+
+
+Existem dois tipos de problemas que envolvem contagem de listas: Problemas que possuem entradas repetidas e Problemas que não permitem entradas repetidas. Nós podemos chamar as listas do segundo tipo de problema de \textbf{listas não repetitivas}.
+
 \section{Os Princípios da Adição e Subtração}
 \section{Fatoriais e Permutações}
 \section{Contando Subconjuntos}
