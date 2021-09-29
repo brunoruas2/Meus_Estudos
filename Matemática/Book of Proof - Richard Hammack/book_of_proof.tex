@@ -783,27 +783,49 @@ Só existe uma lista cujo comprimento é igual a zero. Denominamos essa lista de
 \section{O Princípio da Multiplicação}
 
 Existem muitos problemas práticos que envolvem a contagem do número possível de listas que satisfaz uma determinada condição ou propriedade.
-\\
-\\
-\textbf{Dica}: Nas páginas 67 e 68 do livro, o professor coloca dois exemplos que tornarão esse conceito abaixo bem mais entendível. Se você não entender como esse fato é evidente, dá uma olhada no livro e volta aqui.
 
 \begin{fact}[Princípio da Multiplicação]
 Suponha que em uma lista de comprimento $n$ exista $a_1$ escolhas possíveis para a primeira entrada, $a_2$ escolhas possíveis para a segunda entrada, $a_3$ escolhas possíveis para a terceira entrada e etc. Então, o total de listas diferentes que podem ser geradas por essas entradas será igual ao produto entre $a_1 \times a_2 \times a_3 \times \dots \times a_n$. 
 \end{fact}
 
+\textbf{Dica}: Nas páginas 67 e 68 do livro, o professor coloca dois exemplos que tornarão esse conceito abaixo bem mais entendível. Se você não entender como esse fato é evidente, dá uma olhada no livro e volta aqui.
+\\
+\\
 Embora no livro não seja dada uma demonstração desse princípio. Eu acho que podemos tentar provar que essa afirmação é verdadeira. Não se preocupe se você não conseguir entender essa demonstração agora. Volte quando estiver mais adiantado no curso e tente novamente.
 
-\begin{demonstration}[Princípio da Multiplicação\footnote{\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{link de onde eu tirei a inspiração da prova}}]
+\begin{demonstration}[Princípio da Multiplicação\footnote{JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 365.\\\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{Link de onde veio a ideia para a parte para $P(m)$ com $m > 2$.}}]
 
-Primeiro vamos reescrever o princípio de outra forma equivalente\footnote{Você pode construir a tabela-verdade dessas duas formas e verificar se elas possuem equivalência.} 
+Começaremos com a proposição $P(m)$: "Se existirem $A_m$ conjuntos com $n_m$ elementos em cada conjunto. O Cardinal do produto cartesiano de todos os $m$ conjuntos será a multiplicação de todos os $m$ cardinais $|A_m|$". 
 \\
 \\
-$P(n) : $ "Se numa lista de comprimento $n$ existirem, para cada entrada $(a_k)$, $k \in \{1, \dots, n \}$ escolhas possíveis. Então, haverá 
-
+Essa proposição é equivalente ao enunciado do princípio da multiplicação.\footnote{Você consegue ver essa equivalência?}
+\\
+\\
+É trivial ver que uma lista de comprimento $n = 1$ tem exatamente $a_1$ possíveis listas geradas por todas as $a_1$ possibilidades de entradas nessa lista. Então não precisamos nos preocupar com a proposição $P(1)$.
+\\
+\\
+$P(2)$: "Se $A_1$ e $A_2$ são conjuntos finitos onde $A_1$ contém $n_1$ elementos e $A_2$ contém $n_2$ elementos, então, o conjunto $A_1 \times A_2$ possui $n_1 \cdot n_2$ elementos".\footnote{Ou seja, o princípio da multiplicação nada mais é que uma proposição a respeito do cardinal do produto cartesiano para conjuntos finitos.}
+\\
+\\
+A demonstração dessa proposição é simples. Para cada um dos $n_1$ elementos $a \in A_1$ na primeira coordenada do par ordenado $(a,b) \in A_1 \times A_2$, existem exatamente $n_2$ elementos $b \in A_2$. Uma vez que existem $n_1$ elementos em $A_1$ que podem ser essa primeira coordenada do par ordenado $(a,b)$, então, existem ao todo $n_1 \cdot n_2$ possíveis pares ordenados no produto cartesiano $A_1 \times A_2$.
+\\
+\\
+Agora vamos fazer uma pequena adaptação nessa demonstração para qualquer quantidade de conjuntos, ou seja, para qualquer $P(m)$ cujo $m > 2$.
+\\
+\\
+Suponha que agora temos 3 conjuntos: $A_1$, $A_2$ e $A_3$. Para podermos demonstrar $P(3)$: "Se $A_1 \times A_2 \times A_3$, então o cardinal será  $n_1 \cdot n_2 \cdot n_3$"\  só precisamos da seguinte linha de pensamento: Podemos definir um novo conjunto $B = A_1 \times A_2$. Desse modo, podemos reescrever o cardinal anterior como $B \times A_3$. Essa nova reescrita possui apenas dois elementos. Portanto, podemos usar a proposição já demonstrada $P(2)$ sem nenhum prejuízo.
+\\
+\\
+Aplicando esse mesmo procedimento para qualquer $n > 2$ fica demonstrado que o cardinal de quaisquer conjuntos $A_n$ para qualquer $n \in \mathbb{N}$ será a multiplicação do cardinal dos conjuntos $A_n$. Aplicando a equivalência da proposição $P(n)$ com o princípio da multiplicação, finalizamos a demonstração. $\blacksquare$
 \end{demonstration}
 
-
 Existem dois tipos de problemas que envolvem contagem de listas: Problemas que possuem entradas repetidas e Problemas que não permitem entradas repetidas. Nós podemos chamar as listas do segundo tipo de problema de \textbf{listas não repetitivas}.
+\\
+\\
+Usando o princípio da multiplicação você é capaz de resolver todos os problemas envolvendo contagens de listas sem precisar construir as possíveis soluções e sim apenas usando multiplicação. Existem diferenças entre os casos onde temos repetição permitida e em casos de listas não repetitivas. Essas diferenças estão na quantidade de entradas possíveis para cada posição da lista.
+\\
+\\
+\textbf{Dica}: Tenta fazer os exemplos 3.1, 3.2 e 3.3 da página 69 até a 72.
 
 \section{Os Princípios da Adição e Subtração}
 \section{Fatoriais e Permutações}
