@@ -339,7 +339,7 @@ Uma conclusão que podemos tirar do princípio da boa ordenação é que dado um
 Dados dois inteiros $a$ e $b$, onde $b > 0$. Existem outros dois inteiros únicos $q$ e $r$ para qual $a = qb + r$ e $0 \leq r < b$.
 \end{fact}
 
-Agora o autor demonstra a existência de $r$ e $q$ com suas propriedades. Talvez depois eu estenda a prova para a unicidade desses valores\footnote{Passa lá no Economia Mainstream e me dá uma cobrada nos comentários}.
+Agora o autor demonstra a existência de $r$ e $q$ com suas propriedades. Talvez depois eu estenda a prova para a unicidade\footnote{Eu achei uma demonstração em JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 118.} desses valores\footnote{Passa lá no Economia Mainstream e me dá uma cobrada nos comentários}.
 
 \begin{demonstration}[Division Algorithm - Existência de $r$ e $q$]
 Dados $a,b \in \mathbb{Z}$ e $b > 0$, é possível criar um set do tipo:
@@ -829,14 +829,26 @@ Usando o princípio da multiplicação você é capaz de resolver todos os probl
 
 \section{Os Princípios da Adição e Subtração}
 
-Vamos ver mais dois princípios de contagem. Você já está familiarizado com eles mas agora definiremos esses termos usando a linguagem dos conjuntos.
+Vamos ver mais dois princípios de contagem. Você já está familiarizado com eles mas agora definiremos esses princípios usando a linguagem dos conjuntos.
 
 \begin{fact}[Princípio da Adição]
 Suponha que um conjunto finito $X$ pode ser decomposto na união $X = \bigcup_{i = 1}^{n}\limits X_i$ onde $ X_i \cap X_j = \emptyset \ \forall \ i \neq j$. Então, $|X| = \sum_{i = 1}^{n}\limits |X_i|$.
 \end{fact}
 
 Calma. Não é difícil de entender. O que estamos dizendo ai é: "Se $X$ é um conjunto formado por $n$ outros conjuntos menores, e nenhum desses conjuntos possui interseção entre si. Então, o cardinal de $X$ será a soma dos cardinais de todos os $n$ subconjuntos. A única novidade nessa notação é o sigma para denominar somatório.
+\\
+\\
+\textbf{Dica}: Veja os exemplos 3.5 e 3.6 na página 75 para ter uma ideia da aplicação desses conceitos na prática.
 
+Agora vamos ver o princípio da subtração. Você não deve ter grandes dificuldades de entender esse conceito.
+
+\begin{fact}[Princípio da Subtração]
+Se $X$ é um subconjunto de um conjunto finito $U$, então $|\overline{X}| = |U| - |X|$. Ou seja, se $X \subseteq U$, então $|U - X| = |U| - |X|$.
+\end{fact}
+
+Existem situações onde é mais fácil contar o total de um conjunto maior, e retirar uma parte desse total que não queremos, do que contar diretamente a parte desejada. Eu sei, tá um pouco confuso. Mas a ideia é simples: Usamos esse método para computar o que sobra após a retirada de algumas opções.
+
+\textbf{Dica}: Lê o exemplo 3.7 novamente. A gente usa exatamente essa abordagem pra chegar no resultado.
 
 \section{Fatoriais e Permutações}
 \section{Contando Subconjuntos}
