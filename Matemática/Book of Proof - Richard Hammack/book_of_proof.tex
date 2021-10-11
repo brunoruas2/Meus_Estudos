@@ -852,6 +852,42 @@ Existem situações onde é mais fácil contar o total de um conjunto maior, e r
 
 \section{Fatoriais e Permutações}
 \section{Contando Subconjuntos}
+Selecionando $k$ elementos de um conjunto $A$ com $|A| = n$, quantos subconjuntos $A_i$ serão formados dessa permutação?
+\\
+Lembre-se:
+\\
+$$\frac{n!}{(n-k)!} > i$$
+\\
+Isso ocorre pois em listas que contenham os mesmo elementos a ordem que esses elementos são dispostos dentro de cada uma faz com que sejam listas diferentes,então $(a,b)\neq(b,a)$. O que é diferente nos conjuntos, pois dados dois conjuntos $A = \lbrace a,b \rbrace$ e $B = \lbrace b,a \rbrace$, $A=B$.
+\\
+\begin{definition}
+	Se $k,n \in \mathbb{Z}$, então $n \choose k$ denota o número de subconjuntos que podem ser feitos escolhendo $k$ elementos de um conjunto com $n$ elementos. Lemos $n \choose k$ como o "número de permutações de $n$ termos $k$ a $k$"
+\end{definition}
+Suponha um conjunto $D = \bigcup_{i = 1}^{j}\limits D_i$, onde $|D| = n$. Agora permute cada subconjuntos $D_i$ em listas de $k$ elementos, montando uma tabela temos:
+\begin{center}
+\begin{tabular}{ c || c || c || c || c }
+$D_1$ & $D_2$ & $D_3$ & $\cdots$ & $D_j$ \\
+\hline
+$Lista_1^{D_1}$ & $Lista_1^{D_2}$ & $Lista_1^{D_3}$ & $\cdots$ & $Lista_1^{D_j}$\\
+$Lista_2^{D_1}$ & $Lista_2^{D_2}$ & $Lista_2^{D_3}$ & $\cdots$ & $Lista_2^{D_j}$\\
+$Lista_3^{D_1}$ & $Lista_3^{D_2}$ & $Lista_3^{D_3}$ & $\cdots$ & $Lista_3^{D_j}$\\
+$\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$\\
+$Lista_{k!}^{D_1}$ & $Lista_{k!}^{D_2}$ & $Lista_{k!}^{D_3}$ & $\cdots$ & $Lista_{k!}^{D_j}$\\
+\end{tabular}
+\end{center}
+A tabela acima possui dimensões de $k! \times$ $ n \choose k$. Perceba que pelo \textbf{princípio da soma}:
+\\
+$$P(n,k) = \sum\limits_{i=1}^j P(D_i, k) = k! \times {n \choose k}$$
+\\
+Portanto:
+\\
+$$\frac{n!}{(n-k)!} = k! \times {n \choose k}$$
+\\
+Dividimos ambos os lados por $k!$ para chegarmos à uma fórmula geral para calcularmos o número de subconjuntos com $k$ elementos de um conjunto qualquer com $n$ elementos.
+$$\frac{n!}{k!(n-k)!} = {n \choose k}$$
+\begin{fact}[Contagem de subconjuntos]
+Se $0 \leqslant k \leqslant n$, então ${n \choose k} = \frac{n!}{k!(n-k)!}$. Caso contrário ${n \choose k} = 0$
+\end{fact}
 \section{O Triângulo de Pascal e O Teorema Binomial}
 \section{O Princípio da Inclusão-Exclusão}
 \section{Contando Multiconjuntos}
