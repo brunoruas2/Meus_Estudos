@@ -6,6 +6,7 @@
 
 \documentclass[a4paper,11pt]{book}
 
+% pacotes utilizados
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -17,12 +18,16 @@
 \usepackage{mathtools}
 \usepackage{amssymb} % alguns simbolos matematicos
 \usepackage{mathrsfs} % letras cursivas
+\usepackage{listings} % coding examples in latex file
+\usepackage{xcolor} % changing colors
+\usepackage{amsthm} % definir estilo do teorema
 
-% para usar definições
-\usepackage{amsthm}
+% dark theme no pdf
+\pagecolor[rgb]{0.1,0.1,0.1} %black
+\color[rgb]{0.9,0.9,0.9} %grey
 
+% criando o modelo de definicoes/teoremas/fatos/demonstracoes
 \theoremstyle{definition}
-
 \newtheoremstyle{break}% name
   {10pt}%         Space above, empty = `usual value'
   {10pt}%         Space below
@@ -35,17 +40,16 @@
 
 \theoremstyle{break}
 
+% definindo as categorias de formalidade
 \newtheorem{definition}{Definição}[section]
 \newtheorem{fact}{Fato}[section]
 \newtheorem{demonstration}{Demonstração}[section]
+\newtheorem{theorem}{Teorema}
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
 
-% coding examples in latex file
-\usepackage{listings}
-\usepackage{xcolor}
-
+% setting das cores quando usar codigo python
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -72,10 +76,8 @@
 
 \lstset{style=mystyle}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 'dedication' environment: To add a dedication paragraph at the start of book %
-% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% dedicatoria 
+% Source: http://www.tug.org/pipermail/texhax/2010-June/
 \newenvironment{dedication}
 {
    \cleardoublepage
@@ -90,10 +92,8 @@
    \clearpage
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
 % Source: http://tex.stackexchange.com/a/53380 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \renewcommand{\@chapapp}{}% Not necessary...
 \newenvironment{chapquote}[2][2em]
@@ -135,18 +135,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Fundamentos}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conjuntos}
 
 \begin{chapquote}{página 3}
 	``The theory of sets is a language that is perfectly suited to describing and explaning all types of mathematical structures.''
 \end{chapquote}
 
-
 \section*{Aviso ao Leitor}
 Bem-vindo ao início de uma jornada consideravelmente longa. Esse texto é um resumo (mais conciso e menos didático) do livro do professor Hammack. O objetivo desse presente manual é servir como material de revisão e auxílio aos que quiserem seguir o caminho proposto no \textbf{Projeto Matemática} do site \href{https://economiamainstream.com.br/artigo/matematica/}{\textbf{Economia Mainstream}}. A leitura do material original é fortemente indicada e encorajada por parte dos que elaboraram o presente manual. Os exercícios contidos no livro, por outro lado, são obrigatórios. Você deve tentar resolver o máximo possível. Quaisquer dúvidas podem ser enviadas nos comentários do projeto no site citado acima.
+
 
 \section{Introdução}
 Um \textbf{conjunto} (set)\footnote{Eu vou intercalar bastante o uso dos termos em português e inglês.} é uma lista de \textbf{elementos}. Normalmente denotados por uma letra maiúscula. Por exemplo:
@@ -379,9 +377,7 @@ Acredite, apenas esse enunciado foi uma baita dor de cabeça para os matemático
 \\
 \textbf{Dica}: Vai ler o livro nessa parte. O professor explica bem melhor sobre o paradoxo.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Lógica}
 
 \begin{chapquote}{página 34}
@@ -747,9 +743,7 @@ Para finalizar, o professos elenca 3 grandes motivos para se estudar lógica: 1)
 \\
 Lógica é a linguagem-comum que toda a Matemática utiliza, então temos que ter uma boa base para poder escrever e entender a própria matemática. Durante o resto desse livro não usaremos com tanta frequência os símbolos que vimos $(\land, \lor, \implies, \iff, \sim, \forall, \exists)$ mas sempre que ler uma passagem matemática, você deve usa-los, mentalmente ou em papel, para se certificar que você a compreendeu de uma maneira inequívoca e verdadeira.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Contagem}
 
 
@@ -825,7 +819,7 @@ Existem dois tipos de problemas que envolvem contagem de listas: Problemas que p
 Usando o princípio da multiplicação você é capaz de resolver todos os problemas envolvendo contagens de listas sem precisar ficar escrevendo as soluções possíveis, ao invés disso, você só precisa interpretar as opções de entradas na lista e usar a multiplicação.
 \\
 \\
-\textbf{Dica}: Tenta fazer os exemplos 3.1, 3.2 e 3.3 da página 69 até a 72.
+\textbf{Dica}: Tente fazer os exemplos 3.1, 3.2 e 3.3 da página 69 até a 72.
 
 \section{Os Princípios da Adição e Subtração}
 
@@ -835,11 +829,12 @@ Vamos ver mais dois princípios de contagem. Você já está familiarizado com e
 Suponha que um conjunto finito $X$ pode ser decomposto na união $X = \bigcup_{i = 1}^{n}\limits X_i$ onde $ X_i \cap X_j = \emptyset \ \forall \ i \neq j$. Então, $|X| = \sum_{i = 1}^{n}\limits |X_i|$.
 \end{fact}
 
-Calma. Não é difícil de entender. O que estamos dizendo ai é: "Se $X$ é um conjunto formado por $n$ outros conjuntos menores, e nenhum desses conjuntos possui interseção entre si. Então, o cardinal de $X$ será a soma dos cardinais de todos os $n$ subconjuntos. A única novidade nessa notação é o sigma para denominar somatório.
+Calma. Não é difícil de entender. O que estamos dizendo ai é: "Se $X$ é um conjunto formado por $n$ outros conjuntos menores demo do que nenhum desses conjuntos possui interseção entre si. Então, o cardinal de $X$ será a soma dos cardinais de todos os $n$ subconjuntos. A única novidade nessa notação é o sigma para denominar somatório.\footnote{Já vimos essa notação no capítulo 01.}
 \\
 \\
 \textbf{Dica}: Veja os exemplos 3.5 e 3.6 na página 75 para ter uma ideia da aplicação desses conceitos na prática.
-
+\\
+\\
 Agora vamos ver o princípio da subtração. Você não deve ter grandes dificuldades de entender esse conceito.
 
 \begin{fact}[Princípio da Subtração]
@@ -848,10 +843,33 @@ Se $X$ é um subconjunto de um conjunto finito $U$, então $|\overline{X}| = |U|
 
 Existem situações onde é mais fácil contar o total de um conjunto maior, e retirar uma parte desse total que não queremos, do que contar diretamente a parte desejada. Eu sei, tá um pouco confuso. Mas a ideia é simples: Usamos esse método para computar o que sobra após a retirada de algumas opções.
 
-\textbf{Dica}: Lê o exemplo 3.7 novamente. A gente usa exatamente essa abordagem pra chegar no resultado.
+\textbf{Dica}: Dá uma lida no exemplo 3.7 novamente. A gente usa exatamente essa abordagem pra chegar no resultado.
 
 \section{Fatoriais e Permutações}
+O processo de contagem para listas não repetitivas de tamanho $n$ é tão comum que criamos um conceito especial para lidar com esse tipo de problema. O conceito em questão é o \textbf{Fatorial} ($n!$). Antes de formalizarmos o que é o fatorial, observe o quadro abaixo.
+\\
+\\
+\begin{center}
+\begin{tabular}{ c || c || c || c}
+ n & Elementos & Listas não repetidas de tamanho $n$ & $n!$ \\ 
+ \hline
+ 0 & $\{\}$ & $()$ & 1 \\
+ 1 & $\{a\}$ & $(a)$ & 1 \\
+ 2 & $\{a,b\}$ & $(a,b), (b,a)$ & 2 \\
+ 3 & $\{a,b,c\}$ & $(a,b,c),(a,c,b),(b,a,c),(b,c,a),(c,a,b),(c,b,a) $ & 6 \\
+ \dots & \dots & \dots & \dots
+\end{tabular}
+\end{center}
+
+Consegue ver como a quantidade de listas não repetitivas cresce rápido com apenas o incremento de 1 elemento no exemplo?. O número da última coluna é obtido pela aplicação do princípio da multiplicação. Nós chamamos esse número de \textbf{Fatorial} de $n$. Seu símbolo é esse ponto de exclamação ao lado direito do número ($n!$)\footnote{Lemos como "$n$ fatorial".}.
+
+\begin{definition}[Fatorial]
+Se $n$ é um número inteiro não negativo, então $n!$ será o número de listas de tamanho $n$ que podem ser formadas com $n$ símbolos, sem repetição. Desse modo, temos que $0! = 1, 1! = 1$. Para qualquer $n > 1$, então $n! = n \times (n - 1) \times (n - 2) \times \dots \times 3 \times 2 \times 1 $.
+\end{definition}
+
 \section{Contando Subconjuntos}
+Parte do Luiz
+
 Selecionando $k$ elementos de um conjunto $A$ com $|A| = n$, quantos subconjuntos $A_i$ serão formados dessa permutação?
 \\
 Lembre-se:
@@ -888,6 +906,7 @@ $$\frac{n!}{k!(n-k)!} = {n \choose k}$$
 \begin{fact}[Contagem de subconjuntos]
 Se $0 \leqslant k \leqslant n$, então ${n \choose k} = \frac{n!}{k!(n-k)!}$. Caso contrário ${n \choose k} = 0$
 \end{fact}
+
 \section{O Triângulo de Pascal e O Teorema Binomial}
 \section{O Princípio da Inclusão-Exclusão}
 \section{Contando Multiconjuntos}
@@ -899,19 +918,13 @@ Se $0 \leqslant k \leqslant n$, então ${n \choose k} = \frac{n!}{k!(n-k)!}$. Ca
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Como Provar Afirmações Condicionais}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova Direta}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova Contra-positiva}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova por Contradição}
 
 
@@ -920,24 +933,16 @@ Se $0 \leqslant k \leqslant n$, então ${n \choose k} = \frac{n!}{k!(n-k)!}$. Ca
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Mais Sobre Provas}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova de Afirmações Não-Condicionais}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Provas Envolvendo Conjuntos}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Contraprova}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Indução Matemática}
 
 
@@ -946,24 +951,16 @@ Se $0 \leqslant k \leqslant n$, então ${n \choose k} = \frac{n!}{k!(n-k)!}$. Ca
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Relações, Funções e Cardinalidade}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Relações}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Funções}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Provas com Cálculo Infinitesimal}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                 CHAPTER                         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cardinalidade de Conjuntos}
 
 \end{document}
