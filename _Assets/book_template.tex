@@ -6,6 +6,7 @@
 
 \documentclass[a4paper,11pt]{book}
 
+% pacotes utilizados
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -16,21 +17,39 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{mathtools}
 \usepackage{amssymb} % alguns simbolos matematicos
-\usepackage{ mathrsfs } % letras cursivas
+\usepackage{mathrsfs} % letras cursivas
+\usepackage{listings} % coding examples in latex file
+\usepackage{xcolor} % changing colors
+\usepackage{amsthm} % definir estilo do teorema
 
-% para usar definições
-\usepackage{amsthm}
+% dark theme no pdf
+\pagecolor[rgb]{0.1,0.1,0.1} %black
+\color[rgb]{0.9,0.9,0.9} %grey
 
+% criando o modelo de definicoes/teoremas/fatos/demonstracoes
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+\newtheoremstyle{break}% name
+  {10pt}%         Space above, empty = `usual value'
+  {10pt}%         Space below
+  {}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+
+% definindo as categorias de formalidade
+\newtheorem{definition}{Definição}[section]
+\newtheorem{fact}{Fato}[section]
+\newtheorem{demonstration}{Demonstração}[section]
+\newtheorem{theorem}{Teorema}
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
 
-% coding examples in latex file
-\usepackage{listings}
-\usepackage{xcolor}
-
+% setting das cores quando usar codigo python
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -57,10 +76,8 @@
 
 \lstset{style=mystyle}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 'dedication' environment: To add a dedication paragraph at the start of book %
-% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html            %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% dedicatoria 
+% Source: http://www.tug.org/pipermail/texhax/2010-June/
 \newenvironment{dedication}
 {
    \cleardoublepage
@@ -75,10 +92,8 @@
    \clearpage
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Chapter quote at the start of chapter        %
 % Source: http://tex.stackexchange.com/a/53380 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \renewcommand{\@chapapp}{}% Not necessary...
 \newenvironment{chapquote}[2][2em]
@@ -120,7 +135,7 @@
 \chapter{Capítulo 1}
 
 \begin{chapquote}{página 3}
-	``The theory of sets is a language that is perfectly suited to describing and explaning all types of mathematical structures.''
+	``Aqui fica uma quote inteligente e elegante.''
 \end{chapquote}
 
 
