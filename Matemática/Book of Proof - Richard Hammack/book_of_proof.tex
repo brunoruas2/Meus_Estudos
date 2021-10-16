@@ -807,13 +807,13 @@ Embora no livro não seja dada uma demonstração desse princípio. Eu acho que 
 
 \begin{demonstration}[Princípio da Multiplicação\footnote{JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 365.\\\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{Link de onde veio a ideia para a parte para $P(m)$ com $m > 2$.}}]
 
-Começaremos com a proposição $P(m)$: "Se existirem $m \in \mathbb{N}$ conjuntos $A_m$ conjuntos com $n_m$ elementos em cada conjunto. O Cardinal do produto cartesiano de todos os $m$ conjuntos será a multiplicação de todos os $m$ cardinais $|A_m|$". 
+Começaremos com a proposição $P(m)$: "Se existirem $m \in \mathbb{N}$ conjuntos $A_i$ com $n_i$ elementos em cada conjunto onde $i \in \{1,2,\dots,m\}$. O Cardinal do produto cartesiano de todos os $m$ conjuntos será a multiplicação de todos os $m$ cardinais $| A_i|$, ou seja, $ |A_1 \times A_2 \times \dots \times A_m | = \prod_{i = 1}^{m}\limits | A_i | $". 
 \\
 \\
 Essa proposição é equivalente ao enunciado do princípio da multiplicação.\footnote{Você consegue ver essa equivalência?}
 \\
 \\
-É trivial ver que uma lista de comprimento $n = 1$ tem exatamente $a_1$ possíveis listas geradas por todas as $a_1$ possibilidades de entradas nessa lista. Então não precisamos nos preocupar com a proposição $P(1)$.
+Quando $m = 1$, temos apenas o conjunto $A_1$ que possui $n_1$ elementos. Portanto, o cardinal de todos os $m = 1$ conjuntos é igual ao cardinal do conjunto ($|A_m| = |A_1|$). Com isso, vamos que $P(1)$ é verdadeira.
 \\
 \\
 $P(2)$: "Se $A_1$ e $A_2$ são conjuntos finitos onde $A_1$ contém $n_1$ elementos e $A_2$ contém $n_2$ elementos, então, o conjunto $A_1 \times A_2$ possui $n_1 \cdot n_2$ elementos".\footnote{Ou seja, o princípio da multiplicação nada mais é que uma proposição a respeito do cardinal do produto cartesiano para conjuntos finitos.}
@@ -828,7 +828,7 @@ Agora vamos fazer uma pequena adaptação nessa demonstração para qualquer qua
 Suponha que agora temos 3 conjuntos: $A_1$, $A_2$ e $A_3$. Para podermos demonstrar $P(3)$: "Se $A_1 \times A_2 \times A_3$, então o cardinal será  $n_1 \cdot n_2 \cdot n_3$"\  só precisamos da seguinte linha de pensamento: Podemos definir um novo conjunto $B = A_1 \times A_2$. Desse modo, podemos reescrever o cardinal anterior como $B \times A_3$. Essa nova reescrita possui apenas dois elementos. Portanto, podemos usar a proposição já demonstrada $P(2)$ sem nenhum prejuízo.
 \\
 \\
-Aplicando esse mesmo procedimento para qualquer $n > 2$ fica demonstrado que o cardinal de quaisquer conjuntos $A_n$ para qualquer $n \in \mathbb{N}$ será a multiplicação do cardinal dos conjuntos $A_n$. Aplicando a equivalência da proposição $P(n)$ com o princípio da multiplicação, finalizamos a demonstração. $\blacksquare$
+Aplicando esse mesmo procedimento para qualquer $m > 2$ fica demonstrado que o cardinal de quaisquer conjuntos $A_i$ para qualquer $i \in \{1,2,\dots,m\}$ será a multiplicação do cardinal dos conjuntos $A_i$. Aplicando a equivalência da proposição $P(m)$ com o princípio da multiplicação, finalizamos a demonstração. $\blacksquare$
 \end{demonstration}
 
 Existem dois tipos de problemas que envolvem contagem de listas: Problemas que possuem entradas repetidas e Problemas que não permitem entradas repetidas. Nós podemos chamar as listas do segundo tipo de problema de \textbf{listas não repetitivas}.
