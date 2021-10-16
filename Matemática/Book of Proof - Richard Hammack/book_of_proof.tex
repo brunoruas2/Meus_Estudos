@@ -411,26 +411,30 @@ Até agora foi dito que você pode usar proposições junto à lógica para se c
 O primeiro operador que vamos aprender é o "$e$". Dadas as proposições $P$ e $Q$. Podemos criar uma nova proposição através desse operador. Quando escrevemos $R: P \ e \ Q$, estamos criando uma nova proposição $R$ que é composta de das duas proposições $P$ e $Q$. O símbolo usado para esse conectivo é o "$\land$". Aqui em baixo vamos colocar a tabela verdade\footnote{Se você não sabe o que são tabelas-verdades então dá uma lida nesse \href{https://www.youtube.com/watch?v=hWEZsyF3ZZc}{link}.} desse operador\footnote{"V" \ significa Verdadeiro e "F" \  significa Falso.}.
 
 \begin{center}
-\begin{tabular}{ c c || c }
+\begin{tabular}{| c c || c | }
+\hline
  P & Q & $P \land Q$ \\ 
  \hline
  V & V & V \\  
  V & F & F \\  
  F & V & F \\  
- F & F & F
+ F & F & F \\
+ \hline
 \end{tabular}
 \end{center}
 
 Outro operador lógico clássico é o "ou". O símbolo dele é o "$\lor$". Eu sei, parece muito com o símbolo do "e" \ mas a  gente não pode fazer nada a não ser decorar bem a distinção entre esses dois símbolos. A tabela-verdade do "ou" \ segue abaixo.
 
 \begin{center}
-\begin{tabular}{ c c || c }
+\begin{tabular}{ | c c || c | }
+\hline
  P & Q & $P \lor Q$ \\ 
  \hline
  V & V & V \\  
  V & F & V \\  
  F & V & V \\  
- F & F & F
+ F & F & F \\
+ \hline
 \end{tabular}
 \end{center}
 
@@ -445,11 +449,13 @@ Outro operador lógico clássico é o "ou". O símbolo dele é o "$\lor$". Eu se
 O último operador que veremos é a \textbf{negação}. Ela inverte a condição da proposição onde é aplicada. Seu símbolo é o "$\sim$"\footnote{Existem outras representações desse operador: $\lnot$ , $\veebar$ , $\dot\lor$}, ou seja, se uma proposição é verdadeira, ao aplicarmos a negação à ela, tornamos essa proposição falsa. A tabela-verdade desse operador é bem simples.
 
 \begin{center}
-\begin{tabular}{ c || c }
+\begin{tabular}{ | c || c | }
+\hline
  P & $\sim P$ \\ 
  \hline
  V & F \\  
- F & V
+ F & V \\
+ \hline
 \end{tabular}
 \end{center}
 
@@ -458,13 +464,15 @@ O último operador que veremos é a \textbf{negação}. Ela inverte a condição
 Podemos ainda combinar proposições de outra maneira. Sejam as proposições $P$ e $Q$. Podemos dizer que "Se $P$ for verdade, então $Q$ também será verdadeiro". O símbolo usado para esse conectivo se...então é o "$\implies$". Uma proposição desse tipo é chamada de \textbf{proposição condicional}. Leia a página 43 do livro caso você esteja com dúvida sobre as últimas duas linhas da tabela-verdade.\footnote{O autor dá a dica de você pensar nas proposições compostas como promessas feita por alguém. Isso ajuda muito a entender como as tabelas-verdade são construídas.}
 
 \begin{center}
-\begin{tabular}{ c c || c }
+\begin{tabular}{ | c c || c | }
+\hline
  P & Q & $P \implies Q$ \\ 
  \hline
  V & V & V \\  
  V & F & F \\  
  F & V & V \\  
- F & F & V
+ F & F & V \\
+ \hline
 \end{tabular}
 \end{center}
 
@@ -475,13 +483,15 @@ Podemos ainda combinar proposições de outra maneira. Sejam as proposições $P
 Existem situações onde duas proposições são mutuamente condicionais, ou seja, $P \implies Q$ e $Q \implies P$. Nesses casos usamos o conectivo "se e somente se" cujo símbolo é "$\iff$".  A tabela-verdade segue abaixo.
 
 \begin{center}
-\begin{tabular}{ c c || c }
+\begin{tabular}{ | c c || c | }
+\hline
  P & Q & $P \iff Q$ \\ 
  \hline
  V & V & V \\  
  V & F & F \\  
  F & V & F \\  
- F & F & V
+ F & F & V \\
+ \hline
 \end{tabular}
 \end{center}
 
@@ -505,26 +515,30 @@ Essa proposição pode assustar numa primeira olhada, contudo, ela expressa exat
 A tabela-verdade dessa proposição é a seguinte:
 
 \begin{center}
-\begin{tabular}{c c || c c || c || c}
+\begin{tabular}{ | c c || c c || c || c | }
+\hline
  P & Q & $(P \lor Q)$ & $(P \land Q)$ & $\sim (P \land Q)$ & $(P \lor Q) \ \land \ \sim (P \land Q)$\\
  \hline
  V & V & V & V & F & F \\  
  V & F & V & F & V & V \\  
  F & V & V & F & V & V \\  
- F & F & F & F & V & F
+ F & F & F & F & V & F \\
+ \hline
 \end{tabular}
 \end{center}
 
 Calma. É bem mais tranquilo do que parece. Vamos analisar essa tabela por partes. Nas primeiras duas colunas temos as proposições iniciais $P$ e $Q$. Nas linhas estão as situações onde testamos o que acontece quando elas são verdadeiras ou falsas. Na segunda parte temos as proposições compostas por $\lor$ e $\land$ (que você já conhece a tabela-verdade). Na parte 3 temos apenas a negação da coluna $(P \land Q)$. Se criarmos mais duas proposições do tipo $Z : (P \lor Q)$ e $W : \  \sim(P \land Q)$. Podemos reduzir a última coluna como a tabela-verdade abaixo:
 
 \begin{center}
-\begin{tabular}{ c c || c c || c }
+\begin{tabular}{ | c c || c c || c | }
+\hline
  P & Q & Z & W & $Z \land W$ \\ 
  \hline
  V & V & V & F & F \\  
  V & F & V & V & V \\  
  F & V & V & V & V \\  
- F & F & F & V & F
+ F & F & F & V & F \\
+ \hline
 \end{tabular}
 \end{center}
 
@@ -553,25 +567,29 @@ $\sim(P \lor Q) = (\sim P) \land (\sim Q)$
 
 A tabela-verdade da primeira parte é:
 \begin{center}
-\begin{tabular}{ c c || c c c || c c }
+\begin{tabular}{ | c c || c c c || c c | }
+\hline
 P & Q & $\sim P$ & $\sim Q$ & $P \land Q$ & $\sim (P \land Q)$ & $(\sim P) \lor (\sim Q)$ \\
 \hline
 V & V & F & F & V & F & F \\
 V & F & F & V & F & V & V \\
 F & V & V & F & F & V & V \\
-F & F & V & V & F & V & V
+F & F & V & V & F & V & V \\
+\hline
 \end{tabular}
 \end{center}
 
 A tabela-verdade da segunda parte é:
 \begin{center}
-\begin{tabular}{ c c || c c c || c c }
+\begin{tabular}{ | c c || c c c || c c | }
+\hline
 P & Q & $\sim P$ & $\sim Q$ & $P \lor Q$ & $\sim (P \lor Q)$ & $(\sim P) \land (\sim Q)$ \\
 \hline
 V & V & F & F & V & F & F \\
 V & F & F & V & V & F & F \\
 F & V & V & F & V & F & F \\
-F & F & V & V & F & V & V
+F & F & V & V & F & V & V \\
+\hline
 \end{tabular}
 \end{center}
 
@@ -776,7 +794,7 @@ Só existe uma lista cujo comprimento é igual a zero. Denominamos essa lista de
 
 \section{O Princípio da Multiplicação}
 
-Existem muitos problemas práticos que envolvem a contagem do número possível de listas que satisfaz uma determinada condição ou propriedade.
+Existem muitos problemas práticos que envolvem a contagem do número possível de listas que satisfazem uma determinada condição ou propriedade. Por causa disso, vamos aprender uma maneira de trabalharmos essa questão sem precisar ficar escrevendo todas as listas possíveis antes de contar os resultados.
 
 \begin{fact}[Princípio da Multiplicação]
 Suponha que em uma lista de comprimento $n$ exista $a_1$ escolhas possíveis para a primeira entrada, $a_2$ escolhas possíveis para a segunda entrada, $a_3$ escolhas possíveis para a terceira entrada e etc. Então, o total de listas diferentes que podem ser geradas por essas entradas será igual ao produto entre $a_1 \times a_2 \times a_3 \times \dots \times a_n$. 
@@ -789,7 +807,7 @@ Embora no livro não seja dada uma demonstração desse princípio. Eu acho que 
 
 \begin{demonstration}[Princípio da Multiplicação\footnote{JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 365.\\\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{Link de onde veio a ideia para a parte para $P(m)$ com $m > 2$.}}]
 
-Começaremos com a proposição $P(m)$: "Se existirem $A_m$ conjuntos com $n_m$ elementos em cada conjunto. O Cardinal do produto cartesiano de todos os $m$ conjuntos será a multiplicação de todos os $m$ cardinais $|A_m|$". 
+Começaremos com a proposição $P(m)$: "Se existirem $m \in \mathbb{N}$ conjuntos $A_m$ conjuntos com $n_m$ elementos em cada conjunto. O Cardinal do produto cartesiano de todos os $m$ conjuntos será a multiplicação de todos os $m$ cardinais $|A_m|$". 
 \\
 \\
 Essa proposição é equivalente ao enunciado do princípio da multiplicação.\footnote{Você consegue ver essa equivalência?}
@@ -850,23 +868,28 @@ O processo de contagem para listas não repetitivas de tamanho $n$ é tão comum
 \\
 \\
 \begin{center}
-\begin{tabular}{ c || c || c || c}
+\begin{tabular}{ | c | c | c | c | }
+ \hline
  n & Elementos & Listas não repetidas de tamanho $n$ & $n!$ \\ 
  \hline
  0 & $\{\}$ & $()$ & 1 \\
  1 & $\{a\}$ & $(a)$ & 1 \\
  2 & $\{a,b\}$ & $(a,b), (b,a)$ & 2 \\
  3 & $\{a,b,c\}$ & $(a,b,c),(a,c,b),(b,a,c),(b,c,a),(c,a,b),(c,b,a) $ & 6 \\
- \dots & \dots & \dots & \dots
+ \vdots & \vdots & \vdots & \vdots \\
 \end{tabular}
 \end{center}
 
-Consegue ver como a quantidade de listas não repetitivas cresce rápido com apenas o incremento de 1 elemento no exemplo?. O número da última coluna é obtido pela aplicação do princípio da multiplicação. Nós chamamos esse número de \textbf{Fatorial} de $n$. Seu símbolo é esse ponto de exclamação ao lado direito do número ($n!$)\footnote{Lemos como "$n$ fatorial".}.
+Consegue ver como a quantidade de listas não repetitivas cresce rápido com apenas o incremento de 1 elemento no exemplo?. O número da última coluna é obtido pela aplicação do princípio da multiplicação. Nós chamamos esse número de \textbf{Fatorial} de $n$. Seu símbolo é esse ponto de exclamação ao lado direito do número "$n!$"\footnote{Lemos como "$n$ fatorial".}.
 
 \begin{definition}[Fatorial]
-Se $n$ é um número inteiro não negativo, então $n!$ será o número de listas de tamanho $n$ que podem ser formadas com $n$ símbolos, sem repetição. Desse modo, temos que $0! = 1, 1! = 1$. Para qualquer $n > 1$, então $n! = n \times (n - 1) \times (n - 2) \times \dots \times 3 \times 2 \times 1 $.
+Se $n$ é um número inteiro não negativo, então $n!$ será o número de listas de tamanho $n$ que podem ser formadas com $n$ símbolos, sem repetições. Desse modo, temos que $0! = 1, 1! = 1$. Para qualquer $n > 1$, então $n! = n \times (n - 1) \times (n - 2) \times \dots \times 3 \times 2 \times 1 $.
 \end{definition}
 
+\textbf{Dica}: O exemplo 3.8 na página 79 é ótimo pra exercitar esses conceitos vistos até agora.
+\\
+\\
+Outro conceito importante\footnote{Que eu aposto que você viu no ensino médio e achou que nunca ia usar.} é o conceito de \textbf{Permutação}. Quando computamos um fatorial, estamos contando a quantidade de permutações possíveis para um conjunto com $n$ elementos. Essas permutações são apenas listas cuja ordem dos elementos é a única diferença entre elas.
 \section{Contando Subconjuntos}
 Parte do Luiz
 
