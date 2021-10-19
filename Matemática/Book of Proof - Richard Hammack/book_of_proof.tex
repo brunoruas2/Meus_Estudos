@@ -116,7 +116,11 @@
 \huge by Richard Hammack}
 
 % Author
-\author{\textsc{Resumo por Bruno de M. Ruas}}
+\author{
+\textsc{Resumo e Adaptação por:} \\
+\textsc{Bruno de M. Ruas} e \\ 
+\textsc{Luiz Eduardo de Lima} 
+}
 
 
 \begin{document}
@@ -805,18 +809,19 @@ Suponha que em uma lista de comprimento $n$ exista $a_1$ escolhas possíveis par
 \\
 Embora no livro não seja dada uma demonstração desse princípio. Eu acho que podemos tentar provar que essa afirmação é verdadeira. Não se preocupe se você não conseguir entender essa demonstração agora. Volte quando estiver mais adiantado no curso e tente novamente.
 
-\begin{demonstration}[Princípio da Multiplicação\footnote{JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 365.\\\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{Link de onde veio a ideia para a parte para $P(m)$ com $m > 2$.}}]
+\begin{demonstration}[Princípio da Multiplicação\footnote{A ideia da primeira parte da demonstração para $m \leq 2$ veio desse livro: JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 365. Pra segunda parte, onde $m > 2$, a inspiração veio desse link do 
+\href{https://math.stackexchange.com/questions/3053969/using-induction-to-prove-the-multiplication-rule}{StackExchange.}}]
 
-Começaremos com a proposição $P(m)$: "Se existirem $m \in \mathbb{N}$ conjuntos $A_i$ com $n_i$ elementos em cada conjunto onde $i \in \{1,2,\dots,m\}$. O Cardinal do produto cartesiano de todos os $m$ conjuntos será a multiplicação de todos os $m$ cardinais $| A_i|$, ou seja, $ |A_1 \times A_2 \times \dots \times A_m | = \prod_{i = 1}^{m}\limits | A_i | $". 
+Começaremos com a proposição $P(m)$: "Se existirem $m \in \mathbb{N}$ conjuntos $A_i$ com $n_i$ elementos em cada conjunto onde $i \in \{1,2,\dots,m\}$. O Cardinal do produto cartesiano de todos os $m$ conjuntos será igual à multiplicação de todos os $m$ cardinais $| A_i|$, ou seja, $ |A_1 \times A_2 \times \dots \times A_m | = \prod_{i = 1}^{m}\limits | A_i | $"\footnote{O nome desse símbolo é \href{https://en.wikipedia.org/wiki/Multiplication\#Product_of_a_sequence}{"Produtório"}}.
 \\
 \\
 Essa proposição é equivalente ao enunciado do princípio da multiplicação.\footnote{Você consegue ver essa equivalência?}
 \\
 \\
-Quando $m = 1$, temos apenas o conjunto $A_1$ que possui $n_1$ elementos. Portanto, o cardinal de todos os $m = 1$ conjuntos é igual ao cardinal do conjunto único conjunto ($|A_m| = |A_1|$). Com isso, vamos que $P(1)$ é verdadeira.
+Quando $m = 1$, temos apenas o conjunto $A_1$ que possui $n_1$ elementos. Portanto, o cardinal de todos os $m = 1$ conjuntos é igual ao cardinal do único conjunto ($|A_m| = |A_1|$). Com isso, vemos que $P(1)$ é verdadeira.
 \\
 \\
-$P(2)$: "Se $A_1$ e $A_2$ são conjuntos finitos onde $A_1$ contém $n_1$ elementos e $A_2$ contém $n_2$ elementos, então, o conjunto $A_1 \times A_2$ possui $n_1 \cdot n_2$ elementos".\footnote{Ou seja, o princípio da multiplicação nada mais é que uma proposição a respeito do cardinal do produto cartesiano para conjuntos finitos.}
+$P(2)$: "Se $A_1$ e $A_2$ são conjuntos finitos onde $A_1$ contém $n_1$ elementos e $A_2$ contém $n_2$ elementos, então, o conjunto $A_1 \times A_2$ possui $n_1 \cdot n_2$ elementos".
 \\
 \\
 A demonstração dessa proposição é simples. Para cada um dos $n_1$ elementos $a \in A_1$ na primeira coordenada do par ordenado $(a,b) \in A_1 \times A_2$, existem exatamente $n_2$ elementos $b \in A_2$. Uma vez que existem $n_1$ elementos em $A_1$ que podem ser essa primeira coordenada do par ordenado $(a,b)$, então, existem ao todo $n_1 \cdot n_2$ possíveis pares ordenados no produto cartesiano $A_1 \times A_2$.
@@ -847,7 +852,7 @@ Vamos ver mais dois princípios de contagem. Você já está familiarizado com e
 Suponha que um conjunto finito $X$ pode ser decomposto na união $X = \bigcup_{i = 1}^{n}\limits X_i$ onde $ X_i \cap X_j = \emptyset \ \forall \ i \neq j$. Então, $|X| = \sum_{i = 1}^{n}\limits |X_i|$.
 \end{fact}
 
-Calma. Não é difícil de entender. O que estamos dizendo ai é: "Se $X$ é um conjunto formado por $n$ outros conjuntos menores demo do que nenhum desses conjuntos possui interseção entre si. Então, o cardinal de $X$ será a soma dos cardinais de todos os $n$ subconjuntos. A única novidade nessa notação é o sigma para denominar somatório.\footnote{Já vimos essa notação no capítulo 01.}
+Calma. Não é difícil de entender. O que estamos dizendo ai é: "Se $X$ é um conjunto formado por $n$ outros conjuntos menores de modo que nenhum desses conjuntos possui interseção entre si. Então, o cardinal de $X$ será a soma dos cardinais de todos os $n$ subconjuntos. A única novidade nessa notação é o sigma para denominar somatório.\footnote{Já vimos essa notação no capítulo 01.}
 \\
 \\
 \textbf{Dica}: Veja os exemplos 3.5 e 3.6 na página 75 para ter uma ideia da aplicação desses conceitos na prática.
@@ -889,7 +894,24 @@ Se $n$ é um número inteiro não negativo, então $n!$ será o número de lista
 \textbf{Dica}: O exemplo 3.8 na página 79 é ótimo pra exercitar esses conceitos vistos até agora.
 \\
 \\
-Outro conceito importante\footnote{Que eu aposto que você viu no ensino médio e achou que nunca ia usar.} é o conceito de \textbf{Permutação}. Quando computamos um fatorial, estamos contando a quantidade de permutações possíveis para um conjunto com $n$ elementos. Essas permutações são apenas listas cuja ordem dos elementos é a única diferença entre elas.
+Outro conceito importante\footnote{Que eu aposto que você viu no ensino médio e achou que nunca ia usar.} é o conceito de \textbf{Permutação}. Quando computamos um fatorial, estamos, na verdade, contando a quantidade de listas de comprimento $n$ que podem ser geradas a partir da mudança da ordem dos $n$ elementos.
+\\
+\\
+\textbf{Atenção}: Guarde na memória que o \textbf{Fatorial} conta o número de \textbf{Permutações} possíveis para $n$ elementos via aplicação do \textbf{princípio da multiplicação}.
+\\
+\\
+Agora vamos estender um pouco mais esse pensamento. Se temos um total de $n$ elementos. Uma permutação é uma lista de comprimento $n$. Mas e se não quisermos usar todos os elementos disponíveis na composição dessas listas? Para isso o autor usa o conceito de \textbf{k-permutação}\footnote{Do original: k-permutation.}. Uma k-permutação será uma lista de tamanho $k$ formada por um subconjunto dos $n$ elementos anteriores.
+\\
+\\
+Para facilitar (ou não) a nossa vida, vamos definir uma notação para definir essas situações onde queremos fazer permutações de comprimento $k$ de um conjunto qualquer de tamanho $n$ onde $k \leq n$. Escreveremos $P(n,k)$ para denotar essa situação.\footnote{Perceba que se $k = n$ teremos que $P(n,k) = n!$. Não tem problema nenhum se não entender. Vamo bater um papo no \href{https://twitter.com/bruno_ruas2}{twitter} que eu te explico com mais calma.} 
+
+
+
+
+
+
+
+
 \section{Contando Subconjuntos}
 Parte do Luiz
 
