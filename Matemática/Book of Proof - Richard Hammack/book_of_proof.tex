@@ -21,6 +21,7 @@
 \usepackage{listings} % coding examples in latex file
 \usepackage{xcolor} % changing colors
 \usepackage{amsthm} % definir estilo do teorema
+\usepackage[hang,flushmargin]{footmisc} % remove footnote's identation
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -903,13 +904,25 @@ Outro conceito importante\footnote{Que eu aposto que você viu no ensino médio 
 Agora vamos estender um pouco mais esse pensamento. Se temos um total de $n$ elementos. Uma permutação é uma lista de comprimento $n$. Mas e se não quisermos usar todos os elementos disponíveis na composição dessas listas? Para isso o autor usa o conceito de \textbf{k-permutação}\footnote{Do original: k-permutation.}. Uma k-permutação será uma lista de tamanho $k$ formada por um subconjunto dos $n$ elementos anteriores.
 \\
 \\
-Para facilitar (ou não) a nossa vida, vamos definir uma notação para definir essas situações onde queremos fazer permutações de comprimento $k$ de um conjunto qualquer de tamanho $n$ onde $k \leq n$. Escreveremos $P(n,k)$ para denotar essa situação.\footnote{Perceba que se $k = n$ teremos que $P(n,k) = n!$. Não tem problema nenhum se não entender. Vamo bater um papo no \href{https://twitter.com/bruno_ruas2}{twitter} que eu te explico com mais calma.} 
-
-
-
-
-
-
+Para facilitar (ou não) a nossa vida, vamos definir uma notação para situações onde queremos fazer permutações de comprimento $k$ de um conjunto qualquer de tamanho $n$. Escreveremos $P(n,k)$ para denotar essa situação.\footnote{Perceba que se $k = n$ teremos que $P(n,k) = n!$. Não tem problema nenhum se não entender. Vamo bater um papo no \href{https://twitter.com/bruno_ruas2}{twitter} que eu te explico com mais calma.} 
+\\
+\\
+Para o caso onde $k = 0$ só precisamos pensar em quantas listas de comprimento $0$ conseguiríamos fazer a partir de um conjunto com $n$ elementos. Isso mesmo, só temos uma lista possível - a lista vazia $()$. 
+\\
+\\
+Para todos os casos onde $k \leq n$ podemos calcular o número de k-permutações usando o princípio da multiplicação. Na página 81 tem uns exemplos sobre isso.
+\\
+\\
+Nos casos onde $k > n$ seria como responder algo parecido com: "Quantas lista de 4 elementos podemos fazer com 3 números". A resposta é "zero listas".
+\\
+\\
+De modo mais geral, via princípio da multiplicação, temos que para a primeira entrada da lista de comprimento $k$ temos sempre $(n)$ opções. Para a segunda entrada, teremos $(n - 1)$ opções. Para a terceira entrada teremos $(n - 2)$ opções. Podemos ver claramente um padrão se formando. Podemos definir que o número de escolhas para a posição $i \in \{1,2,\dots,k\}$ será $(n - i + 1)$\footnote{Por exemplo: \\ $i = 1 \implies (n - 1 + 1) = (n)$ opções \\ $i = 2 \implies (n - 2 + 1) = (n - 1)$ opções}. Quando $i = k$ teremos então $(n - k + 1)$ opções.
+\\
+\\
+Com isso podemos chegar em uma equação:
+\begin{center}
+$ P(n,k) = n . (n - 1) . (n - 2) \dots (n - k + 1) $
+\end{center}
 
 
 \section{Contando Subconjuntos}
