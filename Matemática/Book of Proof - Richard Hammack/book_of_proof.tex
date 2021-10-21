@@ -924,6 +924,26 @@ Com isso podemos chegar em uma equação:
 $ P(n,k) = n . (n - 1) . (n - 2) \dots (n - k + 1) $
 \end{center}
 
+Podemos ainda transformar essa relação em outra equação. Primeiro pensemos no que essa parte direta da equação acima quer dizer. Ela se parece com a fórmula do fatorial de $n$ mas com a diferença de "parar" \ em $(n - k + 1)$. Para recuperar o formato do fatorial podemos multiplicar a equação acima por $ (n - k) . (n - k - 1) \dots 3 . 2 . 1 $ e dividir pela mesma expressão.
+\\
+\\
+Depois de todas essas manipulações, podemos formalizar o conceito de k-permutações.
+
+\begin{fact}[K-Permutações]
+Uma \textbf{k-permutação} de um conjunto com $n$ elementos é uma lista de comprimento $k$ feita com elementos desse conjunto. Informalmente, podemos pensar nessa lista como fruto do "rearranjo"\ dos elementos desse conjunto.
+\\
+\\
+O número de k-permutações de um conjunto com $n$ elementos é denotado por $P(n,k)$ e é dado por:\\
+\begin{center}
+$ P(n,k) = n . (n - 1) . (n - 2) \dots (n - k + 1) $
+\end{center}
+
+Se $0 \leq k \leq n$, então temos que:\\
+\begin{center}
+$ P(n,k) = \dfrac{n!}{(n - k)!} $
+\end{center}
+\end{fact}
+
 
 \section{Contando Subconjuntos}
 Parte do Luiz
