@@ -2,9 +2,7 @@
  Meu caderno público de anotações
 
 # Projetos em Andamento
-
 ## Matemática
-
 ### Resumo de Livro: Book of Proof - Richard Hammack
 - [x] Conjuntos
 - [x] Lógica
