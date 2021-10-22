@@ -10,7 +10,7 @@
     - [x] Listas
     - [x] O Princípio da Multiplicação
     - [x] Os Princípios da Adição e Subtração
-    - [ ] Fatoriais e Permutações
+    - [x] Fatoriais e Permutações
     - [ ] Contando Subconjuntos
     - [ ] O Triângulo de Pascal e O Teorema Binomial
     - [ ] O Princípio da Inclusão-Exclusão
