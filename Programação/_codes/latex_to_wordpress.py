@@ -7,8 +7,6 @@ string = '''
 \end{chapquote}
 
 \section{Listas}
-'''
-'''
 Uma \textbf{lista} é uma sequência ordenada de objetos. Esses objetos são mantidos entre um par de parênteses e separados por vírgulas. Os objetos dentro de uma lista são chamados de \textbf{entradas}\footnote{Do original, \textbf{entries}}. Já que uma lista é uma sequência ordenada, é evidente que a ordem dos seus elementos é suficiente para distinguir listas que contenham os mesmo objetos.
 
 $$ (a,b,c) \neq (c,b,a) $$
@@ -108,14 +106,14 @@ O processo de contagem para listas não repetitivas de tamanho $n$ é tão comum
 \\
 \begin{center}
 \begin{tabular}{ | c | c | c | c | }
- \hline
- n & Elementos & Listas não repetidas de tamanho $n$ & $n!$ \\ 
- \hline
- 0 & $\{\}$ & $()$ & 1 \\
- 1 & $\{a\}$ & $(a)$ & 1 \\
- 2 & $\{a,b\}$ & $(a,b), (b,a)$ & 2 \\
- 3 & $\{a,b,c\}$ & $(a,b,c),(a,c,b),(b,a,c),(b,c,a),(c,a,b),(c,b,a) $ & 6 \\
- \vdots & \vdots & \vdots & \vdots \\
+\hline
+n & Elementos & Listas não repetidas de tamanho $n$ & $n!$ \\ 
+\hline
+0 & $\{\}$ & $()$ & 1 \\
+1 & $\{a\}$ & $(a)$ & 1 \\
+2 & $\{a,b\}$ & $(a,b), (b,a)$ & 2 \\
+3 & $\{a,b,c\}$ & $(a,b,c),(a,c,b),(b,a,c),(b,c,a),(c,a,b),(c,b,a) $ & 6 \\
+\vdots & \vdots & \vdots & \vdots \\
 \end{tabular}
 \end{center}
 
@@ -232,5 +230,19 @@ Se $0 \leqslant k \leqslant n$, então ${n \choose k} = \frac{n!}{k!(n-k)!}$. Ca
 '''
 
 ## manipulations
+# removendo quebras de linhas e outras marcas de edicao
+for i in range(0,100):
+	string = string.replace('\\\\','')
+	string = string.replace('\\','')
 
-# if has a chapquote
+for i in range(0,100):
+	string = string.replace('\\n','')
+	string = string.replace('\n','')
+
+for i in range(0,100):
+	string = string.replace('\t','')
+
+for i in range(0,100):
+	string = string.replace('$$','$')
+
+string.replace('\\x08','b')
