@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 
-string = '''
+string = r'''
 \begin{chapquote}{página 65}
 	``Counting can become quite subtle, and in this chapter we explore some of its more sophisticated aspects. Our goal is still to answer the question 'How many?' but we introduce mathematical techniques that bypass the actual process of counting individual objects''
 \end{chapquote}
@@ -245,4 +245,17 @@ for i in range(0,100):
 for i in range(0,100):
 	string = string.replace('$$','$')
 
-string.replace('\\x08','b')
+for i in range(0,100):
+	string = string.replace(r'\\\'','')
+
+#  changing the $ tokens to [latex] [/latex]
+
+for i in range(0,1000):
+	string = string.replace('$','[latex]')
+
+
+index = [string.find('[latex]')]
+
+i = 0
+for i in range(index[0],len(string)):
+	index.append(string[index[0]+1:].find('[latex]')+index[0])
