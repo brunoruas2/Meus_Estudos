@@ -249,13 +249,20 @@ for i in range(0,100):
 	string = string.replace(r'\\\'','')
 
 #  changing the $ tokens to [latex] [/latex]
+def find_all(string,char):
+	return [
+		index
+		for index in range(len(string) - len(char) + 1)
+		if string[index:].startswith(char)
+	]
 
-for i in range(0,1000):
-	string = string.replace('$','[latex]')
 
+index = find_all(string=string,char='$')
+index_even = index[::2]
+for i in range(len(index_even)):
+	text = list(string)
+	text[i] = '[/latex]'
+	text = ''.join(text)
+	index = find_all(string=string,char='$')
+	index_even = index[::2]
 
-index = [string.find('[latex]')]
-
-i = 0
-for i in range(index[0],len(string)):
-	index.append(string[index[0]+1:].find('[latex]')+index[0])
