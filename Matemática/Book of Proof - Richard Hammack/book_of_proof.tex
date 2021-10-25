@@ -1029,7 +1029,7 @@ $$n+1 = n+1$$
 Com divisores e dividendos iguais concluímos que:
 $$ {n+1 \choose k} = {n \choose k-1} + {n \choose k} $$
 \\
-Tendo mostrado que essa proprieade é verdadeira podemos visualizar um elemento muito bonito (e útil) da matemática, o Triângulo de Pascal.
+Tendo mostrado que essa proprieade é verdadeira podemos visualizar um elemento muito bonito (e útil) da matemática, o Triângulo de Pascal \footnote{Você com certeza viu isso, mas em formato de pirâmide, aqui é um Triângulo Retângulo de Pascal.}.
 \\
 \begin{center}
 \begin{tabular}{c|cccccccc}
@@ -1046,6 +1046,50 @@ $n$     & $n \choose 0$ & $n \choose 1$& $n \choose 2$& $n \choose 3$& $n \choos
 
 \end{tabular}
 \end{center}
+Utilizando dos valores da contagem no Triângulo de Pascal:
+\begin{center}
+\begin{tabular}{c|cccccccc}
+        &$0$& $1$ & $2$ & $3$ & $4$ & $5$ & $\cdots$ & $k$ \\
+\hline
+$0$     & $1$ \\
+$1$     & $1$ & $1$ \\
+$2$     & $1$& $2$ & $1$ \\
+$3$     & $1$ & $3$ & $3$ & $1$ \\
+$4$     & $1$ & $4$ & $6$ & $4$ & $1$ \\
+$5$     & $1$ & $5$ & $10$ & $10$ & $5$ & $1$ \\
+$\vdots$&     &     &$\vdots$&    &     & &$\ddots$ 
+\end{tabular}
+\end{center}
+Partindo aqui chegamos ao \textbf{Teorema Binomial}. Provavelmente você conhece os binômios do tio $(a+b)^n$ e cometeu o erro de fazer $(a+b)^2 = a^2 + b^2$, o Teorema Binomial é o remédio para esse tipo de erro. Perceba:
+\newpage
+$$(a+b)^0 = 1$$
+$$(a+b)^1 =  a + b$$
+$$(a+b)^2 = a^2 + 2ab + b^2$$
+$$(a+b)^3 = a^3 + 3a^2b + 3b^2a +b^3$$
+$$(a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4b^3a +b^4$$
+\\
+Perceba que os resultados dos binômios formam uma pirâmide conforme $n$ cresce. Agora, ignore $a$ e $b$ e foque apenas nos coeficiente dos termos das somas. Ora, é o \textbf{Triângulo de Pascal}.
+\\
+Seguindo o padrão que podemos ver quero chegar à um caminho geral para o desenvolvimento dos binômios. Primeiro, veja que o primeiro e últimos termos do binômio estão a n-ésima potência,\footnote{Deixarei $a^{n-n}$ multiplicando o último termo e $b^{n-n}$ o primeiro, apenas para que o desenvolvimento fique mais claro, afinal, é um número elevado a zero e não mudará nosso resultado} portanto:
+$$(a+b)^n = a^nb^{n-n} + \cdots + b^na^{n-n} $$
+\\
+Pouco a pouco vamos construindo nossa notação.
+\\
+Agora veja que o no segundo termo do binômio temos $a^{n-1}b^1$ e no penúltimo $b^{n-1}a^1$
+\\
+$$(a+b)^n = a^nb^{n-n} + a^{n-1}b^1 + \cdots + b^{n-1}a^1 + b^na^{n-n} $$
+\\
+Por fim, falta apenas incluir os coeficientes, que como dito antes, seguirão por padrão a k-ésima entrada da n-ésima linha do Triângulo de Pascal:
+\\
+$$(a+b)^n = {n \choose 0}a^nb^{n-n} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}b^{n-1}a^1 + {n \choose n}b^na^{n-n} $$
+\\
+Daí surge o \textbf{Teorema Binomial} que é normalmente expresso como:
+\\
+$$(a+b)^n = \sum\limits_{k=0}^n {n \choose k}a^{n-k}b^k$$
+\\
+A demonstração fica a cargo do leitor.
+\\
+Brincadeiras a parte, o autor deixa a demonstração para os capítulos postoriores, então eu o farei também
 \section{O Princípio da Inclusão-Exclusão}
 \section{Contando Multiconjuntos}
 \section{Os Princípios da Divisão e da Casa dos Pombos}
