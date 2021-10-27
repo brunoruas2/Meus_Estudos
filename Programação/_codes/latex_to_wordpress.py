@@ -256,13 +256,17 @@ def find_all(string,char):
 		if string[index:].startswith(char)
 	]
 
-
 index = find_all(string=string,char='$')
-index_even = index[::2]
-for i in range(len(index_even)):
-	text = list(string)
-	text[i] = '[/latex]'
-	text = ''.join(text)
-	index = find_all(string=string,char='$')
-	index_even = index[::2]
+n_index = len(index)
 
+text = list(string)
+
+for i in range(n_index,0,-1):
+	if i % 2 == 0:
+		text = list(text)
+		text[index[i-1]] = '[/latex]'
+		text =''.join(text)
+	else:
+		text = list(text)
+		text[index[i-1]] = '[latex]'
+		text =''.join(text)
