@@ -12,17 +12,26 @@ def find_all(string,char):
 		index
 		for index in range(len(string) - len(char) + 1)
 		if string[index:].startswith(char)
-	]
+		]
 
 def change_chars(str,char_in,char_out):
 	index = find_all(string=str,char=char_in)
 	n_index = len(index)
-	text = list(string)
-	for i in range(n_index,0,-1):
-		text = list(text)
-		text[index[i-1]] = char_out
-		text =''.join(text)
-	return text
+	if len(char_in) == 1:
+		text = list(str)
+		for i in range(n_index,0,-1):
+			text = list(text)
+			text[index[i-1]] = char_out
+			text =''.join(text)
+		return text
+	else:
+		text = str.replace(char_in,'@')
+		text = list(str)
+		for i in range(n_index,0,-1):
+			text = list(text)
+			text[index[i-1]] = char_out
+			text =''.join(text)
+		return text
 
 # removendo quebras de linhas e outras marcas de edicao
 for i in range(0,100):
@@ -41,9 +50,7 @@ for i in range(0,100):
 	string = string.replace('\\end','')
 
 string = change_chars(str=string,char_in='\n',char_out='')
-
 string = change_chars(str=string,char_in='\\\\',char_out='')
-
 
 # trocando '$' por '[latex]'
 index = find_all(string=string,char='$')
@@ -60,6 +67,7 @@ for i in range(n_index,0,-1):
 		text =''.join(text)
 string = text
 
+# salvando o arquivo modificado
 try:
 	os.remove(r'E:\bruno\Meus Estudos\Meus_Estudos\Programação\_codes\input\texto_WP.txt')
 except:
