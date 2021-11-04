@@ -953,19 +953,33 @@ $ P(n,k) = \dfrac{n!}{(n - k)!} $
 
 
 \section{Contando Subconjuntos}
-Parte do Luiz
 
-Selecionando $k$ elementos de um conjunto $A$ com $|A| = n$, quantos subconjuntos $A_i$ serão formados dessa permutação?
+Até agora, vimos quantas listas de tamanho $k$ podemos fazer com todos os $n$ elementos de um conjunto qualquer. Agora, vamos expandir essa linha de pensamento para um tópico correlato: "Quantos subconjuntos podem ser feitos se selecionarmos $k$ elementos de um conjunto de $n$ elementos?". 
 \\
-Lembre-se:
+\\
+Algum leitor de pensamento rápido pode pensar que se trata exatamente do mesmo problema. Contudo, não é o caso. A diferença reside nas propriedades de uma \textbf{lista} e de um \textbf{conjunto}.
+\\
+\\
+Uma lista leva em consideração a ordem dos seus elementos, ou seja, $(a,b) \neq (b,a)$ enquanto os conjuntos só se preocupam com os valores dos seus elementos $\{a,b\} = \{b,a\}$. De modo mais formal temos que:
 \\
 $$\frac{n!}{(n-k)!} > i$$
 \\
-Isso ocorre pois em listas que contenham os mesmo elementos a ordem que esses elementos são dispostos dentro de cada uma faz com que sejam listas diferentes,então $(a,b)\neq(b,a)$. O que é diferente nos conjuntos, pois dados dois conjuntos $A = \lbrace a,b \rbrace$ e $B = \lbrace b,a \rbrace$, $A=B$.
+Sendo $i$ o número de subconjuntos de tamanho $k$ possíveis em um conjunto cujo cardinal é igual a $n$.
+\\
 \\
 \begin{definition}
-	Se $k,n \in \mathbb{Z}$, então $n \choose k$ denota o número de subconjuntos que podem ser feitos escolhendo $k$ elementos de um conjunto com $n$ elementos. Lemos $n \choose k$ como o "número de permutações de $n$ termos $k$ a $k$ \footnote{Provavelmente você na escola você ouviu assim também, o autor usa \textit{$n$ choose $k$}, porém não sabia exatamente como traduzir de maneira adequada.}"
+Se $k,n \in \mathbb{Z}$, então $n \choose k$ denota o número de subconjuntos que podem ser feitos escolhendo $k$ elementos de um conjunto com $n$ elementos. Lemos $n \choose k$ como "de $n$ escolhemos $k$" \footnote{Alguns autores usam a notação C($n,k$), mas é a mesma coisa.}"
 \end{definition}
+
+\textbf{Atenção}: Aqui já temos algo para guardar na mente. Se tivermos um conjunto com $n$ elementos, sempre será verdade que $P(n,k) \geqslant $ $n \choose k$. Ou na outra notação, $P(n,k) \geqslant C(n,k)$.
+\\
+\\
+Já definimos o que queremos dizer quando escrevemos $n \choose k$ e sabemos bem qual problema queremos responder com essa notação nova. Mas precisamos de uma fórmula que nos permita encontrar a solução de quaisquer valores de $n$ e $k$. Para tanto, vamos começar com um exemplo prático: $5 \choose 3$.
+\\
+\\
+Para descobrir nosso resultado, vamos pensar um pouco. Sabemos que queremos montar subconjuntos de 3 elementos com 5 opções de elementos. 
+
+
 Suponha um conjunto $D = \bigcup_{i = 1}^{j}\limits D_i$, onde $|D| = n$. Agora permute cada subconjuntos $D_i$ em listas de $k$ elementos, montando uma tabela temos:
 \begin{center}
 \begin{tabular}{|c || c || c || c || c|}
