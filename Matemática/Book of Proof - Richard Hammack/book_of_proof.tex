@@ -1130,6 +1130,20 @@ $$\vert\bigcup_{i=1}^{^n} A_{n}\vert = \sum\limits_{i=1}^n |A_{n}| - \sum\limits
 $$-\sum\limits_{1 \leq i<j<k<p \leq n} |A_{i} \cap A_{j}\cap A_{k}\cap A_{p}| + \cdots+ (-1)^{n-1}|A_1 \cap A_2 \cap \cdots \cap A_n|$$
 \end{theorem}
 \begin{demonstration}
+Suponha um elemento $x \in \bigcap_{i=1}^{n} A_{n}$, este será contado $n \choose 1$ no primeiro somatório.
+$$\sum\limits_{i=1}^n |A_{n}|$$
+$n \choose 2$ vezes no segundo:
+$$\sum\limits_{1 \leq i<j \leq n} |A_{i} \cap A_{j}|$$
+E assim por diante, o mesmo para o terceiro, pro quarto, etc.
+\\
+Como vimos anteriormente subtraímos a união entre $n$ conjuntos se $2|n$, isto é, $n$ é par, e somamos se $2 \nmid n$ e que ao fazermos isso garantimos que o elemento $x$ será contado um única vez. Portanto para garantirmos que isso temos que:
+\begin{equation}
+{n \choose 1} - {n \choose 2} +{n \choose 3} -{n \choose 4} ... + (-1)^{p-1} 
+{n \choose p}
+\end{equation}
+\\
+Como podemos garantir que essa fórmula resulta no que queremos? Bom, para isso precisamos lembrar de uma propriedade das combinações onde ${n \choose k} = {n \choose n-k}$. Isso implicaria que se fizermos ${n \choose 0} - (3.1) = 0$, está correto pois sabemos que ${n \choose 0} = 1$. Assim, está provado o Princípio da Inclusão-Exclusão, caso queira pode fazer prova por PIF.
+\\
 \end{demonstration}
 \section{Contando Multiconjuntos}
 \section{Os Princípios da Divisão e da Casa dos Pombos}
