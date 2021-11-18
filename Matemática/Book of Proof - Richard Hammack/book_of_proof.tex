@@ -993,7 +993,7 @@ De maneira mais abstrata, o que fizemos foi dividir a k-permutação $P(5,3)$ po
 Se $k > n$ então $n \choose k$ $= 0$. Seria como perguntar algo como "quantos subconjuntos de 5 elementos podemos fazer com 3 elementos? Isso mesmo, zero conjuntos.
 
 \section{O Triângulo de Pascal e O Teorema Binomial}
-O autor do livro começa essa parte com a seguinte equação:
+O autor começa essa parte com a seguinte equação:
 \\
 $$ {n+1 \choose k} = {n \choose k-1} + {n \choose k} $$
 \\
@@ -1056,7 +1056,6 @@ $\vdots$&     &     &$\vdots$&    &     & &$\ddots$
 \end{tabular}
 \end{center}
 Partindo aqui chegamos ao \textbf{Teorema Binomial}. Provavelmente você conhece os binômios do tio $(a+b)^n$ e cometeu o erro de fazer $(a+b)^2 = a^2 + b^2$, o Teorema Binomial é o remédio para esse tipo de erro. Perceba:
-\newpage
 $$(a+b)^0 = 1$$
 $$(a+b)^1 =  a + b$$
 $$(a+b)^2 = a^2 + 2ab + b^2$$
@@ -1078,14 +1077,74 @@ Por fim, falta apenas incluir os coeficientes, que como dito antes, seguirão po
 \\
 $$(a+b)^n = {n \choose 0}a^nb^{n-n} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}b^{n-1}a^1 + {n \choose n}b^na^{n-n} $$
 \\
+Um fator importante para a notação mais limpa é que $a$ está sempre elevado a $n$ subtraído a k-ésima entrada, e $b$ está sempre elevado a k-ésima potência.
+\\
+$$(a+b)^n = {n \choose 0}a^{n-0}b^{0} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}b^{k-1}a^1 + {n \choose n}b^ka^{0} $$
+\\
 Daí surge o \textbf{Teorema Binomial} que é normalmente expresso como:
 \\
 $$(a+b)^n = \sum\limits_{k=0}^n {n \choose k}a^{n-k}b^k$$
 \\
-A demonstração fica a cargo do leitor.
-\\
-Brincadeiras a parte, o autor deixa a demonstração para os capítulos postoriores, então eu o farei também
+O autor deixa a demonstração para os capítulos postoriores, então eu o farei também.
 \section{O Princípio da Inclusão-Exclusão}
+Você quer contar o número de elementos de um união entre 2 conjuntos $A$ e $B$, a \textit{prima fatia} pensamos logo em $|A \cup B| = |A| + |B|$, não estamos completamente errados pois isso é verdade se, e somente se $A \cap B = \emptyset$.
+\\
+Como queremos uma definição mais geral vou mudar a notação dos conjuntos:
+$$A = (A-B) \cup (A \cap B) \Rightarrow |A| = |A-B| + |A \cap B|$$
+$$B = (B-A) \cup (B \cap A) \Rightarrow |B| = |B-A| + |B \cap B|$$
+Mudamos a notação para melhorar a visualização e simplificar o trabalho e evitar que somemos elementos comuns à ambos os conjuntos mais do que uma vez.
+$$A \cup B = (A-B) \cup (A \cap B) \cup (B-A) \cup (B \cap A)$$
+Como $A \cap B = B \cap A$, então a união entre conjuntos iguais é o próprio conjuntos então:
+$$A \cup B = (A-B)\cup (B-A) \cup (B \cap A)$$
+$$|A \cup B| = |A-B| + |B-A|+|B \cap A|$$
+Mas com isso fica difícil de trabalhar, tenho que subtrair duas vezes, um pouco de esforço desnecessário, olhemos para a primeira "fórmula" mostrada, ela é bem mais amigável, vamos encontrar qual transformação podemos fazer nela para que seja matemáticamente igual à que encontramos (usarei direto a outra notação do cardinal dos conjuntos):
+$$|A-B| + |B-A|+|B \cap A| = |A-B| + |A \cap B| + |B-A| + |B \cap B| + ???$$
+É simples de ver, a diferença entre ambas as fórmula é que a segunda soma duas vezes o mesmo conjunto da união, o que nos induz ao erro, então simplesmente subtraimos-o uma vez, então teremos:
+$$|A \cup B| = |A| + |B| - |A \cap B|$$
+E essa é a fórmula que você provavelmente aprendeu durante o Ensino Médio (mas só agora entende o que ela realmente significa).
+\\
+Trabalhar apenas com dois conjuntos é fácil, tentaremos descobrir $|A \cup B \cup C|$, já sabemos que com certeza não é $|A|+|B|+|C|$. Como vimos com o caso anterior não vamos assumi-la como errada, mas sim como incompleta.
+\\
+O raciocínio é bem semelhante, nós vamos desenvolver a nossa própria fórmula, porém teremos o mesmo problema de ser difícil de trabalhar e exigir muitos passos, porém ela será útil para transformarmos $|A|+|B|+|C|$ em uma fórmula correta e também mais limpa.
+\\
+Relembre que $A \cup B \cup C = (A \cup B) \cup C$, então trabalharemos com a notação do lado direito da igualdade.
+\\
+Sabemos perfeitamente como calcular o cardinal de uma união de dois conjuntos, então:
+$$|(A \cup B)\cup C| = |A \cup B| + |C| - |(A \cup B)\cap C|$$
+Rapare que podemos transformar $|(A \cup B)\cap C|$ em $(A \cap C)\cup(B \cap C)$. Agora temos duas uniões entre dois conjuntos para descobrirmos os cardinal. Para fins didáticos trabalharemos com elas separadas:
+$$|A \cup B| = |A|+|B|-|A \cap B|$$
+$$|(A \cap C)\cup(B \cap C)| = |A \cap C| + |B \cap C| - |(A \cap C) \cap (B \cap C)|$$
+Preste atenção no último termo da segunda equação, $(A \cap C) \cap (B \cap C)$, isso é exatamente $A \cap B \cap C$. Entenda:
+$$\left\lbrace x;(x \in A \land x \in C)\land(x \in B \land x \in C) \right\rbrace$$
+
+Definindo as intersecções assim permite que vejamos que queremos apenas os elementos que pertençam apenas a $A$ \textbf{e} $C$, \textbf{e} a $B$ \textbf{e} $C$. Se a primeira é verdadeira, logo o elemento pertence pelo menos a $C$ na segunda proposição. Logo:
+$$|(A \cap C)\cup(B \cap C)| = |A \cap C| + |B \cap C| - |(A \cap B \cap C)|$$
+Com isso esclarecido podemos substituir as duas expressões na principal.
+$$|(A \cup B)\cup C| = |A|+|B|-|A \cap B| + |C| - (|A \cap C| + |B \cap C| - |(A \cap B \cap C)|)$$
+Me livrando dos parenteses e organizando a nossa fórmula chegamos àquela que aprendemos durante o Ensino Médio:
+$$|A \cup B\cup C| = |A|+|B| + |C| -|A \cap B| - |A \cap C| - |B \cap C| + |(A \cap B \cap C)|$$
+Caso queira pode desenvolver isso com uma união de 4,5,6... conjuntos. Se fizer perceberá que sempre somará todos os cardinais dos conjuntos individualmente, subtrair o cardinal da união de $p$ conjuntos caso $p$ seja par, e somar o cardinal da união de $p$ conjuntos caso $p$ seja impar. Sabendo disso, queremos construir uma fórmula capaz de cálcular o cardinal de uma união de $p$ conjuntos para qualquer valor de $p$.
+\begin{theorem}[Princípio da Inclusão-Exclusão]
+O número de elementos de uma união entre $n$ conjuntos finitos $A_{1}, A_{2}, \cdots A_{n}$ é dado por:
+$$\vert\bigcup_{i=1}^{^n} A_{n}\vert = \sum\limits_{i=1}^n |A_{n}| - \sum\limits_{1 \leq i<j \leq n} |A_{i} \cap A_{j}| + \sum\limits_{1 \leq i<j<k \leq n} |A_{i} \cap A_{j}\cap A_{k}| -$$
+$$-\sum\limits_{1 \leq i<j<k<p \leq n} |A_{i} \cap A_{j}\cap A_{k}\cap A_{p}| + \cdots+ (-1)^{n-1}|A_1 \cap A_2 \cap \cdots \cap A_n|$$
+\end{theorem}
+\begin{demonstration}
+Suponha um elemento $x \in \bigcap_{i=1}^{n} A_{n}$, este será contado $n \choose 1$ no primeiro somatório.
+$$\sum\limits_{i=1}^n |A_{n}|$$
+$n \choose 2$ vezes no segundo:
+$$\sum\limits_{1 \leq i<j \leq n} |A_{i} \cap A_{j}|$$
+E assim por diante, o mesmo para o terceiro, pro quarto, etc.
+\\
+Como vimos anteriormente subtraímos a união entre $n$ conjuntos se $2|n$, isto é, $n$ é par, e somamos se $2 \nmid n$ e que ao fazermos isso garantimos que o elemento $x$ será contado um única vez. Portanto para garantirmos que isso temos que:
+\begin{equation}
+{n \choose 1} - {n \choose 2} +{n \choose 3} -{n \choose 4} ... + (-1)^{p-1} 
+{n \choose p}
+\end{equation}
+\\
+Como podemos garantir que essa fórmula resulta no que queremos? Bom, para isso precisamos lembrar de uma propriedade das combinações onde ${n \choose k} = {n \choose n-k}$. Isso implicaria que se fizermos ${n \choose 0} - (3.1) = 0$, está correto pois sabemos que ${n \choose 0} = 1$. Assim, está provado o Princípio da Inclusão-Exclusão, caso queira pode fazer prova por PIF.
+\\
+\end{demonstration}
 \section{Contando Multiconjuntos}
 \section{Os Princípios da Divisão e da Casa dos Pombos}
 \section{Prova Combinatorial}
