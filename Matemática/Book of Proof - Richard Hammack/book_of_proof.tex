@@ -993,14 +993,27 @@ De maneira mais abstrata, o que fizemos foi dividir a k-permutação $P(5,3)$ po
 Se $k > n$ então $n \choose k$ $= 0$. Seria como perguntar algo como "quantos subconjuntos de 5 elementos podemos fazer com 3 elementos? Isso mesmo, zero conjuntos.
 
 \section{O Triângulo de Pascal e O Teorema Binomial}
-O autor começa essa parte com a seguinte equação:
+Até aqui você é capaz de resolver qualquer problema que envolva contagens de listas e subconjuntos seja usando todos os valores disponíveis ou apenas uma parte deles. Mas uma coisa interessante da matemática é que alguns padrões surgem a medida que se criam novos conceitos.
+\\
+\\
+Um desses padrões foi descoberto em vários países em épocas diferentes, mas o nome que usaremos é atribuído ao matemático francês Blaise Pascal e é denominado \href{https://pt.wikipedia.org/wiki/Tri\%C3\%A2ngulo_de_Pascal}{Triângulo de Pascal}.
+\\
+A relação é simples:
 \\
 $$ {n+1 \choose k} = {n \choose k-1} + {n \choose k} $$
 \\
-Vamos verificar se isso é verdade:
+Ou seja, o número de subconjuntos que podemos formar com a adição de apenas 1 elemento no universo de opções é igual à soma dos totais de subconjuntos de tamanho $k-1$ das opções originais com a quantidade de subconjuntos de tamanho $k$ das $n$ opções originais. Parece um pouco chato todo esse papo, mas se certifique que está acompanhando.
+\\
+\\
+Para verificar se o triângulo de Pascal é verdadeiro, vamos começar quebrando a equação e desenvolvendo suas formas completas:
 $$ {n+1 \choose k} = \frac{(n+1)!}{k!(n+1-k)!}$$
 \\
+e
+\\
 $${n \choose k-1} + {n \choose k} = \frac{n!}{(k-1)![n-(k-1)]!} + \frac{n!}{k!(n-k)!}$$
+\\
+Não se assuste, foram apenas pequenas alterações feitas na formulação clássica de $n \choose k$. Escreva em um papel para se certificar que entendeu.
+\\
 \\
 A próxima parte é bem feia e pode assustar mas é simplesmente uma soma de frações comum do estilo $\frac{a}{b} + \frac{c}{d} = \frac{ad+cb}{bd}$:
 $${n+1 \choose k} = \frac{n!k!(n-k)!}{k!(n-k)!(k-1)!(n-k+1)} + \frac{n!(n-k+1)!}{k!(n-k)!(k-1)!(n-k+1)!}$$
@@ -1009,16 +1022,16 @@ $${n+1 \choose k} = \frac{n!k!(n-k)! + n!(n-k+1)!}{k!(n-k)!(k-1)!(n-k+1)!}$$
 Para ficar mais fácil de visualizar vou abrir os fatoriais $k!$ e $(n-k+1)!$:
 $${n+1 \choose k} = \frac{n!k(k-1)!(n-k)! + n!(k-1)!(n-k+1)(n-k)!}{k!(n-k)!(k-1)!(n-k+1)!}$$
 \\
-Perceba que temos $(k-1)!(n-k)!$ em ambos as parcelas da soma podemos transformar isso em:
+Perceba que temos $(k-1)!(n-k)!$ em ambas as parcelas da soma podemos transformar isso em:
 \\
-$${n+1 \choose k} = \frac{(n-k)!(k-a)![n!k+n!(n-k+1)]}{(k-1)!(n-k+1)!k!(n-k)!} = \frac{n!k + n!(n-k+1)}{k!(n-k+1)!}$$
+$${n+1 \choose k} = \frac{(n-k)!(k-1)![n!k+n!(n-k+1)]}{(k-1)!(n-k+1)!k!(n-k)!} = \frac{n!k + n!(n-k+1)}{k!(n-k+1)!}$$
 \\
 Opa!!! Chegamos em um ponto interessante, temos ambos os divisores iguais, agora resta mostrar que os dividendos são iguais. Para que fique mais limpo trabalharei com os dividendos separadamente. Primeiramente relembremos:
 \\
 $$(n+1)! = (n+1)n(n-1)\cdots(n-n)!$$
 Então:
 $$(n+1)n(n-1)\cdots(n-n)! = n(n-1)\cdots(n-n)! + n(n-1)\cdots(n-n)!$$
-Agora vamos dividir a igualdade por $n(n-1)\cdots(n-n)!$.Assim chegamos ao seguinte resultado:
+Agora vamos dividir a igualdade por $n(n-1)\cdots(n-n)! $.Assim chegamos ao seguinte resultado:
 $$n+1 = n+1$$
 \\
 Com divisores e dividendos iguais concluímos que:
