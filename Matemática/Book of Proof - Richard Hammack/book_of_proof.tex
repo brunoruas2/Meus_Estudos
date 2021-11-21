@@ -22,6 +22,7 @@
 \usepackage{xcolor} % changing colors
 \usepackage{amsthm} % definir estilo do teorema
 \usepackage[hang,flushmargin]{footmisc} % remove footnote's identation
+\usepackage{cancel} % para poder colocar o tracinho de cancelamento
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -29,6 +30,7 @@
 
 % criando o modelo de definicoes/teoremas/fatos/demonstracoes
 \theoremstyle{definition}
+
 \newtheoremstyle{break}% name
   {10pt}%         Space above, empty = `usual value'
   {10pt}%         Space below
@@ -122,7 +124,6 @@
 \textsc{Bruno de M. Ruas} e \\ 
 \textsc{Luiz Eduardo de Lima} 
 }
-
 
 \begin{document}
 
@@ -901,7 +902,7 @@ Outro conceito importante\footnote{Que eu aposto que você viu no ensino médio 
 \textbf{Atenção}: Guarde na memória que o \textbf{Fatorial} conta o número de \textbf{Permutações} possíveis para $n$ elementos via aplicação do \textbf{princípio da multiplicação}.
 \\
 \\
-Agora vamos estender um pouco mais esse pensamento. Se temos um total de $n$ elementos. Uma permutação é uma lista de comprimento $n$. Mas e se não quisermos usar todos os elementos disponíveis na composição dessas listas? Para isso o autor usa o conceito de \textbf{k-permutação}\footnote{Do original: k-permutation.}. Uma k-permutação será uma lista de tamanho $k$ formada por um subconjunto dos $n$ elementos anteriores.
+Agora vamos estender um pouco mais esse pensamento. Se temos um total de $n$ elementos. Uma permutação é uma lista de comprimento $n$. Mas e se não quisermos usar todos os elementos disponíveis na composição dessas listas? Para isso o autor usa o conceito de \textbf{k-permutação}\footnote{Do original: k-permutation.} (aqui no Brasil você viu esse conceito pelo nome de \textbf{Arranjo}). Uma k-permutação será uma lista de tamanho $k$ formada por um subconjunto dos $n$ elementos anteriores.
 \\
 \\
 Para facilitar (ou não) a nossa vida, vamos definir uma notação para situações onde queremos fazer permutações de comprimento $k$ de um conjunto qualquer de tamanho $n$. Escreveremos $P(n,k)$ para denotar essa situação.\footnote{Perceba que se $k = n$ teremos que $P(n,k) = n!$. Não tem problema nenhum se não entender. Vamo bater um papo no \href{https://twitter.com/bruno_ruas2}{twitter} que eu te explico com mais calma.} 
@@ -925,10 +926,6 @@ $ P(n,k) = n . (n - 1) . (n - 2) \dots (n - k + 1) $
 \end{center}
 
 Podemos ainda transformar essa relação em outra equação. Primeiro pensemos no que essa parte direta da equação acima quer dizer. Ela se parece com a fórmula do fatorial de $n$ mas com a diferença de "parar" \ em $(n - k + 1)$. Para recuperar o formato do fatorial podemos multiplicar a equação acima por $ (n - k) . (n - k - 1) \dots 3 . 2 . 1 $ e dividir pela mesma expressão.
-\ 
-\\
-\ 
-\\
 
 \begin{center}
 \small $ P(n,k) = \dfrac{n . (n - 1) . (n - 2) \dots (n - k + 1) . (n - k) . (n - k - 1) \dots 3 . 2 . 1}{(n - k) . (n - k - 1) \dots 3 . 2 . 1} = \dfrac{n!}{(n-k)!}$
@@ -936,8 +933,8 @@ Podemos ainda transformar essa relação em outra equação. Primeiro pensemos n
 
 Depois de todas essas manipulações, podemos formalizar o conceito de k-permutações.
 
-\begin{fact}[K-Permutações]
-Uma \textbf{k-permutação} de um conjunto com $n$ elementos é uma lista de comprimento $k$ feita com elementos desse conjunto. Informalmente, podemos pensar nessa lista como fruto do "rearranjo"\ dos elementos desse conjunto.
+\begin{fact}[K-Permutações ou Arranjos]
+Uma \textbf{k-permutação} ou \textbf{Arranjo} de um conjunto com $n$ elementos é uma lista de comprimento $k$ feita com elementos desse conjunto. Informalmente, podemos pensar nessa lista como fruto do "rearranjo"\ dos elementos desse conjunto.
 \\
 \\
 O número de k-permutações de um conjunto com $n$ elementos é denotado por $P(n,k)$ e é dado por:\\
@@ -961,12 +958,15 @@ Algum leitor de pensamento rápido pode pensar que se trata exatamente do mesmo 
 \\
 \\
 Uma lista leva em consideração a ordem dos seus elementos, ou seja, $(a,b) \neq (b,a)$ enquanto os conjuntos só se preocupam com os valores dos seus elementos $\{a,b\} = \{b,a\}$. Para prosseguirmos vamos definir essa tarefa de "contar subconjuntos" \ usando uma notação.
+\\
+\\
+\textbf{Comentário}: Estranhamente, o professor não dá um nome para o conceito que ele vai definir agora. Então nós achamos por bem usar o nome que os materiais didáticos do Brasil utilizam.
 
-\begin{definition}
+\begin{definition}[Combinação]
 Se $k,n \in \mathbb{Z}$, então $n \choose k$, ou alternativamente, $C(n,k)$, denota o número de subconjuntos que podem ser feitos escolhendo $k$ elementos de um conjunto com $n$ elementos. Lemos $n \choose k$ como "de $n$ escolhemos $k$".
 \end{definition}
 
-\textbf{Atenção}: Aqui já temos algo para guardar na mente. Se tivermos um conjunto com $n$ elementos, sempre será verdade que $P(n,k) \geqslant $ $n \choose k$ ou, na outra notação, $P(n,k) \geqslant C(n,k)$.
+\textbf{Atenção}: Aqui já temos algo para guardar na mente. Se tivermos um conjunto com $n$ elementos, sempre será verdade que $P(n,k) \geqslant $ $n \choose k$ ou, na outra notação, $P(n,k) \geqslant C(n,k)$. Ou seja, sempre será verdade que os arranjos serão maiores ou iguais que as combinações para quaisquer $n$ e $k$.
 \\
 \\
 Já definimos o que queremos dizer quando escrevemos $n \choose k$ e sabemos bem qual problema queremos responder com essa notação nova. Mas precisamos de uma fórmula que nos permita encontrar a solução de quaisquer valores de $n$ e $k$. Para tanto, vamos começar com um exemplo prático: $5 \choose 3$.
@@ -984,11 +984,14 @@ Agora que sabemos que teremos 6 listas para cada subconjunto formado por 3 eleme
 \textbf{Dica}: Na página 89 o professor monta uma tabela com todos os subconjuntos e as listas que falamos aqui.
 \\
 \\
-De maneira mais abstrata, o que fizemos foi dividir a k-permutação $P(5,3)$ por $3!$. Ou seja, podemos saber quantos subconjuntos de tamanho $k$ podem ser formados com $n$ elementos pela equação abaixo:
+De maneira mais abstrata, o que fizemos foi dividir a k-permutação $P(5,3)$ por $3!$. Ou seja, podemos saber quantos subconjuntos de tamanho $k$ podem ser formados com $n$ elementos pela equação abaixo.
 
+\begin{fact}[Cálculo das K-Permutações ou Arranjos]
+Se $0 \leq k \leq n$, então:
 \begin{center}
-	\LARGE $n \choose k$ $ = \frac{P(n,k)}{k!} = \frac{n!}{k!(n-k!)}$
+ \Large ${n \choose k} = \frac{n!}{k!(n-k)!}$
 \end{center}
+\end{fact}
 
 Se $k > n$ então $n \choose k$ $= 0$. Seria como perguntar algo como "quantos subconjuntos de 5 elementos podemos fazer com 3 elementos? Isso mesmo, zero conjuntos.
 
@@ -1026,49 +1029,88 @@ Perceba que temos $(k-1)!(n-k)!$ em ambas as parcelas da soma podemos transforma
 \\
 $${n+1 \choose k} = \frac{(n-k)!(k-1)![n!k+n!(n-k+1)]}{(k-1)!(n-k+1)!k!(n-k)!} = \frac{n!k + n!(n-k+1)}{k!(n-k+1)!}$$
 \\
-Opa!!! Chegamos em um ponto interessante, temos ambos os divisores iguais, agora resta mostrar que os dividendos são iguais. Para que fique mais limpo trabalharei com os dividendos separadamente. Primeiramente relembremos:
+Opa! Chegamos em um ponto interessante, temos ambos os divisores iguais, agora resta mostrar que os dividendos são iguais. Para que fique mais limpo trabalharei com os dividendos separadamente. Agora só temos que provar essa pequena igualdade:
 \\
-$$(n+1)! = (n+1)n(n-1)\cdots(n-n)!$$
-Então:
-$$(n+1)n(n-1)\cdots(n-n)! = n(n-1)\cdots(n-n)! + n(n-1)\cdots(n-n)!$$
-Agora vamos dividir a igualdade por $n(n-1)\cdots(n-n)! $.Assim chegamos ao seguinte resultado:
-$$n+1 = n+1$$
+$$ (n + 1)! = n!k + n!(n - k + 1) $$
+\\
+Primeiramente relembremos:
+\\
+$$ (n+1)! = (n+1)\underbrace{(n)(n-1)...3.2.1}_{ \ Isso \ aqui \ é \ igual \ a \ n!} $$
+\\
+Então podemos simplificar a equação restante como
+\\
+$$ (n+1)n! = n!k + n!(n-k+1) $$
+$$ (n+1)\cancel{n!} = \cancel{n!}k + \cancel{n!}(n-k+1) $$
+$$ (n+1) = k + n - k + 1 $$
+$$ (n+1) = \cancel{k} + n\cancel{-k}+1 $$
+$$ (n+1) = (n+1) $$
 \\
 Com divisores e dividendos iguais concluímos que:
-$$ {n+1 \choose k} = {n \choose k-1} + {n \choose k} $$
+$$ {n+1 \choose k} = {n \choose k-1} + {n \choose k} \blacksquare$$
 \\
-Tendo mostrado que essa proprieade é verdadeira podemos visualizar um elemento muito bonito (e útil) da matemática, o Triângulo de Pascal \footnote{Você com certeza viu isso, mas em formato de pirâmide, aqui é um Triângulo Retângulo de Pascal.}.
+Tendo mostrado que essa propriedade é verdadeira podemos visualizar um elemento muito bonito (e útil) da matemática, o Triângulo de Pascal. \footnote{Você com certeza viu isso, mas em formato de pirâmide, aqui é um Triângulo Retângulo de Pascal.}
 \\
 \begin{center}
-\begin{tabular}{c|cccccccc}
-        &$0$& $1$ & $2$ & $3$ & $4$ & $5$ & $\cdots$ & $k$ \\
+\begin{tabular}{ | c | c c c c c c c c | }
 \hline
-$0$     & $0 \choose 0$ \\
-$1$     & $1 \choose 0$ & $1 \choose 1$ \\
-$2$     & $2 \choose 0$ & $2 \choose 1$ & $2 \choose 2$ \\
-$3$     & $3 \choose 0$ & $3 \choose 1$ & $3 \choose 2$ & $3 \choose 3$ \\
-$4$     & $4 \choose 0$ & $4 \choose 1$ & $4 \choose 2$ & $4 \choose 3$ & $4 \choose 4$ \\
-$5$     & $5 \choose 0$ & $5 \choose 1$ & $5 \choose 2$ & $5 \choose 3$ & $5 \choose 4$ & $5 \choose 5$ \\
-$\vdots$&$\vdots$&$\vdots$&$\vdots$&$\vdots$&$\vdots$&$\vdots$&$\ddots$\\
-$n$     & $n \choose 0$ & $n \choose 1$& $n \choose 2$& $n \choose 3$& $n \choose 4$& $n \choose 5$&$\cdots$ & $n \choose k$\\
+  $n/k$ &$0$& $1$ & $2$ & $3$ & $4$ & $5$ & $\cdots$ & $k$ \\
+\hline
+$0$     & \tiny $0 \choose 0$ &               &               &               &               &              &         & \\
+$1$     & \tiny $1 \choose 0$ & \tiny $1 \choose 1$ &               &               &               &              &         & \\
+$2$     & \tiny $2 \choose 0$ & \tiny $2 \choose 1$ & \tiny $2 \choose 2$ &               &               &              &         & \\
+$3$     & \tiny $3 \choose 0$ & \tiny $3 \choose 1$ & \tiny $3 \choose 2$ & \tiny $3 \choose 3$ &               &              &         & \\
+$4$     & \tiny $4 \choose 0$ & \tiny $4 \choose 1$ & \tiny $4 \choose 2$ & \tiny $4 \choose 3$ & \tiny $4 \choose 4$ &              &         & \\
+$5$     & \tiny $5 \choose 0$ & \tiny $5 \choose 1$ & \tiny $5 \choose 2$ & \tiny $5 \choose 3$ & \tiny $5 \choose 4$ & \tiny $5 \choose 5$&         & \\
+$\vdots$&\tiny $\vdots$       &\tiny $\vdots$       &\tiny $\vdots$       &\tiny $\vdots$       &\tiny $\vdots$       &\tiny $\vdots$      &\tiny $\ddots$ & \\
+$n$     & \tiny $n \choose 0$ & \tiny $n \choose 1$ & \tiny $n \choose 2$ & \tiny $n \choose 3$ & \tiny $n \choose 4$ & \tiny $n \choose 5$&\tiny $\cdots$ & \tiny $n \choose k$\\
+\hline
 
 \end{tabular}
 \end{center}
-Utilizando dos valores da contagem no Triângulo de Pascal:
+Fazendo os devidos cálculos pela aplicação para todos os casos ${n \choose k}$ teremos:
 \begin{center}
-\begin{tabular}{c|cccccccc}
-        &$0$& $1$ & $2$ & $3$ & $4$ & $5$ & $\cdots$ & $k$ \\
+\begin{tabular}{ | c | c c c c c c c | }
 \hline
-$0$     & $1$ \\
-$1$     & $1$ & $1$ \\
-$2$     & $1$& $2$ & $1$ \\
-$3$     & $1$ & $3$ & $3$ & $1$ \\
-$4$     & $1$ & $4$ & $6$ & $4$ & $1$ \\
-$5$     & $1$ & $5$ & $10$ & $10$ & $5$ & $1$ \\
-$\vdots$&     &     &$\vdots$&    &     & &$\ddots$ 
+ $n/k$ &$0$& $1$ & $2$ & $3$ & $4$ & $5$ & $\cdots$  \\
+\hline
+$0$     & $1$ &     &        &      &     &     & \\
+$1$     & $1$ & $1$ &        &      &     &     & \\
+$2$     & $1$ & $2$ & $1$    &      &     &     & \\
+$3$     & $1$ & $3$ & $3$    & $1$  &     &     & \\
+$4$     & $1$ & $4$ & $6$    & $4$  & $1$ &     & \\
+$5$     & $1$ & $5$ & $10$   & $10$ & $5$ & $1$ & \\
+$\vdots$&     &     &$\vdots$&      &     &     & $\ddots$ 
 \end{tabular}
 \end{center}
-Partindo aqui chegamos ao \textbf{Teorema Binomial}. Provavelmente você conhece os binômios do tio $(a+b)^n$ e cometeu o erro de fazer $(a+b)^2 = a^2 + b^2$, o Teorema Binomial é o remédio para esse tipo de erro. Perceba:
+
+Para prosseguirmos, o professor Hammack usa os exercícios 3.5.13 e 3.5.14 como ferramentas para expor algumas implicações do triângulo de Pascal.
+\\
+\\
+\textbf{Exercício 3.5.13}: Suponha que $n,k \in \mathbb{Z}$ e $0 \leq k \leq n$. De posse da fórmula da combinação \tiny ${n \choose k} = \frac{n!}{k!(n-k)!}$ \normalsize , demonstre que \tiny $ {n \choose k} = {n \choose {n-k}} $ \normalsize.
+\\
+\\
+A resposta para essa questão está no solucionário do próprio livro. Assumindo que $ n,k \in \mathbb{Z} $ e $ 0 \leq k \leq n $, aplicando o conceito das combinações podemos ver que \tiny $ {n \choose n - k} = \frac{n!}{(n-k)![n-(n-k)]!} = \frac{n!}{(n-k)![n-n+k)]!} = \frac{n!}{(n-k)![\cancel{n-n}+k)]!} = \frac{n!}{(n-k)!k!} = {n \choose k} \blacksquare$ \normalsize
+\\
+\\
+\textbf{Exercício 3.5.14}: Suponha que $n,k \in \mathbb{Z}$ e $0 \leq k \leq n$. Usando apenas a definição de combinação da página 31 (sem usar a fórmula), demonstre que \tiny $ {n \choose k} = {n \choose {n-k}} $ \normalsize.  
+\\
+\\
+Para responder essa questão nós vamos ter que abordar 3 casos possíveis. Quando temos $ k = n $, estamos dizendo que queremos saber quantos subconjuntos de tamanho $n$ podemos fazer com $n$ elementos, cuja resposta é claramente 1. Quando temos $ k = 0 $, só temos 1 subconjunto possível, que é o conjunto vazio $\emptyset$. Ou seja, $\{k = 0 \ \lor \  k = n\} \implies {n \choose k} = {n \choose n - k}$.\footnote{Se você leu o capítulo 02, você entendeu o que a gente quis dizer aqui.}
+\\
+\\
+Agora teremos que trabalhar com os casos onde $0 < k < n$. Dentro dessa situação, temos o caso onde $k = n/2$. Nesse caso, é simples ver que ${n \choose k} = {n \choose \frac{n}{2}} = {n \choose n - \frac{n}{2}} = {n \choose \frac{n}{2}} = {n \choose n - k}$... Caro leitor, eu tentei demonstrar o restante das situações mas não consegui sem apelar para a fórmula das combinações :(
+\\
+\\
+Então, por enquanto eu vou parar por aqui e atualizo depois essa parte quando tiver algum progresso nessa demonstração.\footnote{Se tiver uma ideia da demonstração entra no site do Economia Mainstream e comenta lá no post desssa aula.}
+\\
+\\
+Com a demonstração do exercício 3.4.13 nós podemos ver que o triângulo de Pascal possui uma simetria. Começando pelas laterais, as colunas onde $k = 0$ e $k = n$ são sempre iguais a $1$. Mas além dessas, as colunas intermediárias também possuem uma simetria dada por ${n \choose k} = {n \choose n-k}$. Isso quer dizer que as segundas colunas sempre serão iguais às penúltimas. Do mesmo modo, as terceiras colunas sempre serão iguais às antepenúltimas. Nos casos onde o $k$ é ímpar, teremos uma coluna do meio que será a única sem uma repetição do valor.
+\\
+\\
+Partindo aqui chegamos ao \textbf{Teorema Binomial}. Provavelmente você conhece os binômios do tipo $(a+b)^n$ e cometeu, em algum momento, o erro\footnote{Pode confessar que já rolou essa canelada.} de fazer $(a+b)^2 = a^2 + b^2$, o Teorema Binomial é o remédio para esse tipo de erro. 
+\\
+\\
+Perceba:
 $$(a+b)^0 = 1$$
 $$(a+b)^1 =  a + b$$
 $$(a+b)^2 = a^2 + 2ab + b^2$$
@@ -1099,6 +1141,7 @@ Daí surge o \textbf{Teorema Binomial} que é normalmente expresso como:
 $$(a+b)^n = \sum\limits_{k=0}^n {n \choose k}a^{n-k}b^k$$
 \\
 O autor deixa a demonstração para os capítulos postoriores, então eu o farei também.
+
 \section{O Princípio da Inclusão-Exclusão}
 Você quer contar o número de elementos de um união entre 2 conjuntos $A$ e $B$, a \textit{prima fatia} pensamos logo em $|A \cup B| = |A| + |B|$, não estamos completamente errados pois isso é verdade se, e somente se $A \cap B = \emptyset$.
 \\
