@@ -986,7 +986,7 @@ Agora que sabemos que teremos 6 listas para cada subconjunto formado por 3 eleme
 \\
 De maneira mais abstrata, o que fizemos foi dividir a k-permutação $P(5,3)$ por $3!$. Ou seja, podemos saber quantos subconjuntos de tamanho $k$ podem ser formados com $n$ elementos pela equação abaixo.
 
-\begin{fact}[Cálculo das K-Permutações ou Arranjos]
+\begin{fact}[Cálculo das Combinações]
 Se $0 \leq k \leq n$, então:
 \begin{center}
  \Large ${n \choose k} = \frac{n!}{k!(n-k)!}$
@@ -1097,14 +1097,14 @@ A resposta para essa questão está no solucionário do próprio livro. Assumind
 \\
 Para responder essa questão nós vamos ter que abordar 3 casos possíveis. Quando temos $ k = n $, estamos dizendo que queremos saber quantos subconjuntos de tamanho $n$ podemos fazer com $n$ elementos, cuja resposta é claramente 1. Quando temos $ k = 0 $, só temos 1 subconjunto possível, que é o conjunto vazio $\emptyset$. Ou seja, $\{k = 0 \ \lor \  k = n\} \implies {n \choose k} = {n \choose n - k}$.\footnote{Se você leu o capítulo 02, você entendeu o que a gente quis dizer aqui.}
 \\
-\\ % pensei em algo: usar o principio da multiplicacao para o caso onde nao há repeticao de entradas
-Agora teremos que trabalhar com os casos onde $0 < k < n$. Dentro dessa situação, temos o caso onde $k = n/2$. Nesse caso, é simples ver que ${n \choose k} = {n \choose \frac{n}{2}} = {n \choose n - \frac{n}{2}} = {n \choose \frac{n}{2}} = {n \choose n - k}$... Caro leitor, eu tentei demonstrar o restante das situações mas não consegui sem apelar para a fórmula das combinações :(
+\\
+Agora teremos que trabalhar com os casos onde $0 < k < n$. Dentro dessa situação, temos o caso onde $k = n/2$. Nesse caso, é simples ver que ${n \choose k} = {n \choose \frac{n}{2}} = {n \choose n - \frac{n}{2}} = {n \choose \frac{n}{2}} = {n \choose n - k}$. Agora que já eliminamos todos os casos mais evidentes, precisamos desenvolver uma lógica que contemple todos os demais.
 \\
 \\
-Então, por enquanto eu vou parar por aqui e atualizo depois essa parte quando tiver algum progresso nessa demonstração.\footnote{Se tiver uma ideia da demonstração entra no site do Economia Mainstream e comenta lá no post desssa aula.}
+Primeiro vamos pensar num conjunto qualquer $N$. Como estamos contando subconjuntos, se $N$ possuir elementos repetidos, isso não nos afeta visto que um conjunto não leva em consideração a ordem nem elementos repetidos. Para nos certificarmos, vamos criar um subconjunto $N^* = \{n \in N : n_k \neq n_w \ \forall \  k \neq w \}$. Esse conjunto $N^*$ não tem nenhum elemento repetido. Primeiro vamos contar todos os subconjuntos de tamanho $k$ de $N^*$. Cada subconjunto $k_i \subseteq N^*$ será do tipo $\{n_1,n_2,n_3,...,n_k\}$. Uma vez que formamos um conjunto $k_i$ ainda teremos $n - k$ elementos "sobrando"\ para criarmos novos subconjuntos. Desse modo, teremos um total de $k(n-k)$ possibilidades. Do outro lado do problema, vamos pensar no caso para os subconjuntos de tamanho $(n-k)$. Eles serão do tipo $\{n_1,n_2,...,n_{n-k}\}$. Similarmente, para cada subconjunto com $(n-k)$ elementos, teremos $n-(n-k)=n-n+k=k$ elementos "sobrando"\ para construirmos novos subconjuntos. O que também nos dá um total de $k(n-k)$ subconjuntos possíveis. Como temos o mesmo número de possibilidades, fica demonstrada a simetria entre ${n \choose k}$ e ${n \choose n-k}$ de acordo com o enunciado da questão. $\blacksquare$
 \\
 \\
-Com a demonstração do exercício 3.4.13 nós podemos ver que o triângulo de Pascal possui uma simetria. Começando pelas laterais, as colunas onde $k = 0$ e $k = n$ são sempre iguais a $1$. Mas além dessas, as colunas intermediárias também possuem uma simetria dada por ${n \choose k} = {n \choose n-k}$. Isso quer dizer que as segundas colunas sempre serão iguais às penúltimas. Do mesmo modo, as terceiras colunas sempre serão iguais às antepenúltimas. Nos casos onde o $k$ é ímpar, teremos uma coluna do meio que será a única sem uma repetição do valor.
+Com a demonstração dos exercícios 3.4.13 e 3.4.14 nós podemos ver que o triângulo de Pascal possui uma simetria. Começando pelas laterais, as colunas onde $k = 0$ e $k = n$ são sempre iguais a $1$. Mas além dessas, as colunas intermediárias também possuem uma simetria dada por ${n \choose k} = {n \choose n-k}$. Isso quer dizer que as segundas colunas sempre serão iguais às penúltimas. Do mesmo modo, as terceiras colunas sempre serão iguais às antepenúltimas. Nos casos onde o $k$ é ímpar, teremos uma coluna do meio que será a única sem uma repetição do valor.
 \\
 \\
 Partindo aqui chegamos ao \textbf{Teorema Binomial}. Provavelmente você conhece os binômios do tipo $(a+b)^n$ e cometeu, em algum momento, o erro\footnote{Pode confessar que já rolou essa canelada.} de fazer $(a+b)^2 = a^2 + b^2$, o Teorema Binomial é o remédio para esse tipo de erro. 
