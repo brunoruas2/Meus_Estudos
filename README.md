@@ -11,8 +11,8 @@
     - [x] O Princípio da Multiplicação
     - [x] Os Princípios da Adição e Subtração
     - [x] Fatoriais e Permutações
-    - [ ] Contando Subconjuntos
-    - [ ] O Triângulo de Pascal e O Teorema Binomial
+    - [x] Contando Subconjuntos
+    - [x] O Triângulo de Pascal e O Teorema Binomial
     - [ ] O Princípio da Inclusão-Exclusão
     - [ ] Contando Multiconjuntos
     - [ ] Os Princípios da Divisão e da Casa dos Pombos
