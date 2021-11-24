@@ -1107,40 +1107,50 @@ Primeiro vamos pensar num conjunto qualquer $N$. Como estamos contando subconjun
 Com a demonstração dos exercícios 3.4.13 e 3.4.14 nós podemos ver que o triângulo de Pascal possui uma simetria. Começando pelas laterais, as colunas onde $k = 0$ e $k = n$ são sempre iguais a $1$. Mas além dessas, as colunas intermediárias também possuem uma simetria dada por ${n \choose k} = {n \choose n-k}$. Isso quer dizer que as segundas colunas sempre serão iguais às penúltimas. Do mesmo modo, as terceiras colunas sempre serão iguais às antepenúltimas. Nos casos onde o $k$ é ímpar, teremos uma coluna do meio que será a única sem uma repetição do valor.
 \\
 \\
-Partindo aqui chegamos ao \textbf{Teorema Binomial}. Provavelmente você conhece os binômios do tipo $(a+b)^n$ e cometeu, em algum momento, o erro\footnote{Pode confessar que já rolou essa canelada.} de fazer $(a+b)^2 = a^2 + b^2$, o Teorema Binomial é o remédio para esse tipo de erro. 
+A partir dessa simetria, os matemáticos perceberam uma relação entre os valores de cada elemento das linhas do triângulo de Pascal com os coeficientes dos binômios do tipo $(a+b)^n$. Esse fato é chamado de \textbf{Teorema Binomial}. Como o nome diz, um \textbf{binômio} é formado por quaisquer dois números (chamados de monômios) $a$ e $b$ relacionados por uma soma.
+
+\pagebreak
+
+Veja só que interessante:
 \\
 \\
-Perceba:
-$$(a+b)^0 = 1$$
-$$(a+b)^1 =  a + b$$
-$$(a+b)^2 = a^2 + 2ab + b^2$$
-$$(a+b)^3 = a^3 + 3a^2b + 3b^2a +b^3$$
-$$(a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4b^3a +b^4$$
+$(a+b)^0 = \textcolor{red}{1}$ \\
+$(a+b)^1 = \textcolor{red}{1}a + \textcolor{red}{1}b$ \\
+$(a+b)^2 = \textcolor{red}{1}a^2 + \textcolor{red}{2}ab + \textcolor{red}{1}b^2$ \\
+$(a+b)^3 = \textcolor{red}{1}a^3 + \textcolor{red}{3}a^2b + \textcolor{red}{3}ab^2 + \textcolor{red}{1}b^3$ \\
+$(a+b)^4 = \textcolor{red}{1}a^4 + \textcolor{red}{4}a^3b + \textcolor{red}{6}a^2b^2 + \textcolor{red}{4}ab^3 + \textcolor{red}{1}b^4$ \\
+$(a+b)^5 = \textcolor{red}{1}a^5 + \textcolor{red}{5}a^4b + \textcolor{red}{10}a^3b^2 + \textcolor{red}{10}a^2b^3 + \textcolor{red}{5}ab^4 + \textcolor{red}{1}b^5$ \\
+$(a+b)^6 = \textcolor{red}{1}a^6 + \textcolor{red}{6}a^5b + \textcolor{red}{15}a^4b^2 + \textcolor{red}{20}a^3b^3 + \textcolor{red}{15}a^2b^4 + \textcolor{red}{6}ab^5 + \textcolor{red}{1}b^6$ \\
+$(a+b)^7 = \textcolor{red}{1}a^7 + \textcolor{red}{7}a^6b + \textcolor{red}{21}a^5b^2 + \textcolor{red}{35}a^4b^3 + \textcolor{red}{35}a^3b^4 + \textcolor{red}{21}a^2b^5 + \textcolor{red}{8}ab^6 + \textcolor{red}{1}b^7$  \\
 \\
-Perceba que os resultados dos binômios formam uma pirâmide conforme $n$ cresce. Agora, ignore $a$ e $b$ e foque apenas nos coeficiente dos termos das somas. Ora, é o \textbf{Triângulo de Pascal}.
+Perceba como os coeficientes em vermelho seguem exatamente o padrão estabelecido pelo triângulo de Pascal. Nós vamos partir dessa constatação para a definição do teorema binomial. Relaxa que a gente vai indo em partes.
 \\
-Seguindo o padrão que podemos ver quero chegar à um caminho geral para o desenvolvimento dos binômios. Primeiro, veja que o primeiro e últimos termos do binômio estão a n-ésima potência,\footnote{Deixarei $a^{n-n}$ multiplicando o último termo e $b^{n-n}$ o primeiro, apenas para que o desenvolvimento fique mais claro, afinal, é um número elevado a zero e não mudará nosso resultado} portanto:
-$$(a+b)^n = a^nb^{n-n} + \cdots + b^na^{n-n} $$
 \\
-Pouco a pouco vamos construindo nossa notação.
+Os primeiros e últimos termos do binômio estão a n-ésima potência,\footnote{Deixarei $a^{n-n}$ multiplicando o último termo e $b^{n-n}$ o primeiro, apenas para que o desenvolvimento fique mais claro, afinal, é um número elevado a zero e não mudará nosso resultado} portanto:
+$$(a+b)^n = a^nb^{n-n} + \cdots + a^{n-n}b^n $$
 \\
-Agora veja que o no segundo termo do binômio temos $a^{n-1}b^1$ e no penúltimo $b^{n-1}a^1$
+Agora veja que o no segundo termo do binômio temos $a^{n-1}b^1$ e no penúltimo $a^1b^{n-1}$
 \\
-$$(a+b)^n = a^nb^{n-n} + a^{n-1}b^1 + \cdots + b^{n-1}a^1 + b^na^{n-n} $$
+$$(a+b)^n = a^nb^{n-n} + a^{n-1}b^1 + \cdots + a^1b^{n-1} + a^{n-n}b^n $$
 \\
 Por fim, falta apenas incluir os coeficientes, que como dito antes, seguirão por padrão a k-ésima entrada da n-ésima linha do Triângulo de Pascal:
 \\
-$$(a+b)^n = {n \choose 0}a^nb^{n-n} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}b^{n-1}a^1 + {n \choose n}b^na^{n-n} $$
+$$(a+b)^n = {n \choose 0}a^nb^{n-n} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}a^1b^{n-1} + {n \choose n}a^{n-n}b^n $$
 \\
 Um fator importante para a notação mais limpa é que $a$ está sempre elevado a $n$ subtraído a k-ésima entrada, e $b$ está sempre elevado a k-ésima potência.
 \\
-$$(a+b)^n = {n \choose 0}a^{n-0}b^{0} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}b^{k-1}a^1 + {n \choose n}b^ka^{0} $$
 \\
-Daí surge o \textbf{Teorema Binomial} que é normalmente expresso como:
+Pronto. Com isso já conseguimos definir nosso teorema.
+
+\begin{theorem}[Teorema Binomial]
+Se $n$ é um inteiro não negativo, então:
+$$(a+b)^n = {n \choose 0}a^{n-0}b^{0} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}a^1b^{k-1} + {n \choose n}a^{0}b^k $$
 \\
+Que também pode ser expresso como:
 $$(a+b)^n = \sum\limits_{k=0}^n {n \choose k}a^{n-k}b^k$$
-\\
-O autor deixa a demonstração para os capítulos postoriores, então eu o farei também.
+\end{theorem}
+
+O autor deixa a demonstração como exercício para o capítulo 10. Nós vamos precisar de alguma ferramentas para poder demonstrá-lo então aguarde um pouco para ver essa demonstração.
 
 \section{O Princípio da Inclusão-Exclusão}
 Você quer contar o número de elementos de um união entre 2 conjuntos $A$ e $B$, a \textit{prima fatia} pensamos logo em $|A \cup B| = |A| + |B|$, não estamos completamente errados pois isso é verdade se, e somente se $A \cap B = \emptyset$.
