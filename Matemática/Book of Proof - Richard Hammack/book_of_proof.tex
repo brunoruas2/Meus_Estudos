@@ -1175,20 +1175,20 @@ Como dito no capítulo 01, diagramas de Venn não são usados para demonstraçõ
 \end{tikzpicture}
 \end{center}
 
-O que acontece quando somamos os cardinais de $A$ e $B$ nessa situação? Isso mesmo, acabamos contando duplamente os elementos que estão na intersecção dos dois conjuntos. Para evitar essa dupla contagem, basta subtrairmos $|A \cap B|$\footnote{Ou seja, o cardinal da intersecção} da soma dos cardinais.
+O que acontece quando somamos os cardinais de $A$ e $B$ nessa situação? Isso mesmo, acabamos contando duplamente os elementos que estão na intersecção dos dois conjuntos. Para evitar essa dupla contagem, basta subtrairmos $|A \cap B|$\footnote{Ou seja, o cardinal da intersecção} da soma dos cardinais. A demonstração mais formal segue a baixo.
 
-\begin{fact}[Fórmula da Inclusão-Exclusão]
+\begin{fact}[Fórmula da Inclusão-Exclusão para 2 conjuntos]
 Se $A$ e $B$ são conjuntos finitos, então $|A \cup B| = |A| + |B| - |A \cap B|$.
 \end{fact}
 
 \begin{demonstration}
-Se $A$ e $(B - A)$ são conjuntos, então teremos que:
+Se $A$ e $B$ são conjuntos, então teremos que:
 \\
 $$ |A \cup B| =  |A \cup (B - A)| = |A| + |(B-A)| $$
 \\
-Por outro lado, $(B-A)$ e $(A \cap B)$ também são conjuntos, cuja união é igual a $B$:
+Por outro lado, $(B-A)$ e $(A \cap B)$ também são conjuntos, cuja união é igual a:
 \\
-$$ |B| = |(B - A) \cup (A \cap B)| = |(B - A)| + |(A \cap B)| $$
+$$ |(B - A) \cup (A \cap B)| = |(B - A)| + |(A \cap B)| = |B|$$
 \\
 Apenas rearranjando essa segunda igualdade temos que,
 \\
@@ -1201,6 +1201,19 @@ $$ |A \cup B| = |A| + |B| - |A \cap B| \ \blacksquare $$
 Essa demonstração foi inspirada nesse \href{https://people.maths.bris.ac.uk/~mb13434/incl_excl_n.pdf}{paper.}
 
 \end{demonstration}
+
+\textbf{Dica}: Tente resolver o exemplo 3.17 da página 93.
+\\
+\\
+Claro que podemos nos deparar com situações que envolvam mais do que dois conjuntos. Para essas questões, vamos precisar de uma solução geral para $n$ conjuntos.
+
+\begin{fact}[Fórmula da Inclusão-Exclusão]
+Sejam $E_1$, $E_2$, $E_3$, ..., $E_n$ conjuntos quaisquer, então
+\\
+$$ |E_1 \cup E_2 \cup ... \cup E_n| =  \sum_{1 \leq i \leq n} |E_i| \ + 
+\sum_{1 \leq i \leq j \leq n} |E_i \cap E_j| $$
+\end{fact}
+
 
 
 \section{Contando Multiconjuntos}
