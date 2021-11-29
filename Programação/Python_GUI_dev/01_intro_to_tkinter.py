@@ -1,15 +1,18 @@
 ''' Banana preferences survey '''
 
 import tkinter as tk
-from typing import Sized
 
 ## Functions used in this app (this part can be saved in a .py file apart)
 # create a event the submit button
 def on_submit():
   '''To be run when users submits the form'''
   name = txtline_var.get() # exemple of a tk text variable
-  number = numinput_var.get()
   selected = list1_var.get()
+
+  try:
+    number = numinput_var.get()
+  except tk.TclError: # tkinter does not use ValueError
+    number = 10000
   
   if checkbox_var.get() == False:
     check = ' do not '
@@ -23,8 +26,9 @@ def on_submit():
     f'Thanks for{check}complain to our survey. \n'
     f'You have selected {number} {selected}!'
   )
-
+    
   output_label.configure(text=message)
+
 
 
 ## Part 01 - Setting all elements of the app ##
@@ -140,7 +144,7 @@ txtinput = tk.Text(
 # select button input
 buttoninput = tk.Button(
   root,
-  text='Submit Button'
+  text='Submit and Clipboard'
 )
 
 # creating a output label to see how change the app's interface
