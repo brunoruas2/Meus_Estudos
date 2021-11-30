@@ -344,9 +344,9 @@ Uma conclusão que podemos tirar do princípio da boa ordenação é que dado um
 Dados dois inteiros $a$ e $b$, onde $b > 0$. Existem outros dois inteiros únicos $q$ e $r$ para qual $a = qb + r$ e $0 \leq r < b$.
 \end{fact}
 
-Agora o autor demonstra a existência de $r$ e $q$ com suas propriedades. Talvez depois eu estenda a prova para a unicidade\footnote{Eu achei uma demonstração em JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 118.} desses valores\footnote{Passa lá no Economia Mainstream e me dá uma cobrada nos comentários}.
+Agora o autor demonstra a existência de $r$ e $q$ com suas propriedades. Mas a gente pretende estender a prova para a unicidade\footnote{Eu achei um esboço de demonstração em JOHNSTON, William; MCALLISTER, Alex. A transition to advanced mathematics: a survey course. OUP USA, 2009. p. 97.} desses valores.
 
-\begin{demonstration}[Division Algorithm - Existência de $r$ e $q$]
+\begin{demonstration}[\small Division Algorithm - Existência e Unicidade de $r$ e $q$]
 Dados $a,b \in \mathbb{Z}$ e $b > 0$, é possível criar um set do tipo:
 \begin{center}
 	$ A = \{ a - xb : x \in \mathbb{Z}, 0 \leq a - xb \} \subseteq \mathbb{N}^0 $
@@ -363,7 +363,7 @@ Agora só nos resta provar que $r < b$ mas para isso, vamos usar o pensamento co
 Ora, se $r \geq b$, então a subtração $r - b$ será um número positivo, portanto será também um elemento de $\mathbb{N}^0$. Podemos reescrever essa subtração como $r - b = (a - qb) - b = a - (q + 1)b$. 
 \\
 \\
-Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição\footnote{O nome dessa técnica é prova por contradição. Falaremos dela mais pra frente no curso.}, portanto, só podemos aceitar o oposto, ou seja, sabemos que $r < b$. Com isso finalizamos a demonstração da existência de $r$ e $q$ com as propriedades anteriormente citadas $\blacksquare$\footnote{Esse quadrado preto é usado para pontuar o final de uma demonstração.}
+Mas veja só que estranho, $q + 1$ certamente será um elemento de $\mathbb{Z}$. Logo, o número expresso por $a - (q + 1)b$ também será um elemento de $A$ (nesse caso, $(q + 1)$ é o $x$). Portanto, não é possível que $r$ seja o seu menor elemento visto que $r - b$ também é um elemento de $A$ e é menor que $r$. Isso é uma clara contradição. Isso é justamente isso que queríamos mostrar: Quando tomamos $r \geq b$ acabamos com uma contradição\footnote{O nome dessa técnica é prova por contradição. Falaremos dela mais pra frente no curso.}, portanto, só podemos aceitar o oposto, ou seja, sabemos que $r < b$. Com isso finalizamos a demonstração da existência de $r$ e $q$. $\ \blacksquare$ \footnote{Esse quadrado preto é usado para pontuar o final de uma demonstração.}
 \end{demonstration}
 
 
@@ -1192,7 +1192,7 @@ $$ |(B - A) \cup (A \cap B)| = |(B - A)| + |(A \cap B)| = |B|$$
 \\
 Apenas rearranjando essa segunda igualdade temos que,
 \\
-$$ |(B - A)| = |B| - |(A \cup B)| $$
+$$ |(B - A)| = |B| - |(A \cap B)| $$
 \\
 Substituindo o termo $|(B - A)|$ na primeira equação, 
 \\
@@ -1213,14 +1213,12 @@ Sejam $E_1$, $E_2$, $E_3$, ..., $E_n$ conjuntos quaisquer, então
 \\
 $ |E_1 \cup E_2 \cup ... \cup E_n| = $
 \begin{center}
-$ \displaystyle \sum_{i = 1}^{n} |E_i|
-+ \displaystyle \sum_{1 \leq i < j \leq n} |E_i \cap E_j| $ \\
-$ - \displaystyle \sum_{1 \leq i < j < k \leq n} |E_i \cap E_j \cap E_k | $
-$ + \dots $
+$ + \left( \displaystyle \sum_{i = 1}^{n} |E_i| \right)$ \\
+$ - \left( \displaystyle \sum_{1 \leq i < j \leq n} |E_i \cap E_j| \right) $ \\
+$ + \left( \displaystyle \sum_{1 \leq i < j < k \leq n} |E_i \cap E_j \cap E_k | \right) $ \\
+$ \vdots $ \\
+\large $ (-1)^{n-1} |E_1 \cap E_2 \cap ... \cap E_n| $ 
 \end{center}
-\begin{flushright}
-$ (-1)^{n-1} |E_1 \cap E_2 \cap ... \cap E_n| $ 
-\end{flushright}
 \end{fact}
 
 \begin{demonstration}
