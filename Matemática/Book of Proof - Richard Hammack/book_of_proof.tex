@@ -1210,10 +1210,22 @@ Claro que podemos nos deparar com situações que envolvam mais do que dois conj
 \begin{fact}[Fórmula da Inclusão-Exclusão]
 Sejam $E_1$, $E_2$, $E_3$, ..., $E_n$ conjuntos quaisquer, então
 \\
-$$ |E_1 \cup E_2 \cup ... \cup E_n| =  \sum_{1 \leq i \leq n} |E_i| \ + 
-\sum_{1 \leq i \leq j \leq n} |E_i \cap E_j| $$
+\\
+$ |E_1 \cup E_2 \cup ... \cup E_n| = $
+\begin{center}
+$ \displaystyle \sum_{i = 1}^{n} |E_i|
++ \displaystyle \sum_{1 \leq i < j \leq n} |E_i \cap E_j| $ \\
+$ - \displaystyle \sum_{1 \leq i < j < k \leq n} |E_i \cap E_j \cap E_k | $
+$ + \dots $
+\end{center}
+\begin{flushright}
+$ (-1)^{n-1} |E_1 \cap E_2 \cap ... \cap E_n| $ 
+\end{flushright}
 \end{fact}
 
+\begin{demonstration}
+Partindo do caso caso mais simples, já sabemos que é verdade que, se $n = 1$ então $\displaystyle \bigcup_{i = 1}^{n} |A_i| =  \sum_{i = 1}^{n} |A_i|$. Agora vamos usar a \textbf{indução matemática}\footnote{Ainda vamos estudar mais pra frente sobre essa técnica, mas não é difícil entender o que ta rolando.} para demonstrar os casos onde temos $n + 1$.
+\end{demonstration}
 
 
 \section{Contando Multiconjuntos}
