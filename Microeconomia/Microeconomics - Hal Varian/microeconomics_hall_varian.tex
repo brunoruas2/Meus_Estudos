@@ -21,6 +21,9 @@
 \usepackage{listings} % coding examples in latex file
 \usepackage{xcolor} % changing colors
 \usepackage{amsthm} % definir estilo do teorema
+\usepackage[hang,flushmargin]{footmisc} % remove footnote's identation
+\usepackage{cancel} % para poder colocar o tracinho de cancelamento
+\usepackage{tikz} % to draw Venn's diagrams
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -28,6 +31,7 @@
 
 % criando o modelo de definicoes/teoremas/fatos/demonstracoes
 \theoremstyle{definition}
+
 \newtheoremstyle{break}% name
   {10pt}%         Space above, empty = `usual value'
   {10pt}%         Space below
@@ -111,11 +115,15 @@
 %  - Book author name                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Book's title and subtitle
-\title{\Huge \textbf{Template de Livro} \\ 
-\huge Template}
-% Author
-\author{\textsc{Bruno Ruas}}
+\title{\Huge \textbf{Book of Proof} \\ 
+\Large Third Edition \\
+\huge by Richard Hammack}
 
+% Author
+\author{
+\textsc{Resumo e Adaptação por:} \\
+\textsc{Bruno de M. Ruas}
+}
 
 \begin{document}
 
@@ -128,14 +136,16 @@
 
 \mainmatter
 
-%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%
-\part{Parte 1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    PART                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{Fundamentos}
 
-%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%
-\chapter{Capítulo 1}
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conjuntos}
 
 \begin{chapquote}{página 3}
-	``Aqui fica uma quote inteligente e elegante.''
+	``The theory of sets is a language that is perfectly suited to describing and explaning all types of mathematical structures.''
 \end{chapquote}
 
 
