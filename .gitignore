@@ -9,3 +9,5 @@
 *.toc
 *.pytxcode
 *.dvi
+*.blg
+*.bbl

@@ -4,7 +4,7 @@
 %% License: ISC license                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper,11pt]{book}
+\documentclass[a4paper,11pt,oneside]{book}
 
 % pacotes utilizados
 \usepackage[T1]{fontenc}
@@ -24,6 +24,7 @@
 \usepackage[hang,flushmargin]{footmisc} % remove footnote's identation
 \usepackage{cancel} % para poder colocar o tracinho de cancelamento
 \usepackage{tikz} % to draw Venn's diagrams
+\usepackage{amsmath} % to write a function by cases
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -143,7 +144,7 @@
 \chapter{Matemática}
 
 \begin{chapquote}{página 1.008}
-	``Revisão breve de alguns conceitos matemáticos utilizados no texto.''
+	``Revisão breve de alguns conceitos matemáticos utilizados no texto''.
 \end{chapquote}
 
 Bem vindo ao meu resumo do livro do prof. Varian. Ao contrário do que ele fez, eu preferi trazer o apêndice de matemática pro começo do material porque aqui nós vamos ver as ferramentas que serão usadas para a explicação dos conceitos teóricos ao longo do material.
@@ -163,11 +164,11 @@ Não é raro ter uma variável dependente relacionada a várias outras variávei
 
 \section{Gráficos}
 
-Não tem muito o que falar aqui. Espero que você saiba o que é um gráfico.
+Não tem muito o que falar aqui. Dá uma lida lá na página 1010.
 
 \section{Propriedades de funções}
 
-Uma função pode ter algumas características que facilitam a sua descrição. 
+Uma função pode ter algumas características que facilitam a sua descrição. Aqui temos algumas que serão usadas ao longo do curso:
 \\
 \\
 Uma \textbf{função contínua} é aquela que não possui nenhum "salto"\ ou "quebra". 
@@ -181,10 +182,10 @@ Quando é crescente a medida que $x$ cresce, chamaremos de \textbf{função mono
 
 \section{Funções inversas}
 
-Uma das implicações de quando uma função é monotônica é que, para cada $x$, eu sempre terei apenas um único $y$ associado. 
+Uma das implicações de quando uma função é monotônica é que, para cada $x$, sempre existirá apenas um único $y$ associado. 
 \\
 \\
-Uma \textbf{função inversa} é a função que, sempre que colocarmos um $y$ teremos como resultado o $x$ de alguma função anterior.
+Uma \textbf{função inversa} é a função que, sempre que colocarmos um $y$ como variável independente teremos como resultado um $x$ de alguma função anterior.\footnote{Eu tentei não deixar confuso mas se ficou com dúvida, pesquisa um pouco sobre o tema.}
 
 \section{Equações e identidades}
 
@@ -216,26 +217,50 @@ $$ \frac{\Delta y}{\Delta x} = \frac{y^2 - y^1}{x^2 - x^1} = \frac{f(x^1 + \Delt
 \\
 \\
 Quando uma função é linear, teremos que essa taxa de variação será sempre constante para quaisquer valores de $x$. Como $y = ax + b$, então
-
-$$ \frac{\Delta y}{\Delta x} = 
-\frac{a+b(x^1 + \Delta x) - (a + bx^1)}{\Delta x} = 
-\frac{\cancel{a}+b(x^1 + \Delta x) \cancel{-a} - bx^1)}{\Delta x} = 
-\frac{\cancel{bx^1} + b \Delta x \cancel{- bx^1}}{\Delta x} = 
-\frac{b \cancel{\Delta x}}{\cancel{\Delta x}} = b  $$
 \\
-Para as funções não lineares, essa propriedade não é observada. Tomemos $y = f(x) = x^2$ como exemplo,
+\\
+\Large $ \frac{\Delta y}{\Delta x} = $ \normalsize
+$$ \frac{a+b(x^1 + \Delta x) - (a + bx^1)}{\Delta x} = $$
+$$ \frac{\cancel{a}+b(x^1 + \Delta x) \cancel{-a} - bx^1)}{\Delta x} = $$
+$$ \frac{\cancel{bx^1} + b \Delta x \cancel{- bx^1}}{\Delta x} = $$
+$$ \frac{b \cancel{\Delta x}}{\cancel{\Delta x}} = b  $$
 
-$$ \frac{\Delta y}{\Delta x} = 
-  \frac{(x + \Delta x)^2 - x^2}{\Delta x} = 
-  \frac{\cancel{x^2} + 2x \Delta x + (\Delta x)^2 \cancel{-x^2}}{\Delta x} = 
-  \frac{2x \cancel{\Delta x} + \Delta x . \cancel{\Delta x}}{\cancel{\Delta x}} = 
-  2x + \Delta x $$
+Para as funções não lineares, essa propriedade não é observada. Tomemos $y = f(x) = x^2$ como exemplo,
+\\
+\\
+\Large $ \frac{\Delta y}{\Delta x} = $ \normalsize
+$$ \frac{(x + \Delta x)^2 - x^2}{\Delta x} = $$ 
+$$  \frac{\cancel{x^2} + 2x \Delta x + (\Delta x)^2 \cancel{-x^2}}{\Delta x} = $$
+$$  \frac{2x \cancel{\Delta x} + \Delta x . \cancel{\Delta x}}{\cancel{\Delta x}} = $$
+$$  2x + \Delta x $$
 \\
 Ou seja, entra no resultado da taxa de variação o valor de $x$ e a magnitude da variação, dada por $\Delta x$.
 
-
 \section{Inclinações e interceptos}
+
+Já aprendemos como calcular a taxa de variação de uma função. Graficamente falando, essa é a medida da inclinação da curva da função entre os dois pontos que formam o delta da variável independente. 
+\\
+\\
+Em uma função linear, a inclinação da curva sempre será a mesma independente da magnitude da variação. No caso das funções não lineares, a inclinação é dada pela \textbf{reta tangente} ao ponto da curva\footnote{Mais pra frente a gente volta nessa ideia.}.
+\\
+\\
+No caso de uma função linear, $ y = ax + b$, temos alguns pontos que recebem nomes de \textbf{intercepto}. O \textbf{intercepto vertical} ($y^*$) é dado pelo ponto $y = a.0 + b = b$, ou seja, onde $x = 0$. Já o \textbf{intercepto horizontal} ($x^*$) é dado pelo ponto onde $y = ax + b = 0 $, ou seja, $ x = \frac{-b}{a}$.
+
 \section{Valores absolutos e logaritmos}
+
+O \textbf{valor absoluto} de um número $x$ qualquer é definido pela função $f(x)$ do seguinte modo:
+
+\[ f(x) = |x| = \begin{cases} x & se \ x \geqslant \\ -x & se \ x < 0 \end{cases} \]
+\\
+\\
+Você já deve ter visto no ensino médio que o \textbf{logaritmo natural} ou \textbf{log} de um número é uma função escrita como $y = lnx$ ou $y = ln(x)$ e que possui as seguintes propriedades:
+
+\begin{itemize}
+ \item Se $x,y > 0$, então, $ ln(xy) = ln(x) + ln(y) $
+ \item $ ln(e) = 1 $
+ \item $ ln(x^y) = y ln(x) $
+\end{itemize}
+
 \section{Derivadas}
 \section{Derivadas segundas}
 \section{A regra do produto e da cadeia}
