@@ -2,6 +2,57 @@
  Meu caderno público de anotações
 
 # Projetos em Andamento
+## Microeconomia - Versão de Graduação
+### Resumo de Livro: Microeconomia: Uma Abordagem Moderna - Hal R. Varian
+- [ ] Preparativos
+    - [ ] Matemática
+    - [ ] Programação
+- [ ] Teoria da Escolha
+    - [ ] Restrição Orçamentária
+    - [ ] Preferências
+    - [ ] Utilidade
+    - [ ] Escolha
+    - [ ] Demanda
+    - [ ] Preferência Revelada
+    - [ ] A Equação de Slutsky
+    - [ ] Restrição Orçamentária
+    - [ ] Comprando e Vendendo
+    - [ ] Escolha Intertermporal
+    - [ ] Mercado de Ativos
+    - [ ] Incerteza
+    - [ ] Ativos de Risco
+    - [ ] O Excedente do Consumidor
+    - [ ] Demanda de Mercado
+- [ ] Equilíbrio, Econometria e Leilões
+    - [ ] Equilíbrio
+    - [ ] Medição
+    - [ ] Leilões
+    - [ ] Equilíbrio
+- [ ] Teoria da Firma
+    - [ ] Tecnologia
+    - [ ] Maximização do Lucro
+    - [ ] Minimização de Custos
+    - [ ] Curva de Custo
+    - [ ] Oferta da Empresa
+    - [ ] Oferta da Indústria
+    - [ ] Mercados
+    - [ ] Monopólio
+    - [ ] O Comportamento do Monipolista
+    - [ ] O Mercado de Fatores
+    - [ ] O Oligopólio
+    - [ ]A Teoria dos Jogos
+    - [ ]Aplicações da Teoria dos Jogos
+- [ ] Tópicos Avançados
+    - [ ] Economia Comportamental
+    - [ ] Trocas
+    - [ ] Produção
+    - [ ] Bem-Estar
+    - [ ]Externalidades
+    - [ ]Tecnologia da Informação
+    - [ ]Bens Públicos
+    - [ ]Informação Assimétrica
+
+
 ## Matemática
 ### Resumo de Livro: Book of Proof - Richard Hammack
 - [x] Conjuntos

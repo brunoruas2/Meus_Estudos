@@ -1,0 +1,401 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX book template                           %%
+%% Author:  Amber Jain (http://amberj.devio.us/) %%
+%% License: ISC license                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,11pt]{book}
+
+% pacotes utilizados
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[portuguese]{babel}
+\usepackage{amsfonts}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{mathtools}
+\usepackage{amssymb} % alguns simbolos matematicos
+\usepackage{mathrsfs} % letras cursivas
+\usepackage{listings} % coding examples in latex file
+\usepackage{xcolor} % changing colors
+\usepackage{amsthm} % definir estilo do teorema
+\usepackage[hang,flushmargin]{footmisc} % remove footnote's identation
+\usepackage{cancel} % para poder colocar o tracinho de cancelamento
+\usepackage{tikz} % to draw Venn's diagrams
+
+% dark theme no pdf
+\pagecolor[rgb]{0.1,0.1,0.1} %black
+\color[rgb]{0.9,0.9,0.9} %grey
+
+% criando o modelo de definicoes/teoremas/fatos/demonstracoes
+\theoremstyle{definition}
+
+\newtheoremstyle{break}% name
+  {10pt}%         Space above, empty = `usual value'
+  {10pt}%         Space below
+  {}% Body font
+  {}%         Indent amount (empty = no indent, \parindent = para indent)
+  {\bfseries}% Thm head font
+  {}%        Punctuation after thm head
+  {\newline}% Space after thm head: \newline = linebreak
+  {}%         Thm head spec
+
+\theoremstyle{break}
+
+% definindo as categorias de formalidade
+\newtheorem{definition}{Definição}[section]
+\newtheorem{fact}{Fato}[section]
+\newtheorem{demonstration}{Demonstração}[section]
+\newtheorem{theorem}{Teorema}
+
+% tirando identação dos paragrafos
+\setlength{\parindent}{0ex}
+
+% setting das cores quando usar codigo python
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% dedicatoria 
+% Source: http://www.tug.org/pipermail/texhax/2010-June/
+\newenvironment{dedication}
+{
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill\begin{minipage}[t]{0.66\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{3}}
+   \clearpage
+}
+
+% Chapter quote at the start of chapter        %
+% Source: http://tex.stackexchange.com/a/53380 %
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First page of book which contains 'stuff' like: %
+%  - Book title, subtitle                         %
+%  - Book author name                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Book's title and subtitle
+\title{\Huge \textbf{Microeconomia} \\ 
+\Large Tradução da 9 edição \\
+\huge by Hal R. Varian}
+
+% Author
+\author{
+\textsc{Resumo e Adaptação por:} \\
+\textsc{Bruno de M. Ruas}
+}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\mainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
+\part{Preparativos}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Matemática}
+
+\begin{chapquote}{página 1.008}
+	``Revisão breve de alguns conceitos matemáticos utilizados no texto.''
+\end{chapquote}
+
+Bem vindo ao meu resumo do livro do prof. Varian. Ao contrário do que ele fez, eu preferi trazer o apêndice de matemática pro começo do material porque aqui nós vamos ver as ferramentas que serão usadas para a explicação dos conceitos teóricos ao longo do material.
+\\
+\\
+Aqui a gente só vai dar um overview básico nos conceitos. Não tenha dúvida que alguém mais experimentado em matemática torceria o nariz pra algumas definições dadas aqui. Mas o objetivo é te dar um "norte"\ a respeito de alguns conceitos normalmente usados. Não se assuste com a simplicidade de algumas coisas. Melhor garantir agora do que sofrer mais pra frente no texto.
+
+\section{Funções}
+
+Sejam dois números quaisquer $x$ e $y$, uma \textbf{função} ou \textbf{transformação} é uma regra que descreve uma relação entre eles.
+\\
+\\
+Para demonstrar que existe alguma dependência entre duas variáveis usamos a notação $y = f(x)$, onde nossa variável $y$ (chamada de \textbf{dependente}) é o resultado de alguma transformação (denotada pelo símbolo $"f"$) realizada em $x$ (nossa variável \textbf{independente}).
+\\
+\\
+Não é raro ter uma variável dependente relacionada a várias outras variáveis. Nesses casos é comum o uso da notação anterior com a adição das novas incógnitas. Algo como $y = f(x_1,x_2,...,x_n)$.
+
+\section{Gráficos}
+
+Não tem muito o que falar aqui. Espero que você saiba o que é um gráfico.
+
+\section{Propriedades de funções}
+
+Uma função pode ter algumas características que facilitam a sua descrição. 
+\\
+\\
+Uma \textbf{função contínua} é aquela que não possui nenhum "salto"\ ou "quebra". 
+\\
+\\
+Uma \textbf{função suave} é aquela que não tem "dobras"\ nem "cantos".
+\\
+\\
+Uma \textbf{função monotônica} é aquela que sempre segue o mesmo sentido (ou crescendo ou decrescendo) sem nunca mudar de sentido. 
+Quando é crescente a medida que $x$ cresce, chamaremos de \textbf{função monotônica crescente}. Quando descrescer a medida que $x$ crescer, chamaremos de \textbf{função monotônica decrescente}.
+
+\section{Funções inversas}
+
+Uma das implicações de quando uma função é monotônica é que, para cada $x$, eu sempre terei apenas um único $y$ associado. 
+\\
+\\
+Uma \textbf{função inversa} é a função que, sempre que colocarmos um $y$ teremos como resultado o $x$ de alguma função anterior.
+
+\section{Equações e identidades}
+
+Podemos relacionar dois ou mais elementos por meio do uso de \textbf{equações} (usando o símbolo da igualdade "$=$"). Onde as suas respectivas \textbf{soluções} são os valores atribuíveis as incógnitas que assegurem a validade da relação proposta.
+\\
+\\
+Uma \textbf{identidade} (que tem o símbolo dado por "$\equiv$") é um tipo de relação onde sempre haverá as soluções independentemente de quais valores suas variáveis assumam.
+
+\section{Funções lineares}
+
+Chamamos de \textbf{função linear}, qualquer função da forma $y = ax + b$. Fique atento porque uma função linear pode ser expressa de maneira implícita (ou seja, será necessário desenvolver um pouco a álgebra até que se chegue numa equação no formato da definição).
+
+\section{Variações e taxas de variação}
+
+Usamos o símbolo "$\Delta$"\footnote{O nome é "delta".} para denotar a variação de alguma variável. Ou seja, se tivemos uma variável qualquer $x$ que teve seu valor alterado de $x^1$ para $x^2$, então:
+
+$$ \Delta x = x^2 - x^1 $$
+ou também
+$$ x^2 = x^1 + \Delta x $$
+\\
+Normalmente, usamos o delta quando falamos de \textbf{pequenas variações} ou, como os economistas falam, \textbf{variações marginais}.
+\\
+\\
+A \textbf{taxa de variação} é obtida pela razão (ou seja, pela divisão) de duas variações. Seja a função $y = f(x)$, sempre que tivemos um $\Delta x > 0$ também teremos algum $\Delta y \neq 0$. A taxa de variação de $y$ em relação à $x$ é dada por:
+
+$$ \frac{\Delta y}{\Delta x} = \frac{y^2 - y^1}{x^2 - x^1} = \frac{f(x^1 + \Delta x) - f(x^1)}{\Delta x} $$
+\\
+É uma medida do quanto $y$ varia a medida que $x$ varia.
+\\
+\\
+Quando uma função é linear, teremos que essa taxa de variação será sempre constante para quaisquer valores de $x$. Como $y = ax + b$, então
+
+$$ \frac{\Delta y}{\Delta x} = 
+\frac{a+b(x^1 + \Delta x) - (a + bx^1)}{\Delta x} = 
+\frac{\cancel{a}+b(x^1 + \Delta x) \cancel{-a} - bx^1)}{\Delta x} = 
+\frac{\cancel{bx^1} + b \Delta x \cancel{- bx^1}}{\Delta x} = 
+\frac{b \cancel{\Delta x}}{\cancel{\Delta x}} = b  $$
+\\
+Para as funções não lineares, essa propriedade não é observada. Tomemos $y = f(x) = x^2$ como exemplo,
+
+$$ \frac{\Delta y}{\Delta x} = 
+  \frac{(x + \Delta x)^2 - x^2}{\Delta x} = 
+  \frac{\cancel{x^2} + 2x \Delta x + (\Delta x)^2 \cancel{-x^2}}{\Delta x} = 
+  \frac{2x \cancel{\Delta x} + \Delta x . \cancel{\Delta x}}{\cancel{\Delta x}} = 
+  2x + \Delta x $$
+\\
+Ou seja, entra no resultado da taxa de variação o valor de $x$ e a magnitude da variação, dada por $\Delta x$.
+
+
+\section{Inclinações e interceptos}
+\section{Valores absolutos e logaritmos}
+\section{Derivadas}
+\section{Derivadas segundas}
+\section{A regra do produto e da cadeia}
+\section{Derivadas parciais}
+\section{Otimização}
+\section{Otimização com restrição}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Programação}
+
+%%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
+\part{Teoria da Escolha}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O Mercado}
+
+\begin{chapquote}{página 3}
+	``The theory of sets is a language that is perfectly suited to describing and explaning all types of mathematical structures.''
+\end{chapquote}
+
+\section{A elaboração de um modelo}
+\section{Otimização e equilíbrio}
+\section{A curva de demanda}
+\section{A curva de oferta}
+\section{O equilíbrio de mercado}
+\section{A estática comparativa}
+\section{Outras formas de alocar apartamentos}
+\section{Qual o melhor arranjo?}
+\section{A eficiência de Pareto}
+\section{Comparação entra as formas de alocação de apartamentos}
+\section{Equilíbrio no longo prazo}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Restrição Orçamentária}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Preferências}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Utilidade}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Escolha}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Demanda}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Preferência Revelada}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{A Equação de Slutsky}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Restrição Orçamentária}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Comprando e Vendendo}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Escolha Intertermporal}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Mercado de Ativos}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Incerteza}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Ativos de Risco}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O Excedente do Consumidor}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Demanda de Mercado}
+
+%%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
+\part{Equilíbrio, Econometria e Leilões}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Equilíbrio}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Medição}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Leilões}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Equilíbrio}
+
+%%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
+\part{Teoria da Firma}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Tecnologia}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Maximização do Lucro}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Minimização de Custos}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Curva de Custo}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Oferta da Empresa}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Oferta da Indústria}
+
+%%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
+\part{Mercados}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Monopólio}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O Comportamento do Monipolista}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O Mercado de Fatores}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O Oligopólio}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{A Teoria dos Jogos}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Aplicações da Teoria dos Jogos}
+
+%%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
+\part{Tópicos Avançados}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Economia Comportamental}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Trocas}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Produção}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{O Bem-Estar}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Externalidades}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Tecnologia da Informação}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Bens Públicos}
+
+%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Informação Assimétrica}
+
+\end{document}
