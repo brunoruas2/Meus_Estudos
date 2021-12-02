@@ -40,17 +40,17 @@
     - [ ] O Comportamento do Monipolista
     - [ ] O Mercado de Fatores
     - [ ] O Oligopólio
-    - [ ]A Teoria dos Jogos
-    - [ ]Aplicações da Teoria dos Jogos
+    - [ ] A Teoria dos Jogos
+    - [ ] Aplicações da Teoria dos Jogos
 - [ ] Tópicos Avançados
     - [ ] Economia Comportamental
     - [ ] Trocas
     - [ ] Produção
     - [ ] Bem-Estar
-    - [ ]Externalidades
-    - [ ]Tecnologia da Informação
-    - [ ]Bens Públicos
-    - [ ]Informação Assimétrica
+    - [ ] Externalidades
+    - [ ] Tecnologia da Informação
+    - [ ] Bens Públicos
+    - [ ] Informação Assimétrica
 
 
 ## Matemática
