@@ -262,8 +262,38 @@ Você já deve ter visto no ensino médio que o \textbf{logaritmo natural} ou \t
 \end{itemize}
 
 \section{Derivadas}
+
+Você deve lembrar desse conceito das aulas de matemática no primeiro período. A \textbf{derivada} da função $f(x)$ será dada por:
+
+$$ f'(x) = \frac{df(x)}{dx} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} $$
+\\
+Mas perai, a gente acabou de ver um conceito muito parecido no ponto 1.7. E é isso mesmo, a derivada é o cálculo da taxa de variação à medida que aplicamos o limite\footnote{Vá pesquisar se você não souber o que é isso.} até $0$ para nosso $\Delta x$.
+\\
+\\
+\textbf{Comentário}: Essa técnica é muito importante ao longo de quase todos os tópicos desse curso. Volte nas apostilas e nas listas de derivadas caso seja necessário.
+
 \section{Derivadas segundas}
+
+Já vimos que a deriva nos permite saber a inclinação da reta tangente da nossa função genérica $f(x)$ num determinado ponto. Chamamos de \textbf{derivada segunda} de $f(x)$ a derivada da derivada dessa função.
+
+$$ f''(x) = \frac{d^2f(x)}{dx^2} $$
+\\
+Nós aplicamos a derivada segunda para descobrirmos a curvatura da função no ponto $x$. Se for positiva, a função é convexa no ponto. Se for negativa, a função é côncava no ponto. Por fim, se for igual a zero, a função será plana.
+
 \section{A regra do produto e da cadeia}
+
+Dadas duas funções $g(x)$ e $h(x)$ Se definirmos uma nova função $f(x) = g(x) h(x)$. A derivada dessa última função é dada pela aplicação da \textbf{regra do produto}:
+\\
+$$ \frac{df(x)}{dx} = g(x)\frac{dh(x)}{dx} + h(x)\frac{dg(x)}{dx}$$
+\\
+\\
+\textbf{Comentário}: Normalmente a gente vê a regra do produto e da divisão junto. Mas o prof. Varian não colocou essa segunda regra como necessária. Então se eu ver que ficou faltando, eu atualizo esse material.
+\\
+\\
+Agora imagine a situação onde temos uma função dentro de outra função. Dadas as funções $y = g(x)$ e $z = h(y)$, a \textbf{função composta} é dada por $f(x) = h(g(x))$, cuja derivada é obtida pela seguinte regra:
+
+$$ \frac{df(x)}{dx} = \frac{dh(y)}{dy}\frac{dg(x)}{x}$$
+
 \section{Derivadas parciais}
 
 Nós já vimos no ponto 1.1 que funções podem conter mais de uma variável independente. Supondo uma função composta $f(x_1,x_2)$ a sua \textbf{derivada parcial} em relação a $x_1$ será dada por:
