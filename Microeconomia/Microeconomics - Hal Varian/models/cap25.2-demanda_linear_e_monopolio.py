@@ -15,14 +15,14 @@ plt.style.use('dark_background')
 # Constantes usadas:
 a = 100
 b = 5
-CF = 200 # custo fixo
-CV = 10 # custo variavel
+CF = 150 # custo fixo
+CV = 1 # custo variavel
 
 # Sistema de Equações:
 # Curva de Demanda Linear -> p(y) = a - by #
 # Função Receita -> r(y) = p(y)y = ay - by^2
 # Função Receita Marginal -> RM(y) = a - 2by
-# Função Custo Total -> c(y) = CF + CV*y
+# Função Custo Total -> c(y) = CF + 5*CV*y + (CV*y^3)/3
 # Função Custo Marginal -> CMa(y) = CV
 
 # Modelo
@@ -31,9 +31,9 @@ y = np.linspace(0,100,1000)
 dem_lin = a - b * y
 receita = a * y - b * (y ** 2)
 rec_marg = a - 2*b*y
-custo_total = CF + CV*y
-custo_medio = CF / y
-custo_marginal = CV
+custo_total = CF + 5*CV*y + (CV*y**3)/3
+custo_medio = custo_total / y
+custo_marginal = 5*CV + CV*y**2
 lucro = receita - custo_total
 
 dataframe = pd.DataFrame()
