@@ -25,6 +25,9 @@
 \usepackage{cancel} % para poder colocar o tracinho de cancelamento
 \usepackage{tikz} % to draw Venn's diagrams
 \usepackage{amsmath} % to write a function by cases
+\usepackage{graphicx} % to set a images directory
+
+\graphicspath{{./images/}}
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -362,6 +365,8 @@ A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(
 
 Ao longo do livro eu vou construir alguns programas em Python para simular alguns modelos. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, eu posso manter aqui os links dos arquivos usados nos modelos para que possam ser estudados por contra própria.\footnote{Ou talvez a gente faça um curso sobre isso.}
 
+\section{Capítulo 25 - Monopólio}
+\href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{Capítulo 25.2 - Demanda Linear e Monopólio.}
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Escolha}
@@ -473,10 +478,10 @@ Ao longo do livro eu vou construir alguns programas em Python para simular algun
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Monopólio}
 
-Anteriormente, fora demonstrado como a oferta pode ser construída da firma individual até a indústria competitiva. Nesse cenário, todos os ofertantes não possuem poder de interferir no preço e na quantidade de equilíbrio do mercado. Mas podemos pensar num caso muito diferente: Como seria o caso onde só exista uma empresa que controle toda a oferta?
+Anteriormente, fora demonstrado como a oferta pode ser construída da firma individual até a indústria competitiva. Nesse cenário, todos os ofertantes não possuem poder de interferir no preço e na quantidade de equilíbrio do mercado. Mas podemos pensar num caso muito diferente: Como seria o caso onde só exista uma empresa controlando toda a oferta?
 \\
 \\
-Diferente dos casos anteriores, precisamos construir um modelo de tomada de decisão que leve em consideração a capacidade do monopolista de intervir diretamente no preço de modo a maximizar seus lucros totais.
+Diferente dos casos anteriores, agora nós buscamos construir um modelo de tomada de decisão que leve em consideração a capacidade do monopolista de intervir diretamente no preço de modo a maximizar seus lucros totais.
 \\
 \\
 Existem duas maneiras de enxergar esse problema. Podemos modelar como se o monopolista controlasse o preço e a demanda é quem definiria a quantidade. Ou, ao contrário, podemos modelar como se o monopolista definisse a quantidade a ser produzida e a demanda definiria o seu preço de equilíbrio para essa quantidade.
@@ -486,7 +491,7 @@ Independente do modelo, podemos ver que as abordagens são equivalentes. Por fac
 
 \section{Maximização dos Lucros}
 
-Como vimos nos capítulo 01, estamos diante de um problema de maximização. Sendo mais preciso, nós queremos maximizar o lucro do monopolista dado por $yp(y) - c(y)$ onde $p(y)$ é a demanda inversa\footnote{Ou seja, ela mostra o preço de equilíbrio dada uma quantidade qualquer.} para o mercado, $r(y) = yp(y)$ é a receita do monopolista e $c(y)$ é o custo de produção das $y$ unidades. Podemos resumir nosso problema como
+Como vimos nos capítulo 01, estamos diante de um problema de maximização. Sendo mais preciso, nós queremos maximizar o lucro do monopolista dado por $yp(y) - c(y)$ onde $p(y)$ é a demanda inversa\footnote{Lá do capítulo 15. É a função que indica qual deve ser o preço do bem para que seja demanda uma determinada quantidade.} para o mercado, $r(y) = yp(y)$ é a receita do monopolista e $c(y)$ é o custo de produção das $y$ unidades. Podemos resumir nosso problema como
 
 \begin{center}
 \LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{r(y) - c(y)}{\ }$ \\
@@ -509,13 +514,49 @@ $$ \frac{\Delta r}{\Delta y} =
 \frac{p \Delta y}{\Delta y} + 
 \frac{y \Delta p}{\Delta y} $$
 
-$$ \frac{\Delta r}{\Delta y} = 
+$$ \phantom{\frac{\Delta r}{\Delta y}} = 
 \frac{p \cancel{\Delta y}}{\cancel{\Delta y}} + 
 \frac{y \Delta p}{\Delta y} $$
 
-$$ \frac{\Delta r}{\Delta y} = p + \frac{y \Delta p}{\Delta y} $$
+$$ \phantom{\frac{\Delta r}{\Delta y}} = p + y\frac{\Delta p}{\Delta y} $$
+
+$$ \phantom{\frac{\Delta r}{\Delta y}} = 
+p \left[ 1 + \frac{y}{p}\frac{\Delta p}{\Delta y} \right] $$
+
+$$ \phantom{\frac{\Delta r}{\Delta y}} = 
+p \left[ 1 + \frac{1}{\epsilon(y)} \right] $$
+\\
+Como a elasticidade da demanda é negativa, podemos reescrever como
+
+$$ \frac{\Delta r}{\Delta y} = 
+RM(y) =
+p \left[ 1 - \frac{1}{|\epsilon(y)|} \right] $$
+\\
+Agora que sofisticamos um pouco mais a ideia da receita marginal. Voltemos para a condição de maximização onde a Receita Marginal deve ser igual a o Custo Marginal.
+
+$$ p(y) \left[ 1 - \frac{1}{|\epsilon(y)|} \right] = CMa(y) $$
+\\
+Agora podemos ver claramente que o nosso monopolista atuará somente nos pontos onde a demanda é elástica ($|\epsilon| > 1$). Se operar no ponto onde $\epsilon = 1$, cairá exatamente no caso da competição perfeita\footnote{Onde o preço é igual ao custo marginal.}. Não faz sentido para ele operar nos pontos onde a demanda é inelástica porque ele poderia simplesmente reduzir a quantidade produzida (o que reduziria o custo total) com aumento de receita (porque o preço aumentaria). O ponto de máximo estará sempre na zona onde $|\epsilon| \geq 1$.
 
 \section{Curva de Demanda Linear e Monopólio}
+
+Veremos como fica o comportamento dessas variáveis num exemplo cuja curva de demanda é linear. O professor dá o seguinte sistema de equações:
+
+$$ \textrm{Demanda Linear Inversa: } p(y) = a - by $$
+$$ \textrm{Função Receita: } r(y) = p(y)y = ay - by^2 $$
+$$ \textrm{Função Receita Marginal: } RM(y) = a - 2by $$
+\\
+A receita marginal é dada (como vemos no capítulo 15) pela derivada da função receita. Podemos ver que o intercepto vertical da demanda e da receita marginal são igual (dado pelo ponto $a$).
+\\
+\\
+\textbf{Simulação:} \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Clique aqui} para ter acesso a uma simulação desse modelo. Você pode mudar os parâmetros de "$a$", "$b$", "CF"\ e "CV"\ afim de verificar como os valores se modificam.
+
+\begin{center}
+\includegraphics[scale=0.6]{cap25_2-demanda_linear_e_monopolio.png}
+\end{center}
+
+Conseguimos ver que a curva de lucro tem um ponto de máximo exatamente onde a curva da receita marginal encontra o custo marginal. Qualquer ponto diferente desse levaria a um nível de lucro menor.
+
 \section{Estabelecimento de Preços com Markup}
 \section{A Ineficiência do Monopólio}
 \section{O Ônus do Monopólio}
