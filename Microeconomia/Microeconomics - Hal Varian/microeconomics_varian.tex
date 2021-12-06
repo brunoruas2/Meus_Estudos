@@ -363,10 +363,19 @@ A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Programação}
 
-Ao longo do livro eu vou construir alguns programas em Python para simular alguns modelos. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, eu posso manter aqui os links dos arquivos usados nos modelos para que possam ser estudados por contra própria.\footnote{Ou talvez a gente faça um curso sobre isso.}
+Caro aluno, com o avanço do poder computacional e da disponibilidade de dados, os economistas não ficaram de fora da revolução tecnológica. Além de todo o arcabouço teórico, matemático, estatístico, histórico e social que você está adquirindo na sua formação, a programação se tornou uma ferramenta indispensável para o processo de análise moderna e merece ser objeto do seu estudo\footnote{Pode até ser que você não tenha alguma matéria de programação na sua grade curricular, mas não se engane, mesmo que seu curso não esteja cobrando, vá estudar por conta própria.}.
+\\
+\\
+Ao longo do livro eu vou construir alguns programas em Python para simular os modelos que a gente for construindo. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, cada código será disponibilizado em dois links. O primeiro é referente ao repositório no github e o segundo é referente a um notebook no google colab onde você pode executar o modelo sem precisar instalar nada no seu computador.
 
 \section{Capítulo 25 - Monopólio}
-\href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{Capítulo 25.2 - Demanda Linear e Monopólio.}
+
+\subsection{Demanda Linear e Monopólio (25.2)}
+\href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{Código no Github.}
+\\
+\\
+\href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Simulação no Google Colab.}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Escolha}
@@ -546,7 +555,7 @@ $$ \textrm{Demanda Linear Inversa: } p(y) = a - by $$
 $$ \textrm{Função Receita: } r(y) = p(y)y = ay - by^2 $$
 $$ \textrm{Função Receita Marginal: } RM(y) = a - 2by $$
 \\
-A receita marginal é dada (como vemos no capítulo 15) pela derivada da função receita. Podemos ver que o intercepto vertical da demanda e da receita marginal são igual (dado pelo ponto $a$).
+A receita marginal é dada (como vemos no capítulo 15) pela derivada da função receita. Podemos ver que o intercepto vertical da demanda e da receita marginal são iguais (dado pelo ponto $a$).
 \\
 \\
 \textbf{Simulação:} \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Clique aqui} para ter acesso a uma simulação desse modelo. Você pode mudar os parâmetros de "$a$", "$b$", "CF"\ e "CV"\ afim de verificar como os valores se modificam.
@@ -555,7 +564,7 @@ A receita marginal é dada (como vemos no capítulo 15) pela derivada da funçã
 \includegraphics[scale=0.8]{cap25_2-demanda_linear_e_monopolio.png}
 \end{center}
 
-Para poder fazer essa simulação, eu tive de definir uma função custo e, consequentemente, uma função custo marginal\footnote{Eu tentei pensar numa função que apresentasse um comportamento parecido com o que vemos no livro.}. Conseguimos ver que a curva de lucro tem um ponto de máximo exatamente onde a curva da receita marginal encontra o custo marginal. Qualquer ponto diferente desse levaria a um nível de lucro menor.
+Para poder fazer essa simulação, eu tive de definir uma função custo e, consequentemente, uma função custo marginal\footnote{Eu tentei pensar numa função que apresentasse um comportamento parecido com a imagem que vemos no livro.}. Conseguimos ver que a curva de lucro tem um ponto de máximo exatamente onde a curva da receita marginal encontra o custo marginal. Qualquer ponto diferente desse levaria a um nível de lucro menor.
 
 \section{Estabelecimento de Preços com Markup}
 
