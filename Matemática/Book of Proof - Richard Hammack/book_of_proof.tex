@@ -1241,6 +1241,20 @@ Como vimos anteriormente subtraímos a união entre $n$ conjuntos se $2|n$, isto
 Como podemos garantir que essa fórmula resulta no que queremos? Bom, para isso precisamos lembrar de uma propriedade das combinações onde ${n \choose k} = {n \choose n-k}$. Isso implicaria que se fizermos ${n \choose 0} - (3.1) = 0$, está correto pois sabemos que ${n \choose 0} = 1$. Assim, está provado o Princípio da Inclusão-Exclusão, caso queira pode fazer prova por PIF.
 
 \section{Contando Multiconjuntos}
+No decorrer deste capítulo já aprendemos muitas coisas, Combinações, Arranjos, Permutações, etc. Porém como pode passar em sua cabeça ainda não sabemos trabalhar com elementos repetidos nos conjuntos, sim, sabemos que conjuntos não permitem repetições. Portanto é necessário introduzir um novo elemento da matemática, os \textbf{multiconjuntos.}
+\\
+Nos multiconjuntos as repetições são permitidas e a ordem com que os elementos estão dispostos dentro dele não importa tal qual nos conjuntos. Isso faz deles um híbrido entre conjuntos e listas.
+\\
+Dos conjuntos ainda conserva-se uma propriedade, a \textbf{cardinaldiade}, a ideia é exatamente a mesma, a cardinalidade é a quantidade de elementos do multiconjuntos. A outra propriedade dos multiconjuntos é a \textbf{multiplicidade}, esta por sua vez é a quantidade de vezes que um elemento qualquer repete-se dentro do multiconjuntos.
+\begin{fact}[Contagem de Multiconjuntos]
+Sejam $x_{1}, x_{2}, x_{3},... x_{n}$ a multiplicidade de cada um dos $n$ elementos do multiconjuntos $A$, o número total de permutações possíveis é dado por:
+$$\frac{n!}{x_{1}!x_{2}!...x_{n}!}$$
+\end{fact}
+Com a boa compreensão que temos da contagem de subconjuntos esse parte fica muito fácil de ser compreendida porque o mecanismo é exatamente o mesmo.
+\\
+Temos um multiconjuntos de $n$ elementos. Portanto, ignorando os elementos repetidos, o número de permutações que temos desse multiconjuntos é $n! = n(n-1)...(n-n)!$.
+\\
+Lembre-se do que fizemos na parte contagem de subconjuntos, nós eliminamos conjuntos que "davam na mesma" dividindo a fórmula da combinação pela cardinalidade dos subconjuntos, faremos algo bem semelhante aqui.
 \section{Os Princípios da Divisão e da Casa dos Pombos}
 \section{Prova Combinatorial}
 
