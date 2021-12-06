@@ -25,6 +25,9 @@
 \usepackage{cancel} % para poder colocar o tracinho de cancelamento
 \usepackage{tikz} % to draw Venn's diagrams
 \usepackage{amsmath} % to write a function by cases
+\usepackage{graphicx} % to set a images directory
+
+\graphicspath{{./images/}}
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -118,7 +121,7 @@
 % Book's title and subtitle
 \title{\Huge \textbf{Microeconomia} \\ 
 \Large Tradução da 9 edição \\
-\huge by Hal R. Varian}
+\huge Hal R. Varian}
 
 % Author
 \author{
@@ -262,15 +265,108 @@ Você já deve ter visto no ensino médio que o \textbf{logaritmo natural} ou \t
 \end{itemize}
 
 \section{Derivadas}
+
+Você deve lembrar desse conceito das aulas de matemática no primeiro período. A \textbf{derivada} da função $f(x)$ será dada por:
+
+$$ f'(x) = \frac{df(x)}{dx} = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} $$
+\\
+Mas perai, a gente acabou de ver um conceito muito parecido no ponto 1.7. E é isso mesmo, a derivada é o cálculo da taxa de variação à medida que aplicamos o limite\footnote{Vá pesquisar se você não souber o que é isso.} até $0$ para nosso $\Delta x$.
+\\
+\\
+\textbf{Comentário}: Essa técnica é muito importante ao longo de quase todos os tópicos desse curso. Volte nas apostilas e nas listas de derivadas caso seja necessário.
+
 \section{Derivadas segundas}
+
+Já vimos que a deriva nos permite saber a inclinação da reta tangente da nossa função genérica $f(x)$ num determinado ponto. Chamamos de \textbf{derivada segunda} de $f(x)$ a derivada da derivada dessa função.
+
+$$ f''(x) = \frac{d^2f(x)}{dx^2} $$
+\\
+Nós aplicamos a derivada segunda para descobrirmos a curvatura da função no ponto $x$. Se for positiva, a função é convexa no ponto. Se for negativa, a função é côncava no ponto. Por fim, se for igual a zero, a função será plana.
+
 \section{A regra do produto e da cadeia}
+
+Dadas duas funções $g(x)$ e $h(x)$ Se definirmos uma nova função $f(x) = g(x) h(x)$. A derivada dessa última função é dada pela aplicação da \textbf{regra do produto}:
+\\
+$$ \frac{df(x)}{dx} = g(x)\frac{dh(x)}{dx} + h(x)\frac{dg(x)}{dx}$$
+\\
+\\
+\textbf{Comentário}: Normalmente a gente vê a regra do produto e da divisão junto. Mas o prof. Varian não colocou essa segunda regra como necessária. Então se eu ver que ficou faltando, eu atualizo esse material.
+\\
+\\
+Agora imagine a situação onde temos uma função dentro de outra função. Dadas as funções $y = g(x)$ e $z = h(y)$, a \textbf{função composta} é dada por $f(x) = h(g(x))$, cuja derivada é obtida pela seguinte regra:
+
+$$ \frac{df(x)}{dx} = \frac{dh(y)}{dy}\frac{dg(x)}{x}$$
+
 \section{Derivadas parciais}
+
+Nós já vimos no ponto 1.1 que funções podem conter mais de uma variável independente. Supondo uma função composta $f(x_1,x_2)$ a sua \textbf{derivada parcial} em relação a $x_1$ será dada por:
+
+$$ \frac{\partial f(x_1,x_2)}{\partial x_1} = 
+\lim_{\Delta x_1 \to 0} \frac{f(x_1+\Delta x_1,x_2) - f(x_1,x_2)}{\Delta x_1} $$
+\\
+similarmente, a derivada parcial em relação a $x_2$ será dada por
+\\
+$$ \frac{\partial f(x_1,x_2)}{\partial x_2} = 
+\lim_{\Delta x_2 \to 0} \frac{f(x_1,x_2+\Delta x_2) - f(x_1,x_2)}{\Delta x_2} $$
+\\
+A ideia por trás de uma derivada parcial é verificar a taxa de variação entre a nossa função composta em relação a alguma variação de apenas uma das variáveis independentes, ou seja, é como se tratássemos as outras variáveis como constantes.
+\\
+\\
+As propriedades das derivadas parciais são parecidas com as normais. Exceção é a regra da cadeia. Seja a função composta $g(t) = f(x_1(t),x_2(t))$, então a derivada de $g(t)$ em relação a $t$ é dada por:
+
+$$ \frac{dg(t)}{dt} = 
+\frac{\partial f(x_1,x_2)}{\partial x_1}\frac{dx_1(t)}{dt} + 
+\frac{\partial f(x_1,x_2)}{\partial x_2}\frac{dx_2(t)}{dt} $$
+\\
+Atente para o fato que as variáveis independentes da nossa função $g(t)$ são as funções $x_1(t)$ e $x_2(t)$ que também têm como variável independente $t$.
+
 \section{Otimização}
+
+A maioria dos modelos utilizados pela Economia podem ser expressos como um problemas de otimização. Matematicamente falando, dada uma função $y = f(x)$ seu valor \textbf{máximo} será dado ponto $x^*$ se $f(x^*) \geqslant f(x)$ para qualquer valor de $x$. Não faz parte do escopo desse apêndice demonstrar isso, então tenha fé que, se uma função for suave, o seu valor máximo é obtido no ponto onde teremos
+
+$$ \frac{df(x^*)}{dx} = 0 $$
+
+e também
+
+$$ \frac{d^2f(x^*)}{dx^2} \leq 0$$
+\\
+Ou seja, o máximo será o ponto onde a derivada for igual a zero e a derivada segunda for menor igual a zero. Chamamos a primeira de \textbf{condição de primeira ordem} e a segunda de \textbf{condição de segunda ordem}.
+\\
+\\
+Também é muito comum buscarmos a minimização de determinadas funções. Nesse caso, só teremos uma pequena mudança na condição de segunda ordem;
+
+$$ \frac{df(x^*)}{dx} = 0 $$
+
+e também
+
+$$ \frac{d^2f(x^*)}{dx^2} \geq 0$$
+\\
+No casos das funções compostas suaves, as condições de primeira ordem para os pontos de máximo e mínimo são alcançadas no ponto $(x_{1}^*,x_{2}^*)$ cujas derivadas serão
+
+$$ \frac{\partial f(x_{1}^*,x_{2}^*)}{\partial x_1} = 0 $$
+e
+$$ \frac{\partial f(x_{1}^*,x_{2}^*)}{\partial x_2} = 0 $$
+\\
+As condições de segunda ordem são muito mais complexas então não fazem parte do escopo desse curso.
+
 \section{Otimização com restrição}
 
+Saber maximizar ou minimizar uma função é só uma parte do problema de otimização. Na vida real, a esmagadora maioria das situações de otimização está contida dentro de algum limite de possibilidades. A \textbf{otimização com restrição} é a técnica usada para encontrar o ponto de máximo ou mínimo de alguma função dentro de um determinado domínio de possibilidades.
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $x_1,x_2$}} \ \ \stackrel{f(x_1,x_2)}{\ }$ \\
+\normalsize $\textrm{de modo que } g(x_1,x_2) = c$
+\end{center}
+
+A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(x_1,x_2) = c$ é chamada de \textbf{restrição}.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Programação}
+
+Ao longo do livro eu vou construir alguns programas em Python para simular alguns modelos. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, eu posso manter aqui os links dos arquivos usados nos modelos para que possam ser estudados por contra própria.\footnote{Ou talvez a gente faça um curso sobre isso.}
+
+\section{Capítulo 25 - Monopólio}
+\href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{Capítulo 25.2 - Demanda Linear e Monopólio.}
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Escolha}
@@ -282,17 +378,18 @@ Você já deve ter visto no ensino médio que o \textbf{logaritmo natural} ou \t
 	``The theory of sets is a language that is perfectly suited to describing and explaning all types of mathematical structures.''
 \end{chapquote}
 
-\section{A elaboração de um modelo}
-\section{Otimização e equilíbrio}
-\section{A curva de demanda}
-\section{A curva de oferta}
-\section{O equilíbrio de mercado}
-\section{A estática comparativa}
-\section{Outras formas de alocar apartamentos}
-\section{Qual o melhor arranjo?}
-\section{A eficiência de Pareto}
-\section{Comparação entra as formas de alocação de apartamentos}
-\section{Equilíbrio no longo prazo}
+
+%\section{A elaboração de um modelo}
+%\section{Otimização e equilíbrio}
+%\section{A curva de demanda}
+%\section{A curva de oferta}
+%\section{O equilíbrio de mercado}
+%\section{A estática comparativa}
+%\section{Outras formas de alocar apartamentos}
+%\section{Qual o melhor arranjo?}
+%\section{A eficiência de Pareto}
+%\section{Comparação entra as formas de alocação de apartamentos}
+%\section{Equilíbrio no longo prazo}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Restrição Orçamentária}
@@ -380,6 +477,94 @@ Você já deve ter visto no ensino médio que o \textbf{logaritmo natural} ou \t
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Monopólio}
+
+Anteriormente, fora demonstrado como a oferta pode ser construída da firma individual até a indústria competitiva. Nesse cenário, todos os ofertantes não possuem poder de interferir no preço e na quantidade de equilíbrio do mercado. Mas podemos pensar num caso muito diferente: Como seria o caso onde só exista uma empresa controlando toda a oferta?
+\\
+\\
+Diferente dos casos anteriores, agora nós buscamos construir um modelo de tomada de decisão que leve em consideração a capacidade do monopolista de intervir diretamente no preço de modo a maximizar seus lucros totais.
+\\
+\\
+Existem duas maneiras de enxergar esse problema. Podemos modelar como se o monopolista controlasse o preço e a demanda é quem definiria a quantidade. Ou, ao contrário, podemos modelar como se o monopolista definisse a quantidade a ser produzida e a demanda definiria o seu preço de equilíbrio para essa quantidade.
+\\
+\\
+Independente do modelo, podemos ver que as abordagens são equivalentes. Por facilidade analítica vamos seguir a abordagem de definição da quantidade produzida.
+
+\section{Maximização dos Lucros}
+
+Como vimos nos capítulo 01, estamos diante de um problema de maximização. Sendo mais preciso, nós queremos maximizar o lucro do monopolista dado por $yp(y) - c(y)$ onde $p(y)$ é a demanda inversa\footnote{Lá do capítulo 15. É a função que indica qual deve ser o preço do bem para que seja demanda uma determinada quantidade.} para o mercado, $r(y) = yp(y)$ é a receita do monopolista e $c(y)$ é o custo de produção das $y$ unidades. Podemos resumir nosso problema como
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{r(y) - c(y)}{\ }$ \\
+\end{center}
+
+A condição de otimização é evidente: A receita marginal deve ser igual ao custo marginal. Se a receita marginal for maior, bastaria aumentar a produção para aumentar os lucros. Se fosse menor, seria necessário reduzir a quantidade produzida afim de elevar o preço a um nível satisfatório. Algebricamente, temos que
+
+$$ \textrm{RM = CMa} $$
+$$ ou $$
+$$ \frac{\Delta r}{\Delta y} = \frac{\Delta c}{\Delta y} $$
+\\
+Até aqui a gente tá bem perto da modelagem para as firmas competidoras. O custo marginal é definido pela tecnologia de produção. A mudança acontecerá na receita marginal. 
+\\
+\\
+Como o monopolista tem o poder de intervir no mercado, sempre que ele decidir alterar a produção em $\Delta y$ unidades, haverá dois efeitos na receita. Em primeiro lugar, ele terá um aumento na receita em $p\Delta y$ unidades. Em segundo lugar, como o mercado terá mais bens a sua disposição, ele estará disposto a pagar um preço menor pelas novas unidades, ou seja, $y\Delta p$. O resultado líquido desse efeito é obtido por
+
+$$\Delta r = p \Delta y + y \Delta p$$
+
+$$ \frac{\Delta r}{\Delta y} = 
+\frac{p \Delta y}{\Delta y} + 
+\frac{y \Delta p}{\Delta y} $$
+
+$$ \phantom{\frac{\Delta r}{\Delta y}} = 
+\frac{p \cancel{\Delta y}}{\cancel{\Delta y}} + 
+\frac{y \Delta p}{\Delta y} $$
+
+$$ \phantom{\frac{\Delta r}{\Delta y}} = p + y\frac{\Delta p}{\Delta y} $$
+
+$$ \phantom{\frac{\Delta r}{\Delta y}} = 
+p \left[ 1 + \frac{y}{p}\frac{\Delta p}{\Delta y} \right] $$
+
+$$ \phantom{\frac{\Delta r}{\Delta y}} = 
+p \left[ 1 + \frac{1}{\epsilon(y)} \right] $$
+\\
+Como a elasticidade da demanda é negativa, podemos reescrever como
+
+$$ \frac{\Delta r}{\Delta y} = 
+RM(y) =
+p \left[ 1 - \frac{1}{|\epsilon(y)|} \right] $$
+\\
+Agora que sofisticamos um pouco mais a ideia da receita marginal. Voltemos para a condição de maximização onde a Receita Marginal deve ser igual a o Custo Marginal.
+
+$$ p(y) \left[ 1 - \frac{1}{|\epsilon(y)|} \right] = CMa(y) $$
+\\
+Agora podemos ver claramente que o nosso monopolista atuará somente nos pontos onde a demanda é elástica ($|\epsilon| > 1$). Se operar no ponto onde $\epsilon = 1$, cairá exatamente no caso da competição perfeita\footnote{Onde o preço é igual ao custo marginal.}. Não faz sentido para ele operar nos pontos onde a demanda é inelástica porque ele poderia simplesmente reduzir a quantidade produzida (o que reduziria o custo total) com aumento de receita (porque o preço aumentaria). O ponto de máximo estará sempre na zona onde $|\epsilon| \geq 1$.
+
+\section{Curva de Demanda Linear e Monopólio}
+
+Veremos como fica o comportamento dessas variáveis num exemplo cuja curva de demanda é linear. O professor dá o seguinte sistema de equações:
+
+$$ \textrm{Demanda Linear Inversa: } p(y) = a - by $$
+$$ \textrm{Função Receita: } r(y) = p(y)y = ay - by^2 $$
+$$ \textrm{Função Receita Marginal: } RM(y) = a - 2by $$
+\\
+A receita marginal é dada (como vemos no capítulo 15) pela derivada da função receita. Podemos ver que o intercepto vertical da demanda e da receita marginal são igual (dado pelo ponto $a$).
+\\
+\\
+\textbf{Simulação:} \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Clique aqui} para ter acesso a uma simulação desse modelo. Você pode mudar os parâmetros de "$a$", "$b$", "CF"\ e "CV"\ afim de verificar como os valores se modificam.
+
+\begin{center}
+\includegraphics[scale=0.8]{cap25_2-demanda_linear_e_monopolio.png}
+\end{center}
+
+Para poder fazer essa simulação, eu tive de definir uma função custo e, consequentemente, uma função custo marginal\footnote{Eu tentei pensar numa função que apresentasse um comportamento parecido com o que vemos no livro.}. Conseguimos ver que a curva de lucro tem um ponto de máximo exatamente onde a curva da receita marginal encontra o custo marginal. Qualquer ponto diferente desse levaria a um nível de lucro menor.
+
+\section{Estabelecimento de Preços com Markup}
+
+
+
+\section{A Ineficiência do Monopólio}
+\section{O Ônus do Monopólio}
+\section{Monopólio Natural}
+\section{O Que Causa os Monopólios?}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Comportamento do Monipolista}
