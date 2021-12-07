@@ -565,10 +565,28 @@ A receita marginal é dada (como vemos no capítulo 15) pela derivada da funçã
 \end{center}
 
 Para poder fazer essa simulação, eu tive de definir uma função custo e, consequentemente, uma função custo marginal\footnote{Eu tentei pensar numa função que apresentasse um comportamento parecido com a imagem que vemos no livro.}. Conseguimos ver que a curva de lucro tem um ponto de máximo exatamente onde a curva da receita marginal encontra o custo marginal. Qualquer ponto diferente desse levaria a um nível de lucro menor.
+\\
+\\
+Além disso, outra condição de maximização é o fato da curva de custo médio estar abaixo da curva de demanda\footnote{Tente justificar isso matematicamente e, depois, tente criar uma situação onde isso acontece.}. Se o ponto de produção cuja receita marginal é igual ao custo marginal tiver um custo médio superior a demanda, a empresa receberá menos do que os custo de produção.\footnote{Veremos isso daqui a pouco no ponto 25.6.}.
 
 \section{Estabelecimento de Preços com Markup}
 
+Já conseguimos aprimorar nosso modelo de escolha da firma para o caso do monopolista. Agora tornamos a receita marginal endógena e podemos ver as condições de maximização do lucro quando a firma tem poder de definir o preço ou a quantidade do mercado (mas não os dois ao mesmo tempo).
+\\
+\\
+Podemos compreender essa última equação como uma política de preço do monopolista. Para isso, só precisamos isolar o termo $p(y)$ via rearranjo da equação, o que após feito nos dá a seguinte relação
 
+$$ p(y) = \frac{CMa(y^*)}{1 - 1/|\epsilon(y)|} $$
+\\
+Essa equação nos diz que o preço praticado no mercado cujo monopolista atua sempre\footnote{Sempre que ele agir de acordo com os pressupostos do nosso modelo de escolha.} se comportará como uma função de \textit{markup} do seu custo marginal. Podemos simplificar a visualização disso do seguinte modo
+
+$$ p(y) = \phi CMa(y^*) $$
+onde $\phi = \frac{1}{1 - 1/|\epsilon(y)|}$
+\\
+\\
+Como sabemos, o monopolista sempre operará nos pontos cuja demanda é elástica\footnote{Ele até pode operar no ponto onde $\epsilon = 1$, já vimos que nesse caso, o resultado seria o mesmo do caso na competição perfeita.}, isso nos dará um $\epsilon(y) > 1$. Isso nos diz que o nosso termo $(1 - 1/|\epsilon|) <  1$, o que por sua vez, nos diz que $\phi > 1$.
+
+\subsection{Demanda com Elasticidade Constante e Monopólio}
 
 \section{A Ineficiência do Monopólio}
 \section{O Ônus do Monopólio}
