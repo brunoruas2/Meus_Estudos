@@ -22,12 +22,12 @@ plt.style.use('dark_background')
 # Constantes usadas nas equações:
 a = 100
 b = 5
-CF = 150 # custo fixo
-CV = 1 # custo variavel
+CF = 100 # custo fixo
+CV = 2 # custo variavel
 
 
 # Modelo
-y = np.linspace(0,100,1000)
+y = np.linspace(0,20,1000)
 
 dem_lin = a - b * y
 receita = a * y - b * (y ** 2)
@@ -65,10 +65,10 @@ plt.plot(dataframe['quant'], dataframe['dem_lin'],'-',color='red', label='Demand
 plt.plot(dataframe['quant'], dataframe['rec_marg'],'-',color='blue', label='Receita Marginal')
 plt.plot(dataframe['quant'], dataframe['custo_medio'],'-',color='green', label='Custo Medio')
 plt.plot(dataframe['quant'], dataframe['custo_marginal'],'-',color='white', label='CMa')
-#plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Oferta Monopolista')
+plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Oferta Monopolista') # oferta do monopolista
 plt.legend(loc='upper right')
 plt.ylim(0,max(dataframe['dem_lin']))
-plt.xlim(0,a/b)
+plt.xlim(0,max(y))
 
 plt.subplot(2,1,2) # rows, columns, panel number
 plt.plot(dataframe['quant'], dataframe['lucro'],'--',color='white', label='Lucro')
@@ -76,6 +76,6 @@ plt.plot(dataframe['quant'], dataframe['custo_total'],'--',color='blue', label='
 plt.plot(dataframe['quant'], dataframe['receita'],'--',color='red', label='Receita')
 plt.legend(loc='upper right')
 plt.ylim(0,max(dataframe['receita']))
-plt.xlim(0,a/b)
+plt.xlim(0,max(y))
 
 plt.show()
