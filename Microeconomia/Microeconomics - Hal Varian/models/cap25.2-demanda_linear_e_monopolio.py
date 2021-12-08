@@ -17,7 +17,7 @@ plt.style.use('dark_background')
 # Função Receita -> r(y) = p(y)y = ay - by^2
 # Função Receita Marginal -> RM(y) = a - 2by
 # Função Custo Total -> c(y) = CF + 5*CV*y + (CV*y^3)/3
-# Função Custo Marginal -> CMa(y) = CV
+# Função Custo Marginal -> CMa(y) = 5*CV + CV^2
 
 # Constantes usadas nas equações:
 a = 100
@@ -36,9 +36,12 @@ custo_total = CF + 5*CV*y + (CV*y**3)/3
 custo_medio = custo_total / y
 custo_marginal = 5*CV + CV*y**2
 lucro = receita - custo_total
-phi = 1 / (1 - abs(y/dem_lin) * b)
+
+x = a - b * 8.6
+phi = 1 / (1 - 1/abs(-b * 8.6/57))
 oferta = phi * custo_marginal
 
+# Dataframe
 dataframe = pd.DataFrame()
 dataframe['quant'] = y
 dataframe['dem_lin'] = dem_lin
@@ -48,6 +51,8 @@ dataframe['custo_total'] = custo_total
 dataframe['custo_medio'] = custo_medio
 dataframe['custo_marginal'] = custo_marginal
 dataframe['lucro'] = lucro
+
+dataframe.to_excel('teste.xlsx')
 
 dataframe['oferta'] = oferta
 dataframe['oferta'] = dataframe['oferta'].map(lambda s: None if s <= 0 else s)
