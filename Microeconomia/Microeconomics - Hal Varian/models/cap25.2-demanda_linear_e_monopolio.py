@@ -8,6 +8,13 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
+# funcoes usadas
+def bhaskara(a,b,c):
+  r1 = (-b + (b**2 - 4 * a * c)**0.5)/(2 * a)
+  r2 = (-b - (b**2 - 4 * a * c)**0.5)/(2 * a)
+
+  return [r1,r2]
+
 pd.options.mode.chained_assignment = None  # default='warn'
 
 plt.style.use('dark_background')
@@ -27,7 +34,8 @@ CV = 2 # custo variavel
 
 
 # Modelo
-y = np.linspace(0,20,1000)
+y_otimo = max(bhaskara(CV,2*b,-a+5*CV))
+y = np.linspace(0,a/b,1000)
 
 dem_lin = a - b * y
 receita = a * y - b * (y ** 2)
@@ -37,9 +45,8 @@ custo_medio = custo_total / y
 custo_marginal = 5*CV + CV*y**2
 lucro = receita - custo_total
 
-x = a - b * 8.6
-phi = 1 / (1 - 1/abs(-b * 8.6/57))
-oferta = phi * custo_marginal
+phi = 1 / (1 - abs(-b * (y/(a-b*y))))
+oferta = phi * (5*CV + CV*y_otimo**2) # markup de lerner
 
 # Dataframe
 dataframe = pd.DataFrame()
@@ -51,8 +58,6 @@ dataframe['custo_total'] = custo_total
 dataframe['custo_medio'] = custo_medio
 dataframe['custo_marginal'] = custo_marginal
 dataframe['lucro'] = lucro
-
-dataframe.to_excel('teste.xlsx')
 
 dataframe['oferta'] = oferta
 dataframe['oferta'] = dataframe['oferta'].map(lambda s: None if s <= 0 else s)
