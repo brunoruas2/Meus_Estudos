@@ -46,7 +46,7 @@ custo_marginal = 5*CV + CV*y**2
 lucro = receita - custo_total
 
 phi = 1 / (1 - abs(-b * (y/(a-b*y))))
-oferta = phi * (5*CV + CV*y_otimo**2) # markup de lerner
+oferta = phi * (custo_marginal) # markup de lerner
 
 # Dataframe
 dataframe = pd.DataFrame()
@@ -69,13 +69,13 @@ ax.grid(color='gray',linewidth=.2)
 
 plt.subplot(2,1,1) # rows, columns, panel number
 
-plt.title('cap 25.2 - Demanda Linear e Monopólio')
+plt.title('Cap 25.2 - Demanda Linear e Monopólio')
 
 plt.plot(dataframe['quant'], dataframe['dem_lin'],'-',color='red', label='Demanda')
 plt.plot(dataframe['quant'], dataframe['rec_marg'],'-',color='blue', label='Receita Marginal')
 plt.plot(dataframe['quant'], dataframe['custo_medio'],'-',color='green', label='Custo Medio')
 plt.plot(dataframe['quant'], dataframe['custo_marginal'],'-',color='white', label='CMa')
-plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Oferta Monopolista') # oferta do monopolista
+plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Markup') # oferta do monopolista
 plt.legend(loc='upper right')
 plt.ylim(0,max(dataframe['dem_lin']))
 plt.xlim(0,max(y))

@@ -1,5 +1,5 @@
 ### Universidade do Estado do Amazonas - UEA (Microeconomia II)
-## Modelo de Otimização da Receita do Monopólio com uma Demanda linear
+## Modelo de Otimização da Receita do Monopólio com uma Demanda com Elasticidade Constante
 # Varian página 632
 
 # Modulos usados
@@ -8,50 +8,41 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-# funcoes usadas
-def bhaskara(a,b,c):
-  r1 = (-b + (b**2 - 4 * a * c)**0.5)/(2 * a)
-  r2 = (-b - (b**2 - 4 * a * c)**0.5)/(2 * a)
-
-  return [r1,r2]
-
 pd.options.mode.chained_assignment = None  # default='warn'
 
 plt.style.use('dark_background')
 
 # Sistema de Equações:
-# Curva de Demanda Inversa Linear -> p(y) = a - by
-# Função Receita -> r(y) = p(y)y = ay - by^2
-# Função Receita Marginal -> RM(y) = a - 2by
-# Função Custo Total -> c(y) = CF + 5*CV*y + (CV*y^3)/3
-# Função Custo Marginal -> CMa(y) = 5*CV + CV^2
+# Curva de Demanda Inversa CES -> p(y) = a * y^epsilon
+# Função Receita -> r(y) = p(y)y = a * y^(1+epsilon)
+# Função Receita Marginal -> RM(y) = 1+epsilon * y^epsilon * a
+# Função Custo Total -> c(y) = CF + CV*y^2 + (CV*y^3)/3
+# Função Custo Marginal -> CMa(y) = y*CV + y*CV^2
 
 # Constantes usadas nas equações:
-a = 100
-b = 5
-CF = 100 # custo fixo
-CV = 2 # custo variavel
-
+a = 50
+epsilon = -2
+CF = 2 # custo fixo
+CV = 0.1 # custo variavel
 
 # Modelo
-y_otimo = max(bhaskara(CV,2*b,-a+5*CV))
-y = np.linspace(0,a/b,1000)
+y = np.linspace(0,20,1000)
 
-dem_lin = a - b * y
-receita = a * y - b * (y ** 2)
-rec_marg = a - 2*b*y
-custo_total = CF + 5*CV*y + (CV*y**3)/3
+dem_ces = a * y**epsilon
+receita = a * y**(1+epsilon)
+rec_marg = (1+epsilon) * y**epsilon * a
+custo_total = CF + CV*y**2 + (CV*y**3)/3
 custo_medio = custo_total / y
-custo_marginal = 5*CV + CV*y**2
+custo_marginal = CV*y + CV*y**2
 lucro = receita - custo_total
 
-phi = 1 / (1 - abs(-b * (y/(a-b*y))))
-oferta = phi * (5*CV + CV*y_otimo**2) # markup de lerner
+phi = 1 / (1 - 1/abs(epsilon))
+oferta = phi * (custo_marginal) # markup de lerner
 
 # Dataframe
 dataframe = pd.DataFrame()
 dataframe['quant'] = y
-dataframe['dem_lin'] = dem_lin
+dataframe['dem_ces'] = dem_ces
 dataframe['receita'] = receita
 dataframe['rec_marg'] = rec_marg
 dataframe['custo_total'] = custo_total
@@ -67,25 +58,15 @@ fig = plt.figure(dpi=120)
 ax = plt.axes()
 ax.grid(color='gray',linewidth=.2)
 
-plt.subplot(2,1,1) # rows, columns, panel number
+plt.title('Cap 25.3 - Demanda com Elasticidade Constante e Monopólio')
 
-plt.title('cap 25.2 - Demanda Linear e Monopólio')
-
-plt.plot(dataframe['quant'], dataframe['dem_lin'],'-',color='red', label='Demanda')
+plt.plot(dataframe['quant'], dataframe['dem_ces'],'-',color='red', label='Demanda')
 plt.plot(dataframe['quant'], dataframe['rec_marg'],'-',color='blue', label='Receita Marginal')
 plt.plot(dataframe['quant'], dataframe['custo_medio'],'-',color='green', label='Custo Medio')
 plt.plot(dataframe['quant'], dataframe['custo_marginal'],'-',color='white', label='CMa')
-plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Oferta Monopolista') # oferta do monopolista
+plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Markup') # oferta do monopolista
 plt.legend(loc='upper right')
-plt.ylim(0,max(dataframe['dem_lin']))
-plt.xlim(0,max(y))
-
-plt.subplot(2,1,2) # rows, columns, panel number
-plt.plot(dataframe['quant'], dataframe['lucro'],'--',color='white', label='Lucro')
-plt.plot(dataframe['quant'], dataframe['custo_total'],'--',color='blue', label='Custo Total')
-plt.plot(dataframe['quant'], dataframe['receita'],'--',color='red', label='Receita')
-plt.legend(loc='upper right')
-plt.ylim(0,max(dataframe['receita']))
+plt.ylim(0,8)
 plt.xlim(0,max(y))
 
 plt.show()

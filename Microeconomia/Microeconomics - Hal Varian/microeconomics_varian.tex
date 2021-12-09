@@ -571,22 +571,34 @@ Além disso, também é relevante o fato da curva de custo médio estar abaixo d
 
 \section{Estabelecimento de Preços com Markup}
 
-Já conseguimos aprimorar nosso modelo de escolha da firma para o caso do monopolista. Agora tornamos a receita marginal endógena e podemos ver as condições de maximização do lucro quando a firma tem poder de definir o preço ou a quantidade do mercado (mas não os dois ao mesmo tempo).
+Já conseguimos aprimorar nosso modelo de escolha da firma para o caso do monopolista. Agora que tornamos a receita marginal endógena, podemos ver as condições de maximização do lucro quando a firma tem poder de definir o preço ou a quantidade do mercado (mas não os dois ao mesmo tempo).
 \\
 \\
 Podemos compreender essa última equação como uma política de preço do monopolista. Para isso, só precisamos isolar o termo $p(y)$ via rearranjo da equação, o que após feito nos dá a seguinte relação
 
-$$ p(y) = \frac{CMa(y^*)}{1 - 1/|\epsilon(y)|} $$
+$$ p(y) = \frac{CMa(y)}{1 - 1/|\epsilon(y)|} $$
 \\
 Essa equação nos diz que o preço praticado no mercado cujo monopolista atua sempre\footnote{Sempre que ele agir de acordo com os pressupostos do nosso modelo de escolha.} se comportará como uma função de \textit{markup} do seu custo marginal. Podemos simplificar a visualização disso do seguinte modo
 
-$$ p(y) = \phi CMa(y^*) $$
+$$ p(y) = \phi \times CMa(y) $$
 onde $\phi = \frac{1}{1 - 1/|\epsilon(y)|}$
 \\
 \\
 Como sabemos, o monopolista sempre operará nos pontos cuja demanda é elástica\footnote{Ele até pode operar no ponto onde $\epsilon = 1$, já vimos que nesse caso, o resultado seria o mesmo do caso na competição perfeita.}, isso nos dará um $\epsilon(y) > 1$. Isso nos diz que o nosso termo $(1 - 1/|\epsilon|) <  1$, o que por sua vez, nos diz que $\phi > 1$.
+\\
+\\
+Agora vamos dar uma olhada em um caso muito interessante: quando a curva de demanda possui a mesma elasticidade em todos os seus pontos.
 
 \subsection{Demanda com Elasticidade Constante e Monopólio}
+
+Para simular o caso da demanda com elasticidade constante, vamos usar o método do markup para encontrar o ponto de oferta do monopolista. Como esperado, teremos uma função de marcação acima da curva de custo marginal.
+
+\begin{center}
+\includegraphics[scale=0.8]{cap25_3-demanda_ces_e_monopolio.png}
+\end{center}
+
+\textbf{Simulação:} \href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{Clique aqui} para ter acesso a uma simulação desse modelo.
+
 
 \section{A Ineficiência do Monopólio}
 \section{O Ônus do Monopólio}
