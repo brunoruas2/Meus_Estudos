@@ -13,24 +13,24 @@ pd.options.mode.chained_assignment = None  # default='warn'
 plt.style.use('dark_background')
 
 # Sistema de Equações:
-# Curva de Demanda Inversa CES -> p(y) = a * y^epsilon
-# Função Receita -> r(y) = p(y)y = a * y^(1+epsilon)
-# Função Receita Marginal -> RM(y) = 1+epsilon * y^epsilon * a
+# Curva de Demanda Inversa CES -> p(y) = a * y^1/epsilon
+# Função Receita -> r(y) = p(y)y = a * y^(1/epsilon) * y
+# Função Receita Marginal -> RM(y) = p(y) * [1 - 1/|epsilon|]
 # Função Custo Total -> c(y) = CF + CV*y^2 + (CV*y^3)/3
 # Função Custo Marginal -> CMa(y) = y*CV + y*CV^2
 
 # Constantes usadas nas equações:
-a = 50
+a = 10
 epsilon = -2
 CF = 2 # custo fixo
 CV = 0.1 # custo variavel
 
 # Modelo
-y = np.linspace(0,20,1000)
+y = np.linspace(0,15,1000)
 
-dem_ces = a * y**epsilon
-receita = a * y**(1+epsilon)
-rec_marg = (1+epsilon) * y**epsilon * a
+dem_ces = a * y**(1/epsilon)
+receita = a * y**(1/epsilon) * y
+rec_marg = dem_ces * (1 - (1 / abs(epsilon)))
 custo_total = CF + CV*y**2 + (CV*y**3)/3
 custo_medio = custo_total / y
 custo_marginal = CV*y + CV*y**2
@@ -58,6 +58,8 @@ fig = plt.figure(dpi=120)
 ax = plt.axes()
 ax.grid(color='gray',linewidth=.2)
 
+plt.subplot(2,1,1) # rows, columns, panel number
+
 plt.title('Cap 25.3 - Demanda com Elasticidade Constante e Monopólio')
 
 plt.plot(dataframe['quant'], dataframe['dem_ces'],'-',color='red', label='Demanda')
@@ -67,6 +69,14 @@ plt.plot(dataframe['quant'], dataframe['custo_marginal'],'-',color='white', labe
 plt.plot(dataframe['quant'], dataframe['oferta'],'-',color='yellow', label='Markup') # oferta do monopolista
 plt.legend(loc='upper right')
 plt.ylim(0,8)
+plt.xlim(0,max(y))
+
+plt.subplot(2,1,2) # rows, columns, panel number
+plt.plot(dataframe['quant'], dataframe['lucro'],'--',color='white', label='Lucro')
+plt.plot(dataframe['quant'], dataframe['custo_total'],'--',color='blue', label='Custo Total')
+plt.plot(dataframe['quant'], dataframe['receita'],'--',color='red', label='Receita')
+plt.legend(loc='upper right')
+plt.ylim(0,20)
 plt.xlim(0,max(y))
 
 plt.show()
