@@ -558,7 +558,7 @@ $$ \textrm{Função Receita Marginal: } RM(y) = a - 2by $$
 A receita marginal é dada (como vemos no capítulo 15) pela derivada da função receita. Podemos ver que o intercepto vertical da demanda e da receita marginal são iguais (dado pelo ponto $a$).
 \\
 \\
-\textbf{Simulação:} \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Clique aqui} para ter acesso a uma simulação desse modelo. Você pode mudar os parâmetros de "$a$", "$b$", "CF"\ e "CV"\ afim de verificar como os valores se modificam.
+\textbf{Simulação:} \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Clique aqui} para ter acesso a essa simulação do modelo. Você pode mudar os parâmetros de "$a$", "$b$", "CF"\ e "CV"\ afim de verificar como os valores se modificam.
 
 \begin{center}
 \includegraphics[scale=0.8]{cap25_2-demanda_linear_e_monopolio.png}
@@ -574,7 +574,7 @@ Além disso, também é relevante o fato da curva de custo médio estar abaixo d
 Já conseguimos aprimorar nosso modelo de escolha da firma para o caso do monopolista. Agora que tornamos a receita marginal endógena, podemos ver as condições de maximização do lucro quando a firma tem poder de definir o preço ou a quantidade do mercado (mas não os dois ao mesmo tempo).
 \\
 \\
-Podemos compreender essa última equação como uma política de preço do monopolista. Para isso, só precisamos isolar o termo $p(y)$ via rearranjo da equação, o que após feito nos dá a seguinte relação
+Podemos compreender essa última equação como uma política de preço do monopolista. Para isso, só precisamos isolar o termo $p(y)$ via rearranjo da última equação, o que após feito nos dá a seguinte relação
 
 $$ p(y) = \frac{CMa(y)}{1 - 1/|\epsilon(y)|} $$
 \\
@@ -584,7 +584,7 @@ $$ p(y) = \phi \times CMa(y) $$
 onde $\phi = \frac{1}{1 - 1/|\epsilon(y)|}$
 \\
 \\
-Como sabemos, o monopolista sempre operará nos pontos cuja demanda é elástica\footnote{Ele até pode operar no ponto onde $\epsilon = 1$, já vimos que nesse caso, o resultado seria o mesmo do caso na competição perfeita.}, isso nos dará um $\epsilon(y) > 1$. Isso nos diz que o nosso termo $(1 - 1/|\epsilon|) <  1$, o que por sua vez, nos diz que $\phi > 1$.
+Como sabemos, o monopolista sempre operará nos pontos cuja demanda é elástica\footnote{Ele até pode operar no ponto onde $\epsilon = 1$, já vimos que nesse caso, o resultado seria o mesmo do caso na competição perfeita.}, isso nos dará um $\epsilon(y) > 1$. Isso nos diz que o divisor $(1 - 1/|\epsilon|) <  1$, o que por sua vez, nos diz que $\phi > 1$.
 \\
 \\
 Agora vamos dar uma olhada em um caso muito interessante: quando a curva de demanda possui a mesma elasticidade em todos os seus pontos.
@@ -597,11 +597,37 @@ Para simular o caso da demanda com elasticidade constante, vamos usar o método 
 \includegraphics[scale=0.8]{cap25_3-demanda_ces_e_monopolio.png}
 \end{center}
 
-\textbf{Simulação:} \href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{Clique aqui} para ter acesso a uma simulação desse modelo.
-
+\textbf{Simulação:} \href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{Clique aqui} para ter acesso a essa simulação do modelo.
+\\
+\\
+\textbf{Comentário:} Leia o exemplo sobre o impacto dos impostos sobre o monopolista na página 634. Com os conceitos vistos até agora, não deve ser difícil compreende-lo. Você pode acessar a simulação e modificar o custo variável para ver se o resultado é igual ao que você esperava.
 
 \section{A Ineficiência do Monopólio}
+
+Já conseguimos ver que, quando uma empresa opera como um monopólio, o preço de mercado será definido sempre acima do seu custo marginal. No mercado de competição perfeita, esse preço seria exatamente igual ao custo marginal. Isso implica na redução de algum excedente dos consumidores, mas em um incremento no excedente do produtor.
+\\
+\\
+Como já sabemos, um arranjo é eficiente no sentido de Pareto se, e somente se, é possível realizar alguma troca de modo a se ter um aumento no excedente de uma das partes sem a redução do excedente de outra parte. Agora vamos investigar se o equilíbrio no mercado monopolista é eficiente. Considere a imagem abaixo.
+
+\begin{center}
+\includegraphics[scale=0.8]{25_4-inef_monopolio.png}
+\end{center}
+
+No que tange ao equilíbrio no mercado com monopólio. O equilíbrio acontecerá no ponto $B$. A área do retângulo verde acima do retângulo azul é o quanto do excedente do consumidor o monopolista consegue capturar devido o seu poder de mercado. A retângulo azul é precisamente o cenário de equilíbrio no mercado competetivo.
+\\
+\\
+Para investigarmos se há uma ineficiência no sentido de Pareto no ponto $B$, façamos a seguinte pergunta: É possível adicionar uma unidade de produto no mercado, onde o custo marginal pela produção desse bem seja inferior ao preço do mesmo? A resposta é claramente sim!
+\\
+\\
+No nível $B$, a curva de preço (medida pela demanda inversa) ainda é superior à curva de custo marginal (aquela reta verde). Desse modo, se o monopolista produzisse mais uma unidade, ele receberia mais do que o custo marginal dessa unidade e os consumidores cujo preço de reserva é igual ao novo nível de preço passariam a consumir o produto. O excedente desse novo consumidor é igual a $0$, contudo, todos os que já consumiam o produto passaram a pagar menos do que antes o que aumentará os seus respectivos excedentes.
+
 \section{O Ônus do Monopólio}
+
+\begin{center}
+\includegraphics[scale=0.8]{25_5-onus_monopolio.png}
+\end{center}
+
+
 \section{Monopólio Natural}
 \section{O Que Causa os Monopólios?}
 
