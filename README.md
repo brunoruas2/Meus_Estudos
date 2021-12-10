@@ -4,9 +4,9 @@
 # Projetos em Andamento
 ## Microeconomia - Versão de Graduação
 ### Resumo de Livro: Microeconomia: Uma Abordagem Moderna - Hal R. Varian
-- [ ] Preparativos
-    - [ ] Matemática
-    - [ ] Programação
+- [x] Preparativos
+    - [x] Matemática
+    - [x] Programação
 - [ ] Teoria da Escolha
     - [ ] Restrição Orçamentária
     - [ ] Preferências

@@ -1,6 +1,5 @@
 ### Universidade do Estado do Amazonas - UEA (Microeconomia II)
 ## Modelo de Otimização da Receita do Monopólio com uma Demanda linear
-# Varian página 632
 
 # Modulos usados
 import pandas as pd
