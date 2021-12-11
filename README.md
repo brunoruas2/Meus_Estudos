@@ -7,7 +7,7 @@
 - [x] Preparativos
     - [x] Matemática
     - [x] Programação
-- [ ] Teoria da Escolha
+- [ ] Teoria da Escolha\Consumidor
     - [ ] Restrição Orçamentária
     - [ ] Preferências
     - [ ] Utilidade
@@ -35,7 +35,7 @@
     - [ ] Curva de Custo
     - [ ] Oferta da Empresa
     - [ ] Oferta da Indústria
-    - [ ] Mercados
+	- [ ] Mercados e Preços
     - [ ] Monopólio
     - [ ] O Comportamento do Monipolista
     - [ ] O Mercado de Fatores
