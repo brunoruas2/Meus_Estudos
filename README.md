@@ -36,7 +36,7 @@
     - [ ] Oferta da Empresa
     - [ ] Oferta da Indústria
 	- [ ] Mercados e Preços
-    - [ ] Monopólio
+    - [x] Monopólio
     - [ ] O Comportamento do Monipolista
     - [ ] O Mercado de Fatores
     - [ ] O Oligopólio
