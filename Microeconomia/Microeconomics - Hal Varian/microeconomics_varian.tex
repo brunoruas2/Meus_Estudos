@@ -26,6 +26,8 @@
 \usepackage{tikz} % to draw Venn's diagrams
 \usepackage{amsmath} % to write a function by cases
 \usepackage{graphicx} % to set a images directory
+\usepackage{caption} % to supress numbering in figures
+\usepackage{float} % to make a figure stay when i whant
 
 \graphicspath{{./images/}}
 
@@ -146,8 +148,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Matemática}
 
-\begin{chapquote}{página 1.008}
-	``Revisão breve de alguns conceitos matemáticos utilizados no texto''.
+\begin{chapquote}{The Godfather}
+	``Some Day, And That Day May Never Come, I Will Call Upon You To Do A Service For Me.''.
 \end{chapquote}
 
 Bem vindo ao meu resumo do livro do prof. Varian. Ao contrário do que ele fez, eu preferi trazer o apêndice de matemática pro começo do material porque aqui nós vamos ver as ferramentas que serão usadas para a explicação dos conceitos teóricos ao longo do material.
@@ -363,6 +365,11 @@ A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Programação}
 
+\begin{chapquote}{The Godfather}
+	``I don’t like violence, Tom. I’m a businessman. Blood is a big expense.''.
+\end{chapquote}
+
+
 Caro aluno, com o avanço do poder computacional e da disponibilidade de dados, os economistas não ficaram de fora da revolução tecnológica. Além de todo o arcabouço teórico, matemático, estatístico, histórico e social que você está adquirindo na sua formação, a programação se tornou uma ferramenta indispensável para o processo de análise moderna e merece ser objeto do seu estudo\footnote{Pode até ser que você não tenha alguma matéria de programação na sua grade curricular, mas não se engane, mesmo que seu curso não esteja cobrando, vá estudar por conta própria.}.
 \\
 \\
@@ -390,15 +397,14 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
-\part{Teoria da Escolha}
+\part{Teoria da Escolha e Teoria do Consumidor}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Mercado}
 
-\begin{chapquote}{página 3}
-	``The theory of sets is a language that is perfectly suited to describing and explaning all types of mathematical structures.''
+\begin{chapquote}{The Godfather}
+	``A friend should always underestimate your virtues and an enemy overestimate your faults.''
 \end{chapquote}
-
 
 %\section{A elaboração de um modelo}
 %\section{Otimização e equilíbrio}
@@ -498,6 +504,10 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Monopólio}
+
+\begin{chapquote}{The Godfather}
+	``I'm gonna make him an offer he can't refuse.''
+\end{chapquote}
 
 Anteriormente, fora demonstrado como a oferta pode ser construída da firma individual até a indústria competitiva. Nesse cenário, todos os ofertantes não possuem poder de interferir no preço e na quantidade de equilíbrio do mercado. Mas podemos pensar num caso muito diferente: Como seria o caso onde só exista uma empresa controlando toda a oferta?
 \\
@@ -606,7 +616,7 @@ Agora vamos dar uma olhada em um caso muito interessante: quando a curva de dema
 Para simular o caso da demanda com elasticidade constante, vamos usar o método do markup para encontrar o ponto de oferta do monopolista. Como esperado, teremos uma função de marcação acima da curva de custo marginal.
 
 \begin{center}
-\includegraphics[scale=0.8]{cap25_3-demanda_ces_e_monopolio.png}
+\includegraphics[scale=0.7]{cap25_3-demanda_ces_e_monopolio.png}
 \end{center}
 
 \textbf{Simulação:} \href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{Clique aqui} para ter acesso a essa simulação.
@@ -672,7 +682,7 @@ Você mesmo pode fazer esse experimento, abra a simulação 25.2 ou a 25.3 e alt
 Eu fiz 3 simulações para o caso da demanda com elasticidade constante. Uma com um custo fixo baixo, outra com um custo um pouco mais elevado e última com 10 vezes o custo fixo da primeira. Perceba ma imagem abaixo como a curva de lucro (da parte de baixo de cada painel vai caindo até desaparecer.
 
 \begin{center}
-\includegraphics[scale=0.4]{cap25_6-monopolio_natural.png}
+\includegraphics[scale=0.38]{cap25_6-monopolio_natural.png}
 \end{center}
 
 Chamamos de \textbf{monopólio natural} a situação onde temos uma estrutura de custo fixos fixos muito alta e custos marginais baixos. Agora podemos ver que se obrigarmos o monopolista a produzir o nível da competição perfeita, pode acontecer do projeto não ser sustentável, pois a curva de custo médio está acima da curva de demanda.
@@ -719,6 +729,116 @@ No exemplo 3, outro exemplo de conluio por parte dos ofertantes para fixação d
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Comportamento do Monipolista}
+
+\begin{chapquote}{The Godfather}
+	``Great men are not born great, they grow great \dots''
+\end{chapquote}
+
+Na prática, a maioria das empresas possui algum poder de mercado. É bem possível que um mercadinho eleve um pouco seus preços sem que isso acarrete a perda de todos os seus clientes. Nesse capítulo vamos ver quais estratégias as empresas podem adotar para aumentar e explorar o seu poder de mercado.
+\\
+\\
+A medida que você vai avançando no seu curso de Microeconomia, o seu arcabouço de conhecimento vai ficando cada vez mais refinado e, consequentemente, próximo da realidade. Os modelos puros de competição perfeita e monopólio até existem, mas são mais raros na realidade quando comparados à competição monopolística.\footnote{Veremos mais sobre isso nesse capítulo.}
+
+\section{Tipos de discriminação de Preços}
+
+No capítulo anterior, nós vimos que o monopolista acaba produzindo em um ponto onde a demanda ainda está disposta a pagar por mais do que o custo marginal. Vimos que a explicação do porquê ele não produz mais é que ele teria de baixar o preço de todos os produtos e não apenas os adicionais. Pois bem, existem alguns monopolistas que detém o poder de \textbf{disciminação de preços}. O professor classifica esse poder em 3 categorias:
+
+\begin{itemize}
+\item Discriminação de Preços de 1º Grau:
+	\begin{itemize}
+	\item[] Nesse caso ele tem poder de cobrar um preço diferente para cada consumidor e para cada quantidade.
+	\end{itemize}
+\item Discriminação de Preços de 2º Grau
+	\begin{itemize}
+	\item[] Nesse caso ele tem poder de discriminar o preço apenas para as quantidades compradas. Mas todos os consumidores que levarem a mesma quantidade, pagarão o mesmo preço no total.
+	\end{itemize}
+\item Discriminação de Preços de 3º Grau
+	\begin{itemize}
+	\item[] Esse é o caso mais comum. É quando o monopolista tem o poder de escolher qual preço cada pessoa vai pagar por todas as unidades que levar. Ou seja, ele pode controlar qual o valor de todas as unidades da cesta, contudo, não pode diferenciar o valor entre essas unidades.
+	\end{itemize}
+\end{itemize}
+
+\section{Discriminação de Preços de 1º Grau}
+
+Nesse caso, o monopolista está em \href{https://www.encurtador.com.br/eqCN1}{plenos poderes}. Ele possui conhecimento do preço de reserva\footnote{Lembra desse conceito?} de cada consumidor e, com esse conhecimento, cobra exatamente o valor máximo para cada quantidade. Também chamamos esse tipo de \textbf{discriminação perfeita}.
+\\
+\\
+Um fato curioso desse arranjo é que, por incrível que pareça, ele é eficiente no sentido de Pareto. Uma vez que, para cada produto vendido, os consumidores pagam exatamente o valor máximo que estão dispostos a pagar, e consequentemente, o monopolista vai vender para todos os consumidores que tenham um preço de reserva maior ou igual ao custo marginal. O ponto final da produção será o ponto onde a quantidade iguala o custo marginal à curva de demanda.
+\\
+\\
+Em termos de excedente, o que acontece é que o monopolista captura todo o excedente do mercado. Os consumidores, por sua vez, não possuem nenhum excedente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap26_2-discriminacao_grau1.png}
+\end{figure}
+
+Uma maneira conveniente se se pensar nessa situação é pela ótica da produção. Ao invés de pensar que o produtor olha para cada cliente e consegue cobrar exatamente o máximo que ele quer pagar, ele simplesmente oferta no mercado uma quantidade e deixa que os clientes definam quanto pagarão por ela. Claro que estamos supondo uma simplificação do comportamento das pessoas, mas a ilustração é válida.
+\\
+\\
+O professor cita um exemplo da companhia aérea chamada Southwest Airlines. Que usou um software chamado Ding que faz ofertas periódicas e exclusivas para cada cliente cadastrado no sistema. Outro exemplo menos real, e mais icônico, é Mafioso Don Vito Corleone da clássica trilogia de filmes The Godfather (na abertura de todos os capítulos desse manual contém uma frase retirada dessa obra). O "modelo de negócio"\ do protagonista é fazer alguns favores em troca de outros favores. No caso do personagem mafioso, ele abusava do poder de mercado que detinha para cobrar o máximo possível (em dinheiro ou não) de quem estava em dívida com ele.
+\\
+\ 
+\\
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{cap26_2-don_corleone.jpeg}
+\caption*{The Godfather (1972) - Paramount Films}
+\end{figure}
+
+\section{Discriminação de Preços de 2º Grau}
+
+Nesse modelo, também chamado de \textbf{fixação de preços não linear}, o produtor já não pode cobrar, por uma mesma quantidade, um valor diferente entre consumidores diferentes. Isso força o monopolista a desenvolver uma estratégia de precificação que tente tirar o maior proveito possível das diferentes curvas de demanda.
+\\
+\\
+\textbf{Comentário:} Eu não sei você, mas no meu caso, deu um trabalhão para entender o que o professor quis dizer nessa parte. Eu acho que o que deixou mais confuso foi ele ter suposto que o custo marginal é igual a zero (porque isso implicaria em dizer que ele venderia alguma cesta ao preço zero). Então eu retirei essa simplificação e reconstruí a mesma argumentação dele só que para um custo marginal constante maior que zero.\footnote{\href{https://www.youtube.com/watch?v=OBgziVdHH8w}{Esse vídeo aqui me ajudou bastante a entender melhor o que o professor quis dizer.}}
+\\
+\\
+Imagine que temos apenas $2$ grupos de consumidores no mercado. Como nosso modelo prevê, o monopolista tem acesso as curvas de demanda de cada consumidor, mas como limitação, ele só pode escolher quais cestas ofertar por qual preço, e deixar que os consumidores escolham qual é a melhor para eles. Chamamos esse modelo de \textbf{autosseleção}.
+\\
+\\
+O objetivo do monopolista é captar todo o excedente do mercado. Mas ele enfrenta uma limitação nessa modalidade de discriminação de preços. Como ele não pode vender a mesma quantidade a preços diferentes para os grupos de consumidores, ele tem de escolher se vai vender a preço de reserva da curva de demanda 1 ou 2.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_3-discriminacao_grau2_1.png}
+\end{figure}
+
+Se ele optar por vender na fronteira da curva de demanda 1, ele vai abrir mão de todo o excedente advindo dos consumidores do tipo 2! Isso significaria abrir mão do toda a área azul na figura acima. Como ele não vai fazer isso, ele adotará a seguinte abordagem: Vender de $0$ até o ponto $A$ pelo preço de reserva da curva de demanda dos consumidores do tipo 2 e, a partir desse ponto, vender pela fronteira do preço de reserva dos consumidores do tipo 1. Isso garantirá que ele obtenha todo o excedente da área azul e também da área amarela.
+\\
+\\
+Não satisfeito, o monopolista pode pensar um pouco mais e perceber que ele pode escolher uma opção que aumentará o seu excedente. Veja o que acontece se ele decide optar pela fronteira do consumidor tipo para uma cesta cuja quantidade é um pouco menor que a cesta $A$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_3-discriminacao_grau2_2.png}
+\end{figure}
+
+Veja só que interessante, como no ponto $B$ o preço não é igual ao custo marginal para o consumidor tipo 2, haverá uma perda no total do excedente capturado pelo monopolista, mas em contrapartida, veja como a área amarela aumentou muito mais do que a área de perda do excedente do primeiro grupo. Isso quer dizer que, ao aumentar o preço da cesta, optando por adotar o preço de reserva do consumidor tipo 1 em um ponto anterior ao custo marginal igual à demanda tipo 2, o monopolista "abre mão"\ de uma pequena parte do excedente tipo 1 e ganha uma grande parte do excedente tipo 2. Não é difícil prever que ele continuará reduzindo a quantidade até o ponto onde o excedente perdido de um grupo é igual ao excedente ganho do outro.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_3-discriminacao_grau2_3.png}
+\end{figure}
+
+A partir desse novo ponto $B$, o excedente perdido dos consumidores tipo 2 com o aumento do preço da cesta é maior que o ganho adicional do excedente dos consumidores tipo 1. Desse modo o monopolista acaba com um excedente total igual à área azul e toda a área amarela.
+\\
+\\
+\textbf{Comentário:} Alguns de vocês podem pensar que o excedente abaixo da curva de demanda verde foi inteiramente perdido. Mas não é o caso! Perceba que, mesmo com a retirada dos consumidores do tipo $2$, essa área de excedente foi preenchida pelo excedente dos consumidores do tipo $1$. O monopolista abre mão no sentido que antes essa área era computada duas vezes (uma vez para cada tipo de consumidor).
+\\
+\\
+Na realidade, o principal método de incentivo a autosseleção é a alteração da qualidade do bem. Normalmente, o monopolista reduz a qualidade dos produtos direcionados aos consumidores com preços de reserva menores, afim de eviter que seus consumidores dispostos a pagar mais, prefiram comprar esses produtos ao invés de produtos de "primeira linha". Essa estratégia maximiza o lucro do monopolista e ainda garante algum excedente para os consumidores das demandas mais altas.
+\\
+\\
+O professor coloca dois exemplos que são espetaculares. Um sobre a diferença nos preços das passagens aéreas e o motivo da existência das classes econômica e executiva nos meios de transporte. Recomendo demais a leitura. O segundo é referente ao mercado de remédios.
+
+\section{Discriminação de Preços de 3º Grau}
+\section{Vinculação de Produtos}
+\section{Tarifas Bipartidas}
+\section{Competição Monopolística}
+\section{Modelo de Diferenciação de Produtos por Local}
+\section{Diferenciação de Produtos}
+\section{Mais Sorveteiros}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Mercado de Fatores}
