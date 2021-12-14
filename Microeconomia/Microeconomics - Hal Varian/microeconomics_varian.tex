@@ -29,7 +29,7 @@
 \usepackage{caption} % to supress numbering in figures
 \usepackage{float} % to make a figure stay when i whant
 
-\graphicspath{{./images/}}
+\graphicspath{{./images/}} % set an default images folder
 
 % dark theme no pdf
 \pagecolor[rgb]{0.1,0.1,0.1} %black
@@ -143,10 +143,12 @@
 \mainmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
-\part{Preparativos}
+\part*{Preparativos}
+\addcontentsline{toc}{part}{Preparativos}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Matemática}
+\chapter*{Matemática}
+\addcontentsline{toc}{chapter}{Matemática}
 
 \begin{chapquote}{The Godfather}
 	``Some Day, And That Day May Never Come, I Will Call Upon You To Do A Service For Me.''.
@@ -157,7 +159,8 @@ Bem vindo ao meu resumo do livro do prof. Varian. Ao contrário do que ele fez, 
 \\
 Aqui a gente só vai dar um overview básico nos conceitos. Não tenha dúvida que alguém mais experimentado em matemática torceria o nariz pra algumas definições dadas aqui. Mas o objetivo é te dar um "norte"\ a respeito de alguns conceitos normalmente usados. Não se assuste com a simplicidade de algumas coisas. Melhor garantir agora do que sofrer mais pra frente no texto.
 
-\section{Funções}
+\section*{Funções}
+\addcontentsline{toc}{section}{Funções}
 
 Sejam dois números quaisquer $x$ e $y$, uma \textbf{função} ou \textbf{transformação} é uma regra que descreve uma relação entre eles.
 \\
@@ -167,11 +170,13 @@ Para demonstrar que existe alguma dependência entre duas variáveis usamos a no
 \\
 Não é raro ter uma variável dependente relacionada a várias outras variáveis. Nesses casos é comum o uso da notação anterior com a adição das novas incógnitas. Algo como $y = f(x_1,x_2,...,x_n)$.
 
-\section{Gráficos}
+\section*{Gráficos}
+\addcontentsline{toc}{section}{Gráficos}
 
 Não tem muito o que falar aqui. Dá uma lida lá na página 1010.
 
-\section{Propriedades de funções}
+\section*{Propriedades das funções}
+\addcontentsline{toc}{section}{Propriedades das funções}
 
 Uma função pode ter algumas características que facilitam a sua descrição. Aqui temos algumas que serão usadas ao longo do curso:
 \\
@@ -185,25 +190,29 @@ Uma \textbf{função suave} é aquela que não tem "dobras"\ nem "cantos".
 Uma \textbf{função monotônica} é aquela que sempre segue o mesmo sentido (ou crescendo ou decrescendo) sem nunca mudar de sentido. 
 Quando é crescente a medida que $x$ cresce, chamaremos de \textbf{função monotônica crescente}. Quando descrescer a medida que $x$ crescer, chamaremos de \textbf{função monotônica decrescente}.
 
-\section{Funções inversas}
+\section*{Funções inversas}
+\addcontentsline{toc}{section}{Funções inversas}
 
 Uma das implicações de quando uma função é monotônica é que, para cada $x$, sempre existirá apenas um único $y$ associado. 
 \\
 \\
 Uma \textbf{função inversa} é a função que, sempre que colocarmos um $y$ como variável independente teremos como resultado um $x$ de alguma função anterior.\footnote{Eu tentei não deixar confuso mas se ficou com dúvida, pesquisa um pouco sobre o tema.}
 
-\section{Equações e identidades}
+\section*{Equações e identidades}
+\addcontentsline{toc}{section}{Equações e identidades}
 
 Podemos relacionar dois ou mais elementos por meio do uso de \textbf{equações} (usando o símbolo da igualdade "$=$"). Onde as suas respectivas \textbf{soluções} são os valores atribuíveis as incógnitas que assegurem a validade da relação proposta.
 \\
 \\
 Uma \textbf{identidade} (que tem o símbolo dado por "$\equiv$") é um tipo de relação onde sempre haverá as soluções independentemente de quais valores suas variáveis assumam.
 
-\section{Funções lineares}
+\section*{Funções lineares}
+\addcontentsline{toc}{section}{Funções lineares}
 
 Chamamos de \textbf{função linear}, qualquer função da forma $y = ax + b$. Fique atento porque uma função linear pode ser expressa de maneira implícita (ou seja, será necessário desenvolver um pouco a álgebra até que se chegue numa equação no formato da definição).
 
-\section{Variações e taxas de variação}
+\section*{Variações e taxas de variação}
+\addcontentsline{toc}{section}{Matemática}
 
 Usamos o símbolo "$\Delta$"\footnote{O nome é "delta".} para denotar a variação de alguma variável. Ou seja, se tivemos uma variável qualquer $x$ que teve seu valor alterado de $x^1$ para $x^2$, então:
 
@@ -241,7 +250,8 @@ $$  2x + \Delta x $$
 \\
 Ou seja, entra no resultado da taxa de variação o valor de $x$ e a magnitude da variação, dada por $\Delta x$.
 
-\section{Inclinações e interceptos}
+\section*{Inclinações e interceptos}
+\addcontentsline{toc}{section}{Inclinações e interceptos}
 
 Já aprendemos como calcular a taxa de variação de uma função. Graficamente falando, essa é a medida da inclinação da curva da função entre os dois pontos que formam o delta da variável independente. 
 \\
@@ -251,7 +261,8 @@ Em uma função linear, a inclinação da curva sempre será a mesma independent
 \\
 No caso de uma função linear, $ y = ax + b$, temos alguns pontos que recebem nomes de \textbf{intercepto}. O \textbf{intercepto vertical} ($y^*$) é dado pelo ponto $y = a.0 + b = b$, ou seja, onde $x = 0$. Já o \textbf{intercepto horizontal} ($x^*$) é dado pelo ponto onde $y = ax + b = 0 $, ou seja, $ x = \frac{-b}{a}$.
 
-\section{Valores absolutos e logaritmos}
+\section*{Valores absolutos e logaritmos}
+\addcontentsline{toc}{section}{Valores absolutos e logaritmos}
 
 O \textbf{valor absoluto} de um número $x$ qualquer é definido pela função $f(x)$ do seguinte modo:
 
@@ -266,7 +277,8 @@ Você já deve ter visto no ensino médio que o \textbf{logaritmo natural} ou \t
  \item $ ln(x^y) = y ln(x) $
 \end{itemize}
 
-\section{Derivadas}
+\section*{Derivadas}
+\addcontentsline{toc}{section}{Derivadas}
 
 Você deve lembrar desse conceito das aulas de matemática no primeiro período. A \textbf{derivada} da função $f(x)$ será dada por:
 
@@ -277,7 +289,8 @@ Mas perai, a gente acabou de ver um conceito muito parecido no ponto 1.7. E é i
 \\
 \textbf{Comentário}: Essa técnica é muito importante ao longo de quase todos os tópicos desse curso. Volte nas apostilas e nas listas de derivadas caso seja necessário.
 
-\section{Derivadas segundas}
+\section*{Derivadas segundas}
+\addcontentsline{toc}{section}{Derivadas segundas}
 
 Já vimos que a deriva nos permite saber a inclinação da reta tangente da nossa função genérica $f(x)$ num determinado ponto. Chamamos de \textbf{derivada segunda} de $f(x)$ a derivada da derivada dessa função.
 
@@ -285,7 +298,8 @@ $$ f''(x) = \frac{d^2f(x)}{dx^2} $$
 \\
 Nós aplicamos a derivada segunda para descobrirmos a curvatura da função no ponto $x$. Se for positiva, a função é convexa no ponto. Se for negativa, a função é côncava no ponto. Por fim, se for igual a zero, a função será plana.
 
-\section{A regra do produto e da cadeia}
+\section*{A regra do produto e da cadeia}
+\addcontentsline{toc}{section}{A regra do produto e da cadeia}
 
 Dadas duas funções $g(x)$ e $h(x)$ Se definirmos uma nova função $f(x) = g(x) h(x)$. A derivada dessa última função é dada pela aplicação da \textbf{regra do produto}:
 \\
@@ -299,7 +313,8 @@ Agora imagine a situação onde temos uma função dentro de outra função. Dad
 
 $$ \frac{df(x)}{dx} = \frac{dh(y)}{dy}\frac{dg(x)}{x}$$
 
-\section{Derivadas parciais}
+\section*{Derivadas parciais}
+\addcontentsline{toc}{section}{Derivadas parciais}
 
 Nós já vimos no ponto 1.1 que funções podem conter mais de uma variável independente. Supondo uma função composta $f(x_1,x_2)$ a sua \textbf{derivada parcial} em relação a $x_1$ será dada por:
 
@@ -322,7 +337,8 @@ $$ \frac{dg(t)}{dt} =
 \\
 Atente para o fato que as variáveis independentes da nossa função $g(t)$ são as funções $x_1(t)$ e $x_2(t)$ que também têm como variável independente $t$.
 
-\section{Otimização}
+\section*{Otimização}
+\addcontentsline{toc}{section}{Otimização}
 
 A maioria dos modelos utilizados pela Economia podem ser expressos como um problemas de otimização. Matematicamente falando, dada uma função $y = f(x)$ seu valor \textbf{máximo} será dado ponto $x^*$ se $f(x^*) \geqslant f(x)$ para qualquer valor de $x$. Não faz parte do escopo desse apêndice demonstrar isso, então tenha fé que, se uma função for suave, o seu valor máximo é obtido no ponto onde teremos
 
@@ -351,7 +367,8 @@ $$ \frac{\partial f(x_{1}^*,x_{2}^*)}{\partial x_2} = 0 $$
 \\
 As condições de segunda ordem são muito mais complexas então não fazem parte do escopo desse curso.
 
-\section{Otimização com restrição}
+\section*{Otimização com restrição}
+\addcontentsline{toc}{section}{Otimização com restrição}
 
 Saber maximizar ou minimizar uma função é só uma parte do problema de otimização. Na vida real, a esmagadora maioria das situações de otimização está contida dentro de algum limite de possibilidades. A \textbf{otimização com restrição} é a técnica usada para encontrar o ponto de máximo ou mínimo de alguma função dentro de um determinado domínio de possibilidades.
 
@@ -363,7 +380,8 @@ Saber maximizar ou minimizar uma função é só uma parte do problema de otimiz
 A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(x_1,x_2) = c$ é chamada de \textbf{restrição}.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Programação}
+\chapter*{Programação}
+\addcontentsline{toc}{chapter}{Programação}
 
 \begin{chapquote}{The Godfather}
 	``I don’t like violence, Tom. I’m a businessman. Blood is a big expense.''.
@@ -375,9 +393,11 @@ Caro aluno, com o avanço do poder computacional e da disponibilidade de dados, 
 \\
 Ao longo do livro eu vou construir alguns programas em Python para simular os modelos que a gente for construindo. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, cada código será disponibilizado em dois links. O primeiro é referente ao repositório no github e o segundo é referente a um notebook no google colab onde você pode executar o modelo sem precisar instalar nada no seu computador.
 
-\section{Capítulo 25 - Monopólio}
+\section*{Capítulo 25 - Monopólio}
+\addcontentsline{toc}{section}{Capítulo 25 - Monopólio}
 
-\subsection{Demanda Linear e Monopólio (25.2)}
+\subsection*{Demanda Linear e Monopólio (25.2)}
+\addcontentsline{toc}{subsection}{Demanda Linear e Monopólio (25.2)}
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \ \includegraphics[scale=0.03]{_github_logo.png}}
@@ -387,7 +407,9 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
 
-\subsection{Demanda Elasticidade Constante e Monopólio (25.3)}
+\subsection*{Demanda Elasticidade Constante e Monopólio (25.3)}
+\addcontentsline{toc}{subsection}{Demanda Elasticidade Constante e Monopólio (25.3)}
+
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.3-demanda_ces_e_monopolio.py}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
 \\
@@ -440,9 +462,6 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 \chapter{A Equação de Slutsky}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Restrição Orçamentária}
-
-%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Comprando e Vendendo}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
@@ -474,9 +493,6 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Leilões}
-
-%%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Equilíbrio}
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Firma}
@@ -833,6 +849,53 @@ Na realidade, o principal método de incentivo a autosseleção é a alteração
 O professor coloca dois exemplos que são espetaculares. Um sobre a diferença nos preços das passagens aéreas e o motivo da existência das classes econômica e executiva nos meios de transporte. Recomendo demais a leitura. O segundo é referente ao mercado de remédios.
 
 \section{Discriminação de Preços de 3º Grau}
+
+Só nos resta o último tipo de discriminação de preços. Nesse caso, o monopolista consegue discernir claramente qual consumidor pertence a qual grupo e, consequentemente, consegue cobrar um preço diferente. Atente para o fato que o monopolista só pode adota um único preço para cada grupo de consumidores.
+\\
+\\
+Na prática, a modelagem desse problema é muito parecida com o que vimos no capítulo passado, já que, ele só pode escolher um único preço para cada tipo de consumidor. A única diferença do modelo do capítulo passado é que ele vai se deparar com mais de uma curva de demanda. Veja a formalização do problema logo abaixo
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1,y_2$}} \ \ \stackrel{p_1(y_1)y_1 + p_2(y_2)y_2 - c(y_1 + y_2)}{\ }$ \\
+\end{center}
+
+Esse problema nada mais é do que uma adaptação do problema da maximização da receita. Veja que $p_1(y_1)y_1$ nada mais é do que a receita obtida com a venda do produto para o grupo 1. Desse modo, o problema de maximização é a receita total obtida (que é a soma das receitas da venda para cada grupo) menos o custo total de produção.
+\\
+\\
+Da mesma maneira de antes, a otimização será dada por:
+
+$$ RM_1(y_1) = CMa(y_1+y_2) $$
+$$ RM_2(y_2) = CMa(y_1+y_2) $$
+Isso claramente implica em
+$$ RM_1(y_1) = RM_2(y_2) = CMa(y_1+y_2) $$
+
+\textbf{Atenção:} Eu acho que encontrei um erro de tradução no parágrafo que vem logo depois dessa expressão das receitas marginais acima. Na tradução, temos o trecho: "se a receita marginal no mercado 1 ultrapassar o custo marginal, valeria a pena aumentar a produção \textbf{nos dois mercados}". Isso está errado! No original temos a seguinte passagem: "if the marginal revenue in market 1 exceeded marginal cost, it would pay to expand output \textbf{in market 1}, and similarly for market 2". Uma tradução melhor seria algo como: "se a receita marginal no mercado 1 for maior que a o custo marginal, então valerá a pena aumentar a produção no mercado 1, a mesma lógica se aplica ao mercado 2".
+\\
+\\
+Podemos usar a nossa fórmula da elasticidade para elaborar um pouco mais esse problema:
+
+$$ p_1(y_1) \left[1 - \frac{1}{|\epsilon_1(y_1)|} \right] = CMa(y_1 + y_2) $$
+$$ p_2(y_2) \left[1 - \frac{1}{|\epsilon_2(y_2)|} \right] = CMa(y_1 + y_2) $$
+\\
+Suponha que $y_1 = y_2$. Se $p_1 > p_2$, então:
+
+$$ 1 - \frac{1}{|\epsilon_1(y_1)|} < 1 - \frac{1}{|\epsilon_2(y_2)|} $$
+\\
+O que implica em
+
+$$ \frac{1}{|\epsilon_1(y_1)|} > \frac{1}{|\epsilon_2(y_2)|} $$
+\\
+Que, por fim, nos diz que
+
+$$ |\epsilon_1(y_1)| < |\epsilon_2(y_2)| $$
+\\
+Não continue lendo se você não entendeu essa afirmação. Pare e pense até sentir que compreendeu o argumento. Se ainda tiver dúvida \href{https://twitter.com/bruno_ruas2}{me manda um twite que eu te ajudo}.
+\\
+\\
+Dessa maneira, podemos ver que quanto mais elástico for o mercado, menor será o seu preço. Faz todo sentido porquê quanto mais elástica é a demanda, mais sensível ela será às alterações de preços. Portanto, o monopolista vai conseguir elevar o preço sempre que a demanda for inelástica e manterá o preço comparativamente mais baixo nos grupos de demanda mais elástica. Isso maximizará o seu lucro em cada grupo de consumidores.
+\\
+\\
+\textbf{Comentário:} Querido aluno, agora você tem todo o arcabouço teórico necessário para entender o motivo de você pagar meia entrada no cinema\footnote{Enteder isso muito top, fala sério.}. Os cinemas acreditam que uma elevação dos preços, visto que é comum que essa fase da vida tenha restrição orçamentária consideravelmente modesta, levaria vocês a buscar outros serviços além do cinema. Por outro lado, um executivo de uma empresa tem um preço de reserva muito maior que o de vocês, então o cinema cobra dele mais caro para entrar (sem falar o preço "salgado"\ das pipocas).
 \section{Vinculação de Produtos}
 \section{Tarifas Bipartidas}
 \section{Competição Monopolística}
