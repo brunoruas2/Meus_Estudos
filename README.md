@@ -35,7 +35,7 @@
     - [ ] Curva de Custo
     - [ ] Oferta da Empresa
     - [ ] Oferta da Indústria
-	- [ ] Mercados e Preços
+- [ ] Mercados e Preços
     - [x] Monopólio
     - [ ] O Comportamento do Monipolista
     - [ ] O Mercado de Fatores
