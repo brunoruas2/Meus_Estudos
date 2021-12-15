@@ -922,7 +922,30 @@ Cujas receitas marginais serão
 $$ RMa_1(y_1) = 100 - 2y_{1} $$
 $$ RMa_2(y_2) = 50 - y_{2} $$
 \\
-Para simplificar vamos supor que o custo marginal é contante em $CMa = \$ 20,00 $. Com isso já podemos criar uma simulação do modelo.
+Para simplificar vamos supor que o custo marginal é contante em $CMa = \$ 20,00 $. Com isso já podemos criar uma simulação do modelo. Mas antes de colocar o computador fazer isso, nós podemos encontrar os pontos de máximo facilmente ao igualar as funções de receita marginal ao custo marginal.
+
+$$ 100 - 2y_{1} = 20 \hspace{100pt} 50 - y_{2} = 20 $$
+$$ 100 - 20 = 2y_{1} \hspace{100pt} 50 - 20 = y_{2} $$
+$$ 80/2 = y_{1} = 40 \hspace{120pt} y_2 = 30 $$
+\\
+Sabemos que os pontos de maximização do lucro para cada curva de demanda serão os pontos cujas quantidades são iguais a $y_1 = 40$ e $y_2 = 30$. Para descobrir os preços, basta colocar esses valores nas funções de demanda inversa. Podemos ver que esses são os pontos que estão no topo das curvas de lucro 1 e 2.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_4-discriminacao_grau3.png}
+\end{figure}
+
+\textbf{Simulação:} \href{https://colab.research.google.com/drive/1TYSpJLSEg4yInKX_viA6aP8qLiRsHdBm?usp=sharing}{Clique aqui} para ter acesso a essa simulação.
+\\
+\\
+Se, por outro lado, o monopolista não puder fazer essa separação dos preços, teremos que somas as demandas como se fosse uma única e trabalhar a otimização como no primeiro modelo do capítulo 25.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_4-discriminacao_grau3_2.png}
+\end{figure}
+
+\textbf{Atenção: } Quando trabalharmos com demandas somadas, temos que testar se o preço de equilíbrio não gera demanda negativa em alguma das curvas de demanda. Se a função demanda for negativa ao preço de equilíbrio, isso quer dizer que o monopolista aumentará o seu lucro se não vender para esse grupo de consumidores. Ao excluir essa demanda e calcular o novo equilíbrio, seu lucro aumentará.
 
 \section{Vinculação de Produtos}
 \section{Tarifas Bipartidas}
