@@ -418,6 +418,14 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 \href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
 
+
+\section*{Capítulo 26 - Comportamento do Monopolista}
+\addcontentsline{toc}{section}{Capítulo 26 - Comportamento do Monopolista}
+
+\subsection*{Demandas Lineares e Discriminação de Preço (26.4)}
+\addcontentsline{toc}{subsection}{Demandas Lineares e Discriminação de Preço (26.4)}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Escolha e Teoria do Consumidor}
 
@@ -938,7 +946,7 @@ Sabemos que os pontos de maximização do lucro para cada curva de demanda serã
 \textbf{Simulação:} \href{https://colab.research.google.com/drive/1TYSpJLSEg4yInKX_viA6aP8qLiRsHdBm?usp=sharing}{Clique aqui} para ter acesso a essa simulação.
 \\
 \\
-Se, por outro lado, o monopolista não puder fazer essa separação dos preços, teremos que somas as demandas como se fosse uma única e trabalhar a otimização como no primeiro modelo do capítulo 25.
+Se, por outro lado, o monopolista não puder fazer essa separação dos preços, teremos que somar as demandas como se fosse uma única e trabalhar a otimização como no primeiro modelo do capítulo 25.
 
 \begin{figure}[H]
 \centering
@@ -948,6 +956,34 @@ Se, por outro lado, o monopolista não puder fazer essa separação dos preços,
 \textbf{Atenção: } Quando trabalharmos com demandas somadas, temos que testar se o preço de equilíbrio não gera demanda negativa em alguma das curvas de demanda. Se a função demanda for negativa ao preço de equilíbrio, isso quer dizer que o monopolista aumentará o seu lucro se não vender para esse grupo de consumidores. Ao excluir essa demanda e calcular o novo equilíbrio, seu lucro aumentará.
 
 \section{Vinculação de Produtos}
+
+Uma prática muito comum entre as empresas é a \textbf{venda casada}. Você já se perguntou qual o motivo das empresas de internet se esforçarem tanto para vender o pacote TV + Internet + Telefone?. Pois bem, agora você vai ter uma ideia por trás dessa estratégia.
+\\
+\\
+Já vimos que a vontade do monopolista é cobrar o máximo possível para cada cliente em cada quantidade. Isso faria com que ele capturasse todo o excedente do mercado. Como na prática isso implicaria em conhecimento perfeito de todos os consumidores e existe uma legislação que limita a capacidade de impor muito do poder de mercado, as empresas se valem de estratégias para maximizar esse excedente.
+\\
+\\
+Uma dessas estratégias é exatamente a venda casada. A ideia é a seguinte: como o vendedor não pode cobrar um preço para cada consumidor, ele precisa ter uma ideia dos preços de reserva dos mesmos para que possa cobrar exatamente o valor do preço de reserva mais baixo que o custo marginal permita.
+\\
+\\
+Veja a tabela 26.1 a página 672 do livro. Temos dois tipos consumidores que possuem preços de reservas inversos para dois tipos de programas diferentes. Se o monopolista cobrar $U\$ 101,00$ pelo processador de texto, ele perderá 100\% dos consumidores do tipo A. Por causa disso, ele sempre cobrará o mínimo possível para poder capturar o preço de reserva mais baixo. Isso implica que os consumidores que possuem preços de reserva maiores tenham algum excedente.
+\\
+\\
+Mas como bem sabemos, as empresas sempre pensam em novas estratégias. No caso da vinculação de produtos, supondo que o preço de reserva pelos produtos juntos seja igual à soma dos preços individuais, nós tratamos os dois produtos como uma cesta única. Nesse novo arranjo, o vendedor consegue cobrar um preço maior, porque o preço de reserva por cesta é maior que o valor cobrado separadamente.
+\\
+\\
+Eu expandi um pouco do exemplo do professor Varian para um caso de 1.000 consumidores. Nessa simulação os preços de reserva são aleatórios entre 51 e 100. Depois eu testei as duas abordagens e comparei os lucros a medida que se eleva o preço praticado no mercado. Para efeito de simplificação, os preços de reserva mínimos são iguais nos dois produtos, então o vendedor sempre aumentará os preços em paralelo. Atente para o fato de que nesse gráfico o preço está no eixo horizontal.\footnote{Ficou na dúvida, fala comigo que eu explico melhor.}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_5-venda_casada.png}
+\end{figure}
+
+\textbf{Simulação:} \href{https://drive.google.com/file/d/1WhxGaAhUB9dKkgrKWadihIrzS4cm3bXP/view?usp=sharing}{Clique aqui} para ter acesso a essa simulação.
+\\
+\\
+De zero até 50, a curva de lucro é uma linha reta porque o preço mínimo de reserva da nossa simulação é 50. A partir desse ponto, cobrar mais caro implica em abrir mão dos consumidores com preço de reserva menor que o preço.
+
 \section{Tarifas Bipartidas}
 \section{Competição Monopolística}
 \section{Modelo de Diferenciação de Produtos por Local}
