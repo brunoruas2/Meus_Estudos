@@ -4,10 +4,10 @@
 # Projetos em Andamento
 ## Microeconomia - Versão de Graduação
 ### Resumo de Livro: Microeconomia: Uma Abordagem Moderna - Hal R. Varian
-- [ ] Preparativos
-    - [ ] Matemática
-    - [ ] Programação
-- [ ] Teoria da Escolha
+- [x] Preparativos
+    - [x] Matemática
+    - [x] Programação
+- [ ] Teoria da Escolha\Consumidor
     - [ ] Restrição Orçamentária
     - [ ] Preferências
     - [ ] Utilidade
@@ -35,8 +35,8 @@
     - [ ] Curva de Custo
     - [ ] Oferta da Empresa
     - [ ] Oferta da Indústria
-    - [ ] Mercados
-    - [ ] Monopólio
+- [ ] Mercados e Preços
+    - [x] Monopólio
     - [ ] O Comportamento do Monipolista
     - [ ] O Mercado de Fatores
     - [ ] O Oligopólio
