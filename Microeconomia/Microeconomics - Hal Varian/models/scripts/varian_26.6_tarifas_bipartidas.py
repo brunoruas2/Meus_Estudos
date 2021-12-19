@@ -83,7 +83,7 @@ y_max = 100
 data = pd.DataFrame(np.zeros([y_max,y_max]))
 data['q1'] = range(y_min,data.shape[0])
 
-i = 0
+# lembrete: x = y1 e data.columns[i] = y2
 for i in range(0,data.shape[1]-1):
 	print(i/data.shape[1])
 	data[i] = data['q1'].apply(lambda x: \
@@ -105,6 +105,8 @@ data2d = data2d[data2d['lucro'] > 0]
 fig = plt.figure(dpi=120)
 ax = plt.axes(projection='3d')
 ax.grid(color='gray',linewidth=.2)
+
+plt.title('Cap 26.6 - Tarifas Bipartidas')
 
 # plot labels
 ax.set_zlabel('Lucro')
