@@ -1158,6 +1158,131 @@ Mas quando o sorveteiro do meio passa a ser um sorveteiro da extremidade, o novo
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Mercado de Fatores}
 
+Quando falamos de produção, o mercado de fatores é muito relevante e até o momento não tocamos nesse assunto desde do capítulo 20. Agora que temos um \textit{framework} mais interessante como o comportamento do monopolísta, podemos pensar nas implicações para o mercado de fatores. Veremos algumas situações: 
+\begin{enumerate}
+
+\item Qual a diferença entre a demanda por fatores de um monopólio e de uma empresa competitiva.
+
+\item O que acontece quando temos um mercado de fatores competitivo mas apenas um comprador\footnote{O nome desse arranjo é \textbf{monopsônio}. Pense nele como um monopólio do mundo invertido de stranger things.}.
+
+\item O que acontece quando um mercado competitivo possui apenas um ofertante de fatores.
+
+\end{enumerate}
+
+\section{O Monopólio no Mercado do Produto}
+
+Pensemos novamente na empresa que demanda fatores de produção. Sua demanda maximizadora será dada pelo ponto onde o custo marginal pela compra do fator é igual à receita marginal advinda do emprego desse fator. Supondo uma empresa que só possua um único fator de produção. Sua função de produção será dada por $y = f(x)$. A receita será dada pelo volume de produção e da demanda inversa do mercado, algo como, $R(y) = p(y)y$. 
+\\
+\\
+O \textbf{Produto Marginal} de um fator de produção é obtido pela variação da função produção em relação à variação do fator observado. No nosso exemplo, só temos um único fator, então:
+
+$$ PM_x = \frac{\delta y}{\delta x} = f'(x) $$
+\\
+Se você sobreviveu até aqui, deve estar entendo tudo tranquilamente\footnote{Parabéns! Você está cada vez mais perto de ler um paper e de expressar modelos como os economistas fazem.}. 
+\\
+\\
+Como não é novidade, esse incremento marginal na produção será vendido e produzirá uma \textbf{Receita Marginal}. Podemos expor esse efeito pela expressão da  variação infinitesimal da receita dividida pela variação infinitesimal do produto.\footnote{O primeiro capítulo desse material é exatamente para você saber o que estamos fazendo aqui.}
+
+$$ RM_y = \frac{\delta R}{\delta y} = p(y) + p'(y)y $$
+\\
+Até agora já vimos o impacto que um fator causa no produto e, do outro lado, o impacto que um produto causa na receita. Agora nos resta fazer a relação direta entre essas duas lógicas. Uma vez que $y = f(x)$, então, $p(y) = p(f(x))$. Podemos reescrever nossa equação da receita como:
+
+$$ R(x) = p(f(x))f(x) $$
+
+Agora que temos nossa função de receita explicitamente relacionada ao nosso fator de produção, podemos obter a relação chamada de \textbf{Produto da Receita Marginal} que mede o impacto na receita dada uma variação no fator de produção. Para obter-la usamos a derivada de $R(x)$ em relação à $x$. 
+\\
+\\
+Mas essa derivada tem um pequeno toque de sofisticação adicional: temos que aplicar, ao mesmo tempo, a regra da multiplicação junto à regra da cadeia.\footnote{A regra da cadeia para $p(y) = p(f(x))$ nos diz que $\frac{d p(y) }{d x} = \frac{d p(y)}{d y} \frac{d y}{d x} $.}
+
+$$ PRM_x = \frac{d R(x)}{d x} = p(y)f'(x) + f(x)p'(y)f'(x) $$
+$$ = [p(y) + p'(y)y]f'(x) $$
+$$ = RM_y \times PM_x $$
+\\
+Ou seja, o impacto na receita de uma variação do fator de produção é igual à receita marginal da produção vezes o produto marginal do fator. O que faz todo sentido.\footnote{Se não faz sentido, para um pouquinho e pensa um pouco. Apenas ler sem compreender é perda de tempo. Mas passar horas tentando entender é muito produtivo!}
+\\
+\\
+Podemos ir um pouco mais fundo e trazermos de volta a nossa expressão da receita marginal desenvolvida na seção de maximização de lucro do capítulo 25. $RM(y) = p(y) \left[ 1 - 1/|\epsilon| \right]$.
+
+$$ \frac{d R(x)}{d x} = p(y) \left[ 1 - \frac{1}{|\epsilon|} \right] PM_x $$
+\\
+\textit{Voilá}! Agora temos uma generalização do caso competitivo estudado no capítulo 20. 
+\\
+\\
+Uma vez que, na competição perfeita, a elasticidade é infinita. Isso implica no fato que o produto da receita marginal será dado pelo preço de mercado (que é igual à receita marginal) vezes o produto marginal do fator de produção, ou seja, $p PM_x$. O professor chamou de \textbf{valor do produto marginal} essa multiplicação entre o preço de mercado e o produto marginal do fator.
+
+$$ \textrm{Competição Perfeita: } PRM_x = p PM_x $$
+
+Mas no caso do monopólio, a receita marginal não é igual ao preço. Como já sabemos, o monopolista maximiza seu lucro num ponto onde a elasticidade é maior que 1. Isso significa que $\left( 1 - \frac{1}{|\epsilon|} \right) \leq 1 $. Ou seja, no caso do monopólio, o produto da receita marginal será, no máximo, igual ao valor do produto marginal.
+
+$$ \textrm{Monopólio: } PRM_x = p \left[ 1 - \frac{1}{|\epsilon|} \right] PM_x \leq pPM_x $$
+\\
+Se a demanda não for perfeitamente elástica. Para o caso do monopolista, seu $PRM_x$ será estritamente menor que o da empresa de competição perfeita. Isso quer dizer que o resultado na receita do emprego de um fator adicional de produção será menor para o monopolista se comparado a uma empresa competitiva.
+\\
+\\
+O motivo disso é que o monopolista interfere no preço de equilíbrio do mercado ao produzir mais unidades. Ao chegar no ponto onde a demanda é elástica, o resultado na receita será cada vez menor. Já no caso da empresa competitiva, não importa quantos produtos ela produza, o preço de mercado sempre será o mesmo.
+\\
+\\
+Não é difícil perceber, então, que o monopolista possui menos incentivo à utilizar determinada quantidade de insumo na sua produção. O que está plenamente de acordo com nossa análise do ponto de maximização do lucro do monopolista, feita nos capítulos anteriores. Vimos que o equilíbrio acontecerá num ponto onde a quantidade maximizadora de lucro é inferior ao caso competitivo.
+\\
+\\
+Podemos saber \textbf{quanto} será demandado por cada empresa no mercado de fatores de produção?. Não é difícil supor que será a quantidade que iguala o produto da receita marginal ao custo marginal desse fator.
+\\
+\\
+Se o mercado de fatores é competitivo, uma empresa operando em um mercado igualmente competitivo poderá demandar a quantidade de insumos que desejar ($x_c$) a um preço constante $w$. A quantidade empregada de insumo será:
+
+$$ \textrm{Competição Perfeita: } PRM_{x_c} = pPM(x_c) = w $$
+
+Já o caso monopolista é um pouco diferente. Ele ainda demandará a quantidade que iguale o seu produto da receita marginal, mas esse ponto não será igual ao valor do produto marginal.
+
+$$ \textrm{Monopólio: } PRM(x_m) = w $$
+
+Essa figura abaixo demonstra essa relação. A curva de demanda por fatores de produção do monopolista quase sempre será mais inclinada que a do caso competitivo. Ou seja, $x_m \leq x_c$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap27_1-demanda_fatores.png}
+\end{figure}
+
+\section{O Monopsônio}
+
+O livro constrói um cenário onde temos um mercado competitivo de fatores, um único comprador e um mercado de produtos competitivo.
+\\
+\\
+Para simplificar, vamos supor que a empresa usa apenas um único fator de produção. Sua função de produção será dada por $y = f(x)$.  A análise de comportamento do monopsônio é parecida com a do monopólio, só que ao invés de impactar o mercado pela oferta de bens, o poder de mercado é exercido pela compra. A quantidade de fator comprado, impactará no preço pago por ele.
+\\
+\\
+Para expandir o modelo, vamos criar uma função de oferta inversa $w(x)$ onde o preço pago pelo insumo será determinado pela quantidade demandada pelo nosso único comprador (chamado de \textbf{monopsonista}). É razoável supor que $\frac{d w(x)}{d x} > 0$.
+\\
+\\
+Como na imagem da seção acima, num mercado de fatores competitivo, a curva de oferta de fatores é plana. Ou seja, não importando a quantidade demanda, o custo será sempre o mesmo. Já no caso de um único comprador, a curva de oferta de fatores será inclinada positivamente. Como o professor resume perfeitamente: "Uma empresa num mercado de fatores competitivo é uma \textbf{tomadora de preços}. Um monopsionista é um \textbf{fixador de preços}".
+\\
+\\
+A maximização de lucro do monoposionista será:
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $x$}} \ \ \stackrel{pf(x) - w(x)x}{\ }$ \\
+\end{center}
+
+Ou seja, temos que encontrar a quantidade de insumo - $x$ - que permita maximizar a diferença entre a receita total - $p f(x)$ - e o custo total - $w(x)x$. A condição de primeira ordem desse problema será:
+
+$$ pf'(x) - [ w(x) + w'(x)x ] = 0 $$
+$$ pf'(x) = w(x) + w'(x)x $$
+$$ \underbrace{pPM_x}_{\textrm{PRM}} = \ \underbrace{w(x) + w'(x)x}_{\textrm{Custo Marginal}} $$
+\\
+Como supomos no início do nosso caso, o mercado do produto é competitivo. Isso quer dizer que a receita marginal será igual a $pPM_x$ (que é a mesma coisa que $pf'(x)$). Mas obter o custo marginal não será tão simples quanto antes.
+\\
+\\
+\\
+Quando a firma compra uma pequena quantidade ($x$) do fator de produção, ela deve pagar o preço desse fator vezes a quantidade ($wx$). Contudo, nesse caso, o preço será afetado exatamente na quantidade demanda ($w'(x)x$). O valor final pago é a soma dessas duas ações. Podemos desenvolver essa lógica exatamente como desenvolvemos a receita do monopolista na seção 25.1.
+
+$$ \Delta c = w \Delta x + x \Delta w $$
+$$ \frac{\Delta c}{\Delta x} = w + x \frac{\Delta w}{\Delta x} $$
+$$ = w \left[ 1 + \frac{x}{w} \frac{\Delta w}{\Delta x} \right] $$
+$$ = w \left[1 + \frac{1}{\eta} \right] $$
+\\
+Onde $\eta$\footnote{O nome dessa letra grega é eta.} representa a elasticidade da oferta. Como a inclinação a curva de oferta é positiva. $\eta$ será maior que zero. Se a elasticidade da oferta for perfeita. Cairemos no caso da competição perfeita onde o custo marginal seria igual a $w$. Quaisquer outro valor da elasticidade, produzirá uma curva de oferta não plana.
+
+\section{Monopólios Upstream e Downstream na Cadeia de Produção}
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Oligopólio}
 
