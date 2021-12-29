@@ -1313,6 +1313,77 @@ Assim como no caso do monopolista, a quantidade demanda será o ponto menor do q
 \textbf{Comentário:} Veja o exemplo sobre o salário mínimo que o professor colocou no livro. Você deve ser capaz de entendê-lo sem tanto sofrimento. A conclusão de que no mercado de trabalho controlado por um monopsionista, um salário mínimo pode aumentar o nível de emprego é bem interessante.
 
 \section{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+Nós só observamos dois tipos de concorrência imperfeita. Mas os exemplos acima são apenas um dos múltiplos arranjos que podem acontecer na realidade. O professor não achou serventia em ter que modelar todas as cominações possíveis, e eu não vou fazer isso também. O importante é saber como modelar o comportamento do monopolista (ou do monopsionista) seja no mercado de fatores ou no mercado de produção.
+\\
+\\
+Mesmo não querendo modelar todos os arranjos possíveis, ainda veremos uma nova situação: O caso onde um monopolista no mercado de fatores vende para um monopolista no mercado de produção.
+\\
+\\
+O monopolista do mercado de fatores é chamado de \textbf{upstream} ou \textbf{para trás}. Ele vende o insumo $x$ ao preço $k$ e com custo marginal constante $c$. O monopolista do mercado de produto será denominado por \textbf{downstream} ou \textbf{para frente}. Esse segundo usará o insumo $x$ para obter a produção  $y$ via função de produção da forma $f(x) = y$ que será vendida no mercado cuja demanda inversa será $p(y)$. No nosso exemplo a forma funcional dessa demanda será $p(y) = a - by$.
+\\
+\\
+O professor usa uma simplificação bem camarada da função de produção do downstream. Ele supõe que $f(x) = y = x$, ou seja, é como se ele revendesse o produto\footnote{O que torna esse exemplo surpreendentemente válido para diversas ocasiões da vida real.}. Outra simplificação é que o downstream também terá custo marginal igual ao preço pago pelo insumo ($k$) ao upstream.
+\\
+\\
+Teremos que buscar um equilíbrio entre os dois monopolistas. Para isso, vamos começar modelando o caso para o downstream. Ele quer maximizar seu lucro que é dado pelo seguinte problema:
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ p(y)y - ky}{\ }$ \\
+\end{center}
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ [a - by]y - ky}{\ }$ \\
+\end{center}
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ ay - by^2 - ky}{\ }$ \\
+\end{center}
+
+A condição de primeira ordem da última forma é dada por:
+
+$$ \frac{d L(y)}{d y} = a - 2by - k = 0 $$
+$$ a - 2by = k $$
+$$ y = \frac{a - k}{2b} $$
+
+Como a função de produção usada iguala a quantidade de insumo à quantidade de produto. Vemos que ele demandará exatamente a mesma quantidade de fator de produção que a oferta no mercado do produto.
+
+$$ x = \frac{a - k}{2b} $$
+
+\textbf{Comentário:} O importante aqui é perceber que a função de produção do monopolista downstream é usada para derivar a demanda do fator produzido pelo upstream. Perceba que a quantidade demandada de fator depende do preço pago por ele e da demanda no mercado de produto. Tudo bem intuitivo e simples.
+\\
+\\
+Agora temos que modelar o comportamento do upstream. Vamos supor que ele tenha acesso à função demanda de fatores do downstream e queira maximizar seu lucro. A demanda inversa de fatores nada mais é do que a última equação tendo k em função de x:
+
+$$ k(x) = a - 2bx $$
+
+A receita é dada por:
+
+$$ k(x)x = ax - 2bx^2 $$
+
+E a receita marginal por:
+
+$$ RM_x = a - 4bx $$
+
+Igualando a receita marginal ao custo marginal, teremos que:
+
+$$ a - 4bx = c $$
+
+ou seja,
+
+$$ x = \frac{a - c}{4b} $$
+
+Como a função de produção é um pra um, podemos definir que o total produzido no mercado de produto será:
+
+$$ y = \frac{a - c}{4b} $$
+
+Essa é a quantidade da produção que maximiza ambos os monopolistas em ambos os mercados simultaneamente.
+\\
+\\
+Se houvesse apenas um monopolista em ambos os mercados, e os custos de produção dos fatores se mantivessem os mesmos. O problema de maximização seria igualar a receita marginal ($a - 2by$) ao custo do fator ($c$). Isso geraria um volume de produção igual à
+
+$$ y_{int} = \frac{a - c}{2b}$$
+
+O monopolista integrado produzirá o dobro que o arranjo com dois monopolistas separados. Mas qual o motivo dessa diferença?
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Oligopólio}
 
