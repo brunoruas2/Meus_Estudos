@@ -18,6 +18,7 @@ data = pd.DataFrame()
 data['x'] = x
 data['p_res_1'] = [random.randrange(51,101,1) for i in range(0,1000)] # preco de reserva do bem 1
 data['p_res_2'] = [random.randrange(51,101,1) for i in range(0,1000)] # preco de reserva do bem 2
+
 # Lucro com estratégia de adoção do menor preço de reserva
 def lucro_monopolio(p1,p2,sep):
 	if sep == True:
