@@ -41,7 +41,7 @@
 - [ ] Mercados e Preços
     - [x] Monopólio
     - [x] O Comportamento do Monipolista
-    - [ ] O Mercado de Fatores
+    - [x] O Mercado de Fatores
     - [ ] O Oligopólio
     - [ ] A Teoria dos Jogos
     - [ ] Aplicações da Teoria dos Jogos
