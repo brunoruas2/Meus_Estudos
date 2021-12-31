@@ -5,8 +5,6 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-import tabloo # to see the df
-
 from mpl_toolkits import mplot3d
 
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -16,55 +14,64 @@ plt.style.use('dark_background')
 #####################################################################################################
 # Funções usadas no modelo
 #####################################################################################################
+# constantes usadas nas funcoes
 a = 100
 b = 2
 
-def dem_inv(y1,y2):
-	return a - b*y1 - b*y2
+def oferta_2(p1):
+	return p1
 
-def lucro2(y1,y2,c2):
-	return (a*y2 - b*y1*y2 - b*y2*y2) - c2
+def demanda_inv(q):
+	return (a - q)/b
 
-def cur_reac(y1):
-	return (a - b*y1)/4
+def demanda_res_inv(q):
+	return (a - q)/(b + 1)
 
-def lucro1(y1,y2,c1):
-	return (a*y1 - b*y1*y1 - b*y1*y2) - c1
+def cma1(q):
+	return 5 * (q/q)
+
+def rma1(q):
+	return (a/(b+1)) - (2/(b+1))*q
 
 #####################################################################################################
-# Gerando o gráfico - fonte: https://www.geeksforgeeks.org/contour-plot-using-matplotlib-python/
+# Gerando o gráfico
 #####################################################################################################
 
 fig = plt.figure(dpi=120)
 ax = plt.axes()
 ax.grid(color='gray',linewidth=.2)
 
-q1 = np.linspace(0,50,100)
-q2 = cur_reac(q1)
-  
-# Creating 2-D grid of features
-[X, Y] = np.meshgrid(q1, q2)
-  
-# plots contour lines
-Z1 = lucro1(X,Y,0)
-CL1 = ax.contour(X, Y, Z1, levels = [100,312.5,625,1000,1200])
+# vetores
+q1 = np.linspace(0,100,100)
+q2 = oferta_2(q1)
+demanda = demanda_inv(q1)
+demanda_res = demanda_res_inv(q1)
 
-Z2 = lucro2(X,Y,0)
-CL2 = ax.contour(X, Y, Z2, levels = [100,312.5,625,1000,1200])
+ax.set_title('cap 28.3 - Modelo de Liderança no Preço')
+ax.set_xlabel('Quantidade')
+ax.set_ylabel('Preço')
 
-ax.set_title('cap 28.2 - Modelo de Stackelberg')
-ax.set_xlabel('Qtd Empresa 1')
-ax.set_ylabel('Qtd Empresa 2')
+plt.plot(q1, q2,'--',color='blue', label='Oferta da Seguidora')
+plt.plot(q1, demanda,'-',color='red', label='Demanda')
+plt.plot(q1, demanda_res,'--',color='red', label='Demanda Residual')
+plt.plot(q1, cma1(q1),'-',color='green', label='CMa1')
+plt.plot(q1, rma1(q1),'-',color='yellow', label='RMa1')
 
-ax.clabel(CL1, inline=1, fontsize=10)
-ax.clabel(CL2, inline=1, fontsize=10)
-
-plt.plot(q1, q2,'--',color='red', label='f Reação Seguidora')
+plt.ylim(0,50)
+plt.xlim(0)
 
 # adding points with a label
-coord = [25,12.5]
-plt.plot(coord[0],coord[1],marker='o',color='red')
-plt.annotate('  Equilíbrio de \n Stackelberg',(coord[0],coord[1]))
+coord = [42,19.5]
+plt.plot(coord[0],coord[1],marker='o',color='white')
+plt.annotate(' Qtd \n Lider',(coord[0],coord[1]))
+
+coord = [61.5,19.5]
+plt.plot(coord[0],coord[1],marker='o',color='white')
+plt.annotate(' Qtd \n Total',(coord[0],coord[1]))
+
+coord = [19,19.5]
+plt.plot(coord[0],coord[1],marker='o',color='white')
+plt.annotate('  Qtd \n Seguidor',(coord[0],coord[1]))
 
 plt.legend(loc='upper right')
 plt.show()
