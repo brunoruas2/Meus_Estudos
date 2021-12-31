@@ -1411,7 +1411,7 @@ Na prática, o monopolista upstream vai cobrar uma quantidade cujo preço de mer
 \end{chapquote}
 
 
-O trabalho de entender os mercado é longo e trabalhoso. Até agora, nós trabalhamos as estruturas mais simples e que se encontram nos dois extremos do poder de mercado. De um lado, aprendemos a estrutura onde não existe poder de mercado e as empresas são pequenas concorrentes. Após isso, vimos o que acontece quando temos apenas uma empresa (ou empresas que trabalham como se fossem uma só) e o poder de mercado está todo nas mãos dela.
+O trabalho de entender os mercados é longo e trabalhoso. Até agora, nós elaboramos as estruturas mais simples e que se encontram nos dois extremos do poder de mercado. De um lado, aprendemos a estrutura onde não existe poder de mercado e as empresas são pequenas concorrentes. Após isso, vimos o que acontece quando temos apenas uma empresa (ou empresas que trabalham como se fossem uma só) e o poder de mercado está todo nas mãos dela.
 \\
 \\
 Agora vamos entrar num cenário um pouco mais realista. Pensemos em uma situação onde temos poucos concorrentes. De um lado, não temos tantos a ponto de ninguém poder manipular seus preços. Do outro, ninguém é grande o suficiente para ignorar o comportamento dos seus concorrentes. Esse arranjo é denominado de \textbf{Oligipólio}.
@@ -1436,13 +1436,13 @@ Em um arranjo de dois competidores, temos que desenvolver um modelo que consiga 
 \item Quantidade da Empresa 2
 \end{itemize}
 
-Na hora de tomar uma decisão sobre o preço e a quantidade, uma empresa pode, ou não, ter acesso as escolhas feitas pelo seu concorrente. Chamaremos de \textbf{líder} toda empresa que decidir seu \textbf{preço} ou \textbf{quantidade} antes da outra. A empresa que decidirá após a informação da decisão da empresa líder será chamada de \textbf{seguidora}. As interações desse tipo são chamadas de \textbf{jogo sequencial}.\footnote{Começamos a chegar mais perto da teoria dos jogos.}
+Na hora de tomar uma decisão sobre o preço e a quantidade, uma empresa pode, ou não, ter acesso as escolhas feitas pelo seu concorrente. Chamaremos de \textbf{líder} toda empresa que decidir seu \textbf{preço} ou \textbf{quantidade} antes da outra. A empresa que decidirá após a informação da decisão da empresa líder será chamada de \textbf{seguidora}. As interações desse tipo são chamadas de \textbf{jogos sequenciais}.\footnote{Começamos a chegar mais perto da teoria dos jogos.}
 \\
 \\
 Quando as duas empresas decidem sem ter acesso a informação do adversário, elas precisam supor o que ele fará. Esse arranjo é denominado \textbf{jogo simultâneo}.
 \\
 \\
-Com esses dois conceitos, podemos ter 4 tipos de seleção:
+Com esses dois conceitos, podemos ter 4 tipos de interações estratégicas:
 
 \begin{itemize}
 \item Liderança de Preço
@@ -1457,6 +1457,107 @@ Analisaremos cada tipo de interação estratégica que surge com cada tipo de es
 \textbf{Comentário:} Leia o exemplo da estratégia de "cobrimos o preço da concorrência"\ e a partir de agora, você nunca mais lerá essas ofertas com os mesmos olhos.
 
 \section{Liderança de Quantidade}
+
+O modelo desenvolvido nessa seção é creditado ao economista alemão Heinrich von Stackelberg. Seu livro \textit{Marktform und Gleichgewicht} foi publicado em 1934.\footnote{Eu recomendo dar uma olhada na bibliografia dos gigantes que desenvolveram as teorias ao longo desse livro.}.
+\\
+\\
+Vamos supor que temos uma empresa líder na quantidade. Como é de se esperar, ela fixará sua produção em $y_1$ unidades. A empresa seguidora, de posse da informação de $y_1$ e da demanda inversa do mercado, escolherá seu nível de produção em $y_2$. A demanda inversa do mercado será em função do total de produtos $p(Y) = p(y_1 + y_2)$.
+\\
+\\
+Como a empresa líder decidirá sua quantidade de modo a maximizar seus lucros? Certamente ela terá que supor como a empresa seguidora agirá. Não seria nada estranho que ela tivesse a hipótese que a empresa seguidora queira maximizar seus lucros também . Desse modo, a empresa líder terá que endogenizar o problema da maximização do lucro da empresa seguidora.
+
+\subsection{O Problema da Empresa Seguidora}
+
+O problema da maximização da empresa seguidora é:
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_2$}} \ \ \stackrel{p(y_1 + y_2)y_2 - c_2(y_2)}{\ }$ \\
+\end{center}
+
+Já conhecemos esse tipo de problema muito bem. Queremos encontrar o ponto onde a receita marginal será igual ao custo marginal.
+
+$$ RM_2 + CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 + \frac{dc_2(y_2)}{y_2} = 0  $$
+
+ou, na notação de derivadas de Lagrange
+
+$$ RM_2 + CMa_2 = p(y_1 + y_2) + p'(y_1 + y_2)y_2 + c'(y_2) = 0  $$
+
+A novidade aqui é que temos que levar em consideração a quantidade $y_1$ para encontrar nosso $y_2$. Isso quer dizer que 
+
+$$y_2 = f_2(y_1)$$
+
+Nós conseguimos obter essa função isolando nosso termo $y_2$ no problema de maximização acima. Essa função tem o nome de \textbf{função de reação} e nos diz qual quantidade será produzida pela empresa seguidora ao ser conhecida a quantidade da empresa líder.
+\\
+\\
+Para prosseguirmos vamos ter que definir uma forma funcional à nossa função de demanda inversa. Faremos para o caso linear onde $p(y_1 + y_2) = a - b(y_1 + y_2)$. Também adotaremos o custo igual a zero para facilitar a matemática da coisa.
+
+$$\textrm{Função Lucro 2: } \pi_2(y_1,y_2) = p(y_1 + y_2)y_2$$
+$$ = [a - b(y_1 + y_2)]y_2 = ay_2 - by_1 y_2 - by_2^2 $$
+
+Com a função de lucro e a de reação, conseguimos ver a relação entre essas duas funções. Na imagem abaixo podemos ver que a curva de reação sempre atravessa as curvas de isolucro no ponto onde temos o maior valor de $y_2$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_parcial.png}
+\end{figure}
+
+\subsection{O Problema da Empresa Líder}
+
+Já aprendemos a parte do modelo que trata da quantidade de equilíbrio dada a escolha anterior da empresa líder. Agora vamos desenvolver como essa empresa define a sua quantidade de modo a maximizar o seu lucro.
+\\
+\\
+Uma das características desse modelo é que a empresa líder sabe como a outra empresa vai se comportar dada a escolha dela, ou seja, ela conhece $f_2(y_1)$. Diante disso, o problema da maximização dela está sujeita a essa restrição.
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2)y_1 - c_1(y_1)}{\ }$ \\
+\small de modo que \normalsize $y_2 = f_2(y_1)$
+\end{center}
+
+Ou melhor, podemos colocar tudo em função de $y_1$ e obtermos
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p[y_1 + f_2(y_1)]y_1 - c_1(y_1)}{\ }$ \\
+\end{center}
+
+A produção total será definida pela líder sendo que será parte devida a produção direta e a outra parte pela resposta da seguidora ao nível definido da produção, ou seja, $y_1 + f_2(y_1)$. Pela equação da demanda inversa linear, temos que a função de reação da empresa seguidora é
+
+$$ f_2(y_1) = y_2 = \frac{a - by_1}{2b}$$
+
+A função lucro é dada pela receita menos os custos (que no nosso exemplo é zero)
+
+$$ \textrm{Função Lucro 1: } \pi(y_1,y_2) = [a - b(y_1 + y_2)]y_1 = ay_1 -by_1^2 - by_1y_2 $$
+
+Colocando a função de reação dentro da função de lucro teremos
+
+$$ = ay_1 -by_1^2 - by_1f(y_1)$$
+$$ = ay_1 -by_1^2 - by_1\frac{a - by_1}{2b}$$
+$$ = ay_1 -by_1^2 - \frac{\cancel{b}y_1a}{2\cancel{b}} + \frac{\cancel{b}*b(y_1)^2}{2\cancel{b}}$$
+$$= ay_1 -by_1^2 - \frac{ay_1}{2} + \frac{by_1^2}{2}$$
+$$ \pi(y_1,y_2) = \frac{a}{2}y_1 - \frac{b}{2}y_1^2$$
+
+Para encontrarmos a quantidade ótima basta derivar a função lucro em função de $y_1$ e igualar a zero. O que nos dará 
+
+$$ y_1^* = \frac{a}{2b} $$
+
+Desse modo, podemos encontrar facilmente a produção de equilíbrio da empresa seguidora.
+
+$$ y_2^* = \frac{a - by_1}{2b} $$
+$$ y_2^* = \frac{a - b(a/2b)}{2b} $$
+$$ y_2^* = \frac{a - ab/2b}{2b} $$
+$$ y_2^* = \frac{2ab/2b - ab/2b}{2b} $$
+$$ y_2^* = \left( \frac{2ab}{2b} - \frac{ab}{2b} \right) \frac{1}{2b} $$
+$$ y_2^* = \left( \frac{\cancel{2}a\cancel{b}}{\cancel{2b}} - \frac{a\cancel{b}}{2\cancel{b}} \right) \frac{1}{2b} $$
+$$ y_2^* = \left( a - \frac{a}{2} \right) \frac{1}{2b}$$
+$$ y_2^* = \frac{a}{4b} $$
+
+Por fim, podemos ter a quantidade total do mercado pela soma de $y_1^* + y_2^* = \frac{3a}{4b}$. Agora que temos a função de lucro da empresa 1, podemos acrescentar as curvas de isolucro para vermos a solução gráfica da álgebra que acabamos de desenvolver.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_completo.png}
+\end{figure}
+
+Se você colocar as quantidades de equilíbrio nas equações de lucro, chegará nos valores de lucro para cada empresa desse modelo. O ponto de Equilíbrio de Stackelberg acontecerá onde a curva de reação tangencia a maior curva de isolucro da empresa líder. No exemplo da imagem eu usei para a função da demanda inversa linear um $a = 100$ e um $b = 2$.
 
 \section{Liderança do Preço}
 
