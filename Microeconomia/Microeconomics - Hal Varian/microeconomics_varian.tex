@@ -1574,13 +1574,54 @@ A oferta da empresa seguidora será a quantidade que iguala o preço definido pe
 
 \subsection{O Problema da Líder}
 
-A empresa líder, sabendo a função de oferta da empresa seguidora, vai trabalhar com a diferença entre a Demanda inversa do mercado e a demanda da empresa seguidora, ou seja, $R(p) = D(p) - S(p)$. O nome dessa curva de demanda reduzida é \textbf{curva de demanda residual}.
+A empresa líder, sabendo a função de oferta da empresa seguidora, vai trabalhar com a diferença entre a Demanda do mercado e a demanda da empresa seguidora, ou seja, $R(p) = D(p) - S(p)$. O nome dessa curva de demanda reduzida é \textbf{curva de demanda residual}.
 \\
 \\
 Supondo um custo de produção constante $c$. A função de lucro da empresa líder é dada por
 
 $$ \textrm{Função Lucro 1: } \pi_1(p) = R(p)p - R(p)c = (p - c)R(p)  $$
 
+A maximização dessa empresa acontece onde a receita marginal (que nesse caso é oriunda da demanda residual) é igual ao custo marginal. 
+\\
+\\
+A partir de agora temos que definir uma forma funcional para a nossa curva de demanda, como sempre, vamos optar pelo caso mais simples, $D(p) = a - bp$. Também vamos definir as funções custo para a seguidora $c_2(y_2) = y_2^2/2$ e para a líder $c_1(y_1) = cy_1$.
+\\
+\\
+Isso nos diz que a condição de maximização da empresa seguidora será a derivada da função lucro igual a zero.
+
+$$ \frac{d L(y_2)}{y_2} = p - \frac{2y_2}{2} = 0 $$
+$$ = p - y_2 = 0 $$
+$$ = p = y_2 $$
+
+Ou seja, nossa função de oferta da seguidora será $S(p) = p$. De posse dessa informação, podemos descobrir a equação da demanda residual da empresa líder pela subtração da curva de demanda pela oferta da seguidora.
+
+$$ R(p) = D(p) - S(p) = a - bp - p = a - (b + 1) $$
+
+Agora é só maximizar o lucro pela igualdade entre a receita marginal e o custo marginal e verificar na curva de demanda inversa o volume de produção e o preço. A demanda inversa é obtida isolando $p$ da demanda residual.
+
+$$ p(y_1) = \frac{a}{b+1}-\frac{1}{b+1}y_1 $$
+
+A receita da empresa líder é obtida pela multiplicação de $p(y_1)$ por $y_1$. A receita marginal é a derivada dessa função em relação a $y_1$.
+
+$$ Receita_1: \left[ \frac{a}{b+1} - \frac{1}{b+1}y_1 \right] y_1 $$
+$$ = \frac{a}{b+1}y_1 - \frac{1}{b+1}y_1^2 $$
+
+A receita marginal será
+
+$$ RMa_2 = \frac{a}{b+1} - \frac{2}{b+1}y_1 $$
+
+O nosso custo foi definido como $c_1(y_1) = cy_1$, logo, o custo marginal é igual a $c$\footnote{A essa altura do campeonato você não tem mais dúvida nessas derivadas triviais né?!}.
+\\
+\\
+Portanto, nosso problema de maximização será dado pela equação
+
+$$ \frac{a}{b+1} - \frac{2}{b+1}y_1 = c $$
+$$ - \frac{2}{b+1}y_1 = c - \frac{a}{b+1} $$
+$$ \frac{2}{b+1}y_1 = \frac{a}{b+1} - c $$
+$$ \frac{2}{b+1}y_1 = \frac{a}{b+1} - \frac{c(b+1)}{b+1} $$
+$$ \frac{2}{\cancel{b+1}}y_1 = \frac{c(b+1)}{\cancel{b+1}} $$
+$$ 2y_1 = c(b+1) $$
+$$ y_1^* = \frac{c(b+1)}{2} $$
 
 \section{Comparação entre as Lideranças de Preço e Quantidade}
 
