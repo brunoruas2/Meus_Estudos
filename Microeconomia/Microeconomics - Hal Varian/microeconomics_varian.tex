@@ -1632,11 +1632,75 @@ Na imagem abaixo, nós podemos ver as variáveis interagindo. A oferta total ser
 
 \section{Comparação entre as Lideranças de Preço e Quantidade}
 
+Esse seção do livro é bem explicativa. Vá ler o material original.
+
 \section{Estabelecimento Simultâneo da Quantidade}
+
+Não raramente, as empresas não ficam se comunicando entre si para informar seus concorrentes a respeito de suas decisões . Nesses cenários, as empresas precisam supor o que suas concorrentes farão. Esse modelo é chamado de \textbf{Modelo de Cournot} e é um modelo de jogo simultâneo onde as empresas definem suas quantidades produzidas e vendidas no mercado.
+\\
+\\
+Como de costume, suporemos que as empresas queiram maximizar seus lucros. Pensemos no caso da empresa 1. A quantidade total do mercado será dada por $Y = y_1 + y_2^e$, onde $y_2^e$ é a quantidade prevista da empresa 2. O preço de equilíbrio do mercado será dado pela equação de demanda inversa $p(Y) = p(y_1 + y_2^e)$.
+\\
+\\
+O problema de maximização do lucro será
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2^e)y_1 - c(y_1)}{\ }$ \\
+\end{center}
+
+Não é difícil ver que quaisquer expectativa da produção da sua concorrente mudará o ponto de produção que maximizaria o lucro. Desse modo, podemos ver que existe uma relação entre essa expectativa e a produção, de modo mais formal, $y_1 = f(y_2^e)$.
+\\
+\\
+Mas, espera um pouco, a gente já viu algo bem parecido um pouco mais acima. Essa é a \textbf{curva de reação} da empresa, a diferença é que aqui a empresa 1 não é mais a líder e essa reação se refere a \textit{expectativa} da produção. Mas o tratamento matemático é o mesmo.\footnote{Para a nossa sorte!}
+\\
+\\
+Similarmente, a empresa 2 se depara com a mesma situação.
+
+$$y_2 = f(y_1^e)$$
+
+Como ambas maximizações são funções de expectativas, é muito mais provável que as empresas não acertem exatamente o volume de produção da sua concorrente. O equilíbrio de Cournot é dado pelo sistemas de equações
+
+$$ y_1^* = f_1(y_2^*) $$
+$$ y_2^* = f_2(y_1^*) $$
+
+Nessa solução, nenhuma das empresas terá incentivos em mudar seu nível de produção.
 
 \section{Exemplo do Equilíbrio de Cournot}
 
+Se reutilizarmos o exemplo na liderança da quantidade (com custo zero e demanda linear) obteremos as mesmas funções de reação que a empresa 2 tinha naquele modelo.
+
+$$ y_1 = \frac{a - by_2^e}{2b} $$
+
+e
+
+$$ y_2 = \frac{a - by_1^e}{2b} $$
+
+O ponto de equilíbrio acontece onde $y_1 = y_2$, ou seja, onde as curvas de reação são iguais. Nesse ponto, $y_1^e = y_1$ e $y_2^e = y_2$. Só precisamos substituir dentro desse sistema de equações do seguinte modo
+
+$$ y_1 = \frac{a - by_2^e}{2b} $$
+$$ y_1 = \frac{a - by_2}{2b} $$
+$$ y_1 = \frac{a - b(\frac{a - by_1}{2b})}{2b} $$
+$$ y_1 = \frac{a - (\frac{ab - b^2y_1)}{2b})}{2b} $$
+$$ y_1 = \frac{\frac{2ba}{2b} - (\frac{ab - b^2y_1)}{2b})}{2b} $$
+$$ y_1 = \frac{2ba - ab + b^2y_1}{2b}\frac{1}{2b} $$
+$$ y_1 = \frac{2ba - ab + b^2y_1}{4b}\frac{1}{b} $$
+$$ y_1 = \frac{2\cancel{b}a - a\cancel{b} + b^{\cancel{2}}y_1}{4\cancel{b}}\frac{1}{b} $$
+$$ y_1 = \frac{2a - a + by_1}{4b} $$
+$$ 4by_1 - by_1 = a $$
+$$ 3by_1 = a $$
+$$ y_1^* = \frac{a}{3b} = y_2^* $$
+
+Com essas funções e as equações de lucro podemos ver graficamente o equilíbrio de Cournot onde as curvas de reação se equivalem.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_5-modelo_cournot.png}
+\end{figure}
+
 \section{Ajustamento para o Equilíbrio}
+
+Seria muita boa vontade supor que, na vida real, as empresas conseguissem acertar na mosca o nível de produção dos seus concorrentes. Mas o nosso modelo é forte o suficiente para um processo de ajustamento em caso de (prováveis) palpites equivocados no nível de produção.
+
 
 \section{Várias Empresas no Equilíbrio de Cournot}
 
