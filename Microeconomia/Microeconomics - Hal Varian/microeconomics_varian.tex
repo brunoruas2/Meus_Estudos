@@ -1702,7 +1702,7 @@ Com essas funções e as equações de lucro podemos ver graficamente o equilíb
 Seria muita boa vontade supor que, na vida real, as empresas conseguissem acertar na mosca o nível de produção dos seus concorrentes. Mas o nosso modelo é forte o suficiente para um processo de ajustamento em caso de (prováveis) palpites equivocados no nível de produção.
 \\
 \\
-Imaginemos que as empresas suponham que a produção do seu concorrente será uma quantidade qualquer diferente do equilíbrio. Para facilitar, vamos supor que a cesta inicial produzida esteja em cima da curva de reação da empresa 2. A cesta inicial será igual à lista $(y_1^t,y_2^t)$.
+Imaginemos que as empresas suponham que a produção do seu concorrente será uma quantidade qualquer diferente do equilíbrio. Para facilitar, vamos supor que a cesta inicial produzida esteja em cima da curva de reação da empresa 2. A cesta inicial, que chamamos no gráfico de $Cesta(t)$ será igual à lista $(y_1^t,y_2^t)$.
 \\
 \\
 Essa cesta está na curva de reação da empresa 2, logo, essa empresa não terá incentivo a fazer nenhuma mudança. Mas para a empresa 1, a situação é outra, ela quer reduzir sua produção para aumentar seus lucros.
@@ -1711,21 +1711,49 @@ Essa cesta está na curva de reação da empresa 2, logo, essa empresa não ter�
 Isso faz com que a cesta do mercado se desloque para a curva de reação da empresa 1. Mas agora, quem está insatisfeito é a empresa 2. Ela fara um reajuste, só que agora, usará a nova produção da empresa 1 para definir sua oferta.
 \\
 \\
-Esse processo fica se realimentando até um ponto onde elas estão satisfeitas. Esse é justamente o ponto de equilíbrio de Cournot!
+Esse processo fica se realimentando até um ponto onde elas estão satisfeitas. Nós já vimos agora a pouco que esse ponto é justamente o equilíbrio do modelo de Cournout.
 \\
 \\
-A imagem abaixo mostra esse caminho. Mas eu também transformei ela em um gif animado (e bem humorado) para ilustrar o caminho até o equilíbrio.
+A imagem abaixo mostra esse caminho. Mas eu também transformei ela em um gif animado\footnote{Com alguma dose de bom humor.} para ilustrar o caminho até o equilíbrio.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.75]{cap28_7-ajustamento.png}
 \end{figure}
 
+Essa propriedade de convergência ao ponto de equilíbrio é o que caracteriza esse modelo como um modelo de \textbf{equilíbrio estátvel}. Embora o processo descrito aqui seja bem resumido e simplificado devido o escopo do nosso curso.
+
 \section{Várias Empresas no Equilíbrio de Cournot}
+
+Além de fornecer um modelo para um duopólio, podemos ajustar o modelo de Cournot para $n$ empresas competidoras. A oferta total da indústria será dada por $Y = y_1 + y_2 + \dots + y_{n-1} + y_n$. Desse modo o problema da maximização da empresa será dado pela igualdade entre a receita marginal e o seu custo marginal do seguinte modo
+
+$$ p(Y) + \frac{\delta p}{\delta Y} y_i = CMa(y_i) $$
+$$ p(Y) + \frac{\delta p}{\delta Y} \frac{Y}{Y} \frac{p(Y)}{p(Y)} y_i = CMa(y_i) $$
+$$ p(Y) \left[1 + \frac{\delta p}{\delta Y} \frac{Y}{p(Y)} \frac{y_i}{Y} \right] = CMa(y_i) $$
+
+Definindo $s_i = \frac{y_i}{Y}$ como a participação da empresa no total do mercado.
+
+$$ p(Y) \left[1 + \frac{\delta p}{\delta Y} \frac{Y}{p(Y)} s_i \right] = CMa(y_i) $$
+
+O termo $p(Y)$ é a curva de demanda. Então, se lembrarmos da fórmula da elasticidade, podemos ver que o termo $\frac{\delta p}{\delta Y} \frac{Y}{p(y)}$ é justamente o inverso da elasticidade $\frac{1}{\epsilon(Y)}$
+
+$$ p(Y) \left[1 + \frac{s_i}{\epsilon(Y)} \right] = CMa(y_i) $$
+
+Como a elasticidade de demanda é negativa
+
+$$ p(Y) \left[1 - \frac{s_i}{|\epsilon(Y)|} \right] = CMa(y_i) $$
+
+O professor faz uma transformação que, para alguns, pode parecer estranha. Mas a lógica é essa (se tiver difícil de ver, dá um zoom):
+
+$$ \frac{1}{\frac{\epsilon(Y)}{s_i}} = \frac{\frac{1}{1}}{\frac{\epsilon(Y)}{s_i}} = \frac{1}{1} \frac{s_i}{\epsilon(Y)} = \frac{s_i}{\epsilon(Y)} $$
+
+Com essa transformação, chegamos em
+
+$$ p(Y) \left[1 - 1/\frac{|\epsilon(Y)|}{s_i} \right] = CMa(y_i) $$
 
 \section{Fixação Simultânea de Preços}
 
-\section{Conluio}
+\section{Conluio}	
 
 \section{Estratégias Punitivas}
 
