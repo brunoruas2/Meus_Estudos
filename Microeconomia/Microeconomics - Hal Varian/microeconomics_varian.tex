@@ -1778,6 +1778,75 @@ O segundo ponto funciona de maneira recursiva. Se uma empresa reduz seu preço e
 
 \section{Conluio}	
 
+Até agora, todas as soluções envolveram processos de competição entre as empresas. Contudo, não seria nem um pouco alheio à realidade supor que algumas empresas queiram operar de modo coordenado. Esse arranjo é chamado de \textbf{Cartel} e é crime em vários países.
+\\
+\\
+Você já sabe, desde o capítulo 25, que um cartel não passa de um grupo de empresas se comportando como um monopolista. Diante disso, seu problema de maximização será muito parecido com o modelo do capítulo que tratamos sobre o monopólio.
+\\
+\\
+O problema da maximização para um cartel de duas empresas será dado por
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1,y_2$}} \ \ \stackrel{p(y_1+y_2)[y_1 + y_2] - c_1(y_1) - c_2(y_2)}{\ }$ \\
+\end{center}
+
+Cujas condições de primeira ordem serão
+
+$$p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}[y_1^* + y_2^*] = CMa_1(y_1^*)$$
+$$p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}[y_1^* + y_2^*] = CMa_2(y_2^*)$$
+
+Podemos ver que, quando uma empresa decide expandir sua produção, receberá uma quantia oriunda da venda dos seus produtos, contudo, essa oferta adicional reduzirá o preço de equilíbrio do mercado (o que reduz o lucro recebido). A novidade aqui é que essa redução do preço impactará também na outra empresa do cartel.
+\\
+\\
+O que as duas equações anteriores nos dizem é que as quantidades produzidas (e ofertadas no mercado) serão as que igualem seus custos marginais $CMa_1(y_1^*) = CMa_2(y_2^*)$. 
+\\
+\\
+Agora temos um fator interessante para pensarmos. Se uma empresa possuir uma estrutura de custos que permita produzir mais com o mesmo custo marginal que sua empresa companheira, ela obterá uma maior parte dos lucros do mercado. Uma vez que sua produção será maior.
+
+\subsection{O problema da `Desonestidade'}
+
+Será que as empresas que operam em um cartel possuem algum incentivo em "trapacear"\ a sua empresa parceita?\footnote{Nessas situações cabe o didato popular: "Ladrão que rouba ladrão tem ..."}
+\\
+\\
+Vejamos o que acontece com a empresa 1 do nosso cartel, caso ela aumente a sua produção em $\delta y_1$ unidades. Podemos mensurar esse impacto pela derivada parcial da função lucro do cartal em relação a $y_1$
+
+$$ \frac{\partial \pi_1}{\partial y_1} = p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* - CMa_1(y_1^*) $$ 
+
+A condição de maximização do cartel nos diz que
+
+$$ p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* + \frac{\delta p}{\delta Y}y_2^* - CMa_1(y_1^*) = 0 $$ 
+
+Apenas isolando o termo referente à produção da empresa, temos então
+
+$$ p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* - CMa_1(y_1^*) = - \frac{\delta p}{\delta Y}y_2^* $$ 
+
+Como $\delta p / \delta Y$ é negativo, então o termo da esquerda da última equação é positivo. Ou seja, a empresa 1 consegue aumentar seus lucros positivamente ao aumentar sua produção para além do ponto de equilíbrio do cartel.
+\\
+\\
+Aqui mora o problema de longo prazo dos carteis. Na solução de maximização do lucro conjunto, existe um incentivo para cada empresa aumentar sua produção, visto que, se a outra empresa mantiver fixa a sua produção, sempre será lucrativo um aumento unilateral da quantidade produzida.
+\\
+\\
+Agora, se houver desconfiança entre as empresas, fica mais difícil ainda manter a coalizão. Se as empresas esperam que a outra irá aumentar sua produção, elas terão um incentivo adicional em agir antes da outra e aproveitar os lucros positivos oriundos do aumento da produção.
+\\
+\\
+Para exemplificar, vamos pegar uma demanda linear do tipo $p(Y) = a - b(y_1 + y_2)$ e supormos um custo marginal igual a $0$. A equação do lucro será dada por 
+
+$$\pi(y_1,y_2) = p(Y)(y_1 + y_2) = [a - b(y_1 + y_2)](y_1 + y_2) = a(y_1 + y_2) - b(y_1 + y_2)^2$$
+
+A condição de primeira ordem desse problema é dada pela derivada dessa função em relação a $(y_1 + y_2)$. O que nos dá
+
+$$a - 2b(y_1 + y_2) = 0$$
+$$y_1^* + y_2^* = \frac{a}{2b}$$
+
+O gráfico abaixo ilustra exatamente esse situação para $a = 100, b = 2$ e os custos de produção fixos em $10$. Veja como temos 3 pontos onde as curvas de isolucro se tocam. Esses pontos ocorrem na reta de maximização do lucro dada pela equação acima.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_10-cartel.png}
+\end{figure}
+
+Todas as soluções de maximização do lucro acontecem nas tangências das curvas de isolucro que ocorrem na reta de maximização. Quando uma empresa aumenta a produção unilateralmente, ela acaba deslocando o equilíbrio para um outro ponto dessa curva. Veja como a soma dos lucros nesses 3 pontos são iguais.
+
 \section{Estratégias Punitivas}
 
 \section{Comparação das Soluções}
