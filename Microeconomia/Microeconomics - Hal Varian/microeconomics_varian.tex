@@ -1845,9 +1845,51 @@ O gráfico abaixo ilustra exatamente esse situação para $a = 100, b = 2$ e os 
 \includegraphics[scale=0.75]{cap28_10-cartel.png}
 \end{figure}
 
-Todas as soluções de maximização do lucro acontecem nas tangências das curvas de isolucro que ocorrem na reta de maximização. Quando uma empresa aumenta a produção unilateralmente, ela acaba deslocando o equilíbrio para um outro ponto dessa curva. Veja como a soma dos lucros nesses 3 pontos são iguais.
+Todas as soluções de maximização do lucro acontecem nas tangências das curvas de isolucro que ocorrem na reta de maximização.
 
 \section{Estratégias Punitivas}
+
+Já aprendemos o motivo dos carteis terem alguma dificuldade de se manter estáveis devido os incentivos que as empresas têm de aumentar suas produções. Para superar essa dificuldade, os carteis precisam de medidas para punir quaisquer comportamentos que venham "burlar" o ponto de maximização do lucro da coalizão.
+\\
+\\
+Uma maneira possível é pensar que, em um duopólio, uma das empresas ameace a outra que produzirá permanentemente o nível de produção de Cournot (ou seja, um ponto na curva de reação). Essa estratégia é chamada de \textbf{estratégia de punição}.
+\\
+\\
+Para sabermos se essa punição seria forte o suficiente para mitigar o risco de trapaça, precisamos comparar o que aconteceria com o lucro das empresas nos dois casos. Na coalizão, o lucro $\pi_m$ é dado pela equação de maximização da seção passada. Já no equilíbrio de Cournot, as empresas produzirão o ponto de equilíbrio que produzirá o lucro $\pi_c$.
+\\
+\\
+Os lucros obtidos pelo cartel são maiores porque fazem uso do poder de mercado do monopólio (via markup do custo marginal). Enquanto na solução de Cournot, as quantidades são definidas pela maximização das empresas via ajuste competitivo. Isso implica em lucros menores no segundo modelo se comparados aos lucros do primeiro, ou seja, $\pi_m > \pi_c$.
+\\
+\\
+Se uma empresa do duopólio decidir furar a regra da cota de produção, terá lucros positivos de $\pi_d > \pi_m$. As empresas do monopólio possuem um incentivo de realizar esses lucros via aumento unilateral da produção.
+\\
+\\
+Ao produzir a quantidade do cartel, cada empresa aufere um fluxo constante de lucro $\pi_m$. O valor presente desse fluxo de lucros a partir de hoje é dado por
+$$ \textrm{Valor Presente Cartel = } \pi_m + \displaystyle \sum^{\infty}_{i = 1} \frac{\pi_m}{(1 + r)^i} = \pi_m + \pi_m \displaystyle \sum^{\infty}_{i = 1} \frac{1}{(1 + r)^i} $$
+
+Definindo $\displaystyle \sum^{\infty}_{i = 1} \frac{1}{(1 + r)^i}$ como $1/r$. Podemos resumir a equação acima como está no livro
+
+$$ \textrm{Valor Presente Cartel = } \pi_m + \frac{\pi_m}{r} $$
+
+Enquanto o valor presente da empresa que decida fraudar o cartel e recebe o equilíbrio de Cournot como resultado
+
+$$ \textrm{Valor Presente Trapaça = } \pi_d + \frac{\pi_c}{r} $$
+
+Quando valerá a pena trapacear e quando será melhor se manter fiel ao cartel? Não é difícil ver que se o valor presente do cartel for maior que o valor presente da trapaça, será melhor continuar cumprindo o acordo do cartel, ou seja, o cartel será a melhor opção se
+
+$$ \pi_m + \frac{\pi_m}{r} > \pi_d + \frac{\pi_c}{r} $$
+
+Isolando o termo de desconto $r$, temos
+
+$$ r < \frac{\pi_m - \pi_c}{\pi_d - \pi_m} $$
+
+Já sabemos que $\pi_m - \pi_c > 0$ porque o lucro do cartel é maior que o lucro do equilíbrio de Cournot. Também sabemos que $\pi_d - \pi_m > 0$ porque o lucro da trapaça é superior ao do cartel. Então o termo da direito da desigualdade é a proporção entre a o prejuízo da punição pelo ganho da trapaça.
+\\
+\\
+Se a taxa de desconto for menor que essa proporção, valerá a pena trapacear. Caso contrário, será melhor ficar no conluio.
+\\
+\\
+Esse modelo até consegue propor uma maneira de controle do cartel, mas a noção de uma punição perpétua é um tanto quanto forçada na vida real. Veremos modelos mais realistas no decorrer do nosso curso.
 
 \section{Comparação das Soluções}
 
