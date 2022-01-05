@@ -1965,7 +1965,7 @@ $Baixo$ & $0,0$         & $1,2$
 
 \end{center}
 
-Percebeu que nesse arranjo não temos nenhuma estratégia dominante? O que cada jogador fará, depende da escolha do outro jogador. Um \textbf{equilíbrio de Nash} é criado sempre que a escolha de um jogador for $ótima$ dada a escolha do outro jogador.
+Percebeu que nesse arranjo não temos nenhuma estratégia dominante? O que cada jogador fará, depende da escolha do outro jogador. Um \textbf{equilíbrio de Nash} é criado sempre que a escolha de um jogador for $ótima$ dada a escolha do outro jogador. Note que um equilíbrio de estratégia dominante também é um equilíbrio de Nash mas não necessariamente o contrário.
 \\
 \\
 No exemplo acima, o quadrante "esquerda e alto"\ é um equilíbrio de Nash. Uma vez que seja revelado aos participantes que eles estão nesse quadrante, nenhum deles terá o incentivo em mudar de estratégia. Para $A$ jogar $Baixo$ é pior, assim como para $B$, jogar $Direita$ é pior.
@@ -2007,17 +2007,51 @@ Mas podemos ampliar nossa forma de pensar e permitir que os jogadores atribuam p
 No nosso jogo em questão, se cada jogador tiver a probabilidade de 50\% para cada estratégia, terão como retorno $1/4$ do valor resultante de cada quadrante. Ou seja, o jogado $A$ teria um total de $0$, enquanto o jogado $B$ terminaria o jogo com $1/2$.
 \\
 \\
-O equilíbrio de Nash em estratégias mistas é o equilíbrio na \textbf{escolhas das probabilidades} de cada agente. Ou seja, ao invés de escolher entre uma ou outra, ele escolherá quantos porcento de cada estratégia será utilizado.
+O equilíbrio de Nash em estratégias mistas é o equilíbrio na \textbf{escolhas das probabilidades} de cada agente. Ou seja, ao invés de escolher entre uma ou outra, ele escolherá quantos porcento de cada estratégia será utilizado. 
 \\
 \\
-Vamos pegar esse jogo e simular todas os retornos para cada escolha de probabilidades. Lembre-se que, se a probabilidade de $A$ escolher $alto$ for de $10\%$, então, $baixo$ terá obrigatoriamente de ter a probabilidade igual a $90\%$.
+No livro, o professor afirma que pode ser mostrado que, se o jogador $A$ escolhe $3/4$ de alto e $1/4$ de baixo enquanto $B$ jogar $1/2$ para esquerda e direita, teremos um equilíbrio de Nash. Pois bem, vamos mostrar isso.
+\\
+\\
+Vamos pegar esse jogo e simular todos os retornos para cada escolha de probabilidades. Lembre-se que, se a probabilidade de $A$ escolher $alto$ for de $10\%$, então, $baixo$ terá obrigatoriamente de ter a probabilidade igual a $90\%$. Os retornos de $A$ são essa escala avermelhada enquanto os retornos de $B$ são a escala azulada.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.75]{cap29_3-estrategias_mistas.png}
 \end{figure}
 
+Como o professor afirma no livro. O ponto do equilíbrio de Nash acontece onde $B$ escolhe $50\%$ para cada e $A$ escolhe $75\%$ para $alto$ e $25\%$ para $baixo$. Quando $B$ escolhe esse ponto, todos os retornos de $A$ se tornam constantes (veja que a linha de $A$ é uma reta horizontal nesse ponto). Similarmente, quando $A$ escolhe esse ponto, todos os retornos de $B$ se tornam constantes. Como nenhum deles tem nenhum incentivo em mudar de estratégia nesse equilíbrio, temos um equilíbrio de Nash para estratégias mistas.\footnote{Eu sei, lindo demais, né?!}
+\\
+\\
+\textbf{Comentário:} Aqui o professor coloca um exemplo muito bom sobre a relação entre teoria dos jogos e o jogo de pedra, papel e tesoura. Vale a pena a leitura.
+
 \section{O Dilema do Prisioneiro}
+
+Um dos conceitos mais conhecidos na economia é o dilema do prisioneiro. Chegou a sua hora de conhecê-lo. Primeiro, considere o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+            & $Confessa$      & $Nega$ \\
+$Confessa$  & $-3,-3$         & $0,-6$ \\
+$Nega$      & $-6,0$          & $-1,-1$
+\end{game}
+
+\end{center}
+
+A essa altura você já notou que esse jogo possui uma estratégia dominante: confessar. Independente do que cada jogador faça, sempre vai ser melhor confessar. Mas aqui temos uma contradição. Se eles optassem por não seguir a estratégia dominante, acabariam em situação melhor.
+\\
+\\
+Como a opção "nega-nega"\ não pode ser modificada sem prejuízo para alguma das parte, ela é eficiente no sentido de Pareto. Ou seja, estamos diante de um arranjo que impede que alcancemos o ótimo de Pareto do sistema.
+\\
+\\
+Podemos adaptar esse dilema para várias outras situações da vida real. O professor cita uma adaptação para "instalar" ou "não instalar"\ um míssil. Também adapta esse jogo para a situação do cartel em que há as opões de "burlar" e "não burlar"\ as cotas de produção.
+\\
+\\
+Como é de se esperar, o dilema do prisioneiro trouxe bastante discussão a respeito de como resolver esse jogo. Parece que a solução está relacionada à possibilidade ou não de repetição. Se o jogo é sem repetição, melhor será confessar. Pois essa é a estratégia dominante do arranjo.
+
 \section{Jogos Repetidos}
 \section{Manutenção de um Cartel}
 \section{Jogos Sequenciais}
