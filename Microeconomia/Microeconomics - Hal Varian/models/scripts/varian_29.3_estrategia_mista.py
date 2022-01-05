@@ -39,7 +39,7 @@ q1 = np.linspace(0,1,200)
 q2 = np.linspace(0,1,200)
   
 ax.set_title('cap 29.3 - Equilíbrio Nash em Estratégia Mista')
-ax.set_ylabel('Jogador B - Prob Direita')
+ax.set_ylabel('Jogador B - Prob Esquerda')
 ax.set_xlabel('Jogador A - Prob Alto')
 
 # Creating 2-D grid of features
