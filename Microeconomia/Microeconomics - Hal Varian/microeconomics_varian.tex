@@ -2404,6 +2404,63 @@ Quando modificamos os jogos da segurança, batalha dos sexos e roleta russa, par
 No caso do dilema do prisioneiro, o melhor a fazer seria modificar o jogo para repetição (que permitiria a retalhação por mal comportamento) ou a contratação (que modificaria o resultado da confissão). 
 
 \section{Jogos de Competição}
+
+O contrário do jogo de coordenação é a competição. Você já ouviu falar que "tal coisa é um \textbf{jogo de soma zero}". Bem, esse nome é devido ao fato que o total de ganhos é igual ao as perdas. Os esportes são um bom exemplo desse tipo de arranjo.
+\\
+\\
+Considere essa matriz para pontuação de um pênalti
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Artilheiro][Goleiro]
+             & $Esquerda$    & $Direita$ \\
+$Esquerda$   & $50,-50$      & $80,-80$ \\
+$Direita$    & $90,-90$      & $20,-20$
+\end{game}
+
+\end{center}
+
+Os valores são variáveis porque simbolizam as probabilidades de gol. Como o goleiro quer defender, e o artilheiro quer marcar. Eles farão de tudo para impedir que um saiba de antemão a ação do outro. Esse é um baita exemplo de uma \textbf{estratégia mista}.
+\\
+\\
+Como esse jogo é competitivo, não teremos opções de equilíbrio em estratégia pura cooperativos. Graficamente, isso quer dizer que as curvas de melhor resposta não se encontrarão em nenhum extremo do gráfico.
+\\
+\\
+Quando o artilheiro escolhe chutar para esquerda com prob. igual a $p$. O seu retorno esperado será de $50p + 90(1-p)$ caso o goleiro pule para a esquerda, mas caso o goleiro pule para a direita, seu retorno será de $80p + 20(1-p)$. O artilheiro quer ter o maior retorno possível com seus chutes, enquanto o goleiro quer que seja o menor possível.
+\\
+\\
+Se o artilheiro decidir chutar mais para uma direção, ou optar pela metade em cada, o goleiro utilizará as probabilidades de defesa para fazer sua estratégia de maximização. A única maneira que o artilheiro tem de "obrigar"\ o goleiro a adotar determinada conduta, é optar pelo ponto onde os retornos prováveis serão iguais. Nós conseguimos saber esse ponto pela igualdade das duas curvas de retorno.
+
+$$50p + 90(1-p) = 80p + 20(1-p)$$
+$$70(1-p) = 30p$$
+$$70 - 70p = 30p$$
+$$70 = 100p$$
+$$p = 0,7$$
+
+Ao adotar a estratégia de chutar 70\% das vezes para a esquerda, o artilheiro se coloca em uma situação os retornos esperados são iguais nos acertos ou nos erros. É a melhor estratégia a ser tomada pois, "anula"\ o efeito que o goleiro possa fazer no resultado.
+\\
+\\
+Se fizermos exatamente a mesma abordagem para o goleiro, acabaremos com
+
+$$50q + 80(1-q) = 90q + 20(1-q)$$
+$$60(1-q) = 40q$$
+$$60 - 60q = 40q$$
+$$60 = 100q$$
+$$q = 0,6$$
+
+Esse será o ponto onde o goleiro obterá retornos constantes, independente da escolha do artilheiro.
+\\
+\\
+Agora podemos construir o gráfico com as curvas de melhor resposta. Sabemos que o equilíbrio de Nash acontecerá no ponto $p = 0,7$ e $q = 0,6$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_4-jogos_competitivos.png}
+\end{figure}
+
+
 \section{Jogos de Coexistência}
 \section{Jogos de Compromisso}
 \section{Negociação}
