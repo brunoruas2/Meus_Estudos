@@ -2208,7 +2208,92 @@ Os equilíbrios de Cournout e Bertrand são exemplos de jogos com equilíbrios d
 
 \section{Estratégias Mistas}
 
+Voltaremos ao jogo da seção anterior
 
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $2,1$          & $0,0$ \\
+$Baixo$  & $0,0$          & $1,2$
+\end{game}
+
+\end{center}
+
+Mas dessa vez, nosso interesse é no equilíbrio de estratégias mistas e, também, nos de estratégias puras. Já aprendemos que uma estratégia mista consiste na escolha das probabilidades para cada ação, de modo a obter os retornos proporcionais à cada probabilidade atribuída. Os jogos de estratégia pura podem ser explicados pelo mesmo modelo, só que com probabilidades iguais aos extremos (0\% e 100\%).
+\\
+\\
+Primeiro vamos equacionar os retornos em termos das probabilidades de cada escolha. As probabilidades do jogador $linha$ serão: $l$ para $alto$ e $(1-l)$ para $baixo$. Do mesmo modo, para o jogador $coluna$ teremos: $c$ para $esquerda$ e $(1-c)$ para $direita$.
+\\
+\\
+As probabilidades e os ganhos para o jogador $linha$ para cada combinação serão:
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $lc = 2$       & $l(1-c) = 0$ \\
+$Baixo$  & $(1-l)c = 0$   & $(1-l)(1-c) = 1$
+\end{game}
+
+\end{center}
+
+O resultado do jogador $linha$ é obtido pela soma de cada probabilidades ponderada pelo retorno em cada quadrante. No caso da linha $alto$ temos
+
+$$ \textrm{ganhos linha} = 2lc + 0(l(1-c)) + 0((1-l)c) + (1-l)(1-c) $$
+$$  = 2lc + (1-l)(1-c) $$
+$$  = 2lc + 1 - l - c + lc $$
+
+Chegamos em um lugar bem interessante, temos uma função que relaciona as probabilidades de cada estratégia ($l$, $(1-l)$, $c$ e $(1-c)$) a cada nível de retorno para o jogador $linha$. Podemos ver o quanto uma variação na probabilidade que ele tem controle $\Delta l$ pode trazer de retorno
+
+$$ \frac{d \textrm{ (ganhos linha)}}{d l} = 2c - 1 + c $$
+$$ = 3c - 1 $$
+
+Com esse resultado, podemos ver que, se  $c > 1/3$ qualquer aumento em $l$ gerará um resultado positivo. Por outro lado, se $c < 1/3$ qualquer valor de $l$ positivo terá um retorno negativo (nesse caso, ele escolhe não jogar $alto$). Por fim, se $c = 1/3$, não importa o que o jogador $linha$ faça, seus retornos serão constantes.
+\\
+\\
+De maneira análoga, podemos ver que os ganhos do jogador $coluna$ são iguais a 
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $lc = 1$       & $l(1-c) = 0$ \\
+$Baixo$  & $(1-l)c = 0$   & $(1-l)(1-c) = 2$
+\end{game}
+
+\end{center}
+
+Fazendo a mesma análise a partir desses valores, podemos ver que
+
+$$ \textrm{ganhos coluna} = lc + 0(l(1-c)) + 0((1-l)c) + 2(1-l)(1-c) $$
+$$  = lc + 2(1-l)(1-c) $$
+$$  = lc + 2(1-l-c+lc) $$
+$$  = lc + 2 - 2l - 2c + 2lc $$
+$$  = 3lc + 2 - 2l - 2c $$
+
+Cuja derivada em relação à $c$ será
+
+$$ \frac{d \textrm{ (ganhos coluna)}}{d c} =  $$
+$$ = 3l - 2 $$
+
+Podemos concluir que, quando $l < 2/3$, qualquer ação de $c$ levará a uma redução no seu resultado (esse é o caso onde é melhor não fazer nada de $esquerda$). Se $l > 2/3$, qualquer aumento de $c$ elevará o seu resultado. Finalmente, se $l = 2/3$, qualquer valor de $c$ terá retornos constantes.
+\\
+\\
+Com base nessas informações, podemos construir as funções de resposta no gráfico abaixo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_2-estrategias_mistas.png}
+\end{figure}
+
+Podemos ver que temos 3 equilíbrios de Nash. Dois em estratégias puras: o ponto $(0,0)$ e o ponto $(1,1)$. E também um equilíbrio em estratégia mista: o ponto $(2/3,1/3)$.
 
 \section{Jogos de Coordenação}
 \section{Jogos de Competição}
