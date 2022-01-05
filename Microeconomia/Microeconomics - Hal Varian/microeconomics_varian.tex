@@ -2256,7 +2256,7 @@ $$ = 3c - 1 $$
 Com esse resultado, podemos ver que, se  $c > 1/3$ qualquer aumento em $l$ gerará um resultado positivo. Por outro lado, se $c < 1/3$ qualquer valor de $l$ positivo terá um retorno negativo (nesse caso, ele escolhe não jogar $alto$). Por fim, se $c = 1/3$, não importa o que o jogador $linha$ faça, seus retornos serão constantes.
 \\
 \\
-De maneira análoga, podemos ver que os ganhos do jogador $coluna$ são iguais a 
+De maneira análoga, podemos ver que as probabilidades e os ganhos do jogador $coluna$ são iguais a 
 
 \begin{center}
 
@@ -2286,7 +2286,7 @@ $$ = 3l - 2 $$
 Podemos concluir que, quando $l < 2/3$, qualquer ação de $c$ levará a uma redução no seu resultado (esse é o caso onde é melhor não fazer nada de $esquerda$). Se $l > 2/3$, qualquer aumento de $c$ elevará o seu resultado. Finalmente, se $l = 2/3$, qualquer valor de $c$ terá retornos constantes.
 \\
 \\
-Com base nessas informações, podemos construir as funções de resposta no gráfico abaixo.
+Com base nessas informações, podemos construir as curvas de melhor resposta no gráfico abaixo.
 
 \begin{figure}[H]
 \centering
@@ -2296,6 +2296,113 @@ Com base nessas informações, podemos construir as funções de resposta no gr�
 Podemos ver que temos 3 equilíbrios de Nash. Dois em estratégias puras: o ponto $(0,0)$ e o ponto $(1,1)$. E também um equilíbrio em estratégia mista: o ponto $(2/3,1/3)$.
 
 \section{Jogos de Coordenação}
+
+De posse das curvas de melhor resposta, vamos começar a investigar algumas classes de jogos. A primeira que veremos são os \textbf{jogos de coordenação}. Que são jogos onde os ganhos serão maiores se os jogadores decidirem coordenar suas estratégias. A questão é criar os mecanismos que criem os incentivos à essa coordenação.
+
+\subsection{A Batalha dos Sexos}
+
+Imagine que temos dois jovens enamorados. Ambos marcaram que iriam se encontrar no cinema, mas estão sem celular\footnote{O do rapaz foi roubado e o da moça está sem bateria.} e não sabem qual filme o outro verá. O rapaz prefere o filme de ação enquanto a moça prefere o filme de arte. Ambos preferem assistir a algum filme juntos do que não se encontrarem. Podemos traduzir essa estrutura em uma matriz de ganhos
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Rapaz][Moça]
+         & $Ação$     & $Arte$ \\
+$Ação$   & $2,1$      & $0,0$ \\
+$Arte$   & $0,0$       & $1,2$
+\end{game}
+
+\end{center}
+
+Já sabemos que essa matriz produz as curvas de melhor resposta vistas na seção passada. Então esse jogo tem 3 equilíbrios. Nos dois equilíbrios de estratégia pura, teremos as opções: Ambos arriscam se encontrar no filme de Ação, Ambos arriscam se encontrar no filme de Artes. No equilíbrio de estratégia mista, cada um arriscaria no seu filme preferido com $2/3$ de probabilidade\footnote{Outra maneira é pensar que cada um ficaria $2/3$ do tempo na entrada do seu filme preferido}.
+\\
+\\
+Da maneira como está descrito, não tem como a gente saber o resultado dessa história. Se supormos que o rapaz tenha o histórico de ceder as decisões para a moça\footnote{Uma hipótese não muito rara na realidade.}, podemos definir que esse jogo teria um equilíbrio "mais natural"\ que os outros. O termo comumente usado para essa diferenciação dos equilíbrios é \textbf{ponto focal} do jogo.
+
+\subsection{O Dilema do Prisioneiro}
+
+Esse você já deve estar enjoado de ver. Mas agora temos as curvas de melhor resposta para ajudar na nossa análise\footnote{Não que isso vá mudar as conclusões que já temos.}. Sabemos que a estratégia dominante é confessar. Mas também sabemos que a estratégia eficiente no sentido de Pareto é negar.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+            & $Confessa$      & $Nega$ \\
+$Confessa$  & $-3,-3$         & $0,-6$ \\
+$Nega$      & $-6,0$          & $-1,-1$
+\end{game}
+
+\end{center}
+
+Quando modelamos as funções de melhor resposta. Como já sabemos, a única estratégia de equilíbrio é no ponto "confessa-confessa". No resto da seção não tem muita informação nova. Mas você tem que ler.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_3-jogos_coordenacao_1.png}
+\end{figure}
+
+\subsection{Jogos de Garantia}
+
+Uma coisa bacana da teoria dos jogos, é que podemos aplicar para uma gama enorme de contextos. Pensemos na corrida amarmentista de meados do século XX. Todo mundo sabe que o melhor era optar por não construir mais mísseis nucleares. Mas o custo de ser surpreendido por uma trapaça do outro lado\footnote{"Malditos comunistas!", diriam eles.}. Podemos resumir esse cenário na tabela abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[EUA][URSS]
+            & $Abstém$      & $Constrói$ \\
+$Abstém$    & $4,4$         & $1,3$ \\
+$Constrói$  & $3,1$         & $2,2$
+\end{game}
+
+\end{center}
+
+O gráfico das curvas de melhor resposta é esse aqui.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_3-jogos_coordenacao_2.png}
+\end{figure}
+
+Vemos que, como esse jogo é simultâneo, não temos uma estratégia mista. Nesse caso, só temos os pontos de equilíbrio nos extremos. Se um dos participantes conseguir convencer o outro que se abstém, ele "empurrará"\ o outro jogador para o ponto de equilíbrio da abstenção. A questão toda era como sinalizar de maneira eficiente para o outro jogador e ainda não parecer que está desistindo da corrida.
+
+\subsection{Roleta Russa}
+
+Antigamente, era comum ver, nos \href{https://www.youtube.com/watch?v=u7hZ9jKrwvo}{filmes de adolescentes americanos}\footnote{Nesse link tem uma versão um pouco diferente do jogo, mas a lógica é a mesma. (Embora o carinha tenha roubado ao pular do carro).}, uma prática chamada "roleta russa"\ que consistia em dois veículos um de frente para o outro à uma distância considerável. Os veículos aceleravam em direção ao outro. A ideia é que o motorista mais corajoso não desviaria a trajetória\footnote{A um lista de microeconomia pra essa garotada arranjar o que fazer!}. A matriz de ganhos pode ser definida como
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+           & $Desvia$    & $Mantém$ \\
+$Desvia$   & $0,0$       & $-1,1$ \\
+$Mantém$   & $1,-1$      & $-2,-2$
+\end{game}
+
+\end{center}
+
+Diferente dos outros jogos, aqui os equilíbrios são nas opções contrárias. Os equilíbrios de Nash de estratégia pura estão nas opções onde eles seguem ações diferentes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_3-jogos_coordenacao_3.png}
+\end{figure}
+
+Como encontrar um resultado? Bom, a melhor maneira de encontrar um desfecho é pela sinalização de compromisso. Se um dos competidores arrancasse fora o volante, ele jogaria para o outro motorista toda a responsabilidade pelo resultado. Nesse caso, a matriz seria atualizada e seria melhor para o outro motorista sair derrotado do que bater o carro.
+
+\subsection{Como Coordenar?}
+
+Essa seção é bem pequeninha. Vá ler o original. Mas um resumo é que podemos modificar os resultados pela adoção de movimentos sequenciados, repetição ou contratação.
+\\
+\\
+Quando modificamos os jogos da segurança, batalha dos sexos e roleta russa, para jogos sequenciados. Quando um jogado faz o primeiro movimento, o outro terá que maximizar apenas a partir do movimento feito. No caso da roleta russa, isso daria a vitória a um delas. Nos outros jogos, isso levaria ao ponto eficiente de Pareto.
+\\
+\\
+No caso do dilema do prisioneiro, o melhor a fazer seria modificar o jogo para repetição (que permitiria a retalhação por mal comportamento) ou a contratação (que modificaria o resultado da confissão). 
+
 \section{Jogos de Competição}
 \section{Jogos de Coexistência}
 \section{Jogos de Compromisso}
