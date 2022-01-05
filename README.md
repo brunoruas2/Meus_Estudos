@@ -42,7 +42,7 @@
     - [x] Monopólio
     - [x] O Comportamento do Monipolista
     - [x] O Mercado de Fatores
-    - [ ] O Oligopólio
+    - [x] O Oligopólio
     - [ ] A Teoria dos Jogos
     - [ ] Aplicações da Teoria dos Jogos
 - [ ] Tópicos Avançados
