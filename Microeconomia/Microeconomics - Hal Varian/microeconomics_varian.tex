@@ -28,6 +28,7 @@
 \usepackage{graphicx} % to set a images directory
 \usepackage{caption} % to supress numbering in figures
 \usepackage{float} % to make a figure stay when i whant
+\usepackage{sgame} % to make payoff matrixes
 
 \graphicspath{{./images/}} % set an default images folder
 
@@ -1899,6 +1900,128 @@ Esse última seção é um apanhado do que vimos no capítulo. Vá ler o materia
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Teoria dos Jogos}
+
+Parabéns! Você chegou no ponto da teoria que usaremos um dos ferramentais mais famosos da matemática aplicada. No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.\footnote{Sim, foi aqui que John Nash fez sua famosa contribuição que foi retratada naquele filme ganhador do Óscar "Uma mente brilhante". Agora você pode dizer para os seus familiares que estudou essa teoria ;)
+}
+
+\section{A Matriz de Ganhos de um Jogo}
+
+Como no nosso estudo sobre os oligopólios, vamos manter nosso horizonte de jogadores restrito a apenas dois e limitaremos o número de estratégias a um número finito. Assim conseguimos representar os ganhos em uma \textbf{matriz de ganhos}. 
+\\
+\\
+Como todo ferramental novo, temos que aprender a lógica do modelo. Para isso, o professor usa um exemplo com dois jogadores com duas estratégias para cada. O jogador $A$ possui duas opções de ação: $Alto$ e $Baixo$. Enquanto o outro possui, o jogador $B$, possui outras duas estratégias possíveis: $Esquerda$ e $Direita$. Os retornos para cada jogada estão expostos nessa matriz de ganhos abaixo. Os retornos do jogador $A$ estão a esquerda de cada célula, enquanto $B$ obterá os valores da direita.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $1,2$         & $0,1$       \\
+$Baixo$ & $2,1$         & $1,0$
+\end{game}
+
+\end{center}
+
+O que cada jogador fará? Bom, a primeira coisa que precisamos fazer é comparar os resultados de cada interação entre as estratégias possíveis. Se o jogado $B$ escolhe a opção $Esquerda$, será melhor o jogador $A$ escolher a opção $Baixo$, pois o retorno será o dobro. Se $B$, por outro lado, escolher $Direita$, ainda será melhor para $A$ escolher a estratégia $Baixo$ visto que o retorno será de $1$ ao invés de $0$. Percebeu que, independente do que $B$ faça, sempre será vantajoso para $A$ escolher $Baixo$?
+\\
+\\
+Agora dá uma olhada na matriz e me diz qual será a estratégia de $B$. Eu espero, vai lá.
+\\
+\\
+Muito bem! Para o jogador $B$, sempre será melhor escolher $Esquerda$.
+\\
+\\
+Como há uma lógica dominante para as escolhas de ambos os jogadores, então, nesse jogo em questão, existe o que chamamos de \textbf{estratégia dominante}.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\highlight#1{\colorbox{yellow}{#1}}
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $1,2$         & $0,1$       \\
+$Baixo$ & \highlight{$2,1$}         & $1,0$
+\end{game}
+
+\end{center}
+
+Eu sei, muito legal né?! Mas como sempre, existem muitas situações que não podemos contar com as existências de estratégias dominantes. E foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos na seção seguinte.
+
+\section{Equilíbrio de Nash}
+
+Analise o seguinte jogo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $2,1$         & $0,0$       \\
+$Baixo$ & $0,0$         & $1,2$
+\end{game}
+
+\end{center}
+
+Percebeu que nesse arranjo não temos nenhuma estratégia dominante? O que cada jogador fará, depende da escolha do outro jogador. Um \textbf{equilíbrio de Nash} é criado sempre que a escolha de um jogador for $ótima$ dada a escolha do outro jogador.
+\\
+\\
+No exemplo acima, o quadrante "esquerda e alto"\ é um equilíbrio de Nash. Uma vez que seja revelado aos participantes que eles estão nesse quadrante, nenhum deles terá o incentivo em mudar de estratégia. Para $A$ jogar $Baixo$ é pior, assim como para $B$, jogar $Direita$ é pior.
+\\
+\\
+Podemos reconstruir o modelo de Cournot usando essa mesma lógica. Na verdade, o equilíbrio de Nash é a generalização do equilíbrio de Cournot\footnote{Eu sei, mindblowing.}. Voltaremos à essa afirmação um pouco mais pra frente.
+\\
+\\
+Mas nem tudo são flores. O conceito do equilíbrio de Nash possui algumas dificuldades. No jogo que usamos como exemplo, podemos ver que o quadrante $Baixo$ e $Direita$ também é um equilíbrio de Nash.  Ou seja, podem haver múltiplos equilíbrios de Nash em um mesmo jogo.
+\\
+\\
+Outra dificuldade é que existem jogos em que não existam nenhum equilíbrio de Nash sequer. Veja o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $0,0$         & $0,-1$       \\
+$Baixo$ & $1,0$         & $-1,3$
+\end{game}
+
+\end{center}
+
+Nesse jogo, em todos os quadrante existirá o incentivo para algum jogador de mudar de estratégia. E também não existe nenhuma estratégia dominante.
+
+\section{Estratégias Mistas}
+
+Até agora, todos os jogos que vimos foram jogos de \textbf{estratégia pura}. Onde os jogadores definem um caminho e sempre agem do mesmo modo. De modo mais formal, podemos usar a definição dada no livro de pós-graduação do Varian (Microeconomic Analysis, 1993)\footnote{Só para vocês irem se animando para o mestrado.}.
+\\
+\\
+\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualqer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
+\\
+\\
+Mas podemos ampliar nossa forma de pensar e permitir que os jogadores atribuam probabilidades para cada escolha e possam mudar de estratégia ao longo do tempo. Nesse modelo, um jogador pode ficar 50\% do tempo em uma estratégia e mudar de estratégia nos outros 50\% do tempo. Auferindo o retorno de ambas multiplicado pela probabilidade associada a ela. Esse modelo é chamado de \textbf{estratégia mista}.
+\\
+\\
+No nosso jogo em questão, se cada jogador tiver a probabilidade de 50\% para cada estratégia, terão como retorno $1/4$ do valor resultante de cada quadrante. Ou seja, o jogado $A$ teria um total de $0$, enquanto o jogado $B$ terminaria o jogo com $1/2$.
+\\
+\\
+O equilíbrio de Nash em estratégias mistas é o equilíbrio na \textbf{escolhas das probabilidades} de cada agente. Ou seja, ao invés de escolher entre uma ou outra, ele escolherá quantos porcento de cada estratégia será utilizado.
+\\
+\\
+Vamos pegar esse jogo e simular todas os retornos para cada escolha de probabilidades. Lembre-se que, se a probabilidade de $A$ escolher $alto$ for de $10\%$, então, $baixo$ terá obrigatoriamente de ter a probabilidade igual a $90\%$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap29_3-estrategias_mistas.png}
+\end{figure}
+
+\section{O Dilema do Prisioneiro}
+\section{Jogos Repetidos}
+\section{Manutenção de um Cartel}
+\section{Jogos Sequenciais}
+\section{Um jogo com Barreiras à Entrada}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Aplicações da Teoria dos Jogos}
