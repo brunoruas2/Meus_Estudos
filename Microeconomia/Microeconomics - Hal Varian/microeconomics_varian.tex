@@ -29,6 +29,7 @@
 \usepackage{caption} % to supress numbering in figures
 \usepackage{float} % to make a figure stay when i whant
 \usepackage{sgame} % to make payoff matrixes
+\usepackage{qtree} % to make tree diagrams
 
 \graphicspath{{./images/}} % set an default images folder
 
@@ -2073,7 +2074,95 @@ Nessa seção revisitamos o problema da manutenção do cartel, mas sob a ótica
 \textbf{Comentário:} Depois ele cita o caso do Comitê Executivo Conjunto, que era um cartel gigante nos EUA no final do século XIX. Logo após ele coloca outro exemplo aplicando a teoria dos jogos ao problema de formação de preços das passagens aéreas. Vá ler o livro.
 
 \section{Jogos Sequenciais}
+
+Lá no capítulo do oligopólio nós vimos outros arranjos além dos jogos simultâneos. O modelo de Stackelberg é um exemplo de um jogo onde as ações são alternadas entre os jogadores. Nesses casos, além da matriz de ganhos, nós podemos usar a \textbf{forma extensiva do jogo} para ilustrar as etapas de escolhas e os devidos retornos de cada uma delas.
+\\
+\\
+Observe o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+            & $Esquerda$     & $Direita$ \\
+$Alto$      & $1,9$          & $1,9$ \\
+$Baixo$     & $0,0$          & $2,1$
+\end{game}
+
+\end{center}
+
+Se pensarmos nesse jogos como um jogo sequencial onde $A$ toma a primeira ação, podemos demonstrar o processo de decisão por meio do diagrama de árvore abaixo\footnote{Eu sei, eu sei. No livro está na horizontal. Mas o que importa é o conteúdo.}
+
+\Tree[.\textit{Jogador A} 
+				[.Alto 
+					[.\textit{Jogador B}
+						[.Esquerda (1,9) ]
+						[.Direita (1,9) ]]]
+				[.Baixo 
+					[.\textit{Jogador B}
+						[.Esquerda (0,0) ]
+						[.Direita (2,1) ]]]]
+\\
+\ 
+\\
+Em uma primeira olhada na matriz de ganhos, poderíamos pensar que o jogo tínhamos dois equilíbrios de Nash. Mas quando colocamos o diagrama de árvore (ou a forma extensiva) podemos ver que o jogador $A$ tem como estratégia escolher $baixo$, pois assim, terá o retorno de $2$ ao invés de $1$. O jogador $B$ só tem a opção de escolher dentro das opções de $baixo$, o que lhe sobra é a opção $direita$.
+\\
+\\
+Mas $B$ poderia pensar em manerias de obrigar o jogador $A$ a escolher $alto$. Se $B$ ameaçar uma retaliação e escolher $esquerda$, ambos terminariam com $0$. Contudo, $A$ só levaria a sério essa ameaça se houvesse forte indício de cumprimento. Uma maneira seria sinalizar por meio de um terceiro que se comprometesse a agir em desfavor dos dois caso o jogador $A$ optasse por $baixo$. Ou seja, se $B$ conseguir limitar seu escopo de atuação, é possível que a estratégia de $A$ seja modificada porque a matriz de ganhos seria modificada também.
+
 \section{Um jogo com Barreiras à Entrada}
+
+Voltemos no problema da entrada de concorrentes em um mercado monopolizado. Nós vimos que o monopolista possui o poder de retalhar devido a escala mínima de eficiência (EME) e do controle do mercado. Quando uma empresa pondera em entrar no mercado, ela precisa contar com as possíveis consequências por conta do monopolista e, da mesma maneira, o monopolista precisa ponderar se valerá a pena baixar os preços para evitar o concorrente.
+\\
+\\
+Podemos exemplificar essa questão com a matriz abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Entrante][Monopolista]
+                      & $Retalha$      & $\textrm{Não Retalha}$ \\
+$Entra$               & $0,0$          & $2,1$ \\
+$\textrm{Fica Fora}$  & $1,9$          & $1,9$
+\end{game}
+
+\end{center}
+
+
+A primeira vista, temos dois equilíbrios de Nash. Mas esse também é um exemplo de um jogo sequenciado. Quem tem o poder de liderança é a empresa entrante.
+
+\Tree[.\textit{Entrante} 
+				[.\textit{Fica Fora} 
+					[.\textit{Monopolista}
+						[.Retalha (1,9) ]
+						[.\textit{Não Retalha} (1,9) ]]]
+				[.Entra
+					[.\textit{Monopolista}
+						[.Retalha (0,0) ]
+						[.\textit{Não Retalha} (2,1) ]]]]
+\\
+\ 
+\\
+Como podemos ver, a condição de entrada ou não é baseada na promessa de haver ou não retalhação. Esse esquema é igual ao que acabamos de ver na última seção. A estratégia da entrante é optar por concorrer no mercado. O que o monopolista fará? Bom, não existe maneira garantida do monopolista vincular a entrada do novo concorrente com a retaliação. Uma vez que o novo competidor se instalou, não é racional baixar os preços e abrir mão do lucro.
+\\
+\\
+Agora, se o monopolista conseguir modificar sua matriz de ganhos (por meio de investimento na capacidade produtiva) de modo a obter lucro mesmo na retalhação, o cenário será outro. Se a árvore de decisão fosse igual a 
+
+\Tree[.\textit{Entrante} 
+				[.\textit{Fica Fora} 
+					[.\textit{Monopolista}
+						[.Retalha (1,9) ]
+						[.\textit{Não Retalha} (1,9) ]]]
+				[.Entra
+					[.\textit{Monopolista}
+						[.Retalha (0,2) ]
+						[.\textit{Não Retalha} (2,1) ]]]]
+\\
+\ 
+\\
+Seria mais compensador ao monopolista lutar pelo seu mercado do que se acovardar. Nesse novo arranjo, o melhor a fazer é ficar de fora do mercado. O interessante é que o investimento feito na capacidade produtiva ficará ocioso, mas ainda assim, para o monopolista é vantajoso ter essa capacidade de barganha oriunda do excesso de capacidade produtiva.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Aplicações da Teoria dos Jogos}
