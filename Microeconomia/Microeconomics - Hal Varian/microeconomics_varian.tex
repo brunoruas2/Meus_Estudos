@@ -2460,8 +2460,71 @@ Agora podemos construir o gráfico com as curvas de melhor resposta. Sabemos que
 \includegraphics[scale=0.75]{cap30_4-jogos_competitivos.png}
 \end{figure}
 
-
 \section{Jogos de Coexistência}
+
+Agora veremos a teoria dos jogos em um contexto natural. Imagine que exista uma espécie de cachorro selvagem. Se dois animais encontram um pedaço de comida, eles têm de decidir entre brigar ou dividir. O nome dessa interação é \textbf{jogo de pombos e falcões}\footnote{Ficou curioso com o nome né? Essa eu deixo pra você pesquisar por conta própria.}. A matriz dos ganhos está abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Animal linha][Animal coluna]
+           & $Lutar$    & $Dividir$ \\
+$Lutar$    & $-2,-2$    & $4,0$ \\
+$Dividir$  & $0,4$      & $2,2$
+\end{game}
+
+\end{center}
+
+Esse caso é muito interessante. Veja que nenhum dos quadrantes iguais é estável. Se ambos lutarem, é melhor abrir mão do que sair ferido. Se ambos dividirem, é melhor atacar para ficar com tudo.
+\\
+\\
+Aqui vai uma adaptação interessantíssima dessa teoria. Ao invés de pensarmos em apenas dois animais com escolhas variáveis ao longo do tempo, podemos supor que temos um grupo de animais que se comportarão de maneira diferente. Nesse modelo, as probabilidades fazem jus a quantidade esperada de cada grupo de animais em cada interação.
+\\
+\\
+A probabilidade de algum animal lutar será dada por $p$, assim, a chance de um lutador encontrar outro é de $p$ e de encontrar um disposto a dividir será igual a $1 - p$.
+\\
+\\
+O ganho esperado para os lutadores será de
+
+$$H = -2p + 4(1-p)$$
+
+Enquanto o ganhos dos que dividirão
+
+$$D = 2(1-p)$$
+
+Como estamos falando de animais, as estratégias de maior retorno produzirão indivíduos mais capazes de se reproduzir. Supondo que as características sejam transferidas, o grupo com o maior retorno terá a maior chance de ser encontrado. Se $H > D$, então veremos a população dos brigões aumentar. Caso $D > H$, então, a população de cooperadores aumentará.
+\\
+\\
+O equilíbrio entre essas populações será dado pela igualdade
+
+$$H -2p + 4(1-p) = 2(1-p) = D$$
+$$2(1-p) = 2p$$
+$$2 - 2p = 2p$$
+$$p = 1/2$$
+
+Agora vamos ver como se comportam as curvas de melhor resposta.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_5-coexistencia_1.png}
+\end{figure}
+
+Aqui vemos 3 condições de equilíbrio. Mas nosso equilíbrio não foi alcançado no ponto $1/2$? A resposta é sim. Perceba que os pontos de estratégia dominante são os pontos onde há o incentivo de se jogar o oposto do adversário\footnote{Igual o caso da roleta russa}. Mas esse jogo não lida com apenas 2 agentes e sim com uma população homogênea com duas opções de comportamento. O único ponto onde as estratégias convergem é o ponto $1/2$.
+\\
+\\
+Por causa da estabilidade desse arranjo, os pesquisadores o classificam como uma \textbf{estratégia evolucionariamente estável}. É pura teoria dos jogos e vem diretamente dos estudos das dinâmicas entre interações animais.
+\\
+\\
+Assim como está no livro, eu coloquei os resultados para cada estratégia a medida que o número de lutadores aumenta de $0$ até $100\%$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_5-coexistencia_2.png}
+\end{figure}
+
+Como podemos ver, para todos os pontos abaixo de $1/2$, vale mais a pena se lutador. Acima desse ponto, é melhor cooperar. Os retornos se equivalem no ponto de equilíbrio.
+
 \section{Jogos de Compromisso}
 \section{Negociação}
 
