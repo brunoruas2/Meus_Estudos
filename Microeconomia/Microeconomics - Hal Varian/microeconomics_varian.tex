@@ -2167,6 +2167,55 @@ Seria mais compensador ao monopolista lutar pelo seu mercado do que se acovardar
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Aplicações da Teoria dos Jogos}
 
+Ainda nos ateremos à teoria dos jogos nesse capítulo. Aqui vamos aprender um ferramental novo para analisar os equilíbrios dos jogos, bem como veremos alguns modelos mais avançados de jogos.
+
+\section{Curvas de Melhor Resposta}
+
+Analise o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $2,1$          & $0,0$ \\
+$Baixo$  & $0,0$          & $1,2$
+\end{game}
+
+\end{center}
+
+Podemos ver que não temos uma estratégia dominante, mas temos dois equilíbrios de Nash. Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
+\\
+\\
+Agora vamos formalizar um pouco mais essas ideias. Seja um jogo com dois jogadores. O jogador linha terá $l_1,l_2,\dots,\l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
+\\
+\\
+Para cada escolha $l$ feita, chamaremos de $b_c(l)$ a melhor escolha para coluna dada a escolha de linha. Da mesma maneira, chamaremos $b_l(c)$ a melhor escolha para linha. Um equilíbrio de Nash será o par de estratégias $(l^*,c^*)$ tal que
+
+\newpage
+
+$$ c^* = b_c(l^*) $$
+$$ l^* = b_l(c^*) $$
+
+Eu já tinha adiantado a formalização lá no ponto 29.3. Mas não custa nada repetir o conceito. Veja com o equilíbrio de Nash é consistente. É um arranjo cuja estratégia de um é precisamente dependente da estratégia do outro, de modo a manter esse ciclo de reforço mútuo.
+\\
+\\
+Já vimos situações onde algum jogador pode ser indiferente ao retorno dada alguma escolha do outro jogador. É o caso onde só é benéfico para um deles, enquanto o outro terá o mesmo resultado independente da escolha. Mas isso não é um problema, os pontos $c^*$ e $l_*$ só precisar ser uma da melhores respostas.\footnote{É o caso dos jogos com mais de um equilíbrio do Nash}. Se existir apenas uma melhor resposta, então poderemos representar o equilíbrio por meio de uma \textbf{função de melhor resposta}.
+\\
+\\
+Os equilíbrios de Cournout e Bertrand são exemplos de jogos com equilíbrios de Nash. No "jogos"\ de definir a quantidade e o preço, as empresas acabam adotando a posição de produzir nos pontos de maximização de lucro, em função do que  esperam que suas concorrentes irão fazer. Isso as leva a produzir exatamente no ponto onde as curvas de reação se encontram e o equilíbrio é reforçado.
+
+\section{Estratégias Mistas}
+
+
+
+\section{Jogos de Coordenação}
+\section{Jogos de Competição}
+\section{Jogos de Coexistência}
+\section{Jogos de Compromisso}
+\section{Negociação}
+
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Tópicos Avançados}
 
