@@ -44,7 +44,7 @@
     - [x] O Mercado de Fatores
     - [x] O Oligopólio
     - [x] A Teoria dos Jogos
-    - [ ] Aplicações da Teoria dos Jogos
+    - [x] Aplicações da Teoria dos Jogos
 - [ ] Tópicos Avançados
     - [ ] Economia Comportamental
     - [ ] Trocas
