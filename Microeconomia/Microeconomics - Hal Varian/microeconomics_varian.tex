@@ -2526,7 +2526,159 @@ Assim como está no livro, eu coloquei os resultados para cada estratégia a med
 Como podemos ver, para todos os pontos abaixo de $1/2$, vale mais a pena se lutador. Acima desse ponto, é melhor cooperar. Os retornos se equivalem no ponto de equilíbrio.
 
 \section{Jogos de Compromisso}
+
+Os jogos que vimos até agora são do jogos \textbf{com movimentos simultâneos}. Os jogadores não sabem o que o outro fará, e precisam maximizar de acordo com a suposição do comportamento do adversário.
+\\
+\\
+Aqui vamos ver os jogos com \textbf{movimento sequenciais}. Um conceito importante nesses jogos é o \textbf{compromisso}. Quando um participante se compromete a agir de terminada maneira ele precisa garantir: 1) que ele não terá outro caminho a seguir além do firmado anteriormente; 2) que a sinalização do compromisso chegue ao outro jogador e seja entendida por ele.
+
+\subsection{O Sapo e o Escorpião}
+
+Você já deve conhecer essa história. Então vamos pular direto para a modelagem em termos da teoria dos jogos. Podemos recriar a situação da fábula como o seguinte jogo sequencial
+
+\Tree[.\textit{Sapo}
+				[.Carrega 
+					[.Escorpião 
+						[.Ferroada $(-10,5)$ ]
+						[.\textit{Não Ferroada} $(5,3)$ ]]]
+				[.\textit{Não Carrega} $(0,0)$ ]]
+\\
+\ 
+\\
+Mesmo que a moral da história seja nós ensinar que existem pessoas que preferem fazer o mal. Sob a ótica da teoria dos jogos, o escorpião apenas maximizou sua utilidade dada as opções disponíveis. Como o sapo escolheu antes, só restou ao escorpião entre ter $5$ de retorno com a ferroada ou $3$ com o passeio.
+\\
+\\
+Se o sapo tivesse a oportunidade de estudar esse material, ele se certificaria em reduzir o resultado do escorpião na opção da ferroada. Como o escorpião é meio suicida, talvez uma solução fosse o sapo falar sobre como é bom estar vivo. Ele também poderia ameaçar que os outros sapos fariam uma retalhação aos outros escorpiões. Ou mesmo propor que a cauda do passageiro fosse amarrada antes do transporte. Não importa como, o que o sapo deveria ter feito é tornar o retorno da não ferroada maior que o da ferroada.
+
+\Tree[.\textit{Sapo}
+				[.Carrega 
+					[.Escorpião 
+						[.Ferroada $(-10,2)$ ]
+						[.\textit{Não Ferroada} $(5,3)$ ]]]
+				[.\textit{Não Carrega} $(0,0)$ ]]
+\\
+\ 
+\\
+Nesse jogo, todos chegariam ao lado do rio e a moral da história seria como é bom ajudar os outros independente da aparência deles.
+
+\subsection{O Sequestrador Cordial}
+
+É isso mesmo, nós vamos modelar o comportamento de um grupo de sequestradores. A Economia é ou não é uma ciência cheia de surpresas? Pois bem, imagine que um CEO de uma empresa é sequestrado. No regimento interno da empresa está a cláusula de não pagamento de resgate em caso de sequestro dos seus funcionários (mesmo os da cúpula). O que os sequestradores farão? Uma possibilidade de arranjo é esse abaixo
+
+\Tree[.\textit{Sequestradores}
+				[.Libera 
+					[.Refém 
+						[.Identifica $(-5,5)$ ]
+						[.\textit{Não Identifica} $(5,3)$ ]]]
+				[.\textit{Mata} $(-3,-10)$ ]]
+\\
+\ 
+\\
+O resultado desse jogo é inteiramente dependente da capacidade do refém de sinalizar para os sequestradores que cumprirá seu lado do trato em não identificar. Uma saída para esse impasse é a proposta pelo pesquisador Thomas Schelling. Eu não vou estragar a surpresa, leia a (inusitada) proposta de solução no material original.
+
+\subsection{Quando Força é Fraqueza}
+
+A psicologia animal\footnote{Sim, eu também não fazia ideia que existia esse campo de pesquisa.} também fez algumas incursões na teoria dos jogos. Eles perceberam que num grupo, os porcos rapidamente desenvolvem uma relação de dominação em relação ao porco dominador.
+\\
+\\
+Eles colocaram uma alavanca em uma lado da baia que, quando acionada, fazia com que o alimento caísse do outro lado da baia. Como o porco dominador não tem como evitar que o subordinado coma, nem consegue obrigá-lo a puxar, ao se negar a puxar a alavanca, o porco subordinado condena o dominador a comer os seus restos.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Subordinado][Dominador]
+                      & $Puxar$    & $\textrm{Não Puxar}$ \\
+$Puxar$               & $0,0$      & $4,1$ \\
+$\textrm{Não Puxar}$  & $0,5$      & $2,3$
+\end{game}
+
+\end{center}
+
+A estratégia do porco subordinado é sempre esperar pela comida. Enquanto o dominador não tem outra opção a não ser aceitar os restos.
+
+\subsection{Poupanças e Seguridade Social}
+
+Mais um jogo para analisarmos. Agora vamos aplicar nossos conceitos ao modelos de seguridade social. Podemos modelar esse jogo como uma relação entre gerações do seguinte modo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[+ Velhos][+ Jovens]
+           & $Sustenta$ & $Poupa$ \\
+$Poupa$    & $2,-1$      & $1,0$ \\
+$Esbanja$  & $3,-1$      & $-2,-2$
+\end{game}
+
+\end{center}
+
+Da pra ver que temos dois equilíbrios ai. Um no ponto onde os velhos poupam e os jovens também poupam. O outro é no ponto onde os velhos esbanjam e os jovens sustentam. Mas esse jogo tem um caráter temporal mais do que evidente, uma vez que é claro que os velhos terão prioridade na escolha da ação.
+
+\Tree[.\textit{Velhos}
+				[.Poupam 
+					[.Jovens 
+						[.Sustentam $(2,-1)$ ]
+						[.Poupam $(1,0)$ ]]]
+				[.Esbajam
+					[.Jovens 
+						[.Sustentam $(3,-1)$ ]
+						[.Poupam $(-2,-2)$ ]]]]
+\\
+\ 
+\\
+Conseguimos ver que a melhore estratégia para os velhos é usar o poder da preferência e escolher esbanjar. Os jovens serão obrigados a optar por sustentá-los. Mas não é atoa que a maioria dos países possui algum programa em que cada geração acaba contribuindo para o montante da sua aposentadoria.
+\\
+\\
+\textbf{Comentário:} Aqui o professor coloca um exemplo da discriminação de preço à luz da teoria dos jogos.
+
+\subsection{Extorsão}
+
+Estamos na última subseção. Aquente firme. O problema que veremos aqui é bem comum e pode se adaptar a várias situações parecidas. Imagine uma obra chegando ao final. Se o cliente quiser alterar alguma coisa nessa reta final, o empreiteiro poderá tirar alguma vantagem disso? Considere a árvore abaixo
+
+\Tree[.\textit{Empreiteiro}
+				[.Extorque 
+					[.Cliente 
+						[.Paga $(1.300,0)$ ]
+						[.\textit{Não Paga} $(0,-100)$ ]]]
+				[.\textit{Não Extorque} $(0,1.300)$ ]]
+\\
+\ 
+\\
+Como podemos ver, o empreiteiro tem todo o incentivo em usar o poder de extorsão para faturar a mais. Uma maneira que o cliente poderia se proteger é por via contratual ou ameaçar fazer propaganda negativa como forma de retalhação.
+
 \section{Negociação}
+
+Nessa última parte do capítulo, pensemos em um problema simples: a divisão de um dólar entre duas pessoas. Como faríamos de modo a satisfazer a vontade de ambas? O foco está em construir uma solução que permita a negociação.
+\\
+\\
+O \textbf{modelo de negociação de Nash}, usa uma abordagem a partir de proposições a respeito do comportamento dos indivíduos. O livro não entra muito no modelo, mas como eu sou curioso, eu vou colocar um pouco mais de informação sobre ele. Os axiomas usados são
+
+\begin{itemize}
+\item Eficiência de Pareto
+\item Simetria na Solução
+\item Invariância das Representações Equivalentes dos Resultados
+\item Independência das Alternativas Irrelevantes
+\end{itemize}
+
+O modelo de negociação de Nash é o modelo que resolver o problema de maximização do tipo
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $v_1,v_2$}} \ \ \stackrel{(v_1 - d_1)(v_2 - d_2)}{\ }$ \\
+\normalsize Sujeito a $(v_1,v_2) \in U$ e $(v_1,v_2) \geq (d_1,d_2)$
+\end{center}
+
+Nash demonstrou que existe uma solução desse problema, denotada por $f^N(U,d)$, e que essa solução é única. Mas esse tipo de conteúdo é material de pós-graduação.
+\\
+\\
+Uma outra abordagem é o \textbf{modelo de negociação de Rubinstein}. Esse modelo o livro explica um pouco mais. Imaginemos dois jogadores, A e B, que precisam dividir um dólar entre eles. Terão 3 dias para decidir. A faz uma proposta, B pode aceitar, ou voltar no outro dia com uma contraproposta. Se A não aceitar, poderá fazer uma oferta final no terceiro dia. Se ambos discordarem, ninguém fica com nada.
+\\
+\\
+É razoável supor que a percepção do valor do dinheiro no tempo para cada um deles seja diferente. Usaremos $\alpha$ para a o valor descontado\footnote{alpha é o valor que A estaria disposta a receber hoje ao invés de receber o valor cheio amanhã.} de um dia de A e $\beta$ para a taxa desconto de B. Também definiremos que se algum deles for indiferente à oferta, o acordo será feito. Adicionalmente, vamos supor que cada um deles quer a maior parte possível do dinheiro.
+\\
+\\
+Muito bem, se começarmos analisando o último dia. No final do prazo, como a opção é ter alguma coisa ou nada, qualquer quantia próxima de zero será aceita por B. No segundo dia, sabendo que A oferecerá praticamente zero para B, e sabendo da taxa de desconto de A ($\alpha$), B fará a oferta de do dólar descontado pela taxa de A, ou seja, B ofertará $\alpha$ para A e ainda sai com $1 - \alpha$ que é melhor que nada. Indo para o primeiro dia, A sabe que B fará a proposta de $\alpha$ no segundo dia, então ela descontará $1-\alpha$ pela taxa de B, oferecendo então $\beta(1-\alpha)$ para B e ficando com $1 - \beta(1-\alpha)$.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Tópicos Avançados}
