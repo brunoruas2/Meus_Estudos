@@ -2859,24 +2859,191 @@ Esse aqui é um apanhado de tudo que vimos e como ainda podemos usar a teoria ec
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Trocas}
 
+Todos os equilíbrios que estudamos até agora se basearam apenas nas relações de preço e quantidade de determinado bem e nas equivalências entre as forças de Oferta e Demanda. Mas certamente o preço dos bens substitutos e complementares também podem exercer influência sobre o mercado. O equilíbrio dentro de um mercado apenas é chamado de \textbf{equilíbrio parcial}. 
+\\
+\\
+Começaremos a partir de agora o estudo de equilíbrio \textit{entre} diferentes mercados. O nome dessa agenda de pesquisa é \textbf{equilíbrio geral}\footnote{Na minha humilde opinião, é a agenda mais impressionante de pesquisa econômica.}. Como lidaremos com múltiplos mercados ao mesmo tempo, a análise se torna bastante complexa. Para tanto, vamos nos valer de algumas simplificações para facilitar a nossa vida:
 
+\begin{itemize}
+\item Suporemos que os mercados são competitivos, ou seja, ninguém tem poder de mercado.\footnote{Equilíbrio geral com poder de mercado é assunto de pós.}
+\item Usaremos um número limitado de bens e consumidores. Assim conseguimos uma exposição mais simples e as soluções que encontraremos podem ser generalizada para $n$ indivíduos.\footnote{Mas ai é com você, campeão.}
+\item Trabalharemos com \textbf{troca pura} aqui. As pessoas começarão com dotações iniciais e trocarão esse bens a medida que acharem vantajoso.\footnote{Veremos a produção no equilíbrio geral só no próximo capítulo.}
+\end{itemize}
+
+\ 
+\\
+\\
+\ 
+\\
+\\
+\ 
+\section{A Caixa de Edgeworth}
+
+Um economista inglês do século XIX chamado Francis Ysidro Edegeworth criou uma ferramenta analítica que usaremos para analisar os casos de trocas entre dois indivíduos. A famosa \textbf{caixa de Edgeworth}.
+\\
+\\
+Suporemos a existência de duas pessoas, A e B, e dois bens, 1 e 2. A cesta do consumidor A será denotada por $X_A = (x_A^1, x_A^2)$, similarmente, a cesta de B será dada por $X_B = (x_B^1, x_B^2)$. Um par de cestas será chamado de \textbf{alocação}. Um alocação será chamada de \textbf{factível} se a quantidade total for igual a 
+
+$$x_A^1, x_B^1 = w_A^1, w_B^1$$
+$$x_A^2, x_A^2 = w_A^2, w_A^2$$
+
+Uma alocação factível importante é a \textbf{alocação da dotação inicial} que é representada por $(w_A^1, w_A^2)$ e $(w_B^1, w_B^2)$. Essa é a alocação onde os indivíduos começam. A partir dela é que haverão as trocas. Após a etapa de trocas, chegaremos em outra alocação factível importante, a \textbf{alocação final}.
+\\
+\\
+Veja um exemplo da caixa de Edgeworth abaixo. Foram usadas funções de utilidade são cobb-douglas com os coeficientes iguais a $0.5$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap31_1-caixa_edgeworth_1.png}
+\end{figure}
+
+Para analisar o gráfico da caixa, você deve se recordar das curvas de indiferença do consumidor. Uma mudança aqui é que estamos representando as preferências de dois consumidores ao mesmo tempo. As curvas vermelhas são do consumidor A e, consequentemente, as curvas azuis são do consumidor B.
+\\
+\\
+Os eixos do consumidor B começão no canto superior-direita. Enquanto os eixos do consumidor A são os clássicos do plano cartesiano. Isso significa que cada ponto nesse gráfico possui 4 coordenadas associadas $(w_A^1, w_A^2, w_B^1, w_B^2)$ para a dotação e $(x_A^1, x_A^2, x_B^1, x_B^2)$ para a alocação final. A simetria que podemos ver nas quantidades se dá pela definição das alocações factíveis, onde para um ganhar, outro tem que ceder. 
+\\
+\\
+Para ajudar no entendimento da leitura, eu coloquei umas setas indicando o sentido em que as quantidades crescem para cada consumidor.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap31_1-caixa_edgeworth_2.png}
+\end{figure}
+
+Esse ferramental analítico nos permite mostrar todas as alocações factíveis, as preferências dos consumidores, a dotação inicial e a alocação final. Tudo isso de uma vez só. Não foi sem motivo que esse modelo foi adotado.
+
+\section{As Trocas}
+
+Nosso diagrama acima já deu um pequeno \textit{spoiler} sobre o que aconteceria se a dotação inicial fosse diferente da final. Para entender o processo de trocas, precisamos analisar o que se passa no momento em que os consumidores se encontram nas suas dotações iniciais.
+\\
+\\
+No ponto da imagem, temos o encontro de duas curvas de indiferenças, mas os níveis de utilidade são diferentes para cada consumidor. O consumidor A gostaria de abrir mão do bem 1 para poder consumir mais do bem 2, já no caso de B, ele é indiferente quanto a mudança para qualquer alocação que esteja na mesma curva de indiferença. Toda a área entre a curva vermelha no valor de 30 e a azul no valor de 50, representa uma região de melhoria mútua.
+\\
+\\
+O ponto onde os dois consumidores estão em melhor situação possível é o ponto de tangência das curvas de indiferença. As trocas ocorrerão até o ponto em que nenhuma melhoria seria possível sem a piora de um deles. No caso do exemplo, por acaso, o ponto final foi o da divisão igualitária, mas isso não é uma regra.\footnote{Explico melhor na próxima seção.}
+\\
+\\
+As variações das quantidades em termo das dotações para o consumidor A são dadas por $|x_A^1 - w_A^1|$ para o bem 1 e $|x_A^2 - w_A^2|$ para o bem 2. Similarmente, $|x_B^1 - w_B^1|$ e $|x_B^2 - w_B^2|$, para o consumidor B.
+
+\section{Alocações Eficientes no Sentido de Pareto}
+
+Você já aprendeu no capítulo 01 sobre uma alocação eficiente no sentido de Pareto\footnote{Sem falar que toda hora esse conceito volta a ser usado ao longo do livro.}. Mas o professor resume aqui as principais caraterísticas dessa alocação. Então, vamos seguir o mesmo caminho.
+\\
+\\
+Podemos descrever uma alocação eficiente de Pareto como tendo a seguintes propriedades:
+\begin{itemize}
+\item Não existe maneira de melhorar a situação de ninguém.
+\item Não existe maneira de melhorar a situação de ninguém, sem que isso implique na piora de outra pessoa.
+\item Todas as trocas que gerariam algum ganho foram feitas.
+\item Não existe opção de troca que seja mutualmente vantajosa.
+\end{itemize}
+
+Essas características implicam que os pontos de eficiência sejam pontos em que as curvas de indiferença sejam tangentes entre si. Pois, se as curvas se cruzam, seria melhor para eles irem para algum ponto em uma curva mais alta, uma vez que, a região no interior do cruzamento de duas curvas é necessariamente, melhor para eles.
+\\
+\\
+O conjunto de todos os pontos eficientes no sentido de Pareto, dentro de uma caixa de Edgeworth, é denominado de \textbf{conjunto de Pareto} ou \textbf{curva de contrato}. Como nossas funções de utilidade são iguais, a nossa curva de contrato é uma linha reta (se as preferências fossem outras, teríamos outro formato). Qualquer negociação de trocas que esteja num ponto desse subconjunto de alocações, será pareto-eficiente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap31_1-caixa_edgeworth_3.png}
+\end{figure}
+
+\section{As Trocas de Mercado}
+
+Até agora, sabemos que os agentes iniciam nas dotações inicias e terminam em algum ponto na linha de contrato. Como saber "onde" exatamente eles vão optar por parar de trocar? Para ter essa resposta, precisaremos adicionar mais informação sobre o comportamento dos nossos consumidores.
+\\
+\\
+
+
+\section{A Álgebra do Equilíbrio}
+\section{A Lei de Walras}
+\section{Preços Relativos}
+\section{A Existência de Equilíbrio}
+\section{Equilíbrio e Eficiência}
+\section{A Álgebra da Eficiência}
+\section{Eficiência e Equilíbrio}
+\section{Implicações do 1º Teorema do Bem-Estar}
+\section{Implicações do 2º Teorema do Bem-Estar}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Produção}
 
+\section{A Economia de Robinson Crusoé}
+\section{Crusoé S.A.}
+\section{A Empresa}
+\section{O Problema de Robinson}
+\section{Colocando os dois Juntos}
+\section{Tecnologias Diferentes}
+\section{A Produção e o 1º Teorema de Bem-Estar}
+\section{A Produção e o 2º Teorema de Bem-Estar}
+\section{Possibilidades de Produção}
+\section{Vantagem Comparativa}
+\section{A Eficiência de Pareto}
+\section{Náufragos S.A.}
+\section{Robinson e Sexta-Feira como Consumidores}
+\section{Alocação de Recursos Descentralizada}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Bem-Estar}
+
+\section{Agregação de Preferências}
+\section{Funções de Bem-Estar Social}
+\section{Maximização do Bem-Estar}
+\section{Funções de Bem-Estar Social Individualistas}
+\section{Alocações Justas}
+\section{Inveja e Equidade}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Externalidades}
 
+\section{Fumantes e Não Fumantes}
+\section{Preferências Quase Lineares e Teorema de Coase}
+\section{Produção de Externalidades}
+\section{Interpretação das Condições}
+\section{Sinais de Mercado}
+\section{A Tragédia do Uso Comum}
+\section{Polição de Automóveis}
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Tecnologia da Informação}
+
+\section{Concorrência de Sistemas}
+\section{O Problema dos Complementos}
+\section{Aprisionamento}
+\section{Externalidades de Rede}
+\section{Mercados com Externalidades de Rede}
+\section{Dinâmica de Mercado}
+\section{Implicações das externalidades de Rede}
+\section{Mercados Bilaterais}
+\section{Gestão de Direitos}
+\section{O Compartilhamento de Propriedade Intelectual}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Bens Públicos}
 
+\section{Quando Prover um Bem Público?}
+\section{Provisão Privada do Bem Público}
+\section{Pegando Carona}
+\section{Diferentes Níveis do Bem Público}
+\section{Preferências Quase Lineares e Bens Públicos}
+\section{O problema do Carona}
+\section{Comparação com os Bens Privados}
+\section{Votação}
+\section{O Mecanismo Vickey-Clarke-Groves}
+\section{Exemplos de VCG}
+\section{Problemas com Imposto de Clarke}
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Informação Assimétrica}
+
+\section{O Mercado de Carros Ruins}
+\section{A Escolha da Qualidade}
+\section{Seleção Adversa}
+\section{Perigo Moral}
+\section{Perigo Moral e Seleção Adversa}
+\section{Sinalização}
+\section{Incentivos}
+\section{Informação Assimétrica}
 
 \end{document}
