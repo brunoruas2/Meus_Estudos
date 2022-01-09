@@ -2884,13 +2884,13 @@ Um economista inglês do século XIX chamado Francis Ysidro Edegeworth criou uma
 \\
 Suporemos a existência de duas pessoas, A e B, e dois bens, 1 e 2. A cesta do consumidor A será denotada por $X_A = (x_A^1, x_A^2)$, similarmente, a cesta de B será dada por $X_B = (x_B^1, x_B^2)$. Um par de cestas será chamado de \textbf{alocação}. Um alocação será chamada de \textbf{factível} se a quantidade total for igual a 
 
-$$x_A^1, x_B^1 = w_A^1, w_B^1$$
-$$x_A^2, x_A^2 = w_A^2, w_A^2$$
+$$x_A^1 + x_B^1 = w_A^1 + w_B^1$$
+$$x_A^2 + x_A^2 = w_A^2 + w_A^2$$
 
 Uma alocação factível importante é a \textbf{alocação da dotação inicial} que é representada por $(w_A^1, w_A^2)$ e $(w_B^1, w_B^2)$. Essa é a alocação onde os indivíduos começam. A partir dela é que haverão as trocas. Após a etapa de trocas, chegaremos em outra alocação factível importante, a \textbf{alocação final}.
 \\
 \\
-Veja um exemplo da caixa de Edgeworth abaixo. Foram usadas funções de utilidade são cobb-douglas com os coeficientes iguais a $0.5$.
+Veja um exemplo da caixa de Edgeworth abaixo. Foram usadas funções de utilidade do tipo cobb-douglas com os coeficientes iguais a $0.5$.
 
 \begin{figure}[H]
 \centering
@@ -2900,7 +2900,7 @@ Veja um exemplo da caixa de Edgeworth abaixo. Foram usadas funções de utilidad
 Para analisar o gráfico da caixa, você deve se recordar das curvas de indiferença do consumidor. Uma mudança aqui é que estamos representando as preferências de dois consumidores ao mesmo tempo. As curvas vermelhas são do consumidor A e, consequentemente, as curvas azuis são do consumidor B.
 \\
 \\
-Os eixos do consumidor B começão no canto superior-direita. Enquanto os eixos do consumidor A são os clássicos do plano cartesiano. Isso significa que cada ponto nesse gráfico possui 4 coordenadas associadas $(w_A^1, w_A^2, w_B^1, w_B^2)$ para a dotação e $(x_A^1, x_A^2, x_B^1, x_B^2)$ para a alocação final. A simetria que podemos ver nas quantidades se dá pela definição das alocações factíveis, onde para um ganhar, outro tem que ceder. 
+Os eixos do consumidor B começam no canto superior-direita. Enquanto os eixos do consumidor A são os clássicos do plano cartesiano. Isso significa que cada ponto nesse gráfico possui 4 coordenadas associadas $(w_A^1, w_A^2, w_B^1, w_B^2)$ para a dotação e $(x_A^1, x_A^2, x_B^1, x_B^2)$ para a alocação final. A simetria que podemos ver nas quantidades se dá pela definição das alocações factíveis, onde para um ganhar, outro tem que ceder. 
 \\
 \\
 Para ajudar no entendimento da leitura, eu coloquei umas setas indicando o sentido em que as quantidades crescem para cada consumidor.
@@ -2917,7 +2917,7 @@ Esse ferramental analítico nos permite mostrar todas as alocações factíveis,
 Nosso diagrama acima já deu um pequeno \textit{spoiler} sobre o que aconteceria se a dotação inicial fosse diferente da final. Para entender o processo de trocas, precisamos analisar o que se passa no momento em que os consumidores se encontram nas suas dotações iniciais.
 \\
 \\
-No ponto da imagem, temos o encontro de duas curvas de indiferenças, mas os níveis de utilidade são diferentes para cada consumidor. O consumidor A gostaria de abrir mão do bem 1 para poder consumir mais do bem 2, já no caso de B, ele é indiferente quanto a mudança para qualquer alocação que esteja na mesma curva de indiferença. Toda a área entre a curva vermelha no valor de 30 e a azul no valor de 50, representa uma região de melhoria mútua.
+No ponto da imagem, temos o encontro de duas curvas de indiferenças sendo uma para cada consumidor. O consumidor A gostaria de abrir mão do bem 1 para poder consumir mais do bem 2, já no caso de B, ele quer fazer o oposto, abrir mão de parte da quantidade do bem 2 para consumir mais do bem 1. Toda a área entre as curvas vermelha e azul representa uma região de melhoria mútua\footnote{Se você não entendeu esse argumento, tem que dar uma revisada urgente na teoria do consumidor. Melhor ir logo. Depois a gente continua essa aula.}.
 \\
 \\
 O ponto onde os dois consumidores estão em melhor situação possível é o ponto de tangência das curvas de indiferença. As trocas ocorrerão até o ponto em que nenhuma melhoria seria possível sem a piora de um deles. No caso do exemplo, por acaso, o ponto final foi o da divisão igualitária, mas isso não é uma regra.\footnote{Explico melhor na próxima seção.}
@@ -2950,10 +2950,82 @@ O conjunto de todos os pontos eficientes no sentido de Pareto, dentro de uma cai
 
 \section{As Trocas de Mercado}
 
-Até agora, sabemos que os agentes iniciam nas dotações inicias e terminam em algum ponto na linha de contrato. Como saber "onde" exatamente eles vão optar por parar de trocar? Para ter essa resposta, precisaremos adicionar mais informação sobre o comportamento dos nossos consumidores.
+Até agora, sabemos que os agentes iniciam nas dotações inicias e terminam em algum ponto na linha de contrato. Como saber "onde"\ exatamente eles vão optar por parar de trocar? Para ter essa resposta, precisaremos adicionar mais informação sobre o comportamento dos nossos consumidores.
 \\
 \\
+Adicionaremos a suposição que esse processo imitará o \textit{resultado} de um mercado competitivo\footnote{O resultado, não o processo.}.
+\\
+\\
+Vamos colocar um terceiro indivíduo no processo. Ele agirá com um "leiloeiro"\ para A e B. O leiloeiro vai arbitrar um preço para A e B, e eles agirão a partir disso. Para cada preço arbitrado, os consumidores adaptarão as suas alocações finais aos preços de modo a maximizar suas utilidades. Nesse novo modelo, teremos  um novo dado, a dotação de preços $(p_1,p_2)$.
+\\
+\\
+\textbf{Comentário:} Nós vimos no caso do duopólio e na teoria dos jogos que quando as interações ocorrem com poucos players, é provável que acabem sendo de maneira a não seguir a lógica da competição e sim da negociação. Mas o professor dá uma escapatória para o nosso modelo ao propor que interpretemos, ao invés de dois consumidores, dois grupos de consumidores que se comportam homogeneamente, podemos continuar nossa análise com esse ferramental. Ou então, podemos continuar pensando em duas pessoas, mas usando o modelo como uma representação do processo que ocorre para várias pessoas.
+\\
+\\
+Vamos ver quais informações nós temos disponíveis para trabalhar agora: 1) Uma dotação inicial de bens; 2) Preços associados a cada bem; 3) Preferências de cada consumidor. Se você está com os conteúdos estudados na cabeça, sabe muito bem que tratamos essas variáveis no capítulo 5 (com a teoria da escolha) e no 9 (com as dotações).
+\\
+\\
+Quando o leiloeiro determina o preço dos bens no mercado, ele automaticamente determina a renda de cada um dos participantes
 
+$$renda_A = w_A^1 p_1 + w_A^2 p_2$$
+
+Isso quer dizer que podemos, a partir da dotação inicial, descrever a restrição orçamentária via equação
+
+$$ x_A^1 p_1 + x_A^2 p_2 = renda_A$$
+$$ x_A^1 p_1 + x_A^2 p_2 = w_A^1 p_1 + w_A^2 p_2$$
+$$ x_A^2 = [(w_A^1 p_1 + w_A^2 p_2) - x_A^1 p_1]/p2$$
+
+Visualmente, a restrição orçamentária na caixa se apresenta igual ao problema do consumidor no início do livro, a diferença é que essa restrição se refere aos dois indivíduos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap31_1-caixa_edgeworth_4.png}
+\end{figure}
+
+Eu usei um ponto de dotação inicial diferente do que estamos trabalhando para mostrar um caso onde a alocação não é simétrica. Perceba que, se a alocação for desigual para algum consumidor, essa desigualdade será refletida na renda de cada consumidor. 
+\\
+\\
+Agora vamos voltar para o nosso exemplo e acrescentar algumas curvas de indiferença para continuarmos nossa análise.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap31_1-caixa_edgeworth_5.png}
+\end{figure}
+
+Como vimos no capítulo 9. Os nossos consumidores aqui possuem incentivos de mudar suas alocações iniciais para maximizar suas utilidades. Você já sabe mas vamos recapitular alguns conceitos agora. A \textbf{demanda bruta} é o quanto o consumidor quer consumir de um bem dada sua renda (é obtida pelo cálculo da maximização com restrição lá do capítulo 5). Por sua vez, a \textbf{demanda líquida} ou \textbf{demanda excedente}, é dada pela equação $e_A^1 = x_A^1 - w_A^1$. Se $e_A1 < 0$, ele será um vendedor líquido, caso contrário, ele será um comprador. A partir de agora, usaremos o termo "demanda"\ para falar da \textbf{demanda bruta} e \textbf{demanda líquida ou excedente} caso queiramos falar desses outros conceitos.
+\\
+\\
+Diferentemente do exemplo que estamos usando até agora (cujas utilidades possuem o mesmo formato), é possível que os preços arbitrados não produzam soluções. Ou seja, que as escolhas maximizadoras de cada consumidor não sejam compatíveis. Veja um caso onde modificamos os parâmetros da função de utilidade do consumidor A.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap31_1-caixa_edgeworth_6.png}
+\end{figure}
+
+Nessa situação, os agentes não conseguirão fazer as trocas porque, ao nível de preços dado, eles maximizam em pontos de alocação diferentes. Nós dizemos, nesse casos, que o mercado está em \textbf{desequilíbrio}. Quando o mercado está em desequilíbrio o leiloeiro poderá intervir modificando os preços. Ele poderá aumentar o preço para os casos de excesso de demanda e reduzir em casos de excesso de oferta (a oferta aqui é quando a demanda líquida é negativa). 
+
+\newpage
+
+Você aprendeu lá no capítulo 2 o que acontece quando o preço de um bem se modifica em relação a outro. Isso mesmo, uma mudança na inclinação da restrição orçamentária. Vamos ver o que acontece quando o leiloeiro aumenta gradualmente o preço do bem 2 até um ponto onde as demandas sejam iguais. Você pode usar o zoom para enxergar melhor os gráficos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{cap31_1-caixa_edgeworth_7.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{cap31_1-caixa_edgeworth_8.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{cap31_1-caixa_edgeworth_9.png}
+\end{figure}
+
+\newpage
+
+Nós vimos que, ao mudar os preços relativos dos bens, o leiloeiro conseguiu uma configuração da alocações onde as demandas são iguais. Nesse ponto, a quantidade total que cada pessoa deseja comprar é igual à quantidade ofertada no mercado. O mercado está em \textbf{equilíbrio}. Damos o nome desse tipo de solução em homenagem ao economista francês que primeiro estudou a teoria do equilíbrio geral, Leon Walras. Portanto, chamamos essa alocação de \textbf{equilíbrio walrasiano}\footnote{Outros nomes que esse arranjo recebe são \textbf{equilíbrio de mercado} e \textbf{equilíbrio competitivo}.}.
 
 \section{A Álgebra do Equilíbrio}
 \section{A Lei de Walras}
