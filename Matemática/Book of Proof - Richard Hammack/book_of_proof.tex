@@ -1300,10 +1300,22 @@ Sabemos que parece bobo ter que definir isso, mas o próprio Hammack dá uma boa
 Like the multiplication, addition and subtraction principles, the division
 and pigeonhole principles are intuitive and obvious, but they can prove
 things that are not obvious. The challenge is seeing where and how to apply
-them. \footnote{Tradução: "Como os princípios da multiplicação, adição e subtração, o princípio da divisão e da cada dos pombos são intuitivos e obvios, mas eles podem provar coisas que não são obvias. O desafio é ver onde e como aplicá-los."}
+them. \footnote{Tradução: "Como os princípios da multiplicação, adição e subtração, o princípio da divisão e da casa dos pombos são intuitivos e obvios, mas eles podem provar coisas que não são obvias. O desafio é ver onde e como aplicá-los."}
 \end{quote}
 \section{Prova Combinatorial}
+No decorrer desse capítulo provamos diversas relações combinatoriais como:
+$$ {n+1 \choose k} = {n \choose k-a} + {n \choose k}$$
+$${n \choose n-k} = {n \choose k}$$
 
+Porém existem outras relações interessantes que ainda podemos provar por aqui, por exemplo:
+$$\sum_{k = 0}^{n} {n \choose k}^2 = {2n \choose n}$$
+Primeiramente vamos reescrever esse somatório:
+$$\sum_{k = 0}^{n} = {n \choose 0}^2+{n \choose 1}^2+{n \choose 2}^2 + \cdots + {n \choose n}^2 $$
+Já sabemos que ${n \choose k} = {n \choose n-k}$ e que ${n \choose k}^2 = {n \choose k}{n \choose k}$, portanto podemos escrever o quadrado das combinações da seguinte maneira ${n \choose k}^2 = {n \choose k}{n \choose n-k}$, o que implica que:
+$$\sum_{k = 0}^{n} {n \choose k}^2 = {n \choose 0}{n \choose n} + {n \choose 1}{n \choose n-1} + {n \choose 2}{n \choose n-2} + \cdots + {n \choose n}{n \choose 0}$$
+$${2n \choose n} = \frac{(2n)!}{n!(2n-n)!} = \frac{2n(2n-1)(2n-2)\cdots(2n-2n)}{n^2(n-1)^2(n-2)^2 \cdots(n-n)^2} $$
+$$= \frac{2 \cancel{n}(2n-1)(2n-2)\cdots(2n-2n)}{n\cancel{n}(n-1)^2(n-2)^2 \cdots(n-n)^2}$$
+$$= \frac{(4n-2)(2n-2)\cdots (2n-2n)!}{n(n^2 - 2n + 1)(n^2 - 4n + 4)\cdots (n-n)! ^2}$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    PART                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
