@@ -3114,8 +3114,80 @@ Para qualquer $p_2 \geq 0$, será obrigatório que
 $$z_2(p_1,p_2) = 0$$
 
 Isso nos dá a certeza que, ao encontramos um par de preços de equilíbrio para o bem 1 cuja a demanda líquida agregada seja igual a zero. A demanda líquida agregada do bem 2 também será igual a zero.
+\\
+\\
+Esse mesmo raciocínio pode ser generalizado para o equilíbrio em $k$ bens. Nesse caso, nós precisaremos encontrar a lista de preços $(p_1,p_2,...,p_{k-1},p_k)$ que produza o equilíbrio em $k - 1$ mercados. A lei de Walras nos assegura que o mercado do bem $k$ também estará automaticamente em equilíbrio.
 
 \section{Preços Relativos}
+
+Alguns de vocês podem estar um pouco céticos com a afirmação do último parágrafo. Como podemos encontrar $k$ preços de equilíbrio olhando apenas para $k - 1$ mercados? A verdade é que só existem $k - 1$ preços independentes. 
+\\
+\\
+Como as relações no modelo de trocas se dão pela equivalência entre as dotações iniciais e as preferências, o que importa entre os preços não é seu valor nominal e sim seu valor relativo. No exemplo de como o leiloeiro aumentou o preço do bem 2 afim de chegar no equilíbrio do mercado, nós saímos da relação de preço $p_1 = p_2 = 1$ para uma relação $2p_1 = p_2$ (ou seja, $p_2$ é o dobro de $p_1$). Entretanto, nós chegaríamos no mesmo equilíbrio se o leiloeiro \textit{reduzisse} preço do bem 1 para 0,5.
+\\
+\\
+Isso nos permite escolher um dos preços como um \textbf{numerário}. Bastando multiplicar todos os $k$ preços por $1/p_k$, chegaremos a um sistema com $k - 1$ preços (que agora estarão dividos por $p_k$) e $k - 1$ equações. O sistema vai ficar algo como
+
+$$\frac{p_1}{p_k}x_1(p_1,p_2,...,p_{k-1}) \ + $$
+$$\frac{p_2}{p_k}x_2(p_1,p_2,...,p_{k-1}) \ + $$ 
+$$ ... $$
+$$\frac{p_{k-1}}{p_k}x_{k - 1}(p_1,p_2,...,p_{k-1}) \ + $$
+$$x_{k}(p_1,p_2,...,p_{k-1}) = 0$$
+
+Atenção aqui: Isso quer dizer que o modelo de equilíbrio que estamos trabalhando só pode determinar o equilíbrio das quantidades através de \textbf{preços relativos}. O que não é uma restrição que faça grande diferença na realidade.
+
+\subsection{Um Exemplo algébrico do equilíbrio}
+
+Vamos colocar toda essa álgebra em ação usando as funções de utilidade do tipo Cobb-Douglas. Seja $u_a(x_1,x_2) = (x_A^1)^{a_A}(x_A^2)^{b_A}$ sendo $a_A + b_A = 1$, a função de utilidade do consumidor A e semelhantemente para B. O sistema de equações de demandas para cada agente em cada mercado será dado por
+
+$$ x_A^1(p_1,p_2,m_A) = a_A \frac{m_A}{p_1} $$
+$$ x_A^2(p_1,p_2,m_A) = b_A \frac{m_A}{p_2} $$
+$$ x_B^1(p_1,p_2,m_B) = a_B \frac{m_B}{p_1} $$
+$$ x_B^2(p_1,p_2,m_B) = b_B \frac{m_B}{p_2} $$
+
+Os parâmetros a e b são os expoentes das funções de utilidade. O sobrescrito em cada um deles indica a qual agente eles se referem.
+\\
+\\
+As rendas $m$ são dadas pelos preços multiplicados pela quantidade na dotação inicial de cada agente:
+
+$$m_A = p_1w_A^1 + p_2w_A^2$$
+$$m_B = p_1w_B^1 + p_2w_B^2$$
+
+substituindo no sistema de equações anterior teremos que
+
+$$ x_A^1(p_1,p_2) = a_A \frac{p_1w_A^1 + p_2w_A^2}{p_1} $$
+$$ x_A^2(p_1,p_2) = b_A \frac{p_1w_A^1 + p_2w_A^2}{p_2} $$
+$$ x_B^1(p_1,p_2) = a_B \frac{p_1w_B^1 + p_2w_B^2}{p_1} $$
+$$ x_B^2(p_1,p_2) = b_B \frac{p_1w_B^1 + p_2w_B^2}{p_2} $$
+
+
+As demandas excedentes agregadas são dadas pelas somas das demandas excedentes (que nada mais são do que as demandas menos as dotações). No nosso caso, são iguais a
+
+$$z_1(p_1,p_2) = 
+a_A \frac{p_1w_A^1 + p_2w_A^2}{p_1} + 
+a_B \frac{p_1w_B^1 + p_2w_B^2}{p_1} - w_A^1 - w_B^1$$
+
+$$z_2(p_1,p_2) = 
+b_A \frac{p_1w_A^1 + p_2w_A^2}{p_2} + 
+b_B \frac{p_1w_B^1 + p_2w_B^2}{p_2} - w_A^2 - w_B^2$$
+
+Essas equações satisfazem a lei de Walras. Se você duvidar disso, o que é um ótimo sinal, pode aplicar exatamente o mesmo processo feito na seção 32.6.
+\\
+\\
+Ao escolhermos $p_2$ como nosso numerário, podemos dividir os preços por $p_2$ de modo que $p_2/p_2 = 1$. Para simplificação, vamos adotar a notação $p_1 = p_1/p_2$. Acabaremos com um sistema igual a
+
+$$z_1(p_1,1) = 
+a_A \frac{p_1w_A^1 + w_A^2}{p_1} + 
+a_B \frac{p_1w_B^1 + w_B^2}{p_1} - w_A^1 - w_B^1$$
+
+$$z_2(p_1,1) = 
+b_A (p_1w_A^1 + w_A^2) + 
+b_B (p_1w_B^1 + w_B^2) - w_A^2 - w_B^2$$
+
+Agora, basta aplicarmos a lei de Walras ($p_1z_1(p_1,p_2) + p_2z_2(p_1,p_2) = 0$ e resolvermos a equação para $p_1$. O preço de equilíbrio encontrado é igual a
+
+$$p_1^* = \frac{a_A w_A^2 + b_A w_B^2}{a_B w_A^1 + b_B w_B^1}$$
+
 \section{A Existência de Equilíbrio}
 \section{Equilíbrio e Eficiência}
 \section{A Álgebra da Eficiência}
