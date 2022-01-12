@@ -3197,16 +3197,16 @@ Esse valor de $p_1$ é o valor cuja demanda excedente agregada para o bem 1 é i
 Como esse curso é nível graduação, não entraremos muito fundo nos aspectos formais de alguns tópicos. Nos níveis de pós-graduação, os ferramentais matemáticos formais são a principal maneira de demonstrar conceitos e derivar conclusões. Umas dessas conclusões que estudaremos brevemente diz respeito à \textbf{existência de um equilíbrio competitivo}, ou seja, investigaremos como podemos afirmar que sempre existe \textit{pelo menos algum} conjunto de preços que iguale oferta e demanda nos mercados.
 \\
 \\
-\textbf{Comentário:} Para aqueles mais interessados no assunto. Eu recomendo uma consulta no capítulo 15 do Mas-Colell (1995), capítulo 21 do Varian: Microeconomic Analysis (1992), capítulo 05 do Kreps (1990) e capítulo 05 do Jehle (2011). Mas fica aqui o aviso, o ferramental matemático é bem mais avançado do que estamos trabalhando nesse curso.
+\textbf{Comentário:} Para aqueles com mais curiosidade. Eu recomendo uma consulta no capítulo 15 do Mas-Colell (1995), capítulo 21 do Varian: Microeconomic Analysis (1992), capítulo 05 do Kreps (1990) e capítulo 05 do Jehle (2011). Mas fica aqui o aviso, o ferramental matemático é bem mais avançado do que estamos trabalhando nesse curso.
 \\
 \\
-Como o próprio professor Kreps expõe no livro dele a resposta para a pergunta "Sempre existe um equilíbrio walrasiano para uma economia de trocas qualquer"\ geralmente será não. Então o que os cientistas trabalharam para responder foi uma versão um pouco diferente dessa pergunta: "Sob quais condições, é garantido que exista algum equilíbrio em uma economia de trocas?". A resposta (versão graduação) para essa pergunta é que a função de demanda excedente seja uma \textbf{função contínua}.
+Como o próprio professor Kreps expõe no livro dele a resposta para a pergunta "Sempre existe um equilíbrio walrasiano para uma economia de trocas qualquer"\ geralmente será não. Então o que os cientistas trabalharam para responder foi uma versão um pouco diferente dessa pergunta: "Sob quais condições, é garantido que exista algum equilíbrio em uma economia de trocas?". A resposta (versão graduação) para essa pergunta é que a função de demanda excedente deve ser uma \textbf{função contínua}.
 \\
 \\
-A continuidade é uma característica das funções e possui um punhado de definições existentes. O professor Varian coloca uma versão bem resumida que vamos usar (mas eu também foi colocar uma um pouco mais formal). Uma função é chamada de contínua se \textit{pequenas variações} na suas variáveis independentes resultam em \textit{pequenas variações} variáveis dependentes. Ou seja, não temos \textit{grandes saltos} ou \textit{quebras} no gráfico dessas funções.
+A continuidade é uma característica das funções e possui um punhado de definições existentes. O professor Varian coloca uma versão bem resumida que vamos usar (mas eu também foi colocar uma um pouco mais formal como comentário opcional). Uma função é chamada de contínua se \textit{pequenas variações} na suas variáveis independentes resultam em \textit{pequenas variações} variáveis dependentes. Ou seja, não temos \textit{grandes saltos} ou \textit{quebras} no gráfico dessas funções.
 \\
 \\
-\textbf{Comentário Opcional:} Uma definição mais formal de função contínua (a definição de Cauchy) pode ser achada na página 534 do livro "Advanced Microeconomics"\ do professor Jehle: Seja $D$ um subconjunto de $\mathbb{R}^m$ e seja $f : D \shortrightarrow \mathbb{R}^n$. Então, a função f será contínua se, no ponto, $\mathbf{x} \in D$ se, para todos os $\epsilon > 0$, existir um $\delta >0$ de modo que $f(B_{\delta}(\mathbf{x}^0 \cap D) \subset B_{\epsilon}(f(\mathbf{x}^0)$.
+\textbf{Comentário Opcional:} Uma definição mais formal de função contínua (a definição de Cauchy) pode ser achada na página 534 do livro "Advanced Microeconomics"\ do professor Jehle. Seja $D$ um subconjunto de $\mathbb{R}^m$ e seja $f : D \shortrightarrow \mathbb{R}^n$. Então, a função f será contínua se, no ponto, $\mathbf{x} \in D$ se, para todos os $\epsilon > 0$, existir um $\delta >0$ de modo que $f(B_{\delta}(\mathbf{x}^0 \cap D) \subset B_{\epsilon}(f(\mathbf{x}^0)$.\footnote{Isso aqui é para vocês terem um gostinho de como é o conteúdo nos níveis mais avançados.}
 \\
 \\
 Mas agora precisamos saber quais são as condições para que a função de demanda excedente seja contínua. Temos dois tipos de condições. A primeira é que as funções de demanda individuais sejam contínuas (que por sua vez tem como condição que as preferências dos consumidores sejam convexas). A segunda é que, mesmo que algumas pessoas tenham comportamento descontínuo, se essas forem pequenas em relação ao total do mercado, a função de demanda ainda pode ser contínua (que é um pressuposto bem razoável em se tratando de um mercado competitivo).
@@ -3216,6 +3216,38 @@ Mas agora precisamos saber quais são as condições para que a função de dema
 A questão a eficiência diz respeito a comprovação de que um equilíbrio de mercado é um modelo eficiente de Pareto. A comprovação é simples: Como os pontos da curva de contrato são os pontos onde as curvas de utilidade mais altas, ou seja, com maior valor, tangenciam a curva de dotação dos agentes, não há possibilidade de algum deles obter qualquer melhoria preferida pois a escolha de maior utilidade já foi satisfeita dada a restrição orçamentária.
 
 \section{A Álgebra da Eficiência}
+
+Podemos demonstrar o argumento da seção anterior de maneira algébrica. Para isso vamos partir da hipótese de que o equilíbrio de mercado \textbf{não} é eficiente no sentido de Pareto.
+\\
+\\
+\textbf{Comentário:} Essa seção é uma boa demonstração de como funciona uma demonstração formal. Nós queremos provar uma hipótese mas a abordagem do professor foi partir da negativa dessa hipótese. Pode parecer estranho, mas a ideia é simples: se partimos da ideia que a nossa hipótese é falsa, somos capazes de chegar a um resultado válido? Se a resposta for não, isso significa que nossa hipótese só pode ser verdadeira.\footnote{O nome dessa técnica de demonstração é "prova por contradição".}
+\\
+\\
+Dizer que o equilíbrio de mercado não é eficiente no sentido de Pareto implica na existência de uma alocação possível $(y_A^1,y_A^2,y_B^1,y_B^2)$ de modo que
+
+$$y_A^1 + y_B^1 = w_A^1 + w_ B^1$$
+$$y_A^2 + y_B^2 = w_A^2 + w_ B^2$$
+
+de modo que, se essas duas cestas são preferidas a outra alocação (denotada pela variável x) será verdade que
+
+$$(y_A^1 + yA2) \succ_A (x_A^1 + x_A^2)$$
+$$(y_B^1 + yB2) \succ_B (x_B^1 + x_B^2)$$
+
+Os símbolos "$succ_A$" e "$\succ_B$" significam as preferências de A e B.
+\\
+\\
+As primeiras equações nos dizem que a alocação y é factível. As segundas relações nos dizem que os agentes A e B preferem a alocação y em detrimento da alocação x.
+\\
+\\
+Mas veja que, pelo conceito de equilíbrio de mercado, os agentes estão nas alocações que maximizam a sua utilidade dada sua restrição orçamentária. Isso implica em dizer que, se y é preferido ao equilíbrio, essa alocação precisa ser, obrigatoriamente, mais cara que a alocação do equilíbrio, ou seja, está acima da restrição orçamentária de cada agente. Isso implica, por sua vez em
+
+$$p_1y_A^1 + p_2yA2 > p_1x_A^1 + p_2x_A^2$$
+$$p_1y_B^1 + p_2yB2 > p_1x_B^1 + p_2x_B^2$$
+
+Somando as duas equações, teremos
+
+$$p1($$
+
 \section{Eficiência e Equilíbrio}
 \section{Implicações do 1º Teorema do Bem-Estar}
 \section{Implicações do 2º Teorema do Bem-Estar}
