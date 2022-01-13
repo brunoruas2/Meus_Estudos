@@ -3220,33 +3220,53 @@ A questão a eficiência diz respeito a comprovação de que um equilíbrio de m
 Podemos demonstrar o argumento da seção anterior de maneira algébrica. Para isso vamos partir da hipótese de que o equilíbrio de mercado \textbf{não} é eficiente no sentido de Pareto.
 \\
 \\
-\textbf{Comentário:} Essa seção é uma boa demonstração de como funciona uma demonstração formal. Nós queremos provar uma hipótese mas a abordagem do professor foi partir da negativa dessa hipótese. Pode parecer estranho, mas a ideia é simples: se partimos da ideia que a nossa hipótese é falsa, somos capazes de chegar a um resultado válido? Se a resposta for não, isso significa que nossa hipótese só pode ser verdadeira.\footnote{O nome dessa técnica de demonstração é "prova por contradição".}
+\textbf{Comentário:} Essa seção é uma boa demonstração de como funciona uma demonstração formal. Nós queremos provar uma hipótese mas a abordagem que o professor optou foi partir da negação dessa hipótese. Pode parecer estranho, mas a ideia é simples: se partimos da ideia que a nossa hipótese é falsa, somos capazes de chegar a um resultado válido? Se a resposta for não, isso significa que nossa hipótese só pode ser verdadeira.\footnote{O nome dessa técnica de demonstração é "prova por contradição".}
 \\
 \\
 Dizer que o equilíbrio de mercado não é eficiente no sentido de Pareto implica na existência de uma alocação possível $(y_A^1,y_A^2,y_B^1,y_B^2)$ de modo que
 
+\newpage
+
 $$y_A^1 + y_B^1 = w_A^1 + w_ B^1$$
 $$y_A^2 + y_B^2 = w_A^2 + w_ B^2$$
 
-de modo que, se essas duas cestas são preferidas a outra alocação (denotada pela variável x) será verdade que
+onde, se essa alocação y for preferida à outra alocação x será verdade que
 
 $$(y_A^1 + yA2) \succ_A (x_A^1 + x_A^2)$$
 $$(y_B^1 + yB2) \succ_B (x_B^1 + x_B^2)$$
 
-Os símbolos "$succ_A$" e "$\succ_B$" significam as preferências de A e B.
+Os símbolos "$\succ_A$" e "$\succ_B$" significam as preferências de A e B.
 \\
 \\
 As primeiras equações nos dizem que a alocação y é factível. As segundas relações nos dizem que os agentes A e B preferem a alocação y em detrimento da alocação x.
 \\
 \\
-Mas veja que, pelo conceito de equilíbrio de mercado, os agentes estão nas alocações que maximizam a sua utilidade dada sua restrição orçamentária. Isso implica em dizer que, se y é preferido ao equilíbrio, essa alocação precisa ser, obrigatoriamente, mais cara que a alocação do equilíbrio, ou seja, está acima da restrição orçamentária de cada agente. Isso implica, por sua vez em
+Mas veja que, pelo conceito de equilíbrio de mercado, os agentes estão nas alocações que maximizam a sua utilidade dada sua restrição orçamentária. Isso implica em dizer que, se y é preferido ao equilíbrio, essa alocação precisa ser, obrigatoriamente, mais cara que a alocação do equilíbrio, ou seja, está acima da restrição orçamentária de cada agente. Esse argumento pode ser traduzido na forma algébrica
 
-$$p_1y_A^1 + p_2yA2 > p_1x_A^1 + p_2x_A^2$$
-$$p_1y_B^1 + p_2yB2 > p_1x_B^1 + p_2x_B^2$$
+$$p_1y_A^1 + p_2y_A^2 > p_1w_A^1 + p_2w_A^2$$
+$$p_1y_B^1 + p_2y_B^2 > p_1w_B^1 + p_2w_B^2$$
 
-Somando as duas equações, teremos
+Somando as duas inequações, teremos
 
-$$p1($$
+$$p_1(y_A^1 + y_B^1) + p_2(y_A^2 + y_B^2) > p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2)$$
+
+Mas se voltarmos nas duas primeiras equações e substituirmos o lado esquerda dessa inequação, chegaremos ao resultado
+
+$$p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2) > p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2)$$
+
+O que é uma contradição, mas isso é exatamente o resultado que queríamos chegar.
+\\
+\\
+Como derivamos uma contradição partindo da negativa da nossa hipótese, podemos concluir que a hipótese original é verdadeira. Desse modo, podemos afirmar que os equilíbrios de mercado são eficientes no sentido de Pareto.
+\\
+\\
+Essa conclusão é tão importante que a comunidade científica denominou como \textbf{Primeiro Teorema da Teoria Econômica do Bem-Estar}.
+\\
+\\
+Esse teorema afirma que as alocações obtidas em um mercado competitivo serão eficientes no sentido de Pareto. Atente para o fato que o teorema não afirma nada sobre outras características como, por exemplo, a distribuição da renda. A prova disso é que a alocação 100\% para o agente A e 0\% pra o B é eficiente no sentido de Pareto. O resultado pode até não ser socialmente aceitável ou desejável, mas será necessariamente eficiente.
+\\
+\\
+\textbf{Comentário:} Aqui nós revisitamos o monopólio só que dessa vez dentro de uma caixa de Edgeworth. Vemos como um monopólio acaba alocando de maneira ineficiente os recursos para poder maximizar seu retorno. E também percebemos que um monopolista perfeitamente discriminador é capaz de criar uma alocação eficiente no sentido de Pareto.
 
 \section{Eficiência e Equilíbrio}
 \section{Implicações do 1º Teorema do Bem-Estar}
