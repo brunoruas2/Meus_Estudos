@@ -3319,7 +3319,42 @@ Não é incomum que, em busca de reduzir a desigualdade, as discussões de polí
 
 \section{Apêndice Matemático do equilíbrio}
 
-Aqui veremos como o problema da determinação do equilíbrio é resolvido com uso de cálculo. Dada a utilidade qualquer do agente B 
+Aqui veremos como o problema da determinação do equilíbrio é resolvido com uso do cálculo. Dada a utilidade qualquer do agente B fixa $\overline{u}$, o problema da maximização da utilidade total do mercado pode ser formalizado como
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $x_A^1,x_A^2,x_B^1,x_ B^2$}} \ \ \stackrel{u_A(x_A^1,x_A^2)}{\ }$ \\
+\ 
+\\
+\normalsize de modo que $u_B(x_B^1,x_B^2) = \overline{u}$ \\
+$x_A^1 + x_B^1 = w^1$ \\
+$x_A^2 + x_B^2 = w^2$
+\end{center}
+
+Você aprendeu no capítulo 05 como fazer uma maximização de uma função objeto dada uma restrição. A novidade aqui é que temos 3 condições de restrições. Pode até assustar numa primeira vista, mas não é nada impossível.
+\\
+\\
+Primeiramente, podemos escrever nosso problema em forma de uma Lagrangiana 
+
+$$L(x_A^1,x_A^2,x_B^1,x_B^2) = u_A(x_A^1,x_A^2) - \lambda(u_B(x_B^1,x_B^2) - \overline{u}) $$ 
+$$ - \mu_1(x_A^1 + x_B^1 - w^1) - \mu_2(x_A^2 + x_B^2 - w^2)$$
+
+Onde o $\lambda$ é o nosso conhecido multiplicador Lagrangiano, só que aqui, aplicada para a utilidade de B e $\mu$ são os multiplicadores de Lagrange nas restrições dos recursos.
+\\
+\\
+As condições de primeira ordem para maximização da nossa Lagrangiana a respeito das 4 variáveis são:
+
+$$\frac{\partial L}{\partial x_A^1} = \frac{\partial u_A}{\partial x_A^1} - \mu_1 = 0$$
+$$\frac{\partial L}{\partial x_A^2} = \frac{\partial u_A}{\partial x_A^2} - \mu_2 = 0 $$
+$$\frac{\partial L}{\partial x_B^1} = -\lambda \frac{\partial u_B}{\partial x_B^1} - \mu_1 = 0 $$
+$$\frac{\partial L}{\partial x_B^2} = -\lambda \frac{\partial u_B}{\partial x_B^2} - \mu_2 = 0 $$
+
+Eu não sei você, mas quando eu olhei essa passagem, eu fiquei com dúvida porque lá no capítulo 05 ele deriva a Lagrangiana em relação ao lambda. A questão é que nós não precisamos fazer isso. Se não nos atrapalhar que as soluções de maximização sejam funções dos multiplicadores de Lagrange, podemos manter as condições de primeira ordem apenas para as variáveis que queremos.
+\\
+\\
+Relembrando o conceito de Taxa Margina de Substituição, podemos ver que 
+
+$$TMS_A$$
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Produção}
