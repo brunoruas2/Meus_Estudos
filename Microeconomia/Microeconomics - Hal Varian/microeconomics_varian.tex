@@ -542,7 +542,7 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 \chapter{Oferta da Indústria}
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
-\part{Mercados}
+\part{Mercados e Concorrência Imperfeita}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Monopólio}
@@ -971,11 +971,11 @@ Se, por outro lado, o monopolista não puder fazer essa separação dos preços,
 \includegraphics[scale=0.8]{cap26_4-discriminacao_grau3_2.png}
 \end{figure}
 
-\textbf{Atenção: } Quando trabalharmos com demandas somadas, temos que testar se o preço de equilíbrio não gera demanda negativa em alguma das curvas de demanda. Se a função demanda for negativa ao preço de equilíbrio, isso quer dizer que o monopolista aumentará o seu lucro se não vender para esse grupo de consumidores. Ao excluir essa demanda e calcular o novo equilíbrio, seu lucro aumentará.
+\textbf{Atenção:} Quando trabalharmos com demandas somadas, temos que testar se o preço de equilíbrio não gera demanda negativa em alguma das curvas de demanda. Se a função demanda for negativa ao preço de equilíbrio, isso quer dizer que o monopolista aumentará o seu lucro se não vender para esse grupo de consumidores. Ao excluir essa demanda e calcular o novo equilíbrio, seu lucro aumentará.
 
 \section{Vinculação de Produtos}
 
-Uma prática muito comum entre as empresas é a \textbf{venda casada}. Você já se perguntou qual o motivo das empresas de internet se esforçarem tanto para vender o pacote TV + Internet + Telefone?. Pois bem, agora você vai ter uma ideia por trás dessa estratégia.
+Uma prática muito comum entre as empresas é a \textbf{venda casada}. Você já se perguntou qual o motivo das empresas de internet se esforçarem tanto para vender o pacote TV + Internet + Telefone?. Pois bem, agora você vai ter uma ideia por trás dessa estratégia.\footnote{Aqui estamos supondo que as demandas por esses serviços não são relacionadas. Mas não leve esse primeiro parágrafo tão ao pé da letra. O objetivo dele é só vender o conteúdo do tópico ;)}
 \\
 \\
 Já vimos que a vontade do monopolista é cobrar o máximo possível para cada cliente em cada quantidade. Isso faria com que ele capturasse todo o excedente do mercado. Como na prática isso implicaria em conhecimento perfeito de todos os consumidores e existe uma legislação que limita a capacidade de impor muito do poder de mercado, as empresas se valem de estratégias para maximizar esse excedente.
@@ -990,7 +990,7 @@ Veja a tabela 26.1 a página 672 do livro. Temos dois tipos consumidores que pos
 Mas como bem sabemos, as empresas sempre pensam em novas estratégias. No caso da vinculação de produtos, supondo que o preço de reserva pelos produtos juntos seja igual à soma dos preços individuais, nós tratamos os dois produtos como uma cesta única. Nesse novo arranjo, o vendedor consegue cobrar um preço maior, porque o preço de reserva por cesta é maior que o valor cobrado separadamente.
 \\
 \\
-Eu expandi um pouco do exemplo do professor Varian para um caso de 1.000 consumidores. Nessa simulação os preços de reserva são aleatórios entre 51 e 100. Depois eu testei as duas abordagens e comparei os lucros a medida que se eleva o preço praticado no mercado. Para efeito de simplificação, os preços de reserva mínimos são iguais nos dois produtos, então o vendedor sempre aumentará os preços em paralelo. Atente para o fato de que nesse gráfico o preço está no eixo horizontal.\footnote{Ficou na dúvida, fala comigo que eu explico melhor.}
+Eu expandi um pouco do exemplo do professor Varian para um caso de 1.000 consumidores. Nessa simulação os preços de reserva são aleatórios entre 51 e 100. Para cada uma das duas abordagens, eu comparei os lucros a medida que se eleva o preço praticado no mercado. Para efeito de simplificação, os preços de reserva mínimos são iguais nos dois produtos, então o vendedor sempre aumentará os preços em paralelo. Atente para o fato de que nesse gráfico o preço está no eixo horizontal.\footnote{Ficou na dúvida, fala comigo que eu explico melhor.}
 
 \begin{figure}[H]
 \centering
@@ -1000,19 +1000,736 @@ Eu expandi um pouco do exemplo do professor Varian para um caso de 1.000 consumi
 \textbf{Simulação:} \href{https://drive.google.com/file/d/1WhxGaAhUB9dKkgrKWadihIrzS4cm3bXP/view?usp=sharing}{Clique aqui} para ter acesso a essa simulação.
 \\
 \\
-De zero até 50, a curva de lucro é uma linha reta porque o preço mínimo de reserva da nossa simulação é 50. A partir desse ponto, cobrar mais caro implica em abrir mão dos consumidores com preço de reserva menor que o preço.
+De zero até 50, a curva de lucro é uma linha reta porque o preço de reserva mínimo da nossa simulação é 50. Então, sempre existirá alguém disposto a comprar a medida que ofertamos até esse preço. A partir desse ponto, cobrar mais caro implica em abrir mão dos consumidores com preço de reserva menor que o preço.
 
 \section{Tarifas Bipartidas}
+
+Um artigo famoso de 1971 cujo título é "A Disneyland Dilemma: Two-Part Tariffs for a Mickey Mouse Monopoly", de Walter Oi, nos mostra uma situação interessante. Como o monopolista se comportará no caso da venda de dois produtos que possuem demandas interrelaciandas?
+\\
+\\
+No tópico anterior, supomos que as demandas eram independentes. Agora temos um caso onde, ao aumentar a oferta do bem 1, os consumidores estarão menos propensos a consumir o bem 2. Chamamos esse arranjo de \textbf{tarifa bipartida}.
+\\
+\\
+Como já trabalhamos antes, sabemos que a maximização do lucro é obtida no ponto onde o custo marginal é igual à receita marginal. Fazendo isso para a oferta do bem 1 e como ele não pode discriminar perfeitamente os preços, haverá um excedente do consumidor. Esse excedente é exatamente o valor máximo que ele pode cobrar pelo bem 2. Nesse caso, pode ser que a quantidade cobrada pelo bem 2 seja inferior ao montante que iguale o custo marginal à receita marginal.
+\\
+\\
+Para elucidar esse modelo eu fiz uma simulação. Fora suposto que as demandas são lineares, com a mesma forma funcional e interdependentes, ou seja, quanto mais de um bem se tem, menos do outro terá. Os custo marginais são fixos em 20.
+\\
+\\
+Como esse problema envolve o equilíbrio em dois mercados (bem 1 e bem 2), eu optei por construir um gráfico tridimensional. O problema dessa abordagem é que a melhor maneira de se entender um gráfico desse é pela mudança do ângulo da câmera. Então eu vou colocar 3 perfis de visualização mas também fiz um gif com um panorama dos eixos \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/images/cap26_6-tarifas_bipartidas.gif}{\textbf{clique aqui para ver}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap26_6-tarifas_bipartidas1.png}
+\end{figure}
+
+Nessa primeira imagem temos um ângulo que evidencia como o lucro se comportaria se só existisse o mercado do bem 1. Podemos ver que o lucro é maximizado em um ponto (que é justamente onde o custo marginal é igual à receita marginal. A segunda imagem é similar a primeira, mas para o outro bem.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap26_6-tarifas_bipartidas2.png}
+\end{figure}
+
+A terceira mostra como o monopolista deverá agir para poder ofertar ambos os bens. O padrão é simétrico porque no modelo as duas demandas possuem as mesmas formas e os mesmos coeficientes. Veja como a figura do lucro forma um tipo de "onda"\ que parte da cesta onde os dois bens são iguais a zero. Na parte amarela temos o máximo do lucro possível para cada cesta. E, a partir desses pontos de máximo, os lucros de cada cesta vão sendo cada vez menores.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap26_6-tarifas_bipartidas3.png}
+\end{figure}
+
+A última mostra um ângulo onde vemos a relação de troca entre os bens (a linha vermelha indica a reta onde as cestas maximizam o lucro). Observe que, visto de cima, temos um gráfico que demonstra o quanto o monopolista tem que abrir mão de um bem para vender mais do outro, sem que isso incorra em redução do seu lucro total.\footnote{Pra mim, lembra um pouco a curva de restrição orçamentária do consumidor.}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.60]{cap26_6-tarifas_bipartidas4.png}
+\end{figure}
+
+Como as demandas desse modelo são simétricas e os custos são iguais, o modelo gráfico é uniforme. Na imagem abaixo eu simulei o mesmo modelo para o caso onde o custo marginal do bem 2 é igual a zero.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap26_6-tarifas_bipartidas5.png}
+\end{figure}
+
+Podemos ver claramente que, nesse segundo caso, o monopolista só maximiza seu lucro ao vender exclusivamente o bem 2.
+\\
+\\
+Essa assimetria é a explicação do motivo da Disney não cobrar um preço pela entrada nos brinquedos, uma vez que em os custos dos serviços (a saber: a entrada e os passeios) não são iguais. A Disney percebeu que ao cobrar somente a entrada, poderia captar mais o excedente total do mercado do que se cobrasse também os passeios aos brinquedos.
+
 \section{Competição Monopolística}
-\section{Modelo de Diferenciação de Produtos por Local}
+
+Nós começamos essa seção do livro partindo da posição oposta aos modelos que vimos ao longo da primeira metade do curso. Adaptamos o modelo da escolha maximizadora do lucro para a existência do poder de mercado e avançamos como o monopolista pode usar esse poder mesmo em arranjos menos favoráveis à capacidade de discriminação de preços. Nessas últimas duas seções expandimos nosso modelo para mais de um produto e como eles podem interagir entre si para a maximização do lucro.
+\\
+\\
+Todo esse caminho foi muito bem pensado pelo professor. Lá no começo alguns de vocês podem ter achado a hipótese da existência de apenas um produtor um tanto quanto caricata. Mas agora vamos trazer o nosso modelo da escolha para mais perto da realidade presenciada todos os dias por vocês.
+\\
+\\
+Até agora, tratamos uma \textbf{indústria} como um conjunto de produtores cujo resultado do esforço produtivo era \textit{exatamente} a mesma mercadoria. Isso quer dizer que, sendo 1 (que é o caso do monopólio) ou 1.000 produtores, todas as mercadorias que saem das fábricas e são comercializadas seriam exatamente as mesmas. Essa hipótese simplificadora vai dar lugar a uma nova que, na minha opinião, é bem mais aplicável a nossa realidade fática.
+\\
+\\
+Os produtos agora possuem certas propriedades exclusivas (sendo a marca a principal) e seus competidores também serão diferenciáveis entre si. Todos competindo por um mercado de bens relativamente parecidos aos consumidores. Além disso, vamos considerar que a barreira de entrada de novos produtores também será mais baixa.
+\\
+\\
+Nesse novo arranjo, os produtores possuem características de ambos os modelos vistos. Eles não podem alterar seus preços completamente como um monopólio, porque os consumidores olhariam para os seus concorrentes e comprariam algum produto semelhante ao seu, só que mais barato. Por outro lado, eles não estão fadados estritamente ao preço de mercado, uma vez que nesse arranjo a demanda não será infinitamente elástica. O nome dessa estrutura setorial é \textbf{concorrência monopolística}.\footnote{Eu não sei você, mas eu acho esse modelo muito empolgante de ser estudado.}
+\\
+\\
+Estamos vendo apenas vantagens ao novo modelo, mas como tudo na vida, temos um trade-off entre realidade e praticidade. Esse modelo é bem mais complexo de ser construído e analisado. Como o próprio professor diz "Em um modelo detalhado do setor de competição monopolística, dependemos muito dos detalhes específicos dos produtos e da tecnologia (de produção), assim como da natureza das escolhas estratégicas disponíveis para as empresas". Isso acaba implicando naquela situação clássica de "cada caso é um caso". Por causa disso, e do fato desse curso ser introdutório, vamos apenas ver alguma das principais estratégias dos economistas para modelar esses mercados.
+\\
+\\
+Mesmo sendo um modelo mais complexo, podemos evidenciar algumas características que independam de quaisquer fatores relacionados ao mercados específicos. O primeiro deles é relacionado ao número de competidores.
+\\
+\\
+É razoável supor que se o número de concorrentes aumentar (algo que está muito relacionado às barreiras de entrada) haverá impactos na curva de demanda que a empresa está imposta. O primeiro impacto que podemos supor é que essa curva irá se aproximar mais da origem do plano cartesiano\footnote{Ou seja, ele vai acabar tendo que baixar mais o seu preço se quiser continuar vendendo a mesma quantidade.}. O segundo impacto previsto é que a elasticidade de demanda aumentara\footnote{Porque agora os consumidores podem escolher mais opções em relação a antes.}.
+\\
+\\
+Se todas as empresas do mercado tiverem como objetivo o lucro. Quaisquer equilíbrio alcançado terá que obedecer algumas restrições:
+\begin{itemize}
+\item Cada empresa venderá o máximo possível. Ou seja, elas sempre optam por ofertar cestas que estejam na curva de demanda e não abaixo dela.
+\item Cada empresa precisará maximizar seu lucro levando em consideração as imposições oriundas à sua curva de demanda da empresa.
+\item Quanto mais competidores o mercado tiver, mais próximo de zero será o lucro das empresas contidas no mercado.
+\end{itemize}
+
+Do fato 1, podemos derivar o fato que quaisquer opções de maximização estão na própria curva de demanda\footnote{Afinal, ela mostra as maiores quantidades para cada nível de preço.}. Do fato 3, podemos ver que a medida que o número de competidores tende ao infinito, a cesta escolhida deve ser num ponto onde a curva de custo médio tangencia a curva de demanda\footnote{A lógica é que se $p > c(y)/y$ então $py - c(y) > 0$, o que contraria nosso postulado. Agora, se $p = c(y)/y$ então, $py - c(y) = 0$, que é exatamente o que estamos dizendo.}. Por fim, o nosso postulado 2 afirma que a maximização ocorrerá na curva de demanda, isso implica no fato que a curva de custo médio não cruzará a curva de demanda, porque se isso acontecer, as empresas terão lucro positivos.
+\\
+\\
+Existem algumas características desse equilíbrio competitivo monopolizador:
+\begin{itemize}
+\item Ele é ineficiente no sentido de Pareto, porque a maximização ocorre pelo custo médio e não pelo custo marginal. Mesmo sendo uma situação de lucro zero, quando tratamos de eficiência, estamos trabalhando com a maximização do excedente do mercado. E isso se dá pelo custo marginal.
+\item As empresa acabam por atuar num ponto a esquerda do nível de produção. Isso quer dizer que os consumidores acabam não tendo acesso a todas as mercadores que os produtores realmente poderiam lançar no mercado.
+\end{itemize}
+
+Um fato interessante desse segundo ponto é que temos um trade-off interessante. Vimos que as empresas até teriam como ofertar quantidades maiores, mas como a maximização do lucro se dá pelo custo médio, elas não produzem tudo que podem. Se quiséssemos aumentar a oferta dos produtos, teríamos que reduzir a quantidade de ofertantes. Isso realmente aumentaria a quantidade ofertada por cada empresa, mas em contrapartida, os consumidores teriam menos opções para escolher!. Esse é o tipo de situação onde não existe regra de ouro e cada caso é único.
+
+\section{Modelo de Diferenciação de Produtos por Local (Estabilidade na Competição)}
+
+Esse seção é inspirada no clássico artigo de 1929 "Stability in Competition"\ de Harold Hotelling.\footnote{Imagina como deve ter sido doido publicar um artigo em 1929.}
+\\
+\\
+Como foi dito antes, as abordagens puramente teóricas nessa parte da teoria microeconômica são limitadas porque agora os aspectos únicos de cada mercado acabam tornando praticamente impossível deduzirmos leis gerais. Na seção passada nós já aprendemos como um concorrente monopolista possui algumas restrições e alguma liberdade advinda da diferenciação dos produtos (que não é absoluta, mas existe). Agora, porém, vamos abordar outro tipo de diferenciação: A geográfica.
+\\
+\\
+Nossos modelos sempre adotaram que os consumidores não possuíam nenhum custo pela aquisição além do preço. Mas, na realidade, todos nós precisamos sair de casa e perdermos um tempo indo até o local onde teremos acesso aos produtos que desejamos\footnote{Ou optamos por pagar a bendita taxa de entrega do Ifood afim de termos a comodidade de receber a comida na porta de casa.}.
+\\
+\\
+Pensando nisso vamos criar um \href{https://en.wikipedia.org/wiki/Thought_experiment}{experimento mental}:
+\\
+Imagine que a orla da Ponta Negra seja retilínea e que só seja permitida a venda de sorvetes mediante autorização da Prefeitura. Adicionaremos a restrição que a probabilidade de você encontrar um transeunte com calor é uniforme em toda a extensão da orla. Suporemos também que os preços dos sorvetes sempre serão iguais, que não há diferença de qualidade e que por motivos climáticos só exista um único sabor disponível.
+\\
+\\
+Diante das características do mercado acima, onde o primeiro sorveteiro com licença da prefeitura deve instalar sua barraquinha?. Não é difícil chegar na conclusão que ele deve se instalar exatamente no meio da orla. Desse modo, a distância máxima que um transeuntes com calor terá de caminhar para aliviar seu desconforto térmico é de meia orla.
+\\
+\\
+Agora vamos complicar um pouco mais. Supondo que outro sorveteiro consiga sua licença para vender na orla. Qual será o melhor arranjo?. Se usarmos o mesmo pensamento de antes, podemos supor que cada vendedor fique no ponto que corresponda a 1/4 e 3/4 do tamanho da orla. Nesse caso, todos os consumidores das áreas 1/4 e 2/4 estariam próximos ao vendedor 1. E os consumidores dos setores 3/4 e 4/4 estariam mais próximos do sorveteiro 2. No final teremos uma distância máxima de 1/4 da orla para cada consumidor e 1/2 da receita total para cada sorveteiro.
+\\
+\\
+Tudo certo então? Terminamos?. Evidente que não. Ainda precisamos pensar no que cada vendedor fará. Como eles querem maximizar sua receita, cada vendedor terá o incentivo à se mover um pouco para o centro, porque desse modo ele manterá a sua demanda cativa e ainda "roubará"\ parte da demanda do seu colega de ofício. No final, ambos se encontrarão no centro da orla. Esse novo arranjo aumenta a distância máxima dos consumidores para 1/2 e mantém a receita dos sorveteiros em 1/2.
+\\
+\\
+Esse é um exemplo de como a competição pelos clientes gerou um padrão menos eficiente na localização dos sorveteiros. Quanto menos agentes temos nos mercado, mais precisaremos nos preocupar com as estratégias que cada um deles adotará.\footnote{Se você começou a pensar em teoria do jogos, é isso mesmo!}
+\\
+\\
+Como o próprio Hotelling pontua na página 53: "A importância e variedade das tendências aglomerativas\footnote{Ele está falando da tendência à convergência.} se torna evidente quando nos lembramos que a distância, usada nessa ilustração, é apenas um termo figurativo para uma grande convergência de qualidade". O que o autor quer dizer, é que ele usou essa analogia das distâncias apenas como uma ilustração. Mas ao invés dos vendedores possuírem uma commoditie separada geograficamente, podemos considerar vendedores um do lado do outro, mas com produtos um pouco diferentes. Pelo modelo de Hotelling, eles terão um incentivo à padronização dos seus produtos.
+\\
+\\
+No Youtube, parece que os vídeos estão cada vez mais parecidos. Na música, observamos padrões de ritmo, temática e estrutura de tempos em tempos. Os filmes de super-heróis viraram uma moda que já dura uma década. Enfim, esse padrão de convergência é explicado relativamente bem pelos conceitos que desenvolvemos até agora. Esse modelo de convergência na competição continua muito poderoso desde sua descoberta em 1929. Agora você tem um ferramental novo para impressionar seus parentes nas reuniões de família. Use esse poder com moderação.
+
 \section{Diferenciação de Produtos}
+
+Uma característica muito interessante da ciência é que ela não se limita em continuar revisando seus conhecimentos. Embora o modelo do Hotelling tenha sido muito famoso, os cientistas continuaram fazendo pesquisas e construindo modelos que explicassem os fenômenos observados na realidade. \\
+\\
+Existem situações onde os produtores optam por buscar o oposto do modelo de convergência, eles investem na diferenciação dos seus produtos. Qual o sentido disso? nós já vimos que, quanto maior é o grau de diferenciação do produto, mais característica de monopólio o competidor terá. Então as empresas investem pesado em marketing para alterar a percepção dos consumidores e construir a ideia de uma marca "única". A Apple tem uma estratégia excelente nessa linha, para citar um exemplo.
+\\
+\\
+Infelizmente, o livro não adentra muito além da demonstração que existe essa vertente de possibilidade dos mercados. O importante aqui é saber que a competição monopolística pode gerar tanto uma padronização dos produtos quanto uma excessiva diferenciação deles.
+
 \section{Mais Sorveteiros}
+
+Se a gente retomar o nosso experimento mental da orla da Ponta Negra. Alguns de vocês podem pensar: "Mas perai, e se colocarmos mais sorveteiros no mercado?". Pois bem, vamos ver o que acontece nessa situação.
+\\
+\\
+Coloque um novo sorveteiro em qualquer lugar. Acontecerá que alguém vai ficar no meio. Os que estão nas proximidades, vão ter o incentivo de irem cada vez mais para perto do que está no meio, uma vez que eles mantém seus clientes a ainda "roubam"\ parte dos clientes do pobre sorveteiro do meio. Só que o sorveteiro do meio também é esperto. Se um dos dois das extremidades chegar perto demais, ele pode simplesmente ir para no sentido da extremidade. Ao passar pelo sorveteiro que veio de lá, ele captaria toda a receita da extremidade até a sua atual posição.
+\\
+\\
+Mas quando o sorveteiro do meio passa a ser um sorveteiro da extremidade, o novo sorveteiro do meio terá o mesmo incentivo que ele teve e também irá de encontro a algum deles para trocar de lugar. O que podemos ver é que esse arranjo é dinâmico. Sempre existirá um incentivo de algum dos sorveteiros de mudar de posição. Mas não se desespere. A medida que temos mais e mais competidores, o padrão de convergência volta a aparecer.
+\\
+\\
+\textbf{Comentário:} Embora eu tenha dito o padrão de aglomeração reapareça para quatro ou mais vendedores, eu só refiz a mesma afirmação que o professor fez no seu livro. Eu não sei você, mas eu não gosto muito de afirmações sem as devidas comprovações. Quando tiver mais tempo, eu atualizo essa seção com a demonstração que esse padrão realmente aparece para 4 ou mais vendedores.\footnote{Favorita meu repositório no Github para não parder as atualizações no material.}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Mercado de Fatores}
 
+\begin{chapquote}{The Godfather}
+	``Give him a living, but never discuss the family business with him.''
+\end{chapquote}
+
+Quando falamos de produção, o mercado de fatores é muito relevante e até o momento não tocamos nesse assunto desde do capítulo 20. Agora que temos um \textit{framework} mais interessante como o comportamento do monopolísta, podemos pensar nas implicações para o mercado de fatores. Veremos algumas situações: 
+\begin{enumerate}
+
+\item Qual a diferença entre a demanda por fatores de um monopólio e de uma empresa competitiva.
+
+\item O que acontece quando temos um mercado de fatores competitivo mas apenas um comprador\footnote{O nome desse arranjo é \textbf{monopsônio}. Pense nele como um monopólio do mundo invertido de stranger things.}.
+
+\item Como será o arranjo onde há um monopolista no mercado de fatores e um monopolista no mercado de produto.
+
+\end{enumerate}
+
+\section{O Monopólio no Mercado do Produto}
+
+Pensemos novamente na empresa que demanda fatores de produção. Sua demanda maximizadora será dada pelo ponto onde o custo marginal pela compra do fator é igual à receita marginal advinda do emprego desse fator. Supondo uma empresa que só possua um único fator de produção. Sua função de produção será dada por $y = f(x)$. A receita será dada pelo volume de produção e da demanda inversa do mercado, algo como, $R(y) = p(y)y$. 
+\\
+\\
+O \textbf{Produto Marginal} de um fator de produção é obtido pela variação da função produção em relação à variação do fator observado. No nosso exemplo, só temos um único fator, então:
+
+$$ PM_x = \frac{\delta y}{\delta x} = f'(x) $$
+\\
+Se você sobreviveu até aqui, deve estar entendo tudo tranquilamente\footnote{Parabéns! Você está cada vez mais perto de ler um paper e de expressar modelos como os economistas fazem.}. 
+\\
+\\
+Como não é novidade, esse incremento marginal na produção será vendido e produzirá uma \textbf{Receita Marginal}. Podemos expor esse efeito pela expressão da  variação infinitesimal da receita dividida pela variação infinitesimal do produto.\footnote{O primeiro capítulo desse material é exatamente para você saber o que estamos fazendo aqui.}
+
+$$ RM_y = \frac{\delta R}{\delta y} = p(y) + p'(y)y $$
+\\
+Até agora já vimos o impacto que um fator causa no produto e, do outro lado, o impacto que um produto causa na receita. Agora nos resta fazer a relação direta entre essas duas lógicas. Uma vez que $y = f(x)$, então, $p(y) = p(f(x))$. Podemos reescrever nossa equação da receita como:
+
+$$ R(x) = p(f(x))f(x) $$
+
+Agora que temos nossa função de receita explicitamente relacionada ao nosso fator de produção, podemos obter a relação chamada de \textbf{Produto da Receita Marginal} que mede o impacto na receita dada uma variação no fator de produção. Para obter-la usamos a derivada de $R(x)$ em relação à $x$. 
+\\
+\\
+Mas essa derivada tem um pequeno toque de sofisticação adicional: temos que aplicar, ao mesmo tempo, a regra da multiplicação junto à regra da cadeia.\footnote{A regra da cadeia para $p(y) = p(f(x))$ nos diz que $\frac{d p(y) }{d x} = \frac{d p(y)}{d y} \frac{d y}{d x} $.}
+
+$$ PRM_x = \frac{d R(x)}{d x} = p(y)f'(x) + f(x)p'(y)f'(x) $$
+$$ = [p(y) + p'(y)y]f'(x) $$
+$$ = RM_y \times PM_x $$
+\\
+Ou seja, o impacto na receita de uma variação do fator de produção é igual à receita marginal da produção vezes o produto marginal do fator. O que faz todo sentido.\footnote{Se não faz sentido, para um pouquinho e pensa um pouco. Apenas ler sem compreender é perda de tempo. Mas passar horas tentando entender é muito produtivo!}
+\\
+\\
+Podemos ir um pouco mais fundo e trazermos de volta a nossa expressão da receita marginal desenvolvida na seção de maximização de lucro do capítulo 25. $RM(y) = p(y) \left[ 1 - 1/|\epsilon| \right]$.
+
+$$ \frac{d R(x)}{d x} = p(y) \left[ 1 - \frac{1}{|\epsilon|} \right] PM_x $$
+\\
+\textit{Voilá}! Agora temos uma generalização do caso competitivo estudado no capítulo 20. 
+\\
+\\
+Uma vez que, na competição perfeita, a elasticidade é infinita. Isso implica no fato que o produto da receita marginal será dado pelo preço de mercado (que é igual à receita marginal) vezes o produto marginal do fator de produção, ou seja, $p PM_x$. O professor chamou de \textbf{valor do produto marginal} essa multiplicação entre o preço de mercado e o produto marginal do fator.
+
+$$ \textrm{Competição Perfeita: } PRM_x = p PM_x $$
+
+Mas no caso do monopólio, a receita marginal não é igual ao preço. Como já sabemos, o monopolista maximiza seu lucro num ponto onde a elasticidade é maior que 1. Isso significa que $\left( 1 - \frac{1}{|\epsilon|} \right) \leq 1 $. Ou seja, no caso do monopólio, o produto da receita marginal será, no máximo, igual ao valor do produto marginal.
+
+$$ \textrm{Monopólio: } PRM_x = p \left[ 1 - \frac{1}{|\epsilon|} \right] PM_x \leq pPM_x $$
+\\
+Se a demanda não for perfeitamente elástica. Para o caso do monopolista, seu $PRM_x$ será estritamente menor que o da empresa de competição perfeita. Isso quer dizer que o resultado na receita do emprego de um fator adicional de produção será menor para o monopolista se comparado a uma empresa competitiva.
+\\
+\\
+O motivo disso é que o monopolista interfere no preço de equilíbrio do mercado ao produzir mais unidades. Ao chegar no ponto onde a demanda é elástica, o resultado na receita será cada vez menor. Já no caso da empresa competitiva, não importa quantos produtos ela produza, o preço de mercado sempre será o mesmo.
+\\
+\\
+Não é difícil perceber, então, que o monopolista possui menos incentivo à utilizar determinada quantidade de insumo na sua produção. O que está plenamente de acordo com nossa análise do ponto de maximização do lucro do monopolista, feita nos capítulos anteriores. Vimos que o equilíbrio acontecerá num ponto onde a quantidade maximizadora de lucro é inferior ao caso competitivo.
+\\
+\\
+Podemos saber \textbf{quanto} será demandado por cada empresa no mercado de fatores de produção?. Não é difícil supor que será a quantidade que iguala o produto da receita marginal ao custo marginal desse fator.
+\\
+\\
+Se o mercado de fatores é competitivo, uma empresa operando em um mercado igualmente competitivo poderá demandar a quantidade de insumos que desejar ($x_c$) a um preço constante $w$. A quantidade empregada de insumo será:
+
+$$ \textrm{Competição Perfeita: } PRM_{x_c} = pPM(x_c) = w $$
+
+Já o caso monopolista é um pouco diferente. Ele ainda demandará a quantidade que iguale o seu produto da receita marginal, mas esse ponto não será igual ao valor do produto marginal.
+
+$$ \textrm{Monopólio: } PRM(x_m) = w $$
+
+Essa figura abaixo demonstra essa relação. A curva de demanda por fatores de produção do monopolista quase sempre será mais inclinada que a do caso competitivo. Ou seja, $x_m \leq x_c$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap27_1-demanda_fatores.png}
+\end{figure}
+
+\section{O Monopsônio}
+
+O livro constrói um cenário onde temos um mercado competitivo de fatores, um único comprador e um mercado de produtos competitivo.
+\\
+\\
+Para simplificar, vamos supor que a empresa usa apenas um único fator de produção. Sua função de produção será dada por $y = f(x)$.  A análise de comportamento do monopsônio é parecida com a do monopólio, só que ao invés de impactar o mercado pela oferta de bens, o poder de mercado é exercido pela compra. A quantidade de fator comprado, impactará no preço pago por ele.
+\\
+\\
+Para expandir o modelo, vamos criar uma função de oferta inversa $w(x)$ onde o preço pago pelo insumo será determinado pela quantidade demandada pelo nosso único comprador (chamado de \textbf{monopsonista}). É razoável supor que $\frac{d w(x)}{d x} > 0$.
+\\
+\\
+Como na imagem da seção acima, num mercado de fatores competitivo, a curva de oferta de fatores é plana. Ou seja, não importando a quantidade demanda, o custo será sempre o mesmo. Já no caso de um único comprador, a curva de oferta de fatores será inclinada positivamente. Como o professor resume perfeitamente: "Uma empresa num mercado de fatores competitivo é uma \textbf{tomadora de preços}. Um monopsionista é um \textbf{fixador de preços}".
+\\
+\\
+A maximização de lucro do monoposionista será:
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $x$}} \ \ \stackrel{pf(x) - w(x)x}{\ }$ \\
+\end{center}
+
+Ou seja, temos que encontrar a quantidade de insumo - $x$ - que permita maximizar a diferença entre a receita total - $p f(x)$ - e o custo total - $w(x)x$. A condição de primeira ordem desse problema será:
+
+$$ pf'(x) - [ w(x) + w'(x)x ] = 0 $$
+$$ pf'(x) = w(x) + w'(x)x $$
+$$ \underbrace{pPM_x}_{\textrm{PRM}} = \ \underbrace{w(x) + w'(x)x}_{\textrm{Custo Marginal}} $$
+\\
+Como supomos no início do nosso caso, o mercado do produto é competitivo. Isso quer dizer que a receita marginal será igual a $pPM_x$ (que é a mesma coisa que $pf'(x)$). Mas obter o custo marginal não será tão simples quanto antes.
+\\
+\\
+Quando a firma compra uma pequena quantidade ($x$) do fator de produção, ela deve pagar o preço desse fator vezes a quantidade ($wx$). Contudo, nesse caso, o preço será afetado exatamente na quantidade demanda ($w'(x)x$). O valor final pago é a soma dessas duas ações. Podemos desenvolver essa lógica exatamente como desenvolvemos a receita do monopolista na seção 25.1.
+
+\newpage
+
+$$ \Delta c = w \Delta x + x \Delta w $$
+$$ \frac{\Delta c}{\Delta x} = w + x \frac{\Delta w}{\Delta x} $$
+$$ = w \left[ 1 + \frac{x}{w} \frac{\Delta w}{\Delta x} \right] $$
+$$ = w \left[1 + \frac{1}{\eta} \right] $$
+\\
+Onde $\eta$\footnote{O nome dessa letra grega é eta.} representa a elasticidade da oferta. Como a inclinação a curva de oferta é positiva, $\eta$ será maior que zero. Se a elasticidade da oferta for perfeita, $eta$ será infinito. O que implica, por sua vez, no caso da competição perfeita onde o custo marginal seria igual a $w$. Quaisquer outro valor da elasticidade, produzirá uma curva de oferta não plana.
+
+\subsection{Monopsônio com Oferta Linear}
+
+Para aplicar a teoria precisamos dar alguma forma funcional a nossa curva de oferta do fator de produção. No livro, o professor trabalha com uma oferta linear da seguinte forma:
+
+$$ w(x) = a + bx $$
+\\
+O custo total da produção será dado por:
+
+$$ C(x) = w(x)x = ax + bx^2 $$
+\\
+O custo marginal do fator é obtido pela derivada da função custo total em relação ao fator $x$.
+
+$$ CMa_x(x) = a + 2bx $$
+\\
+Graficamente, a quantidade do insumo demandado será igual ao ponto onde o $PRM = pPM$ é igual ao custo marginal da aquisição do insumo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap27_2-demanda_fatores_monopsonio.png}
+\end{figure}
+
+Se o custo marginal for maior que o retorno da receita oriunda do emprego desse fator, o monopsionista não terá o incentivo à utilização do mesmo. Caso o contrário, valerá a pena usar um pouco mais do insumo. O ponto onde não há incentivo a mudança é justamente onde o custo marginal é igual à receita marginal.
+\\
+\\
+Assim como no caso do monopolista, a quantidade demanda será o ponto menor do que se o mercado fosse competitivo. No cenário de competição, a quantidade demandada seria o ponto onde a oferta reversa se equivalesse ao retorno do emprego do insumo (medido pelo $PRM$). Só que nesse caso, a ineficiência acontece no mercado de fatores e não no de produção.
+\\
+\\
+\textbf{Comentário:} Veja o exemplo sobre o salário mínimo que o professor colocou no livro. Você deve ser capaz de entendê-lo sem tanto sofrimento. A conclusão de que no mercado de trabalho controlado por um monopsionista, um salário mínimo pode aumentar o nível de emprego é bem interessante.
+
+\section{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+Nós só observamos dois tipos de concorrência imperfeita. Mas os exemplos acima são apenas um dos múltiplos arranjos que podem acontecer na realidade. O professor não achou serventia em ter que modelar todas as cominações possíveis, e eu não vou fazer isso também. O importante é saber como modelar o comportamento do monopolista (ou do monopsionista) seja no mercado de fatores ou no mercado de produção.
+\\
+\\
+Mesmo não querendo modelar todos os arranjos possíveis, ainda veremos uma nova situação: O caso onde um monopolista no mercado de fatores vende para um monopolista no mercado de produção.
+\\
+\\
+O monopolista do mercado de fatores é chamado de \textbf{upstream} ou \textbf{para trás}. Ele vende o insumo $x$ ao preço $k$ e com custo marginal constante $c$. O monopolista do mercado de produto será denominado por \textbf{downstream} ou \textbf{para frente}. Esse segundo usará o insumo $x$ para obter a produção  $y$ via função de produção da forma $f(x) = y$ que será vendida no mercado cuja demanda inversa será $p(y)$. No nosso exemplo a forma funcional dessa demanda será $p(y) = a - by$.
+\\
+\\
+O professor usa uma simplificação bem camarada da função de produção do downstream. Ele supõe que $f(x) = y = x$, ou seja, é como se ele revendesse o produto\footnote{O que torna esse exemplo surpreendentemente válido para diversas ocasiões da vida real.}. Outra simplificação é que o downstream também terá custo marginal igual ao preço pago pelo insumo ($k$) ao upstream.
+\\
+\\
+Teremos que buscar um equilíbrio entre os dois monopolistas. Para isso, vamos começar modelando o caso para o downstream. Ele quer maximizar seu lucro que é dado pelo seguinte problema:
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ p(y)y - ky}{\ }$ \\
+\end{center}
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ [a - by]y - ky}{\ }$ \\
+\end{center}
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ ay - by^2 - ky}{\ }$ \\
+\end{center}
+
+A condição de primeira ordem da última forma é dada por:
+
+$$ \frac{d L(y)}{d y} = a - 2by - k = 0 $$
+$$ a - 2by = k $$
+$$ y = \frac{a - k}{2b} $$
+
+Como a função de produção usada iguala a quantidade de insumo à quantidade de produto. Vemos que ele demandará exatamente a mesma quantidade de fator de produção que a oferta no mercado do produto.
+
+$$ x = \frac{a - k}{2b} $$
+
+\textbf{Comentário:} O importante aqui é perceber que a função de produção do monopolista downstream é usada para derivar a demanda do fator produzido pelo upstream. Perceba que a quantidade demandada de fator depende do preço pago por ele e da demanda no mercado de produto. Tudo bem intuitivo e simples.
+\\
+\\
+Agora temos que modelar o comportamento do upstream. Vamos supor que ele tenha acesso à função demanda de fatores do downstream e queira maximizar seu lucro. A demanda inversa de fatores nada mais é do que a última equação tendo k em função de x:
+
+$$ k(x) = a - 2bx $$
+
+A receita é dada por:
+
+$$ k(x)x = ax - 2bx^2 $$
+
+E a receita marginal por:
+
+$$ RM_x = a - 4bx $$
+
+Igualando a receita marginal ao custo marginal, teremos que:
+
+$$ a - 4bx = c $$
+
+ou seja, o total vendido no mercado pelo monopolista upstream será dado por:
+
+$$ x = \frac{a - c}{4b} $$
+
+Como a função de produção é um pra um, podemos definir que o total produzido no mercado de produto será:
+
+$$ y = \frac{a - c}{4b} $$
+
+Essa é a quantidade da produção que maximiza os lucros do monopolista upstream. Mas lembre-se que ele usa como função de demanda de fatores o resultado do problema de maximização do downstream. Então a solução acaba por gerar um lucro fruto do processo de maximização de ambos os monopolistas.
+\\
+\\
+Se houvesse apenas um monopolista em ambos os mercados (imagine que as duas empresas se fundissem) e os custos de produção dos fatores se mantivessem os mesmos. O problema de maximização seria igualar a receita marginal ($a - 2by$) ao custo do fator ($c$). Isso geraria um volume de produção igual à
+
+$$ y_{int} = \frac{a - c}{2b}$$
+\\
+O monopolista integrado produzirá o dobro que o arranjo com dois monopolistas separados. Mas qual o motivo dessa diferença?
+\\
+\\
+Para entendermos o motivo dessa diferença precisamos lembrar que o monopolista sempre escolherá o ponto que maximiza o seu lucro pela igualdade entre o custo marginal e a receita marginal. A curva de demanda inversa do mercado serve para determinar o preço de equilíbrio que será usado no mercado dada a decisão da quantidade da produção do monopolista.
+\\
+\\
+O caminho usado para encontrarmos o equilíbrio teve uma etapa para cada monopolista:
+\begin{itemize}
+
+\item Primeiro usamos a demanda do mercado de produtos para determinar qual a quantidade o monopolista ofertará (e como essa quantidade é função do preço do fator de produção).
+
+\item Depois, usamos a relação entre a quantidade produzida e os insumos para determinar a demanda inversa do mercado de fatores. Essa demanda é usada pelo monopolista upstream para determinar o seu ponto de maximização.
+
+\end{itemize}
+
+Na prática, o monopolista upstream vai cobrar uma quantidade cujo preço de mercado é superior ao custo marginal. Esse preço será o custo que o monopolista downstream usará para maximizar seu lucro. Contudo, quando as empresas se fundem, o novo custo marginal do monopolista do mercado de produto será exatamente o custo de produção $c$. Nós retiramos de cena o Markup do monopolista upstream.
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Oligopólio}
+
+\begin{chapquote}{The Godfather}
+	``I want you to talk to this movie bigshot and settle this business for Johnny. Now, if there's nothing else, I'd like to go to my daughter's wedding.''
+\end{chapquote}
+
+
+O trabalho de entender os mercados é longo e trabalhoso. Até agora, nós elaboramos as estruturas mais simples e que se encontram nos dois extremos do poder de mercado. De um lado, aprendemos a estrutura onde não existe poder de mercado e as empresas são pequenas concorrentes. Após isso, vimos o que acontece quando temos apenas uma empresa (ou empresas que trabalham como se fossem uma só) e o poder de mercado está todo nas mãos dela.
+\\
+\\
+Agora vamos entrar num cenário um pouco mais realista. Pensemos em uma situação onde temos poucos concorrentes. De um lado, não temos tantos a ponto de ninguém poder manipular seus preços. Do outro, ninguém é grande o suficiente para ignorar o comportamento dos seus concorrentes. Esse arranjo é denominado de \textbf{Oligipólio}.
+\\
+\\
+Nós já tangenciamos esse assunto quando vimos o modelo de concorrência monopolística no capítulo 25. Esse arranjo também é um tipo de oligopólio. Nessa configuração, as variáveis mais importantes são o custo de entrada (pela regra do custo médio) e nas estratégias de diferenciações entre os produtos (seja a de convergência ou a de diferenciação).
+\\
+\\
+Aqui vamos estudar arranjos com um número ainda menor de concorrentes. Como dito anteriormente, a medida que aprimoramos o nosso modelo, as características únicas de cada mercado se tornam cada vez mais relevantes. Aqui só vamos conseguir ver regras gerais de resultados possíveis, bem como, algumas variáveis importantes para monitorarmos.
+\\
+\\
+Vamos partir da estrutura de competição de apenas duas empresas: o \textbf{Duopólio}\footnote{Alguns exemplos em que podemos aproximar esse modelo: PS4 x Xbox, Iphone x Samsung, Coca-Cola x Pepsi, Apple x Microsoft.}. Outra limitação que imporemos é a de que os produtos são idênticos. Essas limitações nos livram de notações complexas com várias competidores e a utilização do poder de mercado oriundo da diferenciação. Nosso foco são as \textbf{interações estratégicas}.\footnote{Se você quiser ver modelos mais próximos da realidade, vai ter que encarar um mestrado e um doutorado.}
+
+\section{A Escolha de Uma Estratégia}
+
+Em um arranjo de dois competidores, temos que desenvolver um modelo que consiga equilibrar 4 variáveis:
+
+\begin{itemize}
+\item Preço da Empresa 1
+\item Preço da Empresa 2
+\item Quantidade da Empresa 1
+\item Quantidade da Empresa 2
+\end{itemize}
+
+Na hora de tomar uma decisão sobre o preço e a quantidade, uma empresa pode, ou não, ter acesso as escolhas feitas pelo seu concorrente. Chamaremos de \textbf{líder} toda empresa que decidir seu \textbf{preço} ou \textbf{quantidade} antes da outra. A empresa que decidirá após a informação da decisão da empresa líder será chamada de \textbf{seguidora}. As interações desse tipo são chamadas de \textbf{jogos sequenciais}.\footnote{Começamos a chegar mais perto da teoria dos jogos.}
+\\
+\\
+Quando as duas empresas decidem sem ter acesso a informação do adversário, elas precisam supor o que ele fará. Esse arranjo é denominado \textbf{jogo simultâneo}.
+\\
+\\
+Com esses dois conceitos, podemos ter 4 tipos de interações estratégicas:
+
+\begin{itemize}
+\item Liderança de Preço
+\item Liderança de Quantidade
+\item Preço Simultâneo
+\item Quantidade Simultânea
+\end{itemize}
+
+Analisaremos cada tipo de interação estratégica que surge com cada tipo de esquema. Mas não pararemos ai. Uma opção possível de estratégia é a de negociação entre as empresas para formação de um \textbf{conluio}. Esse tipo de esquema é chamado de \textbf{jogo cooperativo}.
+\\
+\\
+\textbf{Comentário:} Leia o exemplo da estratégia de "cobrimos o preço da concorrência"\ e a partir de agora, você nunca mais lerá essas ofertas com os mesmos olhos.
+
+\section{Liderança de Quantidade}
+
+O modelo desenvolvido nessa seção é creditado ao economista alemão Heinrich von Stackelberg. Seu livro \textit{Marktform und Gleichgewicht} foi publicado em 1934.\footnote{Eu recomendo dar uma olhada na bibliografia dos gigantes que desenvolveram as teorias ao longo desse livro.}.
+\\
+\\
+Vamos supor que temos uma empresa líder na quantidade. Como é de se esperar, ela fixará sua produção em $y_1$ unidades. A empresa seguidora, de posse da informação de $y_1$ e da demanda inversa do mercado, escolherá seu nível de produção em $y_2$. A demanda inversa do mercado será em função do total de produtos $p(Y) = p(y_1 + y_2)$.
+\\
+\\
+Como a empresa líder decidirá sua quantidade de modo a maximizar seus lucros? Certamente ela terá que supor como a empresa seguidora agirá. Não seria nada estranho que ela tivesse a hipótese que a empresa seguidora queira maximizar seus lucros também . Desse modo, a empresa líder terá que endogenizar o problema da maximização do lucro da empresa seguidora.
+
+\subsection{O Problema da Empresa Seguidora}
+
+O problema da maximização da empresa seguidora é:
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_2$}} \ \ \stackrel{p(y_1 + y_2)y_2 - c_2(y_2)}{\ }$ \\
+\end{center}
+
+Já conhecemos esse tipo de problema muito bem. Queremos encontrar o ponto onde a receita marginal será igual ao custo marginal.
+
+$$ RM_2 + CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 + \frac{dc_2(y_2)}{y_2} = 0  $$
+
+ou, na notação de derivadas de Lagrange
+
+$$ RM_2 + CMa_2 = p(y_1 + y_2) + p'(y_1 + y_2)y_2 + c'(y_2) = 0  $$
+
+A novidade aqui é que temos que levar em consideração a quantidade $y_1$ para encontrar nosso $y_2$. Isso quer dizer que 
+
+$$y_2 = f_2(y_1)$$
+
+Nós conseguimos obter essa função isolando nosso termo $y_2$ no problema de maximização acima. Essa função tem o nome de \textbf{função de reação} e nos diz qual quantidade será produzida pela empresa seguidora ao ser conhecida a quantidade da empresa líder.
+\\
+\\
+Para prosseguirmos vamos ter que definir uma forma funcional à nossa função de demanda inversa. Faremos para o caso linear onde $p(y_1 + y_2) = a - b(y_1 + y_2)$. Também adotaremos o custo igual a zero para facilitar a matemática da coisa.
+
+$$\textrm{Função Lucro 2: } \pi_2(y_1,y_2) = p(y_1 + y_2)y_2$$
+$$ = [a - b(y_1 + y_2)]y_2 = ay_2 - by_1 y_2 - by_2^2 $$
+
+Com a função de lucro e a de reação, conseguimos ver a relação entre essas duas funções. Na imagem abaixo podemos ver que a curva de reação sempre atravessa as curvas de isolucro no ponto onde temos o maior valor de $y_2$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_parcial.png}
+\end{figure}
+
+\subsection{O Problema da Empresa Líder}
+
+Já aprendemos a parte do modelo que trata da quantidade de equilíbrio dada a escolha anterior da empresa líder. Agora vamos desenvolver como essa empresa define a sua quantidade de modo a maximizar o seu lucro.
+\\
+\\
+Uma das características desse modelo é que a empresa líder sabe como a outra empresa vai se comportar dada a escolha dela, ou seja, ela conhece $f_2(y_1)$. Diante disso, o problema da maximização dela está sujeita a essa restrição.
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2)y_1 - c_1(y_1)}{\ }$ \\
+\small de modo que \normalsize $y_2 = f_2(y_1)$
+\end{center}
+
+Ou melhor, podemos colocar tudo em função de $y_1$ e obtermos
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p[y_1 + f_2(y_1)]y_1 - c_1(y_1)}{\ }$ \\
+\end{center}
+
+A produção total será definida pela líder sendo que será parte devida a produção direta e a outra parte pela resposta da seguidora ao nível definido da produção, ou seja, $y_1 + f_2(y_1)$. Pela equação da demanda inversa linear, temos que a função de reação da empresa seguidora é
+
+$$ f_2(y_1) = y_2 = \frac{a - by_1}{2b}$$
+
+A função lucro é dada pela receita menos os custos (que no nosso exemplo é zero)
+
+$$ \textrm{Função Lucro 1: } \pi(y_1,y_2) = [a - b(y_1 + y_2)]y_1 = ay_1 -by_1^2 - by_1y_2 $$
+
+Colocando a função de reação dentro da função de lucro teremos
+
+$$ = ay_1 -by_1^2 - by_1f(y_1)$$
+$$ = ay_1 -by_1^2 - by_1\frac{a - by_1}{2b}$$
+$$ = ay_1 -by_1^2 - \frac{\cancel{b}y_1a}{2\cancel{b}} + \frac{\cancel{b}*b(y_1)^2}{2\cancel{b}}$$
+$$= ay_1 -by_1^2 - \frac{ay_1}{2} + \frac{by_1^2}{2}$$
+$$ \pi(y_1,y_2) = \frac{a}{2}y_1 - \frac{b}{2}y_1^2$$
+
+Para encontrarmos a quantidade ótima basta derivar a função lucro em função de $y_1$ e igualar a zero. O que nos dará 
+
+$$ y_1^* = \frac{a}{2b} $$
+
+Desse modo, podemos encontrar facilmente a produção de equilíbrio da empresa seguidora.
+
+$$ y_2^* = \frac{a - by_1}{2b} $$
+$$ y_2^* = \frac{a - b(a/2b)}{2b} $$
+$$ y_2^* = \frac{a - ab/2b}{2b} $$
+$$ y_2^* = \frac{2ab/2b - ab/2b}{2b} $$
+$$ y_2^* = \left( \frac{2ab}{2b} - \frac{ab}{2b} \right) \frac{1}{2b} $$
+$$ y_2^* = \left( \frac{\cancel{2}a\cancel{b}}{\cancel{2b}} - \frac{a\cancel{b}}{2\cancel{b}} \right) \frac{1}{2b} $$
+$$ y_2^* = \left( a - \frac{a}{2} \right) \frac{1}{2b}$$
+$$ y_2^* = \frac{a}{4b} $$
+
+Por fim, podemos ter a quantidade total do mercado pela soma de $y_1^* + y_2^* = \frac{3a}{4b}$. Agora que temos a função de lucro da empresa 1, podemos acrescentar as curvas de isolucro para vermos a solução gráfica da álgebra que acabamos de desenvolver.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_completo.png}
+\end{figure}
+
+Se você colocar as quantidades de equilíbrio nas equações de lucro, chegará nos valores de lucro para cada empresa desse modelo. O ponto de Equilíbrio de Stackelberg acontecerá onde a curva de reação tangencia a maior curva de isolucro da empresa líder. No exemplo da imagem eu usei para a função da demanda inversa linear um $a = 100$ e um $b = 2$.
+
+\section{Liderança do Preço}
+
+Outra forma de um jogo sequencial acontecer entre duas empresas é pela definição do preço pela empresa líder. Similarmente ao que vimos na seção anterior, a empresa líder precisa levar em consideração o que a empresa seguidora fará.
+
+\subsection{O Problema da Seguidora}
+No mercado competitivo, o preço é dado e as empresas maximizam seus lucros pela igualdade entre a a receita marginal (que é justamente o preço) e o custo marginal. Por sorte, o problema da empresa seguidora é bem parecido com esse. Ela recebe o preço definido pela líder e maximiza seu lucro.
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_2$}} \ \ \stackrel{py_2 - c_2(y_2)}{\ }$ \\
+\end{center}
+
+A oferta da empresa seguidora será a quantidade que iguala o preço definido pela líder ao custo marginal.
+
+\subsection{O Problema da Líder}
+
+A empresa líder, sabendo a função de oferta da empresa seguidora, vai trabalhar com a diferença entre a Demanda do mercado e a demanda da empresa seguidora, ou seja, $R(p) = D(p) - S(p)$. O nome dessa curva de demanda reduzida é \textbf{curva de demanda residual}.
+\\
+\\
+Supondo um custo de produção constante $c$. A função de lucro da empresa líder é dada por
+
+$$ \textrm{Função Lucro 1: } \pi_1(p) = R(p)p - R(p)c = (p - c)R(p)  $$
+
+A maximização dessa empresa acontece onde a receita marginal (que nesse caso é oriunda da demanda residual) é igual ao custo marginal. 
+\\
+\\
+A partir de agora temos que definir uma forma funcional para a nossa curva de demanda, como sempre, vamos optar pelo caso mais simples, $D(p) = a - bp$. Também vamos definir as funções custo para a seguidora $c_2(y_2) = y_2^2/2$ e para a líder $c_1(y_1) = cy_1$.
+\\
+\\
+Isso nos diz que a condição de maximização da empresa seguidora será a derivada da função lucro igual a zero.
+
+$$ \frac{d L(y_2)}{y_2} = p - \frac{2y_2}{2} = 0 $$
+$$ = p - y_2 = 0 $$
+$$ = p = y_2 $$
+
+Ou seja, nossa função de oferta da seguidora será $S(p) = p$. De posse dessa informação, podemos descobrir a equação da demanda residual da empresa líder pela subtração da curva de demanda pela oferta da seguidora.
+
+$$ R(p) = D(p) - S(p) = a - bp - p = a - (b + 1)p $$
+
+Agora é só maximizar o lucro pela igualdade entre a receita marginal e o custo marginal e verificar na curva de demanda inversa o volume de produção e o preço. A demanda inversa é obtida isolando $p$ da demanda residual.
+
+$$ p(y_1) = \frac{a}{b+1}-\frac{1}{b+1}y_1 $$
+
+A receita da empresa líder é obtida pela multiplicação de $p(y_1)$ por $y_1$. A receita marginal é a derivada dessa função em relação a $y_1$.
+
+$$ Receita_1: \left[ \frac{a}{b+1} - \frac{1}{b+1}y_1 \right] y_1 $$
+$$ = \frac{a}{b+1}y_1 - \frac{1}{b+1}y_1^2 $$
+
+A receita marginal será
+
+$$ RMa_2 = \frac{a}{b+1} - \frac{2}{b+1}y_1 $$
+
+O nosso custo foi definido como $c_1(y_1) = cy_1$, logo, o custo marginal é igual a $c$\footnote{A essa altura do campeonato você não tem mais dúvida nessas derivadas triviais né?!}.
+\\
+\\
+Portanto, nosso problema de maximização será dado pela equação
+
+$$ \frac{a}{b+1} - \frac{2}{b+1}y_1 = c $$
+$$ - \frac{2}{b+1}y_1 = c - \frac{a}{b+1} $$
+$$ \frac{2}{b+1}y_1 = \frac{a}{b+1} - c $$
+$$ \frac{2}{b+1}y_1 = \frac{a}{b+1} - \frac{c(b+1)}{b+1} $$
+$$ \frac{2}{\cancel{b+1}}y_1 = \frac{c(b+1)}{\cancel{b+1}} $$
+$$ 2y_1 = c(b+1) $$
+$$ y_1^* = \frac{c(b+1)}{2} $$
+
+Na imagem abaixo, nós podemos ver as variáveis interagindo. A oferta total será a soma das quantidades de ambas empresas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_3-lideranca_preco.png}
+\end{figure}
+
+\section{Comparação entre as Lideranças de Preço e Quantidade}
+
+Esse seção do livro é bem explicativa. Vá ler o material original.
+
+\section{Estabelecimento Simultâneo da Quantidade}
+
+Não raramente, as empresas não ficam se comunicando entre si para informar seus concorrentes a respeito de suas decisões . Nesses cenários, as empresas precisam supor o que suas concorrentes farão. Esse modelo é chamado de \textbf{Modelo de Cournot} e é um modelo de jogo simultâneo onde as empresas definem suas quantidades produzidas e vendidas no mercado.
+\\
+\\
+Como de costume, suporemos que as empresas queiram maximizar seus lucros. Pensemos no caso da empresa 1. A quantidade total do mercado será dada por $Y = y_1 + y_2^e$, onde $y_2^e$ é a quantidade prevista da empresa 2. O preço de equilíbrio do mercado será dado pela equação de demanda inversa $p(Y) = p(y_1 + y_2^e)$.
+\\
+\\
+O problema de maximização do lucro será
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2^e)y_1 - c(y_1)}{\ }$ \\
+\end{center}
+
+Não é difícil ver que quaisquer expectativa da produção da sua concorrente mudará o ponto de produção que maximizaria o lucro. Desse modo, podemos ver que existe uma relação entre essa expectativa e a produção, de modo mais formal, $y_1 = f(y_2^e)$.
+\\
+\\
+Mas, espera um pouco, a gente já viu algo bem parecido um pouco mais acima. Essa é a \textbf{curva de reação} da empresa, a diferença é que aqui a empresa 1 não é mais a líder e essa reação se refere a \textit{expectativa} da produção. Mas o tratamento matemático é o mesmo.\footnote{Para a nossa sorte!}
+\\
+\\
+Similarmente, a empresa 2 se depara com a mesma situação.
+
+$$y_2 = f(y_1^e)$$
+
+Como ambas maximizações são funções de expectativas, é muito mais provável que as empresas não acertem exatamente o volume de produção da sua concorrente. O equilíbrio de Cournot é dado pelo sistemas de equações
+
+$$ y_1^* = f_1(y_2^*) $$
+$$ y_2^* = f_2(y_1^*) $$
+
+Nessa solução, nenhuma das empresas terá incentivos em mudar seu nível de produção.
+
+\section{Exemplo do Equilíbrio de Cournot}
+
+Se reutilizarmos o exemplo na liderança da quantidade (com custo zero e demanda linear) obteremos as mesmas funções de reação que a empresa 2 tinha naquele modelo.
+
+$$ y_1 = \frac{a - by_2^e}{2b} $$
+
+e
+
+$$ y_2 = \frac{a - by_1^e}{2b} $$
+
+O ponto de equilíbrio acontece onde $y_1 = y_2$, ou seja, onde as curvas de reação são iguais. Nesse ponto, $y_1^e = y_1$ e $y_2^e = y_2$. Só precisamos substituir dentro desse sistema de equações do seguinte modo
+
+$$ y_1 = \frac{a - by_2^e}{2b} $$
+$$ y_1 = \frac{a - by_2}{2b} $$
+$$ y_1 = \frac{a - b(\frac{a - by_1}{2b})}{2b} $$
+$$ y_1 = \frac{a - (\frac{ab - b^2y_1)}{2b})}{2b} $$
+$$ y_1 = \frac{\frac{2ba}{2b} - (\frac{ab - b^2y_1)}{2b})}{2b} $$
+$$ y_1 = \frac{2ba - ab + b^2y_1}{2b}\frac{1}{2b} $$
+$$ y_1 = \frac{2ba - ab + b^2y_1}{4b}\frac{1}{b} $$
+$$ y_1 = \frac{2\cancel{b}a - a\cancel{b} + b^{\cancel{2}}y_1}{4\cancel{b}}\frac{1}{b} $$
+$$ y_1 = \frac{2a - a + by_1}{4b} $$
+$$ 4by_1 - by_1 = a $$
+$$ 3by_1 = a $$
+$$ y_1^* = \frac{a}{3b} = y_2^* $$
+
+Com essas funções e as equações de lucro podemos ver graficamente o equilíbrio de Cournot onde as curvas de reação se equivalem.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_6-modelo_cournot.png}
+\end{figure}
+
+\section{Ajustamento para o Equilíbrio}
+
+Seria muita boa vontade supor que, na vida real, as empresas conseguissem acertar na mosca o nível de produção dos seus concorrentes. Mas o nosso modelo é forte o suficiente para um processo de ajustamento em caso de (prováveis) palpites equivocados no nível de produção.
+\\
+\\
+Imaginemos que as empresas suponham que a produção do seu concorrente será uma quantidade qualquer diferente do equilíbrio. Para facilitar, vamos supor que a cesta inicial produzida esteja em cima da curva de reação da empresa 2. A cesta inicial será igual à lista $(y_1^t,y_2^t)$.
+\\
+\\
+Essa cesta está na curva de reação da empresa 2, logo, essa empresa não terá incentivo a fazer nenhuma mudança. Mas para a empresa 1, a situação é outra, ela quer reduzir sua produção para aumentar seus lucros.
+\\
+\\
+Isso faz com que a cesta do mercado se desloque para a curva de reação da empresa 1. Mas agora, quem está insatisfeito é a empresa 2. Ela fara um reajuste, só que agora, usará a nova produção da empresa 1 para definir sua oferta.
+\\
+\\
+Esse processo fica se realimentando até um ponto onde elas estão satisfeitas. Esse é justamente o ponto de equilíbrio de Cournot!
+\\
+\\
+A imagem abaixo mostra esse caminho. Mas eu também transformei ela em um gif animado (e bem humorado) para ilustrar o caminho até o equilíbrio.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_7-ajustamento.png}
+\end{figure}
+
+\section{Várias Empresas no Equilíbrio de Cournot}
+
+\section{Fixação Simultânea de Preços}
+
+\section{Conluio}
+
+\section{Estratégias Punitivas}
+
+\section{Comparação das Soluções}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Teoria dos Jogos}

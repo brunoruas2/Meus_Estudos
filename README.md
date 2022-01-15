@@ -2,6 +2,9 @@
  Meu caderno público de anotações
 
 # Projetos em Andamento
+## Desafios Intelectuais Pessoais
+- [ ] Demonstrar, com base no artigo do Hotelling, que o padrão de convergência aparece para 4+ players (cap 27.10)
+
 ## Microeconomia - Versão de Graduação
 ### Resumo de Livro: Microeconomia: Uma Abordagem Moderna - Hal R. Varian
 - [x] Preparativos
@@ -37,8 +40,8 @@
     - [ ] Oferta da Indústria
 - [ ] Mercados e Preços
     - [x] Monopólio
-    - [ ] O Comportamento do Monipolista
-    - [ ] O Mercado de Fatores
+    - [x] O Comportamento do Monipolista
+    - [x] O Mercado de Fatores
     - [ ] O Oligopólio
     - [ ] A Teoria dos Jogos
     - [ ] Aplicações da Teoria dos Jogos
