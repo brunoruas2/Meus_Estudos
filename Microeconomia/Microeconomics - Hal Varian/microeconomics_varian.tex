@@ -388,14 +388,14 @@ A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(
 \addcontentsline{toc}{chapter}{Programação}
 
 \begin{chapquote}{The Godfather}
-	``I don’t like violence, Tom. I’m a businessman. Blood is a big expense.''.
+	``I don’t like violence, Tom. I’m a businessman. Blood is a big expense''.
 \end{chapquote}
 
 
 Caro aluno, com o avanço do poder computacional e da disponibilidade de dados, os economistas não ficaram de fora da revolução tecnológica. Além de todo o arcabouço teórico, matemático, estatístico, histórico e social que você está adquirindo na sua formação, a programação se tornou uma ferramenta indispensável para o processo de análise moderna e merece ser objeto do seu estudo\footnote{Pode até ser que você não tenha alguma matéria de programação na sua grade curricular, mas não se engane, mesmo que seu curso não esteja cobrando, vá estudar por conta própria.}.
 \\
 \\
-Ao longo do livro eu vou construir alguns programas em Python para simular os modelos que a gente for construindo. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, cada código será disponibilizado em dois links. O primeiro é referente ao repositório no github e o segundo é referente a um notebook no google colab onde você pode executar o modelo sem precisar instalar nada no seu computador.
+Ao longo do livro eu vou construir alguns programas em Python para simular os modelos que a gente for construindo. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, os modelos usados ao longo dos capítulos vão estar disponíveis aqui por meio de links do meu repositório do github. Meu objetivo aqui é mostrar para vocês que a programação ajuda muito no estudo da Economia.
 
 \section*{Capítulo 25 - Monopólio}
 \addcontentsline{toc}{section}{Capítulo 25 - Monopólio}
@@ -405,10 +405,6 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \ \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
 
 \subsection*{Demanda Elasticidade Constante e Monopólio (25.3)}
@@ -416,12 +412,7 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.3-demanda_ces_e_monopolio.py}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
-
 
 \section*{Capítulo 26 - Comportamento do Monopolista}
 \addcontentsline{toc}{section}{Capítulo 26 - Comportamento do Monopolista}
@@ -431,10 +422,6 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/varian_26.5_vinculacao_produtos.ipynb}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://drive.google.com/file/d/10zbnTsvdiLaHEYt3q8ShhJlkW7q1QVzG/view?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
 
 \subsection*{Vinculação de Produtos (26.5)}
@@ -442,11 +429,8 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/varian_26.5_vinculacao_produtos.ipynb}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://drive.google.com/file/d/1WhxGaAhUB9dKkgrKWadihIrzS4cm3bXP/view?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Escolha e Teoria do Consumidor}
@@ -3348,13 +3332,31 @@ $$\frac{\partial L}{\partial x_A^2} = \frac{\partial u_A}{\partial x_A^2} - \mu_
 $$\frac{\partial L}{\partial x_B^1} = -\lambda \frac{\partial u_B}{\partial x_B^1} - \mu_1 = 0 $$
 $$\frac{\partial L}{\partial x_B^2} = -\lambda \frac{\partial u_B}{\partial x_B^2} - \mu_2 = 0 $$
 
-Eu não sei você, mas quando eu olhei essa passagem, eu fiquei com dúvida porque lá no capítulo 05 ele deriva a Lagrangiana em relação ao lambda. A questão é que nós não precisamos fazer isso. Se não nos atrapalhar que as soluções de maximização sejam funções dos multiplicadores de Lagrange, podemos manter as condições de primeira ordem apenas para as variáveis que queremos.
+Eu não sei você, mas quando eu olhei essa passagem, eu fiquei com dúvida porque lá no capítulo 05 ele deriva a Lagrangiana em relação ao lambda também. A questão é que nós não precisamos fazer isso obrigatoriamente. Se não nos atrapalhar que as soluções de maximização sejam funções dos multiplicadores de Lagrange, podemos manter as condições de primeira ordem apenas para as variáveis que queremos.\footnote{Eu queria explicar melhor, mas eu preciso que você tenha feito o dever de casa se está nessa parte do curso. Não dá pra ter dúvidas sobre isso nessa altura do campeonato.}
 \\
 \\
-Relembrando o conceito de Taxa Margina de Substituição, podemos ver que 
+Lá no capítulo sobre as preferências, nós aprendemos que a taxa marginal de substituição é obtida quando, dada uma função de utilidade $u(x_1,x_2)$, a derivada parcial de $u$ em função de $x_{1}$ divida pela derivada parcial de $u$ em relação à $x_{2}$. Ou seja
 
-$$TMS_A$$
+$$TMS_{A} = \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
 
+Que é o que obtemos quando dividimos a primeira equação pela segunda.
+\\
+\\
+Se fizermos a mesma coisa para as equações 3 e 4, teremos
+
+$$TMS_{B} = \frac{\partial u_A / \partial x_{B}^1 }{\partial u_A / \partial x_{B}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+
+A explicação desse igualdade já é conhecida: no equilíbrio, as taxas marginais de substituição são iguais para os dois mercados.
+\\
+\\
+Também sabemos que, no equilíbrio de um mercado competitivo, as TMS são iguais aos preços, ou seja
+
+$$	\frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\partial u_A / \partial x_{B}^1 }{\partial u_A / \partial x_{B}^2} = \frac{ p_{1} }{ p_{2} } $$
+
+Observe que temos uma equivalência entre os multiplicadores de Lagrange $\mu$ e os preços. Eles até têm nomes especiais, nesse contexto, podem ser chamamos de \textbf{preços-sombra} ou \textbf{preços de eficiência}.
+\\
+\\
+Esse igualdade decorre do fato que toda alocação eficiente de Pareto deve satisfazer as igualdades das TMS em relação aos multiplicadores de Lagrange. E, por outro lado, todo equilíbrio em mercado competitivo, deve igualar a taxa marginal de substituição pela divisão dos preços.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Produção}
