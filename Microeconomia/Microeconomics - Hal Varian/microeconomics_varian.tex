@@ -28,6 +28,10 @@
 \usepackage{graphicx} % to set a images directory
 \usepackage{caption} % to supress numbering in figures
 \usepackage{float} % to make a figure stay when i whant
+\usepackage{sgame} % to make payoff matrixes
+\usepackage{qtree} % to make tree diagrams
+
+\usepackage[shortrightarrow]{stmaryrd} % shortarrow
 
 \graphicspath{{./images/}} % set an default images folder
 
@@ -384,14 +388,14 @@ A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(
 \addcontentsline{toc}{chapter}{Programação}
 
 \begin{chapquote}{The Godfather}
-	``I don’t like violence, Tom. I’m a businessman. Blood is a big expense.''.
+	``I don’t like violence, Tom. I’m a businessman. Blood is a big expense''.
 \end{chapquote}
 
 
 Caro aluno, com o avanço do poder computacional e da disponibilidade de dados, os economistas não ficaram de fora da revolução tecnológica. Além de todo o arcabouço teórico, matemático, estatístico, histórico e social que você está adquirindo na sua formação, a programação se tornou uma ferramenta indispensável para o processo de análise moderna e merece ser objeto do seu estudo\footnote{Pode até ser que você não tenha alguma matéria de programação na sua grade curricular, mas não se engane, mesmo que seu curso não esteja cobrando, vá estudar por conta própria.}.
 \\
 \\
-Ao longo do livro eu vou construir alguns programas em Python para simular os modelos que a gente for construindo. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, cada código será disponibilizado em dois links. O primeiro é referente ao repositório no github e o segundo é referente a um notebook no google colab onde você pode executar o modelo sem precisar instalar nada no seu computador.
+Ao longo do livro eu vou construir alguns programas em Python para simular os modelos que a gente for construindo. Não faz parte do escopo desse livro ensinar como fazer isso. Contudo, os modelos usados ao longo dos capítulos vão estar disponíveis aqui por meio de links do meu repositório do github. Meu objetivo aqui é mostrar para vocês que a programação ajuda muito no estudo da Economia.
 
 \section*{Capítulo 25 - Monopólio}
 \addcontentsline{toc}{section}{Capítulo 25 - Monopólio}
@@ -401,10 +405,6 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.2-demanda_linear_e_monopolio.py}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \ \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
 
 \subsection*{Demanda Elasticidade Constante e Monopólio (25.3)}
@@ -412,12 +412,7 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/cap25.3-demanda_ces_e_monopolio.py}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://colab.research.google.com/drive/1MRJb9DZ7n_Hz2Kp9ng8K7pOcb1DTy_u5?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
-
 
 \section*{Capítulo 26 - Comportamento do Monopolista}
 \addcontentsline{toc}{section}{Capítulo 26 - Comportamento do Monopolista}
@@ -427,10 +422,6 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/varian_26.5_vinculacao_produtos.ipynb}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://drive.google.com/file/d/10zbnTsvdiLaHEYt3q8ShhJlkW7q1QVzG/view?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
 
 \subsection*{Vinculação de Produtos (26.5)}
@@ -438,11 +429,8 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 
 \begin{center}
 \href{https://github.com/brunoruas2/Meus_Estudos/blob/main/Microeconomia/Microeconomics\%20-\%20Hal\%20Varian/models/varian_26.5_vinculacao_produtos.ipynb}{\includegraphics[scale=0.03]{_github_logo.png} \ Código no Github \includegraphics[scale=0.03]{_github_logo.png}}
-\\
-\ 
-\\
-\href{https://drive.google.com/file/d/1WhxGaAhUB9dKkgrKWadihIrzS4cm3bXP/view?usp=sharing}{\includegraphics[scale=0.08]{_colab_logo.png} Simulação no Google Colab \includegraphics[scale=0.08]{_colab_logo.png}}
 \end{center}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Teoria da Escolha e Teoria do Consumidor}
@@ -1702,7 +1690,7 @@ Com essas funções e as equações de lucro podemos ver graficamente o equilíb
 Seria muita boa vontade supor que, na vida real, as empresas conseguissem acertar na mosca o nível de produção dos seus concorrentes. Mas o nosso modelo é forte o suficiente para um processo de ajustamento em caso de (prováveis) palpites equivocados no nível de produção.
 \\
 \\
-Imaginemos que as empresas suponham que a produção do seu concorrente será uma quantidade qualquer diferente do equilíbrio. Para facilitar, vamos supor que a cesta inicial produzida esteja em cima da curva de reação da empresa 2. A cesta inicial será igual à lista $(y_1^t,y_2^t)$.
+Imaginemos que as empresas suponham que a produção do seu concorrente será uma quantidade qualquer diferente do equilíbrio. Para facilitar, vamos supor que a cesta inicial produzida esteja em cima da curva de reação da empresa 2. A cesta inicial, que chamamos no gráfico de $Cesta(t)$ será igual à lista $(y_1^t,y_2^t)$.
 \\
 \\
 Essa cesta está na curva de reação da empresa 2, logo, essa empresa não terá incentivo a fazer nenhuma mudança. Mas para a empresa 1, a situação é outra, ela quer reduzir sua produção para aumentar seus lucros.
@@ -1711,31 +1699,984 @@ Essa cesta está na curva de reação da empresa 2, logo, essa empresa não ter�
 Isso faz com que a cesta do mercado se desloque para a curva de reação da empresa 1. Mas agora, quem está insatisfeito é a empresa 2. Ela fara um reajuste, só que agora, usará a nova produção da empresa 1 para definir sua oferta.
 \\
 \\
-Esse processo fica se realimentando até um ponto onde elas estão satisfeitas. Esse é justamente o ponto de equilíbrio de Cournot!
+Esse processo fica se realimentando até um ponto onde elas estão satisfeitas. Nós já vimos agora a pouco que esse ponto é justamente o equilíbrio do modelo de Cournout.
 \\
 \\
-A imagem abaixo mostra esse caminho. Mas eu também transformei ela em um gif animado (e bem humorado) para ilustrar o caminho até o equilíbrio.
+A imagem abaixo mostra esse caminho. Mas eu também transformei ela em um gif animado\footnote{Com alguma dose de bom humor.} para ilustrar o caminho até o equilíbrio.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.75]{cap28_7-ajustamento.png}
 \end{figure}
 
+Essa propriedade de convergência ao ponto de equilíbrio é o que caracteriza esse modelo como um modelo de \textbf{equilíbrio estátvel}. Embora o processo descrito aqui seja bem resumido e simplificado devido o escopo do nosso curso.
+
 \section{Várias Empresas no Equilíbrio de Cournot}
+
+Além de fornecer um modelo para um duopólio, podemos ajustar o modelo de Cournot para $n$ empresas competidoras. A oferta total da indústria será dada por $Y = y_1 + y_2 + \dots + y_{n-1} + y_n$. Desse modo o problema da maximização da empresa será dado pela igualdade entre a receita marginal e o seu custo marginal do seguinte modo
+
+$$ p(Y) + \frac{\delta p}{\delta Y} y_i = CMa(y_i) $$
+$$ p(Y) + \frac{\delta p}{\delta Y} \frac{Y}{Y} \frac{p(Y)}{p(Y)} y_i = CMa(y_i) $$
+$$ p(Y) \left[1 + \frac{\delta p}{\delta Y} \frac{Y}{p(Y)} \frac{y_i}{Y} \right] = CMa(y_i) $$
+
+Definindo $s_i = \frac{y_i}{Y}$ como a participação da empresa no total do mercado.
+
+$$ p(Y) \left[1 + \frac{\delta p}{\delta Y} \frac{Y}{p(Y)} s_i \right] = CMa(y_i) $$
+
+O termo $p(Y)$ é a curva de demanda. Então, se lembrarmos da fórmula da elasticidade, podemos ver que o termo $\frac{\delta p}{\delta Y} \frac{Y}{p(y)}$ é justamente o inverso da elasticidade $\frac{1}{\epsilon(Y)}$
+
+$$ p(Y) \left[1 + \frac{s_i}{\epsilon(Y)} \right] = CMa(y_i) $$
+
+Como a elasticidade de demanda é negativa
+
+$$ p(Y) \left[1 - \frac{s_i}{|\epsilon(Y)|} \right] = CMa(y_i) $$
+
+O professor faz uma transformação que, para alguns, pode parecer estranha. Mas a lógica é essa (se tiver difícil de ver, dá um zoom):
+
+$$ \frac{1}{\frac{\epsilon(Y)}{s_i}} = \frac{\frac{1}{1}}{\frac{\epsilon(Y)}{s_i}} = \frac{1}{1} \frac{s_i}{\epsilon(Y)} = \frac{s_i}{\epsilon(Y)} $$
+
+Com essa transformação, chegamos em
+
+$$ p(Y) \left[1 - 1/\frac{|\epsilon(Y)|}{s_i} \right] = CMa(y_i) $$
+
+Essa solução é bem parecida com a maximização do monopolista. A principal diferença é esse termo $s_i$ dividindo a elasticidade. Como $s_i = y_i/Y$ ele será $0 \leq s_i \leq 1$. No caso monopolista, sabemos que $s_i = 1$. No outro extremo, se $lim (s_i) \rightarrow 0$, a empresa terá elasticidade infinita como as empresas da competição perfeita.  
+\\
+\\
+Para as empresas não monopolísticas e com algum poder de mercado, podemos entender esse termo como a elasticidade da demanda da empresa. Quanto maior $s_i$ menor será a elasticidade da demanda da empresa.
+\\
+\\
+Isso nos mostra que, em um mercado competitivo, temos um equilíbrio de Cournot. As empresas estarão maximizando seus lucros sem incentivo em mudar seu nível de produção.
 
 \section{Fixação Simultânea de Preços}
 
-\section{Conluio}
+Da mesma maneira que conseguimos desenvolver um modelo para quantidade e preço em jogos sequenciais, podemos fazê-lo para os jogos simultâneos. Já aprendemos nessa última seção como as empresas definem as quantidades produzidas de modo a maximizar seus lucros sem que haja uma empresa líder no processo.
+\\
+\\
+Acontece que, em algum momento do século XIX, um matemático francês de nome Joseph Bertrand, ao ler o livro do Cournot, desenvolveu um modelo simultâneo de equilíbrio de preços. Esse modelo ficou conhecido como \textbf{concorrência de Bertrand}.
+\\
+\\
+Assim como fizemos com Cournot, estamos na busca do par de preços que permitam ambas as empresas maximizar seus lucros. Para isso, temos que seguir algumas regras que já fazem parte dos modelos usados até o momento ao longo de todo o livro:
+
+\begin{itemize}
+\item O preço não poderá ser maior que o custo marginal. Porque as empresas aumentariam seus lucros simplesmente produzindo menos.
+\item Se o preço for maior que o custo marginal, todas as empresas terão um incentivo de reduzir seu preço para "roubar"\ os clientes das concorrentes e ainda auferir lucros positivos.
+\end{itemize}
+
+O segundo ponto funciona de maneira recursiva. Se uma empresa reduz seu preço em $10\%$ abaixo dos preços das suas concorrentes, ela ganhará parte do mercado. As concorrentes terão o incentivo em reduzir mais ainda seus preços até o ponto onde não poderão mais reduzir (determinado pelo custo marginal).
+
+\section{Conluio}	
+
+Até agora, todas as soluções envolveram processos de competição entre as empresas. Contudo, não seria nem um pouco alheio à realidade supor que algumas empresas queiram operar de modo coordenado. Esse arranjo é chamado de \textbf{Cartel} e é crime em vários países.
+\\
+\\
+Você já sabe, desde o capítulo 25, que um cartel não passa de um grupo de empresas se comportando como um monopolista. Diante disso, seu problema de maximização será muito parecido com o modelo do capítulo que tratamos sobre o monopólio.
+\\
+\\
+O problema da maximização para um cartel de duas empresas será dado por
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $y_1,y_2$}} \ \ \stackrel{p(y_1+y_2)[y_1 + y_2] - c_1(y_1) - c_2(y_2)}{\ }$ \\
+\end{center}
+
+Cujas condições de primeira ordem serão
+
+$$p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}[y_1^* + y_2^*] = CMa_1(y_1^*)$$
+$$p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}[y_1^* + y_2^*] = CMa_2(y_2^*)$$
+
+Podemos ver que, quando uma empresa decide expandir sua produção, receberá uma quantia oriunda da venda dos seus produtos, contudo, essa oferta adicional reduzirá o preço de equilíbrio do mercado (o que reduz o lucro recebido). A novidade aqui é que essa redução do preço impactará também na outra empresa do cartel.
+\\
+\\
+O que as duas equações anteriores nos dizem é que as quantidades produzidas (e ofertadas no mercado) serão as que igualem seus custos marginais $CMa_1(y_1^*) = CMa_2(y_2^*)$. 
+\\
+\\
+Agora temos um fator interessante para pensarmos. Se uma empresa possuir uma estrutura de custos que permita produzir mais com o mesmo custo marginal que sua empresa companheira, ela obterá uma maior parte dos lucros do mercado. Uma vez que sua produção será maior.
+
+\subsection{O problema da `Desonestidade'}
+
+Será que as empresas que operam em um cartel possuem algum incentivo em "trapacear"\ a sua empresa parceita?\footnote{Nessas situações cabe o didato popular: "Ladrão que rouba ladrão tem ..."}
+\\
+\\
+Vejamos o que acontece com a empresa 1 do nosso cartel, caso ela aumente a sua produção em $\delta y_1$ unidades. Podemos mensurar esse impacto pela derivada parcial da função lucro do cartal em relação a $y_1$
+
+$$ \frac{\partial \pi_1}{\partial y_1} = p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* - CMa_1(y_1^*) $$ 
+
+A condição de maximização do cartel nos diz que
+
+$$ p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* + \frac{\delta p}{\delta Y}y_2^* - CMa_1(y_1^*) = 0 $$ 
+
+Apenas isolando o termo referente à produção da empresa, temos então
+
+$$ p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* - CMa_1(y_1^*) = - \frac{\delta p}{\delta Y}y_2^* $$ 
+
+Como $\delta p / \delta Y$ é negativo, então o termo da esquerda da última equação é positivo. Ou seja, a empresa 1 consegue aumentar seus lucros positivamente ao aumentar sua produção para além do ponto de equilíbrio do cartel.
+\\
+\\
+Aqui mora o problema de longo prazo dos carteis. Na solução de maximização do lucro conjunto, existe um incentivo para cada empresa aumentar sua produção, visto que, se a outra empresa mantiver fixa a sua produção, sempre será lucrativo um aumento unilateral da quantidade produzida.
+\\
+\\
+Agora, se houver desconfiança entre as empresas, fica mais difícil ainda manter a coalizão. Se as empresas esperam que a outra irá aumentar sua produção, elas terão um incentivo adicional em agir antes da outra e aproveitar os lucros positivos oriundos do aumento da produção.
+\\
+\\
+Para exemplificar, vamos pegar uma demanda linear do tipo $p(Y) = a - b(y_1 + y_2)$ e supormos um custo marginal igual a $0$. A equação do lucro será dada por 
+
+$$\pi(y_1,y_2) = p(Y)(y_1 + y_2) = [a - b(y_1 + y_2)](y_1 + y_2) = a(y_1 + y_2) - b(y_1 + y_2)^2$$
+
+A condição de primeira ordem desse problema é dada pela derivada dessa função em relação a $(y_1 + y_2)$. O que nos dá
+
+$$a - 2b(y_1 + y_2) = 0$$
+$$y_1^* + y_2^* = \frac{a}{2b}$$
+
+O gráfico abaixo ilustra exatamente esse situação para $a = 100, b = 2$ e os custos de produção fixos em $10$. Veja como temos 3 pontos onde as curvas de isolucro se tocam. Esses pontos ocorrem na reta de maximização do lucro dada pela equação acima.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap28_10-cartel.png}
+\end{figure}
+
+Todas as soluções de maximização do lucro acontecem nas tangências das curvas de isolucro que ocorrem na reta de maximização.
 
 \section{Estratégias Punitivas}
 
+Já aprendemos o motivo dos carteis terem alguma dificuldade de se manter estáveis devido os incentivos que as empresas têm de aumentar suas produções. Para superar essa dificuldade, os carteis precisam de medidas para punir quaisquer comportamentos que venham "burlar" o ponto de maximização do lucro da coalizão.
+\\
+\\
+Uma maneira possível é pensar que, em um duopólio, uma das empresas ameace a outra que produzirá permanentemente o nível de produção de Cournot (ou seja, um ponto na curva de reação). Essa estratégia é chamada de \textbf{estratégia de punição}.
+\\
+\\
+Para sabermos se essa punição seria forte o suficiente para mitigar o risco de trapaça, precisamos comparar o que aconteceria com o lucro das empresas nos dois casos. Na coalizão, o lucro $\pi_m$ é dado pela equação de maximização da seção passada. Já no equilíbrio de Cournot, as empresas produzirão o ponto de equilíbrio que produzirá o lucro $\pi_c$.
+\\
+\\
+Os lucros obtidos pelo cartel são maiores porque fazem uso do poder de mercado do monopólio (via markup do custo marginal). Enquanto na solução de Cournot, as quantidades são definidas pela maximização das empresas via ajuste competitivo. Isso implica em lucros menores no segundo modelo se comparados aos lucros do primeiro, ou seja, $\pi_m > \pi_c$.
+\\
+\\
+Se uma empresa do duopólio decidir furar a regra da cota de produção, terá lucros positivos de $\pi_d > \pi_m$. As empresas do monopólio possuem um incentivo de realizar esses lucros via aumento unilateral da produção.
+\\
+\\
+Ao produzir a quantidade do cartel, cada empresa aufere um fluxo constante de lucro $\pi_m$. O valor presente desse fluxo de lucros a partir de hoje é dado por
+$$ \textrm{Valor Presente Cartel = } \pi_m + \displaystyle \sum^{\infty}_{i = 1} \frac{\pi_m}{(1 + r)^i} = \pi_m + \pi_m \displaystyle \sum^{\infty}_{i = 1} \frac{1}{(1 + r)^i} $$
+
+Definindo $\displaystyle \sum^{\infty}_{i = 1} \frac{1}{(1 + r)^i}$ como $1/r$. Podemos resumir a equação acima como está no livro
+
+$$ \textrm{Valor Presente Cartel = } \pi_m + \frac{\pi_m}{r} $$
+
+Enquanto o valor presente da empresa que decida fraudar o cartel e recebe o equilíbrio de Cournot como resultado
+
+$$ \textrm{Valor Presente Trapaça = } \pi_d + \frac{\pi_c}{r} $$
+
+Quando valerá a pena trapacear e quando será melhor se manter fiel ao cartel? Não é difícil ver que se o valor presente do cartel for maior que o valor presente da trapaça, será melhor continuar cumprindo o acordo do cartel, ou seja, o cartel será a melhor opção se
+
+$$ \pi_m + \frac{\pi_m}{r} > \pi_d + \frac{\pi_c}{r} $$
+
+Isolando o termo de desconto $r$, temos
+
+$$ r < \frac{\pi_m - \pi_c}{\pi_d - \pi_m} $$
+
+Já sabemos que $\pi_m - \pi_c > 0$ porque o lucro do cartel é maior que o lucro do equilíbrio de Cournot. Também sabemos que $\pi_d - \pi_m > 0$ porque o lucro da trapaça é superior ao do cartel. Então o termo da direito da desigualdade é a proporção entre a o prejuízo da punição pelo ganho da trapaça.
+\\
+\\
+Se a taxa de desconto for menor que essa proporção, valerá a pena trapacear. Caso contrário, será melhor ficar no conluio.
+\\
+\\
+Esse modelo até consegue propor uma maneira de controle do cartel, mas a noção de uma punição perpétua é um tanto quanto forçada na vida real. Veremos modelos mais realistas no decorrer do nosso curso.
+
+\textbf{Comentário:} No livro temos dois exemplos sobre o assunto. O primeiro é sobre como a política de "cobrimos qualquer preço"\ pode ser usada para espionar as empresas do conluio.  O segundo é sobre como as montadoras de carros japoneses usaram o governo para reduzir sua produção e elevar os preços dos carros exportados para os EUA.\footnote{Esse segundo é muito interessante mesmo.}
+
 \section{Comparação das Soluções}
+
+Esse última seção é um apanhado do que vimos no capítulo. Vá ler o material original.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Teoria dos Jogos}
 
+Parabéns! Você chegou no ponto da teoria que usaremos um dos ferramentais mais famosos da matemática aplicada. No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.\footnote{Sim, foi aqui que John Nash fez sua famosa contribuição que foi retratada naquele filme ganhador do Óscar "Uma mente brilhante". Agora você pode dizer para os seus familiares que estudou essa teoria ;)
+}
+
+\section{A Matriz de Ganhos de um Jogo}
+
+Como no nosso estudo sobre os oligopólios, vamos manter nosso horizonte de jogadores restrito a apenas dois e limitaremos o número de estratégias a um número finito. Assim conseguimos representar os ganhos em uma \textbf{matriz de ganhos}. 
+\\
+\\
+Como todo ferramental novo, temos que aprender a lógica do modelo. Para isso, o professor usa um exemplo com dois jogadores com duas estratégias para cada. O jogador $A$ possui duas opções de ação: $Alto$ e $Baixo$. Enquanto o outro possui, o jogador $B$, possui outras duas estratégias possíveis: $Esquerda$ e $Direita$. Os retornos para cada jogada estão expostos nessa matriz de ganhos abaixo. Os retornos do jogador $A$ estão a esquerda de cada célula, enquanto $B$ obterá os valores da direita.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $1,2$         & $0,1$       \\
+$Baixo$ & $2,1$         & $1,0$
+\end{game}
+
+\end{center}
+
+O que cada jogador fará? Bom, a primeira coisa que precisamos fazer é comparar os resultados de cada interação entre as estratégias possíveis. Se o jogado $B$ escolhe a opção $Esquerda$, será melhor o jogador $A$ escolher a opção $Baixo$, pois o retorno será o dobro. Se $B$, por outro lado, escolher $Direita$, ainda será melhor para $A$ escolher a estratégia $Baixo$ visto que o retorno será de $1$ ao invés de $0$. Percebeu que, independente do que $B$ faça, sempre será vantajoso para $A$ escolher $Baixo$?
+\\
+\\
+Agora dá uma olhada na matriz e me diz qual será a estratégia de $B$. Eu espero, vai lá.
+\\
+\\
+Muito bem! Para o jogador $B$, sempre será melhor escolher $Esquerda$.
+\\
+\\
+Como há uma lógica dominante para as escolhas de ambos os jogadores, então, nesse jogo em questão, existe o que chamamos de \textbf{estratégia dominante}.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\highlight#1{\colorbox{yellow}{#1}}
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $1,2$         & $0,1$       \\
+$Baixo$ & \highlight{$2,1$}         & $1,0$
+\end{game}
+
+\end{center}
+
+Eu sei, muito legal né?! Mas como sempre, existem muitas situações que não podemos contar com as existências de estratégias dominantes. E foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos na seção seguinte.
+
+\section{Equilíbrio de Nash}
+
+Analise o seguinte jogo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $2,1$         & $0,0$       \\
+$Baixo$ & $0,0$         & $1,2$
+\end{game}
+
+\end{center}
+
+Percebeu que nesse arranjo não temos nenhuma estratégia dominante? O que cada jogador fará, depende da escolha do outro jogador. Um \textbf{equilíbrio de Nash} é criado sempre que a escolha de um jogador for $ótima$ dada a escolha do outro jogador. Note que um equilíbrio de estratégia dominante também é um equilíbrio de Nash mas não necessariamente o contrário.
+\\
+\\
+No exemplo acima, o quadrante "esquerda e alto"\ é um equilíbrio de Nash. Uma vez que seja revelado aos participantes que eles estão nesse quadrante, nenhum deles terá o incentivo em mudar de estratégia. Para $A$ jogar $Baixo$ é pior, assim como para $B$, jogar $Direita$ é pior.
+\\
+\\
+Podemos reconstruir o modelo de Cournot usando essa mesma lógica. Na verdade, o equilíbrio de Nash é a generalização do equilíbrio de Cournot\footnote{Eu sei, mindblowing.}. Voltaremos à essa afirmação um pouco mais pra frente.
+\\
+\\
+Mas nem tudo são flores. O conceito do equilíbrio de Nash possui algumas dificuldades. No jogo que usamos como exemplo, podemos ver que o quadrante $Baixo$ e $Direita$ também é um equilíbrio de Nash.  Ou seja, podem haver múltiplos equilíbrios de Nash em um mesmo jogo.
+\\
+\\
+Outra dificuldade é que existem jogos em que não existam nenhum equilíbrio de Nash sequer. Veja o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+        & $Esquerda$    & $Direita$ \\
+$Alto$  & $0,0$         & $0,-1$       \\
+$Baixo$ & $1,0$         & $-1,3$
+\end{game}
+
+\end{center}
+
+Nesse jogo, em todos os quadrante existirá o incentivo para algum jogador de mudar de estratégia. E também não existe nenhuma estratégia dominante.
+
+\section{Estratégias Mistas}
+
+Até agora, todos os jogos que vimos foram jogos de \textbf{estratégia pura}. Onde os jogadores definem um caminho e sempre agem do mesmo modo. De modo mais formal, podemos usar a definição dada no livro de pós-graduação do Varian (Microeconomic Analysis, 1993)\footnote{Só para vocês irem se animando para o mestrado.}.
+\\
+\\
+\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualqer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
+\\
+\\
+Mas podemos ampliar nossa forma de pensar e permitir que os jogadores atribuam probabilidades para cada escolha e possam mudar de estratégia ao longo do tempo. Nesse modelo, um jogador pode ficar 50\% do tempo em uma estratégia e mudar de estratégia nos outros 50\% do tempo. Auferindo o retorno de ambas multiplicado pela probabilidade associada a ela. Esse modelo é chamado de \textbf{estratégia mista}.
+\\
+\\
+No nosso jogo em questão, se cada jogador tiver a probabilidade de 50\% para cada estratégia, terão como retorno $1/4$ do valor resultante de cada quadrante. Ou seja, o jogado $A$ teria um total de $0$, enquanto o jogado $B$ terminaria o jogo com $1/2$.
+\\
+\\
+O equilíbrio de Nash em estratégias mistas é o equilíbrio na \textbf{escolhas das probabilidades} de cada agente. Ou seja, ao invés de escolher entre uma ou outra, ele escolherá quantos porcento de cada estratégia será utilizado. 
+\\
+\\
+No livro, o professor afirma que pode ser mostrado que, se o jogador $A$ escolhe $3/4$ de alto e $1/4$ de baixo enquanto $B$ jogar $1/2$ para esquerda e direita, teremos um equilíbrio de Nash. Pois bem, vamos mostrar isso.
+\\
+\\
+Vamos pegar esse jogo e simular todos os retornos para cada escolha de probabilidades. Lembre-se que, se a probabilidade de $A$ escolher $alto$ for de $10\%$, então, $baixo$ terá obrigatoriamente de ter a probabilidade igual a $90\%$. Os retornos de $A$ são essa escala avermelhada enquanto os retornos de $B$ são a escala azulada.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap29_3-estrategias_mistas.png}
+\end{figure}
+
+Como o professor afirma no livro. O ponto do equilíbrio de Nash acontece onde $B$ escolhe $50\%$ para cada e $A$ escolhe $75\%$ para $alto$ e $25\%$ para $baixo$. Quando $B$ escolhe esse ponto, todos os retornos de $A$ se tornam constantes (veja que a linha de $A$ é uma reta horizontal nesse ponto). Similarmente, quando $A$ escolhe esse ponto, todos os retornos de $B$ se tornam constantes. Como nenhum deles tem nenhum incentivo em mudar de estratégia nesse equilíbrio, temos um equilíbrio de Nash para estratégias mistas.\footnote{Eu sei, lindo demais, né?!}
+\\
+\\
+\textbf{Comentário:} Aqui o professor coloca um exemplo muito bom sobre a relação entre teoria dos jogos e o jogo de pedra, papel e tesoura. Vale a pena a leitura.
+
+\section{O Dilema do Prisioneiro}
+
+Um dos conceitos mais conhecidos na economia é o dilema do prisioneiro. Chegou a sua hora de conhecê-lo. Primeiro, considere o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+            & $Confessa$      & $Nega$ \\
+$Confessa$  & $-3,-3$         & $0,-6$ \\
+$Nega$      & $-6,0$          & $-1,-1$
+\end{game}
+
+\end{center}
+
+A essa altura você já notou que esse jogo possui uma estratégia dominante: confessar. Independente do que cada jogador faça, sempre vai ser melhor confessar. Mas aqui temos uma contradição. Se eles optassem por não seguir a estratégia dominante, acabariam em situação melhor.
+\\
+\\
+Como a opção "nega-nega"\ não pode ser modificada sem prejuízo para alguma das parte, ela é eficiente no sentido de Pareto. Ou seja, estamos diante de um arranjo que impede que alcancemos o ótimo de Pareto do sistema.
+\\
+\\
+Podemos adaptar esse dilema para várias outras situações da vida real. O professor cita uma adaptação para "instalar" ou "não instalar"\ um míssil. Também adapta esse jogo para a situação do cartel em que há as opões de "burlar" e "não burlar"\ as cotas de produção.
+\\
+\\
+Como é de se esperar, o dilema do prisioneiro trouxe bastante discussão a respeito de como resolver esse jogo. Parece que a solução está relacionada à possibilidade ou não de repetição. Se o jogo é sem repetição, melhor será confessar. Pois essa é a estratégia dominante do arranjo.
+
+\section{Jogos Repetidos}
+
+Acabamos de falar sobre como a possibilidade de repetição pode modificar os resultados de um jogo. Dentro de um jogo repetido temos dois tipos: jogos de número fixo e jogos indefinidos.
+\\
+\\
+Um jogo repetido pode permitir coordenações entre os jogadores. É possível "punir"\ um jogador que decida optar por um ponto egoísta e com isso, criar o incentivo à cooperação. No caso de um jogo com repetição fixa, é muito provável que os jogadores seguirão a estratégia dominante na última rodada, visto que não serão punidos pela outra parte. Acontece que essa lógica é refletida nas outras rodadas. Se você já sabe que o jogador será egoísta na última rodada, o que impede de ele repetir esse ato na penúltima, e na antepenúltima e assim por diante? Se não houver uma garantia de cooperação na última rodada, a maior chance é que o jogo siga na estratégia dominante.
+\\
+\\
+Esse padrão não é mantido em um jogo indefinido. Como sempre haverá uma oportunidade de punir os comportamentos não cooperativos, a tendência é que os jogadores sigam para o equilíbrio de Pareto.
+\\
+\\
+\textbf{Comentário:} Não está demarcado como exemplo, mas na página 744 o professor cita como o pesquisador Robert Axelrod fez um torneio computacional com vários algoritmos de estratégias em uma simulação do dilema do prisioneiro. A estratégia que performou melhor foi a que usou o "olho por olho". Leia a passagem no livro.
+
+\section{Manutenção de um Cartel}
+
+Nessa seção revisitamos o problema da manutenção do cartel, mas sob a ótica da teoria dos jogos. Na prática, esse problema pode ser modelo em termos de um dilema do prisioneiro onde seguir as cotas é igual ao ponto de cooperação e vender a custo competitivo (o ponto de Bertrand) é o equivalente a confessar e, portanto, é o equivalente ao equilíbrio de Nash.
+\\
+\\
+\textbf{Comentário:} Depois ele cita o caso do Comitê Executivo Conjunto, que era um cartel gigante nos EUA no final do século XIX. Logo após ele coloca outro exemplo aplicando a teoria dos jogos ao problema de formação de preços das passagens aéreas. Vá ler o livro.
+
+\section{Jogos Sequenciais}
+
+Lá no capítulo do oligopólio nós vimos outros arranjos além dos jogos simultâneos. O modelo de Stackelberg é um exemplo de um jogo onde as ações são alternadas entre os jogadores. Nesses casos, além da matriz de ganhos, nós podemos usar a \textbf{forma extensiva do jogo} para ilustrar as etapas de escolhas e os devidos retornos de cada uma delas.
+\\
+\\
+Observe o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+            & $Esquerda$     & $Direita$ \\
+$Alto$      & $1,9$          & $1,9$ \\
+$Baixo$     & $0,0$          & $2,1$
+\end{game}
+
+\end{center}
+
+Se pensarmos nesse jogos como um jogo sequencial onde $A$ toma a primeira ação, podemos demonstrar o processo de decisão por meio do diagrama de árvore abaixo\footnote{Eu sei, eu sei. No livro está na horizontal. Mas o que importa é o conteúdo.}
+
+\Tree[.\textit{Jogador A} 
+				[.Alto 
+					[.\textit{Jogador B}
+						[.Esquerda (1,9) ]
+						[.Direita (1,9) ]]]
+				[.Baixo 
+					[.\textit{Jogador B}
+						[.Esquerda (0,0) ]
+						[.Direita (2,1) ]]]]
+\\
+\ 
+\\
+Em uma primeira olhada na matriz de ganhos, poderíamos pensar que o jogo tínhamos dois equilíbrios de Nash. Mas quando colocamos o diagrama de árvore (ou a forma extensiva) podemos ver que o jogador $A$ tem como estratégia escolher $baixo$, pois assim, terá o retorno de $2$ ao invés de $1$. O jogador $B$ só tem a opção de escolher dentro das opções de $baixo$, o que lhe sobra é a opção $direita$.
+\\
+\\
+Mas $B$ poderia pensar em manerias de obrigar o jogador $A$ a escolher $alto$. Se $B$ ameaçar uma retaliação e escolher $esquerda$, ambos terminariam com $0$. Contudo, $A$ só levaria a sério essa ameaça se houvesse forte indício de cumprimento. Uma maneira seria sinalizar por meio de um terceiro que se comprometesse a agir em desfavor dos dois caso o jogador $A$ optasse por $baixo$. Ou seja, se $B$ conseguir limitar seu escopo de atuação, é possível que a estratégia de $A$ seja modificada porque a matriz de ganhos seria modificada também.
+
+\section{Um jogo com Barreiras à Entrada}
+
+Voltemos no problema da entrada de concorrentes em um mercado monopolizado. Nós vimos que o monopolista possui o poder de retalhar devido a escala mínima de eficiência (EME) e do controle do mercado. Quando uma empresa pondera em entrar no mercado, ela precisa contar com as possíveis consequências por conta do monopolista e, da mesma maneira, o monopolista precisa ponderar se valerá a pena baixar os preços para evitar o concorrente.
+\\
+\\
+Podemos exemplificar essa questão com a matriz abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Entrante][Monopolista]
+                      & $Retalha$      & $\textrm{Não Retalha}$ \\
+$Entra$               & $0,0$          & $2,1$ \\
+$\textrm{Fica Fora}$  & $1,9$          & $1,9$
+\end{game}
+
+\end{center}
+
+
+A primeira vista, temos dois equilíbrios de Nash. Mas esse também é um exemplo de um jogo sequenciado. Quem tem o poder de liderança é a empresa entrante.
+
+\Tree[.\textit{Entrante} 
+				[.\textit{Fica Fora} 
+					[.\textit{Monopolista}
+						[.Retalha (1,9) ]
+						[.\textit{Não Retalha} (1,9) ]]]
+				[.Entra
+					[.\textit{Monopolista}
+						[.Retalha (0,0) ]
+						[.\textit{Não Retalha} (2,1) ]]]]
+\\
+\ 
+\\
+Como podemos ver, a condição de entrada ou não é baseada na promessa de haver ou não retalhação. Esse esquema é igual ao que acabamos de ver na última seção. A estratégia da entrante é optar por concorrer no mercado. O que o monopolista fará? Bom, não existe maneira garantida do monopolista vincular a entrada do novo concorrente com a retaliação. Uma vez que o novo competidor se instalou, não é racional baixar os preços e abrir mão do lucro.
+\\
+\\
+Agora, se o monopolista conseguir modificar sua matriz de ganhos (por meio de investimento na capacidade produtiva) de modo a obter lucro mesmo na retalhação, o cenário será outro. Se a árvore de decisão fosse igual a 
+
+\Tree[.\textit{Entrante} 
+				[.\textit{Fica Fora} 
+					[.\textit{Monopolista}
+						[.Retalha (1,9) ]
+						[.\textit{Não Retalha} (1,9) ]]]
+				[.Entra
+					[.\textit{Monopolista}
+						[.Retalha (0,2) ]
+						[.\textit{Não Retalha} (2,1) ]]]]
+\\
+\ 
+\\
+Seria mais compensador ao monopolista lutar pelo seu mercado do que se acovardar. Nesse novo arranjo, o melhor a fazer é ficar de fora do mercado. O interessante é que o investimento feito na capacidade produtiva ficará ocioso, mas ainda assim, para o monopolista é vantajoso ter essa capacidade de barganha oriunda do excesso de capacidade produtiva.
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Aplicações da Teoria dos Jogos}
+
+Ainda nos ateremos à teoria dos jogos nesse capítulo. Aqui vamos aprender um ferramental novo para analisar os equilíbrios dos jogos, bem como veremos alguns modelos mais avançados de jogos.
+
+\section{Curvas de Melhor Resposta}
+
+Analise o jogo abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $2,1$          & $0,0$ \\
+$Baixo$  & $0,0$          & $1,2$
+\end{game}
+
+\end{center}
+
+Podemos ver que não temos uma estratégia dominante, mas temos dois equilíbrios de Nash. Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
+\\
+\\
+Agora vamos formalizar um pouco mais essas ideias. Seja um jogo com dois jogadores. O jogador linha terá $l_1,l_2,\dots,\l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
+\\
+\\
+Para cada escolha $l$ feita, chamaremos de $b_c(l)$ a melhor escolha para coluna dada a escolha de linha. Da mesma maneira, chamaremos $b_l(c)$ a melhor escolha para linha. Um equilíbrio de Nash será o par de estratégias $(l^*,c^*)$ tal que
+
+\newpage
+
+$$ c^* = b_c(l^*) $$
+$$ l^* = b_l(c^*) $$
+
+Eu já tinha adiantado a formalização lá no ponto 29.3. Mas não custa nada repetir o conceito. Veja com o equilíbrio de Nash é consistente. É um arranjo cuja estratégia de um é precisamente dependente da estratégia do outro, de modo a manter esse ciclo de reforço mútuo.
+\\
+\\
+Já vimos situações onde algum jogador pode ser indiferente ao retorno dada alguma escolha do outro jogador. É o caso onde só é benéfico para um deles, enquanto o outro terá o mesmo resultado independente da escolha. Mas isso não é um problema, os pontos $c^*$ e $l_*$ só precisar ser uma da melhores respostas.\footnote{É o caso dos jogos com mais de um equilíbrio do Nash}. Se existir apenas uma melhor resposta, então poderemos representar o equilíbrio por meio de uma \textbf{função de melhor resposta}.
+\\
+\\
+Os equilíbrios de Cournout e Bertrand são exemplos de jogos com equilíbrios de Nash. No "jogos"\ de definir a quantidade e o preço, as empresas acabam adotando a posição de produzir nos pontos de maximização de lucro, em função do que  esperam que suas concorrentes irão fazer. Isso as leva a produzir exatamente no ponto onde as curvas de reação se encontram e o equilíbrio é reforçado.
+
+\section{Estratégias Mistas}
+
+Voltaremos ao jogo da seção anterior
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $2,1$          & $0,0$ \\
+$Baixo$  & $0,0$          & $1,2$
+\end{game}
+
+\end{center}
+
+Mas dessa vez, nosso interesse é no equilíbrio de estratégias mistas e, também, nos de estratégias puras. Já aprendemos que uma estratégia mista consiste na escolha das probabilidades para cada ação, de modo a obter os retornos proporcionais à cada probabilidade atribuída. Os jogos de estratégia pura podem ser explicados pelo mesmo modelo, só que com probabilidades iguais aos extremos (0\% e 100\%).
+\\
+\\
+Primeiro vamos equacionar os retornos em termos das probabilidades de cada escolha. As probabilidades do jogador $linha$ serão: $l$ para $alto$ e $(1-l)$ para $baixo$. Do mesmo modo, para o jogador $coluna$ teremos: $c$ para $esquerda$ e $(1-c)$ para $direita$.
+\\
+\\
+As probabilidades e os ganhos para o jogador $linha$ para cada combinação serão:
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $lc = 2$       & $l(1-c) = 0$ \\
+$Baixo$  & $(1-l)c = 0$   & $(1-l)(1-c) = 1$
+\end{game}
+
+\end{center}
+
+O resultado do jogador $linha$ é obtido pela soma de cada probabilidades ponderada pelo retorno em cada quadrante. No caso da linha $alto$ temos
+
+$$ \textrm{ganhos linha} = 2lc + 0(l(1-c)) + 0((1-l)c) + (1-l)(1-c) $$
+$$  = 2lc + (1-l)(1-c) $$
+$$  = 2lc + 1 - l - c + lc $$
+
+Chegamos em um lugar bem interessante, temos uma função que relaciona as probabilidades de cada estratégia ($l$, $(1-l)$, $c$ e $(1-c)$) a cada nível de retorno para o jogador $linha$. Podemos ver o quanto uma variação na probabilidade que ele tem controle $\Delta l$ pode trazer de retorno
+
+$$ \frac{d \textrm{ (ganhos linha)}}{d l} = 2c - 1 + c $$
+$$ = 3c - 1 $$
+
+Com esse resultado, podemos ver que, se  $c > 1/3$ qualquer aumento em $l$ gerará um resultado positivo. Por outro lado, se $c < 1/3$ qualquer valor de $l$ positivo terá um retorno negativo (nesse caso, ele escolhe não jogar $alto$). Por fim, se $c = 1/3$, não importa o que o jogador $linha$ faça, seus retornos serão constantes.
+\\
+\\
+De maneira análoga, podemos ver que as probabilidades e os ganhos do jogador $coluna$ são iguais a 
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+         & $Esquerda$     & $Direita$ \\
+$Alto$   & $lc = 1$       & $l(1-c) = 0$ \\
+$Baixo$  & $(1-l)c = 0$   & $(1-l)(1-c) = 2$
+\end{game}
+
+\end{center}
+
+Fazendo a mesma análise a partir desses valores, podemos ver que
+
+$$ \textrm{ganhos coluna} = lc + 0(l(1-c)) + 0((1-l)c) + 2(1-l)(1-c) $$
+$$  = lc + 2(1-l)(1-c) $$
+$$  = lc + 2(1-l-c+lc) $$
+$$  = lc + 2 - 2l - 2c + 2lc $$
+$$  = 3lc + 2 - 2l - 2c $$
+
+Cuja derivada em relação à $c$ será
+
+$$ \frac{d \textrm{ (ganhos coluna)}}{d c} =  $$
+$$ = 3l - 2 $$
+
+Podemos concluir que, quando $l < 2/3$, qualquer ação de $c$ levará a uma redução no seu resultado (esse é o caso onde é melhor não fazer nada de $esquerda$). Se $l > 2/3$, qualquer aumento de $c$ elevará o seu resultado. Finalmente, se $l = 2/3$, qualquer valor de $c$ terá retornos constantes.
+\\
+\\
+Com base nessas informações, podemos construir as curvas de melhor resposta no gráfico abaixo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_2-estrategias_mistas.png}
+\end{figure}
+
+Podemos ver que temos 3 equilíbrios de Nash. Dois em estratégias puras: o ponto $(0,0)$ e o ponto $(1,1)$. E também um equilíbrio em estratégia mista: o ponto $(2/3,1/3)$.
+
+\section{Jogos de Coordenação}
+
+De posse das curvas de melhor resposta, vamos começar a investigar algumas classes de jogos. A primeira que veremos são os \textbf{jogos de coordenação}. Que são jogos onde os ganhos serão maiores se os jogadores decidirem coordenar suas estratégias. A questão é criar os mecanismos que criem os incentivos à essa coordenação.
+
+\subsection{A Batalha dos Sexos}
+
+Imagine que temos dois jovens enamorados. Ambos marcaram que iriam se encontrar no cinema, mas estão sem celular\footnote{O do rapaz foi roubado e o da moça está sem bateria.} e não sabem qual filme o outro verá. O rapaz prefere o filme de ação enquanto a moça prefere o filme de arte. Ambos preferem assistir a algum filme juntos do que não se encontrarem. Podemos traduzir essa estrutura em uma matriz de ganhos
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Rapaz][Moça]
+         & $Ação$     & $Arte$ \\
+$Ação$   & $2,1$      & $0,0$ \\
+$Arte$   & $0,0$       & $1,2$
+\end{game}
+
+\end{center}
+
+Já sabemos que essa matriz produz as curvas de melhor resposta vistas na seção passada. Então esse jogo tem 3 equilíbrios. Nos dois equilíbrios de estratégia pura, teremos as opções: Ambos arriscam se encontrar no filme de Ação, Ambos arriscam se encontrar no filme de Artes. No equilíbrio de estratégia mista, cada um arriscaria no seu filme preferido com $2/3$ de probabilidade\footnote{Outra maneira é pensar que cada um ficaria $2/3$ do tempo na entrada do seu filme preferido}.
+\\
+\\
+Da maneira como está descrito, não tem como a gente saber o resultado dessa história. Se supormos que o rapaz tenha o histórico de ceder as decisões para a moça\footnote{Uma hipótese não muito rara na realidade.}, podemos definir que esse jogo teria um equilíbrio "mais natural"\ que os outros. O termo comumente usado para essa diferenciação dos equilíbrios é \textbf{ponto focal} do jogo.
+
+\subsection{O Dilema do Prisioneiro}
+
+Esse você já deve estar enjoado de ver. Mas agora temos as curvas de melhor resposta para ajudar na nossa análise\footnote{Não que isso vá mudar as conclusões que já temos.}. Sabemos que a estratégia dominante é confessar. Mas também sabemos que a estratégia eficiente no sentido de Pareto é negar.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Jogador A][Jogador B]
+            & $Confessa$      & $Nega$ \\
+$Confessa$  & $-3,-3$         & $0,-6$ \\
+$Nega$      & $-6,0$          & $-1,-1$
+\end{game}
+
+\end{center}
+
+Quando modelamos as funções de melhor resposta. Como já sabemos, a única estratégia de equilíbrio é no ponto "confessa-confessa". No resto da seção não tem muita informação nova. Mas você tem que ler.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_3-jogos_coordenacao_1.png}
+\end{figure}
+
+\subsection{Jogos de Garantia}
+
+Uma coisa bacana da teoria dos jogos, é que podemos aplicar para uma gama enorme de contextos. Pensemos na corrida amarmentista de meados do século XX. Todo mundo sabe que o melhor era optar por não construir mais mísseis nucleares. Mas o custo de ser surpreendido por uma trapaça do outro lado\footnote{"Malditos comunistas!", diriam eles.}. Podemos resumir esse cenário na tabela abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[EUA][URSS]
+            & $Abstém$      & $Constrói$ \\
+$Abstém$    & $4,4$         & $1,3$ \\
+$Constrói$  & $3,1$         & $2,2$
+\end{game}
+
+\end{center}
+
+O gráfico das curvas de melhor resposta é esse aqui.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_3-jogos_coordenacao_2.png}
+\end{figure}
+
+Vemos que, como esse jogo é simultâneo, não temos uma estratégia mista. Nesse caso, só temos os pontos de equilíbrio nos extremos. Se um dos participantes conseguir convencer o outro que se abstém, ele "empurrará"\ o outro jogador para o ponto de equilíbrio da abstenção. A questão toda era como sinalizar de maneira eficiente para o outro jogador e ainda não parecer que está desistindo da corrida.
+
+\subsection{Roleta Russa}
+
+Antigamente, era comum ver, nos \href{https://www.youtube.com/watch?v=u7hZ9jKrwvo}{filmes de adolescentes americanos}\footnote{Nesse link tem uma versão um pouco diferente do jogo, mas a lógica é a mesma. (Embora o carinha tenha roubado ao pular do carro).}, uma prática chamada "roleta russa"\ que consistia em dois veículos um de frente para o outro à uma distância considerável. Os veículos aceleravam em direção ao outro. A ideia é que o motorista mais corajoso não desviaria a trajetória\footnote{A um lista de microeconomia pra essa garotada arranjar o que fazer!}. A matriz de ganhos pode ser definida como
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Linha][Coluna]
+           & $Desvia$    & $Mantém$ \\
+$Desvia$   & $0,0$       & $-1,1$ \\
+$Mantém$   & $1,-1$      & $-2,-2$
+\end{game}
+
+\end{center}
+
+Diferente dos outros jogos, aqui os equilíbrios são nas opções contrárias. Os equilíbrios de Nash de estratégia pura estão nas opções onde eles seguem ações diferentes.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_3-jogos_coordenacao_3.png}
+\end{figure}
+
+Como encontrar um resultado? Bom, a melhor maneira de encontrar um desfecho é pela sinalização de compromisso. Se um dos competidores arrancasse fora o volante, ele jogaria para o outro motorista toda a responsabilidade pelo resultado. Nesse caso, a matriz seria atualizada e seria melhor para o outro motorista sair derrotado do que bater o carro.
+
+\subsection{Como Coordenar?}
+
+Essa seção é bem pequeninha. Vá ler o original. Mas um resumo é que podemos modificar os resultados pela adoção de movimentos sequenciados, repetição ou contratação.
+\\
+\\
+Quando modificamos os jogos da segurança, batalha dos sexos e roleta russa, para jogos sequenciados. Quando um jogado faz o primeiro movimento, o outro terá que maximizar apenas a partir do movimento feito. No caso da roleta russa, isso daria a vitória a um delas. Nos outros jogos, isso levaria ao ponto eficiente de Pareto.
+\\
+\\
+No caso do dilema do prisioneiro, o melhor a fazer seria modificar o jogo para repetição (que permitiria a retalhação por mal comportamento) ou a contratação (que modificaria o resultado da confissão). 
+
+\section{Jogos de Competição}
+
+O contrário do jogo de coordenação é a competição. Você já ouviu falar que "tal coisa é um \textbf{jogo de soma zero}". Bem, esse nome é devido ao fato que o total de ganhos é igual ao as perdas. Os esportes são um bom exemplo desse tipo de arranjo.
+\\
+\\
+Considere essa matriz para pontuação de um pênalti
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Artilheiro][Goleiro]
+             & $Esquerda$    & $Direita$ \\
+$Esquerda$   & $50,-50$      & $80,-80$ \\
+$Direita$    & $90,-90$      & $20,-20$
+\end{game}
+
+\end{center}
+
+Os valores são variáveis porque simbolizam as probabilidades de gol. Como o goleiro quer defender, e o artilheiro quer marcar. Eles farão de tudo para impedir que um saiba de antemão a ação do outro. Esse é um baita exemplo de uma \textbf{estratégia mista}.
+\\
+\\
+Como esse jogo é competitivo, não teremos opções de equilíbrio em estratégia pura cooperativos. Graficamente, isso quer dizer que as curvas de melhor resposta não se encontrarão em nenhum extremo do gráfico.
+\\
+\\
+Quando o artilheiro escolhe chutar para esquerda com prob. igual a $p$. O seu retorno esperado será de $50p + 90(1-p)$ caso o goleiro pule para a esquerda, mas caso o goleiro pule para a direita, seu retorno será de $80p + 20(1-p)$. O artilheiro quer ter o maior retorno possível com seus chutes, enquanto o goleiro quer que seja o menor possível.
+\\
+\\
+Se o artilheiro decidir chutar mais para uma direção, ou optar pela metade em cada, o goleiro utilizará as probabilidades de defesa para fazer sua estratégia de maximização. A única maneira que o artilheiro tem de "obrigar"\ o goleiro a adotar determinada conduta, é optar pelo ponto onde os retornos prováveis serão iguais. Nós conseguimos saber esse ponto pela igualdade das duas curvas de retorno.
+
+$$50p + 90(1-p) = 80p + 20(1-p)$$
+$$70(1-p) = 30p$$
+$$70 - 70p = 30p$$
+$$70 = 100p$$
+$$p = 0,7$$
+
+Ao adotar a estratégia de chutar 70\% das vezes para a esquerda, o artilheiro se coloca em uma situação os retornos esperados são iguais nos acertos ou nos erros. É a melhor estratégia a ser tomada pois, "anula"\ o efeito que o goleiro possa fazer no resultado.
+\\
+\\
+Se fizermos exatamente a mesma abordagem para o goleiro, acabaremos com
+
+$$50q + 80(1-q) = 90q + 20(1-q)$$
+$$60(1-q) = 40q$$
+$$60 - 60q = 40q$$
+$$60 = 100q$$
+$$q = 0,6$$
+
+Esse será o ponto onde o goleiro obterá retornos constantes, independente da escolha do artilheiro.
+\\
+\\
+Agora podemos construir o gráfico com as curvas de melhor resposta. Sabemos que o equilíbrio de Nash acontecerá no ponto $p = 0,7$ e $q = 0,6$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_4-jogos_competitivos.png}
+\end{figure}
+
+\section{Jogos de Coexistência}
+
+Agora veremos a teoria dos jogos em um contexto natural. Imagine que exista uma espécie de cachorro selvagem. Se dois animais encontram um pedaço de comida, eles têm de decidir entre brigar ou dividir. O nome dessa interação é \textbf{jogo de pombos e falcões}\footnote{Ficou curioso com o nome né? Essa eu deixo pra você pesquisar por conta própria.}. A matriz dos ganhos está abaixo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Animal linha][Animal coluna]
+           & $Lutar$    & $Dividir$ \\
+$Lutar$    & $-2,-2$    & $4,0$ \\
+$Dividir$  & $0,4$      & $2,2$
+\end{game}
+
+\end{center}
+
+Esse caso é muito interessante. Veja que nenhum dos quadrantes iguais é estável. Se ambos lutarem, é melhor abrir mão do que sair ferido. Se ambos dividirem, é melhor atacar para ficar com tudo.
+\\
+\\
+Aqui vai uma adaptação interessantíssima dessa teoria. Ao invés de pensarmos em apenas dois animais com escolhas variáveis ao longo do tempo, podemos supor que temos um grupo de animais que se comportarão de maneira diferente. Nesse modelo, as probabilidades fazem jus a quantidade esperada de cada grupo de animais em cada interação.
+\\
+\\
+A probabilidade de algum animal lutar será dada por $p$, assim, a chance de um lutador encontrar outro é de $p$ e de encontrar um disposto a dividir será igual a $1 - p$.
+\\
+\\
+O ganho esperado para os lutadores será de
+
+$$H = -2p + 4(1-p)$$
+
+Enquanto o ganhos dos que dividirão
+
+$$D = 2(1-p)$$
+
+Como estamos falando de animais, as estratégias de maior retorno produzirão indivíduos mais capazes de se reproduzir. Supondo que as características sejam transferidas, o grupo com o maior retorno terá a maior chance de ser encontrado. Se $H > D$, então veremos a população dos brigões aumentar. Caso $D > H$, então, a população de cooperadores aumentará.
+\\
+\\
+O equilíbrio entre essas populações será dado pela igualdade
+
+$$H -2p + 4(1-p) = 2(1-p) = D$$
+$$2(1-p) = 2p$$
+$$2 - 2p = 2p$$
+$$p = 1/2$$
+
+Agora vamos ver como se comportam as curvas de melhor resposta.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_5-coexistencia_1.png}
+\end{figure}
+
+Aqui vemos 3 condições de equilíbrio. Mas nosso equilíbrio não foi alcançado no ponto $1/2$? A resposta é sim. Perceba que os pontos de estratégia dominante são os pontos onde há o incentivo de se jogar o oposto do adversário\footnote{Igual o caso da roleta russa}. Mas esse jogo não lida com apenas 2 agentes e sim com uma população homogênea com duas opções de comportamento. O único ponto onde as estratégias convergem é o ponto $1/2$.
+\\
+\\
+Por causa da estabilidade desse arranjo, os pesquisadores o classificam como uma \textbf{estratégia evolucionariamente estável}. É pura teoria dos jogos e vem diretamente dos estudos das dinâmicas entre interações animais.
+\\
+\\
+Assim como está no livro, eu coloquei os resultados para cada estratégia a medida que o número de lutadores aumenta de $0$ até $100\%$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{cap30_5-coexistencia_2.png}
+\end{figure}
+
+Como podemos ver, para todos os pontos abaixo de $1/2$, vale mais a pena se lutador. Acima desse ponto, é melhor cooperar. Os retornos se equivalem no ponto de equilíbrio.
+
+\section{Jogos de Compromisso}
+
+Os jogos que vimos até agora são do jogos \textbf{com movimentos simultâneos}. Os jogadores não sabem o que o outro fará, e precisam maximizar de acordo com a suposição do comportamento do adversário.
+\\
+\\
+Aqui vamos ver os jogos com \textbf{movimento sequenciais}. Um conceito importante nesses jogos é o \textbf{compromisso}. Quando um participante se compromete a agir de terminada maneira ele precisa garantir: 1) que ele não terá outro caminho a seguir além do firmado anteriormente; 2) que a sinalização do compromisso chegue ao outro jogador e seja entendida por ele.
+
+\subsection{O Sapo e o Escorpião}
+
+Você já deve conhecer essa história. Então vamos pular direto para a modelagem em termos da teoria dos jogos. Podemos recriar a situação da fábula como o seguinte jogo sequencial
+
+\Tree[.\textit{Sapo}
+				[.Carrega 
+					[.Escorpião 
+						[.Ferroada $(-10,5)$ ]
+						[.\textit{Não Ferroada} $(5,3)$ ]]]
+				[.\textit{Não Carrega} $(0,0)$ ]]
+\\
+\ 
+\\
+Mesmo que a moral da história seja nós ensinar que existem pessoas que preferem fazer o mal. Sob a ótica da teoria dos jogos, o escorpião apenas maximizou sua utilidade dada as opções disponíveis. Como o sapo escolheu antes, só restou ao escorpião entre ter $5$ de retorno com a ferroada ou $3$ com o passeio.
+\\
+\\
+Se o sapo tivesse a oportunidade de estudar esse material, ele se certificaria em reduzir o resultado do escorpião na opção da ferroada. Como o escorpião é meio suicida, talvez uma solução fosse o sapo falar sobre como é bom estar vivo. Ele também poderia ameaçar que os outros sapos fariam uma retalhação aos outros escorpiões. Ou mesmo propor que a cauda do passageiro fosse amarrada antes do transporte. Não importa como, o que o sapo deveria ter feito é tornar o retorno da não ferroada maior que o da ferroada.
+
+\Tree[.\textit{Sapo}
+				[.Carrega 
+					[.Escorpião 
+						[.Ferroada $(-10,2)$ ]
+						[.\textit{Não Ferroada} $(5,3)$ ]]]
+				[.\textit{Não Carrega} $(0,0)$ ]]
+\\
+\ 
+\\
+Nesse jogo, todos chegariam ao lado do rio e a moral da história seria como é bom ajudar os outros independente da aparência deles.
+
+\subsection{O Sequestrador Cordial}
+
+É isso mesmo, nós vamos modelar o comportamento de um grupo de sequestradores. A Economia é ou não é uma ciência cheia de surpresas? Pois bem, imagine que um CEO de uma empresa é sequestrado. No regimento interno da empresa está a cláusula de não pagamento de resgate em caso de sequestro dos seus funcionários (mesmo os da cúpula). O que os sequestradores farão? Uma possibilidade de arranjo é esse abaixo
+
+\Tree[.\textit{Sequestradores}
+				[.Libera 
+					[.Refém 
+						[.Identifica $(-5,5)$ ]
+						[.\textit{Não Identifica} $(5,3)$ ]]]
+				[.\textit{Mata} $(-3,-10)$ ]]
+\\
+\ 
+\\
+O resultado desse jogo é inteiramente dependente da capacidade do refém de sinalizar para os sequestradores que cumprirá seu lado do trato em não identificar. Uma saída para esse impasse é a proposta pelo pesquisador Thomas Schelling. Eu não vou estragar a surpresa, leia a (inusitada) proposta de solução no material original.
+
+\subsection{Quando Força é Fraqueza}
+
+A psicologia animal\footnote{Sim, eu também não fazia ideia que existia esse campo de pesquisa.} também fez algumas incursões na teoria dos jogos. Eles perceberam que num grupo, os porcos rapidamente desenvolvem uma relação de dominação em relação ao porco dominador.
+\\
+\\
+Eles colocaram uma alavanca em uma lado da baia que, quando acionada, fazia com que o alimento caísse do outro lado da baia. Como o porco dominador não tem como evitar que o subordinado coma, nem consegue obrigá-lo a puxar, ao se negar a puxar a alavanca, o porco subordinado condena o dominador a comer os seus restos.
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[Subordinado][Dominador]
+                      & $Puxar$    & $\textrm{Não Puxar}$ \\
+$Puxar$               & $0,0$      & $4,1$ \\
+$\textrm{Não Puxar}$  & $0,5$      & $2,3$
+\end{game}
+
+\end{center}
+
+A estratégia do porco subordinado é sempre esperar pela comida. Enquanto o dominador não tem outra opção a não ser aceitar os restos.
+
+\subsection{Poupanças e Seguridade Social}
+
+Mais um jogo para analisarmos. Agora vamos aplicar nossos conceitos ao modelos de seguridade social. Podemos modelar esse jogo como uma relação entre gerações do seguinte modo
+
+\begin{center}
+
+\def\sgtextcolor{white}% Trocar pra preto na versão white
+\def\sglinecolor{white}% Trocar pra preto na versão white
+\begin{game}{2}{2}[+ Velhos][+ Jovens]
+           & $Sustenta$ & $Poupa$ \\
+$Poupa$    & $2,-1$      & $1,0$ \\
+$Esbanja$  & $3,-1$      & $-2,-2$
+\end{game}
+
+\end{center}
+
+Da pra ver que temos dois equilíbrios ai. Um no ponto onde os velhos poupam e os jovens também poupam. O outro é no ponto onde os velhos esbanjam e os jovens sustentam. Mas esse jogo tem um caráter temporal mais do que evidente, uma vez que é claro que os velhos terão prioridade na escolha da ação.
+
+\Tree[.\textit{Velhos}
+				[.Poupam 
+					[.Jovens 
+						[.Sustentam $(2,-1)$ ]
+						[.Poupam $(1,0)$ ]]]
+				[.Esbajam
+					[.Jovens 
+						[.Sustentam $(3,-1)$ ]
+						[.Poupam $(-2,-2)$ ]]]]
+\\
+\ 
+\\
+Conseguimos ver que a melhore estratégia para os velhos é usar o poder da preferência e escolher esbanjar. Os jovens serão obrigados a optar por sustentá-los. Mas não é atoa que a maioria dos países possui algum programa em que cada geração acaba contribuindo para o montante da sua aposentadoria.
+\\
+\\
+\textbf{Comentário:} Aqui o professor coloca um exemplo da discriminação de preço à luz da teoria dos jogos.
+
+\subsection{Extorsão}
+
+Estamos na última subseção. Aquente firme. O problema que veremos aqui é bem comum e pode se adaptar a várias situações parecidas. Imagine uma obra chegando ao final. Se o cliente quiser alterar alguma coisa nessa reta final, o empreiteiro poderá tirar alguma vantagem disso? Considere a árvore abaixo
+
+\Tree[.\textit{Empreiteiro}
+				[.Extorque 
+					[.Cliente 
+						[.Paga $(1.300,0)$ ]
+						[.\textit{Não Paga} $(0,-100)$ ]]]
+				[.\textit{Não Extorque} $(0,1.300)$ ]]
+\\
+\ 
+\\
+Como podemos ver, o empreiteiro tem todo o incentivo em usar o poder de extorsão para faturar a mais. Uma maneira que o cliente poderia se proteger é por via contratual ou ameaçar fazer propaganda negativa como forma de retalhação.
+
+\section{Negociação}
+
+Nessa última parte do capítulo, pensemos em um problema simples: a divisão de um dólar entre duas pessoas. Como faríamos de modo a satisfazer a vontade de ambas? O foco está em construir uma solução que permita a negociação.
+\\
+\\
+O \textbf{modelo de negociação de Nash}, usa uma abordagem a partir de proposições a respeito do comportamento dos indivíduos. O livro não entra muito no modelo, mas como eu sou curioso, eu vou colocar um pouco mais de informação sobre ele. Os axiomas usados são
+
+\begin{itemize}
+\item Eficiência de Pareto
+\item Simetria na Solução
+\item Invariância das Representações Equivalentes dos Resultados
+\item Independência das Alternativas Irrelevantes
+\end{itemize}
+
+O modelo de negociação de Nash é o modelo que resolver o problema de maximização do tipo
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $v_1,v_2$}} \ \ \stackrel{(v_1 - d_1)(v_2 - d_2)}{\ }$ \\
+\normalsize Sujeito a $(v_1,v_2) \in U$ e $(v_1,v_2) \geq (d_1,d_2)$
+\end{center}
+
+Nash demonstrou que existe uma solução desse problema, denotada por $f^N(U,d)$, e que essa solução é única. Mas esse tipo de conteúdo é material de pós-graduação.
+\\
+\\
+Uma outra abordagem é o \textbf{modelo de negociação de Rubinstein}. Esse modelo o livro explica um pouco mais. Imaginemos dois jogadores, A e B, que precisam dividir um dólar entre eles. Terão 3 dias para decidir. A faz uma proposta, B pode aceitar, ou voltar no outro dia com uma contraproposta. Se A não aceitar, poderá fazer uma oferta final no terceiro dia. Se ambos discordarem, ninguém fica com nada.
+\\
+\\
+É razoável supor que a percepção do valor do dinheiro no tempo para cada um deles seja diferente. Usaremos $\alpha$ para a o valor descontado\footnote{alpha é o valor que A estaria disposta a receber hoje ao invés de receber o valor cheio amanhã.} de um dia de A e $\beta$ para a taxa desconto de B. Também definiremos que se algum deles for indiferente à oferta, o acordo será feito. Adicionalmente, vamos supor que cada um deles quer a maior parte possível do dinheiro.
+\\
+\\
+Muito bem, se começarmos analisando o último dia. No final do prazo, como a opção é ter alguma coisa ou nada, qualquer quantia próxima de zero será aceita por B. No segundo dia, sabendo que A oferecerá praticamente zero para B, e sabendo da taxa de desconto de A ($\alpha$), B fará a oferta de do dólar descontado pela taxa de A, ou seja, B ofertará $\alpha$ para A e ainda sai com $1 - \alpha$ que é melhor que nada. Indo para o primeiro dia, A sabe que B fará a proposta de $\alpha$ no segundo dia, então ela descontará $1-\alpha$ pela taxa de B, oferecendo então $\beta(1-\alpha)$ para B e ficando com $1 - \beta(1-\alpha)$.
+\\
+\\
+No livro tem um gráfico que eu, sinceramente, não entendi. No futuro eu revisito essa seção com a explicação do gráfico.
+\\
+\\
+A generalização do modelo para $n$ períodos é igual a
+
+$$\textrm{Ganhos de A = } \frac{1-\beta}{1-\alpha\beta}$$
+$$\textrm{Ganhos de B = } \frac{\beta(1 - \alpha)}{1-\alpha\beta}$$
+
+\subsection{Jogo do Ultimato}
+
+Essa parte vale a pena conferir no material original.
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
 \part{Tópicos Avançados}
@@ -1743,25 +2684,768 @@ A imagem abaixo mostra esse caminho. Mas eu também transformei ela em um gif an
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Economia Comportamental}
 
+Parabéns! Agora você já tem o arcabouço padrão de análise de um economista moderno (nível básico, mas tem). Você já entende a teoria da escolha, a teoria do consumidor, a teoria da firma, o equilíbrio no mercado competitivo, o monopólio, o oligopólio e as suas interações e, por fim, começou a conhecer o ferramental de teoria dos jogos.
+\\
+\\
+Nosso estudo começou com o comportamento do consumidor. O modelo é lógico e elegante, mas claramente possui algumas aproximações que podem tornar difícil sua aplicação na realidade em alguns casos. Como toda ciência, a Economia tratou de continuar estudando seu objeto de análise e uma revolução denominada \textbf{economia comportamental} foi fruto desse esforço.\footnote{Ela já rendeu alguns nobéis, mas anda sendo alvos de algumas críticas pesadas sobre a generalidade dos resultados. Por bem ou por mal, vamos continuar estudando até que tenhamos modelos melhores.}
+\\
+\\
+Nos anos 60 os pesquisadores Ward Edwards, Amos Tversky e Daniel Kahneman começaram a comparar os modelos de decisão sob incerteza aos modelos de comportamento racional da Economia. "Boom!", a comunidade (ou melhor, uma parte considerável dela) recebeu essas contribuições como alguma estima e iniciou-se um processo de expansão da ideia de comportamento racional. Em 2002 Kahneman e Vernon Smith levaram um Nobel por suas contribuições nesse campo. Em 2013, Robert Shiller também faturou um por seus estudos empíricos dos preços dos ativos. Em 2017, foi a vez de Richer Thaler, por suas contribuições sobre padrões de irracionalidade.
+\\
+\\
+Não é difícil ver o motivo do professor colocar um capítulo sobre o tema no livro. Como esse é um assunto avançado, só conseguiremos trabalhar alguns conceitos mais básicos. Esse é apenas um primeiro contato.
+\\
+\\
+\textbf{Comentário:} Esse capítulo é mais textual, então vou dar uma resumida. Mas você já sabe que ler o material original é obrigação.
+
+\section{Efeitos do Contexto na Escolha}
+
+Uma das novidades que esse campo trouxe, foi o papel que o \textbf{contexto} e o \textbf{modo} as escolhas são apresentadas têm no resultado do processo de decisão. Por exemplo, a percepção do mesmo produto em lojas diferentes muda o preço de reserva das pessoas. Ou ainda, porque produtos com valores quebrados (os benditos $0,99$ de quase todos os preços que vemos) costumam performar diferente dos produtos de preços cheios. A lista de \textbf{efeitos de contexto} é bem grande, principalmente em contextos de incerteza. Vamos ver agora alguns dos vieses que já conseguimos observar em alguns experimentos. 
+
+\subsection{O Dilema da Doença}
+
+Essa parte foi baseada no paper de 1981 "The framing of decisions and the psychology of choice"\ de Tversky e Kahneman.
+\\
+\\
+Imagine que existe uma doença ameaçando uma população de 600 pessoas. Você pode escolher entre dois tratamentos, A e B, com as seguintes características:
+\\
+\textbf{Tratamento A:} 200 pessoas salvas, de certeza.\\
+\textbf{Tratamento B:} 1/3 de probabilidade de salvar as 600 pessoas e 2/3 de que todos morram.
+\\
+\\
+E ai, qual tratamento escolher?\footnote{Esse exemplo é especialmente pertinente na situação pandêmica vivida entre 2020 e 2022.}. Vamos um pouco mais longe. Foram descobertos outros dois tratamentos.
+\\
+\textbf{Tratamento C:} 400 pessoas vão morrer, de certeza.\\
+\textbf{Tratamento D:} 2/3 de probabilidade das 600 pessoas morrerem e 1/3 de chance de salvar todos.
+\\
+\\
+Qual tratamento escolher?
+\\
+\\
+No \textbf{contexto positivo}, as pessoas optaram na maioria pela opção A. Contudo, no \textbf{contexto negativo}, D foi escolhido com maior frequência. O estranho é que A, B, C e D são todas equivalente!
+\\
+\\
+Esse exemplo pode ser aplicado a uma gama de outras situações, como gestão de portfólio. Será que as pessoas pensam com a mesma tranquilidade em momentos de alta e de baixa de ações?
+
+\subsection{Efeitos de Ancoragem}
+
+Essa parte foi baseada no paper de 1974 "Judgment under uncertainty: Heuristics and biases"\ de Tversky e Kahneman. E também no paper de 2001 "For Better or for Worse: Default Effects and 401(k) Savings Behavior"\ de James Choi, David Laibson, Brigitte Madrian e Andrew Metrick.
+\\
+\\
+O \textbf{efeito ancoragem} é definido como o efeito que algumas informações complemente não relacionadas ao objeto de decisão pode exercer no processo mental de escolha.
+\\
+\\
+Um exemplo desse efeito foi a escolha de qual investimento os empregador escolheriam no seu plano de aposentadoria\footnote{La nos EUA, tem um regime chamado 401(K). Dá uma pesquisada.} Quando os empregadores faziam a pergunta de adesão com uma opção de investimento previamente marcada, a maioria das pessoas optava por seguir a recomendação. Quando foi feito o mesmo experimento em outra empresa, mas sem a previa marcação, o perfil de seleção mudou.
+
+\subsection{Balizamento}
+
+Essa parte foi baseada no paper de 1990 "The Effect of Purchase Quantity and Timing on Variety-Seeking Behavior"\ de Simonson.
+\\
+\\
+Quando foi proposto que um time de estudantes escolhesse, entre seis opções por dia, o seu menu de lanches para as próximas três semanas. A maioria optou por um tipo para cada dia da semana. Mas quando a escolha era feita na hora, mesmo tendo as seis opções, a maioria das pessoas escolhei repetir alguma refeição do dia anterior.
+\\
+\\
+Nós agimos diferentemente quando planejamos com antecedência e quando tempos que decidir na hora.
+
+\subsection{Excesso de Opções}
+
+Essa parte foi baseada no paper de 2000 "When Choice Is Demotivating: Can One Desire Too Much of a Good Thing?"\ de Sheena S. Iyengar e Mark R. Lepper.
+\\
+\\
+Nós vimos que uma das soluções de equilíbrio de competição monopolística é o excesso de opções. Ao buscar a diferenciação dos seus produtos, os concorrentes podem impor uma sobrecarga de opções aos seus consumidores.
+\\
+\\
+Fora montado em um supermercado dois expositores de geleia. Um com 26 opções e outro com apenas 6. As pessoas paravam mais no expositor com mais opções, entretanto, a maioria das vendas foi realizada no expositor com menos produtos. Em 2001, Shlomo Benartzi e Richard Thaler mostraram que essa lógica também pode ser aplicada ao mercado de ativos.
+
+\subsection{Preferências Construídas}
+
+Como todas essas situações podem ser interpretadas à luz da teoria que já estamos acostumados? A chave é aceitar que as preferências não são construtos sólidos e perenes do nosso ser, mas sim, "descobertas"\ que fazemos ao longo dos processos de decisão.
+\\
+\\
+Se uma pessoa pega um produto na prateleira, devolve, depois volta e pega o mesmo produto novamente, ela prefere ou não esse bem? Na interpretação clássica, esse comportamento não seria possível. Mas à luz dessas descobertas, podemos dizer que a pessoa está no limiar entre a escolha ou não do produto. É como se ela mesma ainda não soubesse o que quer, ou seja, é como se estivesse "descobrindo"\ sua suas próprias preferências.
+\\
+\\
+Precisamos jogar a teoria da escolha fora? Nós perdemos nosso precioso tempo estudando esse modelo para nada? Calma, jovem. Mesmo que as preferências não sejam inerentes e imutáveis, uma vez que testamos e redescobrimos as preferências por meio de escolhas, podemos ver que, mesmo ainda não compreendendo o processo, essas preferências se tornam balizadoras das próximas escolhas. Ou seja, nós tendemos a repetir padrões de escolhas com razoável confiança preditiva. O motivo de preferir A em relação B, pode ser um mistério, mas nosso modelo de teoria da escolha não se preocupa com isso.
+
+\section{Incerteza}
+
+Se entender as escolhas dos indivíduos já é difícil, sob as situações de incerteza, o trabalho é ainda maior. Aqui vamos elencar alguns outros vieses de comportamento para você ter alguma noção.
+
+\subsection{Lei dos Pequenos Números}
+
+Para variar, essa parte é baseada no artigo publicado em 1971 "Belief in the Law of Small Numbers" (advinha por quem?!) Tversky e Kahneman.
+\\
+\\
+A ideia aqui é que as pessoas tendem a se influenciar muito a partir de pequenas amostras. Ainda mais, se elas mesmas que fizeram a observação.
+\\
+\\
+Imagine dois hospitais. Um com 100 leitos, outro com 15 leitos. Por dia, nascem aproximadamente 11 bebês no hospital maior e 5 no menor. Se estivermos interessados em saber todos os dias em que tivemos a maioria de nascidos homens. Qual hospital teria o maior número de registros desses dias em um ano?\footnote{A resposta é o hospital menor. Porque a variação aumentar a medida que o tamanho da amostra se reduz.}
+\\
+\\
+A questão aqui é que as pessoas não são boas quando precisar trabalhar com fenômenos aleatórios. E isso é diretamente relacionado às soluções de estratégias mistas na teoria dos jogos. Se não somos bons em ser aleatórios, como podemos definir que um equilíbrio dependerá de um comportamento aleatório? A chave aqui é entender que ele só precisa \textit{parecer} aleatório para o outro jogador.
+
+
+\subsection{Integração de Ativos e Aversão à Perda}
+
+Lá no capítulo 12.3, quando estudamos o conceito de utilidade esperada, vimos que as pessoas se importam com o total de riqueza que receberiam através dos diversos estados possíveis. Esse pressuposto é chamado de \textbf{hipótese da integração de ativos}.
+\\
+\\
+O problema é que os experimentos mostram que as pessoas costumam ser mais tolerantes à riscos maiores que riscos menores. Imagine que sua renda é 10.000 e  seja proposta uma aposta de cara e coroa. Se der cara, você ganha R\$14,00, se der coroa, você paga R\$ 10,00. O retorno esperado é de R\$ 2,00 (no livro, estranhamente está 12). Ou seja, essa aposta vale a pena. Mas, na prática, muita gente não topa.
+\\
+\\
+Essa \textbf{excessiva aversão ao risco} pode ser aplicada ao mercado de seguros\footnote{Aqui no brasil está cada vez mais comum. Mas até pouco tempo, quase ninguém tinha seguro das coias.}. Se paramos pra pensar, um seguro só vale a pena se o resultado esperado de um acontecimento (nesse caso um prejuízo) for, no mínimo, igual ao custo mensal do seguro. Se o prejuízo mensal esperado for menor, não faz sentido optar pelo seguro.
+\\
+\\
+Isso parece indicar que somos mais \textbf{versos à perda} do que ao risco. Em outras palavras, parece que nos desfazer de algo que temos possui um custo intrínseco\footnote{Talvez seja por isso que eu ainda tenho tantos cabos que não funcionam em uma gaveta.}.
+
+\section{Tempo}
+
+Outras anomalias comportamentais aparecem quando relacionamos o nosso comportamento em função de escolhas temporais.
+
+\subsection{Desconto}
+
+Quando trabalhamos a percepção do valor ao longo do tempo, geralmente precisamos supor uma forma funcional de desconto. A forma do \textbf{desconto exponencial} é dada por $\delta^t u(c)$ onde $\delta , 1$. Outra forma é a do \textbf{desconto hiperbólico}, que veio em um estudo sobre precificações de valores futuros por meio de leilão, afirma que a taxa de desconto seria $\frac{u(c)}{(1+kt)}$.
+\\
+\\
+O problema dessa diferença é que, enquanto o desconto exponencial é consistente ao longo do tempo, o hiperbólico atribui diferentes pesos dependendo do período. Isso implica que as pessoas podem fazer planos para o futuro e, quando o futuro chegar, podem agir de maneira diferente à planejada.
+
+\subsection{Autocontrole}
+
+Outro viés evidente é a  diferença entre a nossa capacidade de decidir e de cumpri as ações. Não é raro encontrar situações onde acabamos nos encontrando em situações que prometemos não fazer. O fator importante a ser levado em conta é justamente a nossa capacidade de modelar nosso próprio \textbf{autocontrole}, ou melhor, a falta dele.
+\\
+\\
+Uma maneira de reforçar essa capacidade é, como vimos nos jogos sequenciados, o comprometimento. Se conseguirmos trabalhar nossa percepção do resultado da ação indesejada, via mudança na estrutura do jogo, poderemos superar essas dificuldades de ação. Mas o importante aqui é saber que os modelos mais reais precisam levar em consideração a capacidade das pessoas não seguirem exatamente os planos que fizeram.
+\\
+\\
+\textbf{Comentário:} Aqui temos um exemplo sobre o excesso de confiança no resultado de negociações.
+
+\section{Interação Estratégica e Normas Sociais}
+
+Na teoria dos jogos, vimos como prever o comportamento ideal de agentes racionais em diferentes estruturas de jogos. Existe um campo chamado \textbf{teoria comportamental do jogo} que analisa como as pessoas agem, na vida real, em situações diversas. Existem alguns padrões que são observados que constituem desvios sistemáticos dos resultados previstos na teoria pura.
+
+\subsection{Jogo do Ultimato}
+
+Já vimos que, do ponto de vista teórico, não existe nenhum motivo para uma pessoa negar a divisão de 0,90 e 0,10. Visto que é melhor 0,10 do que nada! Mas não é assim que observamos  na prática. Quando a divisão proposta é muito desigual, as pessoas preferem ficar com 0 do que com míseros trocados.
+\\
+\\
+Existem muitos aspectos culturais, biológicos e de contexto que podem modificar o resultado do jogo. Quando as estratégias precisam ser escritas antecipadamente, num arranjo chamado \textbf{método para estratégias}, as pessoas costumam dividir mais próximo da metade do valor. Quando a quantidade total aumenta, também temos mudanças no comportamento observado.
+
+\subsection{Equidade}
+
+Parece que temos alguma tendência à divisões iguais. Mesmo que essas \textbf{normas de equidade} não causem um resultado interessante para nós mesmos.
+\\
+\\
+Quando colocamos uma terceira parte num \textbf{jogo punitivo} - igual ao jogo do ultimato só que generalizado - com poder de subtrair parte do lucro do proponente, acabamos vendo um padrão. Quando a divisão é muito desigual, esses terceiros acabam optando por punir o proponente ganancioso.
+
+\section{Uma Avaliação da Economia Comportamental}
+
+Esse aqui é um apanhado de tudo que vimos e como ainda podemos usar a teoria econômica. A questão é que nenhum modelo é perfeito. Nos valemos de simplificações porque a realidade é muito complexa. Mas a teoria econômica ainda é pertinente para uma aproximação da realidade, ainda que, essa aproximação tenha algum grau de limitação. Recomendo a leitura do original.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Trocas}
+
+Todos os equilíbrios que estudamos até agora se basearam apenas nas relações de preço e quantidade de determinado bem e nas equivalências entre as forças de Oferta e Demanda. Mas certamente o preço dos bens substitutos e complementares também podem exercer influência sobre o mercado. O equilíbrio dentro de um mercado apenas é chamado de \textbf{equilíbrio parcial}. 
+\\
+\\
+Começaremos a partir de agora o estudo de equilíbrio \textit{entre} diferentes mercados. O nome dessa agenda de pesquisa é \textbf{equilíbrio geral}\footnote{Na minha humilde opinião, é a agenda mais impressionante de pesquisa econômica.}. Como lidaremos com múltiplos mercados ao mesmo tempo, a análise se torna bastante complexa. Para tanto, vamos nos valer de algumas simplificações para facilitar a nossa vida:
+
+\begin{itemize}
+\item Suporemos que os mercados são competitivos, ou seja, ninguém tem poder de mercado.\footnote{Equilíbrio geral com poder de mercado é assunto de pós.}
+\item Usaremos um número limitado de bens e consumidores. Assim conseguimos uma exposição mais simples e as soluções que encontraremos podem ser generalizada para $n$ indivíduos.\footnote{Mas ai é com você, campeão.}
+\item Trabalharemos com \textbf{troca pura} aqui. As pessoas começarão com dotações iniciais e trocarão esse bens a medida que acharem vantajoso.\footnote{Veremos a produção no equilíbrio geral só no próximo capítulo.}
+\end{itemize}
+
+\ 
+\\
+\\
+\ 
+\\
+\\
+\ 
+\section{A Caixa de Edgeworth}
+
+Um economista inglês do século XIX chamado Francis Ysidro Edegeworth criou uma ferramenta analítica que usaremos para analisar os casos de trocas entre dois indivíduos. A famosa \textbf{caixa de Edgeworth}.
+\\
+\\
+Suporemos a existência de duas pessoas, A e B, e dois bens, 1 e 2. A cesta do consumidor A será denotada por $X_A = (x_A^1, x_A^2)$, similarmente, a cesta de B será dada por $X_B = (x_B^1, x_B^2)$. Um par de cestas será chamado de \textbf{alocação}. Um alocação será chamada de \textbf{factível} se a quantidade total for igual a 
+
+$$x_A^1 + x_B^1 = w_A^1 + w_B^1$$
+$$x_A^2 + x_A^2 = w_A^2 + w_A^2$$
+
+Uma alocação factível importante é a \textbf{alocação da dotação inicial} que é representada por $(w_A^1, w_A^2)$ e $(w_B^1, w_B^2)$. Essa é a alocação onde os indivíduos começam. A partir dela é que haverão as trocas. Após a etapa de trocas, chegaremos em outra alocação factível importante, a \textbf{alocação final}.
+\\
+\\
+Veja um exemplo da caixa de Edgeworth abaixo. Foram usadas funções de utilidade do tipo cobb-douglas com os coeficientes iguais a $0.5$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap32_1-caixa_edgeworth_1.png}
+\end{figure}
+
+Para analisar o gráfico da caixa, você deve se recordar das curvas de indiferença do consumidor. Uma mudança aqui é que estamos representando as preferências de dois consumidores ao mesmo tempo. As curvas vermelhas são do consumidor A e, consequentemente, as curvas azuis são do consumidor B.
+\\
+\\
+Os eixos do consumidor B começam no canto superior-direita. Enquanto os eixos do consumidor A são os clássicos do plano cartesiano. Isso significa que cada ponto nesse gráfico possui 4 coordenadas associadas $(w_A^1, w_A^2, w_B^1, w_B^2)$ para a dotação e $(x_A^1, x_A^2, x_B^1, x_B^2)$ para a alocação final. A simetria que podemos ver nas quantidades se dá pela definição das alocações factíveis, onde para um ganhar, outro tem que ceder. 
+\\
+\\
+Para ajudar no entendimento da leitura, eu coloquei umas setas indicando o sentido em que as quantidades crescem para cada consumidor.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap32_1-caixa_edgeworth_2.png}
+\end{figure}
+
+Esse ferramental analítico nos permite mostrar todas as alocações factíveis, as preferências dos consumidores, a dotação inicial e a alocação final. Tudo isso de uma vez só. Não foi sem motivo que esse modelo foi adotado.
+
+\section{As Trocas}
+
+Nosso diagrama acima já deu um pequeno \textit{spoiler} sobre o que aconteceria se a dotação inicial fosse diferente da final. Para entender o processo de trocas, precisamos analisar o que se passa no momento em que os consumidores se encontram nas suas dotações iniciais.
+\\
+\\
+No ponto da imagem, temos o encontro de duas curvas de indiferenças sendo uma para cada consumidor. O consumidor A gostaria de abrir mão do bem 1 para poder consumir mais do bem 2, já no caso de B, ele quer fazer o oposto, abrir mão de parte da quantidade do bem 2 para consumir mais do bem 1. Toda a área entre as curvas vermelha e azul representa uma região de melhoria mútua\footnote{Se você não entendeu esse argumento, tem que dar uma revisada urgente na teoria do consumidor. Melhor ir logo. Depois a gente continua essa aula.}.
+\\
+\\
+O ponto onde os dois consumidores estão em melhor situação possível é o ponto de tangência das curvas de indiferença. As trocas ocorrerão até o ponto em que nenhuma melhoria seria possível sem a piora de um deles. No caso do exemplo, por acaso, o ponto final foi o da divisão igualitária, mas isso não é uma regra.\footnote{Explico melhor na próxima seção.}
+\\
+\\
+As variações das quantidades em termo das dotações para o consumidor A são dadas por $|x_A^1 - w_A^1|$ para o bem 1 e $|x_A^2 - w_A^2|$ para o bem 2. Similarmente, $|x_B^1 - w_B^1|$ e $|x_B^2 - w_B^2|$, para o consumidor B.
+
+\section{Alocações Eficientes no Sentido de Pareto}
+
+Você já aprendeu no capítulo 01 sobre uma alocação eficiente no sentido de Pareto\footnote{Sem falar que toda hora esse conceito volta a ser usado ao longo do livro.}. Mas o professor resume aqui as principais caraterísticas dessa alocação. Então, vamos seguir o mesmo caminho.
+\\
+\\
+Podemos descrever uma alocação eficiente de Pareto como tendo a seguintes propriedades:
+\begin{itemize}
+\item Não existe maneira de melhorar a situação de ninguém.
+\item Não existe maneira de melhorar a situação de ninguém, sem que isso implique na piora de outra pessoa.
+\item Todas as trocas que gerariam algum ganho foram feitas.
+\item Não existe opção de troca que seja mutualmente vantajosa.
+\end{itemize}
+
+Essas características implicam que os pontos de eficiência sejam pontos em que as curvas de indiferença sejam tangentes entre si. Pois, se as curvas se cruzam, seria melhor para eles irem para algum ponto em uma curva mais alta, uma vez que, a região no interior do cruzamento de duas curvas é necessariamente, melhor para eles.
+\\
+\\
+O conjunto de todos os pontos eficientes no sentido de Pareto, dentro de uma caixa de Edgeworth, é denominado de \textbf{conjunto de Pareto} ou \textbf{curva de contrato}. Como nossas funções de utilidade são iguais, a nossa curva de contrato é uma linha reta (se as preferências fossem outras, teríamos outro formato). Qualquer negociação de trocas que esteja num ponto desse subconjunto de alocações, será pareto-eficiente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{cap32_3-caixa_edgeworth_1.png}
+\end{figure}
+
+\section{As Trocas de Mercado}
+
+Até agora, sabemos que os agentes iniciam nas dotações inicias e terminam em algum ponto na linha de contrato. Como saber "onde"\ exatamente eles vão optar por parar de trocar? Para ter essa resposta, precisaremos adicionar mais informação sobre o comportamento dos nossos consumidores.
+\\
+\\
+Adicionaremos a suposição que esse processo imitará o \textit{resultado} de um mercado competitivo\footnote{O resultado, não o processo.}.
+\\
+\\
+Vamos colocar um terceiro indivíduo no processo. Ele agirá com um "leiloeiro"\ para A e B. O leiloeiro vai arbitrar um preço para A e B, e eles agirão a partir disso. Para cada preço arbitrado, os consumidores adaptarão as suas alocações finais aos preços de modo a maximizar suas utilidades. Nesse novo modelo, teremos  um novo dado, a dotação de preços $(p_1,p_2)$.
+\\
+\\
+\textbf{Comentário:} Nós vimos no caso do duopólio e na teoria dos jogos que quando as interações ocorrem com poucos players, é provável que acabem sendo de maneira a não seguir a lógica da competição e sim da negociação. Mas o professor dá uma escapatória para o nosso modelo ao propor que interpretemos, ao invés de dois consumidores, dois grupos de consumidores que se comportam homogeneamente, podemos continuar nossa análise com esse ferramental. Ou então, podemos continuar pensando em duas pessoas, mas usando o modelo como uma representação do processo que ocorre para várias pessoas.
+\\
+\\
+Vamos ver quais informações nós temos disponíveis para trabalhar agora: 1) Uma dotação inicial de bens; 2) Preços associados a cada bem; 3) Preferências de cada consumidor. Se você está com os conteúdos estudados na cabeça, sabe muito bem que tratamos essas variáveis no capítulo 5 (com a teoria da escolha) e no 9 (com as dotações).
+\\
+\\
+Quando o leiloeiro determina o preço dos bens no mercado, ele automaticamente determina a renda de cada um dos participantes
+
+$$renda_A = w_A^1 p_1 + w_A^2 p_2$$
+
+Isso quer dizer que podemos, a partir da dotação inicial, descrever a restrição orçamentária via equação
+
+$$ x_A^1 p_1 + x_A^2 p_2 = renda_A$$
+$$ x_A^1 p_1 + x_A^2 p_2 = w_A^1 p_1 + w_A^2 p_2$$
+$$ x_A^2 = [(w_A^1 p_1 + w_A^2 p_2) - x_A^1 p_1]/p2$$
+
+Visualmente, a restrição orçamentária na caixa se apresenta igual ao problema do consumidor no início do livro, a diferença é que essa restrição se refere aos dois indivíduos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_1.png}
+\end{figure}
+
+Eu usei um ponto de dotação inicial diferente do que estamos trabalhando para mostrar um caso onde a alocação não é simétrica. Perceba que, se a alocação for desigual para algum consumidor, essa desigualdade será refletida na renda de cada consumidor. 
+\\
+\\
+Agora vamos voltar para o nosso exemplo e acrescentar algumas curvas de indiferença para continuarmos nossa análise.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_2.png}
+\end{figure}
+
+Como vimos no capítulo 9. Os nossos consumidores aqui possuem incentivos de mudar suas alocações iniciais para maximizar suas utilidades. Você já sabe mas vamos recapitular alguns conceitos agora. A \textbf{demanda bruta} é o quanto o consumidor quer consumir de um bem dada sua renda (é obtida pelo cálculo da maximização com restrição lá do capítulo 5). Por sua vez, a \textbf{demanda líquida} ou \textbf{demanda excedente}, é dada pela equação $e_A^1 = x_A^1 - w_A^1$. Se $e_A1 < 0$, ele será um vendedor líquido, caso contrário, ele será um comprador. A partir de agora, usaremos o termo "demanda"\ para falar da \textbf{demanda bruta} e \textbf{demanda líquida ou excedente} caso queiramos falar desses outros conceitos.
+\\
+\\
+Diferentemente do exemplo que estamos usando até agora (cujas utilidades possuem o mesmo formato), é possível que os preços arbitrados não produzam soluções. Ou seja, que as escolhas maximizadoras de cada consumidor não sejam compatíveis. Veja um caso onde modificamos os parâmetros da função de utilidade do consumidor A.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_3.png}
+\end{figure}
+
+
+Nessa situação, os agentes não conseguirão fazer as trocas porque, ao nível de preços dado, eles maximizam em pontos de alocação diferentes. Nós dizemos, nesse casos, que o mercado está em \textbf{desequilíbrio}.
+\\
+\\
+Quando o mercado está em desequilíbrio o leiloeiro poderá intervir modificando os preços. Ele poderá aumentar o preço para os casos de excesso de demanda e reduzir em casos de excesso de oferta (a oferta aqui é quando a demanda líquida é negativa). 
+
+\newpage
+
+Você aprendeu lá no capítulo 2 o que acontece quando o preço de um bem se modifica em relação a outro. Isso mesmo, uma mudança na inclinação da restrição orçamentária. Vamos ver o que acontece quando o leiloeiro aumenta gradualmente o preço do bem 2 até um ponto onde as demandas sejam iguais. Você pode usar o zoom para enxergar melhor os gráficos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{cap32_4-caixa_edgeworth_4.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{cap32_4-caixa_edgeworth_5.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{cap32_4-caixa_edgeworth_6.png}
+\end{figure}
+
+\newpage
+
+Nós vimos que, ao mudar os preços relativos dos bens, o leiloeiro conseguiu uma configuração da alocações onde as demandas são iguais. Nesse ponto, a quantidade total que cada pessoa deseja comprar é igual à quantidade ofertada no mercado. O mercado está em \textbf{equilíbrio}. Damos o nome desse tipo de solução em homenagem ao economista francês que primeiro estudou a teoria do equilíbrio geral, Leon Walras. Portanto, chamamos essa alocação de \textbf{equilíbrio walrasiano}\footnote{Outros nomes que esse arranjo recebe são \textbf{equilíbrio de mercado} e \textbf{equilíbrio competitivo}.}.
+\\
+\\
+Nessa solução, todos os agentes escolhem a melhor cesta possível que podem pagar. Isso implica que a TMS entre os dois bens seja exatamente uma razão entre os preços. Contudo, como esses preços são iguais para todos os agentes, isso implica que todos deverão ter a mesma taxa marginal de substituição $-p_1/p_2$. Como as curvas de indiferença tangencia a restrição orçamentária na maximização, temos a demonstração do porquê as curvas de indiferença dos agentes serão tangentes entre si. 
+
+\section{A Álgebra do Equilíbrio}
+
+Agora que já entendemos como o processo de trocas pode levar a um equilíbrio competitivo, vamos construir a solução algébrica desse processo. Seja $x_A^1(p_1,p_2)$ a função demanda  bem 1 para o agente A e $x_B^1(p_1,p_2)$ a do função demanda do agente B. O equilíbrio walrasiano é obtido pelo par de preços $(p_1^*,p_2^*)$ de modo que
+
+$$ x_A^1(p_1^*,p_2^*) + x_B^1(p_1^*,p_2^*) = w_A^1 + w_B^1 $$
+$$ x_A^2(p_1^*,p_2^*) + x_B^2(p_1^*,p_2^*) = w_A^2 + w_B^2 $$
+
+De modo que, no equilíbrio, temos uma igualdade entre a oferta e a demanda para os bens 1 e 2. Isso implica que a soma das demandas líquidas seja igual a zero. No equilíbrio (de duas pessoas), uma pessoa demanda exatamente o que a outra tem interesse em ofertar.
+\\
+\\
+Podemos usar a nossa definição de demandas líquida $e(p_1,p_2) = [x(p_1^*,p_2^*) - w]$ na equação que estamos trabalhando para obtermos
+
+$$ [x_A^1(p_1^*,p_2^*) - w_A^1] + [x_B^1(p_1^*,p_2^*) - w_B^1] = 0 $$
+$$ [x_A^2(p_1^*,p_2^*) - w_A^2] + [x_B^2(p_1^*,p_2^*) - w_B^2] = 0 $$
+
+Ou seja, as somas das demandas líquidas é igual a zero. Podemos reescrever nosso sistema como
+
+$$ e_A^1(p_1*,p_2*) + e_B^1(p_1*,p_2*) = 0 $$
+$$ e_A^2(p_1*,p_2*) + e_B^2(p_1*,p_2*) = 0 $$
+
+
+Chamaremos de \textbf{função de demanda excedente agregada}, a soma das demandas líquidas dos indivíduos para cada par de preços. O equilíbrio é obtido pela existência de uma par de preços $(p_1,p_2)$ cuja demanda excedente agregada seja igual a zero para o bem 1 e para o bem 2.
+
+$$z_1(p_1^*,p_2^*) = e_A^1(p_1*,p_2*) + e_B^1(p_1*,p_2*) = 0$$
+$$z_2(p_1^*,p_2^*) = e_A^2(p_1*,p_2*) + e_B^2(p_1*,p_2*) = 0$$
+
+
+O professor afirma que, se a demanda excedente agregada for igual a 0 para o bem 1. Ela sera, necessariamente, igual a 0 para o bem 2. Para provar essa afirmação nos vamos definir uma propriedade da função de demanda excedente agregada conhecida como \textbf{lei de Walras}.
+
+\section{A Lei de Walras}
+
+A lei de Walras afirma que
+
+$$p_1 z_1(p_1,p_2) + p_2 z_2(p_1,p_2) \equiv 0$$
+
+O interessante é que essa é uma \textit{identidade}. Isso quer dizer que temos essa relação para qualquer par de preços, mesmo os que não produzam um equilíbrio. A demonstração decorre do fato que as demandas estão sujeitas as restrições orçamentárias
+
+$$p_1x_A^1(p_1,p_2) + p_2x_A^2(p_1,p_2) \equiv p_1w_A^1 + p_2w_A^2$$
+$$p_1x_B^1(p_1,p_2) + p_2x_B^2(p_1,p_2) \equiv p_1w_B^1 + p_2w_B^2$$
+
+Trazendo as dotações para o lado esquerdo da equação
+
+$$p_1[x_A^1(p_1,p_2) - w_A^1] + p_2[x_A^2(p_1,p_2) - w_A^2] \equiv 0$$
+$$p_1[x_B^1(p_1,p_2) - w_B^1] + p_2[x_B^2(p_1,p_2) - w_B^2] \equiv 0$$
+
+Reescrevendo usando a notação da demanda excedente
+
+$$p_1[e_A^1(p_1,p_2)] + p_2[e_A^2(p_1,p_2)] \equiv 0$$
+$$p_1[e_B^1(p_1,p_2)] + p_2[e_B^2(p_1,p_2)] \equiv 0$$
+
+Essas equações nos dizem que o \textit{valor} (ou seja, preço vezes quantidade do bem 1 + preço vezes quantidade do bem 2) da demanda líquida de cada agente é igual a zero. Se somarmos as duas identidades, chegaremos a
+
+$$p_1[e_A^1(p_1,p_2)] + p_2[e_A^2(p_1,p_2)] + 
+p_1[e_B^1(p_1,p_2)] + p_2[e_B^2(p_1,p_2)] \equiv 0$$
+$$p_1[e_A^1(p_1,p_2) + e_B^1(p_1,p_2)] + p_2[e_A^2(p_1,p_2) + e_B^2(p_1,p_2)] \equiv 0$$
+
+Veja que os termos dentro dos colchetes são exatamente as funções de demanda excedente agregadas. Ou seja
+
+$$p_1[z_1(p_1,p_2)] + p_2[z_2(p_1,p_2) ] \equiv 0$$
+
+Chegamos exatamente na lei de Walras. Que é o que queríamos mostrar. Como o valor das demandas líquidas de cada agente é igual a zero. O motivo disso é que a soma das demandas líquidas também será igual a zero.\footnote{Eu demorei um tempo até entender essa frase. Só segue a diante se realmente tu entender.}
+\\
+\\
+Como a lei de Walras se aplica para \textit{qualquer} nível de preços, ela também é válida para o caso particular onde a demanda a função de demanda excedente agregada para o bem 1 seja igual a zero:
+
+$$z_1(p_1^*,p_2^*) = 0$$
+
+A lei de Walras, que acabamos de ver, nos afirma que
+
+$$p_1 z_1(p_1,p_2) + p_2 z_2(p_1,p_2) = 0$$
+
+Juntando as duas coisas, temos que
+
+$$ p_2 z_2(p_1,p_2) = 0$$
+
+Para qualquer $p_2 \geq 0$, será obrigatório que
+
+$$z_2(p_1,p_2) = 0$$
+
+Isso nos dá a certeza que, ao encontramos um par de preços de equilíbrio para o bem 1 cuja a demanda líquida agregada seja igual a zero. A demanda líquida agregada do bem 2 também será igual a zero.
+\\
+\\
+Esse mesmo raciocínio pode ser generalizado para o equilíbrio em $k$ bens. Nesse caso, nós precisaremos encontrar a lista de preços $(p_1,p_2,...,p_{k-1},p_k)$ que produza o equilíbrio em $k - 1$ mercados. A lei de Walras nos assegura que o mercado do bem $k$ também estará automaticamente em equilíbrio.
+
+\section{Preços Relativos}
+
+Alguns de vocês podem estar um pouco céticos com a afirmação do último parágrafo. Como podemos encontrar $k$ preços de equilíbrio olhando apenas para $k - 1$ mercados? A verdade é que só existem $k - 1$ preços independentes. 
+\\
+\\
+Como as relações no modelo de trocas se dão pela equivalência entre as dotações iniciais e as preferências, o que importa entre os preços não é seu valor nominal e sim seu valor relativo. No exemplo de como o leiloeiro aumentou o preço do bem 2 afim de chegar no equilíbrio do mercado, nós saímos da relação de preço $p_1 = p_2 = 1$ para uma relação $2p_1 = p_2$ (ou seja, $p_2$ é o dobro de $p_1$). Entretanto, nós chegaríamos no mesmo equilíbrio se o leiloeiro \textit{reduzisse} preço do bem 1 para 0,5.
+\\
+\\
+Isso nos permite escolher um dos preços como um \textbf{numerário}. Bastando multiplicar todos os $k$ preços por $1/p_k$, chegaremos a um sistema com $k - 1$ preços (que agora estarão dividos por $p_k$) e $k - 1$ equações. O sistema vai ficar algo como
+
+$$\frac{p_1}{p_k}x_1(p_1,p_2,...,p_{k-1}) \ + $$
+$$\frac{p_2}{p_k}x_2(p_1,p_2,...,p_{k-1}) \ + $$ 
+$$ \vdots $$
+$$\frac{p_{k-1}}{p_k}x_{k - 1}(p_1,p_2,...,p_{k-1}) \ + $$
+$$x_{k}(p_1,p_2,...,p_{k-1}) = 0$$
+
+Atenção aqui: Isso quer dizer que o modelo de equilíbrio que estamos trabalhando só pode determinar o equilíbrio das quantidades através de \textbf{preços relativos}. O que não é uma restrição que faça grande diferença na realidade.
+
+\subsection{Um Exemplo algébrico do equilíbrio}
+
+Vamos colocar toda essa álgebra em ação usando as funções de utilidade do tipo Cobb-Douglas. Seja $u_a(x_1,x_2) = (x_A^1)^{a_A}(x_A^2)^{b_A}$ sendo $a_A + b_A = 1$, a função de utilidade do consumidor A e semelhantemente para B. O sistema de equações de demandas para cada agente em cada mercado será dado por
+
+$$ x_A^1(p_1,p_2,m_A) = a_A \frac{m_A}{p_1} $$
+$$ x_A^2(p_1,p_2,m_A) = b_A \frac{m_A}{p_2} $$
+$$ x_B^1(p_1,p_2,m_B) = a_B \frac{m_B}{p_1} $$
+$$ x_B^2(p_1,p_2,m_B) = b_B \frac{m_B}{p_2} $$
+
+Os parâmetros a e b são os expoentes das funções de utilidade. O sobrescrito em cada um deles indica a qual agente eles se referem.
+\\
+\\
+As rendas $m$ são dadas pelos preços multiplicados pela quantidade na dotação inicial de cada agente:
+
+$$m_A = p_1w_A^1 + p_2w_A^2$$
+$$m_B = p_1w_B^1 + p_2w_B^2$$
+
+substituindo no sistema de equações anterior teremos que
+
+$$ x_A^1(p_1,p_2) = a_A \frac{p_1w_A^1 + p_2w_A^2}{p_1} $$
+$$ x_A^2(p_1,p_2) = b_A \frac{p_1w_A^1 + p_2w_A^2}{p_2} $$
+$$ x_B^1(p_1,p_2) = a_B \frac{p_1w_B^1 + p_2w_B^2}{p_1} $$
+$$ x_B^2(p_1,p_2) = b_B \frac{p_1w_B^1 + p_2w_B^2}{p_2} $$
+
+
+As demandas excedentes agregadas são dadas pelas somas das demandas excedentes (que nada mais são do que as demandas menos as dotações). No nosso caso, são iguais a
+
+$$z_1(p_1,p_2) = 
+a_A \frac{p_1w_A^1 + p_2w_A^2}{p_1} + 
+a_B \frac{p_1w_B^1 + p_2w_B^2}{p_1} - w_A^1 - w_B^1$$
+
+$$z_2(p_1,p_2) = 
+b_A \frac{p_1w_A^1 + p_2w_A^2}{p_2} + 
+b_B \frac{p_1w_B^1 + p_2w_B^2}{p_2} - w_A^2 - w_B^2$$
+
+Essas equações satisfazem a lei de Walras. Se você duvidar disso, o que é um ótimo sinal, pode aplicar exatamente o mesmo processo feito na seção 32.6.
+\\
+\\
+Ao escolhermos $p_2$ como nosso numerário, podemos dividir os preços por $p_2$ de modo que $p_2/p_2 = 1$. Para simplificação, vamos adotar a notação $p_1 = p_1/p_2$. Acabaremos com um sistema igual a
+
+$$z_1(p_1,1) = 
+a_A \frac{p_1w_A^1 + w_A^2}{p_1} + 
+a_B \frac{p_1w_B^1 + w_B^2}{p_1} - w_A^1 - w_B^1$$
+
+$$z_2(p_1,1) = 
+b_A (p_1w_A^1 + w_A^2) + 
+b_B (p_1w_B^1 + w_B^2) - w_A^2 - w_B^2$$
+
+No equilíbrio, nós vimos que as demandas excedentes agregadas são iguais a zero, então, vamos pegar uma dessas duas equações e resolver $p_1$ para o caso igual a zero. Se você fizer isso para a primeira, chegará num resultado igual a
+
+$$p_1^* = \frac{a_A w_A^2 + b_A w_B^2}{a_B w_A^1 + b_B w_B^1}$$
+
+Esse valor de $p_1$ é o valor cuja demanda excedente agregada para o bem 1 é igual a zero. Pela lei de Walras que acabamos de ver, já sabemos então que a demanda excedente do bem 2 também será igual a zero.
+
+\section{A Existência de Equilíbrio}
+
+Como esse curso é nível graduação, não entraremos muito fundo nos aspectos formais de alguns tópicos. Nos níveis de pós-graduação, os ferramentais matemáticos formais são a principal maneira de demonstrar conceitos e derivar conclusões. Umas dessas conclusões que estudaremos brevemente diz respeito à \textbf{existência de um equilíbrio competitivo}, ou seja, investigaremos como podemos afirmar que sempre existe \textit{pelo menos algum} conjunto de preços que iguale oferta e demanda nos mercados.
+\\
+\\
+\textbf{Comentário:} Para aqueles com mais curiosidade. Eu recomendo uma consulta no capítulo 15 do Mas-Colell (1995), capítulo 21 do Varian: Microeconomic Analysis (1992), capítulo 05 do Kreps (1990) e capítulo 05 do Jehle (2011). Mas fica aqui o aviso, o ferramental matemático é bem mais avançado do que estamos trabalhando nesse curso.
+\\
+\\
+Como o próprio professor Kreps expõe no livro dele a resposta para a pergunta "Sempre existe um equilíbrio walrasiano para uma economia de trocas qualquer"\ geralmente será não. Então o que os cientistas trabalharam para responder foi uma versão um pouco diferente dessa pergunta: "Sob quais condições, é garantido que exista algum equilíbrio em uma economia de trocas?". A resposta (versão graduação) para essa pergunta é que a função de demanda excedente deve ser uma \textbf{função contínua}.
+\\
+\\
+A continuidade é uma característica das funções e possui um punhado de definições existentes. O professor Varian coloca uma versão bem resumida que vamos usar (mas eu também foi colocar uma um pouco mais formal como comentário opcional). Uma função é chamada de contínua se \textit{pequenas variações} na suas variáveis independentes resultam em \textit{pequenas variações} variáveis dependentes. Ou seja, não temos \textit{grandes saltos} ou \textit{quebras} no gráfico dessas funções.
+\\
+\\
+\textbf{Comentário Opcional:} Uma definição mais formal de função contínua (a definição de Cauchy) pode ser achada na página 534 do livro "Advanced Microeconomics"\ do professor Jehle. Seja $D$ um subconjunto de $\mathbb{R}^m$ e seja $f : D \shortrightarrow \mathbb{R}^n$. Então, a função f será contínua se, no ponto, $\mathbf{x} \in D$ se, para todos os $\epsilon > 0$, existir um $\delta >0$ de modo que $f(B_{\delta}(\mathbf{x}^0 \cap D) \subset B_{\epsilon}(f(\mathbf{x}^0)$.\footnote{Isso aqui é para vocês terem um gostinho de como é o conteúdo nos níveis mais avançados.}
+\\
+\\
+Mas agora precisamos saber quais são as condições para que a função de demanda excedente seja contínua. Temos dois tipos de condições. A primeira é que as funções de demanda individuais sejam contínuas (que por sua vez tem como condição que as preferências dos consumidores sejam convexas). A segunda é que, mesmo que algumas pessoas tenham comportamento descontínuo, se essas forem pequenas em relação ao total do mercado, a função de demanda ainda pode ser contínua (que é um pressuposto bem razoável em se tratando de um mercado competitivo).
+
+\section{Equilíbrio e Eficiência}
+
+A questão a eficiência diz respeito a comprovação de que um equilíbrio de mercado é um modelo eficiente de Pareto. A comprovação é simples: Como os pontos da curva de contrato são os pontos onde as curvas de utilidade mais altas, ou seja, com maior valor, tangenciam a curva de dotação dos agentes, não há possibilidade de algum deles obter qualquer melhoria preferida pois a escolha de maior utilidade já foi satisfeita dada a restrição orçamentária.
+
+\section{A Álgebra da Eficiência}
+
+Podemos demonstrar o argumento da seção anterior de maneira algébrica. Para isso vamos partir da hipótese de que o equilíbrio de mercado \textbf{não} é eficiente no sentido de Pareto.
+\\
+\\
+\textbf{Comentário:} Essa seção é uma boa demonstração de como funciona uma demonstração formal. Nós queremos provar uma hipótese mas a abordagem que o professor optou foi partir da negação dessa hipótese. Pode parecer estranho, mas a ideia é simples: se partimos da ideia que a nossa hipótese é falsa, somos capazes de chegar a um resultado válido? Se a resposta for não, isso significa que nossa hipótese só pode ser verdadeira.\footnote{O nome dessa técnica de demonstração é "prova por contradição".}
+\\
+\\
+Dizer que o equilíbrio de mercado não é eficiente no sentido de Pareto implica na existência de uma alocação possível $(y_A^1,y_A^2,y_B^1,y_B^2)$ de modo que
+
+\newpage
+
+$$y_A^1 + y_B^1 = w_A^1 + w_ B^1$$
+$$y_A^2 + y_B^2 = w_A^2 + w_ B^2$$
+
+onde, se essa alocação y for preferida à outra alocação x será verdade que
+
+$$(y_A^1 + yA2) \succ_A (x_A^1 + x_A^2)$$
+$$(y_B^1 + yB2) \succ_B (x_B^1 + x_B^2)$$
+
+Os símbolos "$\succ_A$" e "$\succ_B$" significam as preferências de A e B.
+\\
+\\
+As primeiras equações nos dizem que a alocação y é factível. As segundas relações nos dizem que os agentes A e B preferem a alocação y em detrimento da alocação x.
+\\
+\\
+Mas veja que, pelo conceito de equilíbrio de mercado, os agentes estão nas alocações que maximizam a sua utilidade dada sua restrição orçamentária. Isso implica em dizer que, se y é preferido ao equilíbrio, essa alocação precisa ser, obrigatoriamente, mais cara que a alocação do equilíbrio, ou seja, está acima da restrição orçamentária de cada agente. Esse argumento pode ser traduzido na forma algébrica
+
+$$p_1y_A^1 + p_2y_A^2 > p_1w_A^1 + p_2w_A^2$$
+$$p_1y_B^1 + p_2y_B^2 > p_1w_B^1 + p_2w_B^2$$
+
+Somando as duas inequações, teremos
+
+$$p_1(y_A^1 + y_B^1) + p_2(y_A^2 + y_B^2) > p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2)$$
+
+Mas se voltarmos nas duas primeiras equações e substituirmos o lado esquerda dessa inequação, chegaremos ao resultado
+
+$$p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2) > p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2)$$
+
+O que é uma contradição, mas isso é exatamente o resultado que queríamos chegar.
+\\
+\\
+Como derivamos uma contradição partindo da negativa da nossa hipótese, podemos concluir que a hipótese original é verdadeira. Desse modo, podemos afirmar que os equilíbrios de mercado são eficientes no sentido de Pareto.
+\\
+\\
+Essa conclusão é tão importante que a comunidade científica denominou como \textbf{Primeiro Teorema da Teoria Econômica do Bem-Estar}.
+\\
+\\
+Esse teorema afirma que as alocações obtidas em um mercado competitivo serão eficientes no sentido de Pareto. Atente para o fato que o teorema não afirma nada sobre outras características como, por exemplo, a distribuição da renda. A prova disso é que a alocação 100\% para o agente A e 0\% pra o B é eficiente no sentido de Pareto. O resultado pode até não ser socialmente aceitável ou desejável, mas será necessariamente eficiente.
+\\
+\\
+\textbf{Comentário:} Aqui nós temos um exemplo onde revisitamos o monopólio só que dessa vez dentro de uma caixa de Edgeworth. Vemos como um monopólio acaba alocando de maneira ineficiente os recursos para poder maximizar seu retorno. Ao invés de escolher o preço onde a curva de indiferença dos dois agentes tangencia a restrição orçamentária, o monopolista escolhe o ponto onde a curva de indiferença dele tangencia a curva de preço-consumo do outro agente. Também percebemos que um monopolista perfeitamente discriminador é capaz de criar uma alocação eficiente no sentido de Pareto.
+
+\section{Eficiência e Equilíbrio}
+
+O primeiro teorema de bem-estar nos diz que todo equilíbrio de mercado é eficiente no sentido de Pareto. Mas será possível afirmar que toda alocação eficiente no sentido de Pareto pode ser alcançada por um conjunto de preços definidos por um mercado competitivo? A resposta é sim, mas depende de algumas condições.
+\\
+\\
+Devemos lembrar que um equilíbrio de mercado é o ponto onde as curvas de indiferença dos agentes tangencia a restrição orçamentária em \textbf{um único ponto}. O problema é que um equilíbrio de Pareto não tem nenhuma relação com a restrição orçamentária. Então, sempre que as curvas de indiferença são tangentes, temos um equilíbrio de Pareto.
+\\
+\\
+A nossa condição reside justamente na relação entre esses dois conceitos. Se as preferências dos agentes são \textbf{convexas}, para cada equilíbrio de Pareto, haverá alguma lista de preços que possa determinar aquela alocação. Essa condição (de convexidade) das preferências recebeu o nome de \textbf{Segundo Teorema do Bem-Estar}.
+\\
+\\
+A demonstração que o professor nos dá é gráfica e pode ser observada no material original.
+
+\section{Implicações do 1º Teorema do Bem-Estar}
+
+Esses teoremas que vimos são de grande relevância para a teoria econômica. Mesmo que nosso estudo ainda seja em nível básico, saiba que essas demonstrações podem ser expandidas para um número arbitrário de agentes e bens. Essas conclusões são fundamentais para a elaboração de modelos de alocação de recursos.
+\\
+\\
+Existem alguns pressupostos que fazem parte do teorema que merecem ser explicitados para melhor compreensão:
+
+\begin{itemize}
+\item Os agentes só se preocupam com seu consumo de bens e não com a escolha dos demais agentes. Quando existe essa relação entre os agentes, dizemos que há uma \textbf{externalidade no consumo} que pode levar a um resultado ineficiente de Pareto.
+
+\item Os agentes agem de maneira competitiva. Nós já vimos que o modelo de dois consumidores é apenas uma ferramenta didática.
+
+\item O teorema só é relevante em um contexto de equilíbrio competitivo. Se temos poder de mercado (que ocorre quando temos poucos agentes) esse teorema não se aplicaria.
+\end{itemize}
+
+Esses pressupostos constituem um estrutura poderosa (e também uma delimitação clara) para a utilização do modelo competitivo de alocação. Sempre que tivermos relativa confiança que determinado mercado é competitivo, os consumidores só precisarão saber os preços para alocar suas dotações de maneira eficiente. Essa redução da necessidade de informação para a tomada da decisão de consumo é um forte argumento para adoção desse modelo quando precisamos alocar recursos escassos.
+
+\section{Implicações do 2º Teorema do Bem-Estar}
+
+O segundo teorema afirma que, se as preferências são convexas, podemos alcançar qualquer alocação eficiente de Pareto pelo sistema de preços.
+\\
+\\
+A implicação poderosa desse teorema é que as discussões de eficiência e distrição da riqueza podem ser separadas. Os preços alocam a renda via mecanismo de escassez relativa. Já a distribuição diz respeito a quantidade que os agentes poderão comprar.
+\\
+\\
+Uma vez que os agentes maximizam suas escolhas ao nível de preços dados e às suas restrições orçamentárias. Em um determinado contexto é muito desigual na dotação inicial, poderíamos redistribuir parte da dotação de um agente para o outro. O que o segundo teorema nos afirma é que o equilíbrio alcançado a partir dessa nova dotação é eficiente no sentido de Pareto.
+\\
+\\
+Perceba então que, se a sociedade tem como meta a redução de desigualdade entre as pessoas, uma mudança na \textbf{dotação} (e consequentemente na renda) via transferência entre os agentes produziria uma alocação eficiente de Pareto. Do ponto  de vista teórico, a realocação das dotações não produzirá distorções no mercado.
+\\
+\\
+Não é incomum que, em busca de reduzir a desigualdade, as discussões de política econômica defendam uma intervenção nas decisões de preços. Enquanto os impostos baseados na dotação de bens dos consumidores não geram ineficiência, os impostos que dependem das escolhas dos consumidores (baseados no consumo) geram ineficiência.
+\\
+\\
+\textbf{Comentário:} A aplicação da teoria não faz parte do escopo desse curso mas vale a pena começar a procurar materiais de economia aplicada para você perceber como esses mecanismos discutidos são usados como ferramentas analíticas. Eu tentei resumir essa parte mais teórica, mas você deve ler o material original.
+
+\section{Apêndice Matemático do equilíbrio}
+
+Aqui veremos como o problema da determinação do equilíbrio é resolvido com uso do cálculo. Dada a utilidade qualquer do agente B fixa $\overline{u}$, o problema da maximização da utilidade total do mercado pode ser formalizado como
+
+\begin{center}
+\LARGE $\stackrel{máx}{\text{\small $x_A^1,x_A^2,x_B^1,x_ B^2$}} \ \ \stackrel{u_A(x_A^1,x_A^2)}{\ }$ \\
+\ 
+\\
+\normalsize de modo que $u_B(x_B^1,x_B^2) = \overline{u}$ \\
+$x_A^1 + x_B^1 = w^1$ \\
+$x_A^2 + x_B^2 = w^2$
+\end{center}
+
+Você aprendeu no capítulo 05 como fazer uma maximização de uma função objeto dada uma restrição. A novidade aqui é que temos 3 condições de restrições. Pode até assustar numa primeira vista, mas não é nada impossível.
+\\
+\\
+Primeiramente, podemos escrever nosso problema em forma de uma Lagrangiana 
+
+$$L(x_A^1,x_A^2,x_B^1,x_B^2) = u_A(x_A^1,x_A^2) - \lambda(u_B(x_B^1,x_B^2) - \overline{u}) $$ 
+$$ - \mu_1(x_A^1 + x_B^1 - w^1) - \mu_2(x_A^2 + x_B^2 - w^2)$$
+
+Onde o $\lambda$ é o nosso conhecido multiplicador Lagrangiano, só que aqui, aplicada para a utilidade de B e $\mu$ são os multiplicadores de Lagrange nas restrições dos recursos.
+\\
+\\
+As condições de primeira ordem para maximização da nossa Lagrangiana a respeito das 4 variáveis são:
+
+$$\frac{\partial L}{\partial x_A^1} = \frac{\partial u_A}{\partial x_A^1} - \mu_1 = 0$$
+$$\frac{\partial L}{\partial x_A^2} = \frac{\partial u_A}{\partial x_A^2} - \mu_2 = 0 $$
+$$\frac{\partial L}{\partial x_B^1} = -\lambda \frac{\partial u_B}{\partial x_B^1} - \mu_1 = 0 $$
+$$\frac{\partial L}{\partial x_B^2} = -\lambda \frac{\partial u_B}{\partial x_B^2} - \mu_2 = 0 $$
+
+Eu não sei você, mas quando eu olhei essa passagem, eu fiquei com dúvida porque lá no capítulo 05 ele deriva a Lagrangiana em relação ao lambda também. A questão é que nós não precisamos fazer isso obrigatoriamente. Se não nos atrapalhar que as soluções de maximização sejam funções dos multiplicadores de Lagrange, podemos manter as condições de primeira ordem apenas para as variáveis que queremos.\footnote{Eu queria explicar melhor, mas eu preciso que você tenha feito o dever de casa se está nessa parte do curso. Não dá pra ter dúvidas sobre isso nessa altura do campeonato.}
+\\
+\\
+Lá no capítulo sobre as preferências, nós aprendemos que a taxa marginal de substituição é obtida quando, dada uma função de utilidade $u(x_1,x_2)$, a derivada parcial de $u$ em função de $x_{1}$ divida pela derivada parcial de $u$ em relação à $x_{2}$. Ou seja
+
+$$TMS_{A} = \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+
+Que é o que obtemos quando dividimos a primeira equação pela segunda.
+\\
+\\
+Se fizermos a mesma coisa para as equações 3 e 4, teremos
+
+$$TMS_{B} = \frac{\partial u_A / \partial x_{B}^1 }{\partial u_A / \partial x_{B}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+
+A explicação desse igualdade já é conhecida: no equilíbrio, as taxas marginais de substituição são iguais para os dois mercados.
+\\
+\\
+Também sabemos que, no equilíbrio de um mercado competitivo, as TMS são iguais aos preços, ou seja
+
+$$	\frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\partial u_A / \partial x_{B}^1 }{\partial u_A / \partial x_{B}^2} = \frac{ p_{1} }{ p_{2} } $$
+
+Observe que temos uma equivalência entre os multiplicadores de Lagrange $\mu$ e os preços. Eles até têm nomes especiais, nesse contexto, podem ser chamamos de \textbf{preços-sombra} ou \textbf{preços de eficiência}.
+\\
+\\
+Esse igualdade decorre do fato que toda alocação eficiente de Pareto deve satisfazer as igualdades das TMS em relação aos multiplicadores de Lagrange. E, por outro lado, todo equilíbrio em mercado competitivo, deve igualar a taxa marginal de substituição pela divisão dos preços.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Produção}
 
+Você deve ter sentido falta do componente da produção no nosso modelo de equilíbrio. Tal qual o capítulo anterior, nós vamos nos valer de simplificações para poder avançarmos na construção do modelo. Aqui, vamos supor apenas um único consumidor, uma única empresa e dois bens. O nome dado a esse tipo de modelo foi \textbf{economia de Robinson Crusoé}\footnote{Caso você não conheça, Robinson Crusoé é um personagem de um romance que vive sozinho em uma ilha.}.Como anteriormente, os resultados obtidos aqui podem ser generalizados para um número arbitrário de agentes.
+
+\section{A Economia de Robinson Crusoé}
+
+Na nossa hipótese fantasiosa, Robinson Crusoé terá um duplo papel: ele produzirá todo o montante de alimento (cocos) e será o único consumidor. Desse modo, ele pode escolher, para cada período de tempo, entre gastar energia coletando cocos ou descansar na praia.
+\\
+\\
+Diferentemente da nossa caixa de Edgeworth, aqui teremos a volta da \textbf{função de produção}. Suporemos que a função de produção de cocos tenha rendimentos marginais decrescentes ao longo do tempo trabalhado.
+
+
+\section{Crusoé S.A.}
+\section{A Empresa}
+\section{O Problema de Robinson}
+\section{Colocando os dois Juntos}
+\section{Tecnologias Diferentes}
+\section{A Produção e o 1º Teorema de Bem-Estar}
+\section{A Produção e o 2º Teorema de Bem-Estar}
+\section{Possibilidades de Produção}
+\section{Vantagem Comparativa}
+\section{A Eficiência de Pareto}
+\section{Náufragos S.A.}
+\section{Robinson e Sexta-Feira como Consumidores}
+\section{Alocação de Recursos Descentralizada}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{O Bem-Estar}
+
+\section{Agregação de Preferências}
+\section{Funções de Bem-Estar Social}
+\section{Maximização do Bem-Estar}
+\section{Funções de Bem-Estar Social Individualistas}
+\section{Alocações Justas}
+\section{Inveja e Equidade}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Externalidades}
 
+\section{Fumantes e Não Fumantes}
+\section{Preferências Quase Lineares e Teorema de Coase}
+\section{Produção de Externalidades}
+\section{Interpretação das Condições}
+\section{Sinais de Mercado}
+\section{A Tragédia do Uso Comum}
+\section{Polição de Automóveis}
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Tecnologia da Informação}
+
+\section{Concorrência de Sistemas}
+\section{O Problema dos Complementos}
+\section{Aprisionamento}
+\section{Externalidades de Rede}
+\section{Mercados com Externalidades de Rede}
+\section{Dinâmica de Mercado}
+\section{Implicações das externalidades de Rede}
+\section{Mercados Bilaterais}
+\section{Gestão de Direitos}
+\section{O Compartilhamento de Propriedade Intelectual}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Bens Públicos}
 
+\section{Quando Prover um Bem Público?}
+\section{Provisão Privada do Bem Público}
+\section{Pegando Carona}
+\section{Diferentes Níveis do Bem Público}
+\section{Preferências Quase Lineares e Bens Públicos}
+\section{O problema do Carona}
+\section{Comparação com os Bens Privados}
+\section{Votação}
+\section{O Mecanismo Vickey-Clarke-Groves}
+\section{Exemplos de VCG}
+\section{Problemas com Imposto de Clarke}
+
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Informação Assimétrica}
+
+\section{O Mercado de Carros Ruins}
+\section{A Escolha da Qualidade}
+\section{Seleção Adversa}
+\section{Perigo Moral}
+\section{Perigo Moral e Seleção Adversa}
+\section{Sinalização}
+\section{Incentivos}
+\section{Informação Assimétrica}
 
 \end{document}

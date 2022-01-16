@@ -1,0 +1,1 @@
+pdflatex microeconomics_varian.tex

@@ -38,13 +38,13 @@
     - [ ] Curva de Custo
     - [ ] Oferta da Empresa
     - [ ] Oferta da Indústria
-- [ ] Mercados e Preços
+- [x] Mercados e Preços
     - [x] Monopólio
     - [x] O Comportamento do Monipolista
     - [x] O Mercado de Fatores
-    - [ ] O Oligopólio
-    - [ ] A Teoria dos Jogos
-    - [ ] Aplicações da Teoria dos Jogos
+    - [x] O Oligopólio
+    - [x] A Teoria dos Jogos
+    - [x] Aplicações da Teoria dos Jogos
 - [ ] Tópicos Avançados
     - [ ] Economia Comportamental
     - [ ] Trocas
