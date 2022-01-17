@@ -52,6 +52,10 @@ plt.plot(q1,f_prod(14*q1,1/1.8),color='red',label='função de produção')
 for i in [40,45,50]:
 	plt.plot(q1,(i/(100-q1)**0.5)**(1/0.5),label='C.I. = {}'.format(i))
 
+coord = [35.71,31.58]
+plt.plot(coord[0],coord[1],marker='o',color='white')
+plt.annotate('  Cesta',(coord[0],coord[1]))
+
 plt.xlim(0,100)
 plt.ylim(0,100)
 
