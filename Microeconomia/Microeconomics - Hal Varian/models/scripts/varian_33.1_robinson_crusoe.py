@@ -47,20 +47,17 @@ ax.set_title('cap 33 - A economia de Robinson Crusoé')
 ax.set_xlabel('Trabalho = 100 - Lazer')
 ax.set_ylabel('Cocos')
 
-plt.plot(q1,f_prod(14*q1,1/1.8),color='red',label='f.produção')
+plt.plot(q1,f_prod(14*q1,1/1.8),color='red',label='função de produção')
 
 for i in [40,45,50]:
-	plt.plot(q1,(i/(100-q1)**0.5)**(1/0.5),label='{}'.format(i))
+	plt.plot(q1,(i/(100-q1)**0.5)**(1/0.5),label='C.I. = {}'.format(i))
 
 plt.xlim(0,100)
 plt.ylim(0,100)
 
 plt.legend(loc='upper left')
 
-plt.show()
+path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap33_1-economia_robinson.png'
 
-'''path = 
-r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia'
-r'\Microeconomics - Hal Varian\images\cap32_1-caixa_edgeworth_9.png'
 plt.savefig(path, transparent=True)
-'''
+
