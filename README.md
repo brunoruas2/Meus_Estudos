@@ -46,8 +46,8 @@
     - [x] A Teoria dos Jogos
     - [x] Aplicações da Teoria dos Jogos
 - [ ] Tópicos Avançados
-    - [ ] Economia Comportamental
-    - [ ] Trocas
+    - [x] Economia Comportamental
+    - [x] Trocas
     - [ ] Produção
     - [ ] Bem-Estar
     - [ ] Externalidades

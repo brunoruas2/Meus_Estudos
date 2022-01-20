@@ -16,6 +16,7 @@ from mpl_toolkits.axes_grid1 import host_subplot
 pd.options.mode.chained_assignment = None  # default='warn'
 
 plt.style.use('dark_background')
+#plt.rcParams['text.usetex'] = True
 
 #####################################################################################################
 # Funções usadas no modelo
@@ -26,6 +27,9 @@ def fu_rob(x1,x2,alpha,beta):
 
 def f_prod(x1,a):
 	return x1**a
+
+def isolucro(pi,w,L):
+	return pi + w*L
 
 #####################################################################################################
 # Gerando o gráfico
@@ -43,24 +47,33 @@ fig = plt.figure(dpi=120)
 ax = host_subplot(111)
 ax.grid(color='gray',linewidth=.2)
 
-ax.set_title('cap 33 - A economia de Robinson Crusoé')
-ax.set_xlabel('Trabalho = 100 - Lazer')
+ax.set_title('cap 33 - Retornos Constantes')
+ax.set_xlabel('<- Lazer | trabalho -> ')
 ax.set_ylabel('Cocos')
 
-plt.plot(q1,f_prod(14*q1,1/1.8),color='red',label='f.produção')
+# funcoes de producao
+#plt.plot(q1,f_prod(14*q1,1/2),color='red',label='função de produção') # retornos decrescentes
+plt.plot(q1,q1*0.57,color='red',label='Função de Produção/\nRestrição Orçamentária') # retornos constantes
 
-for i in [40,45,50]:
-	plt.plot(q1,(i/(100-q1)**0.5)**(1/0.5),label='{}'.format(i))
+# curvas de indiferença
+plt.plot(q1,(38/(100-q1)**0.5)**(1/0.5),label='C.I.')
+
+# curva de iso lucro e reta orcamentaria
+#plt.plot(q1,isolucro(11.5,0.31,q1),label='Isolucro')
+#plt.plot(q1,isolucro(11.5,0.31,q1),label='Restrição\nOrçamentária')
+
+# point
+coord = [51,30]
+plt.plot(coord[0],coord[1],marker='o',color='white')
+#plt.annotate(r'$\pi^*$',(coord[0],coord[1]+1),fontsize=20)
 
 plt.xlim(0,100)
-plt.ylim(0,100)
+plt.ylim(0,50)
 
 plt.legend(loc='upper left')
 
-plt.show()
+#plt.show()
 
-'''path = 
-r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia'
-r'\Microeconomics - Hal Varian\images\cap32_1-caixa_edgeworth_9.png'
+path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap33_6-rendimento_constantes.png'
 plt.savefig(path, transparent=True)
-'''
+

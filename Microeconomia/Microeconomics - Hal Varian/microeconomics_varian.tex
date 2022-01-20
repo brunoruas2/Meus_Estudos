@@ -3361,21 +3361,92 @@ Esse igualdade decorre do fato que toda alocação eficiente de Pareto deve sati
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Produção}
 
-Você deve ter sentido falta do componente da produção no nosso modelo de equilíbrio. Tal qual o capítulo anterior, nós vamos nos valer de simplificações para poder avançarmos na construção do modelo. Aqui, vamos supor apenas um único consumidor, uma única empresa e dois bens. O nome dado a esse tipo de modelo foi \textbf{economia de Robinson Crusoé}\footnote{Caso você não conheça, Robinson Crusoé é um personagem de um romance que vive sozinho em uma ilha.}.Como anteriormente, os resultados obtidos aqui podem ser generalizados para um número arbitrário de agentes.
+Você deve ter sentido falta do componente da produção no nosso modelo de equilíbrio geral. Tal qual o capítulo anterior, nós vamos nos valer de simplificações para poder avançarmos na construção do modelo. Aqui, vamos supor apenas um único consumidor, uma única empresa e dois bens. O nome dado a esse tipo de modelo foi \textbf{economia de Robinson Crusoé}\footnote{Caso você não conheça, Robinson Crusoé é um personagem de um romance que vive sozinho em uma ilha.}.Como anteriormente, os resultados obtidos aqui podem ser generalizados para um número arbitrário de agentes.
 
 \section{A Economia de Robinson Crusoé}
 
 Na nossa hipótese fantasiosa, Robinson Crusoé terá um duplo papel: ele produzirá todo o montante de alimento (cocos) e será o único consumidor. Desse modo, ele pode escolher, para cada período de tempo, entre gastar energia coletando cocos ou descansar na praia.
 \\
 \\
-Diferentemente da nossa caixa de Edgeworth, aqui teremos a volta da \textbf{função de produção}. Suporemos que a função de produção de cocos tenha rendimentos marginais decrescentes ao longo do tempo trabalhado.
+Diferentemente da nossa caixa de Edgeworth, aqui teremos a volta da \textbf{função de produção}. Suporemos que a função de produção de cocos tenha rendimentos marginais decrescentes ao longo do tempo trabalhado. No gráfico abaixo podemos ver algumas curvas de indiferença e a função de produção.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{cap33_1-economia_robinson.png}
+\end{figure}
+
+O ponto de maximização ocorre na tangência entre a função de produção e a curva de indiferença mais alta.
 
 \section{Crusoé S.A.}
+
+Essa é a seção mais estranha que eu já vi em um livro didático. Vá ler o material original. Mas a ideia, por mais estranha que seja, faz todo sentido. Ao colocarmos uma empresa maximizadora de lucros dentro do nosso modelo, novas variáveis surgem como, por exemplo, salário, lucro e preço. O objetivo é construir um modelo de equilíbrio geral que seja capaz de igualar, simultaneamente, os preços no mercado de bens e no mercado de trabalho.
+\\
+\\
+A estratégia usada para simplificar o processo foi tornar o produto - que no nosso caso é coco - como um numerário. Isso simplifica a análise porque agora só temos que definir o salário e o lucro em termos do nosso numerário.
+
 \section{A Empresa}
+
+O problema de empresa é simples de entender. O objetivo do empresário é maximizar o seu lucro $\pi$. Para isso, ele terá que decidir a quantidade produzida no mercado $C$. Como estamos usando o coco como numerário, a receita da empresa será dada pela quantidade total produzida e vendida no mercado. Para poder produzir, a empresa terá que contratar uma quantidade $L$ de trabalho, que será pago por um salário $w$.
+\\
+\\
+Podemos traduzir esse raciocínio acima na seguinte equação:
+
+$$ \pi = C - wL $$
+
+Ou, se estivermos interessados na quantidade de produção, podemos reescrever como:
+
+$$ C = \pi + wL $$
+
+Não é difícil ver que essa função função de primeiro grau é uma curva de \textbf{isolucro} lá do capítulo 20. Desse modo, podemos ver, a partir de uma nível inicial de lucro $\pi^*$, a quantidade de cocos que manteria o lucro constante após o pagamento da mão de obra.
+\\
+\\
+A maximização nesse caso, ocorre no ponto onde a reta de isolucro intercepta a curva da função de produção. Esse é o ponto onde a empresa consegue o maior retorno possível. O gráfico abaixo ilustra bem essa situação
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{cap33_3-max_lucro.png}
+\end{figure}
+
+Com isso, conseguimos determinar que, dado o salário $w$ e a função de produção, a empresa contratará a quantidade de trabalho que permita o lucro máximo. Como no nosso exemplo o único acionista é o Robinson, ele poderá usufruir do consumo de $\pi^*$ cocos oriundos do seu lucro como empresário.
+
 \section{O Problema de Robinson}
+
+Após receber seus dividendos, Robinson tem que escolher entre usufruir dos cocos e descansar ou trabalhar na coleta de mais cocos (recebendo seu devido salário). Nós já vimos no capítulo 9 o problema de maximização da utilidade com trabalho. Esse problema é uma adaptação daquele. Robinson escolherá ofertar a quantidade de trabalho que produza a maior utilidade possível dada sua restrição orçamentária
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{cap33_4-max_trabalho.png}
+\end{figure}
+
+Com esse ponto, conseguimos determinar a oferta de trabalho pela igualdade entre a TMS do consumo pelo lazer e o salário. Exatamente o que vimos no capítulo 9.
+
 \section{Colocando os dois Juntos}
+
+Agora que sabemos como Robinson se comportará tanto como acionista da Crosué S.A. como trabalhador. Podemos colocar esses dois equilíbrios num mesmo gráfico para ver como as variáveis se comportam juntas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{cap33_5-equilibrio.png}
+\end{figure}
+
+Usando nosso instrumento de preços, chegamos na mesma situação de escolha da primeira seção desse capítulo. Robinson acaba produzindo o ponto cuja produtividade marginal do trabalho\footnote{Que é a inclinação da função de produção.} é igual ao salário.
+\\
+\\
+Claro que tudo isso parece muito estranho. Uma pessoa escolheria diretamente o quanto trabalhar ao invés de ficar se dividindo entre empresário e trabalhador. Mas isso aqui é apenas para fins didáticos. Em um cenário com vários atores, os atores agem para maximizar suas preferências a medida que possuem informações sobre o mercado, os preços são justamente o meio que empresas e trabalhadores recebem as informações para determinar suas ações de modo a maximizar suas escolhas.
+
 \section{Tecnologias Diferentes}
+
+No modelo anterior, supomos que a tecnologia de produção possuia retornos decrescentes em escala. Claro que, se pensarmos em arranjos produtivos diferentes, teremos diferentes comportamentos das nossas funções de produção.
+
+\subsection{Retornos Constantes em Escala}
+
+No caso de uma função de produção com retornos constantes em escala,\footnote{Se você não se lembra desse conceito, olha o capítulo 19.10.} a maximização do lucro será igual a zero. A explicação desse comportamento é dado no capítulo 20.10.\footnote{Vá lá ler.} Nesse caso, nossa função de produção seria uma reta partindo da origem dos planos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{cap33_6-rendimento_constantes.png}
+\end{figure}
+
 \section{A Produção e o 1º Teorema de Bem-Estar}
 \section{A Produção e o 2º Teorema de Bem-Estar}
 \section{Possibilidades de Produção}
