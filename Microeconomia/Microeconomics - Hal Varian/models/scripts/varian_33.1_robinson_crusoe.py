@@ -28,6 +28,12 @@ def fu_rob(x1,x2,alpha,beta):
 def f_prod(x1,a):
 	return x1**a
 
+def fp_peixe(x1,a):
+	return x1**a
+
+def fp_coco(x1,a):
+	return x1**a
+
 def isolucro(pi,w,L):
 	return pi + w*L
 
@@ -35,7 +41,7 @@ def isolucro(pi,w,L):
 # Gerando o gráfico
 #####################################################################################################
 ## dados
-max_val = 100
+max_val = 200
 q1 = np.linspace(0,max_val,100)
 q2 = np.linspace(0,max_val,100)
 
@@ -47,33 +53,38 @@ fig = plt.figure(dpi=120)
 ax = host_subplot(111)
 ax.grid(color='gray',linewidth=.2)
 
-ax.set_title('cap 33 - Retornos Constantes')
-ax.set_xlabel('<- Lazer | trabalho -> ')
+ax.set_title('cap 33 - Possibilidade de Produção')
+ax.set_xlabel('Peixes')
 ax.set_ylabel('Cocos')
 
 # funcoes de producao
 #plt.plot(q1,f_prod(14*q1,1/2),color='red',label='função de produção') # retornos decrescentes
-plt.plot(q1,q1*0.57,color='red',label='Função de Produção/\nRestrição Orçamentária') # retornos constantes
+#plt.plot(q1,q1*0.57,color='red',label='Função de Produção/\nRestrição Orçamentária') # retornos constantes
+
+# possibilidade de producao
+x = [0,200,300] # q1
+y = [300,200,0] # 10 * (10 - (q1/20)) + 20 * (10 - (q1/10))
+plt.plot(x,y,color='red',label='Fronteira de\nPossibilidade de\nProdução')
+plt.fill_between(x, y, color='red',alpha=0.1)
 
 # curvas de indiferença
-plt.plot(q1,(38/(100-q1)**0.5)**(1/0.5),label='C.I.')
+#plt.plot(q1,(38/(100-q1)**0.5)**(1/0.5),label='C.I.')
 
 # curva de iso lucro e reta orcamentaria
 #plt.plot(q1,isolucro(11.5,0.31,q1),label='Isolucro')
 #plt.plot(q1,isolucro(11.5,0.31,q1),label='Restrição\nOrçamentária')
 
 # point
-coord = [51,30]
-plt.plot(coord[0],coord[1],marker='o',color='white')
+#coord = [51,30]
+#plt.plot(coord[0],coord[1],marker='o',color='white')
 #plt.annotate(r'$\pi^*$',(coord[0],coord[1]+1),fontsize=20)
 
-plt.xlim(0,100)
-plt.ylim(0,50)
+plt.xlim(0,300)
+plt.ylim(0,300)
 
-plt.legend(loc='upper left')
+plt.legend(loc='upper right')
 
-#plt.show()
-
-path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap33_6-rendimento_constantes.png'
+path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap33_10-pos_prod2.png'
 plt.savefig(path, transparent=True)
 
+plt.show()
