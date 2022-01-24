@@ -3574,7 +3574,7 @@ Além do equilíbrio entre as trocas, temos que buscar um equilíbrio na dimens�
 	\item TMS = TMT
 \end{itemize}
 
-Nos cenários 1 e 2, as alocações podem não resultar num equilíbrio eficiente no sentido de Pareto (pode até ser no que tange às trocas, mas não será na produção). Quando tempos essa diferença, um consumidor pode estar disposto a trocar o bem 1 pelo bem 2 em uma proporção que seja compatível com a tecnologia do mercado. Isso o levaria a uma situação de melhora dentro do mercado (ele escolheria mudar sua escolha de produção trabalhando mais para o bem desejado). Isso implica que, para que ninguém tenha incentivo de mudar o quanto de trabalho será alocado em algum bem, que a TMS de cada agente seja igual à TMT do mercado.
+Nos cenários 1 e 2, as alocações podem não resultar num equilíbrio eficiente no sentido de Pareto (pode até ser no que tange às trocas, mas não será na produção). Quando tempos essa diferença, um consumidor pode estar disposto a trocar o bem 1 pelo bem 2 em uma proporção que seja compatível com a tecnologia do mercado. Isso o levaria a uma situação de melhora dentro do mercado (ele escolheria mudar sua escolha de produção trabalhando mais para produzir o bem desejado). Isso implica que, para que ninguém tenha incentivo de mudar o quanto de trabalho será alocado em algum bem, que a TMS de cada agente seja igual à TMT do mercado.
 \\
 \\
 Eu mudei um pouco o formato da fronteira de possibilidade de produção, mas o importante é que você veja no gráfico abaixo que existe um ponto onde as curvas de indiferença de ambos os agentes são tangentes entre si e, simultaneamente, possuem a mesma inclinação que a curva de posibilidade de produção. Mas atente para o seguinte 
@@ -3584,7 +3584,88 @@ Eu mudei um pouco o formato da fronteira de possibilidade de produção, mas o i
 	\includegraphics[scale=0.6]{cap33_11-edgeworth_prod.png}
 \end{figure}
 
+Podemos fazer essa mesma análise com o uso do Cálculo. Primeiro precisamos encontrar uma maneira de descrever a fronteira de possibilidade de produção. A melhor maneira é usando a \textbf{função de transformação}. Essa é uma função das quantidade agregadas dos bens de modo que qualquer combinação $(X^1,X^2)$ estará na fronteira de possibilidade de produção se, e somente se,
+
+$$ T(X^1,X^2) = 0 $$
+
+Ou seja, se colocarmos uma variação positiva de peixe, essa função retornará a variação negativa de coco para que continuemos na fronteira de possibilidade de produção.
+\\
+\\
+Agora que descrevemos a tecnologia, podemos descrever a taxa marginal de transformação. Essa taxa é a inclincação do conjunto de possibilidade de produção, que podemos denotar por $\frac{d X^2}{d X^1}$.
+\\
+\\
+Considerando uma pequena mudança na produção $(dX^1,dX^2)$ que ainda seja factível, teremos que
+
+$$ \frac{\partial T(X^1,X^2)}{\partial X^1} dX^1 + \frac{\partial (X^1,X^2)}{\partial X^2} dX^2 = 0 $$
+
+Resolvendo para a taxa marginal de substituição
+
+$$ \frac{d X^2}{d X^1} = - \frac{\partial T/\partial X^1}{\partial T/\partial X^2}  $$
+
+Vamos segurar essa formula para usar mais tarde.
+\\
+\\
+Podemos escrever nosso problema de alocação eficiente de Pareto para duas pessoas como
+
+\begin{center}
+	\LARGE $\stackrel{máx}{\text{\small $x^1_A,x^2_A,x^1_B,x^2_B$}} \ \ \stackrel{u_A(x^1_A,x^2_A)}{\ }$ \\
+	\normalsize de modo que $u_B(x^1_B,x^2_B) = \overline{u}$ \\
+	\normalsize $ T(X^1,X^2) = 0 $
+\end{center}
+
+A Lagrangiana desse problema é
+
+$$ L = u_A(x^1_A,x^2_A) - \lambda(u_B(x^1_B,x^2_B) - \overline{u}) - \mu(T(X^1,X^2) - 0) $$
+
+As condições de primeira ordem são
+
+$$ \frac{\partial L}{\partial x^1_A} = \frac{\partial u_A}{\partial x^1_A} - \mu\frac{\partial T}{\partial X^1} = 0 $$
+$$ \frac{\partial L}{\partial x^2_A} = \frac{\partial u_A}{\partial x^2_A} - \mu\frac{\partial T}{\partial X^2} = 0 $$
+$$ \frac{\partial L}{\partial x^1_B} = -\lambda\frac{\partial u_B}{\partial x^1_B} - \mu\frac{\partial T}{\partial X^1} = 0 $$
+$$ \frac{\partial L}{\partial x^2_B} = -\lambda\frac{\partial u_B}{\partial x^2_B} - \mu\frac{\partial T}{\partial X^2} = 0 $$
+
+Dividindo a primeira equação pela segunda e rearranjando chegamos a
+
+$$ \frac{\partial u_A/\partial x^1_A}{\partial u_A/\partial x^2_A} = \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
+
+Fazendo a mesma coisa para as equações três e quatro
+
+$$ \frac{\partial u_B/\partial x^1_B}{\partial u_B/\partial x^2_B} = \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
+
+Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente. No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
+
 \section{Náufragos S.A.}
+
+Quando revisitamos os teoremas do bem-estar, nós afirmamos que uma economia com empresas competitivas maximizadoras de lucro com tecnologias convexas e consumindores maximizadores de utilidade com preferências convexas resulta em um alocação eficiente no sentido de Pareto. Agora nós vamos ver mais detalhes sobre como essa alocação é obtida.
+\\
+\\
+Com a expansão do nosso modelo para dois indivíduos, nós temos que descrever o processo de alocação de 4 bens: dois fatores de produção (o quanto de trabalho será contratado de Robinson e Sexta-Feira) e dois produtos (Cocos e Peixes).
+\\
+\\
+Agora, a empresa gerará lucros para Robinson e para Sexta-Feira, ou seja, eles precisam decidir, ao mesmo tempo, quanto ofertar de trabalho (de modo a maximizar suas utilidades) e quanto contratar de trabalho (de modo a  maximizar seus lucros). Vamos descrever o processo de tomada de decisão como se fossem etapas separadas, afinal, você já sabe que na realidade os agentes tomam essas decisões separadamente.
+\\
+\\
+O problema de maximização pode ser descrito como:
+
+\begin{center}
+	\LARGE $\stackrel{máx}{\text{\small $C,F,L_F,L_C$}} \ \ \stackrel{p_C C + p_F F - w_C L_C - w_F L_F}{\ }$
+\end{center}
+
+Onde C é a produção de cocos, F é a produção de peixes, $L_c$ é a quantidade de trabalho de Robinson e $L_F$ a de Sexta-Feira, $w_C$ é o salário de Rbinson e $w_F$ é o de Sexta-Feira e, por fim, $p_C$ e $p_F$ são os preços de mercado. A quantidade total produzida está restrita à fronteira de possibilidade de produção (que nada mais é do que o reflexo das restrições tecnológicas).
+\\
+\\
+Nosso objetito é maximizar o lucro da empresa, que agora se chama Naufrágios S.A., que será dado em algum ponto no conjunto de produção. Podemos definir que, no ponto de maximização, a empresa contratará uma quantidade ótima de trabalho $L_*$ de modo que os custos de trabalho podem ser descritos como $L^* = w_C L^*_C + w_F L^*_F$. Podemos reescrever nossa função objeto como:
+
+$$ \pi = p_C C + p_F F - L^* $$
+
+Podemos rearranjar a equação para encontrar a solução da quantidade de Cocos
+
+$$ C = \frac{\pi + L^*}{p_C} - \frac{p_F F}{p_C} $$
+
+Essa equação descreve as \textbf{retas de isolucro} da Naufrágios S.A., ou seja, dada uma quantidade ótima de trabalho e lucro, o lucro da empresa varia com a 
+
+
+
 \section{Robinson e Sexta-Feira como Consumidores}
 \section{Alocação de Recursos Descentralizada}
 
