@@ -3632,17 +3632,17 @@ Fazendo a mesma coisa para as equações três e quatro
 
 $$ \frac{\partial u_B/\partial x^1_B}{\partial u_B/\partial x^2_B} = \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
 
-Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente. No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
+Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente. No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais entre si e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
 
 \section{Náufragos S.A.}
 
-Quando revisitamos os teoremas do bem-estar, nós afirmamos que uma economia com empresas competitivas maximizadoras de lucro com tecnologias convexas e consumindores maximizadores de utilidade com preferências convexas resulta em um alocação eficiente no sentido de Pareto. Agora nós vamos ver mais detalhes sobre como essa alocação é obtida.
+Quando revisitamos os teoremas do bem-estar, nós afirmamos que uma economia com empresas competitivas maximizadoras de lucro com tecnologias convexas e consumindores maximizadores de utilidade com preferências convexas resulta em um alocação eficiente no sentido de Pareto. Na seção anterior nós vimos que todas as cestas factíveis do mercado se encontram dentro do conjunto de possibilidade de produção, isso inclui, obviamente, que as cestas da curva de contrato dos agentes também estão contidas no conjunto de possibilidade de produção. Mas ainda nosso modelo ainda não foi capaz de concluir qual cesta dentre todas possíveis será a cesta maximizadora em todos os mercados. Isso é o que veremos agora.
 \\
 \\
 Com a expansão do nosso modelo para dois indivíduos, nós temos que descrever o processo de alocação de 4 bens: dois fatores de produção (o quanto de trabalho será contratado de Robinson e Sexta-Feira) e dois produtos (Cocos e Peixes).
 \\
 \\
-Agora, a empresa gerará lucros para Robinson e para Sexta-Feira, ou seja, eles precisam decidir, ao mesmo tempo, quanto ofertar de trabalho (de modo a maximizar suas utilidades) e quanto contratar de trabalho (de modo a  maximizar seus lucros). Vamos descrever o processo de tomada de decisão como se fossem etapas separadas, afinal, você já sabe que na realidade os agentes tomam essas decisões separadamente.
+Agora, a empresa gerará lucros para Robinson e para Sexta-Feira, ou seja, eles precisam decidir, ao mesmo tempo, quanto ofertar de trabalho (de modo a maximizar suas utilidades) e quanto contratar de trabalho (de modo a  maximizar seus lucros). Vamos descrever o processo de tomada de decisão como se fossem etapas separadas, contudo, você já sabe que na realidade os agentes são inúmeros e tomam essas decisões separadamente.
 \\
 \\
 O problema de maximização pode ser descrito como:
@@ -3651,10 +3651,10 @@ O problema de maximização pode ser descrito como:
 	\LARGE $\stackrel{máx}{\text{\small $C,F,L_F,L_C$}} \ \ \stackrel{p_C C + p_F F - w_C L_C - w_F L_F}{\ }$
 \end{center}
 
-Onde C é a produção de cocos, F é a produção de peixes, $L_c$ é a quantidade de trabalho de Robinson e $L_F$ a de Sexta-Feira, $w_C$ é o salário de Rbinson e $w_F$ é o de Sexta-Feira e, por fim, $p_C$ e $p_F$ são os preços de mercado. A quantidade total produzida está restrita à fronteira de possibilidade de produção (que nada mais é do que o reflexo das restrições tecnológicas).
+Onde C é a produção de cocos, F é a produção de peixes, $L_c$ é a quantidade de trabalho de Robinson e $L_F$ a de Sexta-Feira, $w_C$ é o salário de Robinson e $w_F$ é o de Sexta-Feira e, por fim, $p_C$ e $p_F$ são os preços de mercado. A quantidade total produzida está restrita à fronteira de possibilidade de produção (que nada mais é do que o reflexo das restrições tecnológicas).
 \\
 \\
-Nosso objetito é maximizar o lucro da empresa, que agora se chama Naufrágios S.A., que será dado em algum ponto no conjunto de produção. Podemos definir que, no ponto de maximização, a empresa contratará uma quantidade ótima de trabalho $L_*$ de modo que os custos de trabalho podem ser descritos como $L^* = w_C L^*_C + w_F L^*_F$. Podemos reescrever nossa função objeto como:
+Nosso objetito é maximizar o lucro da empresa, que agora se chama Naufrágios S.A., que será dado em algum ponto no conjunto de produção. Podemos definir que, no ponto de maximização, a empresa contratará uma quantidade ótima de trabalho $L^*$ de modo que os custos de trabalho podem ser descritos como $L^* = w_C L^*_C + w_F L^*_F$. Podemos reescrever nossa função objeto como:
 
 $$ \pi = p_C C + p_F F - L^* $$
 
@@ -3662,7 +3662,17 @@ Podemos rearranjar a equação para encontrar a solução da quantidade de Cocos
 
 $$ C = \frac{\pi + L^*}{p_C} - \frac{p_F F}{p_C} $$
 
-Essa equação descreve as \textbf{retas de isolucro} da Naufrágios S.A., ou seja, dada uma quantidade ótima de trabalho e lucro, o lucro da empresa varia com a 
+Essa equação descreve as \textbf{retas de isolucro} da empresa. Todos os pontos da curva de isolucro demonstram as cestas que retornam o um mesmo nível de lucro para diferentes cestas. É fácil ver que a inclinação dessas retas será igual à $-p_F/p_C$ e que o os seus interceptos serão iguais a $(\pi + L^*)/p_C$.
+\\
+\\
+Como a quantidade de trabalho ótima é exógena por hipótese. Só precisamos nos preocupar com o valores dos lucros ($\pi$). Tal qual acontece com as curvas de indiferença, as retas de isolucro mais altas estão relacionadas aos maiores valores possíveis.
+\\
+\\
+O problema de maximização do lucro da empresa passa a ser resolvido pela igualdade entre a inclinação da reta de isolucro e da fronteira de possibilidade de produção. Nós já sabemos que a inclinação da fronteira de possibilidade de produção é igual à TMT. Então, podemos resumir nossa condição de maximização dos lucros a
+
+$$ TMT = -\frac{p_F}{p_C} $$
+
+Ou seja, as empresas competitivas optarão por operar nos pontos onde a taxa marginal de transformação é igual a razão dos preços dos produtos. Essa condição é verdadeira mesmo para diferentes formatos de tecnologias de produção (embora não seja válida para qualquer formato).
 
 
 
