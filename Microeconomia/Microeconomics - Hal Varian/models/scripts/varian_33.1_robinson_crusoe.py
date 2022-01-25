@@ -51,12 +51,15 @@ q2 = np.linspace(0,max_val,100)
 alpha = 0.5
 beta = 0.5
 
+PF = 1
+PC = 1
+
 # graph
 fig = plt.figure(dpi=120)
 ax = host_subplot(111)
 ax.grid(color='gray',linewidth=.2)
 
-ax.set_title('cap 33 - Caixa de Edgeworth com produção')
+ax.set_title('cap 33 - Maximização dos lucros')
 ax.set_xlabel('Peixes')
 ax.set_ylabel('Cocos')
 
@@ -71,14 +74,19 @@ ax.set_ylabel('Cocos')
 #	plt.plot(q1,(max_val - (i/(max_val - q1)**0.5)**2),color='yellow',alpha=1)
 
 # possibilidade de producao
-x = [0,50,150,250,287,300] # q1
-y = [300,287,250,150,50,0] # 10 * (10 - (q1/20)) + 20 * (10 - (q1/10))
+x = [0,50,145,200,245,287,300] # q1
+y = [300,287,245,200,145,50,0] # 10 * (10 - (q1/20)) + 20 * (10 - (q1/10))
 plt.plot(x,y,color='red',label='Fronteira de\nPossibilidade de\nProdução',linewidth=2)
 plt.fill_between(x, y, color='red',alpha=0.1) # area vermelha
 
 # curva de iso lucro e reta orcamentaria
 #plt.plot(q1,isolucro(11.5,0.31,q1),label='Isolucro')
 #plt.plot(q1,isolucro(11.5,0.31,q1),label='Restrição\nOrçamentária')
+for pi in range(0,1000,98):
+	pi_L = pi + 10 # lucro mais trabalho-otimo
+	pC = 5
+	pF = 5
+	plt.plot(q1,(pi_L-(pF/pC)*q1),color='blue')
 
 # point
 #coord = [51,30]
@@ -87,7 +95,8 @@ plt.fill_between(x, y, color='red',alpha=0.1) # area vermelha
 
 coord = [200,200]
 plt.plot(coord[0],coord[1],marker='o',color='white')
-plt.annotate(r' TMS = TMT',(coord[0],coord[1]+1),fontsize=10)
+#plt.annotate(r' TMS = TMT',(coord[0],coord[1]+1),fontsize=10)
+plt.annotate(r' TMT = Isolucro',(coord[0],coord[1]+1),fontsize=10)
 
 plt.xlim(0,300)
 plt.ylim(0,300)
