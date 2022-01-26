@@ -118,7 +118,6 @@
   {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
 \makeatother
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % First page of book which contains 'stuff' like: %
 %  - Book title, subtitle                         %
@@ -3632,7 +3631,7 @@ Fazendo a mesma coisa para as equações três e quatro
 
 $$ \frac{\partial u_B/\partial x^1_B}{\partial u_B/\partial x^2_B} = \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
 
-Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente. No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais entre si e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
+Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente\footnote{Atente para o fato que as TMS são negativas.}. No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais entre si e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
 
 \section{Náufragos S.A.}
 
@@ -3718,7 +3717,24 @@ O ferramental desenvolvido aqui é a \textbf{função de bem-estar}. Essa funç�
 
 \section{Agregação de Preferências}
 
-Partindo de prefências convexas, nossos modelos trabalharam com a hipótese que cada consumidor se preocupa apenas com a cesta de bens. Vamos expandir esse conceito para adicionar que, a partir de agora, os consumidores também possuem preferências sobre a alocação de bens entre os consumidores do mercado. Mesmo que, para alguns, essa preferência seja igual a zero (o que volta para o caso trabalhado anteriormente).
+Partindo de prefências convexas, nossos modelos trabalharam com a hipótese que cada consumidor se preocupa apenas com a sua própria cesta de bens. Vamos expandir esse conceito para adicionar que, a partir de agora, os consumidores também possuem preferências sobre a alocação de bens entre os consumidores do mercado. Mesmo que ainda seja possível que existam pessoas cujas preferências em relação às alocações das outras pessoas sejam iguais a zero (o que volta para o caso trabalhado anteriormente).
+\\
+\\
+Usaremos \textbf{x} para denotar alguma alocação factível. Desse modo, dadas as alocações \textbf{x} e \textbf{y}, cada pessoa i (ou i-ésima pessoa) será capaz de dizer qual das duas alocações é preferida.
+\\
+\\
+Queremos construir uma forma que agrege todas as preferências individuais para construção de uma \textbf{preferências social} que reflita as escolhas individuais.
+
+\subsection{Agregração por Voto Majoritário}
+
+Uma forma de construir essas preferências sociais é pela votação. Poderíamos pegar as alocações possíveis e perguntar para cada pessoa do mercado: "Você prefere \textbf{x} ou \textbf{y}?" e depois: "Você prefere \textbf{y} ou \textbf{z}?" e assim sucessivamente para todas as alocações desejadas. Terminada essa etapa\footnote{Que daria um trabalho gigante!}, poderíamos elencar as cestas preferidas pelo voto da maioria, ou seja, se a maioria das pessoas preferir a alocação \textbf{x} à \textbf{y}, nossa função de utilidade social também representará esse comportamento.
+\\
+\\
+Então é isso? Terminamos? A resposta é não. Esse método pode gerar classificações não transitivas. Veja o exemplo da página 873. Lá temos um caso com 3 pessoas e 3 alocações. Mesmo com um número reduzido de participantes e alocações, já conseguimos ver como um arranjo não transitivo pode ser formar. Diante disso, a agregação por voto majoritário pode produzir preferências não transitivas, e sem transitivade, não podemos garantir que existam pontos de otimização entre as alocações.
+
+\subsection{Agregração por Escala Ordinal}
+
+
 
 \section{Funções de Bem-Estar Social}
 \section{Maximização do Bem-Estar}
