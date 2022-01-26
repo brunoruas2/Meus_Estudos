@@ -49,6 +49,7 @@
 \newtheorem{fact}{Fato}[section]
 \newtheorem{demonstration}{Demonstração}[section]
 \newtheorem{theorem}{Teorema}
+\newtheorem{proposition}{Proposição}
 
 % tirando identação dos paragrafos
 \setlength{\parindent}{0ex}
@@ -1313,11 +1314,21 @@ Sabemos que parece bobo ter que definir isso, mas o próprio Hammack dá uma boa
 Like the multiplication, addition and subtraction principles, the division
 and pigeonhole principles are intuitive and obvious, but they can prove
 things that are not obvious. The challenge is seeing where and how to apply
-them. \footnote{Tradução: "Como os princípios da multiplicação, adição e subtração, o princípio da divisão e da cada dos pombos são intuitivos e obvios, mas eles podem provar coisas que não são obvias. O desafio é ver onde e como aplicá-los."}
+them. \footnote{Tradução: "Como os princípios da multiplicação, adição e subtração, o princípio da divisão e da casa dos pombos são intuitivos e obvios, mas eles podem provar coisas que não são obvias. O desafio é ver onde e como aplicá-los."}
 \end{quote}
 
 \section{Prova Combinatorial}
+No decorrer desse capítulo provamos diversas relações combinatoriais como:
+$$ {n+1 \choose k} = {n \choose k-a} + {n \choose k}$$
+$${n \choose n-k} = {n \choose k}$$
 
+Porém existem outras relações interessantes que ainda podemos provar por aqui, por exemplo:
+$$\sum_{k = 0}^{n} {n \choose k}^2 = {2n \choose n}$$
+\\
+Suponha um conjuntos $S = A \cup B, \ A \cap B = \emptyset$ e $|S| = 2n$, se quiser combinar seus elementos $n$ a $n$ pode selecionar $k$ elementos de $A$ e $n-k$ de $B$, pois $k+(n-k) = n$, então pelo \textbf{Princípio da Multiplicação} ${n \choose k}{n \choose n-k}$. Como $0 \leq k \leq n$, temos que:
+$${2n \choose n} = \underbrace{n \choose 0}_{0 \ de \ A}\underbrace{n \choose n}_{n \ de \ B} + \underbrace{n \choose 1}_{1 \ de \ A}\underbrace{n \choose n-1}_{n-1 \ de \ B} + \dots + \underbrace{n \choose n}_{n \ de \ A}\underbrace{n \choose 0}_{0 \ de \ B}$$
+Sabemos que ${n \choose k} = {n \choose n-k}$, teremos:
+$${2n \choose n} = {n \choose 0}^2 + {n \choose 1}^2 + \dots {n \choose n}^2 = \sum_{k = 0}^{n} {n \choose k}^2 \blacksquare$$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    PART                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1325,10 +1336,168 @@ them. \footnote{Tradução: "Como os princípios da multiplicação, adição e 
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova Direta}
+Quando estudamos matemática é muito comum nos depararmos com provas, saber lê-las é muito importante para a compreenção de princípios matemática e teoremas,. Tão importante quanto saber ler uma prova é saber fazê-la, o processo de provar afirmações mostra que, além de ter entendido, você consegue transmitir esse conhecimento, com o tempo e prática conseguirá fazer boas demonstrações.
+\\
+\\
+Como o objetivo do curso é um preparatório para uma matemática bem diferente do que vemos durante o Ensino Médio (ou até mesmo em algumas graduações, infelizmente), fugindo da maneira mecânica e da memorização de fórmulas, é de extrema importância que essa parte não seja omitida, agora vamos entender o que são \textbf{teoremas}, \textbf{definições}, \textbf{colorários}, etc, e algumas técnicas de \textbf{demonstração}.
+\section{Teoremas}
+No decorrer do nosso curso já vimos alguns teoremas e suas provas, e todos seguem um padrão, são proposições \textbf{condicionais}. Relembrando um pouco de nosso estudo de lógica, as condicionais seguem o formato "Se P, então Q", boa parte dos teoremas são escritos exatamente assim, mas são facilmente compreendidos dessa maneira.
+\\
+Vamos usar o \textbf{Teorema Binomial} como exemplo:
+\begin{theorem}[Teorema Binomial]
+Seja $n \in \mathbb{N}, \ n>0$ , logo:
+$$(a+b)^n = {n \choose 0}a^{n-0}b^{0} + {n \choose 1}a^{n-1}b^1 + \cdots + {n \choose n-1}a^1b^{k-1} + {n \choose n}a^{0}b^k $$
+\end{theorem}
+Repare que podemos trocar "Seja" por "Se" e "logo" por "então" sem que haja a perda ou distorção do significado.
+\\
+O valor $n$ ser um número natural e maior do que zero é a condição para que o restante do teorema seja verdadeiro, logo, é uma relação condicional. Você pode fazer esse exercício com outros teoremas, substituindo os termos utilizados e vendo se o significado altera-se.
+\\
+Outro caso possível são os teoremas \textbf{bicondicionais} ($\Leftrightarrow$), exemplo:
+\\
+\begin{theorem}
+$n$ é par se, e somente se, $n^2$ é par.
+\end{theorem}
+Aqui temos duas condições, é fácil vermos que um é condição para o outro, por isso, bicondicional.
+\\
+Mas não somente teoremas seguem essas estruturas lógicas, sempre iremos nos depara com outros termos na nossa jornada pela matemática, por isso precisamos dar o significado certinho de cada um deles.
+\\ \\
+\textbf{Teorema:} reservado para afirmações mais importantes.
+\\ \\
+\textbf{Proposições:} ainda uma afirmação, mas de significância inferior.
+\\ \\
+\textbf{Colorário:} consequência imediata de um teorema ou proposição.
+\\ \\
+\textbf{Lema:} teorema com propósito de melhorar outro. 
+\section{Definições}
+Nessa sessão não iremos nos prolongar, é muito simples, aqui haverão algumas observações e nada que vá muito além disso.
+\\ \\
+É sempre importante ressaltar a importância de definições precisas, uma técnica de demonstração é a por \textbf{absurdo} onde primeiro negamos o teorema e disso chegamos à uma conclusão que contradiga uma definição.
+\\ \\
+As definições servem que fujamos de ambiguidades e confusões, ao ler e escrever uma prova é preciso que ambos concordem com as definições envolvidas, falar o mesmo "idioma" é obrigatório.
+\\ \\
+Outra coisa que precisamos ressaltar é que \textbf{não tem como provar uma definição}, definições tem apenas o papel de comunicar o que é o que, não há como demonstrar.
+\section{Prova Direta}
+As provas diretas são aquelas que partimos direto da condição para a conclusão, sem tentar chegar a um absurdo por exemplo.
+\\
+\\
+Mas também não é tão simples assim, já sabemos o começo e o final do teorema ou proposição, nosso objetivo é desenvolver a prova partindo da condição obedecendo-as e as definições envolvidas na demonstração.
+\\
+Um exemplo é a proposição:
+\begin{proposition}
+Se $x$ é impar, $x^2$ é impar.
+\end{proposition}
+Sua demonstração é bem simples e fácil de ser lida:
+\begin{demonstration}
+Um número $x$ impar é por definição se $x=2a+1$, então $x^2 = (2a+1)^2 = 4a^2 + 4a +1 = 2(2a^2 + 2a) +1$.\\
+Seja $b=2a^2 + 2a$, então $x^2 = 2b+1$, ou seja, um número impar. $\blacksquare$
+\end{demonstration}
+Nosso exercício aqui será analisar a demonstração acima.
+\\
+\\
+Pimeiro chamamos a definição de um número impar, e repare que em nenhum momento ela é violada, fazemos uma álgebra simples para aparecer o que queremos, a definição de um número impar novamente.
+\\
+\\
+Repare no $\blacksquare$ ao final da prova, a partir de agora o verá direto e é importante saber o que significa. Seu significado é abreviado como Q.E.D, que vem a expressão do latim "Quod erat demonstrandum", numa tradução livre, "como se queria demonstrar".
+\\
+\\
+É importante que pegue algumas proposições simples como essa que provamos acima para que exercite essa habilidade, comece do básico para desenvolver o raciocínio e aos poucos aumente a dificuldade. Isso será inevitável em sua trilha pela matemática, com o tempo se verá insatisfeito com as provas de livros e conseguirá escrever as suas.
+\section{Uso de casos}
+Podermos usar os casos é de grande ajuda quando precisamos seguir um processo diferente caso um número seja negativo ou positivo, par ou impar, etc.
+\\
+\\
+Pode ser que essas diferenças exijam diferentes tratamentos, mas é importante lembrar que é essencial que a generalidade da prova não seja perdida.
+\\
+Exemplo:
+\begin{proposition}
+Todo multiplo de 4 é igual à $1+(-1)^n(2n-1)$ para alguns $n \in \mathbb{N}$
+\end{proposition}
+\begin{demonstration}
+\textbf{Caso 1:} se $n$ é par, então $(-1)^n =1$, um número $x$ é par se $x=2a$, portanto $1+(2(2a)-1) = 4a, \ \forall \ a$ \\
+\textbf{Caso 2:} seja $n$ um número impar, logo $n=2a+1$ e $(-1)^n = -1$, portanto $1-2n+1] = -2n + 2= -2(2a+1) + 2 = -4a$
+\\
+\\
+Portanto $1+(-1)^n(2n-1)$ é múltiplo de $4 \ \forall n$, seja ele par ou impar. $\blacksquare$ 
+\end{demonstration}
+\section{Tratamento de Casos Semelhantes}
+Pode ser que hajam enganos e utilizemos duas provas diferentes de maneira desnecessária, isso deixa cansativo e tedioso de ser lida, temos que cuidar com os casos em que não existe essa necessidade.
+\\
+O exemplo que temos no livro é ótimo para vermos isso:
 
+\begin{proposition}
+Sejam $a, \ b  \in \mathbb{Z}$ com paridades opostos, então $a+b$ é impar.
+\end{proposition}
+
+Nesse caso poderíamos fazer no caso 1 com $a$ sendo par e $b$ impar, no caso 2 o contrário, mas ficaria massante de ler, portanto em respeito ao leitor omitirei essa parte.
+
+\begin{demonstration}
+Se $a = 2a$ e $b=2a+1$, então $a+b = 2a+2b+1 = 2(a+b) +1$, como $a,b \ \in \mathbb{Z} \ \Rightarrow a+b \ \in \mathbb{Z}$, $a+b$ é um número impar por definição. $\blacksquare$ 
+\end{demonstration}
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova Contra-positiva}
+\section{Prova Contrapositiva}
+As provas diretas partem de uma proposição $P$ para a conclusão $Q$ mostrando sem desvios, porém agora aprenderemos uma nova técnica, onde supomos de $\sim Q$ e concluímos $\sim P$.
+\\
+\\
+Pela tabela verdade fica fácil ver que $P \Rightarrow Q$ e $ \sim Q \Rightarrow \sim P$ são \textbf{lógicamente equivalentes}. \\ \\
+Se escrever uma tabela verdade ficará fácil de ver.
+\\ \\
+Vamos fazer alguns exemplos para simplificar a compreensão
+\begin{proposition}
+Se $n \ \in  \mathbb{Z}$ e $n^2$ é par, então $n$ é par.
+\end{proposition}
+\textbf{Prova:} Suponha que $n$ seja impar, ou seja, $n = 2a+1, a \in \mathbb{I}$, então \\ $n^2 = (2a +1)^2 = 4a^2 +2a + 1 = 2(2a^2 + a) + 1 \ \therefore \ n^2$ é impar.
+\begin{proposition}
+Suponha $a, \ b \in \mathbb{Z}$. Se $a^2(b^2 -2b)$ é impar, então $a, \ b$ são impares.
+\end{proposition}
+\textbf{Prova:} Suponha $a, \ b$ pares tq. $a = 2x$ e $2y$, então:\\
+$a^2(b^2 -2b) = 4x^2(4y^2 - 4y) = 16x^2y^2 -16yx^2 = 2(8x^2y^2 -16x^2y)$.\\
+Logo, $a^2(b^2 -2b)$ é par
 
+\section{Congruência dos Inteiros}
+\begin{definition}[n-Módulo Congruente]
+Dados $a, \ b $ e $n \in \mathbb{N}$, dizemos que são n-módulo congruentes de $n | (a-b)$. Expressamos como $ a \equiv b \ mod(n)$. Se $a$ e $b$ não são n-módulo congruentes expressamos como $a \not\equiv  b \ mod(n)$
+\end{definition}
+O que isso nos diz é que se $a \equiv b \ mod(n)$, então o resto da divisão de $a/n$ e $b/n$ são iguais. \\ \\
+Isso é facil de mostrar, se $a = xn + r$ e $b = yn + r$, então $a-b = n(x-y)$ como podemos dividir ambos os lados da equação por $n$ e ainda ter valores inteiros, então $a \equiv b \ mod(n)$.
+\section{A Escrita Matemática}
+Uma observação importante a ser feita antes de começar a leitura dessa sessão é que praticamente apenas traduzimos os enunciados das "normas", pois não vimos boa maneira para resumir. Mas ainda assim tornamos o conteúdo acessível e respeitando o trabalho de Richard Hammack. \\ \\ 
+Ao escrever provas temos que nos atentar tanto ao rigor matemático quanto à clareza, para isso existem boas práticas para a escrita matemática que recomendamos que sejam seguidas. São elas:
+\\
+\\
+\textbf{01. Comece as frases com palavras, não símbolos matemática}
+\\
+\\
+\textbf{02. Termine as sentenças com pontos} (mesmo que terminem com sibolos matemáticos).
+\\
+\\
+\textbf{03. Separe símbolos e expressões com palavras.}
+\\
+\\
+\textbf{04. Evite mal-uso de símbolos.}
+\\
+\\
+\textbf{05. Evite uso desnecessário de símbolos.}
+\\
+\\
+\textbf{06. Faça uso da primeira pessoa do plural.}
+\\
+\\
+\textbf{07. Use voz ativa.}
+\\
+\\
+\textbf{08. Explique cada novo símbolo.}
+\\
+\\
+\textbf{09. Cuidado com os "isso".}
+\\
+\\
+\textbf{10. "Desde", "porque", "como", "para", "então"}, são palavras muito comuns em provas, porém num geral significam a mesma coisa quando utilizamos a forma condicional $Q \\Rightarrow P$.
+\\
+\\
+\textbf{11. "Assim", "portanto", "logo", "consequentemente}, outras palavras que aparecem muito frequentemente nas provas, porém são mais comum nos finais.
+\\
+\\
+\textbf{12. Clareza é o padrão-ouro da escrita matemática.}
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova por Contradição}
 
