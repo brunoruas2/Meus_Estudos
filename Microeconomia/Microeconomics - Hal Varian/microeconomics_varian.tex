@@ -3717,14 +3717,15 @@ O ferramental desenvolvido aqui é a \textbf{função de bem-estar}. Essa funç�
 
 \section{Agregação de Preferências}
 
-Partindo de prefências convexas, nossos modelos trabalharam com a hipótese que cada consumidor se preocupa apenas com a sua própria cesta de bens. Vamos expandir esse conceito para adicionar que, a partir de agora, os consumidores também possuem preferências sobre a alocação de bens entre os consumidores do mercado. Mesmo que ainda seja possível que existam pessoas cujas preferências em relação às alocações das outras pessoas sejam iguais a zero (o que volta para o caso trabalhado anteriormente).
+Partindo de prefências convexas, nossos modelos trabalharam com a hipótese que cada consumidor se preocupa apenas com a sua própria cesta de bens. Vamos expandir nossa análise para investigar como a alocação de bens entre os consumidores do mercado pode ser agregada de modo a maximizar o conjunto de preferências ao invés de preferências individuais. Aqui, vamos ver as ideias relacionadas ao estudo da distribuição do bem-estar.
 \\
 \\
 Usaremos \textbf{x} para denotar alguma alocação factível. Desse modo, dadas as alocações \textbf{x} e \textbf{y}, cada pessoa i (ou i-ésima pessoa) será capaz de dizer qual das duas alocações é preferida.
 \\
 \\
 Queremos construir uma forma que agrege todas as preferências individuais para construção de uma \textbf{preferências social} que reflita as escolhas individuais.
-
+\\
+\\
 Uma forma de construir essas preferências sociais é pela votação. Poderíamos pegar as alocações possíveis e perguntar para cada pessoa do mercado: "Você prefere \textbf{x} ou \textbf{y}?" e depois: "Você prefere \textbf{y} ou \textbf{z}?" e assim sucessivamente para todas as alocações desejadas. Terminada essa etapa\footnote{Que daria um trabalho gigante!}, poderíamos elencar as cestas preferidas pelo voto da maioria, ou seja, se a maioria das pessoas preferir a alocação \textbf{x} à \textbf{y}, nossa função de utilidade social também representará esse comportamento.
 \\
 \\
@@ -3767,10 +3768,35 @@ Embora o nome "impossibilidade"\ tenha vendido o teorema, na verdade, ele apenas
 Se abandonarmos a propriedade 3, alguns tipos de votação ordinal mantém as outras propriedades ativas. E esse é o caminho que o professor Varian decidiu tomar no livro.
 \\
 \\
-Sejam as preferências de cada pessoa $i$ relacionadas às alocações possíveis, as funções de utilidade $u_i(x)$ resumem os valores dos julgamentos das pessoas de modo que, a pessoa $i$ prefere \textbf{x} a \textbf{y} se, e somente se, $u_i(x) > u_i(y)$. Até ai, nada de novo, essa é a função de utilidade que vimos lá no começo do curso.
+Sejam as preferências de cada pessoa $i$ relacionadas às alocações possíveis, as funções de utilidade $u_i(x)$ resumem os valores dos julgamentos das pessoas de modo que, a pessoa $i$ prefere \textbf{x} a \textbf{y} se, e somente se, $u_i(x) > u_i(y)$. Até ai, nada de novo, essa é a função de utilidade que vimos lá no começo do curso. Por causa disso, devemos nos lembrar que elas podem assumir quaisquer formatos, visto que, o que importa é a ordem de valores e não o valor em si.
 \\
 \\
+Apesar da não importância cardinal das funções de utilidade, podemos optar pela construção da nossa função de utilidade social pela soma das utilidades individuais. Desse modo,\textbf{x} é preferido a \textbf{y} se
 
+$$  \displaystyle \sum^n_{i = 1} u_i(x) > \sum^n_{i = 1} u_i(y)$$
+
+Sendo $n$ a quantidade de pessoas da sociedade.
+\\
+\\
+Isso faz sentido, mas é totalmente arbitrário. Não existe pressuposto teórico para a definição da função de utilidade social desse modo. Poderíamos usar qualquer outra forma de agregação.
+\\
+\\
+Contudo, podemos refinar essa ideia com um pressuposto adicional: A nossoa função de agregação sempre será crescente na utilidade para cada indivíduo. Isso garante que, se todos preferirem \textbf{x} a \textbf{y} as nossas preferências sociais também escolherão a mesma ordem.
+\\
+\\
+Essas funções de agregação de preferências individuais recebem o nome de \textbf{função de bem-estar social}. Esse termo denota uma função que é construida tendo como parâmetros as funções de utilidades dos indivíduos da sociedade: $W(u_1(x),u_2(x),...,u_n(x))$. Essa classe de funções nos permite atribuir uma classificação para diferentes alocações tendo com base as utilidades individuais, e, como pressuposto, são crescentes em relação à quantidade de indivíduos.
+\\
+\\
+A função que colocamos logo acima, é uma função de bem-estar social para o caso especial da soma das funções de utilidade individuais. Essa função também recebe o nome de  função de bem-estar \textbf{utilitaristas clássica}
+ ou \textbf{de Bentham}.
+
+$$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} u_i(x)$$
+
+Uma generalização dessa função é a \textbf{função de bem-estar da soma ponderada das utilidades}:
+
+$$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} a_iu_i(x)$$
+
+Onde os pesos $a_i$ são números indicativos da importância de cada agente no total da utilidade geral. Naturalmente, $a$ costuma ser um número positivo.
 
 \section{Maximização do Bem-Estar}
 \section{Funções de Bem-Estar Social Individualistas}
