@@ -3725,18 +3725,53 @@ Usaremos \textbf{x} para denotar alguma alocação factível. Desse modo, dadas 
 \\
 Queremos construir uma forma que agrege todas as preferências individuais para construção de uma \textbf{preferências social} que reflita as escolhas individuais.
 
-\subsection{Agregração por Voto Majoritário}
-
 Uma forma de construir essas preferências sociais é pela votação. Poderíamos pegar as alocações possíveis e perguntar para cada pessoa do mercado: "Você prefere \textbf{x} ou \textbf{y}?" e depois: "Você prefere \textbf{y} ou \textbf{z}?" e assim sucessivamente para todas as alocações desejadas. Terminada essa etapa\footnote{Que daria um trabalho gigante!}, poderíamos elencar as cestas preferidas pelo voto da maioria, ou seja, se a maioria das pessoas preferir a alocação \textbf{x} à \textbf{y}, nossa função de utilidade social também representará esse comportamento.
 \\
 \\
 Então é isso? Terminamos? A resposta é não. Esse método pode gerar classificações não transitivas. Veja o exemplo da página 873. Lá temos um caso com 3 pessoas e 3 alocações. Mesmo com um número reduzido de participantes e alocações, já conseguimos ver como um arranjo não transitivo pode ser formar. Diante disso, a agregação por voto majoritário pode produzir preferências não transitivas, e sem transitivade, não podemos garantir que existam pontos de otimização entre as alocações.
+\\
+\\
+Uma outra maneira de tentar agregar as preferências é pela adoção de um sistema de votação com escala ordinal. Nesse modelo, as pessoas atribuem pontos para cada cesta (1 para a mais preferida, 2 para a segunda e etc). No final, podemos somar todos os pontos atribuídos e classificar as opções de acordo com os valores (nesse caso, quanto menor a soma, mais preferida é a alocação).
+\\
+\\
+Então é isso? Terminamos? A resposta também é não. O problema dessa abordagem é que o resultado pode ser manipulado pela introdução de novas opções. 
+\\
+\\
+Imagine que um comitê quer que o resultado seja a alocação \textbf{x} mas percebe que, com 5 alternativas, as pessoas vão acabar preferindo outra cesta. Esse comitê pode começar a colocar novas opções que sejam levemente parecidas entre si, de modo a "dividir"\ a base de votantes das alocações preferidas à \textbf{x} anteriormente. Isso vai fazer com que a base de votantes das cestas vencedoras se dilua e a alocação \textbf{x} poderá ser eleita como a vencedora.
+\\
+\\
+E agora? será que nunca conseguiremos agregar preferências de modo satisfatório?
 
-\subsection{Agregração por Escala Ordinal}
+\newpage
 
+Para responder essa pergunta, primeiro vamos elencar algumas características desejadas para o nosso mecanismo de decisão social:
+\begin{enumerate}
+	\item Dado um conjunto completo, reflexivo e transitivo de preferências individuais, a agregação dessas preferências deve possuir as mesmas propriedades.
+	\item Se todas as pessoas preferirem \textbf{x} a \textbf{y}, então, a preferência social\footnote{que é a agregação das preferências individuais} deve classificar \textbf{x} à frente de \textbf{y}.
+	\item Dadas duas alocações \textbf{x} e \textbf{y}, a preferências social deve depender apenas das escolhas individuais sobre as cestas e não deve ser influenciada pelo modo de classificação das alternativas.
+\end{enumerate}
 
+Faz sentido querer que nossa agregação de preferências tenham todas as características. O problema é que o trabalho de 1963 de Kenneth Arrow chegou em um resultado surpreendentemente.
+\\
+\\
+\textbf{Teorema da Impossibilidade de Arrow}: Se um mecanismo de decisão social satisfizer as propriedades 1, 2 e 3, ele será, necessariamente, uma ditadura: todas as ordenações sociais são ordenações de um único indivíduo.
+\\
+\\
+Como esse curso é básico, não vamos demonstrar esse teorema. Mas para os curiosos, o Jehle na página 269 possui dois tipos de demonstrações dele.
+\\
+\\
+Embora o nome "impossibilidade"\ tenha vendido o teorema, na verdade, ele apenas elucida algumas possibilidades de agregação das preferências individuais. Para prosseguirmos, teremos que abrir mão de alguma dessas propriedades de modo a encontrar "alguma"\ agregação possível ao invés da agregação "perfeita".
 
 \section{Funções de Bem-Estar Social}
+
+Se abandonarmos a propriedade 3, alguns tipos de votação ordinal mantém as outras propriedades ativas. E esse é o caminho que o professor Varian decidiu tomar no livro.
+\\
+\\
+Sejam as preferências de cada pessoa $i$ relacionadas às alocações possíveis, as funções de utilidade $u_i(x)$ resumem os valores dos julgamentos das pessoas de modo que, a pessoa $i$ prefere \textbf{x} a \textbf{y} se, e somente se, $u_i(x) > u_i(y)$. Até ai, nada de novo, essa é a função de utilidade que vimos lá no começo do curso.
+\\
+\\
+
+
 \section{Maximização do Bem-Estar}
 \section{Funções de Bem-Estar Social Individualistas}
 \section{Alocações Justas}
