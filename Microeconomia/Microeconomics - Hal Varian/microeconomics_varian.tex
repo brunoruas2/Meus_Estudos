@@ -3787,7 +3787,7 @@ Contudo, podemos refinar essa ideia com um pressuposto adicional: A nossoa funç
 Essas funções de agregação de preferências individuais recebem o nome de \textbf{função de bem-estar social}. Esse termo denota uma função que é construida tendo como parâmetros as funções de utilidades dos indivíduos da sociedade: $W(u_1(x),u_2(x),...,u_n(x))$. Essa classe de funções nos permite atribuir uma classificação para diferentes alocações tendo com base as utilidades individuais, e, como pressuposto, são crescentes em relação à quantidade de indivíduos.
 \\
 \\
-A função que colocamos logo acima, é uma função de bem-estar social para o caso especial da soma das funções de utilidade individuais. Essa função também recebe o nome de  função de bem-estar \textbf{utilitaristas clássica}
+A função que colocamos logo acima, é uma função de bem-estar social para o caso especial da soma das funções de utilidade individuais. Essa função também recebe o nome de  função de bem-estar \textbf{utilitarista clássica}
  ou \textbf{de Bentham}.
 
 $$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} u_i(x)$$
@@ -3797,8 +3797,40 @@ Uma generalização dessa função é a \textbf{função de bem-estar da soma po
 $$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} a_iu_i(x)$$
 
 Onde os pesos $a_i$ são números indicativos da importância de cada agente no total da utilidade geral. Naturalmente, $a$ costuma ser um número positivo.
+\\
+\\
+Uma outra forma de função de bem-estar interessante é a \textbf{minimax} ou \textbf{rawlsiana}:
+
+$$ W(u_1(x),u_2(x),...,u_n(x)) = min\{ u_1, u_2, ..., u_n \} $$
+
+Essa função de bem-estar classifica a alocação pela utilidade da pessoa em pior situação.
+\\
+\\
+Todas essas formas podem ser usadas para expressar o que estamos desejando. A única restrição imposta é que a função seja crescente na utilidade de cada consumidor.
+\\
+\\
+Os mais atentos vão perceber que, intuitivamente, estamos começando a lidar com modelos de valoração de utilidade. Como o professor Jehle coloca no capítulo 6 do seu livro "A ideia de que a intensidade da utilidade de diferentes indivíduos pode ser comparada é, no mínimo, controversa". Nós vimos como a abordagem de um valor de utilidade foi abandonada no passado, mas a teoria do bem-estar acaba revisitando, em algum grau, essa ideia. Aqui vai alguma indicação de bibliografia sobre o assunto: Hammond (1976), d'Aspremont e Gevers (1977), Roberts (1980) e Sen (1984).
 
 \section{Maximização do Bem-Estar}
+
+De posse de uma função de bem-estar, podemos começar a trabalhor o problema da maximização. Vamos usar $x_i^j$ para denotar o quanto a pessoa $i$ tem do bem $j$. Na nossa sociedade, existirão $n$ pessoas e $k$ bens. Desse modo, uma dada alocação \textbf{x} será uma lista da quantidade de que cada um dos $n$ agentes possuem dos $k$ bens disponíveis.
+\\
+\\
+A quantidade total de cada um dos $k$ bens será dada como fixa, de modo que o total do bem 1 será denotado por $X^1$. A quantidade total disponível do bem 2 será $X^2$ e assim por diante.
+\\
+\\
+Podemos então definir nosso problema de maximização como:
+
+\begin{equation*}
+	\textrm{máx } W(u_1(x),u_2(x),...,u_n(x))
+	\\
+	\\
+	\textrm{de modo que } \displaystyle \sum^n_{i = 1} x^1_i = X^1
+	\vdots
+	\displaystyle \sum^n_{i = 1} x^k_i = X^k
+\end{equation*}
+
+
 \section{Funções de Bem-Estar Social Individualistas}
 \section{Alocações Justas}
 \section{Inveja e Equidade}
