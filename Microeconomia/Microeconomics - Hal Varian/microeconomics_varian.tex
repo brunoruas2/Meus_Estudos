@@ -3609,7 +3609,7 @@ Podemos escrever nosso problema de alocação eficiente de Pareto para duas pess
 \begin{center}
 	\LARGE $\stackrel{máx}{\text{\small $x^1_A,x^2_A,x^1_B,x^2_B$}} \ \ \stackrel{u_A(x^1_A,x^2_A)}{\ }$ \\
 	\normalsize de modo que $u_B(x^1_B,x^2_B) = \overline{u}$ \\
-	\normalsize $ T(X^1,X^2) = 0 $
+	\normalsize \hphantom{de modo que } $ T(X^1,X^2) = 0 $
 \end{center}
 
 A Lagrangiana desse problema é
@@ -3809,7 +3809,7 @@ Essa função de bem-estar classifica a alocação pela utilidade da pessoa em p
 Todas essas formas podem ser usadas para expressar o que estamos desejando. A única restrição imposta é que a função seja crescente na utilidade de cada consumidor.
 \\
 \\
-Os mais atentos vão perceber que, intuitivamente, estamos começando a lidar com modelos de valoração de utilidade. Como o professor Jehle coloca no capítulo 6 do seu livro "A ideia de que a intensidade da utilidade de diferentes indivíduos pode ser comparada é, no mínimo, controversa". Nós vimos como a abordagem de um valor de utilidade foi abandonada no passado, mas a teoria do bem-estar acaba revisitando, em algum grau, essa ideia. Aqui vai alguma indicação de bibliografia sobre o assunto: Hammond (1976), d'Aspremont e Gevers (1977), Roberts (1980) e Sen (1984).
+Os mais atentos vão perceber que, intuitivamente, estamos começando a lidar com modelos de valoração de utilidade. Como o professor Jehle coloca no capítulo 6 do seu livro "A ideia de que a intensidade da utilidade de diferentes indivíduos pode ser comparada é, no mínimo, controversa". Nós vimos como a abordagem de um valor de utilidade foi abandonada no passado mas a teoria do bem-estar acaba revisitando, em algum grau, essa ideia. Aqui vai alguma indicação de bibliografia sobre o assunto: Hammond (1976), d'Aspremont e Gevers (1977), Roberts (1980) e Sen (1984).
 
 \section{Maximização do Bem-Estar}
 
@@ -3821,15 +3821,36 @@ A quantidade total de cada um dos $k$ bens será dada como fixa, de modo que o t
 \\
 Podemos então definir nosso problema de maximização como:
 
-\begin{equation*}
-	\textrm{máx } W(u_1(x),u_2(x),...,u_n(x))
-	\\
-	\\
-	\textrm{de modo que } \displaystyle \sum^n_{i = 1} x^1_i = X^1
-	\vdots
-	\displaystyle \sum^n_{i = 1} x^k_i = X^k
-\end{equation*}
+\begin{center}
+	$\textrm{máx } W(u_1(x),u_2(x),...,u_n(x))$ \\
+	$\textrm{de modo que } \displaystyle \sum^n_{i = 1} x^1_i = X^1$ \\
+	$\textrm{\hphantom{de modo que }} \vdots$ \\
+	$\textrm{\hphantom{de modo que }}\displaystyle \sum^n_{i = 1} x^k_i = X^k$
+\end{center}
 
+Nosso objetivo é encontrar a alocação possível que maximiza a função de bem-estar. Para tanto, podemos elencar algumas características dessa alocação:
+\begin{itemize}
+	\item Ela será uma alocação eficiente no sentido de Pareto.
+	\item Qualquer alocação eficiente no sentido de Pareto será um ponto de máximo para alguma função de bem-estar.
+\end{itemize}
+
+A demonstração do ponto é simples. Se existir um ponto de máximo e esse ponto não for uma alocação de Pareto, isso implicaria que o ponto ótimo de Pareto daria, pelo menos, o mesmo nível de utilidade que essa alocação hipotética. Entretanto, a função de bem-estar tem a propriedade de ser estritamente crescente, de modo que, se mudássemos de alocação para uma alocação de Pareto, para pelo menos uma pessoa, haveria um incremento de utilidade. O que por sua vez, demonstra que a alocação ótima tem de ser uma alocação eficiente de Pareto.
+\\
+\\
+Usaremos uma simplificação para duas pessoas. Nós vimos algo muito parecido com o que vimos no capítulo anterior. Só que vamos mudar o nome de algumas variáveis. Chamaremos de \textbf{conjunto de possibilidades de utilidade}, o total de todas as utilidades obtidas da função de bem-estar para diferentes alocações. A curva na borda desse conjunto recebe o nome de \textbf{fronteira de possibilidades de utilidade} e indica os pontos de alocação que permitem o valor máximo para a função de bem-estar social. As curvas de isobem-estar são as curvas que demonstram um mesmo nível de bem estar para ambos os agentes.
+\\
+\\
+Uma demonstração gráfica pode ser vista na imagem abaixo. Como previsto pela primeira propriedade, o ponto máximo é um ponto em que a curva de possibilidade de utiildade tangencia a curva de isobem-estar mais elevada.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{cap34_3-maximizacao_bem_estar.png}
+\end{figure}
+
+A segunda propriedade é fruto da convexidade do conjunto de possibilidade de utilidade. Como o conjunto é convexo, sempre podemos definir uma função de bem-estar que seja tangente à esse conjunto em algum ponto dele. No livro temos um exemplo com funções de isobem-estar que são a soma das médias ponderadas das utilidades dos agentes.
+\\
+\\
+Desse modo podemos ver que a função de bem-estar nos dá uma forma de escolher alocações eficientes no sentido de Pareto pois todo máximo de bem-estar é um ótimo de Pareto e todo ótimo de Pareto será o máximo de alguma função de bem-estar.
 
 \section{Funções de Bem-Estar Social Individualistas}
 \section{Alocações Justas}
