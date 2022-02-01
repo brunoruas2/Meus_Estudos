@@ -439,6 +439,43 @@
 	A função $f(x_1,x_2)$ é chamada de \textbf{função objeto} e a equação $g(x_1,x_2) = c$ é chamada de \textbf{restrição}.
 \end{frame}
 
+\begin{frame}
+	\frametitle{Otimização com Restrição}
+
+	Quando temos uma função de uma única variável, basta transformarmos a nossa restrição em uma igualdade, substituir uma função dentro da outra e aplicar as condições de primeira e segunda ordem.
+
+	\begin{block}{Exemplo: O Problema da Empresa Líder (cap 28.2)}
+		$$ \huge \stackrel{max}{\textrm{\tiny $y_1$}} \normalsize p(y_1 + y_2)y_1 - c_1(y_1) $$
+		\normalsize $$ \textrm{de modo que } y_2 = f_2(y_1) $$
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Otimização com Restrição}
+
+	Quanto temos uma função de múltiplas variáveis, temos que lidar com tangências em ordem mais elevadas. Quando dizemos que duas curvas são tangentes, podemos afirmar que o \textbf{vetor gradiente} dessas duas curvas são proporcionais em alguma medida.
+	\\~\\
+	Para não dificultar, um vetor gradiente é um vetor que contém as derivadas parciais de uma função multivariada. E, como qualquer vetor, poder ser somado para indicar uma única direção.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Otimização com Restrição}
+
+	Num ponto qualquer $(x_1,x_2)$ o vetor gradiente aponta para a direção onde os valores da função $f(x_1,x_2)$ aumentam mais rapidamente.
+	\\~\\
+	Uma propriedade interessante dos vetores gradientes é que quando duas funções são tangentes, seus vetores gradientes são proporcionais. O multiplicador de Langrange é justamente a quantidade dessa proporção.
+	\\~\\
+	\begin{block}{Indicação de Material}
+		Esse vídeo explica muito bem como o processo de otimização com restrição faz uso do vetor gradiente.
+		\\
+		\begin{center}
+			\href{https://www.youtube.com/watch?v=yuqB-d5MjZA}{[Clique Aqui]} 
+			e
+			\href{https://www.youtube.com/watch?v=hQ4UNu1P2kw}{[Clique Aqui]}
+		\end{center}
+	\end{block}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Monopólio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
