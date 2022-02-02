@@ -76,11 +76,9 @@ plt.figtext(0.06, 0.5, "w2/2", fontsize = 10)
 plt.figtext(0.91, 0.5, "w1/2", fontsize = 10)
 '''
 
-# curva de alocacao justa
-plt.plot(q1,(300**2 - q1**2)**(1/2), color='red')
-
-# curva de indiferenca
-plt.plot(q1,((212/(q1**0.5))**2),color='blue',alpha=1)
+# curvas de indiferenca
+plt.plot(q1,((212/(q1**0.5))**2),color='blue',alpha=1,label='Curva de Indiferança de A')
+plt.plot(q1,(300**2 - q1**2)**(1/2), color='red',label='Curva de Indiferança de B')
 
 # pontos de alocacao
 coord = [300,125]
@@ -97,6 +95,8 @@ plt.plot([300,210],[125,214],color='white')
 
 plt.xlim(25,350)
 plt.ylim(25,350)
+
+plt.legend(loc='upper right')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap34_6-inveja_equidade.png'
 plt.savefig(path, transparent=True)
