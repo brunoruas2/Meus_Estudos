@@ -3887,16 +3887,37 @@ Podemos ver que a simetria nas alocações não é suficiente para preservar a s
 Agora vamos formalizar um pouco mais essa noção de equidade, justiça e inveja.
 \\
 \\
-Uma locação será \textbf{equitativa} se nenhum agente prefere a cesta de bens de outro agente em relação à sua própria cesta. Caso contrário, se a pessoa $i$ preferir a cesta da pessoa $j$ diremos que $i$ \textbf{inveja} $j$. Finalizando, se uma alocação for, simultaneamente, equitativa e eficiente no sentido de Pareto, ela será chamada de uma alocação $justa$.
+Uma locação será \textbf{equitativa} se nenhum agente prefere a cesta de bens de outro agente em relação à sua própria cesta. Caso contrário, se a pessoa $i$ preferir a cesta da pessoa $j$ diremos que $i$ \textbf{inveja} $j$. Se uma alocação for, simultaneamente, equitativa e eficiente no sentido de Pareto, ela será chamada de uma alocação $justa$.
 \\
 \\
-Com essa formalização, podemos ver que uma alocação simétrica, possui a propriedade de ser equitativa, contudo, não é a única alocação em que essa propriedade possa ser encontrada.
+Com essa formalização, podemos ver que uma alocação inicial simétrica, possui a propriedade de ser equitativa, contudo, não é a única alocação em que essa propriedade possa ser encontrada.
+\\
+\\
+Para verificarmos que uma alocação justa possa existir, vamos voltar ao exemplo da seção anterior (que é uma dotação inicial equitativa), mas agora vamos usar o mecanismo de mercado para encontrar uma alocação final.
+\\
+\\
+Já sabemos pelo capítulo 32 que o resultado será uma alocação em que cada agente maximiza a cesta via preços $(p_1,p_2)$. Sabemos também que esse resultado será eficiente no sentido de Pareto.
+\\
+\\
+Mas seria essa alocação equitativa? Para descobrirmos, vamos supor o contrário. Suporemos que A inveja B. Isso significa que a cesta de B é preferida por A da seguinte forma:
+
+$$ (x_A^1,x_A^2) \prec_A (x_B^1,x_B^2) $$
+
+O termo $\prec_A$ denota a preferência do consumidor A.
+\\
+\\
+Acontece que, se A prefere a cesta de B ao invés da sua. E, ao mesmo tempo, a cesta de A é resultante de trocas. Isso implica que A não pode, aos preços $(p_1,p_2)$, pagar pela cesta de B, ou seja:
+
+$$ p_1w_A^1 + p_2w_A^2 < p_1w_B^1 + p_2w_B^2 $$
+
+Mas isso é impossível! Afinal, nós partimos de uma alocação inicial equitativa. Isso resulta que a nossa afirmação inicial que A prefere a cesta de B é falsa. Portanto, a alocação inicial equitativa resulta, pelo mecanismo de mercado competitivo, em uma alocação final equitativa.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{cap34_6-inveja_equidade.png}
 \end{figure}
 
+Nessa imagem podemos ver como a alocação via mercado de competição vai produzir uma alocação final onde nenhum dos agentes poderá invejar a cesta do outro.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Externalidades}
