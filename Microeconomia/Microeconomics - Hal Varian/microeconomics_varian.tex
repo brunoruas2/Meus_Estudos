@@ -3867,7 +3867,38 @@ Essa nova função de bem-estar será uma função direta em relação aos níve
 Se a utilidade de cada agente não levar em conta nada além da sua própria cesta, dizemos que não há externalidade de consumo. O que nos trás os resultados obtidos no capítulo 32: todos os equilíbrios competitivos são eficientes de Parte e todas as alocações de Pareto são equilíbrios competitivos\footnote{Com o pressuposto da convexidade.}.
 \\
 \\
-Podemos agora ir um pouco mais adiante: todos máximo de bem-estar são equilíbrios competitivos e todos os equilíbrios competitivos são o máximo de bem-estar de alguma função de bem-estar.
+Podemos agora ir um pouco mais adiante. Uma vez que existe essa relação entre a eficiência de Pareto e a maximização do bem-estar descrita acima, podemos concluir que todo máximo de bem-estar são equilíbrios competitivos e todos os equilíbrios competitivos são o máximo de bem-estar de alguma função de bem-estar.
+\\
+\\
+Podemos investigar essa relação de maneira um pouco mais formal. Esse processo vai ser parecido com a argumentação feita no capítulo 33. Só precisamos adapatar as utilidades individuais pela nossa função de bem-estar.
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $x_A^1,x_A^2,x_B^1,x_B^2$}} \ \ \stackrel{W(u_A(x_A^1,x_A^2),u_B(x_B^1,x_B^2))}{\ } $$
+	\\
+	\normalsize de modo que $T(X^1,X^2) = 0$
+\end{center}
+
+Onde $X^1$ e $X^2$ denotam o total do bem 1 e 2 produzido e consumido.
+\\
+\\
+A Lagrangiana desse problema é dada por
+
+$$ L = W(u_A(x_A^1,x_A^2),u_B(x_B^1,x_B^2)) - \lambda(T(X^1,X^2) - 0) $$
+
+As condições de maximização são obtidas pelas seguintes condições de primeira ordem:
+
+$$ \frac{\partial L}{\partial x_A^1} = \frac{\partial W}{\partial u_A} \frac{\partial u_A(x_A^1,x_A^2)}{\partial x_A^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^1} = 0 $$
+
+$$ \frac{\partial L}{\partial x_A^2} = \frac{\partial W}{\partial u_A} \frac{\partial u_A(x_A^1,x_A^2)}{\partial x_A^2} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^2} = 0 $$
+
+$$ \frac{\partial L}{\partial x_B^1} = \frac{\partial W}{\partial u_B} \frac{\partial u_B(x_B^1,x_B^2)}{\partial x_B^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^1} = 0 $$
+
+$$ \frac{\partial L}{\partial x_B^2} = \frac{\partial W}{\partial u_B} \frac{\partial u_B(x_B^1,x_B^2)}{\partial x_B^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^2} = 0 $$
+
+Fazendo exatamente o que vimos no capítulo anterior, chegaremos numa situação onde teremos:
+
+$$ \frac{\partial u_A / \partial x^A^1}{\partial u_A / \partial x^A^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+$$ \frac{\partial u_A / \partial x^B^1}{\partial u_A / \partial x^B^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
 
 \section{Alocações Justas}
 
