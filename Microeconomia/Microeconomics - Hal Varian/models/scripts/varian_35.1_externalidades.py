@@ -12,6 +12,7 @@ import tabloo # to see the df
 
 from PIL import Image
 from mpl_toolkits import mplot3d
+from labellines import labelLines
 from mpl_toolkits.axes_grid1 import host_subplot
 
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -56,8 +57,8 @@ ax.yaxis.set_major_locator(plt.NullLocator())
 
 plt.figtext(0.04, 0.09, "Pessoa\n    A", fontsize = 10)
 plt.figtext(0.91, 0.85, "Pessoa\n    B", fontsize = 10)
-plt.figtext(0.06, 0.85, "Bem\n  2", fontsize = 10)
-plt.figtext(0.91, 0.09, "Bem\n  1", fontsize = 10)
+plt.figtext(0.040, 0.85, "Fumaça", fontsize = 10)
+plt.figtext(0.905, 0.09, "Dinheiro", fontsize = 10)
 
 # dotacoes
 coord = [50,0]
@@ -94,7 +95,9 @@ plt.plot(coord[0],coord[1],marker='o',color='white')
 plt.xlim(0,100)
 plt.ylim(0,100)
 
-plt.legend(loc='upper left')
+labelLines(plt.gca().get_lines(), zorder=2.5)
+
+#plt.legend(loc='upper left')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap35_1-dinheiro_fumaca.png'
 plt.savefig(path, transparent=True)
