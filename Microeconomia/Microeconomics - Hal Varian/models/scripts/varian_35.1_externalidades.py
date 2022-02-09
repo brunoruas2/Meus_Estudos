@@ -86,9 +86,11 @@ plt.plot([50,100],[100,50],color='white')
 
 # Cestas possiveis
 coord = [25,25]
+plt.annotate(' Cesta X',coord)
 plt.plot(coord[0],coord[1],marker='o',color='white')
 
 coord = [75,75]
+plt.annotate(' Cesta Y',coord)
 plt.plot(coord[0],coord[1],marker='o',color='white')
 
 
