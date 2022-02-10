@@ -1,18 +1,10 @@
 # Modulos usados
-from cProfile import label
-import os
-from cv2 import rotate
-from matplotlib import colors
+import math
 import numpy as np
 import pandas as pd
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-import tabloo # to see the df
-
-from PIL import Image
-from mpl_toolkits import mplot3d
-from labellines import labelLines
 from mpl_toolkits.axes_grid1 import host_subplot
 
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -35,7 +27,7 @@ def fu_B(x1,x2,alpha,beta):
 # Gerando o gráfico
 #####################################################################################################
 ## dados
-max_val = 100
+max_val = 20
 q1 = np.linspace(0,max_val,100)
 q2 = np.linspace(0,max_val,100)
 
@@ -61,21 +53,22 @@ plt.figtext(0.040, 0.85, "Fumaça", fontsize = 10)
 plt.figtext(0.905, 0.09, "Dinheiro", fontsize = 10)
 
 # curvas de indiferenca
-for u_max in range(0,200,10):
-	if u_max == 15:
-		plt.plot(q1,(u_max - 5*q1**alpha),color='red',label='Utilidade A')
-#		plt.plot(q1,(max_val - (u_max - q1**alpha)),color='blue',label='Utilidade B')
+for util in range(0,200,4):
+	if util == 0:
+		plt.plot(q1,(math.e**(util - q1)),color='red',label='Utilidade A')
+		plt.plot(q1,max_val - (math.e**(util - (max_val - q1 - 0.6))),color='blue',label='Utilidade B')
 	else:
-		plt.plot(q1,(u_max - 5*q1**alpha),color='red')
-#		plt.plot(q1,(max_val - (u_max - q1**alpha)),color='blue')
+		plt.plot(q1,(math.e**(util - q1)),color='red')
+		plt.plot(q1,max_val - (math.e**(util - (max_val - q1 - 0.6))),color='blue')
 
+# curva de contrato
 
-plt.xlim(0,100)
-plt.ylim(0,100)
+plt.plot([0,20],[10,10],color='white',label='Curva de Contrato')
 
-labelLines(plt.gca().get_lines(), zorder=2.5)
+plt.xlim(0,max_val)
+plt.ylim(0,max_val)
 
-plt.legend(loc='upper left')
+plt.legend(loc='upper right')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap35_2-teorema_coase.png'
 plt.savefig(path, transparent=True)
