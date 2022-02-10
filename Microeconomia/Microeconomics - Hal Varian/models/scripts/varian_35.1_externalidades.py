@@ -102,6 +102,6 @@ labelLines(plt.gca().get_lines(), zorder=2.5)
 #plt.legend(loc='upper left')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap35_1-dinheiro_fumaca.png'
-plt.savefig(path, transparent=True)
+plt.savefig(path, transparent=False)
 
 plt.show()

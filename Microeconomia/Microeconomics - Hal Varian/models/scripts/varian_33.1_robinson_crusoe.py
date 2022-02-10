@@ -104,6 +104,6 @@ plt.ylim(0,300)
 plt.legend(loc='upper right')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap33_13-equilibrio_geral.png'
-plt.savefig(path, transparent=True)
+plt.savefig(path, transparent=False)
 
 plt.show()

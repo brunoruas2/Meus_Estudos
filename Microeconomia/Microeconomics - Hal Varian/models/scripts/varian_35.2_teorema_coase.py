@@ -71,6 +71,6 @@ plt.ylim(0,max_val)
 plt.legend(loc='upper right')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap35_2-teorema_coase.png'
-plt.savefig(path, transparent=True)
+plt.savefig(path, transparent=False)
 
 plt.show()

@@ -99,6 +99,6 @@ plt.ylim(25,350)
 plt.legend(loc='upper right')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap34_6-inveja_equidade.png'
-plt.savefig(path, transparent=True)
+plt.savefig(path, transparent=False)
 
 plt.show()

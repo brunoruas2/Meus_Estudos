@@ -107,6 +107,6 @@ plt.ylim(0,350)
 plt.legend(loc='upper right')
 
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap34_3-maximizacao_bem_estar.png'
-plt.savefig(path, transparent=True)
+plt.savefig(path, transparent=False)
 
 plt.show()
