@@ -4016,7 +4016,108 @@ Claro que os problemas surgem justamente da percepção dos agentes quanto ao pe
 Qualquer que seja o seu lado ao ler esses dilemas, você está fazendo uso dos seus valores e princípios. Mas, do ponto de vista econômico, todos esses conflitos seriam resolvidos se existisse uma linha clara de direitos de propriedade e um mercado associado.
 
 \section{Preferências Quase Lineares e Teorema de Coase}
+
+Vimos que o resultado final da alocação de um mercado com externalidade e direitos de propriedade bem definidos dependerá da dotação inicial dos agentes. Contudo, existe um caso especial onde não importa de quem é o direito de propriedade.
+\\
+\\
+Se as preferências dos agentes forem \textbf{quase lineares}, todas as curvas de contrato estarão em uma mesma distribuição da externalidade. Observe a figura abaixo para o caso do problema dos fumante se as preferências fossem quase lineares.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{cap35_2-teorema_coase.png}
+\end{figure}
+
+Nesse caso, a quantidade de fumaça seria a mesma independente de quem é o direito. O quanto cada um terá de dinheiro no final será definido pelas dotações iniciais, mas a quantidade de fumaça será a mesma para qualquer dotação inicial da caixa de Edgeworth.
+\\
+\\
+Essa conclusão que em certas circunstâncias a quantidade da externalidade independer dos direitos de distribuição é conhecida como \textbf{Teorema de Coase}. Esse teorema implica que a demanda pela externalidade seja independente da renda dos agentes.
+\\
+\\
+Outra interpretação do trabalho de Coase é a de que se as negociações de externalidades não possuírem custos de transação, elas levariam a um resultado alocativo ótimo de Pareto. Mas esse cenário já foi visto na primeira parte desse capítulo.
+\\
+\\
+Mas perceba que esse é um resultado bem específico e não deve ser generalizado para qualquer cenário.
+
 \section{Produção de Externalidades}
+
+Imagine que temos duas empresas em uma mesma cidade, a empresa S produz uma quantidade de aço $s$ e, como consequência da produção, também produz poluição $x$ que é despejada no num rio. A segunda empresa F é de venda de pescados e se localiza no rio abaixo da empresa S. Desse modo a quantidade de poluição de S afeta a produção de F.
+\\
+\\
+Podemos definir a função custo da empresa S como $c_s(s,x)$ e da empresa F como $c_f(f,x)$. Veja que a quantidade de poluição é parâmetro comum nas duas funções. Vamos definir que impacto de $x$ em cada empresa será diferente, de modo que, $\partial c_f/ \partial x > 0$ e $\partial c_s/ \partial x \leq 0$, ou seja, a poluição aumenta o custo da empresa pesqueira mas não afeta (ou até mesmo reduz) o custo da empresa de aço.
+\\
+\\
+O problema de maximização da empresa de aço será
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado
+	\stackrel{p_s s - c_s(s,x)}{\ } $$ %funcao maximizada
+\end{center}
+
+E da empresa pesqueira seria
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado
+	\stackrel{p_f f - c_f(f,x)}{\ } $$ %funcao maximizada
+\end{center}
+
+Da maneira como as coisas estão, a empresa de pesca terá de esperar a empresa de aço definir sua quantidade de poluição para poder maximizar seu lucro.
+\\
+\\
+As condições de maximização do lucro da empresa S serão
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial s} = p_s $$
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} = 0 $$
+
+e, para empresa F será
+
+$$ \frac{\partial c_f(f^*,x^*)}{\partial f} = p_f $$
+
+A empresa S optará produzir a quantidade de poluição que produza o menor custo possível enquanto a empresa F terá de tomar a poluição como dada e maximizar seu lucro a partir desse custo exógeno.
+\\
+\\
+Como chegaremos em uma arranjo que permita que a empresa de aço produza mais poluição do que deveria?\footnote{Se é que deveria haver alguma poluição tolerável.} O custo a mais que a empresa de pesca incorre pela polioção é chamado de \textbf{custo social}. O nosso objetivo é compensar a externalidade para alcançar um equilíbrio de Pareto.
+\\
+\\
+Podemos supor que as empresas se unam. Agora, existirá apenas uma empresa de aço e pesca. Diante desse novo arranjo, a poluição gerada agora passa a ser uma preocupação para os donos dessa nova empresa. Consequentemente, não existe mais externalidade nesse caso, uma vez que, a empresa agora \textbf{internalizou} os custos oriundos da produção de poluição. O novo probema de maximização do lucro passa a ser
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $s,f,x$}} \ \ %enunciado
+	\stackrel{p_s s + p_f f - c_f(f,x) - c_s(s,x)}{\ } $$ %funcao maximizada
+\end{center}
+
+Que possui as seguntes condições de maximização
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial s} = p_s $$
+$$ \frac{\partial c_f(f^*,x^*)}{\partial f} = p_f $$
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} + \frac{\partial c_f(f^*,x^*)}{\partial x}= 0 $$
+
+O último termo nos assegura que a empresa produzirá poluição até um ponto onde o impacto gerado seja igual à vantagem obtida pela produção desse subproduto. Isso vai alterar a quantidade de poluição pois no primeiro caso, $x$ era definido apenas pela condição de 
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} = 0 $$
+
+Mas agora, a empresa conjunta precisará adotar a seguinte restrição
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} + \frac{\partial c_f(f^*,x^*)}{\partial x}= 0 $$
+$$\frac{\partial c_f(f^*,x^*)}{\partial x} = - \frac{\partial c_s(s^*,x^*)}{\partial x} $$
+
+\begin{center}
+	ou
+\end{center}
+
+$$ - CMa_S(s,x) = CMa_F(f,x) $$
+
+Como sabemos, $CMa_F(f,x) > 0$ por pressuposto no começo do modelo. Desse modo, a empresa limitará a produção de poluição até o ponto onde $- CMa_S(s,x) > 0$. De modo que podemos ver que haverá uma redução na quantidade produzida de poluição.
+\\
+\\
+Quando a empresa foca em reduzir seus custos privados, ela decide produzir uma quantidade de externalidade maior do que o ótimo de Pareto permite. Desse modo, o problema da maximização para alcance do ótimo de Pareto é a minimização dos custos sociais e não apenas dos custos privados. De fato, no ótimo de Pareto, a soma dos custos marginais de poluição das duas empresas é igual a zero. Observa a figura abaixo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{cap35_3-producao_externalidade.png}
+\end{figure}
+
+\textbf{Comentário: } Aqui o professor coloca o exemplo do mercado de carbono. Uma importante aplicação desse conceito que você acabou de aprender e que está em plena utilização hoje em dia.
+
 \section{Interpretação das Condições}
 \section{Sinais de Mercado}
 \section{A Tragédia do Uso Comum}
