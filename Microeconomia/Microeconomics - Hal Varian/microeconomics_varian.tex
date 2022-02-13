@@ -4112,12 +4112,48 @@ Quando a empresa foca em reduzir seus custos privados, ela decide produzir uma q
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{cap35_3-producao_externalidade.png}
+	\includegraphics[scale=0.7]{cap35_3-producao_externalidade.png}
 \end{figure}
 
 \textbf{Comentário: } Aqui o professor coloca o exemplo do mercado de carbono. Uma importante aplicação desse conceito que você acabou de aprender e que está em plena utilização hoje em dia.
 
 \section{Interpretação das Condições}
+
+Dependendo das interpretações sobre as condições vistas antes, podemos tentar corrigir a ineficência fruto da externalidade da produção de diverentes maneiras
+\\
+\\
+A primeira abordagem é supor que a empresa de aço não está se defrontando com o preço correto da poluição. O custo zero pela poluição não é o preço correto pelo problema causado à empresa de pesca. A partir desse ponto de vista, podemos argumentar que deveria haver uma maneira de penalisar o produtor da externalidade de modo a fazer com que ele pague pela custo social gerado.
+\\
+\\
+Uma forma de fazê-lo pagar é pela criação de um imposto associado à poluição da siderúrgica. Podemos escrever esse problema como:
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $s,t$}} \ \ %enunciado
+	\stackrel{p_ss - c_s(s,x) - tx}{\ } $$ %funcao maximizada
+\end{center}
+
+As condições de primeira ordem de maximização do lucro são
+
+$$ p_s - \frac{\partial c_s(s,x)}{\partial s} = 0 $$
+$$ - \frac{\partial c_s(s,x)}{\partial x} - t = 0 $$
+
+Podemos ver que
+
+$$ t = - \frac{\partial c_s(s,x)}{\partial x} $$
+
+Da seção anterior, nós já tínhamos visto que a condição de otimização do custo social é dada pela seguinte relação 
+
+$$\frac{\partial c_f(f^*,x^*)}{\partial x} = - \frac{\partial c_s(s^*,x^*)}{\partial x} $$
+
+Ou seja, podemos ver que esse imposto deve ser
+
+$$ t = - \frac{\partial c_s(s,x)}{\partial x} = \frac{\partial c_f(f^*,x^*)}{\partial x} $$
+
+Esse tipo de imposto é chamado de \textbf{imposto de Pigou}. E é uma maneira de resolver essa questão da externalidade da produção. Contudo, para se calcular a alíquota deve-se ter conhecimento sobre o nível ótimo de poluição. Mas se já tivermos esse dado, podemos simplesmente cobrar da siderúrgica que ela produza somente até o ponto ótimo.
+\\
+\\
+A outra abordagem é que falta um mercado para poluição. O problema surge porque o produtor possui custo zero para produzir poluição e, do outro lado, a poluição deveria ter um preço negativo.
+
 \section{Sinais de Mercado}
 \section{A Tragédia do Uso Comum}
 \section{Polição de Automóveis}
