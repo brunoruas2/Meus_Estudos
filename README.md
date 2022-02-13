@@ -48,8 +48,8 @@
 - [ ] Tópicos Avançados
     - [x] Economia Comportamental
     - [x] Trocas
-    - [ ] Produção
-    - [ ] Bem-Estar
+    - [x] Produção
+    - [x] Bem-Estar
     - [ ] Externalidades
     - [ ] Tecnologia da Informação
     - [ ] Bens Públicos

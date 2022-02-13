@@ -190,7 +190,7 @@ Uma \textbf{função contínua} é aquela que não possui nenhum "salto"\ ou "qu
 Uma \textbf{função suave} é aquela que não tem "dobras"\ nem "cantos".
 \\
 \\
-Uma \textbf{função monotônica} é aquela que sempre segue o mesmo sentido (ou crescendo ou decrescendo) sem nunca mudar de sentido. 
+Uma \textbf{função monotônica} é aquela que sempre segue o mesmo sentido (ou crescendo ou decrescendo) sem nunca mudar de sentido.
 Quando é crescente a medida que $x$ cresce, chamaremos de \textbf{função monotônica crescente}. Quando decrescer a medida que $x$ crescer, chamaremos de \textbf{função monotônica decrescente}.
 
 \section*{Funções Inversas}
@@ -237,10 +237,12 @@ Quando uma função é linear, teremos que essa taxa de variação será sempre 
 \\
 \\
 \Large $ \frac{\Delta y}{\Delta x} = $ \normalsize
-$$ \frac{a+b(x^1 + \Delta x) - (a + bx^1)}{\Delta x} = $$
-$$ \frac{\cancel{a}+b(x^1 + \Delta x) \cancel{-a} - bx^1)}{\Delta x} = $$
-$$ \frac{\cancel{bx^1} + b \Delta x \cancel{- bx^1}}{\Delta x} = $$
-$$ \frac{b \cancel{\Delta x}}{\cancel{\Delta x}} = b  $$
+$$ \frac{a(x^1 + \Delta x) + b - (ax^1 + b)}{\Delta x} = $$
+$$ \frac{ax^1 + a\Delta x + b - ax^1 - b}{\Delta x} = $$
+$$ \frac{ax^1 + a\Delta x \cancel{+ b} - ax^1 \cancel{- b}}{\Delta x} = $$
+$$ \frac{ax^1 + a\Delta x - ax^1}{\Delta x} = $$
+$$ \frac{\cancel{ax^1} + a\Delta x \cancel{- ax^1}}{\Delta x} = $$
+$$ \frac{a \cancel{\Delta x}}{\cancel{\Delta x}} = a$$
 
 Para as funções não lineares, essa propriedade não é observada. Tomemos $y = f(x) = x^2$ como exemplo,
 \\
@@ -554,7 +556,7 @@ Independente do modelo, podemos ver que as abordagens são equivalentes. Por fac
 Como vimos nos capítulo 01, estamos diante de um problema de maximização. Sendo mais preciso, nós queremos maximizar o lucro do monopolista dado por $yp(y) - c(y)$ onde $p(y)$ é a demanda inversa\footnote{Lá do capítulo 15. É a função que indica qual deve ser o preço do bem para que seja demanda uma determinada quantidade.} para o mercado, $r(y) = yp(y)$ é a receita do monopolista e $c(y)$ é o custo de produção das $y$ unidades. Podemos resumir nosso problema como
 
 \begin{center}
-\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{r(y) - c(y)}{\ }$ \\
+\LARGE $\stackrel{máx}{\text{\small $y$}} \ \ \stackrel{r(y) - c(y)}{\ }$
 \end{center}
 
 A condição de otimização é evidente: A receita marginal deve ser igual ao custo marginal. Se a receita marginal for maior, bastaria aumentar a produção para aumentar os lucros. Se fosse menor, seria necessário reduzir a quantidade produzida afim de elevar o preço a um nível satisfatório. Algebricamente, temos que
@@ -563,7 +565,7 @@ $$ \textrm{RM = CMa} $$
 $$ ou $$
 $$ \frac{\Delta r}{\Delta y} = \frac{\Delta c}{\Delta y} $$
 \\
-Até aqui a gente tá bem perto da modelagem para as firmas competidoras. O custo marginal é definido pela tecnologia de produção. A mudança acontecerá na receita marginal. 
+Até aqui a gente tá bem perto da modelagem para as firmas competidoras. O custo marginal é definido pela tecnologia de produção. A mudança acontecerá na receita marginal.
 \\
 \\
 Como o monopolista tem o poder de intervir no mercado, sempre que ele decidir alterar a produção em $\Delta y$ unidades, haverá dois efeitos na receita. Em primeiro lugar, ele terá um aumento na receita em $p\Delta y$ unidades. Em segundo lugar, como o mercado terá mais bens a sua disposição, ele estará disposto a pagar um preço menor pelas novas unidades, ou seja, $y\Delta p$. O resultado líquido desse efeito é obtido por
@@ -596,7 +598,7 @@ Agora que sofisticamos um pouco mais a ideia da receita marginal. Voltemos para 
 
 $$ p(y) \left[ 1 - \frac{1}{|\epsilon(y)|} \right] = CMa(y) $$
 \\
-Agora podemos ver claramente que o nosso monopolista atuará somente nos pontos onde a demanda é elástica ($|\epsilon| > 1$). Se operar no ponto onde $\epsilon = 1$, cairá exatamente no caso da competição perfeita\footnote{Onde o preço é igual ao custo marginal.}. Não faz sentido para ele operar nos pontos onde a demanda é inelástica porque ele poderia simplesmente reduzir a quantidade produzida (o que reduziria o custo total) com aumento de receita (porque o preço aumentaria). O ponto de máximo estará sempre na zona onde $|\epsilon| \geq 1$.
+Agora podemos ver claramente que o nosso monopolista atuará somente nos pontos onde a demanda é elástica ($|\epsilon| > 1$). Se operar no ponto onde $\epsilon$ tende ao infinito, cairá exatamente no caso da competição perfeita\footnote{Onde o preço é igual ao custo marginal.}. Não faz sentido para ele operar nos pontos onde a demanda é inelástica porque ele poderia simplesmente reduzir a quantidade produzida (o que reduziria o custo total) com aumento de receita (porque o preço aumentaria). O ponto de máximo estará sempre na zona onde $|\epsilon| \geq 1$.
 
 \section{Curva de Demanda Linear e Monopólio}
 
@@ -607,9 +609,6 @@ $$ \textrm{Função Receita: } r(y) = p(y)y = ay - by^2 $$
 $$ \textrm{Função Receita Marginal: } RM(y) = a - 2by $$
 \\
 A receita marginal é dada (como vemos no capítulo 15) pela derivada da função receita. Podemos ver que o intercepto vertical da demanda e da receita marginal são iguais (dado pelo ponto $a$).
-\\
-\\
-\textbf{Simulação:} \href{https://colab.research.google.com/drive/1OUK3Z--dv7WMufCLmJ9qDWII1yoVlWVX?usp=sharing}{Clique aqui} para ter acesso a essa simulação. Você pode mudar os parâmetros de "$a$", "$b$", "CF"\ e "CV"\ afim de verificar como os valores se modificam.
 
 \begin{center}
 \includegraphics[scale=0.8]{cap25_2-demanda_linear_e_monopolio.png}
@@ -635,7 +634,7 @@ $$ p(y) = \phi \times CMa(y) $$
 onde $\phi = \frac{1}{1 - 1/|\epsilon(y)|}$
 \\
 \\
-Como sabemos, o monopolista sempre operará nos pontos cuja demanda é elástica\footnote{Ele até pode operar no ponto onde $\epsilon = 1$, já vimos que nesse caso, o resultado seria o mesmo do caso na competição perfeita.}, isso nos dará um $\epsilon(y) > 1$. Isso nos diz que o divisor $(1 - 1/|\epsilon|) <  1$, o que por sua vez, nos diz que $\phi > 1$.
+Como sabemos, o monopolista sempre operará nos pontos cuja demanda é elástica, isso nos dará um $\epsilon(y) > 1$. Isso nos diz que o divisor $(1 - 1/|\epsilon|) <  1$, o que por sua vez, nos diz que $\phi > 1$.
 \\
 \\
 Agora vamos dar uma olhada em um caso muito interessante: quando a curva de demanda possui a mesma elasticidade em todos os seus pontos.
@@ -670,7 +669,7 @@ O gráfico da parte de cima é o equilíbrio no mercado de competição e o de b
 Para investigarmos se há uma ineficiência no sentido de Pareto no ponto $B$, façamos a seguinte pergunta: É possível adicionar uma unidade de produto no mercado de modo que o custo marginal pela produção desse bem seja inferior ao preço do mesmo? A resposta é claramente sim!
 \\
 \\
-No nível $B$, a curva de preço (medida pela demanda inversa) ainda é superior à curva de custo marginal (aquela reta verde). Desse modo, se o monopolista produzisse mais uma unidade, ele receberia mais do que o custo marginal dessa unidade e os consumidores cujo preço de reserva é igual ao novo nível de preço passariam a consumir o produto. O excedente desse novo consumidor é igual a $0$, contudo, todos os que já consumiam o produto passaram a pagar menos do que antes o que aumentará os seus respectivos excedentes. Como o consumidor teria um lucro positivo (pois o custo marginal é inferior ao preço) e os consumidores teriam um aumento de excedente, achamos uma melhoria de Pareto.
+No nível $B$, a curva de preço (medida pela demanda inversa) ainda é superior à curva de custo marginal (aquela reta verde). Desse modo, se o monopolista produzisse mais uma unidade, ele receberia mais do que o custo marginal dessa unidade e os consumidores cujo preço de reserva é igual ao novo nível de preço passariam a consumir o produto. O excedente desse novo consumidor é igual a $0$, contudo, todos os que já consumiam o produto passaram a pagar menos do que antes o que aumentará os seus respectivos excedentes. Como o produtor teria um lucro positivo (pois o custo marginal é inferior ao preço) e os consumidores teriam um aumento de excedente, achamos uma melhoria de Pareto.
 \\
 \\
 A razão para o monopolista abrir mão dessa receita adicional é devida a necessidade dele de ter que manter o mesmo preço para todos os compradores\footnote{Vamos explorar mais essa ideia no próximo capítulo.}. Diferente da empresa na competição perfeita, ele leva em consideração o impacto dessa unidade adicional no lucro. Essa redução do lucro se dá porque ao produzir mais, o preço de todas as unidades cai. Se ele pudesse manter o preço nas unidades anteriores e vender mais barato as novas, ele venderia. 
@@ -714,7 +713,7 @@ Eu fiz 3 simulações para o caso da demanda com elasticidade constante. Uma com
 \includegraphics[scale=0.38]{cap25_6-monopolio_natural.png}
 \end{center}
 
-Chamamos de \textbf{monopólio natural} a situação onde temos uma estrutura de custo fixos fixos muito alta e custos marginais baixos. Agora podemos ver que se obrigarmos o monopolista a produzir o nível da competição perfeita, pode acontecer do projeto não ser sustentável, pois a curva de custo médio está acima da curva de demanda.
+Chamamos de \textbf{monopólio natural} a situação onde temos uma estrutura de custo fixos muito alta e custos marginais baixos. Agora podemos ver que se obrigarmos o monopolista a produzir o nível da competição perfeita, pode acontecer do projeto não ser sustentável, pois a curva de custo médio está acima da curva de demanda.
 \\
 \\
 Agora o dilema ficou um pouco mais complexo. Se forçarmos o monopolista a produzir a quantidade que iguala o custo marginal ao preço, ele terá prejuízo. Se aceitarmos que ele mesmo defina a quantidade a produzir, agirá num ponto que produzirá uma ineficiência no mercado.
@@ -768,7 +767,7 @@ Na prática, a maioria das empresas possui algum poder de mercado. É bem possí
 \\
 A medida que você vai avançando no seu curso de Microeconomia, o seu arcabouço de conhecimento vai ficando cada vez mais refinado e, consequentemente, próximo da realidade. Os modelos puros de competição perfeita e monopólio até existem, mas são mais raros na realidade quando comparados à competição monopolística.\footnote{Veremos mais sobre isso nesse capítulo.}
 
-\section{Tipos de discriminação de Preços}
+\section{Tipos de Discriminação de Preços}
 
 No capítulo anterior, nós vimos que o monopolista acaba produzindo em um ponto onde a demanda ainda está disposta a pagar por mais do que o custo marginal. Vimos que a explicação do porquê ele não produz mais é que ele teria de baixar o preço de todos os produtos e não apenas os adicionais. Pois bem, existem alguns monopolistas que detém o poder de \textbf{discriminação de preços}. O professor classifica esse poder em 3 categorias:
 
@@ -823,7 +822,7 @@ Nesse modelo, também chamado de \textbf{fixação de preços não linear}, o pr
 \textbf{Comentário:} Eu não sei você, mas no meu caso, deu um trabalhão para entender o que o professor quis dizer nessa parte. Eu acho que o que deixou mais confuso foi ele ter suposto que o custo marginal é igual a zero (porque isso implicaria em dizer que ele venderia alguma cesta ao preço zero). Então eu retirei essa simplificação e reconstruí a mesma argumentação dele só que para um custo marginal constante maior que zero.\footnote{\href{https://www.youtube.com/watch?v=OBgziVdHH8w}{Esse vídeo aqui me ajudou bastante a entender melhor o que o professor quis dizer.}}
 \\
 \\
-Imagine que temos apenas $2$ grupos de consumidores no mercado. Como nosso modelo prevê, o monopolista tem acesso as curvas de demanda de cada consumidor, mas como limitação, ele só pode escolher quais cestas ofertar por qual preço, e deixar que os consumidores escolham qual é a melhor para eles. Chamamos esse modelo de \textbf{autosseleção}.
+Imagine que temos apenas 2 grupos de consumidores no mercado. Como nosso modelo prevê, o monopolista tem acesso as curvas de demanda de cada consumidor, mas como limitação, ele só pode escolher quais cestas ofertar por qual preço, e deixar que os consumidores escolham qual é a melhor para eles. Chamamos esse modelo de \textbf{autosseleção}.
 \\
 \\
 O objetivo do monopolista é captar todo o excedente do mercado. Mas ele enfrenta uma limitação nessa modalidade de discriminação de preços. Como ele não pode vender a mesma quantidade a preços diferentes para os grupos de consumidores, ele tem de escolher se vai vender a preço de reserva da curva de demanda 1 ou 2.
@@ -856,7 +855,7 @@ A partir desse novo ponto $B$, o excedente perdido dos consumidores tipo 2 com o
 \textbf{Comentário:} Alguns de vocês podem pensar que o excedente abaixo da curva de demanda verde foi inteiramente perdido. Mas não é o caso! Perceba que, mesmo com a retirada dos consumidores do tipo $2$, essa área de excedente foi preenchida pelo excedente dos consumidores do tipo $1$. O monopolista abre mão no sentido que antes essa área era computada duas vezes (uma vez para cada tipo de consumidor).
 \\
 \\
-Na realidade, o principal método de incentivo a autosseleção é a alteração da qualidade do bem. Normalmente, o monopolista reduz a qualidade dos produtos direcionados aos consumidores com preços de reserva menores, afim de eviter que seus consumidores dispostos a pagar mais, prefiram comprar esses produtos ao invés de produtos de "primeira linha". Essa estratégia maximiza o lucro do monopolista e ainda garante algum excedente para os consumidores das demandas mais altas.
+Na realidade, o principal método de incentivo a autosseleção é a alteração da qualidade do bem. Normalmente, o monopolista reduz a qualidade dos produtos direcionados aos consumidores com preços de reserva menores, afim de evitar que seus consumidores dispostos a pagar mais, prefiram comprar esses produtos ao invés de produtos de "primeira linha". Essa estratégia maximiza o lucro do monopolista e ainda garante algum excedente para os consumidores das demandas mais altas.
 \\
 \\
 O professor coloca dois exemplos que são espetaculares. Um sobre a diferença nos preços das passagens aéreas e o motivo da existência das classes econômica e executiva nos meios de transporte. Recomendo demais a leitura. O segundo é referente ao mercado de remédios.
@@ -879,7 +878,9 @@ Da mesma maneira de antes, a otimização será dada por:
 
 $$ RM_1(y_1) = CMa(y_1+y_2) $$
 $$ RM_2(y_2) = CMa(y_1+y_2) $$
+
 Isso claramente implica em
+
 $$ RM_1(y_1) = RM_2(y_2) = CMa(y_1+y_2) $$
 
 \textbf{Atenção:} Eu acho que encontrei um erro de tradução no parágrafo que vem logo depois dessa expressão das receitas marginais acima. Na tradução, temos o trecho: "se a receita marginal no mercado 1 ultrapassar o custo marginal, valeria a pena aumentar a produção \textbf{nos dois mercados}". Isso está errado! No original temos a seguinte passagem: "if the marginal revenue in market 1 exceeded marginal cost, it would pay to expand output \textbf{in market 1}, and similarly for market 2". Uma tradução melhor seria algo como: "se a receita marginal no mercado 1 for maior que a o custo marginal, então valerá a pena aumentar a produção no mercado 1, a mesma lógica se aplica ao mercado 2".
@@ -991,7 +992,7 @@ De zero até 50, a curva de lucro é uma linha reta porque o preço de reserva m
 
 \section{Tarifas Bipartidas}
 
-Um artigo famoso de 1971 cujo título é "A Disneyland Dilemma: Two-Part Tariffs for a Mickey Mouse Monopoly", de Walter Oi, nos mostra uma situação interessante. Como o monopolista se comportará no caso da venda de dois produtos que possuem demandas interrelaciandas?
+Um artigo famoso de 1971 cujo título é "A Disneyland Dilemma: Two-Part Tariffs for a Mickey Mouse Monopoly", de Walter Oi, nos mostra uma situação interessante. Como o monopolista se comportará no caso da venda de dois produtos que possuem demandas interrelacionadas?
 \\
 \\
 No tópico anterior, supomos que as demandas eram independentes. Agora temos um caso onde, ao aumentar a oferta do bem 1, os consumidores estarão menos propensos a consumir o bem 2. Chamamos esse arranjo de \textbf{tarifa bipartida}.
@@ -1066,10 +1067,11 @@ Estamos vendo apenas vantagens ao novo modelo, mas como tudo na vida, temos um t
 Mesmo sendo um modelo mais complexo, podemos evidenciar algumas características que independam de quaisquer fatores relacionados ao mercados específicos. O primeiro deles é relacionado ao número de competidores.
 \\
 \\
-É razoável supor que se o número de concorrentes aumentar (algo que está muito relacionado às barreiras de entrada) haverá impactos na curva de demanda que a empresa está imposta. O primeiro impacto que podemos supor é que essa curva irá se aproximar mais da origem do plano cartesiano\footnote{Ou seja, ele vai acabar tendo que baixar mais o seu preço se quiser continuar vendendo a mesma quantidade.}. O segundo impacto previsto é que a elasticidade de demanda aumentara\footnote{Porque agora os consumidores podem escolher mais opções em relação a antes.}.
+É razoável supor que se o número de concorrentes aumentar (algo que está muito relacionado às barreiras de entrada) haverá impactos na curva de demanda que a empresa está imposta. O primeiro impacto que podemos supor é que essa curva irá se aproximar mais da origem do plano cartesiano\footnote{Ou seja, ele vai acabar tendo que baixar mais o seu preço se quiser continuar vendendo a mesma quantidade.}. O segundo impacto previsto é que a elasticidade de demanda aumentará\footnote{Porque agora os consumidores podem escolher mais opções em relação a antes.}.
 \\
 \\
-Se todas as empresas do mercado tiverem como objetivo o lucro. Quaisquer equilíbrio alcançado terá que obedecer algumas restrições:
+Se todas as empresas do mercado tiverem como objetivo o lucro. 
+Qualquer equilíbrio alcançado terá que obedecer algumas restrições:
 \begin{itemize}
 \item Cada empresa venderá o máximo possível. Ou seja, elas sempre optam por ofertar cestas que estejam na curva de demanda e não abaixo dela.
 \item Cada empresa precisará maximizar seu lucro levando em consideração as imposições oriundas à sua curva de demanda da empresa.
@@ -1103,10 +1105,10 @@ Pensando nisso vamos criar um \href{https://en.wikipedia.org/wiki/Thought_experi
 Imagine que a orla da Ponta Negra seja retilínea e que só seja permitida a venda de sorvetes mediante autorização da Prefeitura. Adicionaremos a restrição que a probabilidade de você encontrar um transeunte com calor é uniforme em toda a extensão da orla. Suporemos também que os preços dos sorvetes sempre serão iguais, que não há diferença de qualidade e que por motivos climáticos só exista um único sabor disponível.
 \\
 \\
-Diante das características do mercado acima, onde o primeiro sorveteiro com licença da prefeitura deve instalar sua barraquinha?. Não é difícil chegar na conclusão que ele deve se instalar exatamente no meio da orla. Desse modo, a distância máxima que um transeuntes com calor terá de caminhar para aliviar seu desconforto térmico é de meia orla.
+Diante das características do mercado acima, onde o primeiro sorveteiro com licença da prefeitura deve instalar sua barraquinha? Não é difícil chegar na conclusão que ele deve se instalar exatamente no meio da orla. Desse modo, a distância máxima que um transeuntes com calor terá de caminhar para aliviar seu desconforto térmico é de meia orla.
 \\
 \\
-Agora vamos complicar um pouco mais. Supondo que outro sorveteiro consiga sua licença para vender na orla. Qual será o melhor arranjo?. Se usarmos o mesmo pensamento de antes, podemos supor que cada vendedor fique no ponto que corresponda a 1/4 e 3/4 do tamanho da orla. Nesse caso, todos os consumidores das áreas 1/4 e 2/4 estariam próximos ao vendedor 1. E os consumidores dos setores 3/4 e 4/4 estariam mais próximos do sorveteiro 2. No final teremos uma distância máxima de 1/4 da orla para cada consumidor e 1/2 da receita total para cada sorveteiro.
+Agora vamos complicar um pouco mais. Supondo que outro sorveteiro consiga sua licença para vender na orla. Qual será o melhor arranjo? Se usarmos o mesmo pensamento de antes, podemos supor que cada vendedor fique no ponto que corresponda a 1/4 e 3/4 do tamanho da orla. Nesse caso, todos os consumidores das áreas 1/4 e 2/4 estariam próximos ao vendedor 1. E os consumidores dos setores 3/4 e 4/4 estariam mais próximos do sorveteiro 2. No final teremos uma distância máxima de 1/4 da orla para cada consumidor e 1/2 da receita total para cada sorveteiro.
 \\
 \\
 Tudo certo então? Terminamos?. Evidente que não. Ainda precisamos pensar no que cada vendedor fará. Como eles querem maximizar sua receita, cada vendedor terá o incentivo à se mover um pouco para o centro, porque desse modo ele manterá a sua demanda cativa e ainda "roubará"\ parte da demanda do seu colega de ofício. No final, ambos se encontrarão no centro da orla. Esse novo arranjo aumenta a distância máxima dos consumidores para 1/2 e mantém a receita dos sorveteiros em 1/2.
@@ -1122,7 +1124,8 @@ No Youtube, parece que os vídeos estão cada vez mais parecidos. Na música, ob
 
 \section{Diferenciação de Produtos}
 
-Uma característica muito interessante da ciência é que ela não se limita em continuar revisando seus conhecimentos. Embora o modelo do Hotelling tenha sido muito famoso, os cientistas continuaram fazendo pesquisas e construindo modelos que explicassem os fenômenos observados na realidade. \\
+Uma característica muito interessante da ciência é que ela não se limita em continuar revisando seus conhecimentos. Embora o modelo do Hotelling tenha sido muito famoso, os cientistas continuaram fazendo pesquisas e construindo modelos que explicassem os fenômenos observados na realidade. 
+\\
 \\
 Existem situações onde os produtores optam por buscar o oposto do modelo de convergência, eles investem na diferenciação dos seus produtos. Qual o sentido disso? nós já vimos que, quanto maior é o grau de diferenciação do produto, mais característica de monopólio o competidor terá. Então as empresas investem pesado em marketing para alterar a percepção dos consumidores e construir a ideia de uma marca "única". A Apple tem uma estratégia excelente nessa linha, para citar um exemplo.
 \\
@@ -1149,15 +1152,14 @@ Mas quando o sorveteiro do meio passa a ser um sorveteiro da extremidade, o novo
 	``Give him a living, but never discuss the family business with him.''
 \end{chapquote}
 
-Quando falamos de produção, o mercado de fatores é muito relevante e até o momento não tocamos nesse assunto desde do capítulo 20. Agora que temos um \textit{framework} mais interessante como o comportamento do monopolísta, podemos pensar nas implicações para o mercado de fatores. Veremos algumas situações: 
+Quando falamos de produção, o mercado de fatores é muito relevante e até o momento não tocamos nesse assunto desde do capítulo 20. Agora que temos um \textit{framework} mais interessante como o comportamento do monopolista,
+. Podemos pensar nas implicações para o mercado de fatores. Veremos algumas situações: 
 \begin{enumerate}
+	\item Qual a diferença entre a demanda por fatores de um monopólio e de uma empresa competitiva.
 
-\item Qual a diferença entre a demanda por fatores de um monopólio e de uma empresa competitiva.
+	\item O que acontece quando temos um mercado de fatores competitivo mas apenas um comprador\footnote{O nome desse arranjo é \textbf{monopsônio}. Pense nele como um monopólio do mundo invertido de stranger things.}.
 
-\item O que acontece quando temos um mercado de fatores competitivo mas apenas um comprador\footnote{O nome desse arranjo é \textbf{monopsônio}. Pense nele como um monopólio do mundo invertido de stranger things.}.
-
-\item Como será o arranjo onde há um monopolista no mercado de fatores e um monopolista no mercado de produto.
-
+	\item Como será o arranjo onde há um monopolista no mercado de fatores e um monopolista no mercado de produto.
 \end{enumerate}
 
 \section{O Monopólio no Mercado do Produto}
@@ -1216,7 +1218,7 @@ O motivo disso é que o monopolista interfere no preço de equilíbrio do mercad
 Não é difícil perceber, então, que o monopolista possui menos incentivo à utilizar determinada quantidade de insumo na sua produção. O que está plenamente de acordo com nossa análise do ponto de maximização do lucro do monopolista, feita nos capítulos anteriores. Vimos que o equilíbrio acontecerá num ponto onde a quantidade maximizadora de lucro é inferior ao caso competitivo.
 \\
 \\
-Podemos saber \textbf{quanto} será demandado por cada empresa no mercado de fatores de produção?. Não é difícil supor que será a quantidade que iguala o produto da receita marginal ao custo marginal desse fator.
+Podemos saber \textbf{quanto} será demandado por cada empresa no mercado de fatores de produção? Não é difícil supor que será a quantidade que iguala o produto da receita marginal ao custo marginal desse fator.
 \\
 \\
 Se o mercado de fatores é competitivo, uma empresa operando em um mercado igualmente competitivo poderá demandar a quantidade de insumos que desejar ($x_c$) a um preço constante $w$. A quantidade empregada de insumo será:
@@ -1335,7 +1337,7 @@ $$ y = \frac{a - k}{2b} $$
 
 Como a função de produção usada iguala a quantidade de insumo à quantidade de produto. Vemos que ele demandará exatamente a mesma quantidade de fator de produção que a oferta no mercado do produto.
 
-$$ x = \frac{a - k}{2b} $$
+$$ y = x = \frac{a - k}{2b} $$
 
 \textbf{Comentário:} O importante aqui é perceber que a função de produção do monopolista downstream é usada para derivar a demanda do fator produzido pelo upstream. Perceba que a quantidade demandada de fator depende do preço pago por ele e da demanda no mercado de produto. Tudo bem intuitivo e simples.
 \\
@@ -1461,11 +1463,11 @@ O problema da maximização da empresa seguidora é:
 
 Já conhecemos esse tipo de problema muito bem. Queremos encontrar o ponto onde a receita marginal será igual ao custo marginal.
 
-$$ RM_2 + CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 + \frac{dc_2(y_2)}{y_2} = 0  $$
+$$ RM_2 = CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 - \frac{dc_2(y_2)}{y_2} = 0  $$
 
 ou, na notação de derivadas de Lagrange
 
-$$ RM_2 + CMa_2 = p(y_1 + y_2) + p'(y_1 + y_2)y_2 + c'(y_2) = 0  $$
+$$ RM_2 = CMa_2 = p(y_1 + y_2) + p'(y_1 + y_2)y_2 - c'(y_2) = 0  $$
 
 A novidade aqui é que temos que levar em consideração a quantidade $y_1$ para encontrar nosso $y_2$. Isso quer dizer que 
 
@@ -2862,7 +2864,7 @@ Começaremos a partir de agora o estudo de equilíbrio \textit{entre} diferentes
 \ 
 \section{A Caixa de Edgeworth}
 
-Um economista inglês do século XIX chamado Francis Ysidro Edegeworth criou uma ferramenta analítica que usaremos para analisar os casos de trocas entre dois indivíduos. A famosa \textbf{caixa de Edgeworth}.
+Um economista inglês do século XIX chamado Francis Ysidro Edgeworth criou uma ferramenta analítica que usaremos para analisar os casos de trocas entre dois indivíduos. A famosa \textbf{caixa de Edgeworth}.
 \\
 \\
 Suporemos a existência de duas pessoas, A e B, e dois bens, 1 e 2. A cesta do consumidor A será denotada por $X_A = (x_A^1, x_A^2)$, similarmente, a cesta de B será dada por $X_B = (x_B^1, x_B^2)$. Um par de cestas será chamado de \textbf{alocação}. Um alocação será chamada de \textbf{factível} se a quantidade total for igual a 
@@ -3851,16 +3853,307 @@ A segunda propriedade é fruto da convexidade do conjunto de possibilidade de ut
 Desse modo podemos ver que a função de bem-estar nos dá uma forma de escolher alocações eficientes no sentido de Pareto pois todo máximo de bem-estar é um ótimo de Pareto e todo ótimo de Pareto será o máximo de alguma função de bem-estar.
 
 \section{Funções de Bem-Estar Social Individualistas}
+
+As funções de bem-estar que usamos até agora são compostas pelas funções de utilidade de cada agente. Contudo, essas funções de utilidade estão sendo aplicadas à alocação total em vez de uma cesta específica. Isso é uma limitação que podemos retirar do modelo.
+\\
+\\
+Para permitir que os indivíduos se preocupem apenas com as suas próprias cestas, vamos adicionar um índice $i$ a cada cesta da nossa função de bem-estar. Desse modo, substituiremos $u_i(x)$ por $u_i(x_i)$. Isso significa que a utilidade de cada pessoa será referente a sua própria cesta de bens.
+\\
+\\
+Nossa função de bem-estar terá a forma
+
+$$ W(u_1(x_1),u_2(x_2),...,u_n(x_n)) $$
+
+Essa nova função de bem-estar será uma função direta em relação aos níveis de utilidade de cada pessoa e indireta em relação às cestas de consumo. O nome dado a essa forma é \textbf{função de bem-estar individualista} ou \textbf{função de bem-estar de Bergson-Samuelson}.
+\\
+\\
+Se a utilidade de cada agente não levar em conta nada além da sua própria cesta, dizemos que não há externalidade de consumo. O que nos trás os resultados obtidos no capítulo 32: todos os equilíbrios competitivos são eficientes de Parte e todas as alocações de Pareto são equilíbrios competitivos\footnote{Com o pressuposto da convexidade.}.
+\\
+\\
+Podemos agora ir um pouco mais adiante. Uma vez que existe essa relação entre a eficiência de Pareto e a maximização do bem-estar descrita acima, podemos concluir que todo máximo de bem-estar são equilíbrios competitivos e todos os equilíbrios competitivos são o máximo de bem-estar de alguma função de bem-estar.
+\\
+\\
+Podemos investigar essa relação de maneira um pouco mais formal. Esse processo vai ser parecido com a argumentação feita no capítulo 33. Só precisamos adapatar as utilidades individuais pela nossa função de bem-estar.
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $x_A^1,x_A^2,x_B^1,x_B^2$}} \ \ \stackrel{W(u_A(x_A^1,x_A^2),u_B(x_B^1,x_B^2))}{\ } $$
+	\\
+	\normalsize de modo que $T(X^1,X^2) = 0$
+\end{center}
+
+Onde $X^1$ e $X^2$ denotam o total do bem 1 e 2 produzido e consumido.
+\\
+\\
+A Lagrangiana desse problema é dada por
+
+$$ L = W(u_A(x_A^1,x_A^2),u_B(x_B^1,x_B^2)) - \lambda(T(X^1,X^2) - 0) $$
+
+As condições de maximização são obtidas pelas seguintes condições de primeira ordem:
+
+$$ \frac{\partial L}{\partial x_A^1} = \frac{\partial W}{\partial u_A} \frac{\partial u_A(x_A^1,x_A^2)}{\partial x_A^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^1} = 0 $$
+
+$$ \frac{\partial L}{\partial x_A^2} = \frac{\partial W}{\partial u_A} \frac{\partial u_A(x_A^1,x_A^2)}{\partial x_A^2} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^2} = 0 $$
+
+$$ \frac{\partial L}{\partial x_B^1} = \frac{\partial W}{\partial u_B} \frac{\partial u_B(x_B^1,x_B^2)}{\partial x_B^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^1} = 0 $$
+
+$$ \frac{\partial L}{\partial x_B^2} = \frac{\partial W}{\partial u_B} \frac{\partial u_B(x_B^1,x_B^2)}{\partial x_B^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^2} = 0 $$
+
+Fazendo exatamente o que vimos no capítulo anterior, chegaremos numa situação onde teremos:
+
+$$ \frac{\partial u_A / \partial x_A^1}{\partial u_A / \partial x_A^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+$$ \frac{\partial u_A / \partial x_B^1}{\partial u_A / \partial x_B^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+
+Podemos ver que a maximização da função de bem-estar nos dá as condições de primeira ordem que nos certificam uma alocação eficiente no sentido de Pareto.
+
 \section{Alocações Justas}
+
+A nossa teoria de função de bem-estar pode ser boa para descrever a utilidade do agregado social mas podemos usar outras abordagens para trazer alguns julgamentos éticos a esse problema.
+\\
+\\
+Uma abordagem, chamada de \textbf{estudo das alocações justas}, tenta analisar os pontos de equilíbrio a apartir de alguns julgamentos morais específicos e suas implicações.
+\\
+\\
+Se dividirmos $n$ bens igualmente entre três pessoas, A, B e C. Supondo que A e C possuam as mesmas preferências. Se você usar o princípio moral da igualdade, as alocações iniciais ideais de cada pessoa serão $n/3$. Mas como as pessoas são diferentes em preferências, haverá o incentivo de trocas. Se A e B fazem uma troca, teremos um aumento do bem-estar social que nos leva a um ótimo de Pareto. Mas C não teve a chance de trocar com ninguém e, nesse caso, pode \textbf{invejar} a pessoa A.
+\\
+\\
+Podemos ver que a simetria nas alocações não é suficiente para preservar a simetria do equilíbrio. O que levanta a questão se é possível, partindo do princípio da equidade, que alguma alocação ótima de Pareto seja garantida a partir de uma alocação.
+
 \section{Inveja e Equidade}
+
+Agora vamos formalizar um pouco mais essa noção de equidade, justiça e inveja.
+\\
+\\
+Uma locação será \textbf{equitativa} se nenhum agente prefere a cesta de bens de outro agente em relação à sua própria cesta. Caso contrário, se a pessoa $i$ preferir a cesta da pessoa $j$ diremos que $i$ \textbf{inveja} $j$. Se uma alocação for, simultaneamente, equitativa e eficiente no sentido de Pareto, ela será chamada de uma alocação $justa$.
+\\
+\\
+Com essa formalização, podemos ver que uma alocação inicial simétrica, possui a propriedade de ser equitativa, contudo, não é a única alocação em que essa propriedade possa ser encontrada.
+\\
+\\
+Para verificarmos que uma alocação justa possa existir, vamos voltar ao exemplo da seção anterior (que é uma dotação inicial equitativa), mas agora vamos usar o mecanismo de mercado para encontrar uma alocação final.
+\\
+\\
+Já sabemos pelo capítulo 32 que o resultado será uma alocação em que cada agente maximiza a cesta via preços $(p_1,p_2)$. Sabemos também que esse resultado será eficiente no sentido de Pareto.
+\\
+\\
+Mas seria essa alocação equitativa? Para descobrirmos, vamos supor o contrário. Suporemos que A inveja B. Isso significa que a cesta de B é preferida por A da seguinte forma:
+
+$$ (x_A^1,x_A^2) \prec_A (x_B^1,x_B^2) $$
+
+O termo $\prec_A$ denota a preferência do consumidor A.
+\\
+\\
+Acontece que, se A prefere a cesta de B ao invés da sua. E, ao mesmo tempo, a cesta de A é resultante de trocas. Isso implica que A não pode, aos preços $(p_1,p_2)$, pagar pela cesta de B, ou seja:
+
+$$ p_1w_A^1 + p_2w_A^2 < p_1w_B^1 + p_2w_B^2 $$
+
+Mas isso é impossível! Afinal, nós partimos de uma alocação inicial equitativa. Isso resulta que a nossa afirmação inicial que A prefere a cesta de B é falsa. Portanto, a alocação inicial equitativa resulta, pelo mecanismo de mercado competitivo, em uma alocação final equitativa.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{cap34_6-inveja_equidade.png}
+\end{figure}
+
+Nessa imagem podemos ver como a alocação via mercado de competição vai produzir uma alocação final onde nenhum dos agentes poderá invejar a cesta do outro.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Externalidades}
 
+Nós vimos que um equilíbrio alcançado pelo mercado competitivo será eficiente no sentido de Pareto se não houver a existência de externalidades do consumo e da produção. Pois bem, agora vamos conhecer mais esse conceito de externalidade.
+\\
+\\
+Sempre que um consumidor se preocupar com a produção ou o consumo de outro agente, dizemos que há uma \textbf{externalidade de consumo}. Quando essa relação produz efeitos negativos, dizemos que é uma \textbf{externalidade negativa}, caso contrário, será uma \textbf{externalidade positiva}.
+\\
+\\
+Do outro lado, sempre que uma atividade produtiva gerar efeitos que influenciem a tomada de decisão dos agentes, diremos que existe uma \textbf{externalidade na produção}. Similarmente, pode ser \textbf{negativa} ou \textbf{positiva}.
+\\
+\\
+Independente da origem, uma externalidade nada mais é do que um bem (ou serviço) que a pessoa se preocupa (ou seja, possui alguma utilidade positiva ou negativa) e que não é comercializado no mercado. É justamente a falta desses mercados para as externalidades que causa o aparecimento de problemas econômicos.
+\\
+\\
+Os modelos vistos até agora tinham a hipótese que os agentes se preocupariam apenas com suas preferências e os preços. Agora vamos relaxar essa abordagem e supor que existirão interações entre os agentes sem que o mecanimos de mercado esteja presente.
+\\
+\\
+Ao final do capítulo, vamos ver algumas maneiras de minimizar os problemas causados pelas externalidades via instituições que "emulam"\ um mecanismo de mercado.
+
 \section{Fumantes e Não Fumantes}
+
+Vamos começar a aplicar esses conceitos através de um exemplo. Imagine que temos dois agentes A e B. Esses dois agentes possuem preferências sobre dois bens "dinheiro"\ e "fumaça". Vamos supor que ambos gostam de dinheiro. Além disso, vamos pensar o que aconteceria se A fosse fumante enquanto B gosta de ar puro.
+\\
+\\
+Podemos representar o problema desses dois agentes na caixa de Edgeworth abaixo:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{cap35_1-dinheiro_fumaca.png}
+\end{figure}
+
+Como você passou pelo capítulo 32, você sabe interpretar esse tipo de gráfico. No sentido horizontal inferior, quanto mais à direita, mais dinheiro o agente A terá. No sentido horizontal superior, quanto mais à esquerda, mais dinheiro o agente B terá. No sentido vertical esquerdo, quanto mais acima, mais fumaça o agenta A (que fuma) poderá fazer. No sentido vertial direito teremos uma mudança, aqui, como B prefere ar puro, quanto mais abaixo, menos fumaça será produzida pelo agente A.
+\\
+\\
+Vamos testar duas dotações iniciais, mas em ambas, vamos supor que cada um deles terá a mesma quantidade inicial de dinheiro. Podemos ver que, na dotação E (que tem fumaça igual a 0), o agente B está diposto a permitir que A fume (e produza fumaça) em troca de algum dinheiro até o ponto onde as curvas de indiferença dos dois sejam tangentes entre si (cesta X). Na dotação E', teremos o mesmo pensamento, mas agora, o agente B é quem pagará para o agente A reduzir a quantidade de fumaça gerada (cesta Y).
+\\
+\\
+Podemos ver que o resultado da alocação final é grandemente impactado pela dotação inicial dos agentes. Tanto a cesta X quanto a Y são eficientes no sentido de Pareto mas o resultado eficiente não implica em nada relacionado às consequências distributivas da alocação.
+\\
+\\
+Na verdade, sabemos que existe todo um conjunto de cestas ótimas no sentido de Pareto (a curva de contrato) que poderia resultar em alguma alocação eficiente. Para saber onde os agentes acabarão na curva de contrato, precisaremos saber dos \textbf{direitos de propriedade} sobre os bens e serviços que serão utilizados no processo de troca.
+\\
+\\
+Podemos repensar esse exemplo como o ponto E sendo o direito de B ao ar puro e o ponto E' sendo o direito de A fumar o quanto quiser. Se houver a possibilidade do detentor do direito vendê-lo, o resultado alcançado será ótimo no sentido de Pareto.\footnote{É isso mesmo, se houvesse um "mercado para fumaça"\ o resultado seria um ótimo de Pareto.}
+\\
+\\
+Podemos concluir afirmando que, desde que haja direitos de propriedade bem definidos com relação ao bem gerador da externalidades\footnote{seja ela positiva ou negativa}, independente de quem esse direito pertença, os agentes podem usar o mecanismo de trocas a partir da dotação para alcançar uma alocação ótima de Pareto. Isso "internaliza"\ a externalidade e acaba com a distorção impeditiva do alcance do equilíbrio ótimo.
+\\
+\\
+Claro que os problemas surgem justamente da percepção dos agentes quanto ao pertencimento do direito de propriedade. Podemos citar vários exemplos:
+\begin{itemize}
+	\item Direito de não se vacinar x Direito de não ser infectado
+	\item Direito de fazer barulho em casa x Direito ao silêncio
+	\item Direito de cobrar o máximo dos alunos x Direito de passar de ano
+\end{itemize}
+
+Qualquer que seja o seu lado ao ler esses dilemas, você está fazendo uso dos seus valores e princípios. Mas, do ponto de vista econômico, todos esses conflitos seriam resolvidos se existisse uma linha clara de direitos de propriedade e um mercado associado.
+
 \section{Preferências Quase Lineares e Teorema de Coase}
+
+Vimos que o resultado final da alocação de um mercado com externalidade e direitos de propriedade bem definidos dependerá da dotação inicial dos agentes. Contudo, existe um caso especial onde não importa de quem é o direito de propriedade.
+\\
+\\
+Se as preferências dos agentes forem \textbf{quase lineares}, todas as curvas de contrato estarão em uma mesma distribuição da externalidade. Observe a figura abaixo para o caso do problema dos fumante se as preferências fossem quase lineares.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{cap35_2-teorema_coase.png}
+\end{figure}
+
+Nesse caso, a quantidade de fumaça seria a mesma independente de quem é o direito. O quanto cada um terá de dinheiro no final será definido pelas dotações iniciais, mas a quantidade de fumaça será a mesma para qualquer dotação inicial da caixa de Edgeworth.
+\\
+\\
+Essa conclusão que em certas circunstâncias a quantidade da externalidade independer dos direitos de distribuição é conhecida como \textbf{Teorema de Coase}. Esse teorema implica que a demanda pela externalidade seja independente da renda dos agentes.
+\\
+\\
+Outra interpretação do trabalho de Coase é a de que se as negociações de externalidades não possuírem custos de transação, elas levariam a um resultado alocativo ótimo de Pareto. Mas esse cenário já foi visto na primeira parte desse capítulo.
+\\
+\\
+Mas perceba que esse é um resultado bem específico e não deve ser generalizado para qualquer cenário.
+
 \section{Produção de Externalidades}
+
+Imagine que temos duas empresas em uma mesma cidade, a empresa S produz uma quantidade de aço $s$ e, como consequência da produção, também produz poluição $x$ que é despejada no num rio. A segunda empresa F é de venda de pescados e se localiza no rio abaixo da empresa S. Desse modo a quantidade de poluição de S afeta a produção de F.
+\\
+\\
+Podemos definir a função custo da empresa S como $c_s(s,x)$ e da empresa F como $c_f(f,x)$. Veja que a quantidade de poluição é parâmetro comum nas duas funções. Vamos definir que impacto de $x$ em cada empresa será diferente, de modo que, $\partial c_f/ \partial x > 0$ e $\partial c_s/ \partial x \leq 0$, ou seja, a poluição aumenta o custo da empresa pesqueira mas não afeta (ou até mesmo reduz) o custo da empresa de aço.
+\\
+\\
+O problema de maximização da empresa de aço será
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado
+	\stackrel{p_s s - c_s(s,x)}{\ } $$ %funcao maximizada
+\end{center}
+
+E da empresa pesqueira seria
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado
+	\stackrel{p_f f - c_f(f,x)}{\ } $$ %funcao maximizada
+\end{center}
+
+Da maneira como as coisas estão, a empresa de pesca terá de esperar a empresa de aço definir sua quantidade de poluição para poder maximizar seu lucro.
+\\
+\\
+As condições de maximização do lucro da empresa S serão
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial s} = p_s $$
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} = 0 $$
+
+e, para empresa F será
+
+$$ \frac{\partial c_f(f^*,x^*)}{\partial f} = p_f $$
+
+A empresa S optará produzir a quantidade de poluição que produza o menor custo possível enquanto a empresa F terá de tomar a poluição como dada e maximizar seu lucro a partir desse custo exógeno.
+\\
+\\
+Como chegaremos em uma arranjo que permita que a empresa de aço produza mais poluição do que deveria?\footnote{Se é que deveria haver alguma poluição tolerável.} O custo a mais que a empresa de pesca incorre pela polioção é chamado de \textbf{custo social}. O nosso objetivo é compensar a externalidade para alcançar um equilíbrio de Pareto.
+\\
+\\
+Podemos supor que as empresas se unam. Agora, existirá apenas uma empresa de aço e pesca. Diante desse novo arranjo, a poluição gerada agora passa a ser uma preocupação para os donos dessa nova empresa. Consequentemente, não existe mais externalidade nesse caso, uma vez que, a empresa agora \textbf{internalizou} os custos oriundos da produção de poluição. O novo probema de maximização do lucro passa a ser
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $s,f,x$}} \ \ %enunciado
+	\stackrel{p_s s + p_f f - c_f(f,x) - c_s(s,x)}{\ } $$ %funcao maximizada
+\end{center}
+
+Que possui as seguntes condições de maximização
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial s} = p_s $$
+$$ \frac{\partial c_f(f^*,x^*)}{\partial f} = p_f $$
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} + \frac{\partial c_f(f^*,x^*)}{\partial x}= 0 $$
+
+O último termo nos assegura que a empresa produzirá poluição até um ponto onde o impacto gerado seja igual à vantagem obtida pela produção desse subproduto. Isso vai alterar a quantidade de poluição pois no primeiro caso, $x$ era definido apenas pela condição de 
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} = 0 $$
+
+Mas agora, a empresa conjunta precisará adotar a seguinte restrição
+
+$$ \frac{\partial c_s(s^*,x^*)}{\partial x} + \frac{\partial c_f(f^*,x^*)}{\partial x}= 0 $$
+$$\frac{\partial c_f(f^*,x^*)}{\partial x} = - \frac{\partial c_s(s^*,x^*)}{\partial x} $$
+
+\begin{center}
+	ou
+\end{center}
+
+$$ - CMa_S(s,x) = CMa_F(f,x) $$
+
+Como sabemos, $CMa_F(f,x) > 0$ por pressuposto no começo do modelo. Desse modo, a empresa limitará a produção de poluição até o ponto onde $- CMa_S(s,x) > 0$. De modo que podemos ver que haverá uma redução na quantidade produzida de poluição.
+\\
+\\
+Quando a empresa foca em reduzir seus custos privados, ela decide produzir uma quantidade de externalidade maior do que o ótimo de Pareto permite. Desse modo, o problema da maximização para alcance do ótimo de Pareto é a minimização dos custos sociais e não apenas dos custos privados. De fato, no ótimo de Pareto, a soma dos custos marginais de poluição das duas empresas é igual a zero. Observa a figura abaixo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{cap35_3-producao_externalidade.png}
+\end{figure}
+
+\textbf{Comentário: } Aqui o professor coloca o exemplo do mercado de carbono. Uma importante aplicação desse conceito que você acabou de aprender e que está em plena utilização hoje em dia.
+
 \section{Interpretação das Condições}
+
+Dependendo das interpretações sobre as condições vistas antes, podemos tentar corrigir a ineficência fruto da externalidade da produção de diverentes maneiras
+\\
+\\
+A primeira abordagem é supor que a empresa de aço não está se defrontando com o preço correto da poluição. O custo zero pela poluição não é o preço correto pelo problema causado à empresa de pesca. A partir desse ponto de vista, podemos argumentar que deveria haver uma maneira de penalisar o produtor da externalidade de modo a fazer com que ele pague pela custo social gerado.
+\\
+\\
+Uma forma de fazê-lo pagar é pela criação de um imposto associado à poluição da siderúrgica. Podemos escrever esse problema como:
+
+\begin{center}
+	\LARGE $$ \stackrel{max}{\text{\small $s,t$}} \ \ %enunciado
+	\stackrel{p_ss - c_s(s,x) - tx}{\ } $$ %funcao maximizada
+\end{center}
+
+As condições de primeira ordem de maximização do lucro são
+
+$$ p_s - \frac{\partial c_s(s,x)}{\partial s} = 0 $$
+$$ - \frac{\partial c_s(s,x)}{\partial x} - t = 0 $$
+
+Podemos ver que
+
+$$ t = - \frac{\partial c_s(s,x)}{\partial x} $$
+
+Da seção anterior, nós já tínhamos visto que a condição de otimização do custo social é dada pela seguinte relação 
+
+$$\frac{\partial c_f(f^*,x^*)}{\partial x} = - \frac{\partial c_s(s^*,x^*)}{\partial x} $$
+
+Ou seja, podemos ver que esse imposto deve ser
+
+$$ t = - \frac{\partial c_s(s,x)}{\partial x} = \frac{\partial c_f(f^*,x^*)}{\partial x} $$
+
+Esse tipo de imposto é chamado de \textbf{imposto de Pigou}. E é uma maneira de resolver essa questão da externalidade da produção. Contudo, para se calcular a alíquota deve-se ter conhecimento sobre o nível ótimo de poluição. Mas se já tivermos esse dado, podemos simplesmente cobrar da siderúrgica que ela produza somente até o ponto ótimo.
+\\
+\\
+A outra abordagem é que falta um mercado para poluição. O problema surge porque o produtor possui custo zero para produzir poluição e, do outro lado, a poluição deveria ter um preço negativo.
+
 \section{Sinais de Mercado}
 \section{A Tragédia do Uso Comum}
 \section{Polição de Automóveis}
