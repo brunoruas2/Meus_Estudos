@@ -30,6 +30,7 @@
 \usepackage{float} % to make a figure stay when i whant
 \usepackage{sgame} % to make payoff matrixes
 \usepackage{qtree} % to make tree diagrams
+\usepackage{optidef}
 
 \usepackage[shortrightarrow]{stmaryrd} % shortarrow
 
@@ -4048,15 +4049,15 @@ Podemos definir a função custo da empresa S como $c_s(s,x)$ e da empresa F com
 O problema de maximização da empresa de aço será
 
 \begin{center}
-	\LARGE $$ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado
-	\stackrel{p_s s - c_s(s,x)}{\ } $$ %funcao maximizada
+	\LARGE $ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado
+	\stackrel{p_s s - c_s(s,x)}{\ } $ %funcao maximizada
 \end{center}
 
 E da empresa pesqueira seria
 
 \begin{center}
-	\LARGE $$ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado
-	\stackrel{p_f f - c_f(f,x)}{\ } $$ %funcao maximizada
+	\LARGE $ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado
+	\stackrel{p_f f - c_f(f,x)}{\ } $ %funcao maximizada
 \end{center}
 
 Da maneira como as coisas estão, a empresa de pesca terá de esperar a empresa de aço definir sua quantidade de poluição para poder maximizar seu lucro.
@@ -4080,8 +4081,8 @@ Como chegaremos em uma arranjo que permita que a empresa de aço produza mais po
 Podemos supor que as empresas se unam. Agora, existirá apenas uma empresa de aço e pesca. Diante desse novo arranjo, a poluição gerada agora passa a ser uma preocupação para os donos dessa nova empresa. Consequentemente, não existe mais externalidade nesse caso, uma vez que, a empresa agora \textbf{internalizou} os custos oriundos da produção de poluição. O novo probema de maximização do lucro passa a ser
 
 \begin{center}
-	\LARGE $$ \stackrel{max}{\text{\small $s,f,x$}} \ \ %enunciado
-	\stackrel{p_s s + p_f f - c_f(f,x) - c_s(s,x)}{\ } $$ %funcao maximizada
+	\LARGE $ \stackrel{max}{\text{\small $s,f,x$}} \ \ %enunciado
+	\stackrel{p_s s + p_f f - c_f(f,x) - c_s(s,x)}{\ } $ %funcao maximizada
 \end{center}
 
 Que possui as seguntes condições de maximização
@@ -4128,8 +4129,8 @@ A primeira abordagem é supor que a empresa de aço não está se defrontando co
 Uma forma de fazê-lo pagar é pela criação de um imposto associado à poluição da siderúrgica. Podemos escrever esse problema como:
 
 \begin{center}
-	\LARGE $$ \stackrel{max}{\text{\small $s,t$}} \ \ %enunciado
-	\stackrel{p_ss - c_s(s,x) - tx}{\ } $$ %funcao maximizada
+	\LARGE $ \stackrel{max}{\text{\small $s,t$}} \ \ %enunciado
+	\stackrel{p_ss - c_s(s,x) - tx}{\ } $ %funcao maximizada
 \end{center}
 
 As condições de primeira ordem de maximização do lucro são
@@ -4152,9 +4153,72 @@ $$ t = - \frac{\partial c_s(s,x)}{\partial x} = \frac{\partial c_f(f^*,x^*)}{\pa
 Esse tipo de imposto é chamado de \textbf{imposto de Pigou}. E é uma maneira de resolver essa questão da externalidade da produção. Contudo, para se calcular a alíquota deve-se ter conhecimento sobre o nível ótimo de poluição. Mas se já tivermos esse dado, podemos simplesmente cobrar da siderúrgica que ela produza somente até o ponto ótimo.
 \\
 \\
-A outra abordagem é que falta um mercado para poluição. O problema surge porque o produtor possui custo zero para produzir poluição e, do outro lado, a poluição deveria ter um preço negativo.
+A outra abordagem é que falta um mercado para poluição. O problema surge porque o produtor possui custo zero para produzir poluição e, do outro lado, a poluição deveria ter um preço negativo\footnote{Ou seja, alguém deveria receber algo por ela.}.
+\\
+\\
+Se a empresa de pesca tivesse direito a água limpa mas fosse permitido que ela vendesse a permissão de alguma quantidade de poluição. Sendo $q$ o preço pela quantidade de poluição. Podemos escrever o problema da siderúrgica como:
+
+\begin{center}
+	\LARGE $ \stackrel{max}{\text{\small $s,x$}} \ \ \stackrel{p_ss - c_s(s,x) - qx}{\ } $ %funcao maximizada
+\end{center}
+
+Enquanto o problema da empresa de pesca seria
+
+\begin{center}
+	\LARGE $ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado 
+	\stackrel{p_ff + qx - c_f(f,x)}{\ } $ %funcao maximizada
+\end{center}
+
+Desse modo, $qx$ entra como custo para a empresa de aço e uma receita para a empresa de pesca. As condições de maximização serão 
+
+$$ p_s = \frac{\partial c_s(s,x)}{\partial s} $$
+$$ q = - \frac{\partial c_s(s,x)}{\partial x} $$
+$$ p_f = \frac{\partial c_f(s,x)}{\partial f} $$
+$$ q = \frac{\partial c_s(s,x)}{\partial s} $$
+
+Cada empresa enfrentará o custo marginal social das suas ações. O equilíbrio é encontrado onde o preço pago pela poluição seja igualador para a oferta da permissão de poluição (pela pescadora) e para a demanda da permissão de poluição (pela siderúrgica). Ou seja
+
+$$-\frac{\partial c_s(s,x)}{\partial x} = \frac{\partial c_s(s,x)}{\partial s}$$
+
+Esse equilíbrio será exatamente onde o custo marginal pela produção de poluição for igual ao benefício marginal pela redução da poluição. Esse resultado foi encontrado no exemplo da fusão das duas empresas.
+\\
+\\
+Mas não precisamos parar por aqui, podemos supor que o direito seja da siderúrgica. Nesse caso, a pescadora terá que negociar (e pagar) pela redução da produção de poluição.\footnote{Eu sei, é estranho pensar nisso. Mas TEORICAMENTE esse é um resultado plenamente aceitável.}
+\\
+\\
+O interessante é que o resultado no montante de poluição é o mesmo. Estranho né? Vamos entender o motivo disso agora.
+\\
+\\
+Se a siderúrgica possuir o direito em poluir até uma quantidade $\bar{x}$ e a empresa de pesca estiver disposta a negociar. Podemos definir o problema como
+
+\begin{center}
+	\LARGE $ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado 
+	\stackrel{p_ss + q(\bar{x} - x) - c_s(s,x)}{\ } $ %funcao maximizada
+\end{center}
+
+A siderúrgica agora terá duas fontes de receita: vender aço ou vender alívio de poluição. As condições de primeira ordem para o nosso problema são
+
+$$ p_s - \frac{\partial c_s(s,x)}{\partial s} = 0 $$
+$$ -q - \frac{\partial c_s(s,x)}{\partial x} = 0 $$
+
+Enquanto o problema da maximização da empresa de pesca será
+
+\begin{center}
+	\LARGE $ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado 
+	\stackrel{p_ff - q(\bar{x} - x) - c_s(f,x)}{\ } $ %funcao maximizada
+\end{center}
+
+Cujas condições de maximização são
+
+$$ p_f - \frac{\partial c_f(f,x)}{\partial f} = 0 $$
+$$ q - \frac{\partial c_f(f,x)}{\partial x} = 0 $$
+
+Essas equações são as mesmas que vimos no caso anterior. Mas agora, quem receberá o recurso será a siderúrgica ao invés da empresa de pesca. Podemos ver que mesmo com o resultado final sendo o mesmo, a questão de quem possui o direito de propriedade é importante para determinar quem deve receber e quem deve pagar pelo custo social.
 
 \section{Sinais de Mercado}
+
+
+
 \section{A Tragédia do Uso Comum}
 \section{Polição de Automóveis}
 
