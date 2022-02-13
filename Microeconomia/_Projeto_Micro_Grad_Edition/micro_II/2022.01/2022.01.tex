@@ -10,7 +10,6 @@
 \usepackage{ragged2e}
 \usepackage{cancel} % para poder colocar o tracinho de cancelamento
 
-
 \graphicspath{{./images/}} % set an default images folder
 
 \definecolor{kugreen}{RGB}{50,93,61}
@@ -817,7 +816,7 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Monopólio 2}
+\section{C. Monopólio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
@@ -1249,6 +1248,376 @@
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{M. de Fatores}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\huge O Mercado de Fatores \normalsize
+	\\~\\
+	\begin{itemize}
+		\item O Monopólio no Mercado do Produto
+		\item O Monopsônio
+		\item Monopólios Upstream e Downstream na Cadeia de Produção
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	Agora que temos um \textit{framework} mais interessante como o comportamento do monopolista. Podemos pensar nas implicações para o mercado de fatores. Veremos algumas situações:
+	\\~\\
+	\begin{enumerate}
+		\item Qual a diferença entre a demanda por fatores de um monopólio e de uma empresa competitiva.
+	
+		\item O que acontece quando temos um mercado de fatores competitivo mas apenas um comprador\footnote{O nome desse arranjo é \textbf{monopsônio}.}.
+	
+		\item Como será o arranjo onde há um monopolista no mercado de fatores e um monopolista no mercado de produto.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	Pensemos novamente na empresa que demanda fatores de produção. 
+	\\~\\
+	Sua demanda maximizadora será dada pelo ponto onde o custo marginal pela compra do fator é igual à receita marginal advinda do emprego desse fator.
+	\\~\\
+	Sua função de produção será dada por $y = f(x)$. 
+	\\~\\
+	A receita será dada pelo volume de produção e da demanda inversa do mercado, algo como, $R(y) = p(y)y$. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+	
+	O \textbf{Produto Marginal} de um fator de produção é obtido pela variação da função produção em relação à variação do fator observado. No nosso exemplo, só temos um único fator, então:
+
+	$$ PM_x = \frac{\delta y}{\delta x} = f'(x) $$
+
+	Como não é novidade, esse incremento marginal na produção será vendido e produzirá uma \textbf{Receita Marginal}. 
+	\\~\\
+	Podemos expor esse efeito pela expressão da  variação infinitesimal da receita dividida pela variação infinitesimal do produto.
+
+	$$ RM_y = \frac{\delta R}{\delta y} = p(y) + p'(y)y $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+	
+	Até agora já vimos o impacto que um fator causa no produto e, do outro lado, o impacto que um produto causa na receita. Agora nos resta fazer a relação direta entre essas duas lógicas.
+	\\~\\
+	Uma vez que $y = f(x)$, então, $p(y) = p(f(x))$. Podemos reescrever nossa equação da receita como:
+
+	$$ R(x) = p(f(x))f(x) $$
+
+	Agora que temos nossa função de receita explicitamente relacionada ao nosso fator de produção, podemos obter a relação chamada de \textbf{Produto da Receita Marginal} que mede o impacto na receita dada uma variação no fator de produção.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	Para obter-la usamos a derivada de $R(x)$ em relação à $x$.
+	\\~\\
+	A regra da cadeia para $p(y) = p(f(x))$ nos diz que $\frac{d p(y) }{d x} = \frac{d p(y)}{d y} \frac{d y}{d x} $.
+	\\~\\
+	Temos que aplicar, ao mesmo tempo, a regra da multiplicação junto à regra da cadeia.
+	\\~\\
+	$$ PRM_x = \frac{d R(x)}{d x} = p(y)f'(x) + f(x)p'(y)f'(x) $$
+	$$ = [p(y) + p'(y)y]f'(x) $$
+	$$ = RM_y \times PM_x $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	Ou seja, o impacto na receita de uma variação do fator de produção é igual à receita marginal da produção vezes o produto marginal do fator. O que faz todo sentido.
+	\\~\\
+	Podemos trazer de volta a nossa expressão da receita marginal desenvolvida na seção de maximização de lucro do capítulo 25. 
+	
+	$$RM(y) = p(y) \left[ 1 - 1/|\epsilon| \right]$$
+
+	Também acabamos de ver que
+
+	$$PRM_x = RM_y \times PM_x $$
+
+	Juntando as duas equações temos que
+
+	$$ \frac{d R(x)}{d x} = p(y) \left[ 1 - \frac{1}{|\epsilon|} \right] PM_x $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	Uma vez que, na competição perfeita, a elasticidade é infinita. Isso implica no fato que o produto da receita marginal será dado pelo preço de mercado (que é igual à receita marginal) vezes o produto marginal do fator de produção, ou seja, $p PM_x$. 
+	\\~\\
+	O professor chamou de \textbf{valor do produto marginal} essa multiplicação entre o preço de mercado e o produto marginal do fator.
+
+	$$ \textrm{Competição Perfeita: } PRM_x = p PM_x $$
+
+	$$ \textrm{Monopólio: } PRM_x = p \left[ 1 - \frac{1}{|\epsilon|} \right] PM_x \leq pPM_x $$
+
+	No caso do monopólio, o produto da receita marginal será, no máximo, igual ao valor do produto marginal.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	O motivo disso é que o monopolista interfere no preço de equilíbrio do mercado ao produzir mais unidades. 
+	\\~\\
+	Ao chegar no ponto onde a demanda é elástica, o resultado na receita será cada vez menor. 
+	\\~\\
+	Já no caso da empresa competitiva, não importa quantos produtos ela produza, o preço de mercado sempre será o mesmo.
+	\\~\\
+	Não é difícil perceber, então, que o monopolista possui menos incentivo à utilizar determinada quantidade de insumo na sua produção.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	Podemos saber \textbf{quanto} será demandado por cada empresa no mercado de fatores de produção? Não é difícil supor que será a quantidade que iguala o produto da receita marginal ao custo marginal desse fator.
+	\\~\\
+	Se o mercado de fatores é competitivo, uma empresa operando em um mercado igualmente competitivo poderá demandar a quantidade de insumos que desejar ($x_c$) a um preço constante $w$. A quantidade empregada de insumo será:
+
+	$$ \textrm{Competição Perfeita: } PRM_{x_c} = pPM(x_c) = w $$
+
+	Mas no caso do monopolista, ele não demandará a igualdade com o valor do produto marginal.
+
+	$$ \textrm{Monopólio: } PRM(x_m) = w $$
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopólio no Mercado do Produto}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{cap27_1-demanda_fatores.png}
+	\end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{O Monopsônio}
+
+	Um cenário onde temos um mercado competitivo de fatores, um único comprador de fator e um mercado de produtos competitivo.
+	\\~\\
+	Para simplificar, vamos supor que a empresa usa apenas um único fator de produção. Sua função de produção será dada por $y = f(x)$.  
+	\\~\\
+	A análise de comportamento do monopsônio é parecida com a do monopólio, só que ao invés de impactar o mercado pela oferta de bens, o poder de mercado é exercido pela compra. 
+	\\~\\
+	A quantidade de fator comprado, impactará no preço pago por ele.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopsônio}
+
+	Para expandir o modelo, vamos criar uma função de oferta inversa $w(x)$ onde o preço pago pelo insumo será determinado pela quantidade demandada pelo nosso único comprador (chamado de \textbf{monopsonista}). É razoável supor que $\frac{d w(x)}{d x} > 0$.
+	\\~\\
+	Num mercado de fatores competitivo, a curva de oferta de fatores é plana. Ou seja, não importando a quantidade demanda, o custo será sempre o mesmo. 
+	\\~\\
+	Já no caso de um único comprador, a curva de oferta de fatores será inclinada positivamente.
+	\\~\\
+	"Uma empresa num mercado de fatores competitivo é uma \textbf{tomadora de preços}. Um monopsionista é um \textbf{fixador de preços}".
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopsônio}
+
+	A maximização de lucro do monoposionista será:
+
+	\begin{center}
+	\LARGE $\stackrel{max}{\text{\small $x$}} \ \ 
+	\stackrel{pf(x) - w(x)x}{\ }$ \\
+	\end{center}
+
+	Ou seja, temos que encontrar a quantidade de insumo - $x$ - que permita maximizar a diferença entre a receita total - $p f(x)$ - e o custo total - $w(x)x$. A condição de primeira ordem desse problema será:
+
+	$$ pf'(x) - [ w(x) + w'(x)x ] = 0 $$
+	$$ pf'(x) = w(x) + w'(x)x $$
+	$$ \underbrace{pPM_x}_{\textrm{PRM}} = \ \underbrace{w(x) + w'(x)x}_{\textrm{Custo Marginal}} $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopsônio}
+
+	Como supomos no início do nosso caso, o mercado do produto é competitivo. Isso quer dizer que a receita marginal será igual a $pPM_x$ (que é a mesma coisa que $pf'(x)$). Mas obter o custo marginal não será tão simples quanto antes.
+	\\~\\
+	Quando a firma compra uma pequena quantidade ($x$) do fator de produção, ela deve pagar o preço desse fator vezes a quantidade ($wx$). Contudo, nesse caso, o preço será afetado exatamente na quantidade demanda ($w'(x)x$). O valor final pago é a soma dessas duas ações.
+	\\~\\
+	Podemos desenvolver essa lógica exatamente como desenvolvemos a receita do monopolista na seção 25.1.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopsônio}
+
+	$$ \Delta c = w \Delta x + x \Delta w $$
+	$$ \frac{\Delta c}{\Delta x} = w + x \frac{\Delta w}{\Delta x} $$
+	$$ = w \left[ 1 + \frac{x}{w} \frac{\Delta w}{\Delta x} \right] $$
+	$$ = w \left[1 + \frac{1}{\eta} \right] $$
+
+	Onde $\eta$ representa a elasticidade da oferta. Como a inclinação a curva de oferta é positiva, $\eta$ será maior que zero. 
+	\\~\\
+	Se a elasticidade da oferta for perfeita, $eta$ será infinito. O que implica, por sua vez, no caso da competição perfeita onde o custo marginal seria igual a $w$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Monopsônio}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.7]{cap27_2-demanda_fatores_monopsonio.png}
+	\end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Nós só observamos dois tipos de concorrência imperfeita. Mas os exemplos acima são apenas um dos múltiplos arranjos que podem acontecer na realidade.
+	\\~\\
+	O importante é saber como modelar o comportamento do monopolista (ou do monopsionista) seja no mercado de fatores ou no mercado de produção.
+	\\~\\
+	Ainda veremos uma nova situação: O caso onde um monopolista no mercado de fatores vende para um monopolista no mercado de produção.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	O monopolista do mercado de fatores é chamado de \textbf{upstream} ou \textbf{para trás}. Ele vende o insumo $x$ ao preço $k$ e com custo marginal constante $c$. 
+	\\~\\
+	O monopolista do mercado de produto será denominado por \textbf{downstream} ou \textbf{para frente}. Esse segundo usará o insumo $x$ para obter a produção  $y$ via função de produção da forma $f(x) = y$ que será vendida no mercado cuja demanda inversa será $p(y)$. 
+	\\~\\
+	No nosso exemplo a forma funcional dessa demanda será $p(y) = a - by$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Vamos supor que $f(x) = y = x$, ou seja, é como se ele revendesse o produto\footnote{O que torna esse exemplo surpreendentemente válido para diversas ocasiões da vida real.}. 
+	\\~\\
+	Outra simplificação é que o downstream também terá custo marginal igual ao preço pago pelo insumo ($k$) ao upstream.
+	\\~\\
+	Teremos que buscar um equilíbrio entre os dois monopolistas. Para isso, vamos começar modelando o caso para o downstream. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Ele quer maximizar seu lucro que é dado pelo seguinte problema:
+
+	\begin{center}
+		\Large $\stackrel{max}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ p(y)y - ky}{\ }$ \\
+		\end{center}
+		\begin{center}
+		\Large $\stackrel{max}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ [a - by]y - ky}{\ }$ \\
+		\end{center}
+		\begin{center}
+		\Large $\stackrel{max}{\text{\small $y$}} \ \ \stackrel{L(y)\ =\ ay - by^2 - ky}{\ }$ \\
+	\end{center}
+
+	A condição de primeira ordem da última forma é dada por:
+
+	$$ \frac{d L(y)}{d y} = a - 2by - k = 0 $$
+	$$ a - 2by = k $$
+	$$ y = \frac{a - k}{2b} $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Como a função de produção usada iguala a quantidade de insumo à quantidade de produto. Vemos que ele demandará exatamente a mesma quantidade de fator de produção que a oferta no mercado do produto.
+
+	$$ y = x = \frac{a - k}{2b} $$
+
+	O importante aqui é perceber que a função de produção do monopolista downstream é usada para derivar a demanda do fator produzido pelo upstream. 
+	\\~\\
+	Perceba que a quantidade demandada de fator depende do preço pago por ele e da demanda no mercado de produto. Tudo bem intuitivo e simples.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Agora temos que modelar o comportamento do upstream. Vamos supor que ele tenha acesso à função demanda de fatores do downstream e queira maximizar seu lucro.
+
+	A demanda inversa de fatores nada mais é do que a última equação tendo k em função de x:
+
+	$$ k(x) = a - 2bx $$
+
+	A receita é dada por:
+
+	$$ k(x)x = ax - 2bx^2 $$
+
+	E a receita marginal por:
+
+	$$ RM_x = a - 4bx $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Igualando a receita marginal ao custo marginal, teremos que:
+
+	$$ a - 4bx = c $$
+
+	ou seja, o total vendido no mercado pelo monopolista upstream será dado por:
+
+	$$ x = \frac{a - c}{4b} $$
+
+	Como a função de produção é um pra um, podemos definir que o total produzido no mercado de produto será:
+
+	$$ y = \frac{a - c}{4b} $$
+
+	Essa é a quantidade da produção que maximiza os lucros do monopolista upstream.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	Lembre-se que ele usa como função de demanda de fatores o resultado do problema de maximização do downstream. Então a solução acaba por gerar um lucro fruto do processo de maximização de ambos os monopolistas.
+	\\~\\
+	Se houvesse apenas um monopolista em ambos os mercados (imagine que as duas empresas se fundissem) e os custos de produção dos fatores se mantivessem os mesmos.
+	\\~\\
+	O problema de maximização seria igualar a receita marginal ($a - 2by$) ao custo do fator ($c$). Isso geraria um volume de produção igual à
+
+	$$ y_{int} = \frac{a - c}{2b}$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Monopólios Upstream e Downstream na Cadeia de Produção}
+
+	O monopolista integrado produzirá o dobro que o arranjo com dois monopolistas separados. Mas qual o motivo dessa diferença?
+	\\~\\
+	Na prática, o monopolista upstream vai cobrar uma quantidade cujo preço de mercado é superior ao custo marginal. 
+	\\~\\
+	Esse preço será o custo que o monopolista downstream usará para maximizar seu lucro. 
+	\\~\\
+	Contudo, quando as empresas se fundem, o novo custo marginal do monopolista do mercado de produto será exatamente o custo de produção $c$. Nós retiramos de cena o Markup do monopolista upstream.
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
