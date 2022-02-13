@@ -67,12 +67,12 @@
     - [x] Fatoriais e Permutações
     - [x] Contando Subconjuntos
     - [x] O Triângulo de Pascal e O Teorema Binomial
-    - [ ] O Princípio da Inclusão-Exclusão
-    - [ ] Contando Multiconjuntos
-    - [ ] Os Princípios da Divisão e da Casa dos Pombos
-    - [ ] Prova Combinatorial
-- [ ] Prova Direta
-- [ ] Prova Contra-Positiva
+    - [x] O Princípio da Inclusão-Exclusão
+    - [x] Contando Multiconjuntos
+    - [x] Os Princípios da Divisão e da Casa dos Pombos
+    - [x] Prova Combinatorial
+- [x] Prova Direta
+- [x] Prova Contra-Positiva
 - [ ] Prova por Contradição
 - [ ] Prova de Afirmações Não-Condicionais
 - [ ] Provas Envolvendo Conjuntos
