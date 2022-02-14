@@ -4217,10 +4217,72 @@ Essas equações são as mesmas que vimos no caso anterior. Mas agora, quem rece
 
 \section{Sinais de Mercado}
 
-
+A terceira interpretação das externalidades é que o próprio objetivo da maximização dos lucros cria o incentivo à internalização das externalidades. Por exemplo, as empresas do nosso exemplo teriam um incentivo em se fundirem de modo a maximizar o lucro coordenado de ambas.
+\\
+\\
+Cada dono das empresas poderia vender suas ações pelo valor presente da série de lucros e o comprador, sabendo do ganho oriundo da coordenação das empresas, ganharia pelo fluxo de lucros adicionais oriundo da maximização das atividades. Esse comprador poderia ou não ser um dos donos das duas empresas.
+\\
+\\
+Com isso, observamos que a própria existência da externalidade pode gerar sua resolução atravez do incentivo à internalização para maximização dos lucros.
+\\
+\\
+\textbf{Comentário:} Aqui vemos um exemplo sobre os plantadores de amêndoas e os apicultores. 
 
 \section{A Tragédia do Uso Comum}
+
+Já sabemos que as externalidades surgem quando não temos o direito de propriedade devidamente definido. Vamos explorar um caso particularmente famoso chamado de "Tragédia dos comuns".
+\\
+\\
+Imagine uma vila agrícola onde cada pessoa cria seu gado em um campo comunitário. Vamos verificar dois cenários: O primeiro onde temos direito de propriedade do campo bem definido e o segundo onde o campo é livre para qualquer morador da vila.
+\\
+\\
+O custo da vaca será dado por $a$. A quantidade de leite que cada vaca dá é uma função do número de vacas que pastam junto com ela no campo (quanto mais vacas pastando, menos leite por vaca). $f(c)$ será o valor do leite produzido por $c$ vacas pastando no campo. Desse modo, $f(c)/c$ é o valor médio do leite.
+\\
+\\
+Quantas vacas pastarão na terra se quisermos maximizar a riqueza da vila? O problema de maximização deles pode ser escrito como:
+
+\begin{center}
+	\LARGE $ \stackrel{max}{\text{\small $c$}} \ \ %enunciado 
+	\stackrel{f(c) - ac}{\ } $ %funcao maximizada
+\end{center}
+
+Não é nenhum mistério perceber que a condição de primeira ordem nos dá que $f'(c) = a$ ou seja $PM(c) = a$. Afinal, se o valor do produto marginal for maior que $a$ vale a pena colocar mais uma vaca no pasto, caso contrário, seria melhor vendê-la.
+\\
+\\
+Se o campo fosse privado, esse seria precisamente o resultado. O proprietário do campo só permitiria que houvesse a quantidade de vacas que maximizasse o total de leite. Será que o resultado seria o mesmo com a propriedade comum a todos os moradores?
+\\
+\\
+Cada habitante pensaria se vale ou não a pena comprar uma vaca adicional. Se existirem $c$ vacas já pastando no campo, a produtção por cabeça será de $f(c)/c$. O habitante que está pensando em criar uma vaca sabe que a produção passará a ser $f(c+1)$ se ele o fizer. A receita que essa vaca irá gerar para esse morador da vila é de $f(C+1)/(c+1)$.
+\\
+\\
+Se $f(C+1)/(c+1) > a$, será lucrativo adicionar uma vaca. Desse modo, os moradores da vila irão produzir até o ponto onde o benefício médio pela vaca adicional for igual ao custo de compra da mesmam, ou seja
+
+$$ \frac{f(\bar{c})}{\bar{c}} = a $$
+
+Isso nada mais é que obedecer à primeira equação do problema de maximização: $f(\bar{c} - a\bar{c} = 0$).
+\\
+\\
+Quando uma pessoa pondera em comprar uma vaca, ela pensa apenas no benefício individual que obterá mas, com isso, acaba ignorando que essa vaca adicional reduzirá a quantidade de leite produzido pelas vacas que já estão no pasto.
+\\
+\\
+No final, o pasto comunitário terá mais vacas que o ponto de maximização do lucro. Podemos ver esse argumento na imagem abaixo
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{cap35_6-tragedia_comum.png}
+\end{figure}
+
+\textbf{Comentário:} Tem um erro no gráfico da 6 edição do Varian. No gráfico do livro a curva verde está assinalada como "PMe" mas na verdade é a curva de custo marginal. Acho que o tradutor se confundiu porque no inglês o produto marginal é "MP" e o produto médio é "AP".
+\\
+\\
+Não entenda errado. Esse resultado não significa que tudo pode ser resolvido por propriedades privadas e que todo arranjo público será amaldiçoado para o problema do uso comum. O que estamos vendo aqui é que existe a necessidade de se "emular"\ no caso dos bens comuns, alguma restrição que permita que o resultado final seja ótimo. Até porque, nós veremos mais pra frente que existem produtos que não é possível definir claramente a propriedade.
+\\
+\\
+\textbf{Comentário: } Aqui temos dois exemplos do problema dos comuns aplicado ao caso da pesca de peixes e de lagostas.
+
 \section{Polição de Automóveis}
+
+Por último, o professor coloca o caso da poluição criada pelos carros e como combater essa externalidade pelo controle e regulação dos poluentes. Vá ler o original.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Tecnologia da Informação}
