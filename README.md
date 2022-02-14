@@ -50,7 +50,7 @@
     - [x] Trocas
     - [x] Produção
     - [x] Bem-Estar
-    - [ ] Externalidades
+    - [x] Externalidades
     - [ ] Tecnologia da Informação
     - [ ] Bens Públicos
     - [ ] Informação Assimétrica
