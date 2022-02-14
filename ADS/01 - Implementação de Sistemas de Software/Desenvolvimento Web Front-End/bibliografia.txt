@@ -1,8 +1,8 @@
 Unidade 01
 Referência Bibliográfica Básica
 
-1 - SIKOS, L. Web Standards. Mastering HTML5, CSS3, and XML. [electronic resource]: 2nd ed. 2014. [S. l.: s. n.]. ISBN 9781484208830.
-2- DACONTA, M. C.; SMITH, K. T.; OBRST, L. J. The semantic Web: a guide to the future of XML, Web services, and knowledge management. [s. l.]: Wiley, [s. d.]. ISBN 0471432571.
+1 - (ok) SIKOS, L. Web Standards. Mastering HTML5, CSS3, and XML. [electronic resource]: 2nd ed. 2014. [S. l.: s. n.]. ISBN 9781484208830.
+2 - (ok) DACONTA, M. C.; SMITH, K. T.; OBRST, L. J. The semantic Web: a guide to the future of XML, Web services, and knowledge management. [s. l.]: Wiley, [s. d.]. ISBN 0471432571.
 
 Referência Bibliográfica Complementar
 Sites na Internet – Protocolo HTTP (Links para um site externo.)
@@ -19,7 +19,7 @@ Referência Bibliográfica Básica
 
 1 - SILVA, Maurício Samy. HTML 5: a linguagem de marcação quer revolucionar a web. 2. ed. rev. e ampl. [s. l.]: Novatec, 2014. ISBN 9788575224038.
 2 - SANDERS, William B. Smashing HTML5: técnicas para a nova geração da web. Porto Alegre: Bookman, 2012. xiv, 354 p. ISBN 9788577809608.
-3 - DEITEL, Paul J.; Deitel, Harvey M. Ajax, Rich. Internet Applications e Desenvolvimento Web para Programadores. Pearson 776. ISBN 9788576051619.
+3 - (ok) DEITEL, Paul J.; Deitel, Harvey M. Ajax, Rich. Internet Applications e Desenvolvimento Web para Programadores. Pearson 776. ISBN 9788576051619.
 4 - SILVA, Maurício Samy. CSS3: desenvolva aplicações web profissionais com uso dos poderosos recursos de estilização das CSS3. São Paulo: Novatec, 2011. 494 p. ISBN 9788575222898.
 5 - BERTAGNOLLI, S. de C.; MILETTO, E. M. Desenvolvimento de software II: introdução ao desenvolvimento web com HTML, CSS, JavaScript e PHP. [s. l.]: Bookman, 2014. ISBN 9788582601952
 

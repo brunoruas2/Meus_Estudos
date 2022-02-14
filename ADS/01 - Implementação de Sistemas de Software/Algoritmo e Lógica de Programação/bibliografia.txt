@@ -1,7 +1,7 @@
 Unidade 01 e 02
 
 Referência Bibliográfica Básica
-1 - Ana Fernanda Gomes ASCENCIO; Edilene Aparecida Veneruchi de CAMPOS. Fundamentos da Programação de Computadores (Links para um site externo.): algoritmos, Pascal, C/C++ e Java - 2ª edição. São Paulo, SP : Pearson Education do Brasil, 2012.
+1 - (ok) Ana Fernanda Gomes ASCENCIO; Edilene Aparecida Veneruchi de CAMPOS. Fundamentos da Programação de Computadores (Links para um site externo.): algoritmos, Pascal, C/C++ e Java - 2ª edição. São Paulo, SP : Pearson Education do Brasil, 2012.
 
 Referência Bibliográfica Complementar
 1 - H. DEITEL et. Al.  C#: Como Programar (Links para um site externo.). São Paulo: Makron Books, 2003.
