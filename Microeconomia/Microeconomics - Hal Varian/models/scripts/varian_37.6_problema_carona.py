@@ -68,7 +68,6 @@ plt.ylim(0,max_val)
 
 plt.legend(loc='upper right')
 
-
 path = r'C:\Users\bruno\Documents\Metadata\Meus_Estudos\Microeconomia\Microeconomics - Hal Varian\images\cap37_6-problema_carona1.png'
 plt.savefig(path, transparent=False)
 
