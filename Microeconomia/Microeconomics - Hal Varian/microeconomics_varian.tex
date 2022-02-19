@@ -3893,6 +3893,70 @@ Se o custo da televisão for $c$, então teremos a seguinte relação para que a
 A utilidade da pessoa 1 será função do consumo privado $x_1$ e da disponibilidade do bem público (a televisão). Podemos escrever essa função como $u_1(x_1,G)$ onde G é uma variável de controle para a disponibilidade da TV (0 para o cenário sem TV e 1 para o cenário com TV). Similarmente, a utilidade da pessoa 2 pode ser expressa como $u_2(x_2,G)$. Perceba que, diferentemente do consumo privado, a oferta da TV não muda em relação ao agente.
 \\~\\
 Os dois agentes vão avaliar qual o retorno em utilidade obtidos pelo serviço de televisão. Uma medida que podemos usar dessa avaliação pessoal é o \textbf{preço de reserva} de cada um dos agentes.
+\\~\\
+Seja o preço de reserva da pessoa 1 igual a $r_1$. Ao pagar pela TV o seu preço de reserva, lhe restará $w_1 - r_1$ de renda disponível para o resto do seu consumo. Como $r_1$ indica justamente o ponto onde o agente é indiferente ao preço, podemos afirmar que $u_1(w_1 - r_1) = u_1(w_1,0)$.
+\\~\\
+Nesse caso analisado só existem dois pontos eficiêntes no sentido de Pareto. O primeiro é a alocação $(w_1,w_2,0)$ onde não há TV e a utilidade de cada agente virá do seu consumo privado. O outro ponto é a alocação com bem público fornecido, esse ponto $(x_1,x_2,1)$ onde 
+
+$$ x_1 = w_1 - g_1$$
+$$ x_2 = w_2 - g_2$$
+
+Quais as condições para o fornecdimento da televisão? Bom, só haverá uma melhoria de Pareto se as pessoas estiverem melhor com a TV do que sem ela
+
+$$u_1(w_1,0) < u_1(x_1,1)$$
+$$u_2(w_2,0) < u_1(x_2,1)$$
+
+Se aplicarmos a relação do preço de reserva que vimos acima e a restrição orçamentária que acabamos de ver, podemos notar que
+
+$$u_1(w_1 - r_1,0) = u_1(w_1,0) < u_1(x_1,1) = u_1(w_1 - g_1,1)$$
+$$u_2(w_2 - r_2,0) = u_2(w_2,0) < u_2(x_2,1) = u_2(w_2 - g_2,1)$$
+
+Ignorando as igualdades e lembrando que um aumento no consumo implica em aumento da utilidade, teremos
+
+$$u_1(w_1 - r_1,0) < u_1(w_1 - g_1,1)$$
+$$u_2(w_2 - r_2,0) < u_2(w_2 - g_2,1)$$
+
+Logo, com uma mesma função de utilidade, só pode ser que
+
+$$w_1 - r_1 < w_1 - g_1$$
+$$w_2 - r_2 < w_2 - g_2$$
+
+O que, por fim, implica em
+
+$$r_1 > g_1$$
+$$r_2 > g_2$$
+
+Ou seja, só será melhor para os agentes se o preço pago por cada um deles for menor do que seus respectivos preços de reserva. Também podemos ver que, se o preço de reserva é maior que a parcela de participação da compra, então a soma dos preços de reserva será maior que o custo da TV: $r_1 + r_2 > g_1 + g_2 = c$.
+\\~\\
+É estranho estarmos gastando tanto esforço em um problema relativamente simples. Mas o Varian quer que prestemos atenção em alguns aspectos relevantes desse problema. Os pontos são:
+
+\begin{itemize}
+	\item O bem público só será ofertado se proporcionar uma melhoria de Pareto.
+	\item Essa melhoria depende do preço de reserva de cada agente e do custo do bem.
+	\item O preço de reserva de cada agente é função da restrição orçamentária de cada agente.
+	\item Se a soma dos preços de reservas for maior que o custo do bem, então a oferta do bem público será factível.
+\end{itemize}
+
+Vamos verificar esses pontos imaginando que um dos colegas de quarto é louco por TV enquanto o outro quase não liga pra isso. Se o fã de TV tivesse toda a riqueza, ele a compraria porque teria um preço de reserva maior que o custo da mesma. Entretanto, se toda a riqueza estivesse na mão do outro, o fã de TV não teria recurso suficiente para contribuir, de modo que o equilíbrio de Pareto é alcançado pela não oferta da TV.
+\\~\\
+Isso mostra como a distribuição da renda impacta na provisão do bem público.
+\\~\\
+Entretanto, dependendo do formato das preferências, é possível que a oferta do bem público independa da distribuição da renda. Se as preferências forem quase lineares, elas terão a forma
+
+$$u_1(x_1,G) = x_1 + v_1(G)$$
+$$u_2(x_2,G) = x_2 + v_2(G)$$
+
+Onde G será 0 ou 1. Se $v_1(0) = v_2(0) = 0$, então a utilidade da não oferta do bem público é igual a zero. Podemos, então, definir que os preços de reserva serão
+
+$$u_1(w_1 - r_1,1) = w_1 - r_1 + v_1(1) = u_1(w_1,0) = w_1$$
+$$u_2(w_2 - r_2,1) = w_2 - r_2 + v_1(1) = u_2(w_1,0) = w_2$$
+
+Podemos ver então, que os preços de reserva serão dados por
+
+$$r_1 = v_1(1)$$
+$$r_2 = v_2(1)$$
+
+Nesse caso, desde que $w_1 + w_2 \geq c$ os preços de reserva dependerão apenas da utilidade criada pelo bem público e não da riqueza dos agentes.
 
 \section{Provisão Privada do Bem Público}
 \section{Pegando Carona}
