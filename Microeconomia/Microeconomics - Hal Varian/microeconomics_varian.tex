@@ -1270,9 +1270,9 @@ Na prática, o monopolista upstream vai cobrar uma quantidade cujo preço de mer
 \end{chapquote}
 
 
-O trabalho de entender os mercados é longo e trabalhoso. Até agora, nós elaboramos as estruturas mais simples e que se encontram nos dois extremos do poder de mercado. De um lado, aprendemos a estrutura onde não existe poder de mercado e as empresas são pequenas concorrentes. Após isso, vimos o que acontece quando temos apenas uma empresa (ou empresas que trabalham como se fossem uma só) e o poder de mercado está todo nas mãos dela.
+O trabalho de entender os mercados é longo e penoso. Até agora, nós elaboramos as estruturas mais simples e que se encontram nos dois extremos do poder de mercado. De um lado, aprendemos a estrutura onde não existe poder de mercado e as empresas são pequenas concorrentes. Após isso, vimos o que acontece quando temos apenas uma empresa (ou empresas que trabalham como se fossem uma só) e o poder de mercado está todo nas mãos dela.
 \\~\\
-Agora vamos entrar num cenário um pouco mais realista. Pensemos em uma situação onde temos poucos concorrentes. De um lado, não temos tantos a ponto de ninguém poder manipular seus preços. Do outro, ninguém é grande o suficiente para ignorar o comportamento dos seus concorrentes. Esse arranjo é denominado de \textbf{Oligipólio}.
+Agora vamos entrar num cenário um pouco mais realista. Pensemos em uma situação onde temos poucos concorrentes. De um lado, não temos tantos a ponto de ninguém poder manipular seus preços. Do outro, ninguém é grande o suficiente para ignorar o comportamento dos seus concorrentes. Esse arranjo é denominado de \textbf{Oligopólio}.
 \\~\\
 Nós já tangenciamos esse assunto quando vimos o modelo de concorrência monopolística no capítulo 25. Esse arranjo também é um tipo de oligopólio. Nessa configuração, as variáveis mais importantes são o custo de entrada (pela regra do custo médio) e nas estratégias de diferenciações entre os produtos (seja a de convergência ou a de diferenciação).
 \\~\\
@@ -1285,10 +1285,10 @@ Vamos partir da estrutura de competição de apenas duas empresas: o \textbf{Duo
 Em um arranjo de dois competidores, temos que desenvolver um modelo que consiga equilibrar 4 variáveis:
 
 \begin{itemize}
-\item Preço da Empresa 1
-\item Preço da Empresa 2
-\item Quantidade da Empresa 1
-\item Quantidade da Empresa 2
+	\item Preço da Empresa 1
+	\item Preço da Empresa 2
+	\item Quantidade da Empresa 1
+	\item Quantidade da Empresa 2
 \end{itemize}
 
 Na hora de tomar uma decisão sobre o preço e a quantidade, uma empresa pode, ou não, ter acesso as escolhas feitas pelo seu concorrente. Chamaremos de \textbf{líder} toda empresa que decidir seu \textbf{preço} ou \textbf{quantidade} antes da outra. A empresa que decidirá após a informação da decisão da empresa líder será chamada de \textbf{seguidora}. As interações desse tipo são chamadas de \textbf{jogos sequenciais}.\footnote{Começamos a chegar mais perto da teoria dos jogos.}
@@ -1314,7 +1314,7 @@ O modelo desenvolvido nessa seção é creditado ao economista alemão Heinrich 
 \\~\\
 Vamos supor que temos uma empresa líder na quantidade. Como é de se esperar, ela fixará sua produção em $y_1$ unidades. A empresa seguidora, de posse da informação de $y_1$ e da demanda inversa do mercado, escolherá seu nível de produção em $y_2$. A demanda inversa do mercado será em função do total de produtos $p(Y) = p(y_1 + y_2)$.
 \\~\\
-Como a empresa líder decidirá sua quantidade de modo a maximizar seus lucros? Certamente ela terá que supor como a empresa seguidora agirá. Não seria nada estranho que ela tivesse a hipótese que a empresa seguidora queira maximizar seus lucros também . Desse modo, a empresa líder terá que endogenizar o problema da maximização do lucro da empresa seguidora.
+Como a empresa líder decidirá sua quantidade de modo a maximizar seus lucros? Certamente ela terá que supor como a empresa seguidora agirá. Não seria nada estranho que ela tivesse a hipótese que a empresa seguidora queira maximizar seus lucros também. Desse modo, a empresa líder terá que endogenizar o problema da maximização do lucro da empresa seguidora.
 
 \subsection{O Problema da Empresa Seguidora}
 
@@ -1326,7 +1326,7 @@ O problema da maximização da empresa seguidora é:
 
 Já conhecemos esse tipo de problema muito bem. Queremos encontrar o ponto onde a receita marginal será igual ao custo marginal.
 
-$$ RM_2 = CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 - \frac{dc_2(y_2)}{y_2} = 0  $$
+$$ RM_2 = CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 - \frac{dc_2(y_2)}{y_2} = 0 $$
 
 ou, na notação de derivadas de Lagrange
 
@@ -1346,8 +1346,8 @@ $$ = [a - b(y_1 + y_2)]y_2 = ay_2 - by_1 y_2 - by_2^2 $$
 Com a função de lucro e a de reação, conseguimos ver a relação entre essas duas funções. Na imagem abaixo podemos ver que a curva de reação sempre atravessa as curvas de isolucro no ponto onde temos o maior valor de $y_2$.
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_parcial.png}
+	\centering
+	\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_parcial.png}
 \end{figure}
 
 \subsection{O Problema da Empresa Líder}
@@ -1357,14 +1357,14 @@ Já aprendemos a parte do modelo que trata da quantidade de equilíbrio dada a e
 Uma das características desse modelo é que a empresa líder sabe como a outra empresa vai se comportar dada a escolha dela, ou seja, ela conhece $f_2(y_1)$. Diante disso, o problema da maximização dela está sujeita a essa restrição.
 
 \begin{center}
-\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2)y_1 - c_1(y_1)}{\ }$ \\
-\small de modo que \normalsize $y_2 = f_2(y_1)$
+	\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2)y_1 - c_1(y_1)}{\ }$ \\
+	\small de modo que \normalsize $y_2 = f_2(y_1)$
 \end{center}
 
 Ou melhor, podemos colocar tudo em função de $y_1$ e obtermos
 
 \begin{center}
-\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p[y_1 + f_2(y_1)]y_1 - c_1(y_1)}{\ }$ \\
+	\LARGE $\stackrel{máx}{\text{\small $y_1$}} \ \ \stackrel{p[y_1 + f_2(y_1)]y_1 - c_1(y_1)}{\ }$ \\
 \end{center}
 
 A produção total será definida pela líder sendo que será parte devida a produção direta e a outra parte pela resposta da seguidora ao nível definido da produção, ou seja, $y_1 + f_2(y_1)$. Pela equação da demanda inversa linear, temos que a função de reação da empresa seguidora é
@@ -1401,8 +1401,8 @@ $$ y_2^* = \frac{a}{4b} $$
 Por fim, podemos ter a quantidade total do mercado pela soma de $y_1^* + y_2^* = \frac{3a}{4b}$. Agora que temos a função de lucro da empresa 1, podemos acrescentar as curvas de isolucro para vermos a solução gráfica da álgebra que acabamos de desenvolver.
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_completo.png}
+	\centering
+	\includegraphics[scale=0.75]{cap28_2-modelo_stackelberg_completo.png}
 \end{figure}
 
 Se você colocar as quantidades de equilíbrio nas equações de lucro, chegará nos valores de lucro para cada empresa desse modelo. O ponto de Equilíbrio de Stackelberg acontecerá onde a curva de reação tangencia a maior curva de isolucro da empresa líder. No exemplo da imagem eu usei para a função da demanda inversa linear um $a = 100$ e um $b = 2$.
@@ -1415,7 +1415,7 @@ Outra forma de um jogo sequencial acontecer entre duas empresas é pela definiç
 No mercado competitivo, o preço é dado e as empresas maximizam seus lucros pela igualdade entre a a receita marginal (que é justamente o preço) e o custo marginal. Por sorte, o problema da empresa seguidora é bem parecido com esse. Ela recebe o preço definido pela líder e maximiza seu lucro.
 
 \begin{center}
-\LARGE $\stackrel{máx}{\text{\small $y_2$}} \ \ \stackrel{py_2 - c_2(y_2)}{\ }$ \\
+	\LARGE $\stackrel{máx}{\text{\small $y_2$}} \ \ \stackrel{py_2 - c_2(y_2)}{\ }$ \\
 \end{center}
 
 A oferta da empresa seguidora será a quantidade que iguala o preço definido pela líder ao custo marginal.
@@ -1453,7 +1453,7 @@ $$ = \frac{a}{b+1}y_1 - \frac{1}{b+1}y_1^2 $$
 
 A receita marginal será
 
-$$ RMa_2 = \frac{a}{b+1} - \frac{2}{b+1}y_1 $$
+$$ RMa_1 = \frac{a}{b+1} - \frac{2}{b+1}y_1 $$
 
 O nosso custo foi definido como $c_1(y_1) = cy_1$, logo, o custo marginal é igual a $c$\footnote{A essa altura do campeonato você não tem mais dúvida nessas derivadas triviais né?!}.
 \\~\\
@@ -1470,8 +1470,8 @@ $$ y_1^* = \frac{c(b+1)}{2} $$
 Na imagem abaixo, nós podemos ver as variáveis interagindo. A oferta total será a soma das quantidades de ambas empresas.
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.75]{cap28_3-lideranca_preco.png}
+	\centering
+	\includegraphics[scale=0.75]{cap28_3-lideranca_preco.png}
 \end{figure}
 
 \section{Comparação entre as Lideranças de Preço e Quantidade}

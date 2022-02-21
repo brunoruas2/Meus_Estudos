@@ -1618,6 +1618,402 @@
 	Contudo, quando as empresas se fundem, o novo custo marginal do monopolista do mercado de produto será exatamente o custo de produção $c$. Nós retiramos de cena o Markup do monopolista upstream.
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Oligopólio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\huge O Oligopólio \normalsize
+	\\~\\
+	\begin{itemize}
+		\item A Escolha de uma Estratégia
+		\item Liderança na Quantidade
+		\item Liderança no Preços
+		\item Estabelecimento Simultâneo da quantidade (Equilíbrio de Cournot)
+		\item Ajustamento para o Equilíbrio
+		\item Várias Empresas no Equilíbrio de Cournot
+		\item Fixação Simultânea de Preços
+		\item Conluio
+		\item Estratégias Punitivas
+		\item Comparação das Soluções
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Oligopólio}
+
+	Pensemos em uma situação onde temos poucos concorrentes.
+	\\~\\
+	De um lado, não temos tantos a ponto de ninguém poder manipular seus preços.
+	\\~\\
+	Do outro, ninguém é grande o suficiente para ignorar o comportamento dos seus concorrentes. 
+	\\~\\
+	Esse arranjo é denominado de \textbf{Oligopólio}.
+	\\~\\
+	Vamos partir da estrutura de competição de apenas duas empresas: o \textbf{Duopólio}. Outra limitação que imporemos é a de que os produtos são idênticos.
+	\\~\\
+	Nosso foco são as \textbf{interações estratégicas}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Escolha de uma Estratégia}
+
+	Em um arranjo de dois competidores, temos que desenvolver um modelo que consiga equilibrar 4 variáveis:
+
+	\begin{itemize}
+		\item Preço da Empresa 1
+		\item Preço da Empresa 2
+		\item Quantidade da Empresa 1
+		\item Quantidade da Empresa 2
+	\end{itemize}
+	\ 
+	\\~\\
+	Quando as duas empresas decidem sem ter acesso a informação do adversário, elas precisam supor o que ele fará. Esse arranjo é denominado \textbf{jogo simultâneo}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Escolha de uma Estratégia}
+
+	Chamaremos de \textbf{líder} toda empresa que decidir seu \textbf{preço} ou \textbf{quantidade} antes da outra. 
+	\\~\\
+	A empresa que decidirá após a informação da decisão da empresa líder será chamada de \textbf{seguidora}. 
+	\\~\\
+	As interações desse tipo são chamadas de \textbf{jogos sequenciais}.
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{A Escolha de uma Estratégia}
+
+	Com esses dois conceitos, podemos ter 4 tipos de interações estratégicas:
+
+	\begin{itemize}
+		\item Liderança de Preço
+		\item Liderança de Quantidade
+		\item Preço Simultâneo
+		\item Quantidade Simultânea
+	\end{itemize}
+	\ 
+	\\~\\
+	Além dessas, veremos uma opção possível de estratégia onde há negociação entre as empresas para formação de um \textbf{conluio}. Esse tipo de esquema é chamado de \textbf{jogo cooperativo}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	O modelo desenvolvido nessa seção é creditado ao economista alemão Heinrich von Stackelberg. Seu livro \textit{Marktform und Gleichgewicht} foi publicado em 1934.
+	\\~\\
+	Vamos supor que temos uma empresa líder na quantidade. Ela fixará sua produção em $y_1$ unidades.
+	\\~\\
+	A empresa seguidora, de posse da informação de $y_1$ e da demanda inversa do mercado, escolherá seu nível de produção em $y_2$.
+	\\~\\
+	A demanda inversa do mercado será em função do total de produtos $p(Y) = p(y_1 + y_2)$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Como a empresa líder decidirá sua quantidade de modo a maximizar seus lucros?
+	\\~\\
+	Não seria nada estranho que ela tivesse a hipótese que a empresa seguidora queira maximizar seus lucros também.
+	\\~\\
+	Desse modo, a empresa líder terá que endogenizar o problema da maximização do lucro da empresa seguidora.
+	\\~\\
+	O problema da maximização da empresa seguidora é:
+
+	\begin{center}
+	\LARGE $\stackrel{max}{\text{\small $y_2$}} \ \ \stackrel{p(y_1 + y_2)y_2 - c_2(y_2)}{\ }$ \\
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Queremos encontrar o ponto onde a receita marginal será igual ao custo marginal.
+
+	$$ RM_2 = CMa_2 = p(y_1 + y_2) + \frac{dp(y_1+y_2)}{dy_2}y_2 - \frac{dc_2(y_2)}{y_2} = 0 $$
+
+	A novidade aqui é que temos que levar em consideração a quantidade $y_1$ para encontrar nosso $y_2$. Isso quer dizer que 
+
+	$$y_2 = f_2(y_1)$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Nós conseguimos obter essa função isolando nosso termo $y_2$ no problema de maximização acima.
+	\\~\\
+	Essa função tem o nome de \textbf{função de reação} e nos diz qual quantidade será produzida pela empresa seguidora ao ser conhecida a quantidade da empresa líder.
+	\\~\\
+	Vamos definir a função de demanda inversa como $p(y_1 + y_2) = a - b(y_1 + y_2)$ e também adotaremos o custo igual a zero para facilitar a matemática da coisa.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	$$\textrm{Função Lucro 2: } \pi_2(y_1,y_2) = p(y_1 + y_2)y_2$$
+	
+	$$ = [a - b(y_1 + y_2)]y_2 = ay_2 - by_1 y_2 - by_2^2 $$
+
+	Com a função de lucro e a de reação, conseguimos ver a relação entre essas duas funções. 
+	\\~\\
+	Na imagem abaixo podemos ver que a curva de reação sempre atravessa as curvas de isolucro no ponto onde temos o maior valor de $y_2$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap28_2-modelo_stackelberg_parcial.png}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Agora vamos desenvolver como essa empresa define a sua quantidade de modo a maximizar o seu lucro.
+	\\~\\
+	Uma das características desse modelo é que a empresa líder conhece $f_2(y_1)$.
+
+	\begin{center}
+		\LARGE $\stackrel{max}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2)y_1 - c_1(y_1)}{\ }$ \\
+		\small de modo que \normalsize $y_2 = f_2(y_1)$
+	\end{center}
+
+	Ou melhor
+
+	\begin{center}
+		\LARGE $\stackrel{max}{\text{\small $y_1$}} \ \ \stackrel{p[y_1 + f_2(y_1)]y_1 - c_1(y_1)}{\ }$ \\
+	\end{center}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	A produção total será definida pela líder sendo que será parte devida a produção direta e a outra parte pela resposta da seguidora ao nível definido da produção, ou seja, $y_1 + f_2(y_1)$.
+	\\~\\
+	Pela equação da demanda inversa linear, temos que a função de reação da empresa seguidora é
+
+	$$ f_2(y_1) = y_2 = \frac{a - by_1}{2b}$$
+
+	A função lucro é dada pela receita menos os custos (que no nosso exemplo é zero)
+
+	$$ \textrm{Função Lucro 1: } \pi(y_1,y_2) = [a - b(y_1 + y_2)]y_1 = ay_1 -by_1^2 - by_1y_2 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Colocando a função de reação dentro da função de lucro teremos
+
+	$$ = ay_1 -by_1^2 - by_1f(y_1)$$
+	$$ = ay_1 -by_1^2 - by_1\frac{a - by_1}{2b}$$
+	$$ = ay_1 -by_1^2 - \frac{\cancel{b}y_1a}{2\cancel{b}} + \frac{\cancel{b}*b(y_1)^2}{2\cancel{b}}$$
+	$$= ay_1 -by_1^2 - \frac{ay_1}{2} + \frac{by_1^2}{2}$$
+	$$ \pi(y_1,y_2) = \frac{a}{2}y_1 - \frac{b}{2}y_1^2$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Para encontrarmos a quantidade ótima basta derivar a função lucro em função de $y_1$ e igualar a zero. O que nos dará 
+
+	$$ y_1^* = \frac{a}{2b} $$
+
+	Desse modo, podemos encontrar facilmente a produção de equilíbrio da empresa seguidora.
+
+	$$ y_2^* = \frac{a - by_1}{2b} $$
+	$$ y_2^* = \frac{a - b(a/2b)}{2b} $$
+	$$ y_2^* = \frac{a}{4b} $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	Por fim, podemos ter a quantidade total do mercado pela soma de $y_1^* + y_2^* = \frac{3a}{4b}$. 
+	\\~\\
+	O ponto de Equilíbrio de Stackelberg acontecerá onde \textbf{a curva de reação tangencia a maior curva de isolucro} da empresa líder. 
+	\\~\\
+	No exemplo da imagem eu usei para a função da demanda inversa linear um $a = 100$ e um $b = 2$.
+	\\~\\
+	Agora que temos a função de lucro da empresa 1, podemos acrescentar as curvas de isolucro para vermos a solução gráfica da álgebra que acabamos de desenvolver.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança na Quantidade}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap28_2-modelo_stackelberg_completo.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	Outra forma de um jogo sequencial acontecer entre duas empresas é pela definição do preço pela empresa líder. 
+	\\~\\
+	Similarmente ao que vimos na seção anterior, a empresa líder precisa levar em consideração o que a empresa seguidora fará.
+	\\~\\
+	A seguidora recebe o preço definido pela líder e maximiza seu lucro.
+
+	\begin{center}
+		\LARGE $\stackrel{max}{\text{\small $y_2$}} \ \ \stackrel{py_2 - c_2(y_2)}{\ }$ \\
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	A empresa líder, sabendo a função de oferta da empresa seguidora, vai trabalhar com a diferença entre a Demanda do mercado e a demanda da empresa seguidora, ou seja, $R(p) = D(p) - S(p)$. 
+	\\~\\
+	O nome dessa curva de demanda reduzida é \textbf{curva de demanda residual}.
+	\\~\\
+	Supondo um custo de produção constante $c$. A função de lucro da empresa líder é dada por
+
+	$$ \textrm{Função Lucro 1: } \pi_1(p) = R(p)p - R(p)c = (p - c)R(p) $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	A maximização dessa empresa acontece onde a receita marginal (que nesse caso é oriunda da demanda residual) é igual ao custo marginal.
+	\\~\\
+	Definindo nossa demanda como $D(p) = a - bp$ e as funções custo para a seguidora $c_2(y_2) = y_2^2/2$ e para a líder $c_1(y_1) = cy_1$.
+	\\~\\
+	Isso nos diz que a condição de maximização da empresa seguidora será a derivada da função lucro igual a zero.
+
+	$$ \frac{d L(y_2)}{y_2} = p - \frac{2y_2}{2} = 0 $$
+	$$ = p - y_2 = 0 $$
+	$$ = p = y_2 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	Nossa função de oferta da seguidora será $S(p) = p$. 
+	\\~\\
+	De posse dessa informação, podemos descobrir a equação da demanda residual da empresa líder pela subtração da curva de demanda pela oferta da seguidora.
+
+	$$ R(p) = D(p) - S(p) = a - bp - p = a - (b + 1)p $$
+
+	Agora é só maximizar o lucro pela igualdade entre a receita marginal e o custo marginal e verificar na curva de demanda inversa o volume de produção e o preço.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	Demanda inversa é obtida isolando $p$ da demanda residual.
+
+	$$ p(y_1) = \frac{a}{b+1}-\frac{1}{b+1}y_1 $$
+
+	A receita da empresa líder é obtida pela multiplicação de $p(y_1)$ por $y_1$. A receita marginal é a derivada dessa função em relação a $y_1$.
+
+	$$ Receita_1: \left[ \frac{a}{b+1} - \frac{1}{b+1}y_1 \right] y_1 $$
+	$$ = \frac{a}{b+1}y_1 - \frac{1}{b+1}y_1^2 $$
+
+	A receita marginal será
+
+	$$ RMa_1 = \frac{a}{b+1} - \frac{2}{b+1}y_1 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	O nosso custo foi definido como $c_1(y_1) = cy_1$, logo, o custo marginal é igual a $c$.
+	\\~\\
+	Portanto, nosso problema de maximização será dado pela equação
+
+	$$ \frac{a}{b+1} - \frac{2}{b+1}y_1 = c $$
+	$$ y_1^* = \frac{c(b+1)}{2} $$
+
+	Na imagem, nós podemos ver as variáveis interagindo. A oferta total será a soma das quantidades de ambas empresas. Por acaso, a oferta da seguidora está igual à receita marginal da líder mas isso é só um acaso.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Liderança no Preços}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap28_3-lideranca_preco.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade (Equilíbrio de Cournot)}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ajustamento para o Equilíbrio}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Várias Empresas no Equilíbrio de Cournot}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fixação Simultânea de Preços}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conluio}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Punitivas}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Comparação das Soluções}
+
+	
+
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
@@ -1626,8 +2022,6 @@
 	
 
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
 
