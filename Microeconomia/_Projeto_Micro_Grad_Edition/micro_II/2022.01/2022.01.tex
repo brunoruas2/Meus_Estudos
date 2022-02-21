@@ -1,6 +1,6 @@
 \documentclass{beamer}[10]
+\usepackage[portuguese]{babel}
 \usepackage{pgf}
-\usepackage[danish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{beamerthemesplit}
 \usepackage{graphics,epsfig, subfigure}
@@ -1965,30 +1965,194 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Estabelecimento Simultâneo da quantidade (Equilíbrio de Cournot)}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
 
+	Não é comum que as empresas fiquem se comunicando para informar seus concorrentes a respeito de suas decisões.
+	\\~\\
+	Nesses cenários, as empresas precisam supor o que suas concorrentes farão.
+	\\~\\
+	Esse modelo é chamado de \textbf{Modelo de Cournot} e é um modelo de jogo simultâneo onde as empresas definem suas quantidades produzidas e vendidas no mercado.
+	\\~\\
+	Suporemos que as empresas queiram maximizar seus lucros.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
+
+	A quantidade total do mercado será dada por $Y = y_1 + y_2^e$, onde $y_2^e$ é a quantidade prevista da empresa 2. 
+	\\~\\
+	O preço de equilíbrio do mercado será dado pela equação de demanda inversa $p(Y) = p(y_1 + y_2^e)$.
+	\\~\\
+	O problema de maximização do lucro será
+
+	\begin{center}
+		\LARGE $\stackrel{max}{\text{\small $y_1$}} \ \ \stackrel{p(y_1 + y_2^e)y_1 - c(y_1)}{\ }$ \\
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
+
+	Existe uma relação entre essa expectativa e a produção, de modo mais formal, $y_1 = f(y_2^e)$.
+	\\~\\
+	Essa é a \textbf{curva de reação} da empresa, a diferença é que aqui a empresa 1 não é mais a líder e essa reação se refere a \textit{expectativa} da produção. Mas o tratamento matemático é o mesmo.
+	\\~\\
+	Similarmente, a empresa 2 se depara com a mesma situação.
+
+	$$y_2 = f(y_1^e)$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
+
+	O equilíbrio de Cournot é dado pelo sistemas de equações
+
+	$$ y_1^* = f_1(y_2^*) $$
+	$$ y_2^* = f_2(y_1^*) $$
+
+	Nenhuma das empresas terá incentivos em mudar seu nível de produção.
+	\\~\\
+	Se reutilizarmos o exemplo na liderança da quantidade (com custo zero e demanda linear) obteremos as mesmas funções de reação que a empresa 2 tinha naquele modelo.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
+
+	$$ y_1 = \frac{a - by_2^e}{2b} $$
+
+	e
+
+	$$ y_2 = \frac{a - by_1^e}{2b} $$
+
+	O ponto de equilíbrio acontece onde $y_1 = y_2$, ou seja, onde as curvas de reação são iguais. Nesse ponto, $y_1^e = y_1$ e $y_2^e = y_2$. 
+	\\~\\
+	Só precisamos substituir dentro desse sistema de equações do seguinte modo
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
+
+	$$ y_1 = \frac{a - by_2^e}{2b} $$
+	$$ y_1 = \frac{a - by_2}{2b} $$
+	$$ y_1 = \frac{a - b(\frac{a - by_1}{2b})}{2b} $$
+	$$ y_1^* = \frac{a}{3b} = y_2^* $$
+
+	Com essas funções e as equações de lucro podemos ver graficamente o equilíbrio de Cournot onde as curvas de reação se equivalem.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estabelecimento Simultâneo da quantidade}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap28_6-modelo_cournot.png}
+	\end{figure}
 	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ajustamento para o Equilíbrio}
+
+	Seria muita boa vontade supor que, na vida real, as empresas conseguissem acertar na mosca o nível de produção dos seus concorrentes. 
+	\\~\\
+	Mas o nosso modelo é forte o suficiente para um processo de ajustamento em caso de (prováveis) palpites equivocados no nível de produção.
+	\\~\\
+	Vamos supor que a cesta inicial produzida esteja em cima da curva de reação da empresa 2. A cesta inicial, que chamamos no gráfico de $Cesta(t)$ será igual à lista $(y_1^t,y_2^t)$.
+	\\~\\
+	Essa cesta está na curva de reação da empresa 2, logo, essa empresa não terá incentivo a fazer nenhuma mudança. Mas para a empresa 1, a situação é outra, ela quer reduzir sua produção para aumentar seus lucros.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Ajustamento para o Equilíbrio}
 
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap28_7-ajustamento.png}
+	\end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Várias Empresas no Equilíbrio de Cournot}
+
+	A oferta total da indústria será dada por $Y = y_1 + y_2 + \dots + y_{n-1} + y_n$. Desse modo o problema da maximização da empresa será dado pela igualdade entre a receita marginal e o seu custo marginal do seguinte modo
+
+	$$ p(Y) + \frac{\delta p}{\delta Y} y_i = CMa(y_i) $$
+	$$ p(Y) + \frac{\delta p}{\delta Y} \frac{Y}{Y} \frac{p(Y)}{p(Y)} y_i = CMa(y_i) $$
+	$$ p(Y) \left[1 + \frac{\delta p}{\delta Y} \frac{Y}{p(Y)} \frac{y_i}{Y} \right] = CMa(y_i) $$
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Várias Empresas no Equilíbrio de Cournot}
 
-	
+	Definindo $s_i = \frac{y_i}{Y}$ como a participação da empresa no total do mercado.
+
+	$$ p(Y) \left[1 + \frac{\delta p}{\delta Y} \frac{Y}{p(Y)} s_i \right] = CMa(y_i) $$
+
+	Se lembrarmos da fórmula da elasticidade, podemos ver que o termo $\frac{\delta p}{\delta Y} \frac{Y}{p(y)}$ é justamente o inverso da elasticidade $\frac{1}{\epsilon(Y)}$
+
+	$$ p(Y) \left[1 - \frac{s_i}{|\epsilon(Y)|} \right] = CMa(y_i) $$
+
+	Que é o mesmo que
+
+	$$ p(Y) \left[1 - 1/\frac{|\epsilon(Y)|}{s_i} \right] = CMa(y_i) $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Várias Empresas no Equilíbrio de Cournot}
+
+	Essa solução é bem parecida com a maximização do monopolista. 
+	\\~\\
+	A principal diferença é esse termo $s_i$ dividindo a elasticidade. 
+	\\~\\
+	Como $s_i = y_i/Y$ ele será $0 \leq s_i \leq 1$. 
+	\\~\\
+	No caso monopolista, sabemos que $s_i = 1$. No outro extremo, se $lim (s_i) \rightarrow 0$, a empresa terá elasticidade infinita como as empresas da competição perfeita.
+	\\~\\
+	Quanto maior $s_i$ menor será a elasticidade da demanda da empresa.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fixação Simultânea de Preços}
+
+	Em algum momento do século XIX, um matemático francês de nome Joseph Bertrand, ao ler o livro do Cournot, desenvolveu um modelo simultâneo de equilíbrio de preços. 
+	\\~\\
+	Esse modelo ficou conhecido como \textbf{concorrência de Bertrand}.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Fixação Simultânea de Preços}
 
+	Estamos na busca do par de preços que permitam ambas as empresas maximizar seus lucros. Para isso, temos que seguir algumas regras vindas dos modelos de maximização já vistos até agora:
+
+	\begin{itemize}
+		\item O preço não poderá ser maior que o custo marginal porque as empresas aumentariam seus lucros simplesmente produzindo menos.
+		\item Se o preço for maior que o custo marginal, todas as empresas terão um incentivo de reduzir seu preço para "roubar"\ os clientes das concorrentes e ainda auferir lucros positivos.
+	\end{itemize}
 	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fixação Simultânea de Preços}
+
+	O segundo ponto funciona de maneira recursiva. 
+	\\~\\
+	Se uma empresa reduz seu preço em $10\%$ abaixo dos preços das suas concorrentes, ela ganhará parte do mercado. 
+	\\~\\
+	As concorrentes terão o incentivo em reduzir mais ainda seus preços até o ponto onde não poderão mais reduzir (determinado pelo custo marginal).
+	\\~\\
+	O ponto onde não será possível reduzir os preços é justamento a igualdade do custo marginal. Que é a imposição 1 do nosso modelo. Esse é precisamente o equilíbrio de Bertrand.
 
 \end{frame}
 
