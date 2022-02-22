@@ -2159,24 +2159,94 @@
 \begin{frame}
 	\frametitle{Conluio}
 
-	
+	Todas as soluções envolveram processos de competição entre as empresas.
+	\\~\\
+	Não seria nem um pouco alheio à realidade supor que algumas empresas queiram operar de modo coordenado. 
+	\\~\\
+	Esse arranjo é chamado de \textbf{Cartel} e é crime em vários países.
+	\\~\\
+	Um cartel não passa de um grupo de empresas se comportando como um monopolista. 
+	\\~\\
+	Diante disso, seu problema de maximização será muito parecido com o modelo do capítulo que tratamos sobre o monopólio.
 
 \end{frame}
+
+\begin{frame}
+	\frametitle{Conluio}
+
+	O problema da maximização para um cartel de duas empresas será dado por
+
+	\begin{center}
+		\LARGE $\stackrel{max}{\text{\small $y_1,y_2$}} \ \ \stackrel{p(y_1+y_2)[y_1 + y_2] - c_1(y_1) - c_2(y_2)}{\ }$ \\
+	\end{center}
+
+	Cujas condições de primeira ordem serão
+
+	$$p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}[y_1^* + y_2^*] = CMa_1(y_1^*)$$
+	$$p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}[y_1^* + y_2^*] = CMa_2(y_2^*)$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conluio}
+
+	Podemos ver que, quando uma empresa decide expandir sua produção, receberá uma quantia oriunda da venda dos seus produtos, contudo, essa oferta adicional reduzirá o preço de equilíbrio do mercado (o que reduz o lucro recebido). 
+	\\~\\
+	A novidade aqui é que essa redução do preço impactará também na outra empresa do cartel.
+	\\~\\
+	O que as duas equações anteriores nos dizem é que as quantidades produzidas (e ofertadas no mercado) serão as que igualem seus custos marginais $CMa_1(y_1^*) = CMa_2(y_2^*)$. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conluio}
+
+	Será que as empresas que operam em um cartel possuem algum incentivo em "trapacear"\ a sua empresa parceira?
+	\\~\\
+	Vejamos o que acontece com a empresa 1 do nosso cartel, caso ela aumente a sua produção em $\delta y_1$ unidades. Podemos mensurar esse impacto pela derivada parcial da função lucro do cartel em relação a $y_1$
+
+	$$ \frac{\partial \pi_1}{\partial y_1} = p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* - CMa_1(y_1^*) $$ 
+
+	A condição de maximização do cartel nos diz que
+
+	$$ p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* + \frac{\delta p}{\delta Y}y_2^* - CMa_1(y_1^*) = 0 $$ 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conluio}
+
+	Apenas isolando o termo referente à produção da empresa, temos então
+
+	$$ p(y_1^* + y_2^*) + \frac{\delta p}{\delta Y}y_1^* - CMa_1(y_1^*) = - \frac{\delta p}{\delta Y}y_2^* $$ 
+
+	Como $\delta p / \delta Y$ é negativo, então o termo da esquerda da última equação é positivo. Ou seja, a empresa 1 consegue aumentar seus lucros positivamente ao aumentar sua produção para além do ponto de equilíbrio do cartel.
+	\\~\\
+	Na solução de maximização do lucro conjunto, existe um incentivo para cada empresa aumentar sua produção, visto que, se a outra empresa mantiver fixa a sua produção, sempre será lucrativo um aumento unilateral da quantidade produzida.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conluio}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap28_10-cartel.png}
+	\end{figure}
+
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{Estratégias Punitivas}
 
-	
+	Nessa parte do capítulo temos uma modelagem quanto a uma possível solução para o incentivo à trapaça dos carteis.
+	\\~\\
+	Mas logo após essa aula, vamos ver um ferramental melhor para analisar esse tipo de questão: A (famosa) Teoria dos Jogos.
+	\\~\\
+	Ainda é recomendada a leitura do material. Mas por hoje, já está bom.
 
 \end{frame}
-
-\begin{frame}
-	\frametitle{Comparação das Soluções}
-
-	
-
-\end{frame}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
