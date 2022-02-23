@@ -3973,6 +3973,31 @@ Um bom exemplo é a reunião de condomínio. Todos os condôminos querem melhora
 Esse é um caso onde os economistas dizem que as pessoas estão querendo \textbf{pegar carona}. Ou seja, ela quer o benefício do bem público mas não quer pagar por ele. E como o bem é público, não é possível evitar que os caronas usufruam dele uma vez ofertado.\footnote{O aluno que espera que os outros colegas façam a lista para copiar depois pensa que está pegando carona. Mas essa análise está errada. Porque o produto não é a nota ou o diploma e sim o conhecimento.}
 
 \section{Pegando Carona}
+
+O problema do carona pode ser modelado usando o nosso aprendizado de teoria dos jogos do capítulo 29. 
+\\~\\
+Se cada pessoa tiver disponibilidade de 500 reais para a compra e atribuir o uso da TV o valor de 100 reais. Caso o aparelho custe 150 e a soma dos preços de reserva é maior que o custo da oferta do bem, será eficiente no sentido de Pareto ofertar a televisão.
+\\~\\
+Vamos supor que não é possível evitar que um colega de quarto tenha acesso à TV, mesmo que ele não tenha pago por ela.
+\\~\\
+Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
+
+\begin{center}
+
+	\def\sgtextcolor{white} % Trocar pra preto na versão white
+	\def\sglinecolor{white} % Trocar pra preto na versão white
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+							& $Compra$    & $Não$ \\
+		$Compra$  & $-50,-50$   & $-50,100$ \\
+		$Não$     & $100,-50$   & $0,0$
+	\end{game}
+	
+\end{center}
+
+Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso. No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente, nesse caso da TV, a utilidade é maximizada pela escolha de não comprar se o outro comprar.
+\\~\\
+
+
 \section{Diferentes Níveis do Bem Público}
 \section{Preferências Quase Lineares e Bens Públicos}
 \section{O problema do Carona}
