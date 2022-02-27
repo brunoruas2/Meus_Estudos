@@ -1,6 +1,6 @@
 # Meus_Estudos
- Meu caderno público de anotações
-
+ Repositório dos estudos em Economia, Finanças, Matemática e Estatística.
+ 
 # Projetos em Andamento
 ## Desafios Intelectuais Pessoais
 - [ ] Demonstrar, com base no artigo do Hotelling, que o padrão de convergência aparece para 4+ players (cap 27.10)
@@ -50,7 +50,7 @@
     - [x] Trocas
     - [x] Produção
     - [x] Bem-Estar
-    - [ ] Externalidades
+    - [x] Externalidades
     - [ ] Tecnologia da Informação
     - [ ] Bens Públicos
     - [ ] Informação Assimétrica
