@@ -9,6 +9,10 @@
 \usepackage{hyperref}
 \usepackage{ragged2e}
 \usepackage{cancel} % para poder colocar o tracinho de cancelamento
+\usepackage{multicol}
+\usepackage{sgame} % to make payoff matrixes
+\usepackage{qtree} % to make tree diagrams
+
 
 \graphicspath{{./images/}} % set an default images folder
 
@@ -16,7 +20,13 @@
 \definecolor{kugreenlys}{RGB}{132,158,139}
 \definecolor{kugreenlyslys}{RGB}{173,190,177}
 \definecolor{kugreenlyslyslys}{RGB}{214,223,216}
+
 \setbeamercovered{transparent}
+
+\setbeamerfont{section in sidebar}{size=\fontsize{6}{6}\selectfont}
+\setbeamerfont{subsection in sidebar}{size=\fontsize{6}{6}\selectfont}
+\setbeamerfont{subsubsection in sidebar}{size=\fontsize{6}{6}\selectfont}
+
 \mode<presentation>
 \usetheme[numbers,totalnumber,compress,sidebarshades]{PaloAlto}
 \setbeamertemplate{footline}[frame number]
@@ -32,7 +42,7 @@
 %\useoutertheme{infolines} 
 
 \title[Micro II]{Microeconomia II - 2021/02}
-\author{Bruno de M. Ruas} 
+\author[2021/02]{Bruno de M. Ruas}
 \institute{Escola Superior de Ciências Sociais\\Universidade do Estado do Amazonas}
 \date{\today}
 
@@ -44,11 +54,15 @@
 % Sumario
 \frame{
 \frametitle{Sumário}
-\tableofcontents
+\begin{multicols*}{2}
+	\small
+	\tableofcontents
+	\normalsize
+\end{multicols*}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introdução}
+\section{Apresentação}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
@@ -816,7 +830,7 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{C. Monopólio}
+\section[C.Monopólio]{Comportamento do Monopólio}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
@@ -1249,7 +1263,7 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{M. de Fatores}
+\section[M.Fatores]{Mercado de Fatores}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
@@ -1261,8 +1275,6 @@
 		\item Monopólios Upstream e Downstream na Cadeia de Produção
 	\end{itemize}
 \end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}
 	\frametitle{O Monopólio no Mercado do Produto}
@@ -2249,6 +2261,409 @@
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[T.Jogos]{Teoria dos Jogos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Teoria dos Jogos \normalsize
+	\\~\\
+	\begin{itemize}
+		\item A Matriz de Ganhos
+		\item Equilíbrio de Nash
+		\item Estratégias Mistas
+		\item O Dilema do Prisioneiro
+		\item Jogos Repetidos
+		\item Manutenção de um Cartel
+		\item Jogos sequenciais
+		\item Barreiras à Entrada
+	\end{itemize}
+\end{frame}
+
+% https://comp.text.tex.narkive.com/HHAjcLzp/sgame-and-beamer 
+% sgame not working in beamer because & means something inside a frame
+\newsavebox\mybox
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Esquerda$    & $Direita$ \\
+		$Alto$  & $1,2$         & $0,1$     \\
+		$Baixo$ & $2,1$         & $1,0$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{A Matriz de Ganhos}
+
+	No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.
+	\\~\\
+	vamos manter nosso horizonte de jogadores restrito a apenas dois e limitaremos o número de estratégias a um número finito. 
+	\\~\\
+	Assim conseguimos representar os ganhos em uma \textbf{matriz de ganhos}.
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+\end{frame}
+
+\def\highlight#1{\colorbox{yellow}{#1}}
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Esquerda$    & $Direita$ \\
+		$Alto$  & $1,2$         & $0,1$       \\
+		$Baixo$ & \highlight{$2,1$}         & $1,0$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{A Matriz de Ganhos}
+
+	Como sabemos o que cada jogador fará?
+	\\~\\
+	Primeiro vamos comparar os resultados de cada interação entre as estratégias possíveis.
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+	Como há uma lógica dominante para as escolhas de ambos os jogadores, então, nesse jogo em questão, existe o que chamamos de \textbf{estratégia dominante}.
+
+\end{frame}
+
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Esquerda$    & $Direita$ \\
+		$Alto$  & $2,1$         & $0,0$       \\
+		$Baixo$ & $0,0$         & $1,2$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Equilíbrio de Nash}
+
+	Existem muitas situações em que não existem estratégias dominantes e foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos agora.
+	\\~\\
+	Vamos olhar o seguinte jogo
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Equilíbrio de Nash}
+
+	Percebeu que nesse arranjo não temos nenhuma estratégia dominante? O que cada jogador fará, depende da escolha do outro jogador.
+	\\~\\
+	Um \textbf{equilíbrio de Nash} é criado sempre que a escolha de um jogador for \textit{ótima} dada a escolha do outro jogador.
+	\\~\\
+	Note que um equilíbrio de estratégia dominante também é um equilíbrio de Nash mas não necessariamente o contrário.
+	\\~\\
+	Uma vez que seja revelado aos participantes que eles estão nesse quadrante, nenhum deles terá o incentivo em mudar de estratégia.
+	\\~\\
+	É o que vemos nos quadrantes alto-esquerda e baixo-direita.
+
+\end{frame}
+
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Esquerda$    & $Direita$ \\
+			$Alto$  & $0,0$         & $0,-1$       \\
+			$Baixo$ & $1,0$         & $-1,3$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Equilíbrio de Nash}
+
+	Mas nem tudo são flores. O conceito do equilíbrio de Nash possui algumas dificuldades.
+	\\~\\
+	Como vemos no exemplo de agora, podem haver múltiplos equilíbrios de Nash em um mesmo jogo.
+	\\~\\
+	Outra dificuldade é que existem jogos em que não existam nenhum equilíbrio de Nash sequer. Veja o jogo abaixo
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Até agora, todos os jogos que vimos foram jogos de \textbf{estratégia pura}. Onde os jogadores definem um caminho e sempre agem do mesmo modo.
+	\\~\\
+	De modo mais formal, podemos usar a definição dada no livro de pós-graduação do Varian (Microeconomic Analysis, 1993).
+	\\~\\
+	\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualquer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Podemos ampliar nossa forma de pensar e permitir que os jogadores atribuam probabilidades para cada escolha e possam mudar de estratégia ao longo do tempo.
+	\\~\\
+	Nesse modelo, um jogador pode ficar 50\% do tempo em uma estratégia e mudar de estratégia nos outros 50\% do tempo. Auferindo o retorno de ambas multiplicado pela probabilidade associada a ela. Esse modelo é chamado de \textbf{estratégia mista}.
+	\\~\\
+	O equilíbrio de Nash em estratégias mistas é o equilíbrio na \textbf{escolhas das probabilidades} de cada agente. Ou seja, ao invés de escolher entre uma ou outra, ele escolherá quantos porcento de cada estratégia será utilizado. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Vamos pegar esse jogo e simular todos os retornos para cada escolha de probabilidades. 
+	\\~\\
+	Lembre-se que, se a probabilidade de $A$ escolher $alto$ for de $10\%$, então, $baixo$ terá obrigatoriamente de ter a probabilidade igual a $90\%$. 
+	\\~\\
+	Os retornos de $A$ são essa escala avermelhada enquanto os retornos de $B$ são a escala azulada.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap29_3-estrategias_mistas.png}
+	\end{figure}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	O ponto do equilíbrio de Nash acontece onde $B$ escolhe $50\%$ para cada e $A$ escolhe $75\%$ para $alto$ e $25\%$ para $baixo$. 
+	\\~\\
+	Quando $B$ escolhe esse ponto, todos os retornos de $A$ se tornam constantes (veja que a linha de $A$ é uma reta horizontal nesse ponto). 
+	\\~\\
+	Similarmente, quando $A$ escolhe esse ponto, todos os retornos de $B$ se tornam constantes. 
+	\\~\\
+	Como nenhum deles tem nenhum incentivo em mudar de estratégia nesse equilíbrio, temos um equilíbrio de Nash para estratégias mistas.
+	
+\end{frame}
+
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Confessa$      & $Nega$ \\
+		$Confessa$  & $-3,-3$         & $0,-6$ \\
+		$Nega$      & $-6,0$          & $-1,-1$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{O Dilema do Prisioneiro}
+
+	Um dos conceitos mais conhecidos na economia é o dilema do prisioneiro.
+	\\~\\
+	Primeiro, considere o jogo abaixo
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+	Esse jogo possui uma estratégia dominante: confessar. 
+	\\~\\
+	Independente do que cada jogador faça, sempre vai ser melhor confessar. Mas aqui temos uma contradição. Se eles optassem por não seguir a estratégia dominante, acabariam em situação melhor.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Dilema do Prisioneiro}
+
+	Como a opção "nega-nega"\ não pode ser modificada sem prejuízo para alguma das parte, ela é eficiente no sentido de Pareto. 
+	\\~\\
+	Ou seja, estamos diante de um arranjo que impede que alcancemos o ótimo de Pareto do sistema.
+	\\~\\
+	Podemos adaptar esse dilema para várias outras situações da vida real:
+	\begin{itemize}
+		\item "instalar"\ ou "não instalar"\ mísseis nucleares
+		\item "burlar"\ ou "não burlar"\ as cotas de produção de um cartel
+		\item "passar cola"\ ou "não passar cola"\ para um colega preguiçoso
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos Repetidos}
+
+	Como é de se esperar, o dilema do prisioneiro trouxe bastante discussão a respeito de como resolver esse jogo. 
+	\\~\\
+	Parece que a solução está relacionada à possibilidade ou não de repetição. Se o jogo é sem repetição, melhor será confessar. Pois essa é a estratégia dominante do arranjo.
+	\\~\\
+	Dentro de um jogo repetido temos dois tipos: jogos de número fixo e jogos indefinidos.
+	\\~\\
+	Um jogo repetido pode permitir coordenações entre os jogadores. É possível "punir"\ um jogador que decida optar por um ponto egoísta e com isso, criar o incentivo à cooperação.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos Repetidos}
+
+	No caso de um \textbf{jogo com repetição fixa}, é muito provável que os jogadores seguirão a estratégia dominante na última rodada, visto que não serão punidos pela outra parte.
+	\\~\\
+	Contudo, se você já sabe que o jogador será egoísta na última rodada, o que impede de ele repetir esse ato na penúltima, e na antepenúltima e assim por diante?
+	\\~\\
+	Se não houver uma garantia de cooperação na última rodada, a maior chance é que o jogo siga na estratégia dominante. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos Repetidos}
+
+	Esse padrão não é mantido em um jogo indefinido. 
+	\\~\\
+	Como sempre haverá uma oportunidade de punir os comportamentos não cooperativos, a tendência é que os jogadores sigam para o equilíbrio de Pareto.
+	\\~\\
+	Robert Axelrod fez um torneio computacional com vários algoritmos de estratégias em uma simulação do dilema do prisioneiro. A estratégia que performou melhor foi a que usou o "olho por olho".
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Manutenção de um Cartel}
+
+	Nessa seção revisitamos o problema da manutenção do cartel, mas sob a ótica da teoria dos jogos.
+	\\~\\
+	Na prática, esse problema pode ser modelo em termos de um dilema do prisioneiro.
+	\\~\\
+	Seguir as cotas é igual ao ponto de cooperação. Vender a custo competitivo (o ponto de Bertrand) é o equivalente a confessar e, portanto, é o equivalente ao equilíbrio de Nash.
+	\\~\\
+	Se a parte prejudicada puder responder ao trapaceiro e depois propor a recriação do cartel, o trapaceiro pode aprender a trabalhar em equipe. Mas se o prejudicado for do tipo de pessoa que não perdoa nunca, o cartel será destinado ao ponto de competição.
+
+\end{frame}
+
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Esquerda$     & $Direita$ \\
+		$Alto$      & $1,9$          & $1,9$ \\
+		$Baixo$     & $0,0$          & $2,1$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Jogos sequenciais}
+
+	O modelo de Stackelberg é um exemplo de um jogo onde as ações são alternadas entre os jogadores. Nesses casos, além da matriz de ganhos, nós podemos usar a \textbf{forma extensiva do jogo} para ilustrar as etapas de escolhas e os devidos retornos de cada uma delas.
+	\\~\\
+	Observe o jogo abaixo
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+	Se pensarmos nesse jogos como um jogo sequencial onde $A$ toma a primeira ação, podemos demonstrar o processo de decisão por meio do diagrama de árvore abaixo
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos sequenciais}
+
+	\Tree[.\textit{Jogador A} 
+	[.Alto 
+		[.\textit{Jogador B}
+			[.Esquerda (1,9) ]
+			[.Direita (1,9) ]]]
+	[.Baixo 
+		[.\textit{Jogador B}
+			[.Esquerda (0,0) ]
+			[.Direita (2,1) ]]]]
+	\\
+	\ 
+	\\
+	O jogador $A$ tem como estratégia escolher $baixo$, pois assim, terá o retorno de $2$ ao invés de $1$. O jogador $B$ só tem a opção de escolher dentro das opções de $baixo$, o que lhe sobra é a opção $direita$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos sequenciais}
+
+	Mas $B$ poderia pensar em manerias de obrigar o jogador $A$ a escolher $alto$.
+	\\~\\
+	Se $B$ ameaçar uma retaliação e escolher $esquerda$, ambos terminariam com $0$. Contudo, $A$ só levaria a sério essa ameaça se houvesse forte indício de cumprimento.
+	\\~\\
+	Se $B$ conseguir limitar seu escopo de atuação, é possível que a estratégia de $A$ seja modificada porque a matriz de ganhos seria modificada também.
+	\\~\\
+	Se você está acompanhando os noticiários, pode ver claramente como Putin tenta colocar nos outros a responsabilidade por uma possível escalada da guerra. Ele afirma que será "obrigado"\ a aumentar a força se ajudarem a Ucrânia.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Barreiras à Entrada}
+
+	Voltemos no problema da entrada de concorrentes em um mercado monopolizado.
+	\\~\\
+	Nós vimos que o monopolista possui o poder de retalhar devido a escala mínima de eficiência (EME) e do controle do mercado.
+	\\~\\
+	Quando uma empresa pondera em entrar no mercado, ela precisa contar com as possíveis consequências por conta do monopolista e, da mesma maneira, o monopolista precisa ponderar se valerá a pena baixar os preços para evitar o concorrente.
+\end{frame}
+
+\begin{lrbox}{\mybox}
+	\begin{game}{2}{2}[Entrante][Monopolista]
+		& $Retalha$      & $\textrm{Não Retalha}$ \\
+		$Entra$               & $0,0$          & $2,1$ \\
+		$\textrm{Fica Fora}$  & $1,9$          & $1,9$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Barreiras à Entrada}
+
+	Podemos exemplificar essa questão com a matriz abaixo
+
+	\begin{center}
+		\usebox{\mybox}
+	\end{center}
+
+	A primeira vista, temos dois equilíbrios de Nash. Mas esse também é um exemplo de um jogo sequenciado. Quem tem o poder de liderança é a empresa entrante.
+	\\~\\
+	Vamos olhar como fica esse problema no diagrama de árvore.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Barreiras à Entrada}
+
+	\Tree[.\textit{Entrante} 
+				[.\textit{Fica Fora} 
+					[.\textit{Monopolista}
+						[.Retalha (1,9) ]
+						[.\textit{Não Retalha} (1,9) ]]]
+				[.Entra
+					[.\textit{Monopolista}
+						[.Retalha (0,0) ]
+						[.\textit{Não Retalha} (2,1) ]]]]
+	\\
+	\ 
+	\\
+	A condição de entrada ou não é baseada na promessa de haver ou não retalhação.
+	\\~\\
+	A estratégia da entrante é optar por concorrer no mercado.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Barreiras à Entrada}
+
+	O que o monopolista fará? Bom, não existe maneira garantida do monopolista vincular a entrada do novo concorrente com a retaliação. 
+	\\~\\
+	Uma vez que o novo competidor se instalou, não é racional baixar os preços e abrir mão do lucro.
+	\\~\\
+	Agora, se o monopolista conseguir modificar sua matriz de ganhos (por meio de investimento na capacidade produtiva) de modo a obter lucro mesmo na retalhação, o cenário será outro.
+	\\~\\
+	Seria mais compensador ao monopolista lutar pelo seu mercado do que se acovardar.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Ap.T.Jogos]{Aplicações da Teoria dos Jogos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
 
 \begin{frame}
 	\frametitle{}
@@ -2256,6 +2671,147 @@
 	
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[E.Comport.]{Economia Comportamental}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Trocas]{Trocas}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Produção]{Produção}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Bem-Estar]{Bem-Estar}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Externalidades]{Externalidades}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[B.Públicos]{Bens Públicos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[I.Assimétrica]{Informação Assimétrica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+	\huge Capítulo \normalsize
+	\\~\\
+	\begin{itemize}
+		\item item
+		\item item
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+
+	
+
+\end{frame}
+
 
 \end{document}
 

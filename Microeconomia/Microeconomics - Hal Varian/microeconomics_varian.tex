@@ -1718,8 +1718,7 @@ Esse última seção é um apanhado do que vimos no capítulo. Vá ler o materia
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Teoria dos Jogos}
 
-Parabéns! Você chegou no ponto da teoria que usaremos um dos ferramentais mais famosos da matemática aplicada. No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.\footnote{Sim, foi aqui que John Nash fez sua famosa contribuição que foi retratada naquele filme ganhador do Óscar "Uma mente brilhante". Agora você pode dizer para os seus familiares que estudou essa teoria ;)
-}
+Parabéns! Você chegou no ponto da teoria que usaremos um dos ferramentais mais famosos da matemática aplicada. No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.\footnote{Sim, foi aqui que John Nash fez sua famosa contribuição que foi retratada naquele filme ganhador do Óscar "Uma mente brilhante". Agora você pode dizer para os seus familiares que estudou essa teoria ;)}
 
 \section{A Matriz de Ganhos de um Jogo}
 
@@ -1729,13 +1728,13 @@ Como todo ferramental novo, temos que aprender a lógica do modelo. Para isso, o
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
-\begin{game}{2}{2}[Jogador A][Jogador B]
-        & $Esquerda$    & $Direita$ \\
-$Alto$  & $1,2$         & $0,1$       \\
-$Baixo$ & $2,1$         & $1,0$
-\end{game}
+	\def\sgtextcolor{white}% Trocar pra preto na versão white
+	\def\sglinecolor{white}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+					& $Esquerda$    & $Direita$ \\
+	$Alto$  & $1,2$         & $0,1$     \\
+	$Baixo$ & $2,1$         & $1,0$
+	\end{game}
 
 \end{center}
 
@@ -1748,7 +1747,6 @@ Muito bem! Para o jogador $B$, sempre será melhor escolher $Esquerda$.
 Como há uma lógica dominante para as escolhas de ambos os jogadores, então, nesse jogo em questão, existe o que chamamos de \textbf{estratégia dominante}.
 
 \begin{center}
-
 \def\sgtextcolor{white}% Trocar pra preto na versão white
 \def\sglinecolor{white}% Trocar pra preto na versão white
 \def\highlight#1{\colorbox{yellow}{#1}}
@@ -1760,7 +1758,7 @@ $Baixo$ & \highlight{$2,1$}         & $1,0$
 
 \end{center}
 
-Eu sei, muito legal né?! Mas como sempre, existem muitas situações que não podemos contar com as existências de estratégias dominantes. E foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos na seção seguinte.
+Eu sei, muito legal né?! Mas como sempre, existem muitas situações que não podemos contar com as existências de estratégias dominantes e foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos na seção seguinte.
 
 \section{Equilíbrio de Nash}
 
@@ -1771,9 +1769,9 @@ Analise o seguinte jogo
 \def\sgtextcolor{white}% Trocar pra preto na versão white
 \def\sglinecolor{white}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
-        & $Esquerda$    & $Direita$ \\
-$Alto$  & $2,1$         & $0,0$       \\
-$Baixo$ & $0,0$         & $1,2$
+					& $Esquerda$    & $Direita$ \\
+	$Alto$  & $2,1$         & $0,0$       \\
+	$Baixo$ & $0,0$         & $1,2$
 \end{game}
 
 \end{center}
@@ -1806,7 +1804,7 @@ Nesse jogo, em todos os quadrante existirá o incentivo para algum jogador de mu
 
 Até agora, todos os jogos que vimos foram jogos de \textbf{estratégia pura}. Onde os jogadores definem um caminho e sempre agem do mesmo modo. De modo mais formal, podemos usar a definição dada no livro de pós-graduação do Varian (Microeconomic Analysis, 1993)\footnote{Só para vocês irem se animando para o mestrado.}.
 \\~\\
-\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualqer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
+\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualquer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
 \\~\\
 Mas podemos ampliar nossa forma de pensar e permitir que os jogadores atribuam probabilidades para cada escolha e possam mudar de estratégia ao longo do tempo. Nesse modelo, um jogador pode ficar 50\% do tempo em uma estratégia e mudar de estratégia nos outros 50\% do tempo. Auferindo o retorno de ambas multiplicado pela probabilidade associada a ela. Esse modelo é chamado de \textbf{estratégia mista}.
 \\~\\
@@ -1847,7 +1845,7 @@ A essa altura você já notou que esse jogo possui uma estratégia dominante: co
 \\~\\
 Como a opção "nega-nega"\ não pode ser modificada sem prejuízo para alguma das parte, ela é eficiente no sentido de Pareto. Ou seja, estamos diante de um arranjo que impede que alcancemos o ótimo de Pareto do sistema.
 \\~\\
-Podemos adaptar esse dilema para várias outras situações da vida real. O professor cita uma adaptação para "instalar" ou "não instalar"\ um míssil. Também adapta esse jogo para a situação do cartel em que há as opões de "burlar" e "não burlar"\ as cotas de produção.
+Podemos adaptar esse dilema para várias outras situações da vida real. O professor cita uma adaptação para "instalar"\ ou "não instalar"\ um míssil. Também adapta esse jogo para a situação do cartel em que há as opões de "burlar"\ e "não burlar"\ as cotas de produção.
 \\~\\
 Como é de se esperar, o dilema do prisioneiro trouxe bastante discussão a respeito de como resolver esse jogo. Parece que a solução está relacionada à possibilidade ou não de repetição. Se o jogo é sem repetição, melhor será confessar. Pois essa é a estratégia dominante do arranjo.
 
@@ -3976,7 +3974,7 @@ Esse é um caso onde os economistas dizem que as pessoas estão querendo \textbf
 
 O problema do carona pode ser modelado usando o nosso aprendizado de teoria dos jogos do capítulo 29. 
 \\~\\
-Se cada pessoa tiver disponibilidade de 500 reais para a compra e atribuir o uso da TV o valor de 100 reais. Caso o aparelho custe 150 e a soma dos preços de reserva é maior que o custo da oferta do bem, será eficiente no sentido de Pareto ofertar a televisão.
+Se cada pessoa tiver disponibilidade de 500 reais para a compra e atribuir o uso da TV o valor de 100 reais. Caso o aparelho custe 150 e a soma dos preços de reserva é maior que o custo da oferta do bem, será eficiente no sentido de Pareto ofertar a televisão. Se uma pessoa apenas decidir comprar, terá um resultado líquido de -50.
 \\~\\
 Vamos supor que não é possível evitar que um colega de quarto tenha acesso à TV, mesmo que ele não tenha pago por ela.
 \\~\\
