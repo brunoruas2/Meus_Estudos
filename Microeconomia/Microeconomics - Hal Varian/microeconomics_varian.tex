@@ -3992,12 +3992,104 @@ Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
 	
 \end{center}
 
-Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso. No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente, nesse caso da TV, a utilidade é maximizada pela escolha de não comprar se o outro comprar.
+Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso. No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente fazendo a mesma coisa, nesse caso da TV, a utilidade é maximizada pela escolha de fazer o oposto (se um comprar, o outro vai preferir não comprar).
 \\~\\
-
+Podemos melhorar essa situação obrigando o jogador B a contribuir pelo menos com uma quantia parcial de 51. Desse modo, teríamos uma melhoria de Pareto. Na verdade, Podemos ver que qualquer pagamento entre 50 e 100 feito ao jogador A seria uma melhoria de Pareto.
+\\~\\
+No geral, é examente isso que acontece: as pessoas costumam contribuir com alguma fração do custo do Bem Público. Mas existem arranjos mais complexos (mais agentes ou bens cujo preço de oferta é elevado) que podem produzir resultados não desejados pela sociedade.
 
 \section{Diferentes Níveis do Bem Público}
+
+Podemos nos deparar com problemas mais complexos onde a decisão da sociedade não é apenas entre prover e não prover. Podemos ter que decidir o quanto prover de um determinado bem público.
+\\~\\
+Podemos adaptar o problema da TV adicionando a característica que, quanto mais dinheiro eles gastarem na TV, melhor ela será.
+\\~\\
+$x_1$ e $x_2$ ainda denotam o consumo privado de cada agente e $g_1$ e $g_2$ serão suas participações na compra. G agora será a medida da qualidade da televisão a ser adquirida e c(G) será o custo dessa qualidade
+\\~\\
+A restrição enfrentada pelos colegas de quarto pode ser escrita como:
+
+$$ x_1 + x_2 + c(G) = w_1 + w_2 $$
+
+Fixando a utilidade do agente 2 como $\overline{u_2}$ podemos escrever o problema de maximização do consumidor 1 como:
+
+\begin{center}
+	\LARGE $\stackrel{máx}{\text{\small $x_1,x_2,G$}} \ \ \stackrel{u_1(x_1,G)}{\ }$ \\
+	\normalsize $\textrm{de modo que } u_2(x_2,G) = \overline{u_2}$ \\
+	\normalsize $\phantom{\textrm{de modo que }} x_1 + x_2 + c(G) = w_1 + w_2$ \\
+\end{center}
+
+Para resolver esse problema de maximização vamos usar a Lagrangiana:
+
+$$ L = u_1(x_1,G) - \lambda [u_2(x_2,G) - \overline{u_2}] - \mu [x_1 + x_2 + c(G) - w_1 - w_2 ] $$
+
+Cujas condições de primeira ordem são iguais a 
+
+$$ \frac{\partial L}{\partial x_1} = \frac{\partial u_1(x_1,G)}{\partial x_1} -\mu = 0 $$
+$$ \frac{\partial L}{\partial x_2} = - \lambda \frac{\partial u_2(x_2,G)}{\partial x_2} -\mu = 0 $$
+$$ \frac{\partial L}{\partial G} = \frac{\partial u_1(x_1,G)}{\partial G} - \lambda \frac{\partial u_2(x_2,G)}{\partial G} - \mu \frac{\partial c(G)}{\partial G} = 0 $$
+
+Podemos dividir a terceira equação por $1/\mu$ e somar $\frac{\partial c(G)}{\partial G}$ em ambos os lados. Isso nos dará 
+
+$$ \frac{1}{\mu} \frac{\partial u_1(x_1,G)}{\partial G} - \frac{\lambda}{\mu} \frac{\partial u_2(x_2,G)}{\partial G} = \frac{\partial c(G)}{\partial G} $$
+
+Isolando o termo $\mu$ na primeira equação, temos que
+
+$$ \mu = \frac{\partial u_1(x_1,G)}{\partial x_1} $$
+
+Podemos colocar essa igualdade de $\mu$ dentro da equação que acabamos de rearranjar para chegarmos em
+
+$$ \frac{\partial u_1(x_1,G) / \partial G}{\partial u_1(x_1,G) / \partial x_1} - \frac{\lambda}{\mu} \frac{\partial u_2(x_2,G)}{\partial G} = \frac{\partial c(G)}{\partial G} $$
+
+Rearranjando a segunda equação chegamos a 
+
+$$ \frac{\mu}{\lambda} = - \frac{\partial u_2(x_2,G)}{\partial x_2} $$
+
+Também podemos colocar essa igualdade de $\mu / \lambda$ dentro do rearranjo da terceira equação para chegarmos a
+
+$$ \frac{\partial u_1(x_1,G) / \partial G}{\partial u_1(x_1,G) / \partial x_1} +  \frac{\partial u_2(x_2,G) / \partial G}{\partial u_2(x_2,G) / \partial x_2} = \frac{\partial c(G)}{\partial G} $$
+
+A variação da utilidade dada uma variação da qualidade do bem público divida pela variação da utilidade dada uma variação no consumo privado é justamente a taxa marginal de substituição entre a qualidade do bem e o consumo privado de cada agente.
+\\~\\
+A variação no custo dada uma variação na qualidade é justamente o custo marginal da qualidade pela oferta do bem público.
+\\~\\
+Desse modo, podemos reescrever esse último resultado pela seguinte relação:
+
+$$ |TMS_1| + |TMS_2| =  CMa(G) $$
+
+Para termos certeza que essa condição faz sentido, vamos supor que ela é falsa e testar o que poderia acontecer. Existem duas maneiras dessa afirmação ser falsa: se a soma das TMS forem menor ou maior que o CMa.
+\\~\\
+Como a soma das TMS é a medida que eles estão dipostos a aceitar abrir mão do consumo privado para receber mais qualidade. Se as somas das taxas marginais de substituição forem menores do que o custo marginal, isso nos diz que os agentes estarão em melhor situação se ao invés de gastar com a melhoria, esse dinheiro fosse poupado e utilizado para o consumo privado de cada agente.
+\\~\\
+Se a soma das TMS forem maiores que o CMa da qualidade do bem. Poderíamos simplesmente usar o recurso necessário para fazer a qualidade e devolver o restante para os agentes.
+\\~\\
+Em ambos os casos, vemos que é possível melhorar a situação dos agentes devolvendo alguma quantia para o seu consumo privado. A única situação em que isso não é possível é justamente no ponto onde a soma das TMS é exatamente igual ao CMa da qualidade do bem público. Nesse ponto, temos o conhecido equilíbrio de Pareto.
+\\~\\
+É interessante ver aqui que, no mercado privado, a condição de maximização é que a TMS seja igual ao CMa do produto. Mas no caso do bem público, a condição é que a \textbf{soma das TMS} seja igual ao CMa.
+\\~\\
+Essa condição de eficiência pode ser vista na imagem abaixo. O ponto ótimo da quantidade do bem público é obtido pela igualdade da curva que mede a soma das TMS e a curva de CMa da oferta do bem público.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{cap37_4-bem_publico.png}
+\end{figure}
+
 \section{Preferências Quase Lineares e Bens Públicos}
+
+No caso das preferências quase lineares, que vocês viram lá no capítulo 04, devido a sua forma $u_i(x_i,G) = x_i + v_i(G)$. Quando colocamos essa função de utilidade no problema de maximização que acabamos de examinar na seção 4, chegamos a um resultado bem interessante:
+
+$$ |TMS_1| = \frac{\partial u_1(x_1,G) / \partial G}{\partial u_1 / \partial x_1} = \frac{\delta v_1(G)}{\delta G} $$
+$$ |TMS_2| = \frac{\partial u_2(x_2,G) / \partial G}{\partial u_2 / \partial x_2} = \frac{\delta v_2(G)}{\delta G} $$
+
+Pela condição da eficiência de Pareto, sabemos que
+
+$$ |TMS_1| + |TMS_2| =  CMa(G) $$
+
+Substituindo essas equações teremos que
+
+$$ \frac{\delta v_1(G)}{\delta G} + \frac{\delta v_2(G)}{\delta G} = CMa(G) $$
+
+Mas veja que resultado curioso, não há nenhuma relação entre o consumo privado $x_1$ e $x_2$ e a oferta do bem público. Isso implica na mesma quantidade de bem público em todas as alocações possíveis independentemente dos consumos privados de cada agente.
+
 \section{O problema do Carona}
 \section{Comparação com os Bens Privados}
 \section{Votação}
