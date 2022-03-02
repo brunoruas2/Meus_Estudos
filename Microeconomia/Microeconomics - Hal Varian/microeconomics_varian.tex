@@ -3855,6 +3855,8 @@ Por último, o professor coloca o caso da poluição criada pelos carros e como 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Tecnologia da Informação}
 
+Como só o Varian tem um capítulo sobre esse assunto. Eu vou resumir ele só quando me sobrar tempo. Por agora, eu recomendo que vá atrás do material original.
+
 \section{Concorrência de Sistemas}
 \section{O Problema dos Complementos}
 \section{Aprisionamento}
@@ -4089,9 +4091,49 @@ Substituindo essas equações teremos que
 $$ \frac{\delta v_1(G)}{\delta G} + \frac{\delta v_2(G)}{\delta G} = CMa(G) $$
 
 Mas veja que resultado curioso, não há nenhuma relação entre o consumo privado $x_1$ e $x_2$ e a oferta do bem público. Isso implica na mesma quantidade de bem público em todas as alocações possíveis independentemente dos consumos privados de cada agente.
+\\~\\
+\textbf{Comentário:} Aqui temos um exemplo sobre como podemos alterar aquele exemplo da empresa siderúrgica e, agora, das duas empresas de pesca para esse modelo de oferta de um bem público. Podemos ver que a maximização do bem estar acontece onde a soma dos custos sociais e dos benefícios marginais se equivalem. Isso é justamente a equivalência entre as TMS e o CMa.
 
 \section{O problema do Carona}
+
+Agora sabemos a condição a ser satisfeita para que alcancemos o ponto de alocação eficiente no sentido de Pareto. Mas nos resta saber o processo de determinação dessa alocação desejada.
+\\~\\
+Pelo primeiro teorema do bem-estar, sabemos que toda alocação de mercado sem externalidades será eficiente no sentido de Pareto. Mas isso se mantém no caso de bens públicos? Vamos investigar isso agora.
+\\~\\
+Podemos propor que cada pessoa possua uma dotação inicial de $w_i$. Essa pessoa pode escolher trocar parte da sua dotação inicial por um consumo privado $x_i$ ou o provimento de parte do custo do bem público $g_i$. Vamos definir o custo da oferta do bem público como $c(G) \equiv G$, ou seja, o CMa da oferta desse bem será igual a 1. A quantidade total ofertada será a soma de todas as contribuições individuais $G = \sum g_i$. A utilidade de cada pessoa será uma função em relação ao seu próprio consumo privado e a quantidade total de bem público $u_i(x_i,G)$.
+\\~\\
+Queremos definir a quantia maximizadora de utilidade de cada pessoa para a oferta do bem público. Para isso, supondo que existam apenas 2 agentes, a pessoa 1 suporá o que a pessoa 2 ofertará de $g_2$. A pessoa 2 fará a mesma coisa e suporá o que 1 ofertará. Nós buscaremos exatamente o equilíbrio entre esses dois participantes de modo a encontrar um equilíbrio de Nash onde ninguém terá o incentivo a mudar de posição.
+\\~\\
+Podemos definir o problema de maximização da pessoa 1 como:
+
+\begin{center}
+	\LARGE $\stackrel{máx}{\text{\small $x_1,g_1$}} \ \ \stackrel{u_1(x_1,g_1 + \overline{g_2})}{\ }$ \\
+	\normalsize $\textrm{de modo que } x_1 + g_1 = w_1 $ \\
+\end{center}
+
+Você deve ter percebido que isso é muito parecido com o problema do consumidor. A única diferença é que trazemos a oferta do bem público para o processo de decisão. Como já aprendemos na seção 37.4, as condições de maximização são que as TMS sejam iguais ao CMa do bem público, ou seja,
+
+$$ |TMA_1| = |TMA_1| = CMa(G) $$
+
+Mas aqui temos uma relação nova: a pessoa 2 pode supor que o agente 1 fará uma contribuição suficiente para que ela mesma não precise ofertar nada para a oferta do bem público. Isso liberaria a sua renda $w_2$ integralmente para o seu consumo privado $x_2$.
+\\~\\
+Para simplificar um pouco, vamos supor que cada pessoa só pode modificar suas decisões adicionais de contribuição. Ou seja, ninguém pode decidir pagar menos do que já paga, mas pode decidir não aumentar sua contribuição. Isso nos diz que $g_1 \geq 0$ e $g_2 \geq 0$.
+\\~\\
+Observe a imagem abaixo. Ela nos dá uma ilustração dessa situação. A dotação de cada pessoa começa no ponto de maior consumo privado e representa o quanto ela precisa abrir mão do seu consumo privado para ofertar mais bem público. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{cap37_6-problema_carona.png}
+\end{figure}
+
+No painel da esquerda temos a situação do agente 1. Ele maximiza sua utilidade de modo a ter o máximo possível de retorno entre as cestas de bens privados e público. No painel da direita temos o caso do agente 2. Veja como a restrição orçamentária do agente 2 parte do ponto onde o bem público é ofertado pelo agente 1.
+\\~\\
+Para o agente 2, pegar carona no bem público ofertado pelo agente 1 é simplesmente consumir sua dotação inicial. Generalizando esse resultado, o esperado para as situações onde a provisão de um bem público é voluntária é que a oferta final do bem público tenderá a ser pequena devido ao incentivo ao ato de pegar carona.
+
 \section{Comparação com os Bens Privados}
+
+
+
 \section{Votação}
 \section{O Mecanismo Vickey-Clarke-Groves}
 \section{Exemplos de VCG}
