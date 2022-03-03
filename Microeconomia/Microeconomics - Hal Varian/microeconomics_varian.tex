@@ -4266,12 +4266,145 @@ O ideal seria a construção de um mecanismo que fosse capaz de definir não ape
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Informação Assimétrica}
 
+\textbf{Comentário:} Antes de iniciarmos esse capítulo meus sinceros parabéns. Você conseguiu avançar em uma jornada longa e relativamente difícil. Definitivamente, você pode dizer que começou a entender microeconomia.
+\\~\\
+Em todos os modelos que estudamos até agora, supomos que consumidores e produtores possuem plena informação a respeito da qualidade dos bens. Desse modo, não supomos que exista alguma custo para conhecimento da qualidade do bem ofertado no mercado.
+\\~\\
+Contudo, na vida real, existem mercados onde a obtenção do conhecimento a respeito da qualidade do bem ofertado é consideralmente custosa ou até impossível. Por exemplo, no mercado de trabalho, sabemos que cada pessoa tem sua própria maneira de trabalhar, então, não é razoável supor que o trabalho seja um insumo homogêneo no mercado de trabalho. Outro exemplo é o mercado de carros usados, o comprador, na maioria das vezes só é capaz de saber se fez uma boa compra depois que passar um tempo em posse do carro. É justamente nesse tipo de mercado que vamos adaptar nosso ferramental analítico.
+\\~\\
+Sempre que uma das partes possuir um acesso maior a informação da qualidade do bem, diremos que existe uma \textbf{assimetria de informação} que pode causar problemas ao funcionamento eficiente do mercado.
+
+
 \section{O Mercado de Carros Ruins}
+
+Essa seção é baseada no paper "The Market of Lemons: Quality Uncertainty and Market Mechanism" de George Akerlof. Ele ganhou o Nobel em 2001 por essa contribuição.
+\\~\\
+Vamos pensar no mercado de carros usados. Supondo que existam 100 pessoas dispostas a vender seu carro usado e outras 100 pessoas querendo comprar um carro usado. É sabido por todos que 50 carros são bons e 50 são ruins.
+\\~\\
+O dono do carro ruim está disposto a vendê-lo por \$1.000 e o dono do carro bom por \$ 2.000. O preço de reserva dos compradores será \$ 2.400 por um carro bom e \$ 1.200 por um carro ruim.
+\\~\\
+Se a informação fosse pública, sabemos que os carros ruins seriam vendidos por algum valor entre 1.000 e 1.200 e os carros bons por algo entre 2.000 e 2.400. Mas a vida não é tão simples, vamos ver o que acontece quando colocamos a assimetria de informação dentro desse problema.
+\\~\\
+Sem a informação sobre a qualidade do carro, os compradores terão que supor quanto o carro realmente vale. Uma boa maneira de supor o que os compradores fariam é adotar que eles usarão o valor esperado usando as probabilidades associadas a cada tipo de carro, isso significa que os consumidores terão o novo preço de reserva igual a 50\% * 1.200 + 50\% * 2.400 = 1.800.
+\\~\\
+Mas a esse preço apenas os vendedores de carros ruins estariam dispostos a fazer negócios. Ao nível de preços com a assimetria de informação da qualidade dos carros, apenas os carros ruins seriam vendidos. Mas os compradores não são tão ingênuos, se eles soubessem que só existem carros ruins, eles reavaliariam suas ofertas ao nível de preços dos carros ruins. O que levaria o mercado apenas para a venda de todos os carros ruins e nenhum carro bom.
+\\~\\
+A natureza dessa falha de mercado é uma externalidade. Sempre que um vendedor entra no mercado de carros, ele sinaliza para os demais compradores que há uma mudança no preço médio esperado pelo carro. Ao longo da entrada de novos vendedores, o preço médio vai se ajustando até um ponto onde o valor se encontra abaixo do mínimo necessário para a compra de um carro bom.
+
 \section{A Escolha da Qualidade}
+
+Vamos mudar um pouco esse modelo do mercado de carros para um onde os produtores podem escolher a qualidade dos seus produtos. Nosso foco aqui é encontrar a qualidade de equilíbrio do mercado.
+\\~\\
+No nosso mercado-modelo de guarda-chuvas só existem duas qualidades. O preço de reserva dos consumidores para os de alta qualidade será \$ 14 e de \$ 8 para baixa qualidade. Suporemos que não é possível saber a priori a qualidade.
+\\~\\
+Se o setor for competitivo e o custo de produção seja \$ 11,50 independentemente da qualidade. Qual seria a qualidade de equilíbrio dos guarda-chuvas nesse mercado?
+\\~\\
+Da mesma maneira que fizemos no mercado passado, vamos supor que os consumidores usem as probabilidades de cada tipo de guarda-chuva para determinar seu preço esperado de reserva. Seja q a fração de guarda-chuvas de alta qualidade, o consumidor estará disposto a pagar $p = 14q + 8(1 - q)$ por guarda-chuva.
+\\~\\
+Existem 3 cenários possíveis nesse arranjo
+\begin{enumerate}
+	\item Apenas itens de baixa qualidade são produzidos e, como o preço de reserva das pessoas é 8 e o custo marginal da produção é 11,50, não haverá nenhuma venda.
+	\item Apenas itens de alta qualidade são produzidos sendo comercializados a 11,50 (porque é um mercado competitivo) permitindo assim que haja um excedente do consumidor igual a 14 - 11,50.
+	\item Teremos produtos de ambas as qualidades no mercado. Nesse caso, a competição criará um incentivo conjunto para que a qualidade média seja definida de modo que o preço de reserva das pessoas seja igual a $14q + 8(1 - q) \geq 11,50$.
+\end{enumerate}
+
+Isso nos diz que, no mínimo, teremos $q = 7/12$. Desse modo, os produtores ainda produzirão alguma parcela de itens ruins mas a maioria será de qualidade alta. Podemos ver essa situação na imagem abaixo:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.56]{cap38_2-qualidade_equilibrio.png}
+\end{figure}
+
+Perceba como no mercado de qualidade, a curva de demanda é crescente. A curva de oferta é constante porque nosso custo marginal é fixo em 11,50. O equilíbrio na qualidade acontece em qualquer ponto onde a curva de demanda é igual ou maior que o custo marginal da produção (a reta branca).
+
+\subsection{Escolhendo a Qualidade}
+
+Vamos melhorar um pouco o nosso modelo e adotar um custo diferenciado de produção para diferentes níveis de qualidade. Os itens de alta qualidade terão o custo marginal de \$ 11,50 enquanto os de baixa qualidade custarão apenas \$ 11 para ser produzidos. O que essa mudança fará no nosso mercado?
+\\~\\
+A fração de produtores de alta qualidade é igua a $q$ sendo $ 0 \leq q \leq 1$. 
+\\~\\
+Como o mercado é competitivo, cada produtor, buscando maximizar seu retorno, optará por produzir bens de baixa qualidade, uma vez que nenhum deles tem o poder de alterar a qualidade e o preço do mercado.
+\\~\\
+O problema dessa posição é que \textbf{todos os produtores} pensarão do mesmo modo. Isso significa que teremos apenas produtos de baixa qualidade no mercado. Como o preço de reserva dos consumidores para produtos de baixa qualidade é igual a \$ 8, desse modo, não teremos equilíbrio nesse mercado.
+
 \section{Seleção Adversa}
+
+O nome desse fenômeno da seção passada é \textbf{seleção adversa}. Os ítens de baixa qualidade acabam matando o mercado tanto para baixa qualidade quanto para alta qualidade. Vejamos alguns outros exemplos de seleção adversa.
+\\~\\
+Se uma companhia de seguros analisa que o risco de roubo ao longo da cidade é diferente em cada região e decide precificar sua apólice pelo risco médio de roubo, o que acontecerá com ela? Não é difícil prever que ela entrará em falência. Para ver isso, basta pensar em quem vai comprar o seguro: as pessoas das áreas com maior risco de roubo é que procurarão o seguro enquanto as que morarm em áreas seguras talvez nem procurem por ele.\footnote{O nome seleção adversa veio justamente desse problema das empresas de seguro. Ao pensar que elas teriam clientes de todas as regiões, acabaram por criar um produto em que o maior incentivo ao consumo são justamente os que mais precisarão dele.}
+\\~\\
+A solução é cobrar a probabilidade do pior caso. Isso acarretará num custo maior da apólice ao ponto que pessoas moradoras de áreas com baixo risco não comprarão mas essa a única maneira da empresa de seguro conseguir um equilíbrio no seu produto.
+\\~\\
+A mesma lógica é aplicada aos planos de saúde. Os preços praticados acabam sendo os calculados em cima dos piores cenários possíveis.
+\\~\\
+Uma maneira de melhorar essa situação é tornar o seguro obrigatório (vários países no mundo possuem esse mecanismo) uma vez que isso permite as seguradoras a cobrar um valor médio do risco e permite que as pessoas que realmente precisam do seguro paguem um preço menor e também permite que as pessoas com risco mais moderado não paguem o preço do pior cenário.
+\\~\\
+Esse equilíbrio de mercado via compra compulsória é bastante curioso em uma primeira vista. Mas é isso mesmo, existem situações onde a obrigação da aquisição é uma melhoria de Pareto. Como saber qual a hora de usar esse artifício? A saída é entender que esse fenômeno é fruto da externalidade entre os compradores de baixo e alto risco (é um tipo de assimetria de informação).
+\\~\\
+E esse é o motivo das operadoras de saúde darem descontos para planos empresariais. Como esses planos são dados independentes do perfil do comprador, isso significa que dentro da mesma empresa, se espera que existam pessoas saudáveis que reduzirão o risco de uso e pessoas doentes que aumentarão o risco. É uma maneira da companhia de seguro reduzir o efeito da seleção adversa.
+
 \section{Perigo Moral}
+
+Outro caso interessante de assimetria é o \textbf{perigo moral}. Para explicar, vamos supor que o risco de roubo é homogêneo em toda a cidade. Isso elimina o problema da seleção adversa mas é possível que o risco de roubo aumente pelo comportamento ativo dos segurados
+\\~\\
+Quem você acha que vai cuidar melhor da tranca da bicicleta, uma pessoa que não tem seguro ou uma que tem seguro contra furto? Exatamente, a pessoa que tem seguro pode se dar ao luxo de ser menos cuidadosa e esse comportamento ativamente altera o risco de ser furtado e precisar do seguro.
+\\~\\
+Quando uma companhia de seguros vende uma apólice ela precisa levar em consideração os incentivos que o seu próprio produto vai gerar nas atitudes dos seus clientes. Essa falta de cuidado gerada pelo seguro é o que chamamos de \textbf{risco/perigo moral}.
+\\~\\
+Esse problema não existiria se fosse possível observar a quantidade de cuidado. E alguns contratos possuem várias regras que pagam a menos (ou até livram a seguradora da obrigação de pagar) caso seja confirmada uma conduta perigosa ou indevida por parte dos seus segurados. Outra saída muito usada é a venda de seguros incompletos onde apenas uma parte do valor é coberto (e ainda há o pagamento da franquia). Em ambos os casos, as companhias querem aumentar a sensação de responsabilidade do segurado e reduriz o incentivo ao risco moral.
+\\~\\
+Esse resultado também é curioso quando analisado à luz da teoria da informação perfeita. Um seguro incompleto é melhor pois reduz o risco moral ao invés de haver um seguro completo sem custos de utilização.
+
 \section{Perigo Moral e Seleção Adversa}
+
+Já vimos que o risco moral surge quando um lado do mercado não pode observar todas as ações do outro\footnote{As vezes também chamamos isso de problema da ação oculta (baita nome de banda, ein).}. Do outro lado, vimos que a seleção adversa surge quando um lado do mercado não consegue observar uma característica/qualidade do outro lado do mercado\footnote{Também chamamos de problema da informação oculta.}.
+\\~\\
+Já aprendemos que em cenários de ação aculta, o mercado vai optar por ofertar bens abaixo do que estaria disposto afim de evitar os incentivos ruins. E também já vimos que os cenários de informação oculta geram bens a um custo mais elevado devido à necessidade de ter que supor o pior cenário.
+\\~\\
+Com isso, podemos ver que equilíbrios em mercados desse tipo serão ineficientes se comparados a mercado de informação perfeita. Mas cuidado ao querer colocar o governo para resolver esse problema porque se é caro para o setor privado resolver, será caro para o governo também. Temos que focar em tentar descobrir quais os tipos de intervensão do governo poderiam melhorar o resultado do mercado mesmo assumindo que o próprio governo possua informação imperfeita.
+\\~\\
+No caso da ação oculta, a menos que o governo use seu poder para coagir determinadas condutas (como criminalizar o consumo de drogas, lei seca, lei dos rachas etc), não há muito o que ele possa fazer para resolver essa assimetria de informação. No caso da informação oculta, já sabemos que um seguro obrigatório ajudaria o mercado mas teríamos que calcular o custo gerado para o governo fazer valer essa obrigatoriedade talvez seja mais caro para a sociedade fazer valer a regra do que o benefício advindo dela.
+
 \section{Sinalização}
+
+Voltemos ao mercado de carros usados. Nós vimos que se nada for feito, o mercado só existirá para os carros ruins mas é muito estranho supor que os vendedores dos carros bons não façam nada a respeito disso.
+\\~\\
+Eles poderiam escolher estratégias que \textbf{sinalizassem} a qualidade dos carros afim de reduzir a assimetria de informação entre vendedores e compradores.
+\\~\\
+Um sinal muito usado no mercado privado é o da \textbf{garantia}. Se o vendedor possui confiança na qualidade do seu produto, ele pode oferecer uma garantia que qualquer problema que aparecer em algum período de tempo será coberto pelo vendedor. No nosso exemplo dos carros, isso seria equivalente a prometer pagar a diferença de preço entre um carro ruim e um bom para o comprador caso seu carro quebre. Essa promessa só pode ser feita por quem tem um carro bom.
+\\~\\
+Então é isso? Resolvido o problema? Não, claro que não! Na verdade, existem sinalização que \textbf{pioram} o resultado do mercado.
+\\~\\
+Esse exmeplo foi tirado do paper "Market Signaling" de Michael Spence (1974). Supondo que existam dois tipos de trabalhadores no mercadod e eduação: capazes e incapazes. Um capaz tem um produto marginal de $a_2$ enquanto um incapaz de $a_1$ de modo que $a_2 > a1$. Além disso, adicionaremos a informação que uma fração $b$ dos trabalhadores é capaz e $1 - b$ é incapaz.
+\\~\\
+Seja a função de produção linear $L = a_1L_1 + a_2L_2$ onde $L$ é a produção total, $L_1$ é o número de todos os incapazes e $L_2$ é o número total de todos capazes.
+\\~\\
+Adicionamente, suporemos que o mercado de trabalho é competitivo.
+\\~\\
+Como já sabemos do nosso estudo do mercado de fatores, as empresas escolherão pagar exatamente igual ao produto marginal do trabalhador de modo que, em uma situação de informação perfeita, teríamos $w_1 = a_1$ e $w_2 = a_2$.
+\\~\\
+Mas o que acontece se a empresa não conseguir observar os produtos marginais?\footnote{se você lembrou do mercado de guarda-chuvas, é isso mesmo.} Ela vai optar por pagar um salário médio de $w = (1 - b)a_1 + ba_2$. Se todos os trabalhadores toparem esse salário, não teremos problemas de seleção adversa nesse mercado.
+\\~\\
+Mas se os trabalhadores pudessem sinalizar sua capacidade, por exemplo, com mais anos de estudo. Suporemos que $c_2e_2$ é o custo $c$ da quantidade $e$ de educação para os capazes e $c_1e_1$ seja o custo e a quantidade para os incapazes.
+\\~\\
+Agora, os trabalhadores tem que decidir quanto de educação adquirir e as empresas quanto pagar a mais de salário pela educação dos seus funcionários. 
+\\~\\
+Adicionando a hipótese draconiana que a educação não afeta a produtividade. Podemos ver que o equilíbrio dependerá grandemente do custo da educação. Se $c_2 < c_1$ será mais barato para os capazes buscarem educação e sinalizarem para os empregadores a sua condição. Seja $e^*$ a quantidade que satisfaça as desigualdades
+
+$$ \frac{a_2 - a_1}{c_1} < e^*< \frac{a_2 - a_1}{c_2} $$
+
+Como nossos pressupostos foram que $a_2 > a_1$ e $c_2 < c_1$ então $e^*$ existe. Isso implicaria que os capazes adquiririam exatamente $e_*$ de educação enquanto os incapazes consumiriam 0. Isso seria suficiente para sinalizar para as empresas quem é quem e elas poderiam pagar $a_2$ como salário para os capazes e $a_1$ para os incapazes.
+\\~\\
+Mas nossa história não acabou por aqui. Se o custo para os incapazes em buscar $e^*$ de educação for menor do que a diferença dos salários $a_2 - a_1$ então ele terá o incentivo de buscar a educação mas dadas as restrições que colocamos, isso não será o caso.
+\\~\\
+Como esse arranjo final é um equilíbrio e esse equilíbrio resolver um problema de assimetria de informação, dizemos que esse é um \textbf{equilíbrio separador}.
+\\~\\
+Outra solução é que cada trabalhador tenha o incentivo de fazer a mesma coisa. Se o custo da educação fosse o inverso $c_2 > c_1$ seria melhor para os incapazes procurarem se educar. O resultado seria tal que todos os trabalhadores se educariam e a solução dos salários seria a média ponderada do primeiro caso. Isso é chamado de \textbf{equilíbrio agregador}.
+\\~\\
+O equilíbrio separador tem um resultado socialmente ineficiente porque, no nosso modelo simplificado, a busca pela educação não gera uma mudança na produtividade. Desse modo, o gasto com educação não retornará em nada na capacidade total produtiva e sim na sinalização para um recebimento de salários iguais às suas produtividades. Isso torna a sinalização apenas um custo adicional se comparada á situação de equilíbrio em informação perfeita.
+\\~\\
+\textbf{Comentário:} Aqui temos um exemplo do efeito diploma onde foi feito um estudo que tenta isolar o recebimento adicional por educação entre ganho de produtividade e sinalização. A conclusão é que os ganhos advindos da educação são, em grande parte, advindos da sinalização e não do aumento da produtividade.
+
 \section{Incentivos}
 \section{Informação Assimétrica}
 
