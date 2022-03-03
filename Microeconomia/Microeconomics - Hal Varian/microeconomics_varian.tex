@@ -4186,26 +4186,31 @@ Entretanto, cada agente sabe que o analista terá acesso apenas a informação d
 
 $$ r_i(x) + \displaystyle \sum_{j \neq i} r_j(x) $$
 
-Olha só que saída inteligente, se o agente mentir para o analista, isso afetará a sua renda verdadeira uma vez que ele quer que a oferta do bem público seja o mais próxima possível do seu ponto de maximização e o valor recebido por fora não será afetado porque ele será definido apenas pelas utilidades declaradas dos outros agentes.
+Olha só que saída inteligente: se o agente mentir para o analista, isso afetará a sua renda verdadeira uma vez que ele quer que a oferta do bem público seja o mais próxima possível do seu ponto de maximização e o valor recebido por fora não será afetado porque ele será definido apenas pelas utilidades declaradas dos outros agentes.
 \\~\\
 Desse modo, o agente terá o incentivo de ser honesto quanto ao real valor da sua utilidade de modo a garantir que a sua renda verdadeira seja maximizada pela igualdade entre $r_i(x) = u_i(x)$. Ao generalizarmos esse resultado para todos os agentes, teremos os verdadeiros valores das utilidades.
 
-\subsection{O Mecanismo VGC}
+\subsection{O Mecanismo VCG}
 
-Como você já deve percebido que o mecanismo de Groves é muito caro. Esse pagamento por fora igual a soma do total das utilidades dos outros agentes pode ser exageradamente alto para fins de aplicação prática dessa metodologia.
+Como você já deve percebido que o mecanismo de Groves é potencialmente muito caro. Esse pagamento por fora igual a soma do total das utilidades dos outros agentes pode ser exageradamente alto para fins de aplicação prática dessa metodologia.
 \\~\\
-Poderíamos impor um imposto sobre cada agente de modo a reduzir o total pago para ele sem que isso afete a escolha de $x$. Podemos definir que esse imposto seja suficiente para que o analista tenha que pagar entre zero e qualquer outro valor real.
+Poderíamos impor um imposto sobre cada agente de modo a reduzir o total pago para ele sem que isso afete a escolha de $x$.
 \\~\\
-Um imposto particularmente útil seria cobrar de cada agente $i$ um valor igual a soma máxima das utilidades dos outros agentes para todas as estratégias testadas. Ou seja, se $x$ e $z$ forem diferentes níveis do bem público, podemos pagar para o agente $i$ um total de
+Um imposto particularmente útil seria cobrar de cada agente $i$ um valor igual a soma máxima das utilidades dos outros agentes para as quantidades maximizadoras do bem estar sem que o agente $i$ estivesse participando da decisão.
+\\~\\
+Se $x$ e $z$ forem diferentes níveis do bem público, podemos cobrar do agente $i$ um total de
 
-$$ w_i - R_i =  \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $$
+$$ \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $$
 
+Que é igual ou maior que zero. Como isso pode ser verdade? A resposta reside no fato que $\underset{z}{max} \sum_{j \neq i} r_j(z)$ é a utilidade máxima da oferta do bem público sem que o agente $i$ participe da aquisição desse bem. Por outro lado, $\sum_{j \neq i} r_j(x)$ é a utilidade dos outros agentes além de $i$ mas que contam com a contribuição do agente $i$ para a compra da quantidade $x$ do bem público. O nome que damos para esse pagamento é \textbf{Imposto de Clarke}.
+\\~\\
 Agora podemos reescrever as etapas do mecanismo passado mas agora substituindo a etapa 3 por esse novo valor de pagamento.
 
 \begin{itemize}
 	\item Primeiro um analista pergunta quanto cada participante estaria disposto a pagar para ter $x$ quantidades do bem público. Chamaremos de $r_i(x)$ essa utilidade declarada.
 	\item Depois é escolhida a quantidade $x$ que maximiza a soma das utilidades repordadas $R = \sum r_i(x)$.
-	\item A renda do agente $i$ será igual a $\left( u_i(x) + \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) \right)$
+	\item O analista buscará uma outra quantidade do bem público $z$ de modo a maximizar a utilidade de todos os agentes supondo que o agente $i$ não esteja participando da decisão $\underset{z}{max} \sum_{j \neq i} r_j(z)$.
+	\item O agente $i$ terá que pagar um imposto no valor de $ \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $ caso sua utiliade declarada seja suficiente para alterar a decisão social da oferta do bem.
 \end{itemize}
 
 \section{Exemplos de VCG}
@@ -4238,8 +4243,25 @@ $$ [(v_1 + r_2) - (c_1 + c_2)]x $$
 A melhor estratégia para o agente 1 é declarar a verdade sobre sua utilidade, ou seja, tornar público que $r_1 = v_1$. Pela relação acima, podemos ver que se o valor for negativo, então a TV não será comprada e, caso contrário, a soma dos valores declarados será superior ao custo da TV.
 \\~\\
 A renda final do agente 1 dependerá da sua utilidade no uso da TV, da utilidade do agente 2 ao uso da TV e da utilidade do agente 2 caso não houvesse a possibilidade de compra combinada com o agente 1.
+\\~\\
+O legal aqui é que, se o agente 1 tiver uma utilidade declarada suficiente para tornar a compra da TV viável, ele pagará o valor da utilidade do agente 2 com a TV sendo paga pelos dois menos o valor da utilidade do agente 2 caso ele tivesse que decidir sozinho entre comprar a TV ou não. Se o valor da utilidade declarada por ele não for suficiente para mudar a situação em que o agente 2 escolher sozinho, ele não precisaria pagar nada de imposto.
 
 \section{Problemas com Imposto de Clarke}
+
+Então podemos definir que o mecanismo VCG resolve nosso problema de oferta ótima de bem público? Não, infelizmente, ele pode enfrentar problemas na sua aplicação.
+\\~\\
+A primeira limitação (que pode ser bastante relevante) é que ele só funciona com preferências quase lineares. Isso é devido ao fato que a decisão do quanto consumir (e a pagar) não pode ser influenciada pela sua demanda pelo bem público. Quando as preferências são quase lineares (como vimos no ponto 37.5) a quantidade ótima do bem público será única.
+\\~\\
+A segunda limitação é que o imposto de Clarke não gera um resultado ótimo de Pareto. A ideia do imposto de Clarke é cobrar a o custo que a decisão de cada agente gera no total da sociedade. Esse mecanismo nos garante uma quantidade ótima do bem público mas, como gera um pagamento de imposto, o consumo privado é afetado por ele. Como a ideia do imposto de Clarke é não alterar a escolha das pessoas, o total arrecadado não pode ser redirecionado para nenhum outro indivíduo envolvido no processo de decisão, porque isso poderia alterar a escolha. No final, esse imposto precisa sumir do sistema.
+\\~\\
+O argumento em defesa do segundo ponto é que só as pessoas que possuem utilidade declarada suficiente para mudar a decisão social (chamadas de pivô) é que pagam o imposto e, a medida que o número de agentes aumenta, a chance de alguém ser uma pessoa pivô vai caindo cada vez mais.
+\\~\\
+A terceira limitação do mecanismo VCG é que ele pode ser manipulado via coalisão. Se fossem 3 amigos no problema da TV, dois deles poderiam declarar as utilidades em 1 milhão e garantir a compra da TV, contudo, como eles poderiam combinar de não mudar de posição, nenhum deles seria considerado uma pessoa pivô e não pagariam qualquer imposto de Clarke.
+\\~\\
+O quarto problema é que existe um problema entre equidade e eficiência. É possível que ao aplicarmos o imposto de Clarke, algumas pessoas fiquem em uma situação pior que começaram. O mecanismo nos dá a garantia que a quantidade do bem público será ótima mas ele não nos garante que o arranjo final será um equilíbrio de Pareto.
+\\~\\
+O ideal seria a construção de um mecanismo que fosse capaz de definir não apenas a quantidade ótima do bem público mas também o valor pago de modo a melhorar (ou pelo menos não piorar) a situação de todos os agentes envolvidos. Talvez você que está lendo isso agora seja a pessoa a desenvolver a resposta para essa pergunta!
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Informação Assimétrica}
