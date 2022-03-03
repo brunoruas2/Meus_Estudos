@@ -4156,8 +4156,89 @@ Esse nível é eficiente no sentido de Pareto? Não necessariamente. Precisaría
 \\~\\
 \textbf{Comentário:} Aqui temos um exemplo sobre como a ordem das escolhas de votação pode interferir no resultado final. O Varian explica como esse mecanismo é aplicado ao sistema legislativo dos EUA.
 
-\section{O Mecanismo Vickey-Clarke-Groves}
+\section{O Mecanismo Vickrey-Clarke-Groves}
+
+Pensemos num framework de maximização da utilidade de cada indivíduo que envolva a oferta de um determinado bem público. O problema é que os agentes não estarão dispostos a nos dar os verdadeiros valores de utilidades de modo que teremos um desafio em conseguir determinar as funções de utilidade individuais.
+\\~\\
+Seja $x$ as escolhas possíveis. Supondo que existam $n$ agentes onde $u_i(x)$ será a utilidade de cada agente $i$. O nosso objetivo é escolher $x$ de modo a ter a maior soma possível das utilidades $\sum u_i(x)$. A dificuldade é que não sabemos as funções de utilidade dos agentes e, caso perguntemos, eles podem querer mentir para acabarem em uma situação melhor.
+\\~\\
+Por incrível que pareça, existe uma maneira de descobrirmos valores mais confiáveis para as utilidades dos agentes de modo a conseguir alcançar um resultado eficiente. Esse mecanismo é chamado de \textbf{mecanismo Vickrey-Clarke-Groves (VCG)}. 
+
+\subsection{O Mecanismo Groves}
+
+Vamos trabalhar esse mecanismo VCG em etapas. A primeira delas é o chamado \textbf{mecanismo Groves}.
+
+\begin{itemize}
+	\item Primeiro um analista pergunta quanto cada participante estaria disposto a pagar para ter $x$ quantidades do bem público. Chamaremos de $r_i(x)$ essa utilidade declarada.
+	\item Depois é escolhida a quantidade $x$ que maximiza a soma das utilidades repordadas $R = \sum r_i(x)$.
+	\item Cada agente $i$ recebe um pagamento por fora igual ao valor das utilidades de todos os outros agentes $R_i = \sum_{i \neq j} r_j(x^*)$
+\end{itemize}
+
+Vamos ver qual a estratégia dominantes das pessoas nesse arranjo.
+\\~\\
+A remuneração total de cada indivíduo será igual a soma da sua utilidade advinda da oferta do bem público $u_i(x)$ e do seu pagamento por fora igual a soma das utilidades informadas pelos outros agentes $R_i$. Ou seja,
+
+$$ u_i(x) + \displaystyle \sum_{j \neq i} r_j(x) $$
+
+Veja que a pessoa $i$ se preocupa com a sua verdadeira utilidade e com a utilidade declarada pelas outras pessoas. 
+\\~\\
+Entretanto, cada agente sabe que o analista terá acesso apenas a informação declarada por cada agente. Ou seja, a pessoa $i$ sabe que o analista só terá acesso à soma das utilidades declaradas
+
+$$ r_i(x) + \displaystyle \sum_{j \neq i} r_j(x) $$
+
+Olha só que saída inteligente, se o agente mentir para o analista, isso afetará a sua renda verdadeira uma vez que ele quer que a oferta do bem público seja o mais próxima possível do seu ponto de maximização e o valor recebido por fora não será afetado porque ele será definido apenas pelas utilidades declaradas dos outros agentes.
+\\~\\
+Desse modo, o agente terá o incentivo de ser honesto quanto ao real valor da sua utilidade de modo a garantir que a sua renda verdadeira seja maximizada pela igualdade entre $r_i(x) = u_i(x)$. Ao generalizarmos esse resultado para todos os agentes, teremos os verdadeiros valores das utilidades.
+
+\subsection{O Mecanismo VGC}
+
+Como você já deve percebido que o mecanismo de Groves é muito caro. Esse pagamento por fora igual a soma do total das utilidades dos outros agentes pode ser exageradamente alto para fins de aplicação prática dessa metodologia.
+\\~\\
+Poderíamos impor um imposto sobre cada agente de modo a reduzir o total pago para ele sem que isso afete a escolha de $x$. Podemos definir que esse imposto seja suficiente para que o analista tenha que pagar entre zero e qualquer outro valor real.
+\\~\\
+Um imposto particularmente útil seria cobrar de cada agente $i$ um valor igual a soma máxima das utilidades dos outros agentes para todas as estratégias testadas. Ou seja, se $x$ e $z$ forem diferentes níveis do bem público, podemos pagar para o agente $i$ um total de
+
+$$ w_i - R_i =  \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $$
+
+Agora podemos reescrever as etapas do mecanismo passado mas agora substituindo a etapa 3 por esse novo valor de pagamento.
+
+\begin{itemize}
+	\item Primeiro um analista pergunta quanto cada participante estaria disposto a pagar para ter $x$ quantidades do bem público. Chamaremos de $r_i(x)$ essa utilidade declarada.
+	\item Depois é escolhida a quantidade $x$ que maximiza a soma das utilidades repordadas $R = \sum r_i(x)$.
+	\item A renda do agente $i$ será igual a $\left( u_i(x) + \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) \right)$
+\end{itemize}
+
 \section{Exemplos de VCG}
+
+\subsection{Leilão de Vickrey}
+Aqui temos uma aplciação co VCG ao leilão de Vickrey. Ele não faz muito sentido sem ter lido o capítulo 18. Mas para os que estão esquecidos a essa altura do campeonato, o Leilão de Vickrey tem a característica de que o vencedor é aquele que dá o maior lance mas ele paga o segundo maior valor dado como lance.
+\\~\\
+Com dois agentes, cada lance será dado por $r_1 > r_2$ e os valores verdadeiros serão $v_1 > v_2$. Uma característica interessante do leilão de Vickrey é que a estratégia dominante de cada agente é atribuir seus verdadeiros valores aos lances.
+
+\subsection{Clarke-Groves}
+
+Voltemos ao problema dos amigos e da televisão. Se $c_i$ é o valor que cada agente vai pagar na TV e o custo total dela é de R\$150, então $c_1 + c_2 = 150$.
+\\~\\
+Para aplicar o mecanismo VCG temos que pedir para que cada agente declare um valor $r_i$. Se $r_1 + r_2 > 150$ a televisão será comprada e os pagamentos devem ser definidos de acordo com o mecanismo. Seja $x=1$ para a TV comprada e $x=0$ a opção de não comprar a TV.
+\\~\\
+Como vimos antes, a remuneração do agente 1 será igual a 
+
+$$ u_i(x) + \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $$
+
+Que aplicado ao nosso caso em questão será igual a 
+
+$$ (v_1 - c_1)x + (r_2 - c_2)x - \underset{y}{max}\ (r_2 - c_2)y $$
+
+O primeiro termo é a utilidade líquida da TV. O segundo termo é a utilidade líquida declarada pelo agente 2. Por fim, o terceiro elemento é a utilidade máxima declarada caso o agente 1 não estivesse disponível para a compra da TV.
+\\~\\
+Rearranjando os dois primeiros termos, temos 
+
+$$ [(v_1 + r_2) - (c_1 + c_2)]x $$
+
+A melhor estratégia para o agente 1 é declarar a verdade sobre sua utilidade, ou seja, tornar público que $r_1 = v_1$. Pela relação acima, podemos ver que se o valor for negativo, então a TV não será comprada e, caso contrário, a soma dos valores declarados será superior ao custo da TV.
+\\~\\
+A renda final do agente 1 dependerá da sua utilidade no uso da TV, da utilidade do agente 2 ao uso da TV e da utilidade do agente 2 caso não houvesse a possibilidade de compra combinada com o agente 1.
+
 \section{Problemas com Imposto de Clarke}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
