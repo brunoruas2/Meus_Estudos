@@ -4406,6 +4406,128 @@ O equilíbrio separador tem um resultado socialmente ineficiente porque, no noss
 \textbf{Comentário:} Aqui temos um exemplo do efeito diploma onde foi feito um estudo que tenta isolar o recebimento adicional por educação entre ganho de produtividade e sinalização. A conclusão é que os ganhos advindos da educação são, em grande parte, advindos da sinalização e não do aumento da produtividade.
 
 \section{Incentivos}
+
+Veremos agora um pouco sobre o estudo dos \textbf{sistemas de incentivos} e como ele se relaciona com a informação assimétrica.
+\\~\\
+O estudo de um sistema de incentivos é o estudo de como fazer alguém agir de determinado modo específico desejado. Pensemos no caso onde você é dono de uma terra e precisa que alguém trabalhe nela por você. Como você estabeleceria um sistema de remuneração?
+\\~\\
+Uma opção é pagar a ela um montate fixo independente da quantidade de trabalho feita. Mas esse plano cria o incentivo a produzir pouco. Um plano melhor seria vincular o pagamento à produção do trabalhador. O grande desafio de um sistema de incentivos é saber como relacionar as variáveis de interesse.
+\\~\\
+Seja $x$ a quantidade de esforço do trabalhador e $y = f(x)$ a quantidade produzida por ele. O preço da produção é igual a 1 então o valor da produção será igual a $y$. A quantia de salários é dada por $s(y)$ caso o trabalhador produza $y$ unidades. Como você quer maximizar seus lucros, você procura um modelo de financiamento que permita a maximização de $y - s(y)$.
+\\~\\
+Claro que, num mundo onde você possa cobrar o que quer, a maximização do lucro passaria por $s(y) = 0$. Mas na vida real, você vai enfrentar limitações ao quanto terá de pagar pela mão de obra.
+\\~\\
+É razoável supormos que o trabalhador não gosta do esforço de trabalhar. Então podemos definir como $c(x)$ o custo de esforço pela produção de $x$ unidades. Suporemos que a função custo total e custo marginal são crescentes em termos de $x$. O problema de maximização da utlidade do trabalhador pode ser definido como $s(y) - c(x) = s(f(x)) - c(x)$. Se o trabalhador tiver outras oportunidades de auferir uma utildiade de $\overline{u}$ então o problema de maximização da utiliade do trabalhador pode ser escrito como:
+
+$$ s(f(x)) - c(x) \geq \overline{u} $$
+
+Podemos chamar essa desigualdade de \textbf{restrição de participação}. De modo que, sempre que o trabalhador conseguir auferir uma utilidade maior em outra opção de trabalho, ele escolherá essa outra opção.
+\\~\\
+O seu problema de maximização do lucro precisa levar em consideração a restrição de participação do trabalhador. Sua missão é cobrar uma quantidade de trabalho $x$ de modo a não criar o incentivo ao trabalhador de desistir do trabalho, ou seja
+
+\begin{center}
+	$\underset{x}{max} \ f(x) - s(f(x))$ \\
+	$\textrm{de modo que } s(f(x)) - c(x) \geq \overline{u}$
+\end{center}
+
+Como você não quer pagar mais do que o mínimo que o trabalhador está disposto a receber. Podemos ter como objetivo o pagamento do salário exatamente no montante onde ele é indiferente à outra fonte de utilidade, ou seja, $s(f(x)) - c(x) = \overline{u}$, ou melhor, $s(f(x)) = c(x) + \overline{u}$. Substituindo $s(f(s))$ na função objetivo:
+
+$$ \underset{x}{max} \ f(x) - c(x) - \overline{u} $$
+
+Não é difícil ver que a condição de maximização dessa função será satisfeita quando
+
+$$ PM(x^*) = CMa(x^*) $$
+
+Isso nos dá o quanto de esforço o proprietário deve cobrar do trabalhador para maximizar seus lucros. Agora nos resta saber o valor do salário $s(y)$ por essa quantidade de trabalho ótima $x^*$.
+\\~\\
+Para resolver esse problema, só precisamos satisfazer a seguinte relação:
+
+$$ s(f(x^*)) - c(x^*) \geq s(f(x)) - c(x) \ \forall \ x $$
+
+Esse símbolo $\forall$ é lido como "para todo". O nome dado a essa relação acima é \textbf{restrição de compatibilidade do incentivo} e nada mais é do que o cálculo do maior lucro possível dada a restrição de motivação do trabalhador. 
+\\~\\
+Desse modo o resultado esperado é achar um volume de salário ótimo que produza a utilidade $\overline{u}$ para o trabalhador e que iguale o produto marginal do trabalho ao custo marginal do esforço para o trabalhador.
+\\~\\
+Existem mais de uma solução para esse problema:
+\begin{itemize}
+	\item Aluguel
+	\item Trabalho assalariado
+	\item Pegar ou largar
+	\item Parceria
+\end{itemize}
+
+\subsection*{Aluguel}
+
+No aluguel, você pode simplesmente alugar a terra para o trabalhador ao preço $R$. Se o trabalhador puder ficar com o resultado da sua produção, podemos definir o problema como
+
+$$ s(f(x)) = f(x) - R $$
+
+Se o trabalhador buscar maximizar o próprio retorno $s(f(x)) - c(x) = f(x) - R - c(x)$ então ele terá de escolher $x$ de modo a igualar $PM(x) = CMa(x)$ que é justamente a condição que você queria desde o começo. Nesse caso, a utilidade total do trabalhador será o teto para a quantidade do esforço realizado no campo
+
+$$ f(x) - c(x) - R = \overline{u} $$
+
+Assim sendo, você sabe que deve cobrar $R = f(x) - c(x) - \overline{u}$ pelo aluguel da terra.
+
+\subsection*{Trabalho Assalariado}
+
+Nesse arranjo, você deve pagar ao trabalhador um salário constante $w$ por unidade de esforço $x$ mais um valor independente do trabalho feito $K$, ou seja:
+
+$$ s(x) = wx + K $$
+
+A taxa $w$ é igual à $PM(x)$. $K$ é apenas uma constante arbitrária para que o trabalhador se torne indiferente entre trabalhar ou não na sua terra. Podemos definir o problema de maximização do lucro $s(f(x)) - c(x)$ como
+
+$$ \underset{x}{max} \ wx + K - c(x) $$
+
+O trabalhador será levado a escolher uma quantidade de trabalho $x$ que iguale o benefício marginal do seu esforço $w$, ou seja, a identidade $PM(x) = CMa(x)$ que é justamente o que você queria.
+
+\subsection*{Pegar ou Largar}
+
+Nesse modelo de negociação, você ofertará $B^*$ se ele aplicar $x^*$ de esforço e zero caso ele não atinga essa cota. Agora nos resta saber como determinar $B^*$. Uma boa maneira de fazer isso é pela igualdade entre $B^* - c(x^*) = \overline{u} $, ou seja, $B^* = \overline{u} + c(x^*)$.
+\\~\\
+Nesse arranjo, qualquer quantidade $x \neq x^*$ trará ao trabalhador um custo do esforço feito na terra $-c(x)$. Se ele aplicar um esforço de exatanebte $x^*$, terá como retorno de utiliade $\overline{u}$. Nesse caso, a estratégia dominante do trabalhador (se ele topar o contrato) será de $x^*$.
+
+\subsection*{Parceria}
+
+Os esquemas acima geram uma maximização do retorno ao dono da terra e geram para o trabalhador uma utilidade tão boa quanto ele poderia obter caso não trabalhasse. Mas existem sistemas que acabam criando incentivos que pioram o resultado ao invés de obter um resultado ótimo.
+\\~\\
+No sistema de parceria, você poderia propor que tanto você quanto ele receberá uma porcentagem fixa da produção. O trabalhador vai receber $s(x) = \alpha f(x) + F$ onde F é uma constante e $\alpha < 1$. Vamos ver o que esse sistema produz de incentivos.
+\\~\\
+O problema de maximização seria igual a 
+
+$$ \underset{x}{max}\ \alpha f(x) + F - c(x) $$
+
+A condição de maximização desse problema será igual a $\alpha PM(x) = CMa(x)$. Isso claramente não satisfaz a nossa condição de maximização de igualdade entre a produtividade marginal do esforço e o custo do trabalho para o trabalhador.
+\\~\\
+\textbf{Comentário:} Aqui temos dois exemplos de sistemas de incentivos. No primeiro vemos porque as ações que dão direito a voto em uma empresa S/A não são aquelas que pertencem aos debenturistas porque os acionistas recebem o restante do lucro menos a parcela dos debenturistas, isso gera o incentivo à decisões que retornem lucros maiores para a empresa. No segundo exemplo vemos as reformas econômicas na China onde o sistema de retorno para o trabalho agrícola onde o sistema de incentivos anterior era pior que o novo.
+
 \section{Informação Assimétrica}
+
+No nosso modelo de sistema de incentivos anterior nós deixamos de fora a característica de assimetria de informação entre o proprietário (que supomos ser você) e o trabalhador. O principal problema com o nosso modelo foi que o esforço é uma variável objetivamente mensurada.
+\\~\\
+No geral, o esforço será medido por algum sinal. Se usarmos a produção como esse sinal, estamos ignorando que existem muitos fatores além do esforço do trabalhador que podem impactar no resultado da produção final. E essa diferença pode ser grande o suficiente para fazer o trabalhador optar por mudar de emprego.
+\\~\\
+A assimetria está justamente no fato que o trabalhador sabe exatamente o montante de esforço empregado enquanto o proprietário só poderá observar algum sinal de esforço. O sistemas de incentivos deve levar em consideração essa assimetria para conseguir maximizar o retorno do proprietário.
+\\~\\
+Vejamos comos os sistemas analisados na seção passada se comportam na presença de assimetria de informação.
+
+\subsection*{Aluguel}
+
+Se o proprietário usar como cálculo de maximização o volume de produção e não o esforço, o trabalhador deverá supor o componente de aleatoriedade da produção para saber se vale ou não a pena pergar esse trabalho. Se o trabalhador for avesso ao risco, ele optará por outra oportunidade de trabalho que contenha menos variação no resultado do seu trabalho.
+
+\subsection*{Trabalho Assalariado}
+
+O problema do trabalho assalariado é que ele precisa ser mensurado pelo esforço e não por um sinal (como horas trabalhadas). Sem acesso ao real valor da quantidade de esforço, não será possível propor um salário que iguale o produto marginal ao custo marginal do trabalhador.
+
+\subsection*{Pegar ou Largar}
+
+Se o pagamento for feito em cima de um sinal do esforço e não da quantidade real, acabamos com o emsmo problema do trabalho assalariado. Se basearmos o pagamento pelo resultadod a produção, teremos o trabalhado como avalista de todo o risco. Será muito difícil achar um trabalhador disposto a correr esse risco de perder tudo por um fator que ele mesmo não pode ter nenhum controle.
+
+\subsection*{Parceria}
+
+Surpreendentemente, em um sistema de assimetria de informação, o sistema de parceria acaba por dividir o risco não controlável entre proprietário e trabalhador. O pagamento será feito em cima da quantidade produzida mas o trabalhador saberá que se houver algum problema não controlável, ele ainda receberá parte de produção.
+\\~\\
+A alteração do sistema de informação acabou por gerar uma mudança considerável na classificação dos nossos sistemas de insentivos. Tornando a parceria em um sistema aceitável tanto sob a ótica do trabalhador quanto do proprietário.\footnote{Muito legal, né?!}
+\\~\\
+\textbf{Comentário:} Aqui temos dois exemplos de sistemas de incentivos. O primeiro é o empresário Varszegi que conseguiu melhorar o trabalho no leste europeu pelo aumento do salário e por apenas contratar pessoas que não foram submetidas ao modelo de trabalho soviético. O segundo exemplo é o do Banco Grameen que criou um modeo de empréstimos que conseguiu combater os problemas de escala, seleção adversa e assimetria de informação de uma vez só ao criar um sistema de autocontrole em grupo para o cumprimento dos pagamentos dos empréstimos.
 
 \end{document}
