@@ -1728,8 +1728,8 @@ Como todo ferramental novo, temos que aprender a lógica do modelo. Para isso, o
 
 \begin{center}
 
-	\def\sgtextcolor{white}% Trocar pra preto na versão white
-	\def\sglinecolor{white}% Trocar pra preto na versão white
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
 	\begin{game}{2}{2}[Jogador A][Jogador B]
 					& $Esquerda$    & $Direita$ \\
 	$Alto$  & $1,2$         & $0,1$     \\
@@ -1747,8 +1747,8 @@ Muito bem! Para o jogador $B$, sempre será melhor escolher $Esquerda$.
 Como há uma lógica dominante para as escolhas de ambos os jogadores, então, nesse jogo em questão, existe o que chamamos de \textbf{estratégia dominante}.
 
 \begin{center}
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \def\highlight#1{\colorbox{yellow}{#1}}
 \begin{game}{2}{2}[Jogador A][Jogador B]
         & $Esquerda$    & $Direita$ \\
@@ -1766,8 +1766,8 @@ Analise o seguinte jogo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
 					& $Esquerda$    & $Direita$ \\
 	$Alto$  & $2,1$         & $0,0$       \\
@@ -1788,8 +1788,8 @@ Outra dificuldade é que existem jogos em que não existam nenhum equilíbrio de
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
         & $Esquerda$    & $Direita$ \\
 $Alto$  & $0,0$         & $0,-1$       \\
@@ -1831,8 +1831,8 @@ Um dos conceitos mais conhecidos na economia é o dilema do prisioneiro. Chegou 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
             & $Confessa$      & $Nega$ \\
 $Confessa$  & $-3,-3$         & $0,-6$ \\
@@ -1873,8 +1873,8 @@ Observe o jogo abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
             & $Esquerda$     & $Direita$ \\
 $Alto$      & $1,9$          & $1,9$ \\
@@ -1909,8 +1909,8 @@ Podemos exemplificar essa questão com a matriz abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Entrante][Monopolista]
                       & $Retalha$      & $\textrm{Não Retalha}$ \\
 $Entra$               & $0,0$          & $2,1$ \\
@@ -1963,8 +1963,8 @@ Analise o jogo abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $2,1$          & $0,0$ \\
@@ -1973,9 +1973,9 @@ $Baixo$  & $0,0$          & $1,2$
 
 \end{center}
 
-Podemos ver que não temos uma estratégia dominante, mas temos dois equilíbrios de Nash. Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
+Podemos ver que não temos uma estratégia dominante mas temos dois equilíbrios de Nash. Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
 \\~\\
-Agora vamos formalizar um pouco mais essas ideias. Seja um jogo com dois jogadores. O jogador linha terá $l_1,l_2,\dots,\l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
+Agora vamos formalizar um pouco mais essas ideias. Seja um jogo com dois jogadores. O jogador linha terá $l_1,l_2,\dots,l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
 \\~\\
 Para cada escolha $l$ feita, chamaremos de $b_c(l)$ a melhor escolha para coluna dada a escolha de linha. Da mesma maneira, chamaremos $b_l(c)$ a melhor escolha para linha. Um equilíbrio de Nash será o par de estratégias $(l^*,c^*)$ tal que
 
@@ -1996,8 +1996,8 @@ Voltaremos ao jogo da seção anterior
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $2,1$          & $0,0$ \\
@@ -2014,8 +2014,8 @@ As probabilidades e os ganhos para o jogador $linha$ para cada combinação ser�
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $lc = 2$       & $l(1-c) = 0$ \\
@@ -2041,8 +2041,8 @@ De maneira análoga, podemos ver que as probabilidades e os ganhos do jogador $c
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $lc = 1$       & $l(1-c) = 0$ \\
@@ -2085,8 +2085,8 @@ Imagine que temos dois jovens enamorados. Ambos marcaram que iriam se encontrar 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Rapaz][Moça]
          & $Ação$     & $Arte$ \\
 $Ação$   & $2,1$      & $0,0$ \\
@@ -2105,8 +2105,8 @@ Esse você já deve estar enjoado de ver. Mas agora temos as curvas de melhor re
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
             & $Confessa$      & $Nega$ \\
 $Confessa$  & $-3,-3$         & $0,-6$ \\
@@ -2128,8 +2128,8 @@ Uma coisa bacana da teoria dos jogos, é que podemos aplicar para uma gama enorm
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[EUA][URSS]
             & $Abstém$      & $Constrói$ \\
 $Abstém$    & $4,4$         & $1,3$ \\
@@ -2153,8 +2153,8 @@ Antigamente, era comum ver, nos \href{https://www.youtube.com/watch?v=u7hZ9jKrwv
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
            & $Desvia$    & $Mantém$ \\
 $Desvia$   & $0,0$       & $-1,1$ \\
@@ -2188,8 +2188,8 @@ Considere essa matriz para pontuação de um pênalti
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Artilheiro][Goleiro]
              & $Esquerda$    & $Direita$ \\
 $Esquerda$   & $50,-50$      & $80,-80$ \\
@@ -2237,8 +2237,8 @@ Agora veremos a teoria dos jogos em um contexto natural. Imagine que exista uma 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Animal linha][Animal coluna]
            & $Lutar$    & $Dividir$ \\
 $Lutar$    & $-2,-2$    & $4,0$ \\
@@ -2347,8 +2347,8 @@ Eles colocaram uma alavanca em uma lado da baia que, quando acionada, fazia com 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Subordinado][Dominador]
                       & $Puxar$    & $\textrm{Não Puxar}$ \\
 $Puxar$               & $0,0$      & $4,1$ \\
@@ -2365,8 +2365,8 @@ Mais um jogo para analisarmos. Agora vamos aplicar nossos conceitos ao modelos d
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[+ Velhos][+ Jovens]
            & $Sustenta$ & $Poupa$ \\
 $Poupa$    & $2,-1$      & $1,0$ \\
@@ -3984,8 +3984,8 @@ Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
 
 \begin{center}
 
-	\def\sgtextcolor{white} % Trocar pra preto na versão white
-	\def\sglinecolor{white} % Trocar pra preto na versão white
+	\def\sgtextcolor{black} % Trocar pra preto na versão white
+	\def\sglinecolor{black} % Trocar pra preto na versão white
 	\begin{game}{2}{2}[Jogador A][Jogador B]
 							& $Compra$    & $Não$ \\
 		$Compra$  & $-50,-50$   & $-50,100$ \\

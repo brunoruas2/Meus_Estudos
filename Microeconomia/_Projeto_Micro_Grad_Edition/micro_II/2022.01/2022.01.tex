@@ -2656,21 +2656,237 @@
 \section[Ap.T.Jogos]{Aplicações da Teoria dos Jogos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\huge Capítulo \normalsize
+	\huge Aplicações de Teoria dos Jogos \normalsize
 	\\~\\
 	\begin{itemize}
-		\item item
-		\item item
+		\item Curvas de Melhor Resposta
+		\item Estratégias Mistas
+		\item Jogos de Coordenação
+		\item Jogos de Competição
+		\item Jogos de Coexistência
+		\item Jogos de Compromisso
+		\item Negociação
 	\end{itemize}
 \end{frame}
 
+\begin{lrbox}{\mybox}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Linha][Coluna]
+					& $Esquerda$     & $Direita$ \\
+	$Alto$   & $2,1$          & $0,0$ \\
+	$Baixo$  & $0,0$          & $1,2$
+	\end{game}
+\end{lrbox}
 
 \begin{frame}
-	\frametitle{}
+	\frametitle{Curvas de Melhor Resposta}
+
+	Analise o jogo abaixo
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	Podemos ver que não temos uma estratégia dominante mas temos dois equilíbrios de Nash.
+	\\~\\
+	Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. 
+	\\~\\
+	Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Curvas de Melhor Resposta}
+
+	O jogador linha terá $l_1,l_2,\dots,l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
+	\\~\\
+	Para cada escolha $l$ feita, chamaremos de $b_c(l)$ a melhor escolha para coluna dada a escolha de linha. Da mesma maneira, chamaremos $b_l(c)$ a melhor escolha para linha. Um equilíbrio de Nash será o par de estratégias $(l^*,c^*)$.
+
+	$$ c^* = b_c(l^*) $$
+	$$ l^* = b_l(c^*) $$
+
+	Se existir apenas uma melhor resposta, então poderemos representar o equilíbrio por meio de uma \textbf{função de melhor resposta}.
+
+\end{frame}
+
+\begin{lrbox}{\mybox}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Linha][Coluna]
+		& $Esquerda$     & $Direita$ \\
+		$Alto$   & $2,1$          & $0,0$ \\
+		$Baixo$  & $0,0$          & $1,2$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Vamos olhar o jogo anterior novamente
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	As probabilidades do jogador $linha$ serão: $l$ para $alto$ e $(1-l)$ para $baixo$. Do mesmo modo, para o jogador $coluna$ teremos: $c$ para $esquerda$ e $(1-c)$ para $direita$.
+
+
+\end{frame}
+
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Linha][Coluna]
+		& $Esquerda$     & $Direita$ \\
+		$Alto$   & $lc = 2$       & $l(1-c) = 0$ \\
+		$Baixo$  & $(1-l)c = 0$   & $(1-l)(1-c) = 1$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Podemos reescrever a matriz em termos das probabilidades
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	O resultado do jogador $linha$ é obtido pela soma de cada probabilidades ponderada pelo retorno em cada quadrante. No caso da linha $alto$ temos
+
+	$$ \textrm{ganhos linha} = 2lc + 0(l(1-c)) + 0((1-l)c) + (1-l)(1-c) $$
+	$$  = 2lc + (1-l)(1-c) $$
+	$$  = 2lc + 1 - l - c + lc $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Temos agora uma função que relaciona as probabilidades de cada estratégia ($l$, $(1-l)$, $c$ e $(1-c)$) a cada nível de retorno para o jogador $linha$. Podemos ver o quanto uma variação na probabilidade que ele tem controle $\Delta l$ pode trazer de retorno
+
+	$$ \frac{d \textrm{ (ganhos linha)}}{d l} = 2c - 1 + c $$
+	$$ = 3c - 1 $$
+
+	Se  $c > 1/3$ qualquer aumento em $l$ gerará um resultado positivo (linha escolherá jogar $alto$ nesse caso).
+	\\~\\
+	Se $c < 1/3$ qualquer valor de $l$ positivo terá um retorno negativo (nesse caso, ele escolhe não jogar $alto$)
+	\\~\\
+	Por fim, se $c = 1/3$, não importa o que o jogador $linha$ faça, seus retornos serão constantes.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Podemos fazer a exata mesma análise para o jogador $coluna$ até chegarmos a
+
+	$$ \textrm{ganhos coluna} = lc + 0(l(1-c)) + 0((1-l)c) + 2(1-l)(1-c) $$
+	$$  = lc + 2(1-l)(1-c) $$
+	$$  = lc + 2(1-l-c+lc) $$
+	$$  = lc + 2 - 2l - 2c + 2lc $$
+	$$  = 3lc + 2 - 2l - 2c $$
+
+	Cuja derivada em relação à $c$ será
+
+	$$ \frac{d \textrm{ (ganhos coluna)}}{d c} =  $$
+	$$ = 3l - 2 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	Quando $l < 2/3$, qualquer ação de $c$ levará a uma redução no seu resultado (esse é o caso onde é melhor não fazer nada de $esquerda$).
+	\\~\\
+	Se $l > 2/3$, qualquer aumento de $c$ elevará o seu resultado. 
+	\\~\\
+	Finalmente, se $l = 2/3$, qualquer valor de $c$ terá retornos constantes.
+	\\~\\
+	Com base nessas informações, podemos construir as curvas de melhor resposta para ambos os jogadores.
+	\\~\\
+	Podemos ver que temos 3 equilíbrios de Nash. Dois em estratégias puras: o ponto $(0,0)$ e o ponto $(1,1)$. E também um equilíbrio em estratégia mista: o ponto $(2/3,1/3)$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Estratégias Mistas}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_2-estrategias_mistas.png}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação}
+
+	De posse das curvas de melhor resposta, vamos começar a investigar algumas classes de jogos. 
+	\\~\\
+	A primeira que veremos são os \textbf{jogos de coordenação}: jogos onde os ganhos serão maiores se os jogadores decidirem coordenar suas estratégias. 
+	\\~\\
+	A questão é criar os mecanismos que criem os incentivos à essa coordenação.
+
+\end{frame}
+
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Rapaz][Moça]
+		& $Acao$     & $Arte$ \\
+		$Acao$   & $2,1$      & $0,0$ \\
+		$Arte$   & $0,0$       & $1,2$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Batalha dos Sexos}
+
+	Imagine que temos dois jovens enamorados. Ambos marcaram que iriam se encontrar no cinema, mas estão sem celular e não sabem qual filme o outro verá. O rapaz prefere o filme de ação enquanto a moça prefere o filme de arte. Ambos preferem assistir a algum filme juntos do que não se encontrarem. 
+	\\~\\
+	Podemos traduzir essa estrutura em uma matriz de ganhos
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Batalha dos Sexos}
+
+	Já sabemos que essa matriz produz as curvas de melhor resposta vistas na seção passada. Então esse jogo tem 3 equilíbrios. 
+	\\~\\
+	Nos dois equilíbrios de estratégia pura, teremos as opções: Ambos arriscam se encontrar no filme de Ação, Ambos arriscam se encontrar no filme de Artes. 
+	\\~\\
+	No equilíbrio de estratégia mista, cada um arriscaria no seu filme preferido com $2/3$ de probabilidade.
+	\\~\\
+	Se supormos que o rapaz tenha o histórico de ceder as decisões para a moça, podemos definir que esse jogo teria um equilíbrio "mais natural"\ que os outros. O termo comumente usado para essa diferenciação dos equilíbrios é \textbf{ponto focal} do jogo.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Competição}
 
 	
 
 \end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Negociação}
+
+	
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[E.Comport.]{Economia Comportamental}
