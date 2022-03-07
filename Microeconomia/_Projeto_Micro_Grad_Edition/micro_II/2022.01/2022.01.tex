@@ -2859,6 +2859,116 @@
 
 \end{frame}
 
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+		& $Confessa$      & $Nega$ \\
+		$Confessa$  & $-3,-3$         & $0,-6$ \\
+		$Nega$      & $-6,0$          & $-1,-1$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Dilema do Prisioneiro}
+
+	Sabemos que a estratégia dominante é confessar. Mas também sabemos que a estratégia eficiente no sentido de Pareto é negar.
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	Quando modelamos as funções de melhor resposta. Como já sabemos, a única estratégia de equilíbrio é no ponto "confessa-confessa".
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Dilema do Prisioneiro}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_3-jogos_coordenacao_1.png}
+	\end{figure}
+		
+
+\end{frame}
+
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[EUA][URSS]
+		& $Abstem$      & $Constroi$ \\
+			$Abstem$    & $4,4$         & $1,3$ \\
+			$Constroi$  & $3,1$         & $2,2$
+		\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Jogos de Garantia}
+
+	Pensemos na corrida amarmentista de meados do século XX. Todo mundo sabe que o melhor era optar por não construir mais mísseis nucleares, o problema, é que você pode ser surpreendido por uma trapaça do outro lado. Podemos resumir esse cenário na tabela abaixo
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	Como será o gráfico das curva de melhor resposta?
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Jogos de Garantia}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_3-jogos_coordenacao_2.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Jogos de Garantia}
+
+	Como esse jogo é simultâneo, não temos uma estratégia mista. 
+	\\~\\
+	Só temos os pontos de equilíbrio nos extremos. 
+	\\~\\
+	Se um dos participantes conseguir convencer o outro que se abstém, ele "empurrará"\ o outro jogador para o ponto de equilíbrio da abstenção. 
+	\\~\\
+	A questão toda era como sinalizar de maneira eficiente para o outro jogador e ainda não parecer que está desistindo da corrida.
+
+\end{frame}
+
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Linha][Coluna]
+		& $Desvia$    & $Mantem$ \\
+		$Desvia$   & $0,0$       & $-1,1$ \\
+		$Mantem$   & $1,-1$      & $-2,-2$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Roleta Russa}
+
+	Uma prática chamada "roleta russa"\ consiste em dois veículos um de frente para o outro à uma distância considerável. 
+	\\~\\
+	Os veículos aceleravam em direção ao outro. A ideia é que o motorista mais corajoso não desviaria a trajetória. A matriz de ganhos pode ser definida como
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	Diferente dos outros jogos, aqui os equilíbrios são nas opções contrárias. Os equilíbrios de Nash de estratégia pura estão nas opções onde eles seguem ações diferentes.
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Roleta Russa}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_3-jogos_coordenacao_3.png}
+	\end{figure}
+		
+
+\end{frame}
+
 \begin{frame}
 	\frametitle{Jogos de Competição}
 
