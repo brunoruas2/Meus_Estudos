@@ -2966,20 +2966,87 @@
 		\includegraphics[scale=0.55]{cap30_3-jogos_coordenacao_3.png}
 	\end{figure}
 		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Roleta Russa}
+
+	Como encontrar um resultado? 
+	\\~\\
+	A melhor maneira de encontrar um desfecho é pela sinalização de compromisso. 
+	\\~\\
+	Se um dos competidores arrancasse fora o volante, ele jogaria para o outro motorista toda a responsabilidade pelo resultado. 
+	\\~\\
+	Nesse caso, a matriz seria atualizada e seria melhor para o outro motorista sair derrotado do que bater o carro.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coordenação - Como Coordenar?}
+
+	Podemos modificar os resultados pela adoção de movimentos sequenciados, repetição ou contratação.
+	\\~\\
+	Quando modificamos os jogos da segurança, batalha dos sexos e roleta russa, para jogos sequenciados. Um jogado faz o primeiro movimento, o outro terá que maximizar apenas a partir do movimento feito. 
+	\\~\\
+	No caso da roleta russa, isso daria a vitória a um delas. Nos outros jogos, isso levaria ao ponto eficiente de Pareto.
+	\\~\\
+	No caso do dilema do prisioneiro, o melhor a fazer seria modificar o jogo para repetição (que permitiria a retalhação por mal comportamento) ou a contratação (que modificaria o resultado da confissão).
+
+\end{frame}
+
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Artilheiro][Goleiro]
+							& $Esquerda$    & $Direita$ \\
+	$Esquerda$   & $50,-50$      & $80,-80$ \\
+	$Direita$    & $90,-90$      & $20,-20$
+	\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Jogos de Competição}
+
+	Os esportes são um bom exemplo desse tipo de arranjo para um \textbf{jogo de soma zero}.
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	Os valores são variáveis porque simbolizam as probabilidades de gol.
+	\\~\\
+	Esse é um exemplo de uma \textbf{estratégia mista}.
+	\\~\\
+	Como esse jogo é competitivo, não teremos opções de equilíbrio em estratégia pura cooperativos.	Infelizmente, não temos tempo de desenvolver os cálculos das funções de melhor resposta, mas você pode conferir no material e no livro.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Jogos de Competição}
 
-	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_4-jogos_competitivos.png}
+	\end{figure}
 
 \end{frame}
+
+\begin{lrbox}{\mybox} %\begin{center}\usebox{\mybox}\end{center}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Animal linha][Animal coluna]
+		& $Lutar$    & $Dividir$ \\
+		$Lutar$    & $-2,-2$    & $4,0$ \\
+		$Dividir$  & $0,4$      & $2,2$
+	\end{game}
+\end{lrbox}
 
 \begin{frame}
 	\frametitle{Jogos de Coexistência}
 
-	
+	Imagine que exista uma espécie de cachorro selvagem. Se dois animais encontram um pedaço de comida, eles têm de decidir entre brigar ou dividir. O nome dessa interação é \textbf{jogo de pombos e falcões}. A matriz dos ganhos está abaixo
+
+	\begin{center}\usebox{\mybox}\end{center}
+
+	Veja que nenhum dos quadrantes iguais é estável. Se ambos lutarem, é melhor abrir mão do que sair ferido. Se ambos dividirem, é melhor atacar para ficar com tudo.
 
 \end{frame}
 
