@@ -3051,16 +3051,204 @@
 \end{frame}
 
 \begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	Ao invés de pensarmos em apenas dois animais com escolhas variáveis ao longo do tempo, podemos supor que temos um grupo de animais que se comportarão de maneira diferente. 
+	\\~\\
+	Nesse modelo, as probabilidades fazem jus a quantidade esperada de cada grupo de animais em cada interação.
+	\\~\\
+	A probabilidade de algum animal lutar será dada por $p$, assim, a chance de um lutador encontrar outro é de $p$ e de encontrar um disposto a dividir será igual a $1 - p$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	O ganho esperado para os lutadores será de
+
+	$$H = -2p + 4(1-p)$$
+
+	Enquanto o ganhos dos que dividirão
+
+	$$D = 2(1-p)$$
+
+	Supondo que as características sejam transferidas, o grupo com o maior retorno terá a maior chance de ser encontrado. Se $H > D$, então veremos a população dos brigões aumentar. Caso $D > H$, então, a população de cooperadores aumentará.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	O equilíbrio entre essas populações será dado pela igualdade
+
+	$$H = -2p + 4(1-p) = 2(1-p) = D$$
+	$$2(1-p) = 2p$$
+	$$2 - 2p = 2p$$
+	$$p = 1/2$$
+
+	Agora vamos ver como se comportam as curvas de melhor resposta.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	Por causa da estabilidade desse arranjo, os pesquisadores o classificam como uma \textbf{estratégia evolucionariamente estável}. 
+	\\~\\
+	É pura teoria dos jogos e vem diretamente dos estudos das dinâmicas entre interações animais.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_5-coexistencia_1.png}
+	\end{figure}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	Aqui vemos 3 condições de equilíbrio. Mas nosso equilíbrio não foi alcançado no ponto $1/2$? A resposta é sim. 
+	\\~\\
+	Perceba que os pontos de estratégia dominante são os pontos onde há o incentivo de se jogar o oposto do adversário\footnote{Igual o caso da roleta russa}. 
+	\\~\\
+	Mas esse jogo não lida com apenas 2 agentes e sim com uma população homogênea com duas opções de comportamento. 
+	\\~\\
+	O único ponto onde as estratégias convergem é o ponto $1/2$.
+	\\~\\
+	Assim como está no livro, eu coloquei os resultados para cada estratégia a medida que o número de lutadores aumenta de $0$ até $100\%$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Coexistência}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap30_5-coexistencia_2.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
 	\frametitle{Jogos de Compromisso}
 
-	
+	Os jogos que vimos até agora são do jogos \textbf{com movimentos simultâneos}. Os jogadores não sabem o que o outro fará, e precisam maximizar de acordo com a suposição do comportamento do adversário.
+	\\~\\
+	Aqui vamos ver os jogos com \textbf{movimento sequenciais}. Um conceito importante nesses jogos é o \textbf{compromisso}. 
+	\\~\\
+	Quando um participante se compromete a agir de terminada maneira ele precisa garantir: 1) que ele não terá outro caminho a seguir além do firmado anteriormente; 2) que a sinalização do compromisso chegue ao outro jogador e seja entendida por ele.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso - O Sapo e o Escorpião}
+
+	Vocês já devem conhecer essa história.
+
+	\Tree[.\textit{Sapo}
+				[.Carrega 
+					[.Escorpião 
+						[.Ferroada $(-10,5)$ ]
+						[.\textit{Não Ferroada} $(5,3)$ ]]]
+				[.\textit{Não Carrega} $(0,0)$ ]]
+	\\
+	\ 
+	\\
+	Mesmo que a moral da história seja nós ensinar que existem pessoas que preferem fazer o mal. Nós somos economistas, e, como de costume, vamos estragar mais essa história.
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso - O Sapo e o Escorpião}
+
+	Sob a ótica da teoria dos jogos, o escorpião apenas maximizou sua utilidade dada as opções disponíveis. Como o sapo escolheu antes, só restou ao escorpião entre ter $5$ de retorno com a ferroada ou $3$ com o passeio.
+	\\~\\
+	Se o sapo tivesse a oportunidade de ver essa aula, ele se certificaria em reduzir o resultado do escorpião na opção da ferroada.
+	\\~\\
+	As opções são muitas: Falar como é bom estar vivo; Ameaçar toda a família do escorpião; Amarrar a calda dele antes de sair. Todas essas arbodagens atuam na mudança da matriz de ganhos do escorpião.
+	\\~\\
+	Na versão desse conto dos economistas, o sapo chegaria do outro lado e a moral da história seria como é bom fazer o bem independente a quem.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso - O Sequestrador Cordial}
+
+	Imagine que um CEO de uma empresa é sequestrado. No regimento interno da empresa está a cláusula de não pagamento de resgate em caso de sequestro dos seus funcionários (mesmo os da cúpula). O que os sequestradores farão? Uma possibilidade de arranjo é esse abaixo
+
+	\Tree[.\textit{Sequestradores}
+					[.Libera 
+						[.Refém 
+							[.Identifica $(-5,5)$ ]
+							[.\textit{Não Identifica} $(5,3)$ ]]]
+					[.\textit{Mata} $(-3,-10)$ ]]
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso - O Sequestrador Cordial}
+
+	O resultado desse jogo é inteiramente dependente da capacidade do refém de sinalizar para os sequestradores que cumprirá seu lado do trato em não identificar. 
+	\\~\\
+	O que vocês proporiam para sair dessa situação?
+	\\~\\
+	Uma saída (genial) para esse impasse é a proposta pelo pesquisador Thomas Schelling.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso - Poupanças e Seguridade Social}
+
+	Agora vamos aplicar nossos conceitos ao modelos de seguridade social. Podemos modelar esse jogo como uma relação entre gerações do seguinte modo
+
+	\Tree[.\textit{Velhos}
+				[.Poupam 
+					[.Jovens 
+						[.Sustentam $(2,-1)$ ]
+						[.Poupam $(1,0)$ ]]]
+				[.Esbajam
+					[.Jovens 
+						[.Sustentam $(3,-1)$ ]
+						[.Poupam $(-2,-2)$ ]]]]
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso - Poupanças e Seguridade Social}
+
+	Conseguimos ver que a melhore estratégia para os velhos é usar o poder da preferência e escolher esbanjar. 
+	\\~\\
+	Os jovens serão obrigados a optar por sustentá-los. 
+	\\~\\
+	Mas não é atoa que a maioria dos países possui algum programa em que cada geração acaba contribuindo para o montante da sua aposentadoria.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Jogos de Compromisso}
+
+	No material e no livro existem mais dois jogos que não teremos tempo de arbodar aqui: Onde a força é fraqueza e Extorção.
+	\\~\\
+	No primeiro, mesmo que uma das partes tenha poder de subjulgar a outra, a parte mais fraca fica na vantagem porque ela simplesmente decide não agir (e não pode ser obrigada a isso).
+	\\~\\
+	Na extorção temos um caso onde a obra está terminando e o pedreiro tira vantagem disso pra cobrar preços abusivos. A saída dessa cilada é ter feito um contrato inicialmente ou ameaçar queimar o nome do pedreiro na praça.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Negociação}
 
-	
+	Nessa última parte do capítulo, pensemos em um problema simples: a divisão de um dólar entre duas pessoas. Como faríamos de modo a satisfazer a vontade de ambas? O foco está em construir uma solução que permita a negociação.
+	\\~\\
+	Existem um modelo chamado \textbf{modelo de negociação de Nash}, usa uma abordagem a partir de proposições a respeito do comportamento dos indivíduos. Mas ele é demasiadamente complexo para o escopo de curso.
+	\\~\\
+	Uma outra abordagem é o \textbf{modelo de negociação de Rubinstein}. Esse modelo o livro explica um pouco mais, contudo, sem entender o básico de matemática financeira fica difícil entender. Deixemos pra outro dia.
 
 \end{frame}
 
