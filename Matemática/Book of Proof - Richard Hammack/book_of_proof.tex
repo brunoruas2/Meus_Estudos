@@ -1575,6 +1575,26 @@ As Provas por Contradição são realmente poderosas, porém o estudante deve se
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova de Afirmações Não-Condicionais}
+No capítulo anterior aprendemos a provar afirmações condicionais, mesmo que sejam a massiva maioria dos teoremas sigam esse padrão, não são todos.
+\\
+Durante seus estudar na matemática verá muitos teoremas que são bicondicionais, do tipo $P \Leftrightarrow Q$, e com certeza, em algum momento, precisará prová-los. E esse é o objetivo deste capítulo.
+
+\section{Prova de Se, e somente se}
+Pelos nossos estudos de lógica sabemos que $P \Leftrightarrow Q$ é equivalente a $(P \Rightarrow Q) \land (Q \Rightarrow P)$. Portanto para provarmos esse tipo de proposição é necessário que tanto $P \Rightarrow Q$ e $Q \Rightarrow P$ sejam verdadeiros.
+\\
+É válido lembrar que pode utilizar a técnica que preferir para provar as condições.
+
+\begin{proposition}
+Suponha $x \in \mathbb{Z}$. Então x é par se, e somente se $3x + 5$ for impar.
+\end{proposition}
+\textit{Prova:} Se $x = 2a$, então $3(2a) + 5$, sabemos que 5 é um número impar e pode ser escrito como $4+1$. Substituímos isso na equação e:
+$$ 3(2a) + 4+1 = 6a+4+1 = 2(3a +2) +1$$
+Reciprocamente. Se $3x + 5 = 2(a)+1$, então:
+$$3x+5 = 2a+1$$
+$$3x = 2a -4$$
+$$x = 2 \left(\frac{a-2}{3} \right) \ \ \ \blacksquare $$
+
+\section{Afirmações equivalentes}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Provas Envolvendo Conjuntos}
