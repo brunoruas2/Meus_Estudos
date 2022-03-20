@@ -37,8 +37,8 @@
 \graphicspath{{./images/}} % set an default images folder
 
 % dark theme no pdf
-\pagecolor[rgb]{0.1,0.1,0.1} %black
-\color[rgb]{0.9,0.9,0.9} %grey
+%\pagecolor[rgb]{0.95,0.95,0.95}
+%\color[rgb]{0.9,0.9,0.9} %grey
 
 % criando o modelo de definicoes/teoremas/fatos/demonstracoes
 \theoremstyle{definition}
@@ -511,7 +511,7 @@ Ao longo do livro eu vou construir alguns programas em Python para simular os mo
 \chapter{Oferta da Indústria}
 
 %%%%%%%%%%%%%%%%%%%%%%%% PART %%%%%%%%%%%%%%%%%%%%%%%%
-\part{Mercados e Concorrência Imperfeita}
+\part{Concorrência Imperfeita e Teoria dos Jogos}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Monopólio}
@@ -1718,8 +1718,7 @@ Esse última seção é um apanhado do que vimos no capítulo. Vá ler o materia
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{A Teoria dos Jogos}
 
-Parabéns! Você chegou no ponto da teoria que usaremos um dos ferramentais mais famosos da matemática aplicada. No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.\footnote{Sim, foi aqui que John Nash fez sua famosa contribuição que foi retratada naquele filme ganhador do Óscar "Uma mente brilhante". Agora você pode dizer para os seus familiares que estudou essa teoria ;)
-}
+Parabéns! Você chegou no ponto da teoria que usaremos um dos ferramentais mais famosos da matemática aplicada. No capítulo anterior nós começamos a trabalhar os conceitos de interação estratégica entre agentes, mas agora veremos um framework mais robusto chamado \textbf{Teoria do Jogos}.\footnote{Sim, foi aqui que John Nash fez sua famosa contribuição que foi retratada naquele filme ganhador do Óscar "Uma mente brilhante". Agora você pode dizer para os seus familiares que estudou essa teoria ;)}
 
 \section{A Matriz de Ganhos de um Jogo}
 
@@ -1729,13 +1728,13 @@ Como todo ferramental novo, temos que aprender a lógica do modelo. Para isso, o
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
-\begin{game}{2}{2}[Jogador A][Jogador B]
-        & $Esquerda$    & $Direita$ \\
-$Alto$  & $1,2$         & $0,1$       \\
-$Baixo$ & $2,1$         & $1,0$
-\end{game}
+	\def\sgtextcolor{black}% Trocar pra preto na versão white
+	\def\sglinecolor{black}% Trocar pra preto na versão white
+	\begin{game}{2}{2}[Jogador A][Jogador B]
+					& $Esquerda$    & $Direita$ \\
+	$Alto$  & $1,2$         & $0,1$     \\
+	$Baixo$ & $2,1$         & $1,0$
+	\end{game}
 
 \end{center}
 
@@ -1748,9 +1747,8 @@ Muito bem! Para o jogador $B$, sempre será melhor escolher $Esquerda$.
 Como há uma lógica dominante para as escolhas de ambos os jogadores, então, nesse jogo em questão, existe o que chamamos de \textbf{estratégia dominante}.
 
 \begin{center}
-
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \def\highlight#1{\colorbox{yellow}{#1}}
 \begin{game}{2}{2}[Jogador A][Jogador B]
         & $Esquerda$    & $Direita$ \\
@@ -1760,7 +1758,7 @@ $Baixo$ & \highlight{$2,1$}         & $1,0$
 
 \end{center}
 
-Eu sei, muito legal né?! Mas como sempre, existem muitas situações que não podemos contar com as existências de estratégias dominantes. E foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos na seção seguinte.
+Eu sei, muito legal né?! Mas como sempre, existem muitas situações que não podemos contar com as existências de estratégias dominantes e foi justamente para lidar com essas situações que o Nobel de 1994 criou (ou descobriu) o conceito que usaremos na seção seguinte.
 
 \section{Equilíbrio de Nash}
 
@@ -1768,12 +1766,12 @@ Analise o seguinte jogo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
-        & $Esquerda$    & $Direita$ \\
-$Alto$  & $2,1$         & $0,0$       \\
-$Baixo$ & $0,0$         & $1,2$
+					& $Esquerda$    & $Direita$ \\
+	$Alto$  & $2,1$         & $0,0$       \\
+	$Baixo$ & $0,0$         & $1,2$
 \end{game}
 
 \end{center}
@@ -1790,8 +1788,8 @@ Outra dificuldade é que existem jogos em que não existam nenhum equilíbrio de
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
         & $Esquerda$    & $Direita$ \\
 $Alto$  & $0,0$         & $0,-1$       \\
@@ -1806,7 +1804,7 @@ Nesse jogo, em todos os quadrante existirá o incentivo para algum jogador de mu
 
 Até agora, todos os jogos que vimos foram jogos de \textbf{estratégia pura}. Onde os jogadores definem um caminho e sempre agem do mesmo modo. De modo mais formal, podemos usar a definição dada no livro de pós-graduação do Varian (Microeconomic Analysis, 1993)\footnote{Só para vocês irem se animando para o mestrado.}.
 \\~\\
-\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualqer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
+\textbf{Equilíbrio de Nash em Estratégias Puras:} Um equilíbrio de Nash em estratégias puras é um par [das estratégias] $(r^*,c^*)$ de modo que $u_r(r^*,c^*) \geq u_r(r,c^*)$ para qualquer estratégias nas linhas $r$, e similarmente, $u_c(r^*,c^*) \geq u_c(r^*,c)$ para qualquer estratégias nas colunas $c$.
 \\~\\
 Mas podemos ampliar nossa forma de pensar e permitir que os jogadores atribuam probabilidades para cada escolha e possam mudar de estratégia ao longo do tempo. Nesse modelo, um jogador pode ficar 50\% do tempo em uma estratégia e mudar de estratégia nos outros 50\% do tempo. Auferindo o retorno de ambas multiplicado pela probabilidade associada a ela. Esse modelo é chamado de \textbf{estratégia mista}.
 \\~\\
@@ -1833,8 +1831,8 @@ Um dos conceitos mais conhecidos na economia é o dilema do prisioneiro. Chegou 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
             & $Confessa$      & $Nega$ \\
 $Confessa$  & $-3,-3$         & $0,-6$ \\
@@ -1847,7 +1845,7 @@ A essa altura você já notou que esse jogo possui uma estratégia dominante: co
 \\~\\
 Como a opção "nega-nega"\ não pode ser modificada sem prejuízo para alguma das parte, ela é eficiente no sentido de Pareto. Ou seja, estamos diante de um arranjo que impede que alcancemos o ótimo de Pareto do sistema.
 \\~\\
-Podemos adaptar esse dilema para várias outras situações da vida real. O professor cita uma adaptação para "instalar" ou "não instalar"\ um míssil. Também adapta esse jogo para a situação do cartel em que há as opões de "burlar" e "não burlar"\ as cotas de produção.
+Podemos adaptar esse dilema para várias outras situações da vida real. O professor cita uma adaptação para "instalar"\ ou "não instalar"\ um míssil. Também adapta esse jogo para a situação do cartel em que há as opões de "burlar"\ e "não burlar"\ as cotas de produção.
 \\~\\
 Como é de se esperar, o dilema do prisioneiro trouxe bastante discussão a respeito de como resolver esse jogo. Parece que a solução está relacionada à possibilidade ou não de repetição. Se o jogo é sem repetição, melhor será confessar. Pois essa é a estratégia dominante do arranjo.
 
@@ -1875,8 +1873,8 @@ Observe o jogo abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
             & $Esquerda$     & $Direita$ \\
 $Alto$      & $1,9$          & $1,9$ \\
@@ -1911,8 +1909,8 @@ Podemos exemplificar essa questão com a matriz abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Entrante][Monopolista]
                       & $Retalha$      & $\textrm{Não Retalha}$ \\
 $Entra$               & $0,0$          & $2,1$ \\
@@ -1965,8 +1963,8 @@ Analise o jogo abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $2,1$          & $0,0$ \\
@@ -1975,9 +1973,9 @@ $Baixo$  & $0,0$          & $1,2$
 
 \end{center}
 
-Podemos ver que não temos uma estratégia dominante, mas temos dois equilíbrios de Nash. Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
+Podemos ver que não temos uma estratégia dominante mas temos dois equilíbrios de Nash. Chamaremos de \textbf{melhor resposta} àquelas escolhas que os jogadores fizerem que maximizem seus retornos. Se existirem mais de uma escolhas maximizadoras, então a melhor resposta será um conjunto desses escolhas.
 \\~\\
-Agora vamos formalizar um pouco mais essas ideias. Seja um jogo com dois jogadores. O jogador linha terá $l_1,l_2,\dots,\l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
+Agora vamos formalizar um pouco mais essas ideias. Seja um jogo com dois jogadores. O jogador linha terá $l_1,l_2,\dots,l_L$ escolhas, similarmente, o jogador coluna terá $c_1,c_2,\dots,c_C$ opções de escolhas.
 \\~\\
 Para cada escolha $l$ feita, chamaremos de $b_c(l)$ a melhor escolha para coluna dada a escolha de linha. Da mesma maneira, chamaremos $b_l(c)$ a melhor escolha para linha. Um equilíbrio de Nash será o par de estratégias $(l^*,c^*)$ tal que
 
@@ -1998,8 +1996,8 @@ Voltaremos ao jogo da seção anterior
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $2,1$          & $0,0$ \\
@@ -2016,8 +2014,8 @@ As probabilidades e os ganhos para o jogador $linha$ para cada combinação ser�
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $lc = 2$       & $l(1-c) = 0$ \\
@@ -2043,8 +2041,8 @@ De maneira análoga, podemos ver que as probabilidades e os ganhos do jogador $c
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
          & $Esquerda$     & $Direita$ \\
 $Alto$   & $lc = 1$       & $l(1-c) = 0$ \\
@@ -2087,8 +2085,8 @@ Imagine que temos dois jovens enamorados. Ambos marcaram que iriam se encontrar 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Rapaz][Moça]
          & $Ação$     & $Arte$ \\
 $Ação$   & $2,1$      & $0,0$ \\
@@ -2107,8 +2105,8 @@ Esse você já deve estar enjoado de ver. Mas agora temos as curvas de melhor re
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Jogador A][Jogador B]
             & $Confessa$      & $Nega$ \\
 $Confessa$  & $-3,-3$         & $0,-6$ \\
@@ -2126,12 +2124,12 @@ Quando modelamos as funções de melhor resposta. Como já sabemos, a única est
 
 \subsection{Jogos de Garantia}
 
-Uma coisa bacana da teoria dos jogos, é que podemos aplicar para uma gama enorme de contextos. Pensemos na corrida amarmentista de meados do século XX. Todo mundo sabe que o melhor era optar por não construir mais mísseis nucleares. Mas o custo de ser surpreendido por uma trapaça do outro lado\footnote{"Malditos comunistas!", diriam eles.}. Podemos resumir esse cenário na tabela abaixo
+Uma coisa bacana da teoria dos jogos, é que podemos aplicar para uma gama enorme de contextos. Pensemos na corrida amarmentista de meados do século XX\footnote{ou agora em plena invasão da Russia à Ucrânia}. Todo mundo sabe que o melhor era optar por não construir mais mísseis nucleares, entretanto, corre-se o risco de ser surpreendido por uma trapaça do outro lado\footnote{"Malditos comunistas!", diriam eles.}. Podemos resumir esse cenário na tabela abaixo
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[EUA][URSS]
             & $Abstém$      & $Constrói$ \\
 $Abstém$    & $4,4$         & $1,3$ \\
@@ -2155,8 +2153,8 @@ Antigamente, era comum ver, nos \href{https://www.youtube.com/watch?v=u7hZ9jKrwv
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Linha][Coluna]
            & $Desvia$    & $Mantém$ \\
 $Desvia$   & $0,0$       & $-1,1$ \\
@@ -2190,8 +2188,8 @@ Considere essa matriz para pontuação de um pênalti
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Artilheiro][Goleiro]
              & $Esquerda$    & $Direita$ \\
 $Esquerda$   & $50,-50$      & $80,-80$ \\
@@ -2239,8 +2237,8 @@ Agora veremos a teoria dos jogos em um contexto natural. Imagine que exista uma 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Animal linha][Animal coluna]
            & $Lutar$    & $Dividir$ \\
 $Lutar$    & $-2,-2$    & $4,0$ \\
@@ -2267,7 +2265,7 @@ Como estamos falando de animais, as estratégias de maior retorno produzirão in
 \\~\\
 O equilíbrio entre essas populações será dado pela igualdade
 
-$$H -2p + 4(1-p) = 2(1-p) = D$$
+$$H = -2p + 4(1-p) = 2(1-p) = D$$
 $$2(1-p) = 2p$$
 $$2 - 2p = 2p$$
 $$p = 1/2$$
@@ -2275,8 +2273,8 @@ $$p = 1/2$$
 Agora vamos ver como se comportam as curvas de melhor resposta.
 
 \begin{figure}[H]
-\centering
-\includegraphics[scale=0.75]{cap30_5-coexistencia_1.png}
+	\centering
+	\includegraphics[scale=0.75]{cap30_5-coexistencia_1.png}
 \end{figure}
 
 Aqui vemos 3 condições de equilíbrio. Mas nosso equilíbrio não foi alcançado no ponto $1/2$? A resposta é sim. Perceba que os pontos de estratégia dominante são os pontos onde há o incentivo de se jogar o oposto do adversário\footnote{Igual o caso da roleta russa}. Mas esse jogo não lida com apenas 2 agentes e sim com uma população homogênea com duas opções de comportamento. O único ponto onde as estratégias convergem é o ponto $1/2$.
@@ -2349,8 +2347,8 @@ Eles colocaram uma alavanca em uma lado da baia que, quando acionada, fazia com 
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[Subordinado][Dominador]
                       & $Puxar$    & $\textrm{Não Puxar}$ \\
 $Puxar$               & $0,0$      & $4,1$ \\
@@ -2367,8 +2365,8 @@ Mais um jogo para analisarmos. Agora vamos aplicar nossos conceitos ao modelos d
 
 \begin{center}
 
-\def\sgtextcolor{white}% Trocar pra preto na versão white
-\def\sglinecolor{white}% Trocar pra preto na versão white
+\def\sgtextcolor{black}% Trocar pra preto na versão white
+\def\sglinecolor{black}% Trocar pra preto na versão white
 \begin{game}{2}{2}[+ Velhos][+ Jovens]
            & $Sustenta$ & $Poupa$ \\
 $Poupa$    & $2,-1$      & $1,0$ \\
@@ -2414,7 +2412,7 @@ Como podemos ver, o empreiteiro tem todo o incentivo em usar o poder de extorsã
 
 Nessa última parte do capítulo, pensemos em um problema simples: a divisão de um dólar entre duas pessoas. Como faríamos de modo a satisfazer a vontade de ambas? O foco está em construir uma solução que permita a negociação.
 \\~\\
-O \textbf{modelo de negociação de Nash}, usa uma abordagem a partir de proposições a respeito do comportamento dos indivíduos. O livro não entra muito no modelo, mas como eu sou curioso, eu vou colocar um pouco mais de informação sobre ele. Os axiomas usados são
+O \textbf{modelo de negociação de Nash}, usa uma abordagem a partir de proposições a respeito do comportamento dos indivíduos. O livro não entra muito no modelo mas como eu sou curioso, vou colocar um pouco mais de informação sobre ele. Os axiomas usados são
 
 \begin{itemize}
 \item Eficiência de Pareto
@@ -2493,7 +2491,7 @@ Esse exemplo pode ser aplicado a uma gama de outras situações, como gestão de
 
 Essa parte foi baseada no paper de 1974 "Judgment under uncertainty: Heuristics and biases"\ de Tversky e Kahneman. E também no paper de 2001 "For Better or for Worse: Default Effects and 401(k) Savings Behavior"\ de James Choi, David Laibson, Brigitte Madrian e Andrew Metrick.
 \\~\\
-O \textbf{efeito ancoragem} é definido como o efeito que algumas informações complemente não relacionadas ao objeto de decisão pode exercer no processo mental de escolha.
+O \textbf{efeito ancoragem} é definido como o efeito que algumas informações não relacionadas ao objeto de decisão podem exercer no processo mental de escolha.
 \\~\\
 Um exemplo desse efeito foi a escolha de qual investimento os empregador escolheriam no seu plano de aposentadoria\footnote{La nos EUA, tem um regime chamado 401(K). Dá uma pesquisada.} Quando os empregadores faziam a pergunta de adesão com uma opção de investimento previamente marcada, a maioria das pessoas optava por seguir a recomendação. Quando foi feito o mesmo experimento em outra empresa, mas sem a previa marcação, o perfil de seleção mudou.
 
@@ -2501,7 +2499,7 @@ Um exemplo desse efeito foi a escolha de qual investimento os empregador escolhe
 
 Essa parte foi baseada no paper de 1990 "The Effect of Purchase Quantity and Timing on Variety-Seeking Behavior"\ de Simonson.
 \\~\\
-Quando foi proposto que um time de estudantes escolhesse, entre seis opções por dia, o seu menu de lanches para as próximas três semanas. A maioria optou por um tipo para cada dia da semana. Mas quando a escolha era feita na hora, mesmo tendo as seis opções, a maioria das pessoas escolhei repetir alguma refeição do dia anterior.
+Quando foi proposto que um time de estudantes escolhesse, entre seis opções por dia, o seu menu de lanches para as próximas três semanas. A maioria optou por um tipo para cada dia da semana. Mas quando a escolha era feita na hora, mesmo tendo as seis opções, a maioria das pessoas escolheu repetir alguma refeição do dia anterior.
 \\~\\
 Nós agimos diferentemente quando planejamos com antecedência e quando tempos que decidir na hora.
 
@@ -2531,7 +2529,7 @@ Para variar, essa parte é baseada no artigo publicado em 1971 "Belief in the La
 \\~\\
 A ideia aqui é que as pessoas tendem a se influenciar muito a partir de pequenas amostras. Ainda mais, se elas mesmas que fizeram a observação.
 \\~\\
-Imagine dois hospitais. Um com 100 leitos, outro com 15 leitos. Por dia, nascem aproximadamente 11 bebês no hospital maior e 5 no menor. Se estivermos interessados em saber todos os dias em que tivemos a maioria de nascidos homens. Qual hospital teria o maior número de registros desses dias em um ano?\footnote{A resposta é o hospital menor. Porque a variação aumentar a medida que o tamanho da amostra se reduz.}
+Imagine dois hospitais. Um com 100 leitos, outro com 15 leitos. Por dia, nascem aproximadamente 11 bebês no hospital maior e 5 no menor. Se estivermos interessados em saber todos os dias em que tivermos a maioria de nascidos homens. Qual hospital teria o maior número de registros desses dias em um ano?\footnote{A resposta é o hospital menor. Porque a variação aumentar a medida que o tamanho da amostra se reduz.}
 \\~\\
 A questão aqui é que as pessoas não são boas quando precisar trabalhar com fenômenos aleatórios. E isso é diretamente relacionado às soluções de estratégias mistas na teoria dos jogos. Se não somos bons em ser aleatórios, como podemos definir que um equilíbrio dependerá de um comportamento aleatório? A chave aqui é entender que ele só precisa \textit{parecer} aleatório para o outro jogador.
 
@@ -2540,7 +2538,7 @@ A questão aqui é que as pessoas não são boas quando precisar trabalhar com f
 
 Lá no capítulo 12.3, quando estudamos o conceito de utilidade esperada, vimos que as pessoas se importam com o total de riqueza que receberiam através dos diversos estados possíveis. Esse pressuposto é chamado de \textbf{hipótese da integração de ativos}.
 \\~\\
-O problema é que os experimentos mostram que as pessoas costumam ser mais tolerantes à riscos maiores que riscos menores. Imagine que sua renda é 10.000 e  seja proposta uma aposta de cara e coroa. Se der cara, você ganha R\$14,00, se der coroa, você paga R\$ 10,00. O retorno esperado é de R\$ 2,00 (no livro, estranhamente está 12). Ou seja, essa aposta vale a pena. Mas, na prática, muita gente não topa.
+O problema é que os experimentos mostram que as pessoas costumam ser mais tolerantes à riscos maiores que riscos menores. Imagine que sua renda é 10.000 e seja proposta uma aposta de cara e coroa. Se der cara, você ganha R\$14,00, se der coroa, você paga R\$ 10,00. O retorno esperado é de R\$ 2,00 (no livro, estranhamente está 12). Ou seja, essa aposta vale a pena. Mas, na prática, muita gente não topa.
 \\~\\
 Essa \textbf{excessiva aversão ao risco} pode ser aplicada ao mercado de seguros\footnote{Aqui no brasil está cada vez mais comum. Mas até pouco tempo, quase ninguém tinha seguro das coias.}. Se paramos pra pensar, um seguro só vale a pena se o resultado esperado de um acontecimento (nesse caso um prejuízo) for, no mínimo, igual ao custo mensal do seguro. Se o prejuízo mensal esperado for menor, não faz sentido optar pelo seguro.
 \\~\\
@@ -2552,13 +2550,13 @@ Outras anomalias comportamentais aparecem quando relacionamos o nosso comportame
 
 \subsection{Desconto}
 
-Quando trabalhamos a percepção do valor ao longo do tempo, geralmente precisamos supor uma forma funcional de desconto. A forma do \textbf{desconto exponencial} é dada por $\delta^t u(c)$ onde $\delta , 1$. Outra forma é a do \textbf{desconto hiperbólico}, que veio em um estudo sobre precificações de valores futuros por meio de leilão, afirma que a taxa de desconto seria $\frac{u(c)}{(1+kt)}$.
+Quando trabalhamos a percepção do valor ao longo do tempo, geralmente precisamos supor uma forma funcional de desconto. A forma do \textbf{desconto exponencial} é dada por $\delta^t u(c)$ onde $\delta < 1$. Outra forma é a do \textbf{desconto hiperbólico}, que veio em um estudo sobre precificações de valores futuros por meio de leilão, afirma que a taxa de desconto seria $\frac{u(c)}{(1+kt)}$.
 \\~\\
 O problema dessa diferença é que, enquanto o desconto exponencial é consistente ao longo do tempo, o hiperbólico atribui diferentes pesos dependendo do período. Isso implica que as pessoas podem fazer planos para o futuro e, quando o futuro chegar, podem agir de maneira diferente à planejada.
 
 \subsection{Autocontrole}
 
-Outro viés evidente é a  diferença entre a nossa capacidade de decidir e de cumpri as ações. Não é raro encontrar situações onde acabamos nos encontrando em situações que prometemos não fazer. O fator importante a ser levado em conta é justamente a nossa capacidade de modelar nosso próprio \textbf{autocontrole}, ou melhor, a falta dele.
+Outro viés evidente é a diferença entre a nossa capacidade de decidir e de cumpri as ações. Não é raro encontrar situações onde acabamos nos encontrando em situações que prometemos não fazer. O fator importante a ser levado em conta é justamente a nossa capacidade de modelar nosso próprio \textbf{autocontrole}, ou melhor, a falta dele.
 \\~\\
 Uma maneira de reforçar essa capacidade é, como vimos nos jogos sequenciados, o comprometimento. Se conseguirmos trabalhar nossa percepção do resultado da ação indesejada, via mudança na estrutura do jogo, poderemos superar essas dificuldades de ação. Mas o importante aqui é saber que os modelos mais reais precisam levar em consideração a capacidade das pessoas não seguirem exatamente os planos que fizeram.
 \\~\\
@@ -2618,7 +2616,7 @@ Veja um exemplo da caixa de Edgeworth abaixo. Foram usadas funções de utilidad
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.8]{cap32_1-caixa_edgeworth_1.png}
+\colorbox{black}{\includegraphics[scale=0.8]{cap32_1-caixa_edgeworth_1.png}}
 \end{figure}
 
 Para analisar o gráfico da caixa, você deve se recordar das curvas de indiferença do consumidor. Uma mudança aqui é que estamos representando as preferências de dois consumidores ao mesmo tempo. As curvas vermelhas são do consumidor A e, consequentemente, as curvas azuis são do consumidor B.
@@ -2629,7 +2627,7 @@ Para ajudar no entendimento da leitura, eu coloquei umas setas indicando o senti
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.8]{cap32_1-caixa_edgeworth_2.png}
+\colorbox{black}{\includegraphics[scale=0.8]{cap32_1-caixa_edgeworth_2.png}}
 \end{figure}
 
 Esse ferramental analítico nos permite mostrar todas as alocações factíveis, as preferências dos consumidores, a dotação inicial e a alocação final. Tudo isso de uma vez só. Não foi sem motivo que esse modelo foi adotado.
@@ -2662,7 +2660,7 @@ O conjunto de todos os pontos eficientes no sentido de Pareto, dentro de uma cai
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.8]{cap32_3-caixa_edgeworth_1.png}
+\colorbox{black}{\includegraphics[scale=0.8]{cap32_3-caixa_edgeworth_1.png}}
 \end{figure}
 
 \section{As Trocas de Mercado}
@@ -2691,7 +2689,7 @@ Visualmente, a restrição orçamentária na caixa se apresenta igual ao problem
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_1.png}
+\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_1.png}}
 \end{figure}
 
 Eu usei um ponto de dotação inicial diferente do que estamos trabalhando para mostrar um caso onde a alocação não é simétrica. Perceba que, se a alocação for desigual para algum consumidor, essa desigualdade será refletida na renda de cada consumidor. 
@@ -2700,7 +2698,7 @@ Agora vamos voltar para o nosso exemplo e acrescentar algumas curvas de indifere
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_2.png}
+\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_2.png}}
 \end{figure}
 
 Como vimos no capítulo 9. Os nossos consumidores aqui possuem incentivos de mudar suas alocações iniciais para maximizar suas utilidades. Você já sabe mas vamos recapitular alguns conceitos agora. A \textbf{demanda bruta} é o quanto o consumidor quer consumir de um bem dada sua renda (é obtida pelo cálculo da maximização com restrição lá do capítulo 5). Por sua vez, a \textbf{demanda líquida} ou \textbf{demanda excedente}, é dada pela equação $e_A^1 = x_A^1 - w_A^1$. Se $e_A1 < 0$, ele será um vendedor líquido, caso contrário, ele será um comprador. A partir de agora, usaremos o termo "demanda"\ para falar da \textbf{demanda bruta} e \textbf{demanda líquida ou excedente} caso queiramos falar desses outros conceitos.
@@ -2709,7 +2707,7 @@ Diferentemente do exemplo que estamos usando até agora (cujas utilidades possue
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_3.png}
+\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_3.png}}
 \end{figure}
 
 
@@ -2723,17 +2721,17 @@ Você aprendeu lá no capítulo 2 o que acontece quando o preço de um bem se mo
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{cap32_4-caixa_edgeworth_4.png}
+\colorbox{black}{\includegraphics[scale=0.43]{cap32_4-caixa_edgeworth_4.png}}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{cap32_4-caixa_edgeworth_5.png}
+\colorbox{black}{\includegraphics[scale=0.43]{cap32_4-caixa_edgeworth_5.png}}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{cap32_4-caixa_edgeworth_6.png}
+\colorbox{black}{\includegraphics[scale=0.43]{cap32_4-caixa_edgeworth_6.png}}
 \end{figure}
 
 \newpage
@@ -3058,7 +3056,7 @@ Diferentemente da nossa caixa de Edgeworth, aqui teremos a volta da \textbf{fun�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_1-economia_robinson.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_1-economia_robinson.png}}
 \end{figure}
 
 O ponto de maximização ocorre na tangência entre a função de produção e a curva de indiferença mais alta.
@@ -3087,7 +3085,7 @@ A maximização nesse caso, ocorre no ponto onde a reta de isolucro intercepta a
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_3-max_lucro.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_3-max_lucro.png}}
 \end{figure}
 
 Com isso, conseguimos determinar que, dado o salário $w$ e a função de produção, a empresa contratará a quantidade de trabalho que permita o lucro máximo. Como no nosso exemplo o único acionista é o Robinson, ele poderá usufruir do consumo de $\pi^*$ cocos oriundos do seu lucro como empresário.
@@ -3098,7 +3096,7 @@ Após receber seus dividendos, Robinson tem que escolher entre usufruir dos coco
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_4-max_trabalho.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_4-max_trabalho.png}}
 \end{figure}
 
 Com esse ponto, conseguimos determinar a oferta de trabalho pela igualdade entre a TMS do consumo pelo lazer e o salário. Exatamente o que vimos no capítulo 9.
@@ -3109,7 +3107,7 @@ Agora que sabemos como Robinson se comportará tanto como acionista da Crosué S
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{cap33_5-equilibrio.png}
+	\colorbox{black}{\includegraphics[scale=0.5]{cap33_5-equilibrio.png}}
 \end{figure}
 
 Usando nosso instrumento de preços, chegamos na mesma situação de escolha da primeira seção desse capítulo. Robinson acaba produzindo o ponto cuja produtividade marginal do trabalho\footnote{Que é a inclinação da função de produção.} é igual ao salário.
@@ -3126,7 +3124,7 @@ No caso de uma função de produção com retornos constantes em escala,\footnot
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{cap33_6-rendimento_constantes.png}
+	\colorbox{black}{\includegraphics[scale=0.5]{cap33_6-rendimento_constantes.png}}
 \end{figure}
 
 Nesse arranjo, nós não temos nessa curva de isolucro uma vez que o lucro da empresa é igual zero. A restrição orçamentária será igual à curva da função de produção, já que a sua renda será exclusivamente oriunda do pagamento dos salários. O ponto de maximização acontecerá quando a restrição orçamentária tangenciar a curva de indiferência mais alta.
@@ -3184,7 +3182,7 @@ Relação essa que pode ser representada pelo gráfico
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_9-pos_prod1.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_9-pos_prod1.png}}
 \end{figure}
 
 Atente para o fato que, nesse novo gráfico, nós estamos evidenciando o trade-off entre produzir um bem ou outro. Nos gráficos de antes, que tinham as funções de produção, estávamos relacionandos os insumos às quantidades produzidas.
@@ -3211,7 +3209,7 @@ Que pode ser representada graficamente como
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_10-pos_prod1.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_10-pos_prod1.png}}
 \end{figure}
 
 Podemos ver que a taxa de transformação para Robinson é de $\Delta C / \Delta F = -2$ enquanto a taxa de Sexta-Feira é de -1/2. Para cada hora que Sexta-Feira decide abrir mão de cocos para pegar peixes, Sexta-Feira abre mão de 1 quilo de coco para receber 2 quilos de peixes. A relação de Robinson é a oposta, ele recebe 2 quilos de cocos ao invés de 1 quilo de peixes.
@@ -3224,7 +3222,7 @@ Podemos ver a relação gráfica dessa combinação das fronteiras de possibilda
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_10-pos_prod2.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_10-pos_prod2.png}}
 \end{figure}
 
 Se colocássemos cada vez mais produtores, a nossa curva de possibilidade de produção se aproximaria de um formato arredondado igual à figura 33.7 do livro do Varian.
@@ -3248,7 +3246,7 @@ Eu mudei um pouco o formato da fronteira de possibilidade de produção para tor
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_11-edgeworth_prod.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_11-edgeworth_prod.png}}
 \end{figure}
 
 Podemos fazer essa mesma análise com o uso do Cálculo. Primeiro precisamos encontrar uma maneira de descrever a fronteira de possibilidade de produção. A melhor maneira é usando a \textbf{função de transformação}. Essa é uma função das quantidade agregadas dos bens de modo que qualquer combinação $(X^1,X^2)$ estará na fronteira de possibilidade de produção se, e somente se,
@@ -3334,7 +3332,7 @@ Ou seja, as empresas competitivas optarão por operar nos pontos onde a taxa mar
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{cap33_12-max_lucros.png}
+	\colorbox{black}{\includegraphics[scale=0.6]{cap33_12-max_lucros.png}}
 \end{figure}
 
 \section{Robinson e Sexta-Feira como Consumidores}
@@ -3857,16 +3855,18 @@ Por último, o professor coloca o caso da poluição criada pelos carros e como 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Tecnologia da Informação}
 
-\section{Concorrência de Sistemas}
-\section{O Problema dos Complementos}
-\section{Aprisionamento}
-\section{Externalidades de Rede}
-\section{Mercados com Externalidades de Rede}
-\section{Dinâmica de Mercado}
-\section{Implicações das externalidades de Rede}
-\section{Mercados Bilaterais}
-\section{Gestão de Direitos}
-\section{O Compartilhamento de Propriedade Intelectual}
+Como só o Varian tem um capítulo sobre esse assunto. Eu vou resumir ele só quando me sobrar tempo. Por agora, eu recomendo que vá atrás do material original.
+
+%\section{Concorrência de Sistemas}
+%\section{O Problema dos Complementos}
+%\section{Aprisionamento}
+%\section{Externalidades de Rede}
+%\section{Mercados com Externalidades de Rede}
+%\section{Dinâmica de Mercado}
+%\section{Implicações das externalidades de Rede}
+%\section{Mercados Bilaterais}
+%\section{Gestão de Direitos}
+%\section{O Compartilhamento de Propriedade Intelectual}
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Bens Públicos}
@@ -3976,7 +3976,7 @@ Esse é um caso onde os economistas dizem que as pessoas estão querendo \textbf
 
 O problema do carona pode ser modelado usando o nosso aprendizado de teoria dos jogos do capítulo 29. 
 \\~\\
-Se cada pessoa tiver disponibilidade de 500 reais para a compra e atribuir o uso da TV o valor de 100 reais. Caso o aparelho custe 150 e a soma dos preços de reserva é maior que o custo da oferta do bem, será eficiente no sentido de Pareto ofertar a televisão.
+Se cada pessoa tiver disponibilidade de 500 reais para a compra e atribuir o uso da TV o valor de 100 reais. Caso o aparelho custe 150 e a soma dos preços de reserva é maior que o custo da oferta do bem, será eficiente no sentido de Pareto ofertar a televisão. Se uma pessoa apenas decidir comprar, terá um resultado líquido de -50.
 \\~\\
 Vamos supor que não é possível evitar que um colega de quarto tenha acesso à TV, mesmo que ele não tenha pago por ela.
 \\~\\
@@ -3984,8 +3984,8 @@ Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
 
 \begin{center}
 
-	\def\sgtextcolor{white} % Trocar pra preto na versão white
-	\def\sglinecolor{white} % Trocar pra preto na versão white
+	\def\sgtextcolor{black} % Trocar pra preto na versão white
+	\def\sglinecolor{black} % Trocar pra preto na versão white
 	\begin{game}{2}{2}[Jogador A][Jogador B]
 							& $Compra$    & $Não$ \\
 		$Compra$  & $-50,-50$   & $-50,100$ \\
@@ -3994,29 +3994,540 @@ Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
 	
 \end{center}
 
-Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso. No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente, nesse caso da TV, a utilidade é maximizada pela escolha de não comprar se o outro comprar.
+Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso. No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente fazendo a mesma coisa, nesse caso da TV, a utilidade é maximizada pela escolha de fazer o oposto (se um comprar, o outro vai preferir não comprar).
 \\~\\
-
+Podemos melhorar essa situação obrigando o jogador B a contribuir pelo menos com uma quantia parcial de 51. Desse modo, teríamos uma melhoria de Pareto. Na verdade, Podemos ver que qualquer pagamento entre 50 e 100 feito ao jogador A seria uma melhoria de Pareto.
+\\~\\
+No geral, é examente isso que acontece: as pessoas costumam contribuir com alguma fração do custo do Bem Público. Mas existem arranjos mais complexos (mais agentes ou bens cujo preço de oferta é elevado) que podem produzir resultados não desejados pela sociedade.
 
 \section{Diferentes Níveis do Bem Público}
+
+Podemos nos deparar com problemas mais complexos onde a decisão da sociedade não é apenas entre prover e não prover. Podemos ter que decidir o quanto prover de um determinado bem público.
+\\~\\
+Podemos adaptar o problema da TV adicionando a característica que, quanto mais dinheiro eles gastarem na TV, melhor ela será.
+\\~\\
+$x_1$ e $x_2$ ainda denotam o consumo privado de cada agente e $g_1$ e $g_2$ serão suas participações na compra. G agora será a medida da qualidade da televisão a ser adquirida e c(G) será o custo dessa qualidade
+\\~\\
+A restrição enfrentada pelos colegas de quarto pode ser escrita como:
+
+$$ x_1 + x_2 + c(G) = w_1 + w_2 $$
+
+Fixando a utilidade do agente 2 como $\overline{u_2}$ podemos escrever o problema de maximização do consumidor 1 como:
+
+\begin{center}
+	\LARGE $\stackrel{máx}{\text{\small $x_1,x_2,G$}} \ \ \stackrel{u_1(x_1,G)}{\ }$ \\
+	\normalsize $\textrm{de modo que } u_2(x_2,G) = \overline{u_2}$ \\
+	\normalsize $\phantom{\textrm{de modo que }} x_1 + x_2 + c(G) = w_1 + w_2$ \\
+\end{center}
+
+Para resolver esse problema de maximização vamos usar a Lagrangiana:
+
+$$ L = u_1(x_1,G) - \lambda [u_2(x_2,G) - \overline{u_2}] - \mu [x_1 + x_2 + c(G) - w_1 - w_2 ] $$
+
+Cujas condições de primeira ordem são iguais a 
+
+$$ \frac{\partial L}{\partial x_1} = \frac{\partial u_1(x_1,G)}{\partial x_1} -\mu = 0 $$
+$$ \frac{\partial L}{\partial x_2} = - \lambda \frac{\partial u_2(x_2,G)}{\partial x_2} -\mu = 0 $$
+$$ \frac{\partial L}{\partial G} = \frac{\partial u_1(x_1,G)}{\partial G} - \lambda \frac{\partial u_2(x_2,G)}{\partial G} - \mu \frac{\partial c(G)}{\partial G} = 0 $$
+
+Podemos dividir a terceira equação por $1/\mu$ e somar $\frac{\partial c(G)}{\partial G}$ em ambos os lados. Isso nos dará 
+
+$$ \frac{1}{\mu} \frac{\partial u_1(x_1,G)}{\partial G} - \frac{\lambda}{\mu} \frac{\partial u_2(x_2,G)}{\partial G} = \frac{\partial c(G)}{\partial G} $$
+
+Isolando o termo $\mu$ na primeira equação, temos que
+
+$$ \mu = \frac{\partial u_1(x_1,G)}{\partial x_1} $$
+
+Podemos colocar essa igualdade de $\mu$ dentro da equação que acabamos de rearranjar para chegarmos em
+
+$$ \frac{\partial u_1(x_1,G) / \partial G}{\partial u_1(x_1,G) / \partial x_1} - \frac{\lambda}{\mu} \frac{\partial u_2(x_2,G)}{\partial G} = \frac{\partial c(G)}{\partial G} $$
+
+Rearranjando a segunda equação chegamos a 
+
+$$ \frac{\mu}{\lambda} = - \frac{\partial u_2(x_2,G)}{\partial x_2} $$
+
+Também podemos colocar essa igualdade de $\mu / \lambda$ dentro do rearranjo da terceira equação para chegarmos a
+
+$$ \frac{\partial u_1(x_1,G) / \partial G}{\partial u_1(x_1,G) / \partial x_1} +  \frac{\partial u_2(x_2,G) / \partial G}{\partial u_2(x_2,G) / \partial x_2} = \frac{\partial c(G)}{\partial G} $$
+
+A variação da utilidade dada uma variação da qualidade do bem público divida pela variação da utilidade dada uma variação no consumo privado é justamente a taxa marginal de substituição entre a qualidade do bem e o consumo privado de cada agente.
+\\~\\
+A variação no custo dada uma variação na qualidade é justamente o custo marginal da qualidade pela oferta do bem público.
+\\~\\
+Desse modo, podemos reescrever esse último resultado pela seguinte relação:
+
+$$ |TMS_1| + |TMS_2| =  CMa(G) $$
+
+Para termos certeza que essa condição faz sentido, vamos supor que ela é falsa e testar o que poderia acontecer. Existem duas maneiras dessa afirmação ser falsa: se a soma das TMS forem menor ou maior que o CMa.
+\\~\\
+Como a soma das TMS é a medida que eles estão dipostos a aceitar abrir mão do consumo privado para receber mais qualidade. Se as somas das taxas marginais de substituição forem menores do que o custo marginal, isso nos diz que os agentes estarão em melhor situação se ao invés de gastar com a melhoria, esse dinheiro fosse poupado e utilizado para o consumo privado de cada agente.
+\\~\\
+Se a soma das TMS forem maiores que o CMa da qualidade do bem. Poderíamos simplesmente usar o recurso necessário para fazer a qualidade e devolver o restante para os agentes.
+\\~\\
+Em ambos os casos, vemos que é possível melhorar a situação dos agentes devolvendo alguma quantia para o seu consumo privado. A única situação em que isso não é possível é justamente no ponto onde a soma das TMS é exatamente igual ao CMa da qualidade do bem público. Nesse ponto, temos o conhecido equilíbrio de Pareto.
+\\~\\
+É interessante ver aqui que, no mercado privado, a condição de maximização é que a TMS seja igual ao CMa do produto. Mas no caso do bem público, a condição é que a \textbf{soma das TMS} seja igual ao CMa.
+\\~\\
+Essa condição de eficiência pode ser vista na imagem abaixo. O ponto ótimo da quantidade do bem público é obtido pela igualdade da curva que mede a soma das TMS e a curva de CMa da oferta do bem público.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{cap37_4-bem_publico.png}
+\end{figure}
+
 \section{Preferências Quase Lineares e Bens Públicos}
+
+No caso das preferências quase lineares, que vocês viram lá no capítulo 04, devido a sua forma $u_i(x_i,G) = x_i + v_i(G)$. Quando colocamos essa função de utilidade no problema de maximização que acabamos de examinar na seção 4, chegamos a um resultado bem interessante:
+
+$$ |TMS_1| = \frac{\partial u_1(x_1,G) / \partial G}{\partial u_1 / \partial x_1} = \frac{\delta v_1(G)}{\delta G} $$
+$$ |TMS_2| = \frac{\partial u_2(x_2,G) / \partial G}{\partial u_2 / \partial x_2} = \frac{\delta v_2(G)}{\delta G} $$
+
+Pela condição da eficiência de Pareto, sabemos que
+
+$$ |TMS_1| + |TMS_2| =  CMa(G) $$
+
+Substituindo essas equações teremos que
+
+$$ \frac{\delta v_1(G)}{\delta G} + \frac{\delta v_2(G)}{\delta G} = CMa(G) $$
+
+Mas veja que resultado curioso, não há nenhuma relação entre o consumo privado $x_1$ e $x_2$ e a oferta do bem público. Isso implica na mesma quantidade de bem público em todas as alocações possíveis independentemente dos consumos privados de cada agente.
+\\~\\
+\textbf{Comentário:} Aqui temos um exemplo sobre como podemos alterar aquele exemplo da empresa siderúrgica e, agora, das duas empresas de pesca para esse modelo de oferta de um bem público. Podemos ver que a maximização do bem estar acontece onde a soma dos custos sociais e dos benefícios marginais se equivalem. Isso é justamente a equivalência entre as TMS e o CMa.
+
 \section{O problema do Carona}
+
+Agora sabemos a condição a ser satisfeita para que alcancemos o ponto de alocação eficiente no sentido de Pareto mas nos resta saber o processo de determinação dessa alocação desejada. Como o mecanismo de mercado decide a alocação dos bem públicos?
+\\~\\
+Para começar a modelar o problema, podemos propor que cada pessoa possua uma dotação inicial de $w_i$. Essa pessoa pode escolher trocar parte da sua dotação inicial por um consumo privado $x_i$ ou o provimento de parte do custo do bem público $g_i$. Vamos definir o custo da oferta do bem público como $c(G) \equiv G$, ou seja, o CMa da oferta desse bem será igual a 1. A quantidade total ofertada será a soma de todas as contribuições individuais $G = \sum g_i$. A utilidade de cada pessoa será uma função em relação ao seu próprio consumo privado e a quantidade total de bem público $u_i(x_i,G)$.
+\\~\\
+Queremos definir a quantia maximizadora de utilidade de cada pessoa para a oferta do bem público. Para isso, supondo que existam apenas 2 agentes, a pessoa 1 suporá o que a pessoa 2 ofertará de $g_2$. A pessoa 2 fará a mesma coisa e suporá o que 1 ofertará. Nós buscaremos exatamente o equilíbrio entre esses dois participantes de modo a encontrar um equilíbrio de Nash onde ninguém terá o incentivo a mudar de posição.
+\\~\\
+Podemos definir o problema de maximização da pessoa 1 como:
+
+\begin{center}
+	\LARGE $\stackrel{máx}{\text{\small $x_1,g_1$}} \ \ \stackrel{u_1(x_1,g_1 + \overline{g_2})}{\ }$ \\
+	\normalsize $\textrm{de modo que } x_1 + g_1 = w_1 $ \\
+\end{center}
+
+Você deve ter percebido que isso é muito parecido com o problema do consumidor. A única diferença é que trazemos a oferta do bem público para o processo de decisão. Como já aprendemos na seção 37.4, as condições de maximização são que as TMS sejam iguais ao CMa do bem público, ou seja,
+
+$$ |TMA_1| = |TMA_1| = CMa(G) $$
+
+Mas aqui temos uma relação nova: a pessoa 2 pode supor que o agente 1 fará uma contribuição suficiente para que ela mesma não precise ofertar nada para a oferta do bem público. Isso liberaria a sua renda $w_2$ integralmente para o seu consumo privado $x_2$.
+\\~\\
+Para simplificar um pouco, vamos supor que cada pessoa só pode modificar suas decisões adicionais de contribuição. Ou seja, ninguém pode decidir pagar menos do que já paga, mas pode decidir não aumentar sua contribuição. Isso nos diz que $g_1 \geq 0$ e $g_2 \geq 0$.
+\\~\\
+Observe a imagem abaixo. Ela nos dá uma ilustração dessa situação. A dotação de cada pessoa começa no ponto de maior consumo privado e representa o quanto ela precisa abrir mão do seu consumo privado para ofertar mais bem público. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{cap37_6-problema_carona.png}
+\end{figure}
+
+No painel da esquerda temos a situação do agente 1. Ele maximiza sua utilidade de modo a ter o máximo possível de retorno entre as cestas de bens privados e público. No painel da direita temos o caso do agente 2. Veja como a restrição orçamentária do agente 2 parte do ponto onde o bem público é ofertado pelo agente 1.
+\\~\\
+Para o agente 2, pegar carona no bem público ofertado pelo agente 1 é simplesmente consumir sua dotação inicial. Generalizando esse resultado, o esperado para as situações onde a provisão de um bem público é voluntária é que a oferta final do bem público tenderá a ser pequena devido ao incentivo ao ato de pegar carona.
+
 \section{Comparação com os Bens Privados}
+
+Pelo primeiro teorema do bem-estar sabemos que uma alocação será eficiente no sentido de Pareto se as escolhas forem feitas pelo mecanismo de mercado competitivo e as escolhas não apresentarem externalidades.
+\\~\\
+No caso dos bens públicos, temos uma situação mais complexa porque as utilidades dos agentes estão ligadas pelo mecanismo de oferta e demanda do bem público. Desse modo, é improvável que a provisão do bem público resulte em uma alocação eficiente de Pareto.
+\\~\\
+O \textbf{mecanismo de mercado competitivo} é apenas um tipo de \textbf{instituição social} que pode ser usada para alocação das quantidades de bens ao longo da teia social. Contudo, existem outros tipos de instituições sociais que podem ser usadas.
+\\~\\
+Existem ocasiões onde as sociedades optam por um \textbf{mecanismo de comando} onde uma pessoa ou um pequeno grupo define a quantidade de bens públicos a serem ofertados à população. Outras situações demandam um \textbf{sistema de votação} onde as pessoas decidem pelo voto majoritário a provisão do bem público.
+\\~\\
+Mas podemos analisar essas instituições sociais do mesmo modo como estamos analisando o mecanismo de mercado até agora. Será que elas são capazes de alcançar uma alocação ótima no sentido de Pareto para bens públicos? Qualquer alocação ótima de Pareto pode ser alcançada por essas instituições?
+\\~\\
+Essas perguntas não serão respondidas em sua integralidade aqui mas veremos alguns insights sobre o assunto.
+
 \section{Votação}
-\section{O Mecanismo Vickey-Clarke-Groves}
+
+Já sabemos que a oferta privada por bens públicos não é uma boa maneira devido o problema do carona. Uma das instiuições que podemos usar é a votação. Vamos modelar o problema da alocação nesse novo mecanismo.
+\\~\\
+Para termos um modelo mais interessante, vamos supor um número arbitrário de $n$ agentes. Para não nos preocuparmos com empates, vamos supor que $n$ é um número ímpar. Cada votante escolherá uma quantidade dos gastos sociais com a oferta do bem público. Cada consumidor tem o seu próprio nível preferido de gasto e ele preferirá níveis mais próximos ao seu.
+\\~\\
+Já vimos no capítulo 34 que as votações possuem alguns problemas. O primeiro é que ela pode gerar resultados não transitivos. Para evitar esse tipo de comportamento indesejado vamos ter que aplicar alguma limitação ao mecanismo de votação.
+\\~\\
+A restrição é que as preferências terão um \textbf{máximo único}. Se as preferências são desse tipo, pode ser demonstrado\footnote{Confira a página 424 do Microeconomic Analysis para ver a prova.} que o resultado da votação não apresentará o problema da intransitividade. Diante desse restrição, podemos nos perguntar qual o resultado da votação. O valor do gasto total será o \textbf{valor médio} do valor que a sociedade está disposta a pagar. Isso quer dizer que teremos metade das pessoas querendo pagar menos e metade das pessoas dispostas a pagar mais.
+\\~\\
+Esse nível é eficiente no sentido de Pareto? Não necessariamente. Precisaríamos de mais informação sobre a alocação de cada pessoa para sabermos se o resultado foi eficiente ou não.
+\\~\\
+\textbf{Comentário:} Aqui temos um exemplo sobre como a ordem das escolhas de votação pode interferir no resultado final. O Varian explica como esse mecanismo é aplicado ao sistema legislativo dos EUA.
+
+\section{O Mecanismo Vickrey-Clarke-Groves}
+
+Pensemos num framework de maximização da utilidade de cada indivíduo que envolva a oferta de um determinado bem público. O problema é que os agentes não estarão dispostos a nos dar os verdadeiros valores de utilidades de modo que teremos um desafio em conseguir determinar as funções de utilidade individuais.
+\\~\\
+Seja $x$ as escolhas possíveis. Supondo que existam $n$ agentes onde $u_i(x)$ será a utilidade de cada agente $i$. O nosso objetivo é escolher $x$ de modo a ter a maior soma possível das utilidades $\sum u_i(x)$. A dificuldade é que não sabemos as funções de utilidade dos agentes e, caso perguntemos, eles podem querer mentir para acabarem em uma situação melhor.
+\\~\\
+Por incrível que pareça, existe uma maneira de descobrirmos valores mais confiáveis para as utilidades dos agentes de modo a conseguir alcançar um resultado eficiente. Esse mecanismo é chamado de \textbf{mecanismo Vickrey-Clarke-Groves (VCG)}. 
+
+\subsection{O Mecanismo Groves}
+
+Vamos trabalhar esse mecanismo VCG em etapas. A primeira delas é o chamado \textbf{mecanismo Groves}.
+
+\begin{itemize}
+	\item Primeiro um analista pergunta quanto cada participante estaria disposto a pagar para ter $x$ quantidades do bem público. Chamaremos de $r_i(x)$ essa utilidade declarada.
+	\item Depois é escolhida a quantidade $x$ que maximiza a soma das utilidades repordadas $R = \sum r_i(x)$.
+	\item Cada agente $i$ recebe um pagamento por fora igual ao valor das utilidades de todos os outros agentes $R_i = \sum_{i \neq j} r_j(x^*)$
+\end{itemize}
+
+Vamos ver qual a estratégia dominantes das pessoas nesse arranjo.
+\\~\\
+A remuneração total de cada indivíduo será igual a soma da sua utilidade advinda da oferta do bem público $u_i(x)$ e do seu pagamento por fora igual a soma das utilidades informadas pelos outros agentes $R_i$. Ou seja,
+
+$$ u_i(x) + \displaystyle \sum_{j \neq i} r_j(x) $$
+
+Veja que a pessoa $i$ se preocupa com a sua verdadeira utilidade e com a utilidade declarada pelas outras pessoas. 
+\\~\\
+Entretanto, cada agente sabe que o analista terá acesso apenas a informação declarada por cada agente. Ou seja, a pessoa $i$ sabe que o analista só terá acesso à soma das utilidades declaradas
+
+$$ r_i(x) + \displaystyle \sum_{j \neq i} r_j(x) $$
+
+Olha só que saída inteligente: se o agente mentir para o analista, isso afetará a sua renda verdadeira uma vez que ele quer que a oferta do bem público seja o mais próxima possível do seu ponto de maximização e o valor recebido por fora não será afetado porque ele será definido apenas pelas utilidades declaradas dos outros agentes.
+\\~\\
+Desse modo, o agente terá o incentivo de ser honesto quanto ao real valor da sua utilidade de modo a garantir que a sua renda verdadeira seja maximizada pela igualdade entre $r_i(x) = u_i(x)$. Ao generalizarmos esse resultado para todos os agentes, teremos os verdadeiros valores das utilidades.
+
+\subsection{O Mecanismo VCG}
+
+Como você já deve percebido que o mecanismo de Groves é potencialmente muito caro. Esse pagamento por fora igual a soma do total das utilidades dos outros agentes pode ser exageradamente alto para fins de aplicação prática dessa metodologia.
+\\~\\
+Poderíamos impor um imposto sobre cada agente de modo a reduzir o total pago para ele sem que isso afete a escolha de $x$.
+\\~\\
+Um imposto particularmente útil seria cobrar de cada agente $i$ um valor igual a soma máxima das utilidades dos outros agentes para as quantidades maximizadoras do bem estar sem que o agente $i$ estivesse participando da decisão.
+\\~\\
+Se $x$ e $z$ forem diferentes níveis do bem público, podemos cobrar do agente $i$ um total de
+
+$$ \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $$
+
+Que é igual ou maior que zero. Como isso pode ser verdade? A resposta reside no fato que $\underset{z}{max} \sum_{j \neq i} r_j(z)$ é a utilidade máxima da oferta do bem público sem que o agente $i$ participe da aquisição desse bem. Por outro lado, $\sum_{j \neq i} r_j(x)$ é a utilidade dos outros agentes além de $i$ mas que contam com a contribuição do agente $i$ para a compra da quantidade $x$ do bem público. O nome que damos para esse pagamento é \textbf{Imposto de Clarke}.
+\\~\\
+Agora podemos reescrever as etapas do mecanismo passado mas agora substituindo a etapa 3 por esse novo valor de pagamento.
+
+\begin{itemize}
+	\item Primeiro um analista pergunta quanto cada participante estaria disposto a pagar para ter $x$ quantidades do bem público. Chamaremos de $r_i(x)$ essa utilidade declarada.
+	\item Depois é escolhida a quantidade $x$ que maximiza a soma das utilidades repordadas $R = \sum r_i(x)$.
+	\item O analista buscará uma outra quantidade do bem público $z$ de modo a maximizar a utilidade de todos os agentes supondo que o agente $i$ não esteja participando da decisão $\underset{z}{max} \sum_{j \neq i} r_j(z)$.
+	\item O agente $i$ terá que pagar um imposto no valor de $ \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $ caso sua utiliade declarada seja suficiente para alterar a decisão social da oferta do bem.
+\end{itemize}
+
 \section{Exemplos de VCG}
+
+\subsection{Leilão de Vickrey}
+Aqui temos uma aplciação co VCG ao leilão de Vickrey. Ele não faz muito sentido sem ter lido o capítulo 18. Mas para os que estão esquecidos a essa altura do campeonato, o Leilão de Vickrey tem a característica de que o vencedor é aquele que dá o maior lance mas ele paga o segundo maior valor dado como lance.
+\\~\\
+Com dois agentes, cada lance será dado por $r_1 > r_2$ e os valores verdadeiros serão $v_1 > v_2$. Uma característica interessante do leilão de Vickrey é que a estratégia dominante de cada agente é atribuir seus verdadeiros valores aos lances.
+
+\subsection{Clarke-Groves}
+
+Voltemos ao problema dos amigos e da televisão. Se $c_i$ é o valor que cada agente vai pagar na TV e o custo total dela é de R\$150, então $c_1 + c_2 = 150$.
+\\~\\
+Para aplicar o mecanismo VCG temos que pedir para que cada agente declare um valor $r_i$. Se $r_1 + r_2 > 150$ a televisão será comprada e os pagamentos devem ser definidos de acordo com o mecanismo. Seja $x=1$ para a TV comprada e $x=0$ a opção de não comprar a TV.
+\\~\\
+Como vimos antes, a remuneração do agente 1 será igual a 
+
+$$ u_i(x) + \displaystyle \sum_{j \neq i} r_j(x) - \underset{z}{max} \sum_{j \neq i} r_j(z) $$
+
+Que aplicado ao nosso caso em questão será igual a 
+
+$$ (v_1 - c_1)x + (r_2 - c_2)x - \underset{y}{max}\ (r_2 - c_2)y $$
+
+O primeiro termo é a utilidade líquida da TV. O segundo termo é a utilidade líquida declarada pelo agente 2. Por fim, o terceiro elemento é a utilidade máxima declarada caso o agente 1 não estivesse disponível para a compra da TV.
+\\~\\
+Rearranjando os dois primeiros termos, temos 
+
+$$ [(v_1 + r_2) - (c_1 + c_2)]x $$
+
+A melhor estratégia para o agente 1 é declarar a verdade sobre sua utilidade, ou seja, tornar público que $r_1 = v_1$. Pela relação acima, podemos ver que se o valor for negativo, então a TV não será comprada e, caso contrário, a soma dos valores declarados será superior ao custo da TV.
+\\~\\
+A renda final do agente 1 dependerá da sua utilidade no uso da TV, da utilidade do agente 2 ao uso da TV e da utilidade do agente 2 caso não houvesse a possibilidade de compra combinada com o agente 1.
+\\~\\
+O legal aqui é que, se o agente 1 tiver uma utilidade declarada suficiente para tornar a compra da TV viável, ele pagará o valor da utilidade do agente 2 com a TV sendo paga pelos dois menos o valor da utilidade do agente 2 caso ele tivesse que decidir sozinho entre comprar a TV ou não. Se o valor da utilidade declarada por ele não for suficiente para mudar a situação em que o agente 2 escolher sozinho, ele não precisaria pagar nada de imposto.
+
 \section{Problemas com Imposto de Clarke}
+
+Então podemos definir que o mecanismo VCG resolve nosso problema de oferta ótima de bem público? Não, infelizmente, ele pode enfrentar problemas na sua aplicação.
+\\~\\
+A primeira limitação (que pode ser bastante relevante) é que ele só funciona com preferências quase lineares. Isso é devido ao fato que a decisão do quanto consumir (e a pagar) não pode ser influenciada pela sua demanda pelo bem público. Quando as preferências são quase lineares (como vimos no ponto 37.5) a quantidade ótima do bem público será única.
+\\~\\
+A segunda limitação é que o imposto de Clarke não gera um resultado ótimo de Pareto. A ideia do imposto de Clarke é cobrar a o custo que a decisão de cada agente gera no total da sociedade. Esse mecanismo nos garante uma quantidade ótima do bem público mas, como gera um pagamento de imposto, o consumo privado é afetado por ele. Como a ideia do imposto de Clarke é não alterar a escolha das pessoas, o total arrecadado não pode ser redirecionado para nenhum outro indivíduo envolvido no processo de decisão, porque isso poderia alterar a escolha. No final, esse imposto precisa sumir do sistema.
+\\~\\
+O argumento em defesa do segundo ponto é que só as pessoas que possuem utilidade declarada suficiente para mudar a decisão social (chamadas de pivô) é que pagam o imposto e, a medida que o número de agentes aumenta, a chance de alguém ser uma pessoa pivô vai caindo cada vez mais.
+\\~\\
+A terceira limitação do mecanismo VCG é que ele pode ser manipulado via coalisão. Se fossem 3 amigos no problema da TV, dois deles poderiam declarar as utilidades em 1 milhão e garantir a compra da TV, contudo, como eles poderiam combinar de não mudar de posição, nenhum deles seria considerado uma pessoa pivô e não pagariam qualquer imposto de Clarke.
+\\~\\
+O quarto problema é que existe um problema entre equidade e eficiência. É possível que ao aplicarmos o imposto de Clarke, algumas pessoas fiquem em uma situação pior que começaram. O mecanismo nos dá a garantia que a quantidade do bem público será ótima mas ele não nos garante que o arranjo final será um equilíbrio de Pareto.
+\\~\\
+O ideal seria a construção de um mecanismo que fosse capaz de definir não apenas a quantidade ótima do bem público mas também o valor pago de modo a melhorar (ou pelo menos não piorar) a situação de todos os agentes envolvidos. Talvez você que está lendo isso agora seja a pessoa a desenvolver a resposta para essa pergunta!
+
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Informação Assimétrica}
 
+\textbf{Comentário:} Antes de iniciarmos esse capítulo meus sinceros parabéns. Você conseguiu avançar em uma jornada longa e relativamente difícil. Definitivamente, você pode dizer que começou a entender microeconomia.
+\\~\\
+Em todos os modelos que estudamos até agora, supomos que consumidores e produtores possuem plena informação a respeito da qualidade dos bens. Desse modo, não supomos que exista alguma custo para conhecimento da qualidade do bem ofertado no mercado.
+\\~\\
+Contudo, na vida real, existem mercados onde a obtenção do conhecimento a respeito da qualidade do bem ofertado é consideralmente custosa ou até impossível. Por exemplo, no mercado de trabalho, sabemos que cada pessoa tem sua própria maneira de trabalhar, então, não é razoável supor que o trabalho seja um insumo homogêneo no mercado de trabalho. Outro exemplo é o mercado de carros usados, o comprador, na maioria das vezes só é capaz de saber se fez uma boa compra depois que passar um tempo em posse do carro. É justamente nesse tipo de mercado que vamos adaptar nosso ferramental analítico.
+\\~\\
+Sempre que uma das partes possuir um acesso maior a informação da qualidade do bem, diremos que existe uma \textbf{assimetria de informação} que pode causar problemas ao funcionamento eficiente do mercado.
+
+
 \section{O Mercado de Carros Ruins}
+
+Essa seção é baseada no paper "The Market of Lemons: Quality Uncertainty and Market Mechanism" de George Akerlof. Ele ganhou o Nobel em 2001 por essa contribuição.
+\\~\\
+Vamos pensar no mercado de carros usados. Supondo que existam 100 pessoas dispostas a vender seu carro usado e outras 100 pessoas querendo comprar um carro usado. É sabido por todos que 50 carros são bons e 50 são ruins.
+\\~\\
+O dono do carro ruim está disposto a vendê-lo por \$1.000 e o dono do carro bom por \$ 2.000. O preço de reserva dos compradores será \$ 2.400 por um carro bom e \$ 1.200 por um carro ruim.
+\\~\\
+Se a informação fosse pública, sabemos que os carros ruins seriam vendidos por algum valor entre 1.000 e 1.200 e os carros bons por algo entre 2.000 e 2.400. Mas a vida não é tão simples, vamos ver o que acontece quando colocamos a assimetria de informação dentro desse problema.
+\\~\\
+Sem a informação sobre a qualidade do carro, os compradores terão que supor quanto o carro realmente vale. Uma boa maneira de supor o que os compradores fariam é adotar que eles usarão o valor esperado usando as probabilidades associadas a cada tipo de carro, isso significa que os consumidores terão o novo preço de reserva igual a 50\% * 1.200 + 50\% * 2.400 = 1.800.
+\\~\\
+Mas a esse preço apenas os vendedores de carros ruins estariam dispostos a fazer negócios. Ao nível de preços com a assimetria de informação da qualidade dos carros, apenas os carros ruins seriam vendidos. Mas os compradores não são tão ingênuos, se eles soubessem que só existem carros ruins, eles reavaliariam suas ofertas ao nível de preços dos carros ruins. O que levaria o mercado apenas para a venda de todos os carros ruins e nenhum carro bom.
+\\~\\
+A natureza dessa falha de mercado é uma externalidade. Sempre que um vendedor entra no mercado de carros, ele sinaliza para os demais compradores que há uma mudança no preço médio esperado pelo carro. Ao longo da entrada de novos vendedores, o preço médio vai se ajustando até um ponto onde o valor se encontra abaixo do mínimo necessário para a compra de um carro bom.
+
 \section{A Escolha da Qualidade}
+
+Vamos mudar um pouco esse modelo do mercado de carros para um onde os produtores podem escolher a qualidade dos seus produtos. Nosso foco aqui é encontrar a qualidade de equilíbrio do mercado.
+\\~\\
+No nosso mercado-modelo de guarda-chuvas só existem duas qualidades. O preço de reserva dos consumidores para os de alta qualidade será \$ 14 e de \$ 8 para baixa qualidade. Suporemos que não é possível saber a priori a qualidade.
+\\~\\
+Se o setor for competitivo e o custo de produção seja \$ 11,50 independentemente da qualidade. Qual seria a qualidade de equilíbrio dos guarda-chuvas nesse mercado?
+\\~\\
+Da mesma maneira que fizemos no mercado passado, vamos supor que os consumidores usem as probabilidades de cada tipo de guarda-chuva para determinar seu preço esperado de reserva. Seja q a fração de guarda-chuvas de alta qualidade, o consumidor estará disposto a pagar $p = 14q + 8(1 - q)$ por guarda-chuva.
+\\~\\
+Existem 3 cenários possíveis nesse arranjo
+\begin{enumerate}
+	\item Apenas itens de baixa qualidade são produzidos e, como o preço de reserva das pessoas é 8 e o custo marginal da produção é 11,50, não haverá nenhuma venda.
+	\item Apenas itens de alta qualidade são produzidos sendo comercializados a 11,50 (porque é um mercado competitivo) permitindo assim que haja um excedente do consumidor igual a 14 - 11,50.
+	\item Teremos produtos de ambas as qualidades no mercado. Nesse caso, a competição criará um incentivo conjunto para que a qualidade média seja definida de modo que o preço de reserva das pessoas seja igual a $14q + 8(1 - q) \geq 11,50$.
+\end{enumerate}
+
+Isso nos diz que, no mínimo, teremos $q = 7/12$. Desse modo, os produtores ainda produzirão alguma parcela de itens ruins mas a maioria será de qualidade alta. Podemos ver essa situação na imagem abaixo:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.56]{cap38_2-qualidade_equilibrio.png}
+\end{figure}
+
+Perceba como no mercado de qualidade, a curva de demanda é crescente. A curva de oferta é constante porque nosso custo marginal é fixo em 11,50. O equilíbrio na qualidade acontece em qualquer ponto onde a curva de demanda é igual ou maior que o custo marginal da produção (a reta branca).
+
+\subsection{Escolhendo a Qualidade}
+
+Vamos melhorar um pouco o nosso modelo e adotar um custo diferenciado de produção para diferentes níveis de qualidade. Os itens de alta qualidade terão o custo marginal de \$ 11,50 enquanto os de baixa qualidade custarão apenas \$ 11 para ser produzidos. O que essa mudança fará no nosso mercado?
+\\~\\
+A fração de produtores de alta qualidade é igua a $q$ sendo $ 0 \leq q \leq 1$. 
+\\~\\
+Como o mercado é competitivo, cada produtor, buscando maximizar seu retorno, optará por produzir bens de baixa qualidade, uma vez que nenhum deles tem o poder de alterar a qualidade e o preço do mercado.
+\\~\\
+O problema dessa posição é que \textbf{todos os produtores} pensarão do mesmo modo. Isso significa que teremos apenas produtos de baixa qualidade no mercado. Como o preço de reserva dos consumidores para produtos de baixa qualidade é igual a \$ 8, desse modo, não teremos equilíbrio nesse mercado.
+
 \section{Seleção Adversa}
+
+O nome desse fenômeno da seção passada é \textbf{seleção adversa}. Os ítens de baixa qualidade acabam matando o mercado tanto para baixa qualidade quanto para alta qualidade. Vejamos alguns outros exemplos de seleção adversa.
+\\~\\
+Se uma companhia de seguros analisa que o risco de roubo ao longo da cidade é diferente em cada região e decide precificar sua apólice pelo risco médio de roubo, o que acontecerá com ela? Não é difícil prever que ela entrará em falência. Para ver isso, basta pensar em quem vai comprar o seguro: as pessoas das áreas com maior risco de roubo é que procurarão o seguro enquanto as que morarm em áreas seguras talvez nem procurem por ele.\footnote{O nome seleção adversa veio justamente desse problema das empresas de seguro. Ao pensar que elas teriam clientes de todas as regiões, acabaram por criar um produto em que o maior incentivo ao consumo são justamente os que mais precisarão dele.}
+\\~\\
+A solução é cobrar a probabilidade do pior caso. Isso acarretará num custo maior da apólice ao ponto que pessoas moradoras de áreas com baixo risco não comprarão mas essa a única maneira da empresa de seguro conseguir um equilíbrio no seu produto.
+\\~\\
+A mesma lógica é aplicada aos planos de saúde. Os preços praticados acabam sendo os calculados em cima dos piores cenários possíveis.
+\\~\\
+Uma maneira de melhorar essa situação é tornar o seguro obrigatório (vários países no mundo possuem esse mecanismo) uma vez que isso permite as seguradoras a cobrar um valor médio do risco e permite que as pessoas que realmente precisam do seguro paguem um preço menor e também permite que as pessoas com risco mais moderado não paguem o preço do pior cenário.
+\\~\\
+Esse equilíbrio de mercado via compra compulsória é bastante curioso em uma primeira vista. Mas é isso mesmo, existem situações onde a obrigação da aquisição é uma melhoria de Pareto. Como saber qual a hora de usar esse artifício? A saída é entender que esse fenômeno é fruto da externalidade entre os compradores de baixo e alto risco (é um tipo de assimetria de informação).
+\\~\\
+E esse é o motivo das operadoras de saúde darem descontos para planos empresariais. Como esses planos são dados independentes do perfil do comprador, isso significa que dentro da mesma empresa, se espera que existam pessoas saudáveis que reduzirão o risco de uso e pessoas doentes que aumentarão o risco. É uma maneira da companhia de seguro reduzir o efeito da seleção adversa.
+
 \section{Perigo Moral}
+
+Outro caso interessante de assimetria é o \textbf{perigo moral}. Para explicar, vamos supor que o risco de roubo é homogêneo em toda a cidade. Isso elimina o problema da seleção adversa mas é possível que o risco de roubo aumente pelo comportamento ativo dos segurados
+\\~\\
+Quem você acha que vai cuidar melhor da tranca da bicicleta, uma pessoa que não tem seguro ou uma que tem seguro contra furto? Exatamente, a pessoa que tem seguro pode se dar ao luxo de ser menos cuidadosa e esse comportamento ativamente altera o risco de ser furtado e precisar do seguro.
+\\~\\
+Quando uma companhia de seguros vende uma apólice ela precisa levar em consideração os incentivos que o seu próprio produto vai gerar nas atitudes dos seus clientes. Essa falta de cuidado gerada pelo seguro é o que chamamos de \textbf{risco/perigo moral}.
+\\~\\
+Esse problema não existiria se fosse possível observar a quantidade de cuidado. E alguns contratos possuem várias regras que pagam a menos (ou até livram a seguradora da obrigação de pagar) caso seja confirmada uma conduta perigosa ou indevida por parte dos seus segurados. Outra saída muito usada é a venda de seguros incompletos onde apenas uma parte do valor é coberto (e ainda há o pagamento da franquia). Em ambos os casos, as companhias querem aumentar a sensação de responsabilidade do segurado e reduriz o incentivo ao risco moral.
+\\~\\
+Esse resultado também é curioso quando analisado à luz da teoria da informação perfeita. Um seguro incompleto é melhor pois reduz o risco moral ao invés de haver um seguro completo sem custos de utilização.
+
 \section{Perigo Moral e Seleção Adversa}
+
+Já vimos que o risco moral surge quando um lado do mercado não pode observar todas as ações do outro\footnote{As vezes também chamamos isso de problema da ação oculta (baita nome de banda, ein).}. Do outro lado, vimos que a seleção adversa surge quando um lado do mercado não consegue observar uma característica/qualidade do outro lado do mercado\footnote{Também chamamos de problema da informação oculta.}.
+\\~\\
+Já aprendemos que em cenários de ação aculta, o mercado vai optar por ofertar bens abaixo do que estaria disposto afim de evitar os incentivos ruins. E também já vimos que os cenários de informação oculta geram bens a um custo mais elevado devido à necessidade de ter que supor o pior cenário.
+\\~\\
+Com isso, podemos ver que equilíbrios em mercados desse tipo serão ineficientes se comparados a mercado de informação perfeita. Mas cuidado ao querer colocar o governo para resolver esse problema porque se é caro para o setor privado resolver, será caro para o governo também. Temos que focar em tentar descobrir quais os tipos de intervensão do governo poderiam melhorar o resultado do mercado mesmo assumindo que o próprio governo possua informação imperfeita.
+\\~\\
+No caso da ação oculta, a menos que o governo use seu poder para coagir determinadas condutas (como criminalizar o consumo de drogas, lei seca, lei dos rachas etc), não há muito o que ele possa fazer para resolver essa assimetria de informação. No caso da informação oculta, já sabemos que um seguro obrigatório ajudaria o mercado mas teríamos que calcular o custo gerado para o governo fazer valer essa obrigatoriedade talvez seja mais caro para a sociedade fazer valer a regra do que o benefício advindo dela.
+
 \section{Sinalização}
+
+Voltemos ao mercado de carros usados. Nós vimos que se nada for feito, o mercado só existirá para os carros ruins mas é muito estranho supor que os vendedores dos carros bons não façam nada a respeito disso.
+\\~\\
+Eles poderiam escolher estratégias que \textbf{sinalizassem} a qualidade dos carros afim de reduzir a assimetria de informação entre vendedores e compradores.
+\\~\\
+Um sinal muito usado no mercado privado é o da \textbf{garantia}. Se o vendedor possui confiança na qualidade do seu produto, ele pode oferecer uma garantia que qualquer problema que aparecer em algum período de tempo será coberto pelo vendedor. No nosso exemplo dos carros, isso seria equivalente a prometer pagar a diferença de preço entre um carro ruim e um bom para o comprador caso seu carro quebre. Essa promessa só pode ser feita por quem tem um carro bom.
+\\~\\
+Então é isso? Resolvido o problema? Não, claro que não! Na verdade, existem sinalização que \textbf{pioram} o resultado do mercado.
+\\~\\
+Esse exmeplo foi tirado do paper "Market Signaling" de Michael Spence (1974). Supondo que existam dois tipos de trabalhadores no mercadod e eduação: capazes e incapazes. Um capaz tem um produto marginal de $a_2$ enquanto um incapaz de $a_1$ de modo que $a_2 > a1$. Além disso, adicionaremos a informação que uma fração $b$ dos trabalhadores é capaz e $1 - b$ é incapaz.
+\\~\\
+Seja a função de produção linear $L = a_1L_1 + a_2L_2$ onde $L$ é a produção total, $L_1$ é o número de todos os incapazes e $L_2$ é o número total de todos capazes.
+\\~\\
+Adicionamente, suporemos que o mercado de trabalho é competitivo.
+\\~\\
+Como já sabemos do nosso estudo do mercado de fatores, as empresas escolherão pagar exatamente igual ao produto marginal do trabalhador de modo que, em uma situação de informação perfeita, teríamos $w_1 = a_1$ e $w_2 = a_2$.
+\\~\\
+Mas o que acontece se a empresa não conseguir observar os produtos marginais?\footnote{se você lembrou do mercado de guarda-chuvas, é isso mesmo.} Ela vai optar por pagar um salário médio de $w = (1 - b)a_1 + ba_2$. Se todos os trabalhadores toparem esse salário, não teremos problemas de seleção adversa nesse mercado.
+\\~\\
+Mas se os trabalhadores pudessem sinalizar sua capacidade, por exemplo, com mais anos de estudo. Suporemos que $c_2e_2$ é o custo $c$ da quantidade $e$ de educação para os capazes e $c_1e_1$ seja o custo e a quantidade para os incapazes.
+\\~\\
+Agora, os trabalhadores tem que decidir quanto de educação adquirir e as empresas quanto pagar a mais de salário pela educação dos seus funcionários. 
+\\~\\
+Adicionando a hipótese draconiana que a educação não afeta a produtividade. Podemos ver que o equilíbrio dependerá grandemente do custo da educação. Se $c_2 < c_1$ será mais barato para os capazes buscarem educação e sinalizarem para os empregadores a sua condição. Seja $e^*$ a quantidade que satisfaça as desigualdades
+
+$$ \frac{a_2 - a_1}{c_1} < e^*< \frac{a_2 - a_1}{c_2} $$
+
+Como nossos pressupostos foram que $a_2 > a_1$ e $c_2 < c_1$ então $e^*$ existe. Isso implicaria que os capazes adquiririam exatamente $e_*$ de educação enquanto os incapazes consumiriam 0. Isso seria suficiente para sinalizar para as empresas quem é quem e elas poderiam pagar $a_2$ como salário para os capazes e $a_1$ para os incapazes.
+\\~\\
+Mas nossa história não acabou por aqui. Se o custo para os incapazes em buscar $e^*$ de educação for menor do que a diferença dos salários $a_2 - a_1$ então ele terá o incentivo de buscar a educação mas dadas as restrições que colocamos, isso não será o caso.
+\\~\\
+Como esse arranjo final é um equilíbrio e esse equilíbrio resolver um problema de assimetria de informação, dizemos que esse é um \textbf{equilíbrio separador}.
+\\~\\
+Outra solução é que cada trabalhador tenha o incentivo de fazer a mesma coisa. Se o custo da educação fosse o inverso $c_2 > c_1$ seria melhor para os incapazes procurarem se educar. O resultado seria tal que todos os trabalhadores se educariam e a solução dos salários seria a média ponderada do primeiro caso. Isso é chamado de \textbf{equilíbrio agregador}.
+\\~\\
+O equilíbrio separador tem um resultado socialmente ineficiente porque, no nosso modelo simplificado, a busca pela educação não gera uma mudança na produtividade. Desse modo, o gasto com educação não retornará em nada na capacidade total produtiva e sim na sinalização para um recebimento de salários iguais às suas produtividades. Isso torna a sinalização apenas um custo adicional se comparada á situação de equilíbrio em informação perfeita.
+\\~\\
+\textbf{Comentário:} Aqui temos um exemplo do efeito diploma onde foi feito um estudo que tenta isolar o recebimento adicional por educação entre ganho de produtividade e sinalização. A conclusão é que os ganhos advindos da educação são, em grande parte, advindos da sinalização e não do aumento da produtividade.
+
 \section{Incentivos}
+
+Veremos agora um pouco sobre o estudo dos \textbf{sistemas de incentivos} e como ele se relaciona com a informação assimétrica.
+\\~\\
+O estudo de um sistema de incentivos é o estudo de como fazer alguém agir de determinado modo específico desejado. Pensemos no caso onde você é dono de uma terra e precisa que alguém trabalhe nela por você. Como você estabeleceria um sistema de remuneração?
+\\~\\
+Uma opção é pagar a ela um montate fixo independente da quantidade de trabalho feita. Mas esse plano cria o incentivo a produzir pouco. Um plano melhor seria vincular o pagamento à produção do trabalhador. O grande desafio de um sistema de incentivos é saber como relacionar as variáveis de interesse.
+\\~\\
+Seja $x$ a quantidade de esforço do trabalhador e $y = f(x)$ a quantidade produzida por ele. O preço da produção é igual a 1 então o valor da produção será igual a $y$. A quantia de salários é dada por $s(y)$ caso o trabalhador produza $y$ unidades. Como você quer maximizar seus lucros, você procura um modelo de financiamento que permita a maximização de $y - s(y)$.
+\\~\\
+Claro que, num mundo onde você possa cobrar o que quer, a maximização do lucro passaria por $s(y) = 0$. Mas na vida real, você vai enfrentar limitações ao quanto terá de pagar pela mão de obra.
+\\~\\
+É razoável supormos que o trabalhador não gosta do esforço de trabalhar. Então podemos definir como $c(x)$ o custo de esforço pela produção de $x$ unidades. Suporemos que a função custo total e custo marginal são crescentes em termos de $x$. O problema de maximização da utlidade do trabalhador pode ser definido como $s(y) - c(x) = s(f(x)) - c(x)$. Se o trabalhador tiver outras oportunidades de auferir uma utildiade de $\overline{u}$ então o problema de maximização da utiliade do trabalhador pode ser escrito como:
+
+$$ s(f(x)) - c(x) \geq \overline{u} $$
+
+Podemos chamar essa desigualdade de \textbf{restrição de participação}. De modo que, sempre que o trabalhador conseguir auferir uma utilidade maior em outra opção de trabalho, ele escolherá essa outra opção.
+\\~\\
+O seu problema de maximização do lucro precisa levar em consideração a restrição de participação do trabalhador. Sua missão é cobrar uma quantidade de trabalho $x$ de modo a não criar o incentivo ao trabalhador de desistir do trabalho, ou seja
+
+\begin{center}
+	$\underset{x}{max} \ f(x) - s(f(x))$ \\
+	$\textrm{de modo que } s(f(x)) - c(x) \geq \overline{u}$
+\end{center}
+
+Como você não quer pagar mais do que o mínimo que o trabalhador está disposto a receber. Podemos ter como objetivo o pagamento do salário exatamente no montante onde ele é indiferente à outra fonte de utilidade, ou seja, $s(f(x)) - c(x) = \overline{u}$, ou melhor, $s(f(x)) = c(x) + \overline{u}$. Substituindo $s(f(s))$ na função objetivo:
+
+$$ \underset{x}{max} \ f(x) - c(x) - \overline{u} $$
+
+Não é difícil ver que a condição de maximização dessa função será satisfeita quando
+
+$$ PM(x^*) = CMa(x^*) $$
+
+Isso nos dá o quanto de esforço o proprietário deve cobrar do trabalhador para maximizar seus lucros. Agora nos resta saber o valor do salário $s(y)$ por essa quantidade de trabalho ótima $x^*$.
+\\~\\
+Para resolver esse problema, só precisamos satisfazer a seguinte relação:
+
+$$ s(f(x^*)) - c(x^*) \geq s(f(x)) - c(x) \ \forall \ x $$
+
+Esse símbolo $\forall$ é lido como "para todo". O nome dado a essa relação acima é \textbf{restrição de compatibilidade do incentivo} e nada mais é do que o cálculo do maior lucro possível dada a restrição de motivação do trabalhador. 
+\\~\\
+Desse modo o resultado esperado é achar um volume de salário ótimo que produza a utilidade $\overline{u}$ para o trabalhador e que iguale o produto marginal do trabalho ao custo marginal do esforço para o trabalhador.
+\\~\\
+Existem mais de uma solução para esse problema:
+\begin{itemize}
+	\item Aluguel
+	\item Trabalho assalariado
+	\item Pegar ou largar
+	\item Parceria
+\end{itemize}
+
+\subsection*{Aluguel}
+
+No aluguel, você pode simplesmente alugar a terra para o trabalhador ao preço $R$. Se o trabalhador puder ficar com o resultado da sua produção, podemos definir o problema como
+
+$$ s(f(x)) = f(x) - R $$
+
+Se o trabalhador buscar maximizar o próprio retorno $s(f(x)) - c(x) = f(x) - R - c(x)$ então ele terá de escolher $x$ de modo a igualar $PM(x) = CMa(x)$ que é justamente a condição que você queria desde o começo. Nesse caso, a utilidade total do trabalhador será o teto para a quantidade do esforço realizado no campo
+
+$$ f(x) - c(x) - R = \overline{u} $$
+
+Assim sendo, você sabe que deve cobrar $R = f(x) - c(x) - \overline{u}$ pelo aluguel da terra.
+
+\subsection*{Trabalho Assalariado}
+
+Nesse arranjo, você deve pagar ao trabalhador um salário constante $w$ por unidade de esforço $x$ mais um valor independente do trabalho feito $K$, ou seja:
+
+$$ s(x) = wx + K $$
+
+A taxa $w$ é igual à $PM(x)$. $K$ é apenas uma constante arbitrária para que o trabalhador se torne indiferente entre trabalhar ou não na sua terra. Podemos definir o problema de maximização do lucro $s(f(x)) - c(x)$ como
+
+$$ \underset{x}{max} \ wx + K - c(x) $$
+
+O trabalhador será levado a escolher uma quantidade de trabalho $x$ que iguale o benefício marginal do seu esforço $w$, ou seja, a identidade $PM(x) = CMa(x)$ que é justamente o que você queria.
+
+\subsection*{Pegar ou Largar}
+
+Nesse modelo de negociação, você ofertará $B^*$ se ele aplicar $x^*$ de esforço e zero caso ele não atinga essa cota. Agora nos resta saber como determinar $B^*$. Uma boa maneira de fazer isso é pela igualdade entre $B^* - c(x^*) = \overline{u} $, ou seja, $B^* = \overline{u} + c(x^*)$.
+\\~\\
+Nesse arranjo, qualquer quantidade $x \neq x^*$ trará ao trabalhador um custo do esforço feito na terra $-c(x)$. Se ele aplicar um esforço de exatanebte $x^*$, terá como retorno de utiliade $\overline{u}$. Nesse caso, a estratégia dominante do trabalhador (se ele topar o contrato) será de $x^*$.
+
+\subsection*{Parceria}
+
+Os esquemas acima geram uma maximização do retorno ao dono da terra e geram para o trabalhador uma utilidade tão boa quanto ele poderia obter caso não trabalhasse. Mas existem sistemas que acabam criando incentivos que pioram o resultado ao invés de obter um resultado ótimo.
+\\~\\
+No sistema de parceria, você poderia propor que tanto você quanto ele receberá uma porcentagem fixa da produção. O trabalhador vai receber $s(x) = \alpha f(x) + F$ onde F é uma constante e $\alpha < 1$. Vamos ver o que esse sistema produz de incentivos.
+\\~\\
+O problema de maximização seria igual a 
+
+$$ \underset{x}{max}\ \alpha f(x) + F - c(x) $$
+
+A condição de maximização desse problema será igual a $\alpha PM(x) = CMa(x)$. Isso claramente não satisfaz a nossa condição de maximização de igualdade entre a produtividade marginal do esforço e o custo do trabalho para o trabalhador.
+\\~\\
+\textbf{Comentário:} Aqui temos dois exemplos de sistemas de incentivos. No primeiro vemos porque as ações que dão direito a voto em uma empresa S/A não são aquelas que pertencem aos debenturistas porque os acionistas recebem o restante do lucro menos a parcela dos debenturistas, isso gera o incentivo à decisões que retornem lucros maiores para a empresa. No segundo exemplo vemos as reformas econômicas na China onde o sistema de retorno para o trabalho agrícola onde o sistema de incentivos anterior era pior que o novo.
+
 \section{Informação Assimétrica}
+
+No nosso modelo de sistema de incentivos anterior nós deixamos de fora a característica de assimetria de informação entre o proprietário (que supomos ser você) e o trabalhador. O principal problema com o nosso modelo foi que o esforço é uma variável objetivamente mensurada.
+\\~\\
+No geral, o esforço será medido por algum sinal. Se usarmos a produção como esse sinal, estamos ignorando que existem muitos fatores além do esforço do trabalhador que podem impactar no resultado da produção final. E essa diferença pode ser grande o suficiente para fazer o trabalhador optar por mudar de emprego.
+\\~\\
+A assimetria está justamente no fato que o trabalhador sabe exatamente o montante de esforço empregado enquanto o proprietário só poderá observar algum sinal de esforço. O sistemas de incentivos deve levar em consideração essa assimetria para conseguir maximizar o retorno do proprietário.
+\\~\\
+Vejamos comos os sistemas analisados na seção passada se comportam na presença de assimetria de informação.
+
+\subsection*{Aluguel}
+
+Se o proprietário usar como cálculo de maximização o volume de produção e não o esforço, o trabalhador deverá supor o componente de aleatoriedade da produção para saber se vale ou não a pena pergar esse trabalho. Se o trabalhador for avesso ao risco, ele optará por outra oportunidade de trabalho que contenha menos variação no resultado do seu trabalho.
+
+\subsection*{Trabalho Assalariado}
+
+O problema do trabalho assalariado é que ele precisa ser mensurado pelo esforço e não por um sinal (como horas trabalhadas). Sem acesso ao real valor da quantidade de esforço, não será possível propor um salário que iguale o produto marginal ao custo marginal do trabalhador.
+
+\subsection*{Pegar ou Largar}
+
+Se o pagamento for feito em cima de um sinal do esforço e não da quantidade real, acabamos com o emsmo problema do trabalho assalariado. Se basearmos o pagamento pelo resultadod a produção, teremos o trabalhado como avalista de todo o risco. Será muito difícil achar um trabalhador disposto a correr esse risco de perder tudo por um fator que ele mesmo não pode ter nenhum controle.
+
+\subsection*{Parceria}
+
+Surpreendentemente, em um sistema de assimetria de informação, o sistema de parceria acaba por dividir o risco não controlável entre proprietário e trabalhador. O pagamento será feito em cima da quantidade produzida mas o trabalhador saberá que se houver algum problema não controlável, ele ainda receberá parte de produção.
+\\~\\
+A alteração do sistema de informação acabou por gerar uma mudança considerável na classificação dos nossos sistemas de insentivos. Tornando a parceria em um sistema aceitável tanto sob a ótica do trabalhador quanto do proprietário.\footnote{Muito legal, né?!}
+\\~\\
+\textbf{Comentário:} Aqui temos dois exemplos de sistemas de incentivos. O primeiro é o empresário Varszegi que conseguiu melhorar o trabalho no leste europeu pelo aumento do salário e por apenas contratar pessoas que não foram submetidas ao modelo de trabalho soviético. O segundo exemplo é o do Banco Grameen que criou um modeo de empréstimos que conseguiu combater os problemas de escala, seleção adversa e assimetria de informação de uma vez só ao criar um sistema de autocontrole em grupo para o cumprimento dos pagamentos dos empréstimos.
 
 \end{document}

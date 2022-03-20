@@ -37,7 +37,7 @@ plt.plot(q1,10-0.6*q1,color='green',label='TMS1')
 plt.plot(q1,7-0.417*q1,color='green',alpha=0.5,label='TMS2')
 plt.plot(q1,(10-0.6*q1)+(7-0.417*q1),color='blue',label='TMS1+TMS2')
 
-plt.plot(q1,2+q1**1.09)
+plt.plot(q1,2+q1**1.09,label='CMa')
 
 coord = [6.85,10.15]
 plt.annotate('   G*',coord)
