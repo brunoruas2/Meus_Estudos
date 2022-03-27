@@ -45,15 +45,15 @@
     - [x] O Oligopólio
     - [x] A Teoria dos Jogos
     - [x] Aplicações da Teoria dos Jogos
-- [ ] Tópicos Avançados
+- [x] Tópicos Avançados
     - [x] Economia Comportamental
     - [x] Trocas
     - [x] Produção
     - [x] Bem-Estar
     - [x] Externalidades
     - [ ] Tecnologia da Informação
-    - [ ] Bens Públicos
-    - [ ] Informação Assimétrica
+    - [x] Bens Públicos
+    - [x] Informação Assimétrica
 
 
 ## Matemática
