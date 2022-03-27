@@ -3437,19 +3437,151 @@
 \section[Trocas]{Trocas}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\huge Capítulo \normalsize
+	\huge Trocas \normalsize
 	\\~\\
+	\begin{multicols*}{2}		
 	\begin{itemize}
-		\item item
-		\item item
+		\item A Caixa de Edgeworth
+		\item As Trocas
+		\item Alocações Pareto Eficientes
+		\item Trocas de Mercado
+		\item Álgebra do Equilíbrio
+		\item Lei de Walras
+		\item Preços Relativos
+		\item Existência de Equilíbrio
+		\item Equilíbrio e Eficiência
+		\item Álgebra da Eficiência
+		\item Eficiência e Equilíbrio
+		\item 1º Teorema do Bem-Estar
+		\item 2º Teorema do Bem-Estar
 	\end{itemize}
+\end{multicols*}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Equilíbrio Geral}
+
+	Todos os equilíbrios que estudamos até agora se basearam apenas nas relações de preço e quantidade de determinado bem e nas equivalências entre as forças de Oferta e Demanda. 
+	\\~\\
+	O equilíbrio dentro de um mercado apenas é chamado de \textbf{equilíbrio parcial}.
+	\\~\\
+	Começaremos a partir de agora o estudo de equilíbrio \textit{entre} diferentes mercados. O nome dessa agenda de pesquisa é \textbf{equilíbrio geral}.
+
+\end{frame}
 
 \begin{frame}
-	\frametitle{}
+	\frametitle{Equilíbrio Geral}
 
-	
+	Como lidaremos com múltiplos mercados ao mesmo tempo, a análise se torna bastante complexa. Para tanto, vamos nos valer de algumas simplificações para facilitar a nossa vida:
+	\\~\\
+	\begin{itemize}
+		\item Mercados são competitivos, ou seja, não existe poder de mercado.
+		\item Número limitado de bens e consumidores\footnote{Mas saibam que as soluções que acharmos podem ser expandidas para $n$ bens e indivíduos.}.
+		\item Nesse primeiro momento, usaremos o sistema de trocas puras.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Caixa de Edgeworth}
+
+	Um economista inglês do século XIX chamado Francis Ysidro Edgeworth criou uma ferramenta analítica que usaremos para analisar os casos de trocas entre dois indivíduos. A famosa \textbf{caixa de Edgeworth}.
+	\\~\\
+	Suporemos a existência de duas pessoas, A e B, e dois bens, 1 e 2. A cesta do consumidor A será denotada por $X_A = (x_A^1, x_A^2)$, similarmente, a cesta de B será dada por $X_B = (x_B^1, x_B^2)$. 
+	\\~\\
+	Um par de cestas será chamado de \textbf{alocação}. Esse par indica a condição inicial de cada agente e é denotado por $W_A = (w_A^1,w_A^2)$ e $W_B = (w_B^1,w_B^2)$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Caixa de Edgeworth}
+
+	Uma alocação será chamada de \textbf{factível} se a quantidade total for igual a 
+
+	$$x_A^1 + x_B^1 = w_A^1 + w_B^1$$
+	$$x_A^2 + x_A^2 = w_A^2 + w_A^2$$
+	\\~\\
+	Após a etapa de trocas, chegaremos em outra alocação factível importante, a \textbf{alocação final}.
+	\\~\\
+	Veremos um exemplo da caixa de Edgeworth. Foram usadas funções de utilidade do tipo cobb-douglas com os coeficientes iguais a $0.5$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Caixa de Edgeworth}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.5]{cap32_1-caixa_edgeworth_1.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Caixa de Edgeworth}
+
+	Uma mudança aqui é que estamos representando as preferências de dois consumidores ao mesmo tempo. As curvas vermelhas são do consumidor A e, consequentemente, as curvas azuis são do consumidor B.
+	\\~\\
+	Isso significa que cada ponto nesse gráfico possui 4 coordenadas associadas $(w_A^1, w_A^2, w_B^1, w_B^2)$ para a dotação e $(x_A^1, x_A^2, x_B^1, x_B^2)$ para a alocação final. 
+	\\~\\
+	A simetria que podemos ver nas quantidades se dá pela definição das alocações factíveis, onde para um ganhar, outro tem que ceder.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Caixa de Edgeworth}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.5]{cap32_1-caixa_edgeworth_2.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Caixa de Edgeworth}
+
+	Esse ferramental analítico nos permite mostrar todas as alocações factíveis, as preferências dos consumidores, a dotação inicial e a alocação final. 
+	\\~\\
+	Tudo isso de uma vez só. 
+	\\~\\
+	Não foi sem motivo que esse modelo foi adotado.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Trocas}
+
+	Para entender o processo de trocas, precisamos analisar o que se passa no momento em que os consumidores se encontram nas suas dotações iniciais.
+	\\~\\
+	No ponto da dotação inicial da imagem, temos o encontro de duas curvas de indiferenças sendo uma para cada consumidor.
+	\\~\\
+	O consumidor A gostaria de abrir mão do bem 1 para poder consumir mais do bem 2, já no caso de B, ele quer fazer o oposto, abrir mão de parte da quantidade do bem 2 para consumir mais do bem 1. 
+	\\~\\
+	Toda a área entre as curvas vermelha e azul representa uma região de melhoria mútua.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Trocas}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.5]{cap32_11-caixa_edgeworth_1.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Trocas}
+
+	As trocas ocorrerão até o ponto em que nenhuma melhoria seria possível sem a piora de um deles. Esse ponto é onde existe tangência das curvas de indiferença.
+	\\~\\
+	No caso do exemplo, por acaso, o ponto final foi o da divisão igualitária, mas isso não é uma regra.
+	\\~\\
+	As variações das quantidades em termo das dotações para o consumidor A são dadas por $|x_A^1 - w_A^1|$ para o bem 1 e $|x_A^2 - w_A^2|$ para o bem 2. 
+	\\~\\
+	Similarmente, $|x_B^1 - w_B^1|$ e $|x_B^2 - w_B^2|$, para o consumidor B.
 
 \end{frame}
 
