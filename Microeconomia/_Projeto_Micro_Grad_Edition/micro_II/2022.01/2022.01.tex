@@ -3512,7 +3512,7 @@
 
 	\begin{figure}[H]
 		\centering
-		\colorbox{black}{\includegraphics[scale=0.5]{cap32_1-caixa_edgeworth_1.png}}
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_1-caixa_edgeworth_1.png}}
 	\end{figure}
 
 \end{frame}
@@ -3533,7 +3533,7 @@
 
 	\begin{figure}[H]
 		\centering
-		\colorbox{black}{\includegraphics[scale=0.5]{cap32_1-caixa_edgeworth_2.png}}
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_1-caixa_edgeworth_2.png}}
 	\end{figure}
 
 \end{frame}
@@ -3567,7 +3567,7 @@
 
 	\begin{figure}[H]
 		\centering
-		\colorbox{black}{\includegraphics[scale=0.5]{cap32_11-caixa_edgeworth_1.png}}
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_11-caixa_edgeworth_1.png}}
 	\end{figure}
 
 \end{frame}
@@ -3582,6 +3582,94 @@
 	As variações das quantidades em termo das dotações para o consumidor A são dadas por $|x_A^1 - w_A^1|$ para o bem 1 e $|x_A^2 - w_A^2|$ para o bem 2. 
 	\\~\\
 	Similarmente, $|x_B^1 - w_B^1|$ e $|x_B^2 - w_B^2|$, para o consumidor B.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	Podemos descrever uma alocação eficiente de Pareto como tendo a seguintes propriedades:
+	\\~\\
+	\begin{itemize}
+		\item Não existe maneira de melhorar a situação de ninguém.
+		\item Não existe maneira de melhorar a situação de ninguém, sem que isso implique na piora de outra pessoa.
+		\item Todas as trocas que gerariam algum ganho foram feitas.
+		\item Não existe opção de troca que seja mutualmente vantajosa.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	Essas características implicam que os pontos de eficiência sejam pontos em que as curvas de indiferença sejam tangentes entre si. 
+	\\~\\
+	Pois, se as curvas se cruzam, seria melhor para eles irem para algum ponto em uma curva mais alta, uma vez que, a região no interior do cruzamento de duas curvas é necessariamente, melhor para eles.
+	\\~\\
+	O conjunto de todos os pontos eficientes no sentido de Pareto, dentro de uma caixa de Edgeworth, é denominado de \textbf{conjunto de Pareto} ou \textbf{curva de contrato}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_3-caixa_edgeworth_1.png}}
+	\end{figure}		
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	Dada a utilidade qualquer do agente B fixa $\overline{u}$, o problema da maximização da utilidade total do mercado pode ser formalizado como
+
+	\begin{center}
+	\LARGE $\stackrel{max}{\text{\small $x_A^1,x_A^2,x_B^1,x_ B^2$}} \ \ \stackrel{u_A(x_A^1,x_A^2)}{\ }$
+	\\~\\
+	\normalsize de modo que $u_B(x_B^1,x_B^2) = \overline{u}$ \\
+	$x_A^1 + x_B^1 = w^1$ \\
+	$x_A^2 + x_B^2 = w^2$
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	Primeiramente, podemos escrever nosso problema em forma de uma Lagrangiana 
+
+	$$L(x_A^1,x_A^2,x_B^1,x_B^2) = u_A(x_A^1,x_A^2) - \lambda(u_B(x_B^1,x_B^2) - \overline{u}) $$ 
+	$$ - \mu_1(x_A^1 + x_B^1 - w^1) - \mu_2(x_A^2 + x_B^2 - w^2)$$
+
+	A novidade aqui é que temos 3 condições de restrições. Pode até assustar numa primeira vista, mas não é nada impossível.
+	\\~\\
+	O $\lambda$ é o nosso conhecido multiplicador Lagrangiano, só que aqui, aplicada para a utilidade de B e $\mu$ são os multiplicadores de Lagrange nas restrições dos recursos.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	As condições de primeira ordem para maximização da nossa Lagrangiana a respeito das 4 variáveis são:
+
+	$$\frac{\partial L}{\partial x_A^1} = \frac{\partial u_A}{\partial x_A^1} - \mu_1 = 0$$
+	$$\frac{\partial L}{\partial x_A^2} = \frac{\partial u_A}{\partial x_A^2} - \mu_2 = 0 $$
+	$$\frac{\partial L}{\partial x_B^1} = -\lambda \frac{\partial u_B}{\partial x_B^1} - \mu_1 = 0 $$
+	$$\frac{\partial L}{\partial x_B^2} = -\lambda \frac{\partial u_B}{\partial x_B^2} - \mu_2 = 0 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pausa}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{white}{\includegraphics[scale=0.425]{pausa.png}}
+	\end{figure}		
+
 
 \end{frame}
 
