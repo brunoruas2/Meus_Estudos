@@ -72,9 +72,25 @@
     - [x] Os Princípios da Divisão e da Casa dos Pombos
     - [x] Prova Combinatorial
 - [x] Prova Direta
+    - [x] Teoremas
+    - [x] Definições
+    - [x] Prova Direta
+    - [x] Usando casos
+    - [x] Lidando com casos similares 
 - [x] Prova Contra-Positiva
-- [ ] Prova por Contradição
+    - [x] Prova Contrapositiva 
+    - [x] Congruência dos Inteiros
+    - [x] A Escrita Matemática
+- [x] Prova por Contradição
+    - [x] Provando Proposições com Contradições
+    - [x] Provando Proposições Condicionais com Contradições
+    - [x] Combinando Técnicas
+    - [x] Algumas Palavras de Alerta 
 - [ ] Prova de Afirmações Não-Condicionais
+    - [x] Provas de "Se, e somente se"
+    - [x] Proposições equivalentes
+    - [x] Provas de Existência; Prova de Existência e Unicidade
+    - [ ] Provas Construtivas e não-Construtivas
 - [ ] Provas Envolvendo Conjuntos
 - [ ] Contraprova
 - [ ] Indução Matemática
