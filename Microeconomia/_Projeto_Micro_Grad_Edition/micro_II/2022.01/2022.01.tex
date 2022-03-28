@@ -3477,7 +3477,7 @@
 	\begin{itemize}
 		\item Mercados são competitivos, ou seja, não existe poder de mercado.
 		\item Número limitado de bens e consumidores\footnote{Mas saibam que as soluções que acharmos podem ser expandidas para $n$ bens e indivíduos.}.
-		\item Nesse primeiro momento, usaremos o sistema de trocas puras.
+		\item Nesse primeiro momento, usaremos o sistema de trocas puras sem produção.
 	\end{itemize}
 
 \end{frame}
@@ -3670,6 +3670,188 @@
 		\colorbox{white}{\includegraphics[scale=0.425]{pausa.png}}
 	\end{figure}		
 
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	Lá no capítulo sobre as preferências, nós aprendemos que a taxa marginal de substituição é obtida quando, dada uma função de utilidade $u(x_1,x_2)$, a derivada parcial de $u$ em função de $x_{1}$ divida pela derivada parcial de $u$ em relação à $x_{2}$. Ou seja
+	\\~\\
+	$$TMS_{A} = \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+	\\~\\
+	Se fizermos a mesma coisa para as equações 3 e 4, teremos
+	\\~\\
+	$$TMS_{B} = \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Eficientes no Sentido de Pareto}
+
+	Também sabemos que, no equilíbrio de um mercado competitivo, as TMS são iguais aos preços, ou seja
+
+	$$	\frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = \frac{ p_{1} }{ p_{2} } $$
+	\\~\\
+	Observe que temos uma equivalência entre os multiplicadores de Lagrange $\mu$ e os preços. Eles até têm nomes especiais, nesse contexto, podem ser chamamos de \textbf{preços-sombra} ou \textbf{preços de eficiência}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Até agora, sabemos que os agentes iniciam nas dotações inicias e terminam em algum ponto na linha de contrato.
+	\\~\\
+	Como saber "onde"\ exatamente eles vão optar por parar de trocar?
+	\\~\\
+	Para ter essa resposta, precisaremos adicionar mais informação sobre o comportamento dos nossos consumidores: Esse processo imitará o \textit{resultado} de um mercado competitivo\footnote{O resultado, não o processo.}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Vamos colocar um terceiro indivíduo no processo. Ele agirá com um "leiloeiro"\ para A e B.
+	\\~\\
+	O leiloeiro vai arbitrar um preço para A e B, e eles agirão a partir disso. 
+	\\~\\
+	Para cada preço arbitrado, os consumidores adaptarão as suas alocações finais aos preços de modo a maximizar suas utilidades. Nesse novo modelo, teremos  um novo dado, a dotação de preços $(p_1,p_2)$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Vamos ver quais informações nós temos disponíveis para trabalhar agora:
+	\begin{enumerate}
+		\item Uma dotação inicial de bens
+		\item Preços associados a cada bem
+		\item Preferências de cada consumidor
+	\end{enumerate}
+
+	Como vocês passaram por microeconomia I, sabem muito bem que tratamos essas variáveis no capítulo 5 (com a teoria da escolha) e no 9 (com as dotações). Né?!
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Quando o leiloeiro determina o preço dos bens no mercado, ele automaticamente determina a renda de cada um dos participantes
+
+	$$renda_A = w_A^1 p_1 + w_A^2 p_2$$
+
+	Isso quer dizer que podemos, a partir da dotação inicial, descrever a restrição orçamentária via equação
+
+	$$ x_A^1 p_1 + x_A^2 p_2 = renda_A$$
+	$$ x_A^1 p_1 + x_A^2 p_2 = w_A^1 p_1 + w_A^2 p_2$$
+	$$ x_A^2 = [(w_A^1 p_1 + w_A^2 p_2) - x_A^1 p_1]/p2$$
+
+	Visualmente, a restrição orçamentária na caixa se apresenta igual ao problema do consumidor no início do livro, a diferença é que essa restrição se refere aos dois indivíduos.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_1.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_2.png}}
+	\end{figure}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Vamos recapitular alguns conceitos da teoria do consumidor agora.
+	\\~\\
+	A \textbf{demanda bruta} é o quanto o consumidor quer consumir de um bem dada sua renda (é obtida pelo cálculo da maximização com restrição lá do capítulo 5). 
+	\\~\\
+	A \textbf{demanda líquida} ou \textbf{demanda excedente}, é dada pela equação $e_A^1 = x_A^1 - w_A^1$. Se $e_A1 < 0$, ele será um vendedor líquido, caso contrário, ele será um comprador. 
+	\\~\\
+	A partir de agora, usaremos o termo "demanda"\ para falar da \textbf{demanda bruta} e \textbf{demanda líquida ou excedente} caso queiramos falar desses outros conceitos.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Então podemos afirmar que as pessoas sempre serão capazes de chegar a um resultado em trocas uma vez que o leiloeiro defina os preços?
+	\\~\\
+	A resposta é não
+	\\~\\
+	É possível que os preços arbitrados não produzam soluções, ou seja, que as escolhas maximizadoras de cada consumidor não sejam compatíveis. Veja um caso onde modificamos os parâmetros da função de utilidade do consumidor A.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_3.png}}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	Nessa situação, os agentes não conseguirão fazer as trocas porque, ao nível de preços dado, eles maximizam em pontos de alocação diferentes. Nós dizemos, nesse casos, que o mercado está em \textbf{desequilíbrio}.
+	\\~\\
+	Quando o mercado está em desequilíbrio o leiloeiro poderá intervir modificando os preços. 
+	\\~\\
+	Ele poderá aumentar o preço para os casos de excesso de demanda e reduzir em casos de excesso de oferta (a oferta aqui é quando a demanda líquida é negativa). 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_4.png}}
+	\end{figure}
+		
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_5.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap32_4-caixa_edgeworth_6.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{As Trocas de Mercado}
+
+
+	O leiloeiro conseguiu uma configuração da alocações onde as demandas são iguais. Nesse ponto, a quantidade total que cada pessoa deseja comprar é igual à quantidade ofertada no mercado. O mercado está em \textbf{equilíbrio}. 
+	\\~\\
+	Damos o nome desse tipo de solução em homenagem ao economista francês que primeiro estudou a teoria do equilíbrio geral, Leon Walras. Portanto, chamamos essa alocação de \textbf{equilíbrio walrasiano}\footnote{Outros nomes que esse arranjo recebe são \textbf{equilíbrio de mercado} e \textbf{equilíbrio competitivo}.}.
 
 \end{frame}
 
