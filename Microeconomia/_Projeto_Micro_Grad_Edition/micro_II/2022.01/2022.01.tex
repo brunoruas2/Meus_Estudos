@@ -3489,7 +3489,7 @@
 	\\~\\
 	Suporemos a existência de duas pessoas, A e B, e dois bens, 1 e 2. A cesta do consumidor A será denotada por $X_A = (x_A^1, x_A^2)$, similarmente, a cesta de B será dada por $X_B = (x_B^1, x_B^2)$. 
 	\\~\\
-	Um par de cestas será chamado de \textbf{alocação}. Esse par indica a condição inicial de cada agente e é denotado por $W_A = (w_A^1,w_A^2)$ e $W_B = (w_B^1,w_B^2)$.
+	Um par de cestas será chamado de \textbf{alocação}. A \textbf{dotação inicial} é uma alocação que indica a condição inicial de cada agente e é denotado por $W_A = (w_A^1,w_A^2)$ e $W_B = (w_B^1,w_B^2)$.
 
 \end{frame}
 
@@ -3676,7 +3676,9 @@
 \begin{frame}
 	\frametitle{Alocações Eficientes no Sentido de Pareto}
 
-	Lá no capítulo sobre as preferências, nós aprendemos que a taxa marginal de substituição é obtida quando, dada uma função de utilidade $u(x_1,x_2)$, a derivada parcial de $u$ em função de $x_{1}$ divida pela derivada parcial de $u$ em relação à $x_{2}$. Ou seja
+	Lá no capítulo sobre as preferências, nós aprendemos que a taxa marginal de substituição é obtida quando, dada uma função de utilidade $u(x_1,x_2)$, a derivada parcial de $u$ em função de $x_{1}$ divida pela derivada parcial de $u$ em relação à $x_{2}$.
+	\\~\\
+	Se pegarmos as equações 1 e 2 e dividirmos, teremos que
 	\\~\\
 	$$TMS_{A} = \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
 	\\~\\
@@ -3693,7 +3695,9 @@
 
 	$$	\frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = \frac{ p_{1} }{ p_{2} } $$
 	\\~\\
-	Observe que temos uma equivalência entre os multiplicadores de Lagrange $\mu$ e os preços. Eles até têm nomes especiais, nesse contexto, podem ser chamamos de \textbf{preços-sombra} ou \textbf{preços de eficiência}.
+	Observe que temos uma equivalência entre os multiplicadores de Lagrange $\mu$ e os preços. 
+	\\~\\
+	Por causa disso, eles até têm nomes especiais, nesse contexto, podem ser chamamos de \textbf{preços-sombra} ou \textbf{preços de eficiência}.
 
 \end{frame}
 
@@ -3713,7 +3717,7 @@
 
 	Vamos colocar um terceiro indivíduo no processo. Ele agirá com um "leiloeiro"\ para A e B.
 	\\~\\
-	O leiloeiro vai arbitrar um preço para A e B, e eles agirão a partir disso. 
+	O leiloeiro vai arbitrar um preço para A e B e eles agirão a partir disso. 
 	\\~\\
 	Para cada preço arbitrado, os consumidores adaptarão as suas alocações finais aos preços de modo a maximizar suas utilidades. Nesse novo modelo, teremos  um novo dado, a dotação de preços $(p_1,p_2)$.
 
@@ -3728,7 +3732,8 @@
 		\item Preços associados a cada bem
 		\item Preferências de cada consumidor
 	\end{enumerate}
-
+	\ 
+	\\~\\
 	Como vocês passaram por microeconomia I, sabem muito bem que tratamos essas variáveis no capítulo 5 (com a teoria da escolha) e no 9 (com as dotações). Né?!
 
 \end{frame}
@@ -3849,7 +3854,9 @@
 	\frametitle{As Trocas de Mercado}
 
 
-	O leiloeiro conseguiu uma configuração da alocações onde as demandas são iguais. Nesse ponto, a quantidade total que cada pessoa deseja comprar é igual à quantidade ofertada no mercado. O mercado está em \textbf{equilíbrio}. 
+	O leiloeiro conseguiu uma configuração da alocações onde as demandas são iguais. Nesse ponto, a quantidade total que cada pessoa deseja comprar é igual à quantidade ofertada no mercado. 
+	\\~\\
+	O mercado está em \textbf{equilíbrio}. 
 	\\~\\
 	Damos o nome desse tipo de solução em homenagem ao economista francês que primeiro estudou a teoria do equilíbrio geral, Leon Walras. Portanto, chamamos essa alocação de \textbf{equilíbrio walrasiano}\footnote{Outros nomes que esse arranjo recebe são \textbf{equilíbrio de mercado} e \textbf{equilíbrio competitivo}.}.
 
@@ -3921,6 +3928,51 @@
 	Essa é uma \textit{identidade}. Isso quer dizer que temos essa relação para qualquer par de preços, mesmo os que não produzam um equilíbrio.
 	\\~\\
 	A demonstração decorre do fato que as demandas estão sujeitas as restrições orçamentárias
+
+	$$p_1x_A^1(p_1,p_2) + p_2x_A^2(p_1,p_2) \equiv p_1w_A^1 + p_2w_A^2$$
+	$$p_1x_B^1(p_1,p_2) + p_2x_B^2(p_1,p_2) \equiv p_1w_B^1 + p_2w_B^2$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Lei de Walras}
+
+	Trazendo as dotações para o lado esquerdo da equação
+	$$p_1[x_A^1(p_1,p_2) - w_A^1] + p_2[x_A^2(p_1,p_2) - w_A^2] \equiv 0$$
+	$$p_1[x_B^1(p_1,p_2) - w_B^1] + p_2[x_B^2(p_1,p_2) - w_B^2] \equiv 0$$
+	\\~\\
+	Reescrevendo usando a notação da demanda excedente
+	$$p_1[e_A^1(p_1,p_2)] + p_2[e_A^2(p_1,p_2)] \equiv 0$$
+	$$p_1[e_B^1(p_1,p_2)] + p_2[e_B^2(p_1,p_2)] \equiv 0$$
+
+	Essas equações nos dizem que o \textit{valor} (ou seja, preço vezes quantidade do bem 1 + preço vezes quantidade do bem 2) da demanda líquida de cada agente é igual a zero.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Lei de Walras}
+
+	Se somarmos as duas identidades, chegaremos a
+
+	$$p_1[e_A^1(p_1,p_2)] + p_2[e_A^2(p_1,p_2)] + 
+	p_1[e_B^1(p_1,p_2)] + p_2[e_B^2(p_1,p_2)] \equiv 0$$
+	$$p_1[e_A^1(p_1,p_2) + e_B^1(p_1,p_2)] + p_2[e_A^2(p_1,p_2) + e_B^2(p_1,p_2)] \equiv 0$$
+	\\~\\
+	Veja que os termos dentro dos colchetes são exatamente as funções de demanda excedente agregadas.Ou seja
+
+	$$p_1[z_1(p_1,p_2)] + p_2[z_2(p_1,p_2) ] \equiv 0 \ \blacksquare$$
+
+	Precisamente, a lei de Walras.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pausa}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{white}{\includegraphics[scale=0.425]{pausa.png}}
+	\end{figure}		
 
 \end{frame}
 
