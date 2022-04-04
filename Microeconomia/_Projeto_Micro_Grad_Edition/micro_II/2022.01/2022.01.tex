@@ -3976,6 +3976,263 @@
 
 \end{frame}
 
+\begin{frame}
+	\frametitle{A lei de Walras}
+
+	Voltemos à nossa afirmação sobre a função de demanda excedente agregada:
+
+	$$z_1(p_1^*,p_2^*) = e_A^1(p_1^*,p_2^*) + e_B^1(p_1^*,p_2^*) = 0$$
+	$$z_2(p_1^*,p_2^*) = e_A^2(p_1^*,p_2^*) + e_B^2(p_1^*,p_2^*) = 0$$
+
+	Com a lei de Walras, sabemos que:
+
+	$$p_1 z_1(p_1,p_2) + p_2 z_2(p_1,p_2) \equiv 0$$
+
+	Ou seja, se $z_1(p_1^*,p_2^*) = 0$, pela lei de Walras, será verdade que
+	
+	$$ 0 + p_2 z_2(p_1,p_2) = 0 $$
+
+	Para qualquer $p_2 \geq 0$ teremos que
+
+	$$z_2(p_1,p_2) = 0$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A lei de Walras}
+
+	``Ok, professor. Eu entendi esse argumento todo mas onde a gente vai chegar com tudo isso?''
+	\\~\\
+	O que acabamos de ver é que, em um mercado de 2 bens e 2 consumidores e dado o par de preços ($p_1^*,p_2^*$), se a função demanda excedente agregada é igual a zero para o bem 1, a função demanda excedente agregada será \textbf{necessariamente} igual a zero para o bem 2.
+	\\~\\
+	O sinistro é que podemos generalizar esse achado para qualquer quantidade de bens. Em um mercado com $k$ bens e com o vetor de preços ótimos $(p_1^*,p_2^*,...,p_{k-1}^*,p_k^*)$, se as funções demandas excedentes agregadas dos $k-1$ primeiros bens for zero, a função demanda excedente agregada do $k$ bem também será zero.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preços Relativos}
+
+	Como podemos encontrar $k$ preços de equilíbrio olhando apenas para $k - 1$ mercados?
+	\\~\\
+	A verdade é que só existem $k - 1$ preços independentes.
+	\\~\\
+	Como as relações no modelo de trocas se dão pela equivalência entre as dotações iniciais e as preferências.
+	\\~\\
+	O que importa entre os preços não é seu \textbf{valor nominal} e sim seu valor \textbf{relativo}. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preços Relativos}
+
+	No exemplo de como o leiloeiro aumentou o preço do bem 2 afim de chegar no equilíbrio do mercado, nós saímos da relação de preço $p_1 = p_2 = 1$ para uma relação $2p_1 = p_2$ (ou seja, $p_2$ é o dobro de $p_1$).
+	\\~\\
+	Entretanto, nós chegaríamos no mesmo equilíbrio se o leiloeiro \textit{reduzisse} preço do bem 1 para 0,5.
+	\\~\\
+	Isso nos permite escolher um dos preços como um \textbf{numerário}.
+	\\~\\
+	Bastando multiplicar todos os $k$ preços por $1/p_k$, chegaremos a um sistema com $k - 1$ preços (que agora estarão dividos por $p_k$) e $k - 1$ equações.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preços Relativos}
+
+	A generalização da lei de Walras se configurará em algo como
+
+	$$\frac{p_1}{p_k}z_1(p_1,p_2,...,p_{k-1},1) \ + $$
+	$$\frac{p_2}{p_k}z_2(p_1,p_2,...,p_{k-1},1) \ + $$ 
+	$$ \vdots $$
+	$$\frac{p_{k-1}}{p_k}z_{k - 1}(p_1,p_2,...,p_{k-1},1) \ + $$
+	$$z_{k}(p_1,p_2,...,p_{k-1},1) = 0$$
+		
+	A conclusão é que o modelo de equilíbrio geral é um modelo de equilíbrio de \textbf{preços relativos}.
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Existência de Equilíbrio}
+
+	A resposta para a pergunta ``Sempre existe um equilíbrio walrasiano para uma economia de trocas qualquer''\ geralmente será não. 
+	\\~\\
+	Os cientistas trabalharam para responder uma versão um pouco diferente dessa pergunta: ``Sob quais condições, é garantido que exista algum equilíbrio em uma economia de trocas?''.
+	\\~\\
+	A resposta (versão graduação) para essa pergunta é que a função de demanda excedente deve ser uma \textbf{função contínua}.
+	\\~\\
+	Uma função é chamada de contínua se \textit{pequenas variações} na suas variáveis independentes resultam em \textit{pequenas variações} variáveis dependentes. Ou seja, não temos \textit{grandes saltos} ou \textit{quebras} no gráfico dessas funções.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Existência de Equilíbrio}
+
+	Agora precisamos saber quais são as condições para que a função de demanda excedente seja contínua.
+	\\~\\
+	No geral, podemos resumir em dois tipos de condições:
+
+	\begin{itemize}
+		\item A primeira é que as funções de demanda individuais sejam contínuas (que por sua vez tem como condição que as preferências dos consumidores sejam convexas).
+		\item A segunda é que, mesmo que algumas pessoas tenham comportamento descontínuo, se essas forem pequenas em relação ao total do mercado, a função de demanda ainda pode ser contínua (que é um pressuposto bem razoável em se tratando de um mercado competitivo).
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Equilíbrio e Eficiência}
+
+	Como os pontos da curva de contrato são os pontos onde as curvas de utilidade mais altas, ou seja, com maior valor, tangenciam a curva de dotação dos agentes, não há possibilidade de algum deles obter qualquer melhoria preferida pois a escolha de maior utilidade já foi satisfeita dada a restrição orçamentária.
+	\\~\\
+	Podemos demonstrar essa afirmação de maneira algébrica.
+	\\~\\
+	Para tal, vamos partir da afirmação oposta ao que queremos provar: ``Vamos partir da hipótese de que o equilíbrio de mercado \textbf{não} é eficiente no sentido de Pareto.''
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Álgebra da Eficiência}
+
+	Dizer que o equilíbrio de mercado não é eficiente no sentido de Pareto implica na existência de uma alocação possível $(y_A^1,y_A^2,$ $y_B^1,y_B^2)$ de modo que
+
+	$$y_A^1 + y_B^1 = w_A^1 + w_ B^1$$
+	$$y_A^2 + y_B^2 = w_A^2 + w_ B^2$$
+
+	onde, se essa alocação y for preferida à outra alocação x será verdade que
+
+	$$(y_A^1 + y_A^2) \succ_A (x_A^1 + x_A^2)$$
+	$$(y_B^1 + y_B^2) \succ_B (x_B^1 + x_B^2)$$
+
+	As primeiras equações nos dizem que a alocação y é factível. As segundas relações nos dizem que os agentes A e B preferem a alocação y em detrimento da alocação x.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Álgebra da Eficiência}
+
+	Pelo conceito de equilíbrio de mercado, os agentes estão nas alocações que maximizam a sua utilidade dada sua restrição orçamentária.
+	\\~\\
+	Isso implica em dizer que, se y é preferido ao equilíbrio, essa alocação precisa ser, obrigatoriamente, mais cara que a alocação do equilíbrio, ou seja, está acima da restrição orçamentária de cada agente.
+	\\~\\
+	Esse argumento pode ser traduzido na forma algébrica
+
+	$$p_1y_A^1 + p_2y_A^2 > p_1w_A^1 + p_2w_A^2$$
+	$$p_1y_B^1 + p_2y_B^2 > p_1w_B^1 + p_2w_B^2$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Álgebra da Eficiência}
+
+	Somando as duas inequações, teremos
+
+	$$p_1(y_A^1 + y_B^1) + p_2(y_A^2 + y_B^2) > p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2)$$
+
+	Mas se voltarmos nas duas primeiras equações e substituirmos o lado esquerda dessa inequação, chegaremos ao resultado
+
+	$$p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2) > p_1(w_A^1 + w_ B^1) + p_2(w_A^2 + w_ B^2)$$
+
+	O que é uma contradição, mas isso é exatamente o resultado que queríamos chegar.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Álgebra da Eficiência}
+
+	Como derivamos uma contradição partindo da negativa da nossa hipótese, podemos concluir que a hipótese original é verdadeira.
+	\\~\\
+	Desse modo, podemos afirmar que os equilíbrios de mercado são eficientes no sentido de Pareto.
+	\\~\\
+	Essa conclusão é tão importante que a comunidade científica denominou como \textbf{Primeiro Teorema da Teoria Econômica do Bem-Estar}.
+	\\~\\
+	Esse teorema afirma que as alocações obtidas em um mercado competitivo serão eficientes no sentido de Pareto.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Álgebra da Eficiência}
+
+	Atente para o fato que o teorema não afirma nada sobre outras características como, por exemplo, a distribuição da renda. A prova disso é que a alocação 100\% para o agente A e 0\% pra o B é eficiente no sentido de Pareto. 
+	\\~\\
+	O resultado pode até não ser socialmente aceitável ou desejável, mas será necessariamente eficiente.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Eficiência e Equilíbrio}
+
+	Será possível afirmar que toda alocação eficiente no sentido de Pareto pode ser alcançada por um conjunto de preços definidos por um mercado competitivo? A resposta é sim, mas depende de algumas condições.
+	\\~\\
+	Um equilíbrio de mercado é o ponto onde as curvas de indiferença dos agentes tangencia a restrição orçamentária em \textbf{um único ponto}.
+	\\~\\
+	O problema é que um equilíbrio de Pareto não tem nenhuma relação com a restrição orçamentária. Então, sempre que as curvas de indiferença são tangentes, temos um equilíbrio de Pareto.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Eficiência e Equilíbrio}
+
+	A nossa condição reside justamente na relação entre esses dois conceitos.
+	\\~\\
+	Se as preferências dos agentes são \textbf{convexas}, para cada equilíbrio de Pareto, haverá alguma lista de preços que possa determinar aquela alocação.
+	\\~\\
+	Essa condição (de convexidade) das preferências recebeu o nome de \textbf{Segundo Teorema do Bem-Estar}.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Implicações do 1º Teorema do Bem-Estar}
+
+	Existem alguns pressupostos que fazem parte do teorema que merecem ser explicitados para melhor compreensão:
+	\\~\\
+	\begin{itemize}
+		\item Os agentes só se preocupam com seu consumo de bens e não com a escolha dos demais agentes. Não há \textbf{externalidade no consumo}.
+
+		\item Os agentes agem de maneira competitiva. Nós já vimos que o modelo de dois consumidores é apenas uma ferramenta didática.
+
+		\item O teorema só é relevante em um contexto de equilíbrio competitivo. Se temos poder de mercado esse teorema não se aplicaria.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Implicações do 1º Teorema do Bem-Estar}
+
+	Esses pressupostos constituem um estrutura poderosa (e também uma delimitação clara) para a utilização do modelo competitivo de alocação.
+	\\~\\
+	Sempre que tivermos relativa confiança que determinado mercado é competitivo, os consumidores só precisarão saber os preços para alocar suas dotações de maneira eficiente.
+	\\~\\
+	Essa redução da necessidade de informação para a tomada da decisão de consumo é um forte argumento para adoção desse modelo quando precisamos alocar recursos escassos.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Implicações do 2º Teorema do Bem-Estar}
+
+	O segundo teorema afirma que, se as preferências são convexas, podemos alcançar qualquer alocação eficiente de Pareto pelo sistema de preços.
+	\\~\\
+	A implicação poderosa desse teorema é que as discussões de eficiência e distrição da riqueza podem ser separadas. Os preços alocam a renda via mecanismo de escassez relativa. Já a distribuição diz respeito a quantidade que os agentes poderão comprar.
+	\\~\\
+	Se um determinado contexto é muito desigual na dotação inicial, poderíamos redistribuir parte da dotação de um agente para o outro.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Implicações do 2º Teorema do Bem-Estar}
+
+	O que o segundo teorema nos afirma é que o equilíbrio alcançado a partir dessa nova dotação é eficiente no sentido de Pareto.
+	\\~\\
+	Perceba então que, se a sociedade tem como meta a redução de desigualdade entre as pessoas, uma mudança na \textbf{dotação} (e consequentemente na renda) via transferência entre os agentes produziria uma alocação eficiente de Pareto.
+	\\~\\
+	Do ponto  de vista teórico, a realocação das dotações não produzirá distorções no mercado.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Implicações do 2º Teorema do Bem-Estar}
+
+	Não é incomum que, em busca de reduzir a desigualdade, as discussões de política econômica defendam uma intervenção nas decisões de preços.
+	\\~\\
+	Enquanto os impostos baseados na dotação de bens dos consumidores não geram ineficiência, os impostos que dependem das escolhas dos consumidores (baseados no consumo) geram ineficiência.
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Produção]{Produção}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
