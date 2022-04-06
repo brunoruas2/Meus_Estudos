@@ -2693,19 +2693,19 @@ Se não nos atrapalhar que as soluções de maximização sejam funções dos mu
 \\~\\
 Lá no capítulo sobre as preferências, nós aprendemos que a taxa marginal de substituição é obtida quando, dada uma função de utilidade $u(x_1,x_2)$, a derivada parcial de $u$ em função de $x_{1}$ divida pela derivada parcial de $u$ em relação à $x_{2}$. Ou seja
 
-$$TMS_{A} = \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+$$TMS_{A} = - \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = - \frac{\mu_{1} }{ \mu_{2} }$$
 
 Que é o que obtemos quando dividimos a primeira equação pela segunda.
 \\~\\
 Se fizermos a mesma coisa para as equações 3 e 4, teremos
 
-$$TMS_{B} = \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = \frac{\mu_{1} }{ \mu_{2} }$$
+$$TMS_{B} = - \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = - \frac{\mu_{1} }{ \mu_{2} }$$
 
 A explicação dessa igualdade já é conhecida: no equilíbrio, as taxas marginais de substituição são iguais para os dois agentes.
 \\~\\
 Também sabemos que, no equilíbrio de um mercado competitivo, as TMS são iguais aos preços, ou seja
 
-$$	\frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = \frac{ p_{1} }{ p_{2} } $$
+$$	- \frac{\partial u_A / \partial x_{A}^1 }{\partial u_A / \partial x_{A}^2} = - \frac{\partial u_B / \partial x_{B}^1 }{\partial u_B / \partial x_{B}^2} = - \frac{ p_{1} }{ p_{2} } $$
 
 Observe que temos uma equivalência entre os multiplicadores de Lagrange $\mu$ e os preços. Eles até têm nomes especiais, nesse contexto, podem ser chamamos de \textbf{preços-sombra} ou \textbf{preços de eficiência}.
 \\~\\
@@ -2951,7 +2951,7 @@ Como o próprio professor Kreps expõe no livro dele a resposta para a pergunta 
 \\~\\
 A continuidade é uma característica das funções e possui um punhado de definições existentes. O professor Varian coloca uma versão bem resumida que vamos usar (mas eu também vou colocar uma um pouco mais formal como comentário opcional). Uma função é chamada de contínua se \textit{pequenas variações} na suas variáveis independentes resultam em \textit{pequenas variações} variáveis dependentes. Ou seja, não temos \textit{grandes saltos} ou \textit{quebras} no gráfico dessas funções.
 \\~\\
-\textbf{Comentário Opcional:} Uma definição mais formal de função contínua (a definição de Cauchy) pode ser achada na página 534 do livro "Advanced Microeconomics"\ do professor Jehle. Seja $D$ um subconjunto de $\mathbb{R}^m$ e seja $f : D \shortrightarrow \mathbb{R}^n$. Então, a função f será contínua se, no ponto, $\mathbf{x} \in D$ se, para todos os $\epsilon > 0$, existir um $\delta >0$ de modo que $f(B_{\delta}(\mathbf{x}^0 \cap D) \subset B_{\epsilon}(f(\mathbf{x}^0)$.\footnote{Isso aqui é para vocês terem um gostinho de como é o conteúdo nos níveis mais avançados.}
+\textbf{Comentário Opcional:} Uma definição mais formal de função contínua (a definição de Cauchy) pode ser achada na página 534 do livro "Advanced Microeconomics"\ do professor Jehle. Seja $D$ um subconjunto de $\mathbb{R}^m$ e seja $f : D \shortrightarrow \mathbb{R}^n$. Então, a função f será contínua se, no ponto, $\mathbf{x} \in D$ se, para todos os $\epsilon > 0$, existir um $\delta >0$ de modo que $f(B_{\delta}(\mathbf{x}^0 \cap D)) \subset B_{\epsilon}(f(\mathbf{x}^0)$.\footnote{Isso aqui é para vocês terem um gostinho de como é o conteúdo nos níveis mais avançados.}
 \\~\\
 Mas agora precisamos saber quais são as condições para que a função de demanda excedente seja contínua. Temos dois tipos de condições: 
 \begin{itemize}
@@ -3289,15 +3289,17 @@ $$ \frac{\partial L}{\partial x^2_A} = \frac{\partial u_A}{\partial x^2_A} - \mu
 $$ \frac{\partial L}{\partial x^1_B} = -\lambda\frac{\partial u_B}{\partial x^1_B} - \mu\frac{\partial T}{\partial X^1} = 0 $$
 $$ \frac{\partial L}{\partial x^2_B} = -\lambda\frac{\partial u_B}{\partial x^2_B} - \mu\frac{\partial T}{\partial X^2} = 0 $$
 
-Dividindo a primeira equação pela segunda e rearranjando chegamos a
+Dividindo a primeira equação pela segunda, multiplicando ambos os lados por -1 e rearranjando chegamos a
 
-$$ \frac{\partial u_A/\partial x^1_A}{\partial u_A/\partial x^2_A} = \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
+$$ - \frac{\partial u_A/\partial x^1_A}{\partial u_A/\partial x^2_A} = - \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
 
 Fazendo a mesma coisa para as equações três e quatro
 
-$$ \frac{\partial u_B/\partial x^1_B}{\partial u_B/\partial x^2_B} = \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
+$$ - \frac{\partial u_B/\partial x^1_B}{\partial u_B/\partial x^2_B} = - \frac{\partial T/\partial X^1}{\partial T/\partial X^2} $$
 
-Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente\footnote{Atente para o fato que as TMS são negativas.}. No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais entre si e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
+Olha só que resultado interessante! No lado esquerdo das duas equações finais temos exatamente as taxas marginais de substituição de cada agente\footnote{Atente para o fato que as TMS são negativas.}.
+\\~\\
+No lado direito, temos aquela relação entre a função de transformação e a taxa marginal de transformação. Podemos ver então que, para o equilíbrio de Pareto, as TMS de cada agente são iguais entre si e, simultaneamente, esse valor da TMS é igual ao valor da TMT.
 
 \section{Náufragos S.A.}
 

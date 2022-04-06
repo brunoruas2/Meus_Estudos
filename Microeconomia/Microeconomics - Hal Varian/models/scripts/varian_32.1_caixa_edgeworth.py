@@ -95,6 +95,7 @@ plt.plot(q1,dotacao(20,80,q1,p1,p2),color = 'white') # curva de dotacao
 coord = [20,80] # aqui os eixos estao invertidos Y e X
 plt.plot(coord[0],coord[1],marker='o',color='white')
 plt.annotate('  Dotação\n  Inicial',(coord[0],coord[1]))
+
 '''
 coord = [50,50] # aqui os eixos estao invertidos Y e X
 plt.plot(coord[0],coord[1],marker='o',color='white')
@@ -122,6 +123,7 @@ ax.text(
     coord[0], coord[1], "Bem 1 para consumidor A", ha="center", va="center", rotation=0, size=10,
     bbox=dict(boxstyle="rarrow,pad=0.3", fc="darkred", ec="darkred", lw=1))
 '''
+
 ax.yaxis.tick_right()
 ax.yaxis.set_ticks_position('both')
 ax.xaxis.tick_top()
