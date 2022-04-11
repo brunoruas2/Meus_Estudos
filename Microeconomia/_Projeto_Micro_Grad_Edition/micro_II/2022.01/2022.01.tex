@@ -4235,19 +4235,161 @@
 \section[Produção]{Produção}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\huge Capítulo \normalsize
+	\huge Produção \normalsize
 	\\~\\
-	\begin{itemize}
-		\item item
-		\item item
-	\end{itemize}
+	\begin{multicols*}{2}		
+		\begin{itemize}
+			\item Economia Robinson
+			\item Crusoé S.A.
+			\item O Problema da Empresa
+			\item O Problema de Robinson
+			\item Produção e consumo
+			\item Tecnologias
+			\item 1º Teorema do Bem Estar
+			\item 2º Teorema do Bem Estar
+			\item Possibilidades de Produção
+			\item Vantagem Comparativa
+			\item Eficiência de Pareto
+			\item Naufrágios S.A.
+			\item Consumo
+			\item Alocação Descentralizada
+		\end{itemize}
+	\end{multicols*}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Equilíbrio Geral}
+
+	No modelo anterior nós trabalhamos apenas o processo de trocas a partir de uma dotação inicial dos agentes.
+	\\~\\
+	Mas se nosso objetivo é simular o comportamento agregado da sociedade, é bem comum supor que devemos, também, nos esforçar para compreender o processo de decisão envolvido na resposta à pergunta \textbf{quanto produzir?}.
+	\\~\\
+	Nosso modelo será reduzido para darmos enfoque apenas aos grandes traços da teoria:
+	\begin{itemize}
+		\item Um único consumidor
+		\item Uma única empresa
+		\item Dois bens
+	\end{itemize}
+
+\end{frame}
 
 \begin{frame}
-	\frametitle{}
+	\frametitle{A Economia de Robinson Crusoé}
 
-	
+	Chamaremos o nosso único agente de Robinson Crusoé. Como existe apenas 1 ser no nosso modelo, ele terá de fazer tudo: Ele produzirá todo o montante de alimento (cocos) e será o único consumidor.
+	\\~\\
+	Desse modo, ele pode escolher, para cada período de tempo, entre gastar energia coletando cocos ou descansar na praia.
+	\\~\\
+	Suporemos que a função de produção de cocos tenha rendimentos marginais decrescentes ao longo do tempo trabalhado.
+	\\~\\
+	O ponto de maximização ocorre na tangência entre a função de produção e a curva de indiferença mais alta.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A Economia de Robinson Crusoé}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap33_1-economia_robinson.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Crusoé S.A.}
+
+	Agora vamos viajar pesado na imaginação e criaremos uma empresa dentro desse modelo: a Crusoé S.A. (sim, o Robinson é o único acionista)
+	\\~\\
+	Ao colocarmos uma empresa maximizadora de lucros dentro do nosso modelo, novas variáveis surgem como, por exemplo, salário, lucro e preço.
+	\\~\\
+	O objetivo é construir um modelo de equilíbrio geral que seja capaz de igualar, simultaneamente, os preços no mercado de bens e no mercado de trabalho.
+	\\~\\
+	Definiremos o coco como o nosso numerário. Isso quer dizer que os salários, custos e lucros serão analisados sempre em função da quantidade de cocos. 
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Problema da Empresa}
+
+	Como toda empresa, a Crusoé S.A. quer maximizar o lucro $\pi$.
+	\\~\\
+	A receita da empresa será dada pela quantidade de cocos produzida $C$ (já que o coco é o nosso numerário).
+	\\~\\
+	Para produzir, terá que comprar mão de obra no mercado $L$ e pagar uma quantidade $w$ de salário.
+	\\~\\
+	De modo algébrico, podemos resumir como:
+	$$ \pi = C - wL $$
+	$$ C = \pi + wL $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Problema da Empresa}
+
+	Não é difícil ver que essa função função de primeiro grau é uma curva de \textbf{isolucro} lá do capítulo 20.
+	\\~\\
+	A partir de uma nível inicial de lucro $\pi^*$, a quantidade de cocos que manteria o lucro constante após o pagamento da mão de obra.
+	\\~\\
+	A maximização nesse caso, ocorre no ponto onde a reta de isolucro intercepta a curva da função de produção.
+	\\~\\
+	Ponto onde sabemos a quantidade ótima de trabalho $L$ que será adquirida ao custo de $wL$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Problema da Empresa}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap33_3-max_lucro.png}}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Problema de Robinson}
+
+	Após receber seus dividendos, Robinson tem que escolher entre usufruir dos cocos e descansar ou trabalhar na coleta de mais cocos (recebendo seu devido salário).
+	\\~\\
+	Nós já vimos no capítulo 9 o problema de maximização da utilidade com trabalho.
+	\\~\\
+	Com esse ponto, conseguimos determinar a oferta de trabalho pela igualdade entre a TMS do consumo pelo lazer e o salário. Exatamente o que vimos no capítulo 9.
+	\\~\\	
+	Robinson escolherá ofertar a quantidade de trabalho que produza a maior utilidade possível dada sua restrição orçamentária.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{O Problema de Robinson}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.6]{cap33_4-max_trabalho.png}}
+	\end{figure}	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção e Consumo}
+
+	Agora que sabemos como Robinson se comportará tanto como acionista da Crosué S.A. e como trabalhador.
+	\\~\\
+	Podemos colocar esses dois equilíbrios num mesmo gráfico para ver como as variáveis se comportam juntas.
+	\\~\\
+	Usando nosso instrumento de preços, chegaremos na mesma situação de escolha da primeira seção desse capítulo.
+	\\~\\
+	Robinson acaba produzindo o ponto cuja produtividade marginal do trabalho\footnote{Que é a inclinação da função de produção.} é igual ao salário.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção e Consumo}
+
+	\begin{figure}[H]
+		\centering
+		\colorbox{black}{\includegraphics[scale=0.5]{cap33_5-equilibrio.png}}
+	\end{figure}
 
 \end{frame}
 
@@ -4257,10 +4399,11 @@
 \begin{frame}
 	\huge Capítulo \normalsize
 	\\~\\
-	\begin{itemize}
-		\item item
-		\item item
-	\end{itemize}
+	\begin{multicols*}{2}		
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\end{multicols*}
 \end{frame}
 
 
@@ -4277,10 +4420,11 @@
 \begin{frame}
 	\huge Capítulo \normalsize
 	\\~\\
-	\begin{itemize}
-		\item item
-		\item item
-	\end{itemize}
+	\begin{multicols*}{2}		
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\end{multicols*}
 \end{frame}
 
 
@@ -4297,10 +4441,11 @@
 \begin{frame}
 	\huge Capítulo \normalsize
 	\\~\\
-	\begin{itemize}
-		\item item
-		\item item
-	\end{itemize}
+	\begin{multicols*}{2}		
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\end{multicols*}
 \end{frame}
 
 
@@ -4317,10 +4462,11 @@
 \begin{frame}
 	\huge Capítulo \normalsize
 	\\~\\
-	\begin{itemize}
-		\item item
-		\item item
-	\end{itemize}
+	\begin{multicols*}{2}		
+		\begin{itemize}
+			\item 
+		\end{itemize}
+	\end{multicols*}
 \end{frame}
 
 
