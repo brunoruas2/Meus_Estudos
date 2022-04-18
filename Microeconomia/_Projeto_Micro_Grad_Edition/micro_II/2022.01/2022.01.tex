@@ -4901,34 +4901,258 @@
 	\\~\\
 	\textbf{Teorema da Impossibilidade de Arrow}: Se um mecanismo de decisão social satisfizer as propriedades 1, 2 e 3, ele será, necessariamente, uma ditadura: todas as ordenações sociais são ordenações de um único indivíduo.
 	\\~\\
-	Como esse curso é básico, não vamos demonstrar esse teorema. Mas para os curiosos, o Jehle na página 269 possui dois tipos de demonstrações dele.
+	Como esse curso é básico, não vamos demonstrar esse teorema. Se abandonarmos a propriedade 3, alguns tipos de votação ordinal mantém as outras propriedades ativas.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Funções de Bem-Estar Sociais}
 
-	
+	Sejam as preferências de cada pessoa $i$ relacionadas às alocações possíveis, as funções de utilidade $u_i(x)$ resumem os valores dos julgamentos das pessoas de modo que, a pessoa $i$ prefere \textbf{x} a \textbf{y} se, e somente se, $u_i(x) > u_i(y)$.
+	\\~\\
+	Apesar da não importância cardinal das funções de utilidade, podemos optar pela construção da nossa função de utilidade social pela soma das utilidades individuais. Desse modo, \textbf{x} é preferido a \textbf{y} se
+
+	$$  \displaystyle \sum^n_{i = 1} u_i(x) > \sum^n_{i = 1} u_i(y)$$
+
+	Sendo $n$ a quantidade de pessoas da sociedade.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Sociais}
+
+	Isso faz sentido mas é totalmente arbitrário. Não existe pressuposto teórico para a definição da função de utilidade social desse modo. Poderíamos usar qualquer outra forma de agregação.
+	\\~\\
+	Podemos refinar essa ideia com um pressuposto adicional: A nossa função de agregação sempre será crescente na utilidade para cada indivíduo.
+	\\~\\
+	Isso garante que, se todos preferirem \textbf{x} a \textbf{y} as nossas preferências sociais também escolherão a mesma ordem.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Sociais}
+
+	Essas funções de agregação de preferências individuais recebem o nome de \textbf{função de bem-estar social}.
+	\\~\\
+	Esse termo denota uma função que é construida tendo como parâmetros as funções de utilidades dos indivíduos da sociedade: $W(u_1(x),u_2(x),...,u_n(x))$.
+	\\~\\
+	Essa classe de funções nos permite atribuir uma classificação para diferentes alocações tendo com base as utilidades individuais, e, como pressuposto, são crescentes em relação à quantidade de indivíduos.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Sociais}
+
+	Essa função que vimos no slide anterior também recebe o nome de função de bem-estar \textbf{utilitarista clássica} ou de \textbf{Bentham}.
+
+	$$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} u_i(x)$$
+
+	Uma generalização dessa função é a \textbf{função de bem-estar da soma ponderada das utilidades}:
+
+	$$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} a_iu_i(x)$$
+
+	Onde os pesos $a_i$ são números indicativos da importância de cada agente no total da utilidade geral. Naturalmente, $a$ costuma ser um número positivo.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Sociais}
+
+	Uma outra forma de função de bem-estar interessante é a \textbf{minimax} ou \textbf{rawlsiana}:
+
+	$$ W(u_1(x),u_2(x),...,u_n(x)) = min\{ u_1, u_2, ..., u_n \} $$
+
+	Essa função de bem-estar classifica a alocação pela utilidade da pessoa em pior situação.
+	\\~\\
+	Todas essas formas podem ser usadas para expressar o que estamos desejando. A única restrição imposta é que a função seja crescente na utilidade de cada consumidor.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Maximização do Bem-Estar}
 
+	De posse de uma função de bem-estar, podemos começar a trabalhor o problema da maximização.
+	\\~\\
+	Vamos usar $x_i^j$ para denotar o quanto a pessoa $i$ tem do bem $j$. Na nossa sociedade, existirão $n$ pessoas e $k$ bens.
+	\\~\\
+	Desse modo, uma dada alocação \textbf{x} será uma lista da quantidade de que cada um dos $n$ agentes possuem dos $k$ bens disponíveis.
+	\\~\\
+	A quantidade total de cada um dos $k$ bens será dada como fixa, de modo que o total do bem 1 será denotado por $X^1$. A quantidade total disponível do bem 2 será $X^2$ e assim por diante.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maximização do Bem-Estar}
+
+	Podemos então definir nosso problema de maximização como:
+
+	\begin{center}
+		$\textrm{max } W(u_1(x),u_2(x),...,u_n(x))$ \\
+		$\textrm{de modo que } \displaystyle \sum^n_{i = 1} x^1_i = X^1$ \\
+		$\textrm{\hphantom{de modo que }} \vdots$ \\
+		$\textrm{\hphantom{de modo que }}\displaystyle \sum^n_{i = 1} x^k_i = X^k$
+	\end{center}
 	
+	A alocação possível que maximiza a função de bem-estar deve ter as seguintes características:
+	\begin{itemize}
+		\item Ela será uma alocação eficiente no sentido de Pareto.
+		\item Qualquer alocação eficiente no sentido de Pareto será um ponto de máximo para alguma função de bem-estar.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maximização do Bem-Estar}
+
+	Se existir um ponto de máximo e esse ponto não for uma alocação de Pareto, isso implicaria que o ponto ótimo de Pareto daria, pelo menos, o mesmo nível de utilidade que essa alocação hipotética.
+	\\~\\
+	Como a função de bem-estar tem a propriedade de ser estritamente crescente, de modo que, se mudássemos de alocação para uma alocação de Pareto, para pelo menos uma pessoa, haveria um incremento de utilidade.
+	\\~\\
+	O que por sua vez, demonstra que a alocação ótima tem de ser uma alocação eficiente de Pareto.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maximização do Bem-Estar}
+
+	Chamaremos de \textbf{conjunto de possibilidades de utilidade}, o total de todas as utilidades obtidas da função de bem-estar para diferentes alocações.
+	\\~\\
+	A curva na borda desse conjunto recebe o nome de \textbf{fronteira de possibilidades de utilidade} e indica os pontos de alocação que permitem o valor máximo para a função de bem-estar social.
+	\\~\\
+	As curvas de isobem-estar são as curvas que demonstram um mesmo nível de bem estar para ambos os agentes.
+	\\~\\
+	Como previsto pela primeira propriedade, o ponto máximo é um ponto em que a curva de possibilidade de utilidade tangencia a curva de isobem-estar mais elevada.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maximização do Bem-Estar}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap34_3-maximizacao_bem_estar.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maximização do Bem-Estar}
+
+	A segunda propriedade é fruto da convexidade do conjunto de possibilidade de utilidade.
+	\\~\\
+	Como o conjunto é convexo, sempre podemos definir uma função de bem-estar que seja tangente à esse conjunto em algum ponto dele.
+	\\~\\
+	Desse modo podemos ver que a função de bem-estar nos dá uma forma de escolher alocações eficientes no sentido de Pareto pois todo máximo de bem-estar é um ótimo de Pareto e todo ótimo de Pareto será o máximo de alguma função de bem-estar.
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Funções de Bem-Estar Social Individualistas}
 
+	As funções de bem-estar que usamos até agora são compostas pelas funções de utilidade de cada agente.
+	\\~\\
+	Contudo, essas funções de utilidade estão sendo aplicadas à alocação total em vez de uma cesta específica. Isso é uma limitação que podemos retirar do modelo.
+	\\~\\
+	Para permitir que os indivíduos se preocupem apenas com as suas próprias cestas, vamos adicionar um índice $i$ a cada cesta da nossa função de bem-estar. Desse modo, substituiremos $u_i(x)$ por $u_i(x_i)$.
+	\\~\\
+	Isso significa que a utilidade de cada pessoa será referente a sua própria cesta de bens.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Social Individualistas}
+
+	Nossa função de bem-estar terá a forma
+
+	$$ W(u_1(x_1),u_2(x_2),...,u_n(x_n)) $$
 	
+	Essa nova função de bem-estar será uma função direta em relação aos níveis de utilidade de cada pessoa e indireta em relação às cestas de consumo.
+	\\~\\
+	O nome dado a essa forma é \textbf{função de bem-estar individualista} ou \textbf{função de bem-estar de Bergson-Samuelson}.
+	\\~\\
+	Se a utilidade de cada agente não levar em conta nada além da sua própria cesta, dizemos que não há externalidade de consumo.
+	\\~\\
+	O que nos trás os resultados obtidos no modelo de equilíbrio geral: Os teoremas do Bem-Estar.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Social Individualistas}
+
+	Uma vez que existe essa relação entre a eficiência de Pareto e a maximização do bem-estar, podemos concluir que todo máximo de bem-estar são equilíbrios competitivos e todos os equilíbrios competitivos são o máximo de bem-estar de alguma função de bem-estar.
+	\begin{center}
+		\LARGE $$ \stackrel{max}{\text{\small $x_A^1,x_A^2,x_B^1,x_B^2$}} \ \ \stackrel{W(u_A(x_A^1,x_A^2),u_B(x_B^1,x_B^2))}{\ } $$
+		\\
+		\normalsize de modo que $T(X^1,X^2) = 0$
+	\end{center}
+	
+	Onde $X^1$ e $X^2$ denotam o total do bem 1 e 2 produzido e consumido.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Social Individualistas}
+
+	A Lagrangiana desse problema é dada por
+
+	$$ L = W(u_A(x_A^1,x_A^2),u_B(x_B^1,x_B^2)) - \lambda(T(X^1,X^2) - 0) $$
+
+	As condições de maximização são obtidas pelas seguintes condições de primeira ordem:
+	\small
+	$$ \frac{\partial L}{\partial x_A^1} = \frac{\partial W}{\partial u_A} \frac{\partial u_A(x_A^1,x_A^2)}{\partial x_A^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^1} = 0 $$
+
+	$$ \frac{\partial L}{\partial x_A^2} = \frac{\partial W}{\partial u_A} \frac{\partial u_A(x_A^1,x_A^2)}{\partial x_A^2} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^2} = 0 $$
+
+	$$ \frac{\partial L}{\partial x_B^1} = \frac{\partial W}{\partial u_B} \frac{\partial u_B(x_B^1,x_B^2)}{\partial x_B^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^1} = 0 $$
+
+	$$ \frac{\partial L}{\partial x_B^2} = \frac{\partial W}{\partial u_B} \frac{\partial u_B(x_B^1,x_B^2)}{\partial x_B^1} - \lambda \frac{\partial T(X^1,X^2)}{\partial X^2} = 0 $$
+	\normalsize
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Social Individualistas}
+
+	Fazendo exatamente o que vimos no capítulo anterior, chegaremos numa situação onde teremos:
+
+	$$ \frac{\partial u_A / \partial x_A^1}{\partial u_A / \partial x_A^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+	$$ \frac{\partial u_A / \partial x_B^1}{\partial u_A / \partial x_B^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+	
+	Podemos ver que a maximização da função de bem-estar nos dá as condições de primeira ordem que nos certificam uma alocação eficiente no sentido de Pareto.	
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Alocações Justas}
 
+	A nossa teoria de função de bem-estar pode ser boa para descrever a utilidade do agregado social mas podemos usar outras abordagens para trazer alguns julgamentos éticos a esse problema.
+	\\~\\
+	Uma abordagem, chamada de \textbf{estudo das alocações justas}, tenta analisar os pontos de equilíbrio a apartir de alguns julgamentos morais específicos e suas implicações.
+	\\~\\
+	Se dividirmos $n$ bens igualmente entre três pessoas, A, B e C. Supondo que A e C possuam as mesmas preferências.	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Justas}
+
+	Se você usar o princípio moral da igualdade, as alocações iniciais ideais de cada pessoa serão $n/3$. Como as pessoas são diferentes em preferências, haverá o incentivo de trocas.
+	\\~\\
+	Se A e B fazem uma troca, teremos um aumento do bem-estar social que nos leva a um ótimo de Pareto. Mas C não teve a chance de trocar com ninguém e, nesse caso, pode \textbf{invejar} a pessoa A.
+	\\~\\
+	Podemos ver que a simetria nas alocações não é suficiente para preservar a simetria do equilíbrio.
+	\\~\\
+	O que levanta a questão se é possível, partindo do princípio da equidade, que alguma alocação ótima de Pareto seja garantida a partir de uma alocação.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inveja e Equidade}
+
+	Uma locação será \textbf{equitativa} se nenhum agente prefere a cesta de bens de outro agente em relação à sua própria cesta. Caso contrário, se a pessoa $i$ preferir a cesta da pessoa $j$ diremos que $i$ \textbf{inveja} $j$. Se uma alocação for, simultaneamente, equitativa e eficiente no sentido de Pareto, ela será chamada de uma alocação \textbf{justa}.
+	\\~\\
+	Com essa formalização, podemos ver que uma alocação inicial simétrica, possui a propriedade de ser equitativa, contudo, não é a única alocação em que essa propriedade possa ser encontrada.
+	\\~\\
+	Para verificarmos que uma alocação justa possa existir, vamos voltar ao exemplo da seção anterior (que é uma dotação inicial equitativa), mas agora vamos usar o mecanismo de mercado para encontrar uma alocação final.
 	
 
 \end{frame}
@@ -4936,7 +5160,40 @@
 \begin{frame}
 	\frametitle{Inveja e Equidade}
 
+	Já sabemos pelo capítulo 32 que o resultado será uma alocação em que cada agente maximiza a cesta via preços $(p_1,p_2)$. Sabemos também que esse resultado será eficiente no sentido de Pareto.
+	\\~\\
+	Mas seria essa alocação equitativa? Para descobrirmos, vamos supor o contrário. Suporemos que A inveja B. Isso significa que a cesta de B é preferida por A da seguinte forma:
 	
+	$$ (x_A^1,x_A^2) \prec_A (x_B^1,x_B^2) $$
+	
+	O termo $\prec_A$ denota a preferência do consumidor A.
+	\\~\\
+	Acontece que, se A prefere a cesta de B ao invés da sua. E, ao mesmo tempo, a cesta de A é resultante de trocas.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inveja e Equidade}
+
+	Isso implica que A não pode, aos preços $(p_1,p_2)$, pagar pela cesta de B, ou seja:
+
+	$$ p_1w_A^1 + p_2w_A^2 < p_1w_B^1 + p_2w_B^2 $$
+	
+	Mas isso é impossível! Afinal, nós partimos de uma alocação inicial equitativa. Isso resulta que a nossa afirmação inicial que A prefere a cesta de B é falsa.
+	\\~\\
+	Portanto, a alocação inicial equitativa resulta, pelo mecanismo de mercado competitivo, em uma alocação final justa.
+	\\~\\
+	Na imagem a seguir vamos comparar duas alocações hipotéticas. Uma é resultante de uma troca por qualquer outro mecanismo e a alocação justa é resultante da troca por mecanismo de mercado.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inveja e Equidade}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.55]{cap34_6-inveja_equidade.png}
+	\end{figure}
 
 \end{frame}
 
