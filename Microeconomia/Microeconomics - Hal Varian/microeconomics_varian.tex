@@ -3389,21 +3389,19 @@ Partindo de prefências convexas, nossos modelos trabalharam com a hipótese que
 \\~\\
 Usaremos \textbf{x} para denotar alguma alocação factível. Desse modo, dadas as alocações \textbf{x} e \textbf{y}, cada pessoa i (ou i-ésima pessoa) será capaz de dizer qual das duas alocações é preferida.
 \\~\\
-Queremos construir uma forma que agrege todas as preferências individuais para construção de uma \textbf{preferências social} que reflita as escolhas individuais.
+Queremos construir uma forma que agregue todas as preferências individuais para construção de uma \textbf{preferências social} que reflita as escolhas individuais.
 \\~\\
 Uma forma de construir essas preferências sociais é pela votação. Poderíamos pegar as alocações possíveis e perguntar para cada pessoa do mercado: "Você prefere \textbf{x} ou \textbf{y}?" e depois: "Você prefere \textbf{y} ou \textbf{z}?" e assim sucessivamente para todas as alocações desejadas. Terminada essa etapa\footnote{Que daria um trabalho gigante!}, poderíamos elencar as cestas preferidas pelo voto da maioria, ou seja, se a maioria das pessoas preferir a alocação \textbf{x} à \textbf{y}, nossa função de utilidade social também representará esse comportamento.
 \\~\\
-Então é isso? Terminamos? A resposta é não. Esse método pode gerar classificações não transitivas. Veja o exemplo da página 873. Lá temos um caso com 3 pessoas e 3 alocações. Mesmo com um número reduzido de participantes e alocações, já conseguimos ver como um arranjo não transitivo pode ser formar. Diante disso, a agregação por voto majoritário pode produzir preferências não transitivas, e sem transitivade, não podemos garantir que existam pontos de otimização entre as alocações.
+Então é isso? Terminamos? A resposta é não. Esse método pode gerar classificações não transitivas. Veja o exemplo da página 873. Lá temos um caso com 3 pessoas e 3 alocações. Mesmo com um número reduzido de participantes e alocações, já conseguimos ver como um arranjo não transitivo pode ser formar. Diante disso, a agregação por voto majoritário pode produzir preferências não transitivas, e sem transitividade, não podemos garantir que existam pontos de otimização entre as alocações.
 \\~\\
 Uma outra maneira de tentar agregar as preferências é pela adoção de um sistema de votação com escala ordinal. Nesse modelo, as pessoas atribuem pontos para cada cesta (1 para a mais preferida, 2 para a segunda e etc). No final, podemos somar todos os pontos atribuídos e classificar as opções de acordo com os valores (nesse caso, quanto menor a soma, mais preferida é a alocação).
 \\~\\
-Então é isso? Terminamos? A resposta também é não. O problema dessa abordagem é que o resultado pode ser manipulado pela introdução de novas opções. 
+Então é isso? Terminamos? A resposta também é não. O problema dessa abordagem é que o resultado pode ser manipulado pela introdução de novas opções.
 \\~\\
 Imagine que um comitê quer que o resultado seja a alocação \textbf{x} mas percebe que, com 5 alternativas, as pessoas vão acabar preferindo outra cesta. Esse comitê pode começar a colocar novas opções que sejam levemente parecidas entre si, de modo a "dividir"\ a base de votantes das alocações preferidas à \textbf{x} anteriormente. Isso vai fazer com que a base de votantes das cestas vencedoras se dilua e a alocação \textbf{x} poderá ser eleita como a vencedora.
 \\~\\
 E agora? será que nunca conseguiremos agregar preferências de modo satisfatório?
-
-\newpage
 
 Para responder essa pergunta, primeiro vamos elencar algumas características desejadas para o nosso mecanismo de decisão social:
 \begin{enumerate}
