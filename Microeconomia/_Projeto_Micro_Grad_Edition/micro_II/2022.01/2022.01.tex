@@ -4807,18 +4807,134 @@
 \section[Bem-Estar]{Bem-Estar}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\huge Capítulo \normalsize
+	\huge Bem-Estar \normalsize
 	\\~\\
-	\begin{multicols*}{2}		
-		\begin{itemize}
-			\item 
-		\end{itemize}
-	\end{multicols*}
+	\begin{itemize}
+		\item Agregação de Preferências
+		\item Funções de Bem-Estar Social
+		\item Maximização do Bem-Estar
+		\item Funções de Bem-Estar Social Individualistas
+		\item Alocações Justas
+		\item Inveja e Equidade
+	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	\frametitle{O Bem-Estar}
+
+	No capítulo anterior nós vimos que as alocações ótimas no sentido de Pareto não dizem respeito à distribuição da renda.
+	\\~\\
+	Já que sabemos que sempre haverá mais de uma alocação eficiente, como escolher qual delas é a melhor?
+	\\~\\
+	Vamos trabalhar com o conceito da \textbf{função de bem-estar} que permite agregar as utilidades de diferentes consumidores.
+
+
+\end{frame}
 
 \begin{frame}
-	\frametitle{}
+	\frametitle{Agregação de Preferências}
+
+	Vamos expandir nossa análise para investigar como a alocação de bens entre os consumidores do mercado pode ser agregada de modo a maximizar o conjunto de preferências ao invés de preferências individuais.
+	\\~\\
+	Usaremos \textbf{x} para denotar alguma alocação factível.
+	\\~\\
+	Dadas as alocações \textbf{x} e \textbf{y}, cada pessoa i (ou i-ésima pessoa) será capaz de dizer qual das duas alocações é preferida.
+	\\~\\
+	Queremos construir uma forma que agregue todas as preferências individuais para construção de uma \textbf{preferências social} que reflita as escolhas individuais.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Agregação de Preferências}
+
+	Poderíamos pegar as alocações possíveis e perguntar para cada pessoa do mercado: "Você prefere \textbf{x} ou \textbf{y}?" e depois: "Você prefere \textbf{y} ou \textbf{z}?" e assim sucessivamente para todas as alocações desejadas.
+	\\~\\
+	Terminada essa etapa, poderíamos elencar as cestas preferidas pelo voto da maioria, ou seja, se a maioria das pessoas preferir a alocação \textbf{x} à \textbf{y}, nossa função de utilidade social também representará esse comportamento.
+	\\~\\
+	Então é isso? Terminamos? A resposta é não. Esse método pode gerar classificações não transitivas.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Agregação de Preferências}
+
+	A agregação por voto majoritário pode produzir preferências não transitivas, e sem transitividade, não podemos garantir que existam pontos de otimização entre as alocações.
+	\\~\\
+	Uma outra maneira de tentar agregar as preferências é pela adoção de um sistema de votação com escala ordinal.
+	\\~\\
+	Nesse modelo, as pessoas atribuem pontos para cada cesta (1 para a mais preferida, 2 para a segunda e etc).
+	\\~\\
+	No final, podemos somar todos os pontos atribuídos e classificar as opções de acordo com os valores (nesse caso, quanto menor a soma, mais preferida é a alocação).
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Agregação de Preferências}
+
+	Então é isso? Terminamos? A resposta também é não. O problema dessa abordagem é que o resultado pode ser manipulado pela introdução de novas opções.
+	\\~\\
+	Imagine que um comitê quer que o resultado seja a alocação \textbf{x} mas percebe que, com 5 alternativas, as pessoas vão acabar preferindo outra cesta.
+	\\~\\
+	Esse comitê pode começar a colocar novas opções que sejam levemente parecidas entre si, de modo a "dividir"\ a base de votantes das alocações preferidas à \textbf{x} anteriormente.
+	\\~\\
+	Isso vai fazer com que a base de votantes das cestas vencedoras se dilua e a alocação \textbf{x} poderá ser eleita como a vencedora.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Agregação de Preferências}
+
+	Vamos elencar algumas características desejadas para o nosso mecanismo de decisão social precisa ter:
+	\\~\\
+	\begin{enumerate}
+		\item Dado um conjunto completo, reflexivo e transitivo de preferências individuais, a agregação dessas preferências deve possuir as mesmas propriedades.
+		\item Se todas as pessoas preferirem \textbf{x} a \textbf{y}, então, a preferência social deve classificar \textbf{x} à frente de \textbf{y}.
+		\item Dadas duas alocações \textbf{x} e \textbf{y}, a preferências social deve depender apenas das escolhas individuais sobre as cestas e não deve ser influenciada pelo modo de classificação das alternativas.
+	\end{enumerate}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Agregação de Preferências}
+
+	Faz sentido querer que nossa agregação de preferências tenham todas as características. O problema é que o trabalho de 1963 de Kenneth Arrow chegou em um resultado surpreendentemente.
+	\\~\\
+	\textbf{Teorema da Impossibilidade de Arrow}: Se um mecanismo de decisão social satisfizer as propriedades 1, 2 e 3, ele será, necessariamente, uma ditadura: todas as ordenações sociais são ordenações de um único indivíduo.
+	\\~\\
+	Como esse curso é básico, não vamos demonstrar esse teorema. Mas para os curiosos, o Jehle na página 269 possui dois tipos de demonstrações dele.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Sociais}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Maximização do Bem-Estar}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Funções de Bem-Estar Social Individualistas}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alocações Justas}
+
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Inveja e Equidade}
 
 	
 
