@@ -1500,7 +1500,73 @@ Ao escrever provas temos que nos atentar tanto ao rigor matemático quanto à cl
 \textbf{12. Clareza é o padrão-ouro da escrita matemática.}
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova por Contradição}
+\section{Provando Afirmações com Contradição}
+A Prova por Contradição já foi mencionada nos capítulos anteriores e aprenderemos ela no decorrer desse capítulo.\\
+Ela consistem assumir que o que quer provar seja falso leva à uma contradição, então o modelo é mais ou menos assim:
+\textbf{Proposição }$P$\\
+Assuma $\sim P$ \\
+. \\
+. \\
+. \\
+Então $C \land \sim C$
+\\
+Perceba que $C \land \sim C$ é a contradição que buscamos, pois algo não pode ser e não-ser ao mesmo tempo. Essa relação fica muito mais simples de ser compreendida numa tabela verdade. \\
+\begin{center}
+\begin{tabular}{|c | c || c | c | c || c |} \hline
+$P$  & $C$ & $\sim P$ & $\sim C$ & $C \land \sim C$ & $(\sim P) \Rightarrow (C \land \sim C)$  \\ \hline 
+V    &  V  &  F       &  F       &   F              &         T   \\
+V    &  F  & F        &  V       &  F               &         T \\
+F    &   V & V        &F         &  F               &       F \\
+F    & F   & V        & V        & F                & F    \\ \hline 
+\end{tabular}
+\end{center}
+Vamos fazer alguns exemplos para entender como funciona na prática:
 
+\begin{definition}
+Um número real $x$ é racional se $\exists \ a,b \in \mathbb{Z} \ tq. \ x = \frac{a}{b}$\\
+Um número real $x$ é irracional se $\not\exists \ a,b \in \mathbb{Z} \ tq. \ x = \frac{a}{b}$
+\end{definition}
+\begin{proposition}
+O número $\sqrt{6}$ é irracional
+\end{proposition}
+\textit{Prova:} Assuma que $\sqrt{6}$ é racional, então: 
+$$\sqrt{6} = \frac{a}{b}$$
+Vamos supor que $\frac{a}{b}$ esteja completamente reduzida (ou seja, seu \textbf{Máximo Divisor Comum} é 1), isso é, não temos $a$ e $b$ pares. Elevamos ambos os lados da equação ao quadrado:
+$$6 = \frac{a^2}{b^2} \Rightarrow a^2 = 6b^2$$
+Como podemos ver $a^2$ é múltiplo de 3, logo $a$ é múltiplo de 6 (Verifique), então pode ser escrito como $a = 6x$. \\
+$$(6x)^2 = 6b^2) \Rightarrow 36x^2 = 6b^2) = 6x^2 = b^2$$
+Então $b^2$ é múltiplo de $6$, logo $6 | b$. \\
+Portanto $a$ e $b$ são múltiplos de $6$, o que viola nossa suposição, ou seja, uma contradição $\blacksquare$
+\section{Provando Afirmações Condicionais por Contradição}
+Nessa sessão trabalharemos com as afirmações condicionais, o processo é bem semelhante e novamente mostraremos uma tabela verdade para mostrar equivalência lógica, mas antes vamos ao modelo da prova: \\ \\
+\textbf{Proposição} $P \Rightarrow Q$ \\
+\textit{Prova:} Assuma $P \Rightarrow \sim Q$\\
+. \\
+. \\
+. \\
+($C \land \sim C$) \\ \\
+Como já sabemos $\sim(P \Rightarrow Q)$ e $P \Rightarrow \sim Q$ são lógicamente equivalentes, mas mesmo assim vamos visualizar isso. \\
+\begin{center}
+\begin{tabular}{| c | c || c | c | c | c |} \hline
+$P$ & $Q$ & $\sim Q$ & $P \Rightarrow Q$ & $\sim(P \Rightarrow Q)$ & $P \Rightarrow \sim Q$ \\ \hline
+V & V & F & V & F & F \\ 
+V & F & V & F & V & V \\ 
+F & V & F & V & F & F \\ 
+F & F & V & F & V & V \\ \hline
+\end{tabular}
+\end{center}
+E novamente vamos por em prática:
+\begin{proposition}
+Dados $a,b,c \in \mathbb{Z}$, então $a^2 + 4b -2 \neq 0$
+\end{proposition}
+\textit{Prova:} Suponha que $a^2 + 4b -2 = 0$ isso implica que $a^2 + 4b = 2$, logo:
+$$a = \sqrt{2-4b} \ \ \ (1)$$
+$$b = \frac{2-a^2}{4} \ \ \ (2) $$
+Substituindo (2) em $a^2 + 4b -2 = 0$:
+$$a^2 + a^2 + 2 -2 = 0$$
+\section{Combinando Técnicas}
+\section{Uma Advertência}
+As Provas por Contradição são realmente poderosas, porém o estudante deve sempre dar preferência por outras técnicas, essa é um último recurso caso uma Prova Direta ou Contrapositiva não tenha funcionado.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                    PART                         %
@@ -1509,7 +1575,105 @@ Ao escrever provas temos que nos atentar tanto ao rigor matemático quanto à cl
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Prova de Afirmações Não-Condicionais}
+No capítulo anterior aprendemos a provar afirmações condicionais, mesmo que sejam a massiva maioria dos teoremas sigam esse padrão, não são todos.
+\\
+Durante seus estudar na matemática verá muitos teoremas que são bicondicionais, do tipo $P \Leftrightarrow Q$, e com certeza, em algum momento, precisará prová-los. E esse é o objetivo deste capítulo.
 
+\section{Prova de Se, e somente se}
+Pelos nossos estudos de lógica sabemos que $P \Leftrightarrow Q$ é equivalente a $(P \Rightarrow Q) \land (Q \Rightarrow P)$. Portanto para provarmos esse tipo de proposição é necessário que tanto $P \Rightarrow Q$ e $Q \Rightarrow P$ sejam verdadeiros.
+\\
+É válido lembrar que pode utilizar a técnica que preferir para provar as condições.
+
+\begin{proposition}
+Suponha $x \in \mathbb{Z}$. Então x é par se, e somente se $3x + 5$ for impar.
+\end{proposition}
+\textit{Prova:} Se $x = 2a$, então $3(2a) + 5$, sabemos que 5 é um número impar e pode ser escrito como $4+1$. Substituímos isso na equação e:
+$$ 3(2a) + 4+1 = 6a+4+1 = 2(3a +2) +1$$
+Reciprocamente. Se $3x + 5 = 2(a)+1$, então:
+$$3x+5 = 2a+1$$
+$$3x = 2a -4$$
+$$x = 2 \left(\frac{a-2}{3} \right) \ \ \ \blacksquare $$
+
+\section{Afirmações equivalentes}
+Ao estudarmos matemática podemos encontrar teoremas que sejam equivalentes. Porém ainda assim precisamos provar que sejam equivalentes.
+\\
+\\
+Suponha os teoremas $(a), (b), (c)$ e $(d)$, e que sejam equivalentes entre si, como demonstrar essa equivalência? Bem, é simples, basta demonstrar que um implica em outro de forma circular.
+\begin{center}
+\begin{tabular}{c c c}
+     $(a)$ & $\Rightarrow$ & $(b)$ \\
+$\Uparrow$ &       \empty  & $\Downarrow$ \\
+     $(c)$ & $\Leftarrow$ & $(d)$ \\
+\end{tabular}
+\end{center}
+E para como estamos lidando com equivalência. precisamos provar que são teoremas bicondicionais, como já realizamos o primeiro passo, precisamos inverter o sentido desse "círculo", e mostrar que:
+\begin{center}
+\begin{tabular}{c c c}
+     $(a)$ & $\Leftarrow$ & $(b)$ \\
+$\Downarrow$ &       \empty  & $ \Uparrow$ \\
+     $(c)$ & $\Rightarrow$ & $(d)$ \\
+\end{tabular}
+\end{center}
+Assim sabemos que os 4 teoremas são equivalentes, isso é:
+\begin{center}
+\begin{tabular}{c c c}
+     $(a)$ & $\Leftrightarrow$ & $(b)$ \\
+$\Updownarrow$ &       \empty  & $ \Updownarrow$ \\
+     $(c)$ & $\Leftrightarrow$ & $(d)$ \\
+\end{tabular}
+\end{center}
+
+\section{Provas de Existência; Provas de existência e unicidade}
+Vimos até aqui teoremas gerais, como é a maioria dos casos, queremos sempre trabalhar sem perder a generalidade dos nossos teoremas. Teoremas do tipo:
+\\
+\\
+Seja $p(x)$ uma função relacional, então $\forall x, p(x)$
+.\\
+.\\
+.\\
+Logo, $p(x) \ \ \blacksquare$
+\\
+\\
+Nessa sessão estamos mais interessados nos teoremas do tipo:
+\\
+\\
+Seja $p(x)$ uma função relacional, então $ \exists x \ tq. \ p(x)$
+.\\
+.\\
+.\\
+Logo, se $ x = k \Leftrightarrow p(x) \ \ \ \blacksquare$
+Um exemplo bem simples que podemos dar é:
+\begin{theorem}
+Existe $x \in \mathbb{N}$ tal que $x^x = x$ 
+\end{theorem}
+Queremos provar que existe um único valor de $x$ que satisfaça nosso teorema, podemos fazer da seguinte maneira:
+\\
+\\
+\textit{Prova: } se $x = 1$, então $1^1 = 1$
+\\
+\\
+Isso é o suficiente pra provar que ela é única? Não, como estamos trabalhando dentro do conjunto dos números naturais então vamos complementar nossa prova e mostrar que para $x>1, x^x \neq x$.
+\\
+\\
+\textit{Prova: } Se $x = 1$, então $1^1 = 1$.
+\\ Suponha $x=n, n>1$, então:
+$$n^n = n_1n_2n_3 \dots n_n \neq	n$$
+Agora suponha que $n^n = n$. Dividimos por $n$ e concluímos que:
+$$n^{n-1} = 1$$
+O que é um absurdo, pois $n^{n-1} = n_1n_2n_3 \dots n_{n-1} =	1$, se, e somente se, $n=1$ \empty $\blacksquare$
+\\
+\\
+Mesmo que esse seja um teoremas bem simples dá pra usar um pouco mais a imaginação e encrentá-lo um pouco:
+\begin{theorem}
+Existe $x \in \mathbb{Z}$ tal que $x^x = x$ 
+\end{theorem}
+\textit{Prova: } Já provamos que é verdade para $x=1$ e para qualquer $x>1$ isso é falso. Porém agora estamos trabalhando dentro do conjuntos dos inteiros, isso inclui os números negativos, e consequentemente teremos que mostrar que para $x = \pm 1$ o teorema é verdadeiro:
+\\
+Se $x=-1$ então:
+$$(-1)^{-1} = \frac{-1}{(-1)^2} = \frac{-1}{1} = -1$$
+Agora suponha que $x = m, m < -1$, então $m^m \neq m$, porque:
+$$m^m = \frac{m}{m^{-m+1}}= \frac{m}{m_1m_2 \dots m_{-m+1}} = \frac{1}{m_1m_2 \dots m_{-m}} \neq m$$
+Logo, $x^x = x \Leftrightarrow x= \pm 1 \ \ \ \blacksquare$
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Provas Envolvendo Conjuntos}
 
