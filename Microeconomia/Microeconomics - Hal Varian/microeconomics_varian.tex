@@ -3424,20 +3424,19 @@ Se abandonarmos a propriedade 3, alguns tipos de votação ordinal mantém as ou
 \\~\\
 Sejam as preferências de cada pessoa $i$ relacionadas às alocações possíveis, as funções de utilidade $u_i(x)$ resumem os valores dos julgamentos das pessoas de modo que, a pessoa $i$ prefere \textbf{x} a \textbf{y} se, e somente se, $u_i(x) > u_i(y)$. Até ai, nada de novo, essa é a função de utilidade que vimos lá no começo do curso. Por causa disso, devemos nos lembrar que elas podem assumir quaisquer formatos, visto que, o que importa é a ordem de valores e não o valor em si.
 \\~\\
-Apesar da não importância cardinal das funções de utilidade, podemos optar pela construção da nossa função de utilidade social pela soma das utilidades individuais. Desse modo,\textbf{x} é preferido a \textbf{y} se
+Apesar da não importância cardinal das funções de utilidade, podemos optar pela construção da nossa função de utilidade social pela soma das utilidades individuais. Desse modo, \textbf{x} é preferido a \textbf{y} se
 
 $$  \displaystyle \sum^n_{i = 1} u_i(x) > \sum^n_{i = 1} u_i(y)$$
 
 Sendo $n$ a quantidade de pessoas da sociedade.
 \\~\\
-Isso faz sentido, mas é totalmente arbitrário. Não existe pressuposto teórico para a definição da função de utilidade social desse modo. Poderíamos usar qualquer outra forma de agregação.
+Isso faz sentido mas é totalmente arbitrário. Não existe pressuposto teórico para a definição da função de utilidade social desse modo. Poderíamos usar qualquer outra forma de agregação.
 \\~\\
-Contudo, podemos refinar essa ideia com um pressuposto adicional: A nossoa função de agregação sempre será crescente na utilidade para cada indivíduo. Isso garante que, se todos preferirem \textbf{x} a \textbf{y} as nossas preferências sociais também escolherão a mesma ordem.
+Contudo, podemos refinar essa ideia com um pressuposto adicional: A nossa função de agregação sempre será crescente na utilidade para cada indivíduo. Isso garante que, se todos preferirem \textbf{x} a \textbf{y} as nossas preferências sociais também escolherão a mesma ordem.
 \\~\\
 Essas funções de agregação de preferências individuais recebem o nome de \textbf{função de bem-estar social}. Esse termo denota uma função que é construida tendo como parâmetros as funções de utilidades dos indivíduos da sociedade: $W(u_1(x),u_2(x),...,u_n(x))$. Essa classe de funções nos permite atribuir uma classificação para diferentes alocações tendo com base as utilidades individuais, e, como pressuposto, são crescentes em relação à quantidade de indivíduos.
 \\~\\
-A função que colocamos logo acima, é uma função de bem-estar social para o caso especial da soma das funções de utilidade individuais. Essa função também recebe o nome de  função de bem-estar \textbf{utilitarista clássica}
- ou \textbf{de Bentham}.
+A função que colocamos logo acima, é uma função de bem-estar social para o caso especial da soma das funções de utilidade individuais. Essa função também recebe o nome de função de bem-estar \textbf{utilitarista clássica} ou de \textbf{Bentham}.
 
 $$ W(u_1(x),u_2(x),...,u_n(x)) = \displaystyle \sum^n_{i = 1} u_i(x)$$
 
@@ -3482,7 +3481,7 @@ A demonstração do ponto é simples. Se existir um ponto de máximo e esse pont
 \\~\\
 Usaremos uma simplificação para duas pessoas. Nós vimos algo muito parecido com o que vimos no capítulo anterior. Só que vamos mudar o nome de algumas variáveis. Chamaremos de \textbf{conjunto de possibilidades de utilidade}, o total de todas as utilidades obtidas da função de bem-estar para diferentes alocações. A curva na borda desse conjunto recebe o nome de \textbf{fronteira de possibilidades de utilidade} e indica os pontos de alocação que permitem o valor máximo para a função de bem-estar social. As curvas de isobem-estar são as curvas que demonstram um mesmo nível de bem estar para ambos os agentes.
 \\~\\
-Uma demonstração gráfica pode ser vista na imagem abaixo. Como previsto pela primeira propriedade, o ponto máximo é um ponto em que a curva de possibilidade de utiildade tangencia a curva de isobem-estar mais elevada.
+Uma demonstração gráfica pode ser vista na imagem abaixo. Como previsto pela primeira propriedade, o ponto máximo é um ponto em que a curva de possibilidade de utilidade tangencia a curva de isobem-estar mais elevada.
 
 \begin{figure}[H]
 	\centering
@@ -3535,8 +3534,8 @@ $$ \frac{\partial L}{\partial x_B^2} = \frac{\partial W}{\partial u_B} \frac{\pa
 
 Fazendo exatamente o que vimos no capítulo anterior, chegaremos numa situação onde teremos:
 
-$$ \frac{\partial u_A / \partial x_A^1}{\partial u_A / \partial x_A^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
-$$ \frac{\partial u_A / \partial x_B^1}{\partial u_A / \partial x_B^2} = \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+$$ - \frac{\partial u_A / \partial x_A^1}{\partial u_A / \partial x_A^2} = - \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
+$$ - \frac{\partial u_A / \partial x_B^1}{\partial u_A / \partial x_B^2} = - \frac{\partial T / \partial X^1}{\partial T / \partial X^2} $$
 
 Podemos ver que a maximização da função de bem-estar nos dá as condições de primeira ordem que nos certificam uma alocação eficiente no sentido de Pareto.
 
@@ -3546,7 +3545,7 @@ A nossa teoria de função de bem-estar pode ser boa para descrever a utilidade 
 \\~\\
 Uma abordagem, chamada de \textbf{estudo das alocações justas}, tenta analisar os pontos de equilíbrio a apartir de alguns julgamentos morais específicos e suas implicações.
 \\~\\
-Se dividirmos $n$ bens igualmente entre três pessoas, A, B e C. Supondo que A e C possuam as mesmas preferências. Se você usar o princípio moral da igualdade, as alocações iniciais ideais de cada pessoa serão $n/3$. Mas como as pessoas são diferentes em preferências, haverá o incentivo de trocas. Se A e B fazem uma troca, teremos um aumento do bem-estar social que nos leva a um ótimo de Pareto. Mas C não teve a chance de trocar com ninguém e, nesse caso, pode \textbf{invejar} a pessoa A.
+Se dividirmos $n$ bens igualmente entre três pessoas, A, B e C. Supondo que A e C possuam as mesmas preferências. Se você usar o princípio moral da igualdade, as alocações iniciais ideais de cada pessoa serão $n/3$. Como as pessoas são diferentes em preferências, haverá o incentivo de trocas. Se A e B fazem uma troca, teremos um aumento do bem-estar social que nos leva a um ótimo de Pareto. Mas C não teve a chance de trocar com ninguém e, nesse caso, pode \textbf{invejar} a pessoa A.
 \\~\\
 Podemos ver que a simetria nas alocações não é suficiente para preservar a simetria do equilíbrio. O que levanta a questão se é possível, partindo do princípio da equidade, que alguma alocação ótima de Pareto seja garantida a partir de uma alocação.
 
@@ -3554,7 +3553,7 @@ Podemos ver que a simetria nas alocações não é suficiente para preservar a s
 
 Agora vamos formalizar um pouco mais essa noção de equidade, justiça e inveja.
 \\~\\
-Uma locação será \textbf{equitativa} se nenhum agente prefere a cesta de bens de outro agente em relação à sua própria cesta. Caso contrário, se a pessoa $i$ preferir a cesta da pessoa $j$ diremos que $i$ \textbf{inveja} $j$. Se uma alocação for, simultaneamente, equitativa e eficiente no sentido de Pareto, ela será chamada de uma alocação $justa$.
+Uma locação será \textbf{equitativa} se nenhum agente prefere a cesta de bens de outro agente em relação à sua própria cesta. Caso contrário, se a pessoa $i$ preferir a cesta da pessoa $j$ diremos que $i$ \textbf{inveja} $j$. Se uma alocação for, simultaneamente, equitativa e eficiente no sentido de Pareto, ela será chamada de uma alocação \textbf{justa}.
 \\~\\
 Com essa formalização, podemos ver que uma alocação inicial simétrica, possui a propriedade de ser equitativa, contudo, não é a única alocação em que essa propriedade possa ser encontrada.
 \\~\\
@@ -3572,14 +3571,14 @@ Acontece que, se A prefere a cesta de B ao invés da sua. E, ao mesmo tempo, a c
 
 $$ p_1w_A^1 + p_2w_A^2 < p_1w_B^1 + p_2w_B^2 $$
 
-Mas isso é impossível! Afinal, nós partimos de uma alocação inicial equitativa. Isso resulta que a nossa afirmação inicial que A prefere a cesta de B é falsa. Portanto, a alocação inicial equitativa resulta, pelo mecanismo de mercado competitivo, em uma alocação final equitativa.
+Mas isso é impossível! Afinal, nós partimos de uma alocação inicial equitativa. Isso resulta que a nossa afirmação inicial que A prefere a cesta de B é falsa. Portanto, a alocação inicial equitativa resulta, pelo mecanismo de mercado competitivo, em uma alocação final justa.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{cap34_6-inveja_equidade.png}
 \end{figure}
 
-Nessa imagem podemos ver como a alocação via mercado de competição vai produzir uma alocação final onde nenhum dos agentes poderá invejar a cesta do outro.
+Quando aplicamos o método de trocas ao problema da justiça, podemos ver que, em uma alocação inicial equitativa, o mecanismo de mercado produz uma alocação final justa. Na imagem acima comparamos duas cestas hipotéticas sendo uma fruto de uma troca por qualquer outra forma de alocação e a cesta justa sendo a resultante das trocas por mecanismo de mercado. Podemos ver que o mecanismo de mercado produz uma alocação final que não é, necessariamente, igualitária mas é, por ser um ótimo de Pareto, uma alocação equitativa e, portanto, justa.
 
 %%%%%%%%%%%%%%%%%%%%%%%% CHAPTER %%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Externalidades}
