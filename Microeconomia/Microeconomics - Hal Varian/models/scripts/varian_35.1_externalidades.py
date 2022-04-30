@@ -54,7 +54,6 @@ ax.xaxis.set_major_locator(plt.NullLocator())
 ax.yaxis.set_major_locator(plt.NullLocator())
 
 # fake axis
-
 plt.figtext(0.04, 0.09, "Pessoa\n    A", fontsize = 10)
 plt.figtext(0.91, 0.85, "Pessoa\n    B", fontsize = 10)
 plt.figtext(0.040, 0.85, "Fumaça", fontsize = 10)
