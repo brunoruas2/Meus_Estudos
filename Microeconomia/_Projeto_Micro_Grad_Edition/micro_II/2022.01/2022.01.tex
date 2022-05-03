@@ -5317,6 +5317,445 @@
 
 \end{frame}
 
+\begin{frame}
+	\frametitle{Preferências Quase Lineares e o Teorema de Coase}
+
+	A alocação de um mercado com externalidade e direitos de propriedade bem definidos dependerá da dotação inicial dos agentes.
+	\\~\\
+	Contudo, existe um caso especial onde não importa de quem é o direito de propriedade.
+	\\~\\
+	Se as preferências dos agentes forem \textbf{quase lineares}, todas as curvas de contrato estarão em uma mesma distribuição da externalidade.
+	\\~\\
+	Nesse caso, a quantidade de fumaça seria a mesma independente de quem é o direito.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preferências Quase Lineares e o Teorema de Coase}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{cap35_2-teorema_coase.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preferências Quase Lineares e o Teorema de Coase}
+
+	Essa conclusão que em certas circunstâncias a quantidade da externalidade independer dos direitos de distribuição é conhecida como \textbf{Teorema de Coase}.
+	\\~\\
+	Outra interpretação do trabalho de Coase é a de que se as negociações de externalidades não possuírem custos de transação, elas levariam a um resultado alocativo ótimo de Pareto.
+	\\~\\
+	Mas perceba que esse é um resultado bem específico e não deve ser generalizado para qualquer cenário.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	Imagine que temos duas empresas em uma mesma cidade, a empresa S produz uma quantidade de aço $s$ e, como consequência da produção, também produz poluição $x$ que é despejada no num rio.
+	\\~\\
+	A segunda empresa F é de venda de pescados e se localiza no rio abaixo da empresa S. Desse modo a quantidade de poluição de S afeta a produção de F.
+	\\~\\
+	Podemos definir a função custo da empresa S como $c_s(s,x)$ e da empresa F como $c_f(f,x)$.
+	\\~\\
+	A quantidade de poluição é parâmetro comum nas duas funções.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	Vamos definir que impacto de $x$ em cada empresa será diferente, de modo que, $\partial c_f/ \partial x > 0$ e $\partial c_s/ \partial x \leq 0$, ou seja, a poluição aumenta o custo da empresa pesqueira mas não afeta (ou até mesmo reduz) o custo da empresa de aço.
+	\\~\\
+	O problema de maximização da empresa de aço será
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado
+		\stackrel{p_s s - c_s(s,x)}{\ } $ %funcao maximizada
+	\end{center}
+
+	E da empresa pesqueira seria
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado
+		\stackrel{p_f f - c_f(f,x)}{\ } $ %funcao maximizada
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	Da maneira como as coisas estão, a empresa de pesca terá de esperar a empresa de aço definir sua quantidade de poluição para poder maximizar seu lucro.
+	\\~\\
+	As condições de maximização do lucro da empresa S serão
+
+	$$ \frac{\partial c_s(s^*,x^*)}{\partial s} = p_s $$
+	$$ \frac{\partial c_s(s^*,x^*)}{\partial x} = 0 $$
+
+	e, para empresa F será
+
+	$$ \frac{\partial c_f(f^*,x^*)}{\partial f} = p_f $$
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	A empresa S optará produzir a quantidade de poluição que produza o menor custo possível enquanto a empresa F terá de tomar a poluição como dada e maximizar seu lucro a partir desse custo exógeno.
+	\\~\\
+	Como chegaremos em uma arranjo que permita que a empresa de aço produza mais poluição do que deveria?
+	\\~\\
+	O custo a mais que a empresa de pesca incorre pela poluição é chamado de \textbf{custo social}.
+	\\~\\
+	O nosso objetivo é compensar a externalidade para alcançar um equilíbrio de Pareto.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}	
+
+	Podemos supor que as empresas se unam. Agora, existirá apenas uma empresa de aço e pesca.
+	\\~\\
+	Consequentemente, não existe mais externalidade nesse caso, uma vez que, a empresa agora \textbf{internalizou} os custos oriundos da produção de poluição. O novo probema de maximização do lucro passa a ser
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $s,f,x$}} \ \ %enunciado
+		\stackrel{p_s s + p_f f - c_f(f,x) - c_s(s,x)}{\ } $ %funcao maximizada
+	\end{center}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	Que possui as seguintes condições de maximização
+
+	$$ \frac{\partial c_s(s^*,x^*)}{\partial s} = p_s $$
+	$$ \frac{\partial c_f(f^*,x^*)}{\partial f} = p_f $$
+	$$ \frac{\partial c_s(s^*,x^*)}{\partial x} + \frac{\partial c_f(f^*,x^*)}{\partial x}= 0 $$
+
+	O último termo nos assegura que a empresa produzirá poluição até um ponto onde o impacto gerado seja igual à vantagem obtida pela produção desse subproduto.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	Agora, a empresa conjunta precisará adotar a seguinte restrição
+
+	$$ \frac{\partial c_s(s^*,x^*)}{\partial x} + \frac{\partial c_f(f^*,x^*)}{\partial x}= 0 $$
+	$$\frac{\partial c_f(f^*,x^*)}{\partial x} = - \frac{\partial c_s(s^*,x^*)}{\partial x} $$
+
+	\begin{center}
+		ou
+	\end{center}
+
+	$$ - CMa_S(s,x) = CMa_F(f,x) $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{cap35_3-producao_externalidade.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Produção de Externalidades}
+
+	Como sabemos, $CMa_F(f,x) > 0$ por pressuposto no começo do modelo. Desse modo, a empresa limitará a produção de poluição até o ponto onde $- CMa_S(s,x) > 0$.
+	\\~\\
+	Quando a empresa foca em reduzir seus custos privados, ela decide produzir uma quantidade de externalidade maior do que o ótimo de Pareto permite. 
+	\\~\\
+	Desse modo, o problema da maximização para alcance do ótimo de Pareto é a minimização dos custos sociais e não apenas dos custos privados.
+	\\~\\
+	No ótimo de Pareto, a soma dos custos marginais de poluição das duas empresas é igual a zero.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	A primeira abordagem é supor que a empresa de aço não está se defrontando com o preço correto da poluição.
+	\\~\\
+	O custo zero pela poluição não é o preço correto pelo problema causado à empresa de pesca.
+	\\~\\
+	A partir desse ponto de vista, podemos argumentar que deveria haver uma maneira de punir o produtor da externalidade de modo a fazer com que ele pague pela custo social gerado.
+	\\~\\
+	Uma forma de fazê-lo pagar é pela criação de um imposto associado à poluição da siderúrgica.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $s,t$}} \ \ %enunciado
+		\stackrel{p_ss - c_s(s,x) - tx}{\ } $ %funcao maximizada
+	\end{center}
+	
+	As condições de primeira ordem de maximização do lucro são
+	
+	$$ p_s - \frac{\partial c_s(s,x)}{\partial s} = 0 $$
+	$$ - \frac{\partial c_s(s,x)}{\partial x} - t = 0 $$
+	
+	Podemos ver que
+	
+	$$ t = - \frac{\partial c_s(s,x)}{\partial x} $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Da seção anterior, nós já tínhamos visto que a condição de otimização do custo social é dada pela seguinte relação 
+
+	$$\frac{\partial c_f(f^*,x^*)}{\partial x} = - \frac{\partial c_s(s^*,x^*)}{\partial x} $$
+
+	Ou seja, podemos ver que esse imposto deve ser
+
+	$$ t = - \frac{\partial c_s(s,x)}{\partial x} = \frac{\partial c_f(f^*,x^*)}{\partial x} $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Esse tipo de imposto é chamado de \textbf{imposto de Pigou}. E é uma maneira de resolver essa questão da externalidade da produção.
+	\\~\\
+	Contudo, para se calcular a alíquota deve-se ter conhecimento sobre o nível ótimo de poluição.
+	\\~\\
+	Se já temos esse dado, podemos simplesmente cobrar da siderúrgica que ela produza somente até o ponto ótimo.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	A outra abordagem é que falta um mercado para poluição.
+	\\~\\
+	O problema surge porque o produtor possui custo zero para produzir poluição e, do outro lado, a poluição deveria ter um preço negativo, ou seja, alguém deveria receber algo por ela.
+	\\~\\
+	Se a empresa de pesca tivesse direito a água limpa mas fosse permitido que ela vendesse a permissão de alguma quantidade de poluição. Sendo $q$ o preço pela quantidade de poluição.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $s,x$}} \ \ \stackrel{p_ss - c_s(s,x) - qx}{\ } $ %funcao maximizada
+	\end{center}
+	
+	Enquanto o problema da empresa de pesca seria
+	
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado 
+		\stackrel{p_ff + qx - c_f(f,x)}{\ } $ %funcao maximizada
+	\end{center}
+
+	Desse modo, $qx$ entra como custo para a empresa de aço e uma receita para a empresa de pesca.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	 As condições de maximização serão 
+
+	$$ p_s = \frac{\partial c_s(s,x)}{\partial s} $$
+	$$ q = - \frac{\partial c_s(s,x)}{\partial x} $$
+	$$ p_f = \frac{\partial c_f(s,x)}{\partial f} $$
+	$$ q = \frac{\partial c_s(s,x)}{\partial s} $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Cada empresa enfrentará o custo marginal social das suas ações.
+	\\~\\
+	O equilíbrio é encontrado onde o preço pago pela poluição seja igualador para a oferta da permissão de poluição (pela pescadora) e para a demanda da permissão de poluição (pela siderúrgica). Ou seja
+
+	$$-\frac{\partial c_s(s,x)}{\partial x} = \frac{\partial c_s(s,x)}{\partial s}$$
+
+	Esse resultado foi encontrado no exemplo da fusão das duas empresas.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Mas não precisamos parar por aqui, podemos supor que o direito seja da siderúrgica. Nesse caso, a pescadora terá que negociar (e pagar) pela redução da produção de poluição.
+	\\~\\
+	O interessante é que o resultado no montante de poluição é o mesmo. Estranho né? Vamos entender o motivo disso agora.
+	\\~\\
+	Se a siderúrgica possuir o direito em poluir até uma quantidade $\bar{x}$ e a empresa de pesca estiver disposta a negociar.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Podemos definir o problema como
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $s,x$}} \ \ %enunciado 
+		\stackrel{p_ss + q(\bar{x} - x) - c_s(s,x)}{\ } $ %funcao maximizada
+	\end{center}
+
+	A siderúrgica agora terá duas fontes de receita: vender aço ou vender alívio de poluição. As condições de primeira ordem para o nosso problema são
+
+	$$ p_s - \frac{\partial c_s(s,x)}{\partial s} = 0 $$
+	$$ -q - \frac{\partial c_s(s,x)}{\partial x} = 0 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Enquanto o problema da maximização da empresa de pesca será
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $f,x$}} \ \ %enunciado 
+		\stackrel{p_ff - q(\bar{x} - x) - c_s(f,x)}{\ } $ %funcao maximizada
+	\end{center}
+
+	Cujas condições de maximização são
+
+	$$ p_f - \frac{\partial c_f(f,x)}{\partial f} = 0 $$
+	$$ q - \frac{\partial c_f(f,x)}{\partial x} = 0 $$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Interpretação das Condições}
+
+	Essas equações são as mesmas que vimos no caso anterior.
+	\\~\\
+	Mas agora, quem receberá o recurso será a siderúrgica ao invés da empresa de pesca.
+	\\~\\
+	Podemos ver que mesmo com o resultado final sendo o mesmo, a questão de quem possui o direito de propriedade é importante para determinar quem deve receber e quem deve pagar pelo custo social.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sinais de Mercado}
+
+	A terceira interpretação das externalidades é que o próprio objetivo da maximização dos lucros cria o incentivo à internalização das externalidades.
+	\\~\\
+	As empresas do nosso exemplo teriam um incentivo em se fundirem de modo a maximizar o lucro coordenado de ambas.
+	\\~\\
+	Cada dono das empresas poderia vender suas ações pelo valor presente da série de lucros e o comprador, sabendo do ganho oriundo da coordenação das empresas, ganharia pelo fluxo de lucros adicionais oriundo da maximização das atividades.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sinais de Mercado}
+
+	Esse comprador poderia ou não ser um dos donos das duas empresas.
+	\\~\\
+	Com isso, observamos que a própria existência da externalidade pode gerar sua resolução através do incentivo à internalização para maximização dos lucros.
+	\\~\\
+	Isso implicaria que as externalidades gerariam a próprio remédio em algum grau.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	Vamos explorar um caso particularmente famoso chamado de "Tragédia dos comuns".
+	\\~\\
+	Imagine uma vila agrícola onde cada pessoa cria seu gado em um campo comunitário. Vamos verificar dois cenários: O primeiro onde temos direito de propriedade do campo bem definido e o segundo onde o campo é livre para qualquer morador da vila.
+	\\~\\
+	O custo da vaca será dado por $a$. A quantidade de leite que cada vaca dá é uma função do número de vacas que pastam junto com ela no campo (quanto mais vacas pastando, menos leite por vaca). $f(c)$ será o valor do leite produzido por $c$ vacas pastando no campo. Desse modo, $f(c)/c$ é o valor médio do leite.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	Quantas vacas pastarão na terra se quisermos maximizar a riqueza da vila? O problema de maximização deles pode ser escrito como:
+
+	\begin{center}
+		\LARGE $ \stackrel{max}{\text{\small $c$}} \ \ %enunciado 
+		\stackrel{f(c) - ac}{\ } $ %funcao maximizada
+	\end{center}
+
+	Não é nenhum mistério perceber que a condição de primeira ordem nos dá que $f'(c) = a$ ou seja $PM(c) = a$.
+	\\~\\
+	Afinal, se o valor do produto marginal for maior que $a$ vale a pena colocar mais uma vaca no pasto, caso contrário, seria melhor vendê-la.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	Se o campo fosse privado, esse seria precisamente o resultado. O proprietário do campo só permitiria que houvesse a quantidade de vacas que maximizasse o total de leite.
+	\\~\\
+	Será que o resultado seria o mesmo com a propriedade comum a todos os moradores?
+	\\~\\
+	Cada habitante pensaria se vale ou não a pena comprar uma vaca adicional.
+	\\~\\
+	Se existirem $c$ vacas já pastando no campo, a produção por cabeça será de $f(c)/c$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	O habitante que está pensando em criar uma vaca sabe que a produção passará a ser $f(c+1)$ se ele o fizer.
+	\\~\\
+	A receita que essa vaca irá gerar para esse morador da vila é de $f(C+1)/(c+1)$.
+	\\~\\
+	Se $f(C+1)/(c+1) > a$, será lucrativo adicionar uma vaca.
+	\\~\\
+	Desse modo, os moradores da vila irão produzir até o ponto onde o benefício médio pela vaca adicional for igual ao custo de compra da mesma, ou seja
+
+	$$ \frac{f(\bar{c})}{\bar{c}} = a $$
+
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	Isso nada mais é que obedecer à primeira equação do problema de maximização: $f(\bar{c} - a\bar{c} = 0$).
+	\\~\\
+	Quando uma pessoa pondera em comprar uma vaca, ela pensa apenas no benefício individual que obterá mas, com isso, acaba ignorando que essa vaca adicional reduzirá a quantidade de leite produzido pelas vacas que já estão no pasto.
+	\\~\\
+	No final, o pasto comunitário terá mais vacas que o ponto de maximização do lucro.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{cap35_6-tragedia_comum.png}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{A tragédia dos Comumns}
+
+	Esse resultado não significa que tudo pode ser resolvido por propriedades privadas e que todo arranjo público será amaldiçoado para o problema do uso comum.
+	\\~\\
+	O que estamos vendo aqui é que existe a necessidade de se "emular"\ no caso dos bens comuns, alguma restrição que permita que o resultado final seja ótimo.
+	\\~\\
+	Até porque, nós veremos mais pra frente que existem produtos que não é possível definir claramente a propriedade.
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[B.Públicos]{Bens Públicos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
