@@ -5759,20 +5759,267 @@
 \section[B.Públicos]{Bens Públicos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-	\huge Capítulo \normalsize
+	\huge Bens Públicos \normalsize
 	\\~\\
 	\begin{multicols*}{2}		
 		\begin{itemize}
-			\item 
+			\item Quando Prover?
+   			\item Provisão Privada
+			\item Pegando Carona
+			\item Níveis do Bem Público
+			\item Preferências Quase Lineares
+			\item O Problema do Carona
+			\item Comparação com Bens Privados
+			\item Votação
+			\item Mecanismo Vickrey-Clarke-Groves
+			\item Exemplos de VCG
 		\end{itemize}
 	\end{multicols*}
 \end{frame}
 
 
 \begin{frame}
-	\frametitle{}
+	\frametitle{Bens Públicos}
 
+	Infelizmente, nem todas as externalidades são facilmente resolvidas. A medida que número de agentes envolvidos aumenta porque as negociações se tornam cada vez mais complexas e de difícil entendimento.
+	\\~\\
+	\textbf{Bem Público} que são um tipo particular de externalidade de consumo onde toda pessoa é obrigada a consumir a mesma quantidade do bem.
+	\\~\\
+	Por exemplo, podemos citar a defesa de um país, a poluição atmosférica, os fogos de artifícios na virada do ano.
+	\\~\\
+	Todos esses bens são distribuídos igualmente mesmo que algumas pessoas percebam seus valores diferentemente.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Vamos supor que haja dois colegas de quarto, 1 e 2. Eles estão discutindo para decidir se compram ou não uma televisão.
+	\\~\\
+	A TV será instalada na sala e poderá ser usufruída por ambos. Desse modo, ela é um bem público ao invés de privado.
+	\\~\\
+	A pergunta que queremos resolver é: Será que vale a pena para eles comprar essa TV?
+	\\~\\
+	Seja $w_1$ e $w_2$ a riqueza de cada agente, $g_1$ e $g_2$ são as contribuições de cada um deles para o valor ta TV e $x_1$ $x_2$ é a quantia que sobrará para o restante do consumo de cada um deles.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Desse modo, podemos representar as restrições como
+
+	$$ x_1 + g_1 = w_1 $$
+	$$ x_2 + g_2 = w_2 $$
+
+	Se o custo da televisão for $c$, então teremos a seguinte relação para que a compra seja possível: $g_1 + g_2 \leq c$.
+	\\~\\
+	Essa equação é o resumo da tecnologia disponível para oferta desse bem público.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	A utilidade da pessoa 1 será função do consumo privado $x_1$ e da disponibilidade do bem público (a televisão). Podemos escrever essa função como $u_1(x_1,G)$ onde G é uma variável de controle para a disponibilidade da TV (0 para o cenário sem TV e 1 para o cenário com TV).
+	\\~\\
+	Similarmente, a utilidade da pessoa 2 pode ser expressa como $u_2(x_2,G)$. Perceba que, diferentemente do consumo privado, a oferta da TV não muda em relação ao agente.
+	\\~\\
+	Os dois agentes vão avaliar qual o retorno em utilidade obtidos pelo serviço de televisão. Uma medida que podemos usar dessa avaliação pessoal é o \textbf{preço de reserva} de cada um dos agentes.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Seja o preço de reserva da pessoa 1 igual a $r_1$. Ao pagar pela TV o seu preço de reserva, lhe restará $w_1 - r_1$ de renda disponível para o resto do seu consumo.
+	\\~\\
+	Como $r_1$ indica justamente o ponto onde o agente é indiferente ao preço, podemos afirmar que $u_1(w_1 - r_1) = u_1(w_1,0)$.
+	\\~\\
+	Nesse caso analisado só existem dois pontos eficiêntes no sentido de Pareto. O primeiro é a alocação $(w_1,w_2,0)$ onde não há TV e a utilidade de cada agente virá do seu consumo privado.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	O outro ponto é a alocação com bem público fornecido, esse ponto $(x_1,x_2,1)$ onde 
+
+	$$ x_1 = w_1 - g_1$$
+	$$ x_2 = w_2 - g_2$$
+	\ 
+	\\~\\
+	Quais as condições para o fornecimento da televisão?
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Bom, só haverá uma melhoria de Pareto se as pessoas estiverem melhor com a TV do que sem ela
+
+	$$u_1(w_1,0) < u_1(x_1,1)$$
+	$$u_2(w_2,0) < u_1(x_2,1)$$
+
+	Se aplicarmos a relação do preço de reserva que vimos acima e a restrição orçamentária que acabamos de ver, podemos notar que
+
+	$$u_1(w_1 - r_1,0) = u_1(w_1,0) < u_1(x_1,1) = u_1(w_1 - g_1,1)$$
+	$$u_2(w_2 - r_2,0) = u_2(w_2,0) < u_2(x_2,1) = u_2(w_2 - g_2,1)$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Ignorando as igualdades e lembrando que um aumento no consumo implica em aumento da utilidade, teremos
+
+	$$u_1(w_1 - r_1,0) < u_1(w_1 - g_1,1)$$
+	$$u_2(w_2 - r_2,0) < u_2(w_2 - g_2,1)$$
+
+	Logo, com uma mesma função de utilidade, só pode ser que
+
+	$$w_1 - r_1 < w_1 - g_1$$
+	$$w_2 - r_2 < w_2 - g_2$$
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	O que, por fim, implica em
+
+	$$r_1 > g_1$$
+	$$r_2 > g_2$$
+
+	Ou seja, só será melhor para os agentes se o preço pago por cada um deles for menor do que seus respectivos preços de reserva.
+	\\~\\
+	Também podemos ver que, se o preço de reserva é maior que a parcela de participação da compra, então a soma dos preços de reserva será maior que o custo da TV: $r_1 + r_2 > g_1 + g_2 = c$.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	É estranho estarmos gastando tanto esforço em um problema relativamente simples. Mas o Varian quer que prestemos atenção em alguns aspectos relevantes desse problema. Os pontos são:
+	\begin{itemize}
+		\item O bem público só será ofertado se proporcionar uma melhoria de Pareto.
+		\item Essa melhoria depende do preço de reserva de cada agente e do custo do bem.
+		\item O preço de reserva de cada agente é função da restrição orçamentária de cada agente.
+		\item Se a soma dos preços de reservas for maior que o custo do bem, então a oferta do bem público será factível.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Vamos verificar esses pontos imaginando que um dos colegas de quarto é louco por TV enquanto o outro quase não liga pra isso.
+	\\~\\
+	Se o fã de TV tivesse toda a riqueza, ele a compraria porque teria um preço de reserva maior que o custo da mesma.
+	\\~\\
+	Entretanto, se toda a riqueza estivesse na mão do outro, o fã de TV não teria recurso suficiente para contribuir, de modo que o equilíbrio de Pareto é alcançado pela não oferta da TV.
+	\\~\\
+	Isso mostra como a distribuição da renda impacta na provisão do bem público.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+
+	Entretanto, dependendo do formato das preferências, é possível que a oferta do bem público independa da distribuição da renda. Se as preferências forem quase lineares, elas terão a forma
+
+	$$u_1(x_1,G) = x_1 + v_1(G)$$
+	$$u_2(x_2,G) = x_2 + v_2(G)$$
+
+	Onde G será 0 ou 1. Se $v_1(0) = v_2(0) = 0$, então a utilidade da não oferta do bem público é igual a zero.
 	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quando Prover um Bem Público?}
+	
+	Podemos, então, definir que os preços de reserva serão
+
+	$$u_1(w_1 - r_1,1) = w_1 - r_1 + v_1(1) = u_1(w_1,0) = w_1$$
+	$$u_2(w_2 - r_2,1) = w_2 - r_2 + v_1(1) = u_2(w_1,0) = w_2$$
+
+	Podemos ver então, que os preços de reserva serão dados por
+
+	$$r_1 = v_1(1)$$
+	$$r_2 = v_2(1)$$
+
+	Nesse caso, desde que $w_1 + w_2 \geq c$ os preços de reserva dependerão apenas da utilidade criada pelo bem público e não da riqueza dos agentes.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Provisão Privada do Bem Público}
+
+	O fato de termos derivado a condição do preço de reserva de cada agente ser menor que a contribuição não implica que, se essa condição for satisfeita, que sempre haverá a oferta do bem público.
+	\\~\\
+	Se os agentes decidirem compartilhar a informação dos seus respectivos preços de reserva, não será difícil supor que eles encontrarão uma decisão.
+	\\~\\
+	Mas também não é incomum acharmos situações onde os agentes não tem incentivo à compartilhar suas informações respectivas ao preço de reserva.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Provisão Privada do Bem Público}
+
+	Vamos supor que todas as pessoas envolvidas na decisão atribuem o mesmo valor para o bem público e que os preços de reserva individuais fossem maiores que o custo da TV ($r_1 > c$ e $r_2 > c$).
+	\\~\\
+	A pessoa 1 poderia mentir falando que seu preço de reserva é zero e deixar que a pessoa 2 compre a TV sozinha. Mas a pessoa 2 poderia ter a mesma estratégia.
+	\\~\\
+	Um bom exemplo é a reunião de condomínio. Todos os condôminos querem melhoras. Mas se pudessem, alegariam que não podem contribuir com as cotas extras e torceriam para que os outros condôminos aceitassem absorver a parte de quem alega não poder pagar.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Provisão Privada do Bem Público}
+
+	Esse é um caso onde os economistas dizem que as pessoas estão querendo \textbf{pegar carona}.
+	\\~\\
+	Ou seja, ela quer o benefício do bem público mas não quer pagar por ele.
+	\\~\\
+	E como o bem é público, não é possível evitar que os caronas usufruam dele uma vez ofertado.
+	\\~\\
+	Outro exemplo é o do aluno que espera que os outros colegas façam a lista para copiar depois pensa que está pegando carona. Mas essa análise está errada. Porque o produto não é a nota ou o diploma e sim o conhecimento.
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pegando Carona}
+
+	O problema do carona pode ser modelado usando o nosso aprendizado de teoria dos jogos do capítulo 29.
+	\\~\\
+	Se cada pessoa tiver disponibilidade de 500 reais para a compra e atribuir o uso da TV o valor de 100 reais. Caso o aparelho custe 150 e a soma dos preços de reserva é maior que o custo da oferta do bem, será eficiente no sentido de Pareto ofertar a televisão. Se uma pessoa apenas decidir comprar, terá um resultado líquido de -50.
+	\\~\\
+	Vamos supor que não é possível evitar que um colega de quarto tenha acesso à TV, mesmo que ele não tenha pago por ela.
+
+
+
+	Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
+
+	\begin{center}
+
+		\def\sgtextcolor{black} % Trocar pra preto na versão white
+		\def\sglinecolor{black} % Trocar pra preto na versão white
+		\begin{game}{2}{2}[Jogador A][Jogador B]
+								& $Compra$    & $Não$ \\
+			$Compra$  & $-50,-50$   & $-50,100$ \\
+			$Não$     & $100,-50$   & $0,0$
+		\end{game}
+		
+	\end{center}
+
+	Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso.
+	
+	
+	No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente fazendo a mesma coisa, nesse caso da TV, a utilidade é maximizada pela escolha de fazer o oposto (se um comprar, o outro vai preferir não comprar).
+	\\~\\
+	Podemos melhorar essa situação obrigando o jogador B a contribuir pelo menos com uma quantia parcial de 51. Desse modo, teríamos uma melhoria de Pareto. Na verdade, Podemos ver que qualquer pagamento entre 50 e 100 feito ao jogador A seria uma melhoria de Pareto.
+	\\~\\
+	No geral, é exatamente isso que acontece: as pessoas costumam contribuir com alguma fração do custo do Bem Público. Mas existem arranjos mais complexos (mais agentes ou bens cujo preço de oferta é elevado) que podem produzir resultados não desejados pela sociedade.
 
 \end{frame}
 
