@@ -5863,8 +5863,8 @@
 
 	Se aplicarmos a relação do preço de reserva que vimos acima e a restrição orçamentária que acabamos de ver, podemos notar que
 
-	$$u_1(w_1 - r_1,0) = u_1(w_1,0) < u_1(x_1,1) = u_1(w_1 - g_1,1)$$
-	$$u_2(w_2 - r_2,0) = u_2(w_2,0) < u_2(x_2,1) = u_2(w_2 - g_2,1)$$
+	$$u_1(w_1 - r_1,1) = u_1(w_1,0) < u_1(x_1,1) = u_1(w_1 - g_1,1)$$
+	$$u_2(w_2 - r_2,1) = u_2(w_2,0) < u_2(x_2,1) = u_2(w_2 - g_2,1)$$
 
 \end{frame}
 
@@ -5873,8 +5873,8 @@
 
 	Ignorando as igualdades e lembrando que um aumento no consumo implica em aumento da utilidade, teremos
 
-	$$u_1(w_1 - r_1,0) < u_1(w_1 - g_1,1)$$
-	$$u_2(w_2 - r_2,0) < u_2(w_2 - g_2,1)$$
+	$$u_1(w_1 - r_1,1) < u_1(w_1 - g_1,1)$$
+	$$u_2(w_2 - r_2,1) < u_2(w_2 - g_2,1)$$
 
 	Logo, com uma mesma função de utilidade, só pode ser que
 
@@ -5996,30 +5996,48 @@
 	\\~\\
 	Vamos supor que não é possível evitar que um colega de quarto tenha acesso à TV, mesmo que ele não tenha pago por ela.
 
+\end{frame}
 
+\begin{lrbox}{\mybox}
+\begin{game}{2}{2}[Jogador A][Jogador B]
+& $Compra$    & $Nao$ \\
+$Compra$  & $-50,-50$   & $-50,100$ \\
+$Nao$     & $100,-50$   & $0,0$
+\end{game}
+\end{lrbox}
+
+\begin{frame}
+	\frametitle{Pegando Carona}
 
 	Podemos usar a matriz de ganhos para ver como esse problema se apresenta.
 
 	\begin{center}
-
-		\def\sgtextcolor{black} % Trocar pra preto na versão white
-		\def\sglinecolor{black} % Trocar pra preto na versão white
-		\begin{game}{2}{2}[Jogador A][Jogador B]
-								& $Compra$    & $Não$ \\
-			$Compra$  & $-50,-50$   & $-50,100$ \\
-			$Não$     & $100,-50$   & $0,0$
-		\end{game}
-		
+		\usebox{\mybox}
 	\end{center}
 
 	Esse arranjo pode até lembrar um pouco o dilema do prisioneiro, mas não é o caso.
-	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pegando Carona}
 	
 	No dilema dos prisioneiros, a utilidade era maximizada se eles escolhessem agir coordenadamente fazendo a mesma coisa, nesse caso da TV, a utilidade é maximizada pela escolha de fazer o oposto (se um comprar, o outro vai preferir não comprar).
 	\\~\\
-	Podemos melhorar essa situação obrigando o jogador B a contribuir pelo menos com uma quantia parcial de 51. Desse modo, teríamos uma melhoria de Pareto. Na verdade, Podemos ver que qualquer pagamento entre 50 e 100 feito ao jogador A seria uma melhoria de Pareto.
+	Podemos melhorar essa situação obrigando o jogador B a contribuir pelo menos com uma quantia parcial de 51. 
 	\\~\\
-	No geral, é exatamente isso que acontece: as pessoas costumam contribuir com alguma fração do custo do Bem Público. Mas existem arranjos mais complexos (mais agentes ou bens cujo preço de oferta é elevado) que podem produzir resultados não desejados pela sociedade.
+	Desse modo, teríamos uma melhoria de Pareto.
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Pegando Carona}
+
+	Na verdade, Podemos ver que qualquer pagamento entre 50 e 100 feito ao jogador A seria uma melhoria de Pareto.
+	\\~\\
+	No geral, é exatamente isso que acontece: as pessoas costumam contribuir com alguma fração do custo do Bem Público.
+	\\~\\
+	Mas existem arranjos mais complexos (mais agentes ou bens cujo preço de oferta é elevado) que podem produzir resultados não desejados pela sociedade.
 
 \end{frame}
 
